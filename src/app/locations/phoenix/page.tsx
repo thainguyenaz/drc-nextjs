@@ -76,7 +76,6 @@ const gallery = [
   { src: "/images/locations/phoenix/phoenix-shuffleboard.jpg", alt: "Phoenix shuffleboard table in recreation area" },
   { src: "/images/locations/phoenix/phoenix-classroom-1.jpg", alt: "Phoenix classroom with desks and Mindset Is Everything wall text" },
   { src: "/images/locations/phoenix/phoenix-classroom-2.jpg", alt: "Phoenix classroom from rear showing TV and whiteboard" },
-  { src: "/images/locations/phoenix/phoenix-group-room-1.jpg", alt: "Phoenix group therapy room with chairs arranged in circle" },
   { src: "/images/locations/phoenix/phoenix-group-room-2.jpg", alt: "Phoenix group room with desks in U-shape layout and inspirational wall quote" },
   { src: "/images/locations/phoenix/phoenix-group-room-3.jpg", alt: "Phoenix group room with individual desks and chairs" },
   { src: "/images/locations/phoenix/phoenix-therapy-office-2.jpg", alt: "Phoenix therapy office with beige couch and arched bookshelf" },
