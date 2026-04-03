@@ -19,6 +19,7 @@ const navLinks = [
       { label: "Personality Disorders", href: "/mental-health/personality-disorder-treatment" },
       { label: "ADHD/ADD", href: "/mental-health/adhd-add" },
       { label: "Schizophrenia", href: "/mental-health/schizophrenia-treatment" },
+      { label: "Adolescent Program (Coming Soon)", href: "/adolescent-program" },
     ],
   },
   {

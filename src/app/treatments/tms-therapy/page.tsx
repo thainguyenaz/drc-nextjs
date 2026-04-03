@@ -808,6 +808,52 @@ export default function TMSTherapyPage() {
         </div>
       </section>
 
+      {/* ── TMS for Adolescents ───────────────────────────────── */}
+      <section className="py-20 md:py-28 bg-forest relative overflow-hidden">
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
+        <div className="max-w-container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.6 }}
+            className="max-w-3xl mx-auto text-center"
+          >
+            <span className="text-gold font-body text-sm tracking-[0.2em] uppercase font-medium">Adolescent Treatment</span>
+            <div className="w-[60px] h-0.5 bg-gold mx-auto mt-4 mb-4" />
+            <h2 className="font-display text-3xl md:text-4xl text-white font-semibold mb-6">
+              TMS Therapy for Adolescents
+            </h2>
+            <p className="text-white/70 font-body text-lg leading-relaxed mb-10">
+              NeuroStar is the only TMS system FDA-cleared for adolescents ages 15 and older — offering a safe, drug-free treatment option for teens with treatment-resistant depression.
+            </p>
+            <div className="grid sm:grid-cols-2 gap-4 text-left max-w-2xl mx-auto mb-12">
+              {[
+                "FDA-cleared for patients 15 and older",
+                "Clinically proven for treatment-resistant depression in teenagers",
+                "Non-invasive, no medication required",
+                "Sessions fit around school schedules",
+                "No sedation or recovery time needed",
+                "No impact on daily activities",
+              ].map((item, i) => (
+                <div key={i} className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <span className="text-white/80 text-sm">{item}</span>
+                </div>
+              ))}
+            </div>
+            <a
+              href="/adolescent-program"
+              className="inline-block bg-gold hover:bg-gold-dark text-white font-semibold text-base px-8 py-4 rounded-xl transition-colors shadow-lg shadow-gold/25"
+            >
+              Join the Adolescent Waitlist
+            </a>
+          </motion.div>
+        </div>
+      </section>
+
       <Footer />
     </>
   );
