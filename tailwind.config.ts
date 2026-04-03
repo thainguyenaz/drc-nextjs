@@ -9,8 +9,18 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        forest: "#1C2B1E",
+        sage: "#4A7C59",
+        cream: "#F5EFE6",
+        gold: "#C4973A",
+        "gold-dark": "#A97E2E",
+      },
+      fontFamily: {
+        display: ["var(--font-playfair)", "serif"],
+        body: ["var(--font-inter)", "sans-serif"],
+      },
+      maxWidth: {
+        container: "1200px",
       },
     },
   },
