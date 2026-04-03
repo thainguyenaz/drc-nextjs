@@ -49,6 +49,7 @@ const navLinks = [
       { label: "12-Step Program", href: "/treatments/12-step-program" },
       { label: "Holistic Therapies", href: "/treatments/holistic-therapies" },
       { label: "BridgeWork™", href: "/treatments/bridgework" },
+      { label: "TMS Therapy", href: "/treatments/tms-therapy" },
     ],
   },
   { label: "Facilities", href: "/facilities/glendale" },
