@@ -59,7 +59,7 @@ export default function LocationsSection() {
                         src={location.image}
                         alt={`Desert Recovery Centers ${location.name} facility`}
                         fill
-                        className="object-cover hover:scale-[1.04] transition-transform duration-300"
+                        className="object-cover hover:scale-[1.04] transition-transform duration-[350ms] ease-out"
                         sizes="(max-width: 768px) 100vw, 60vw"
                       />
                     </div>
@@ -69,7 +69,7 @@ export default function LocationsSection() {
                     src={location.image}
                     alt={`Desert Recovery Centers ${location.name} facility`}
                     fill
-                    className="object-cover hover:scale-[1.04] transition-transform duration-300"
+                    className="object-cover hover:scale-[1.04] transition-transform duration-[350ms] ease-out"
                     sizes="(max-width: 768px) 100vw, 60vw"
                   />
                 )}

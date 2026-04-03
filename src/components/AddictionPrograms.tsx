@@ -2,21 +2,119 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import Image from "next/image";
 import { siteData } from "@/lib/site-data";
 
-const iconMap: Record<string, string> = {
-  "Alcohol": "/images/icons/DRC-Alcoholism-Green.svg",
-  "Opioids": "/images/icons/DRC-Heroin_Addiction-Green.svg",
-  "Cocaine": "/images/icons/DRC-Cocaine_Addiction-Green.svg",
-  "Meth": "/images/icons/DRC-Meth_Addiction-Green.svg",
-  "Fentanyl": "/images/icons/DRC-Fentanyl_Addiction-Green.svg",
-  "Prescription Drugs": "/images/icons/DRC-Prescription_Addiction-Green.svg",
-  "Marijuana": "/images/icons/DRC-Marijuana_Addiction-Green.svg",
-  "Gambling": "/images/icons/DRC-Gambling_Addiction-Green.svg",
-  "Sex Addiction": "/images/icons/DRC-Sex_Addiction-Green.svg",
-  "Stimulants": "/images/icons/DRC-Meth_Addiction-Green.svg",
-};
+function AddictionIcon({ name }: { name: string }) {
+  const cls = "w-9 h-9 text-sage";
+  switch (name) {
+    case "Alcohol":
+      return (
+        <svg className={cls} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round">
+          <path d="M8 2h8l-1.5 9H9.5L8 2z" />
+          <path d="M9.5 11h5v2a4.5 4.5 0 01-5 0v-2z" />
+          <path d="M12 15v5" />
+          <path d="M9 22h6" />
+          <path d="M10 2v4M14 2v4" />
+        </svg>
+      );
+    case "Opioids":
+      return (
+        <svg className={cls} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round">
+          <path d="M12 3v13" />
+          <path d="M9 3h6" />
+          <path d="M5 16l14-2" />
+          <circle cx="5" cy="18" r="2" />
+          <circle cx="19" cy="16" r="2" />
+          <path d="M10 8h4" />
+        </svg>
+      );
+    case "Cocaine":
+      return (
+        <svg className={cls} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round">
+          <path d="M4 17h16" />
+          <path d="M6 13h12" />
+          <path d="M8 9h8" />
+          <path d="M20 17l1 4H3l1-4" />
+        </svg>
+      );
+    case "Meth":
+      return (
+        <svg className={cls} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round">
+          <path d="M12 22c-4.97 0-9-2.69-9-6v-1c0-3 3-6 6-8 1.5-1 2.5-2.5 3-4 .5 1.5 1.5 3 3 4 3 2 6 5 6 8v1c0 3.31-4.03 6-9 6z" />
+          <path d="M12 22c-2 0-4-1.34-4-3v-.5c0-1.5 1.5-3 3-4 .75-.5 1.25-1.25 1.5-2 .25.75.75 1.5 1.5 2 1.5 1 3 2.5 3 4v.5c0 1.66-2 3-5 3z" />
+        </svg>
+      );
+    case "Fentanyl":
+      return (
+        <svg className={cls} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round">
+          <rect x="4" y="6" width="16" height="12" rx="3" />
+          <path d="M4 12h16" />
+          <circle cx="8" cy="9" r="1" fill="currentColor" />
+          <circle cx="12" cy="9" r="1" fill="currentColor" />
+          <circle cx="16" cy="9" r="1" fill="currentColor" />
+          <circle cx="8" cy="15" r="1" fill="currentColor" />
+          <circle cx="12" cy="15" r="1" fill="currentColor" />
+          <circle cx="16" cy="15" r="1" fill="currentColor" />
+        </svg>
+      );
+    case "Prescription Drugs":
+      return (
+        <svg className={cls} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round">
+          <rect x="5" y="2" width="14" height="20" rx="2" />
+          <path d="M5 8h14" />
+          <path d="M9 12h6" />
+          <path d="M12 12v4" />
+          <path d="M9 5h6" />
+        </svg>
+      );
+    case "Marijuana":
+      return (
+        <svg className={cls} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round">
+          <path d="M12 22V12" />
+          <path d="M12 12c-4 0-7-3-7-7 3 0 5.5 1.5 7 4" />
+          <path d="M12 12c4 0 7-3 7-7-3 0-5.5 1.5-7 4" />
+          <path d="M12 12c-3-2-3-6-1-9" />
+          <path d="M12 12c3-2 3-6 1-9" />
+          <path d="M8 20c2-1 4-4 4-8" />
+          <path d="M16 20c-2-1-4-4-4-8" />
+        </svg>
+      );
+    case "Gambling":
+      return (
+        <svg className={cls} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round">
+          <rect x="3" y="3" width="8" height="8" rx="1.5" transform="rotate(0 3 3)" />
+          <rect x="13" y="13" width="8" height="8" rx="1.5" />
+          <circle cx="5.5" cy="5.5" r="0.75" fill="currentColor" />
+          <circle cx="8.5" cy="8.5" r="0.75" fill="currentColor" />
+          <circle cx="7" cy="7" r="0.75" fill="currentColor" />
+          <circle cx="15.5" cy="15.5" r="0.75" fill="currentColor" />
+          <circle cx="18.5" cy="18.5" r="0.75" fill="currentColor" />
+          <circle cx="17" cy="17" r="0.75" fill="currentColor" />
+          <circle cx="15.5" cy="18.5" r="0.75" fill="currentColor" />
+          <circle cx="18.5" cy="15.5" r="0.75" fill="currentColor" />
+        </svg>
+      );
+    case "Sex Addiction":
+      return (
+        <svg className={cls} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round">
+          <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+        </svg>
+      );
+    case "Stimulants":
+      return (
+        <svg className={cls} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round">
+          <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+        </svg>
+      );
+    default:
+      return (
+        <svg className={cls} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round">
+          <circle cx="12" cy="12" r="10" />
+          <path d="M12 8v4M12 16h.01" />
+        </svg>
+      );
+  }
+}
 
 export default function AddictionPrograms() {
   return (
@@ -53,30 +151,18 @@ export default function AddictionPrograms() {
             >
               <Link
                 href={program.href}
-                className="group block bg-cream rounded-xl p-5 border-t-2 border-t-transparent hover:border-t-gold hover:shadow-xl hover:scale-105 transition-all duration-[250ms] h-full cursor-pointer"
+                className="group block bg-cream rounded-xl p-5 border-t-[3px] border-t-transparent hover:border-t-gold hover:shadow-xl transition-all duration-[250ms] ease-out h-full cursor-pointer overflow-hidden"
               >
-                {/* Icon */}
-                <div className="w-12 h-12 mb-3 border-2 border-sage/30 group-hover:border-gold rounded-lg flex items-center justify-center transition-colors duration-[250ms]">
-                  {iconMap[program.name] ? (
-                    <Image
-                      src={iconMap[program.name]}
-                      alt={`${program.name} icon`}
-                      width={24}
-                      height={24}
-                      className="w-6 h-6"
-                    />
-                  ) : (
-                    <svg className="w-6 h-6 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                    </svg>
-                  )}
+                {/* Icon square */}
+                <div className="w-[80px] h-[80px] mb-4 border border-sage/40 group-hover:border-gold rounded-xl flex items-center justify-center transition-colors duration-[250ms] bg-sage/5">
+                  <AddictionIcon name={program.name} />
                 </div>
                 {/* Name */}
                 <h3 className="font-body text-forest font-bold text-sm mb-1.5">
                   {program.name}
                 </h3>
                 {/* Description */}
-                <p className="text-gray-500 text-xs leading-relaxed mb-3 line-clamp-2">
+                <p className="text-gray-500 text-xs leading-relaxed mb-3 line-clamp-1">
                   {program.description}
                 </p>
                 {/* Learn More */}

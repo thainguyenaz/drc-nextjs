@@ -60,7 +60,7 @@ export default function IntroSection() {
                 src="/images/scottsdale/DRC-LIVING-ROOMS-NORTH-SCOTTSDALE-08-01-2024-0553August-01-202400015-2.jpg"
                 alt="Desert Recovery Centers Scottsdale luxury living room"
                 fill
-                className="object-cover group-hover:scale-[1.04] transition-transform duration-300"
+                className="object-cover group-hover:scale-[1.04] transition-transform duration-[350ms] ease-out"
                 sizes="(max-width: 768px) 60vw, 30vw"
               />
             </div>
@@ -70,7 +70,7 @@ export default function IntroSection() {
                 src="/images/scottsdale/DRC-UPSTAIRS-MASTER-BEDROOM-NORTH-SCOTTSDALE-08-01-2024-0658August-01-202400014-2.jpg"
                 alt="Desert Recovery Centers Scottsdale master bedroom suite"
                 fill
-                className="object-cover group-hover:scale-[1.04] transition-transform duration-300"
+                className="object-cover group-hover:scale-[1.04] transition-transform duration-[350ms] ease-out"
                 sizes="(max-width: 768px) 55vw, 28vw"
               />
             </div>

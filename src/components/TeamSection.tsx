@@ -19,7 +19,7 @@ function TeamCard({ member, i }: { member: { name: string; title: string; image:
           src={member.image}
           alt={`${member.name}, ${member.title} at Desert Recovery Centers`}
           fill
-          className="object-cover object-top group-hover:scale-[1.04] transition-transform duration-300"
+          className="object-cover object-top group-hover:scale-[1.04] transition-transform duration-[350ms] ease-out"
           sizes="(max-width: 768px) 50vw, 25vw"
         />
         {/* Hover overlay */}

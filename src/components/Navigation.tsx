@@ -107,10 +107,10 @@ export default function Navigation() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -8 }}
                     transition={{ duration: 0.3, ease: "easeOut" }}
-                    className="absolute top-full left-1/2 -translate-x-1/2 pt-1"
+                    className="absolute top-full left-1/2 -translate-x-1/2 pt-1 z-50"
                   >
-                    <div className="bg-forest border border-white/10 rounded-xl shadow-2xl p-1.5 min-w-[420px] flex">
-                      <div className="flex-1 py-1">
+                    <div className="bg-forest border border-white/10 rounded-xl shadow-2xl p-1.5 max-w-[600px] flex">
+                      <div className="flex-1 py-1 min-w-[260px]">
                         {link.children.map((child) => (
                           <Link
                             key={child.label}
@@ -123,18 +123,14 @@ export default function Navigation() {
                         ))}
                       </div>
                       {"image" in link && link.image && (
-                        <div className="w-40 flex-shrink-0 relative rounded-lg overflow-hidden m-1.5">
+                        <div className="flex-shrink-0 w-[160px] h-[120px] rounded-lg overflow-hidden m-1.5 self-center">
                           <Image
                             src={link.image}
                             alt={link.label}
-                            fill
-                            className="object-cover"
-                            sizes="160px"
+                            width={160}
+                            height={120}
+                            className="w-[160px] h-[120px] object-cover object-center"
                           />
-                          <div className="absolute inset-0 bg-forest/40" />
-                          <div className="absolute bottom-3 left-3 right-3">
-                            <span className="text-white text-xs font-semibold">{link.label}</span>
-                          </div>
                         </div>
                       )}
                     </div>

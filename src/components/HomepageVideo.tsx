@@ -41,7 +41,7 @@ export default function HomepageVideo() {
                 src="/images/scottsdale/DRC-DRONE-SCOTTSDALE-08-01-2024-August-01-202400006-2.jpg"
                 alt="Desert Recovery Centers brand video — aerial view of Scottsdale facility"
                 fill
-                className="object-cover group-hover:scale-[1.04] transition-transform duration-300"
+                className="object-cover group-hover:scale-[1.04] transition-transform duration-[350ms] ease-out"
                 sizes="(max-width: 768px) 100vw, 800px"
               />
               {/* Overlay */}
