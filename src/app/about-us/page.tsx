@@ -5,15 +5,18 @@ import WhyChooseUs from "@/components/WhyChooseUs";
 import Testimonials from "@/components/Testimonials";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import { buildMetadata, BreadcrumbSchema } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "About Us — Desert Recovery Centers",
   description: "Learn about Desert Recovery Centers, Arizona's trusted luxury behavioral health provider offering evidence-based mental health and addiction treatment.",
-};
+  path: "/about-us",
+});
 
 export default function AboutPage() {
   return (
     <>
+      <BreadcrumbSchema items={[{ name: "About Us", path: "/about-us" }]} />
       <Navigation />
       <PageHero
         eyebrow="About Us"

@@ -4,11 +4,13 @@ import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import Image from "next/image";
+import { buildMetadata, BreadcrumbSchema } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Scottsdale Treatment Center — Desert Recovery Centers",
   description: "Luxury residential treatment at 23222 N Church Rd, Scottsdale, AZ. Mountain views, pool, gym, and comprehensive programs. Call (480) 931-3617.",
-};
+  path: "/facilities/scottsdale",
+});
 
 const amenities = ["Large Pool", "Tennis Court", "Basketball Court", "State-of-the-Art Gym", "Massage Room", "Scenic Mountain Views", "Gourmet Kitchen", "Private Rooms"];
 
@@ -26,6 +28,7 @@ const gallery = [
 export default function ScottsdalePage() {
   return (
     <>
+      <BreadcrumbSchema items={[{ name: "Facilities", path: "/facilities/scottsdale" }, { name: "Scottsdale", path: "/facilities/scottsdale" }]} />
       <Navigation />
       <PageHero
         eyebrow="Scottsdale, Arizona"

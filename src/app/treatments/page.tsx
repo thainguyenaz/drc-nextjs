@@ -3,26 +3,28 @@ import Navigation from "@/components/Navigation";
 import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import { buildMetadata, BreadcrumbSchema } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Treatment Therapies — Desert Recovery Centers",
-  description: "Evidence-based therapies including CBT, DBT, EMDR, trauma therapy, holistic therapies, and dual diagnosis treatment in Arizona.",
-};
+  description: "Evidence-based therapies including CBT, DBT, EMDR, trauma therapy, holistic therapies, dual diagnosis treatment, SoftWave therapy, and BridgeWork in Arizona.",
+  path: "/treatments",
+});
 
 const therapies = [
   {
     name: "Cognitive Behavioral Therapy (CBT)",
-    href: "/treatments/understanding-cbt-cognitive-behavioral-therapy",
+    href: "/treatments/cbt",
     description: "Identifies and changes negative thought patterns and behaviors. CBT is one of the most extensively researched therapies for both mental health and addiction.",
   },
   {
     name: "Dialectical Behavior Therapy (DBT)",
-    href: "/treatments/understanding-dbt-dialectic-behavior-therapy",
+    href: "/treatments/dbt",
     description: "Teaches mindfulness, distress tolerance, emotion regulation, and interpersonal effectiveness. Particularly effective for borderline personality disorder and emotional dysregulation.",
   },
   {
     name: "EMDR",
-    href: "/treatments/emdr-eye-movement-desensitization-and-reprocessing",
+    href: "/treatments/emdr",
     description: "Eye Movement Desensitization and Reprocessing helps process traumatic memories and reduce their emotional impact. Highly effective for PTSD and trauma.",
   },
   {
@@ -32,24 +34,30 @@ const therapies = [
   },
   {
     name: "Dual Diagnosis Treatment",
-    href: "/treatments/dual-diagnosis-treatment",
+    href: "/treatments/dual-diagnosis",
     description: "Integrated treatment for co-occurring mental health and substance use disorders. Treating both conditions simultaneously leads to significantly better outcomes.",
   },
   {
-    name: "12-Step Program",
-    href: "/treatments/12-step-program",
-    description: "A structured recovery framework that includes peer support, sponsorship, and a progressive set of principles for achieving and maintaining sobriety.",
+    name: "Holistic Therapies",
+    href: "/treatments/holistic",
+    description: "Yoga, mindfulness meditation, art therapy, music therapy, breathwork, massage, nutrition counseling, and biofeedback/neurofeedback.",
   },
   {
-    name: "Holistic Therapies",
-    href: "/treatments/holistic-therapies",
-    description: "Yoga, mindfulness meditation, art therapy, music therapy, breathwork, massage, nutrition counseling, and biofeedback/neurofeedback.",
+    name: "SoftWave Therapy",
+    href: "/treatments/softwave",
+    description: "Advanced tissue regeneration technology using unfocused shockwave therapy to reduce pain, decrease inflammation, and accelerate the body's natural healing process.",
+  },
+  {
+    name: "BridgeWork™",
+    href: "/treatments/bridgework",
+    description: "Our proprietary clinical psychologist-led skill integration program. Brief structured sessions that bridge the gap between therapeutic insight and real-world application.",
   },
 ];
 
 export default function TreatmentsPage() {
   return (
     <>
+      <BreadcrumbSchema items={[{ name: "Treatments", path: "/treatments" }]} />
       <Navigation />
       <PageHero
         eyebrow="Our Treatments"

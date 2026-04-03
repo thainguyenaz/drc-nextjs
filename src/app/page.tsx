@@ -17,10 +17,12 @@ import FAQ from "@/components/FAQ";
 import ContactForm from "@/components/ContactForm";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import { FAQPageSchema } from "@/lib/seo";
 
 export default function Home() {
   return (
     <>
+      <FAQPageSchema />
       <Navigation />
       <Hero />
       <TrustBar />

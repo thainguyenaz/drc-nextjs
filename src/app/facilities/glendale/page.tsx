@@ -4,11 +4,13 @@ import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import Image from "next/image";
+import { buildMetadata, BreadcrumbSchema } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Glendale Treatment Center — Desert Recovery Centers",
   description: "Luxury residential treatment at 8105 W Frier Dr, Glendale, AZ. 7,500 sq ft facility with pool, gym, tennis court, and basketball court. Call (623) 323-1012.",
-};
+  path: "/facilities/glendale",
+});
 
 const amenities = ["Full-Size Basketball Court", "Tennis Court", "Swimming Pool", "State-of-the-Art Gym", "Billiards Room", "Massage Room", "Gourmet Kitchen", "Private Rooms"];
 
@@ -26,6 +28,7 @@ const gallery = [
 export default function GlendalePage() {
   return (
     <>
+      <BreadcrumbSchema items={[{ name: "Facilities", path: "/facilities/glendale" }, { name: "Glendale", path: "/facilities/glendale" }]} />
       <Navigation />
       <PageHero
         eyebrow="Glendale, Arizona"

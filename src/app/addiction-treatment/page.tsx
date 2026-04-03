@@ -4,15 +4,18 @@ import PageHero from "@/components/PageHero";
 import AddictionPrograms from "@/components/AddictionPrograms";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import { buildMetadata, BreadcrumbSchema } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Addiction Treatment Programs — Desert Recovery Centers",
   description: "Luxury addiction treatment in Arizona for alcohol, opioids, cocaine, meth, fentanyl, prescription drugs, and behavioral addictions.",
-};
+  path: "/addiction-treatment",
+});
 
 export default function AddictionTreatmentPage() {
   return (
     <>
+      <BreadcrumbSchema items={[{ name: "Addiction Treatment", path: "/addiction-treatment" }]} />
       <Navigation />
       <PageHero
         eyebrow="Addiction Treatment"

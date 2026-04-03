@@ -4,15 +4,18 @@ import PageHero from "@/components/PageHero";
 import ConditionsGrid from "@/components/ConditionsGrid";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import { buildMetadata, BreadcrumbSchema } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Mental Health Treatment — Desert Recovery Centers",
   description: "Comprehensive, evidence-based mental health treatment for anxiety, depression, PTSD, bipolar disorder, OCD, and more in Arizona.",
-};
+  path: "/mental-health",
+});
 
 export default function MentalHealthPage() {
   return (
     <>
+      <BreadcrumbSchema items={[{ name: "Mental Health Treatment", path: "/mental-health" }]} />
       <Navigation />
       <PageHero
         eyebrow="Mental Health"

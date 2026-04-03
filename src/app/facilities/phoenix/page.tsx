@@ -3,17 +3,20 @@ import Navigation from "@/components/Navigation";
 import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import { buildMetadata, BreadcrumbSchema } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Phoenix Treatment Center — Desert Recovery Centers",
   description: "Residential and outpatient treatment at 1623 W Moody Trail, Phoenix, AZ. 5,500 sq ft with movie theater, pool with waterfall, and gym. Call (623) 257-5384.",
-};
+  path: "/facilities/phoenix",
+});
 
 const amenities = ["Full Movie Theater", "Pool with Waterfall", "State-of-the-Art Gym", "Massage Room", "Gourmet Kitchen & Dining", "Private Rooms", "Outdoor Recreation Areas"];
 
 export default function PhoenixPage() {
   return (
     <>
+      <BreadcrumbSchema items={[{ name: "Facilities", path: "/facilities/phoenix" }, { name: "Phoenix", path: "/facilities/phoenix" }]} />
       <Navigation />
       <PageHero
         eyebrow="Phoenix, Arizona"

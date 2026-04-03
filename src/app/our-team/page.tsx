@@ -4,15 +4,30 @@ import PageHero from "@/components/PageHero";
 import TeamSection from "@/components/TeamSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import { buildMetadata, BreadcrumbSchema, PersonSchema } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Our Team — Addiction & Mental Health Treatment Professionals",
   description: "Meet the board-certified psychiatrists, licensed therapists, and dedicated support staff at Desert Recovery Centers in Arizona.",
-};
+  path: "/our-team",
+});
 
 export default function OurTeamPage() {
   return (
     <>
+      <BreadcrumbSchema items={[{ name: "Our Team", path: "/our-team" }]} />
+      <PersonSchema
+        name="Dr. An Nguyen"
+        jobTitle="Licensed Clinical Psychologist, Clinical Director"
+        image="/images/team/Dr-An-Nguyen.jpg"
+        description="Clinical Director at Desert Recovery Centers, a licensed clinical psychologist specializing in addiction and mental health treatment."
+      />
+      <PersonSchema
+        name="Dr. Reyes Topete, MD"
+        jobTitle="Medical Director"
+        image="/images/team/Dr._Reyes_Topete-cropped.jpg"
+        description="Medical Director at Desert Recovery Centers, overseeing psychiatric care and medication management for addiction and mental health treatment."
+      />
       <Navigation />
       <PageHero
         eyebrow="Our Team"
