@@ -154,7 +154,7 @@ export default function AlcoholDetoxPage() {
             <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mb-8">Related Treatment Programs</h2>
             <div className="grid md:grid-cols-2 gap-4 mb-6">
               {[
-                { label: "Alcohol Addiction Treatment", href: "/addiction/alcoholism-treatment" },
+                { label: "Alcohol Addiction Treatment", href: "/addiction/alcohol" },
                 { label: "Opioid Detox", href: "/addiction/opioid-detox" },
                 { label: "Depression Treatment", href: "/mental-health/depression-treatment" },
                 { label: "Anxiety Treatment", href: "/mental-health/anxiety-treatment" },

@@ -185,9 +185,9 @@ export default function ParadiseValleyPage() {
                 { label: "PTSD & Trauma", href: "/mental-health/ptsd-treatment" },
                 { label: "Bipolar Disorder", href: "/mental-health/bipolar-disorder-treatment" },
                 { label: "Personality Disorders", href: "/mental-health/personality-disorder-treatment" },
-                { label: "Alcohol Addiction", href: "/addiction/alcoholism-treatment" },
-                { label: "Opioid & Fentanyl Addiction", href: "/addiction/fentanyl-addiction-treatment" },
-                { label: "Prescription Drug Addiction", href: "/addiction/prescription-drug-addiction-treatment" },
+                { label: "Alcohol Addiction", href: "/addiction/alcohol" },
+                { label: "Opioid & Fentanyl Addiction", href: "/addiction/fentanyl" },
+                { label: "Prescription Drug Addiction", href: "/addiction/prescription-drugs" },
               ].map((item) => (
                 <Link
                   key={item.href}

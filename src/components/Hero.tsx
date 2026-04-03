@@ -105,7 +105,7 @@ export default function Hero() {
             className="flex flex-col sm:flex-row items-start gap-4"
           >
             <a
-              href="/insurance-verification"
+              href="/insurance"
               className="bg-gold hover:bg-gold-dark text-white font-semibold text-base px-8 py-4 rounded-xl transition-all shadow-lg shadow-gold/25 cursor-pointer"
             >
               Verify Insurance Today

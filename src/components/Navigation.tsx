@@ -26,14 +26,14 @@ const navLinks = [
     href: "/addiction-treatment",
     image: "/images/general/DRC-ADDICTION.jpg",
     children: [
-      { label: "Alcohol", href: "/addiction/alcoholism-treatment" },
-      { label: "Opioids & Heroin", href: "/addiction/heroin-addiction-treatment" },
-      { label: "Fentanyl", href: "/addiction/fentanyl-addiction-treatment" },
-      { label: "Cocaine", href: "/addiction/cocaine-addiction-treatment" },
-      { label: "Meth", href: "/addiction/meth-addiction-treatment" },
-      { label: "Prescription Drugs", href: "/addiction/prescription-drug-addiction-treatment" },
-      { label: "Marijuana", href: "/addiction/marijuana-addiction-treatment" },
-      { label: "Gambling", href: "/addiction/understanding-gambling-addiction" },
+      { label: "Alcohol", href: "/addiction/alcohol" },
+      { label: "Opioids & Heroin", href: "/addiction/heroin" },
+      { label: "Fentanyl", href: "/addiction/fentanyl" },
+      { label: "Cocaine", href: "/addiction/cocaine" },
+      { label: "Meth", href: "/addiction/meth" },
+      { label: "Prescription Drugs", href: "/addiction/prescription-drugs" },
+      { label: "Marijuana", href: "/addiction/marijuana" },
+      { label: "Gambling", href: "/addiction/gambling" },
     ],
   },
   {
@@ -41,13 +41,12 @@ const navLinks = [
     href: "/treatments",
     image: "/images/general/DRC-TREATMENTS.jpg",
     children: [
-      { label: "CBT", href: "/treatments/understanding-cbt-cognitive-behavioral-therapy" },
-      { label: "DBT", href: "/treatments/understanding-dbt-dialectic-behavior-therapy" },
-      { label: "EMDR", href: "/treatments/emdr-eye-movement-desensitization-and-reprocessing" },
+      { label: "CBT", href: "/treatments/cbt" },
+      { label: "DBT", href: "/treatments/dbt" },
+      { label: "EMDR", href: "/treatments/emdr" },
       { label: "Trauma Therapy", href: "/treatments/trauma-therapy" },
-      { label: "Dual Diagnosis", href: "/treatments/dual-diagnosis-treatment" },
-      { label: "12-Step Program", href: "/treatments/12-step-program" },
-      { label: "Holistic Therapies", href: "/treatments/holistic-therapies" },
+      { label: "Dual Diagnosis", href: "/treatments/dual-diagnosis" },
+      { label: "Holistic Therapies", href: "/treatments/holistic" },
       { label: "BridgeWork™", href: "/treatments/bridgework" },
       { label: "TMS Therapy", href: "/treatments/tms-therapy" },
     ],
@@ -149,7 +148,7 @@ export default function Navigation() {
             (480) 931-3617
           </a>
           <Link
-            href="/insurance-verification"
+            href="/insurance"
             className="bg-gold hover:bg-gold-dark text-white font-semibold text-sm px-5 py-2.5 rounded-xl transition-colors"
           >
             Verify Insurance
@@ -193,7 +192,7 @@ export default function Navigation() {
               <div className="pt-4 border-t border-white/10 space-y-3">
                 <a href="tel:+14809313617" className="block text-gold font-semibold text-lg">(480) 931-3617</a>
                 <Link
-                  href="/insurance-verification"
+                  href="/insurance"
                   className="block bg-gold text-white text-center font-semibold px-6 py-3 rounded-xl"
                   onClick={() => setMobileOpen(false)}
                 >

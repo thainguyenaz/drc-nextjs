@@ -216,10 +216,10 @@ export default function ScottsdaleLocationPage() {
                 { label: "Bipolar Disorder", href: "/mental-health/bipolar-disorder-treatment" },
                 { label: "OCD", href: "/mental-health/ocd-treatment" },
                 { label: "Personality Disorders", href: "/mental-health/personality-disorder-treatment" },
-                { label: "Alcohol Addiction", href: "/addiction/alcoholism-treatment" },
-                { label: "Opioid & Fentanyl Addiction", href: "/addiction/fentanyl-addiction-treatment" },
-                { label: "Cocaine Addiction", href: "/addiction/cocaine-addiction-treatment" },
-                { label: "Meth Addiction", href: "/addiction/meth-addiction-treatment" },
+                { label: "Alcohol Addiction", href: "/addiction/alcohol" },
+                { label: "Opioid & Fentanyl Addiction", href: "/addiction/fentanyl" },
+                { label: "Cocaine Addiction", href: "/addiction/cocaine" },
+                { label: "Meth Addiction", href: "/addiction/meth" },
               ].map((item) => (
                 <Link
                   key={item.href}

@@ -180,10 +180,10 @@ export default function MesaPage() {
             </h2>
             <div className="grid md:grid-cols-2 gap-4 mb-8">
               {[
-                { label: "Alcohol Addiction", href: "/addiction/alcoholism-treatment" },
-                { label: "Opioid & Fentanyl Addiction", href: "/addiction/fentanyl-addiction-treatment" },
-                { label: "Cocaine Addiction", href: "/addiction/cocaine-addiction-treatment" },
-                { label: "Prescription Drug Addiction", href: "/addiction/prescription-drug-addiction-treatment" },
+                { label: "Alcohol Addiction", href: "/addiction/alcohol" },
+                { label: "Opioid & Fentanyl Addiction", href: "/addiction/fentanyl" },
+                { label: "Cocaine Addiction", href: "/addiction/cocaine" },
+                { label: "Prescription Drug Addiction", href: "/addiction/prescription-drugs" },
                 { label: "Anxiety Disorders", href: "/mental-health/anxiety-treatment" },
                 { label: "Depression", href: "/mental-health/depression-treatment" },
                 { label: "Bipolar Disorder", href: "/mental-health/bipolar-disorder-treatment" },

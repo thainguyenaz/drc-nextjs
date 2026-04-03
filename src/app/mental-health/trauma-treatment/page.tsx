@@ -181,8 +181,8 @@ export default function TraumaTreatmentPage() {
                 { label: "PTSD Treatment", href: "/mental-health/ptsd-treatment" },
                 { label: "Anxiety Treatment", href: "/mental-health/anxiety-treatment" },
                 { label: "Depression Treatment", href: "/mental-health/depression-treatment" },
-                { label: "Alcohol Addiction", href: "/addiction/alcoholism-treatment" },
-                { label: "Opioid Addiction", href: "/addiction/heroin-addiction-treatment" },
+                { label: "Alcohol Addiction", href: "/addiction/alcohol" },
+                { label: "Opioid Addiction", href: "/addiction/heroin" },
                 { label: "Personality Disorders", href: "/mental-health/personality-disorder-treatment" },
               ].map((item) => (
                 <Link key={item.href} href={item.href} className="flex items-center gap-3 bg-cream rounded-lg p-4 hover:border-gold/30 border border-transparent transition-colors">

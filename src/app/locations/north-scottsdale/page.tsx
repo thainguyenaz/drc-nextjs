@@ -185,9 +185,9 @@ export default function NorthScottsdalePage() {
                 { label: "PTSD & Trauma", href: "/mental-health/ptsd-treatment" },
                 { label: "Bipolar Disorder", href: "/mental-health/bipolar-disorder-treatment" },
                 { label: "OCD", href: "/mental-health/ocd-treatment" },
-                { label: "Alcohol Addiction", href: "/addiction/alcoholism-treatment" },
-                { label: "Opioid & Fentanyl Addiction", href: "/addiction/fentanyl-addiction-treatment" },
-                { label: "Cocaine & Stimulant Addiction", href: "/addiction/cocaine-addiction-treatment" },
+                { label: "Alcohol Addiction", href: "/addiction/alcohol" },
+                { label: "Opioid & Fentanyl Addiction", href: "/addiction/fentanyl" },
+                { label: "Cocaine & Stimulant Addiction", href: "/addiction/cocaine" },
               ].map((item) => (
                 <Link
                   key={item.href}

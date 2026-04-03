@@ -186,8 +186,8 @@ export default function DRCvsAPNPage() {
                 { label: "Anxiety Treatment", href: "/mental-health/anxiety-treatment" },
                 { label: "Depression Treatment", href: "/mental-health/depression-treatment" },
                 { label: "PTSD & Trauma", href: "/mental-health/ptsd-treatment" },
-                { label: "Alcohol Addiction", href: "/addiction/alcoholism-treatment" },
-                { label: "Opioid & Fentanyl Addiction", href: "/addiction/fentanyl-addiction-treatment" },
+                { label: "Alcohol Addiction", href: "/addiction/alcohol" },
+                { label: "Opioid & Fentanyl Addiction", href: "/addiction/fentanyl" },
                 { label: "Dual Diagnosis Treatment", href: "/treatments" },
               ].map((item) => (
                 <Link key={item.href} href={item.href} className="flex items-center gap-3 bg-white rounded-lg p-4 hover:border-gold/30 border border-transparent transition-colors">

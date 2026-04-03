@@ -154,8 +154,8 @@ export default function OpioidDetoxPage() {
             <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mb-8">Related Treatment Programs</h2>
             <div className="grid md:grid-cols-2 gap-4 mb-6">
               {[
-                { label: "Heroin Addiction Treatment", href: "/addiction/heroin-addiction-treatment" },
-                { label: "Fentanyl Addiction Treatment", href: "/addiction/fentanyl-addiction-treatment" },
+                { label: "Heroin Addiction Treatment", href: "/addiction/heroin" },
+                { label: "Fentanyl Addiction Treatment", href: "/addiction/fentanyl" },
                 { label: "Alcohol Detox", href: "/addiction/alcohol-detox" },
                 { label: "PTSD & Trauma", href: "/mental-health/ptsd-treatment" },
                 { label: "Residential Treatment", href: "/programs/residential" },
