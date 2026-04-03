@@ -30,7 +30,7 @@ const footerLinks = {
   Company: [
     { label: "About Us", href: "/about-us" },
     { label: "Our Team", href: "/our-team" },
-    { label: "Facilities", href: "/facilities" },
+    { label: "Facilities", href: "/locations" },
     { label: "Resources", href: "/resources" },
     { label: "Insurance", href: "/insurance" },
     { label: "Contact", href: "#contact" },

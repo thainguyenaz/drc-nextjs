@@ -26,16 +26,16 @@ export default function CTASection() {
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
-            href="tel:+14809313617"
+            href="tel:+16233231012"
             className="bg-gold hover:bg-gold-dark text-white font-semibold text-base px-8 py-4 rounded-xl transition-all shadow-lg shadow-gold/25 w-full sm:w-auto text-center cursor-pointer"
           >
-            Call (480) 931-3617
+            Call (623) 323-1012
           </a>
           <a
-            href="#contact"
+            href="mailto:contact@desertrecoverycenters.com"
             className="bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/30 text-white font-semibold text-base px-8 py-4 rounded-xl transition-all w-full sm:w-auto text-center cursor-pointer"
           >
-            Verify Insurance Online
+            Email Us
           </a>
         </div>
       </motion.div>
