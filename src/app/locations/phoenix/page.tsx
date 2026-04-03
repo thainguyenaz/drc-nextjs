@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import Navigation from "@/components/Navigation";
 import PageHero from "@/components/PageHero";
 import ConditionFAQ from "@/components/ConditionFAQ";
@@ -59,6 +60,34 @@ const faqs = [
     q: "How quickly can I start treatment at the Phoenix center?",
     a: "Most clients begin treatment within 48 hours of their first call. Our admissions team is available 24/7 at (623) 257-5384 and coordinates insurance verification, clinical pre-assessment, and intake rapidly so you can start healing as soon as you're ready.",
   },
+];
+
+const gallery = [
+  { src: "/images/locations/phoenix/phoenix-lobby-2.jpg", alt: "Phoenix PHP/IOP lobby with modern art and green lounge chairs" },
+  { src: "/images/locations/phoenix/phoenix-reception-2.jpg", alt: "Phoenix reception desk with geometric light fixture" },
+  { src: "/images/locations/phoenix/phoenix-reception-1.jpg", alt: "Phoenix reception area from hallway entrance" },
+  { src: "/images/locations/phoenix/phoenix-reception-3.jpg", alt: "Phoenix reception area side view with green accent chair" },
+  { src: "/images/locations/phoenix/phoenix-lobby-1.jpg", alt: "Phoenix waiting area with green chairs and wall-mounted TV" },
+  { src: "/images/locations/phoenix/phoenix-lobby-lounge.jpg", alt: "Phoenix lobby lounge with couch and flat-screen TV" },
+  { src: "/images/locations/phoenix/phoenix-hallway.jpg", alt: "Phoenix hallway with framed artwork and modern lighting" },
+  { src: "/images/locations/phoenix/phoenix-game-room-1.jpg", alt: "Phoenix game room with pool table, hexagon ceiling lights, and arcade machines" },
+  { src: "/images/locations/phoenix/phoenix-game-room-2.jpg", alt: "Phoenix game room wide view with pool table, air hockey, and bar seating" },
+  { src: "/images/locations/phoenix/phoenix-game-room-arcade.jpg", alt: "Phoenix game room arcade machines and pool table with motivational wall quote" },
+  { src: "/images/locations/phoenix/phoenix-shuffleboard.jpg", alt: "Phoenix shuffleboard table in recreation area" },
+  { src: "/images/locations/phoenix/phoenix-classroom-1.jpg", alt: "Phoenix classroom with desks and Mindset Is Everything wall text" },
+  { src: "/images/locations/phoenix/phoenix-classroom-2.jpg", alt: "Phoenix classroom from rear showing TV and whiteboard" },
+  { src: "/images/locations/phoenix/phoenix-group-room-1.jpg", alt: "Phoenix group therapy room with chairs arranged in circle" },
+  { src: "/images/locations/phoenix/phoenix-group-room-2.jpg", alt: "Phoenix group room with desks in U-shape layout and inspirational wall quote" },
+  { src: "/images/locations/phoenix/phoenix-group-room-3.jpg", alt: "Phoenix group room with individual desks and chairs" },
+  { src: "/images/locations/phoenix/phoenix-therapy-office-1.jpg", alt: "Phoenix individual therapy office with green couch and desk" },
+  { src: "/images/locations/phoenix/phoenix-therapy-office-2.jpg", alt: "Phoenix therapy office with beige couch and arched bookshelf" },
+  { src: "/images/locations/phoenix/phoenix-therapy-office-3.jpg", alt: "Phoenix therapy office with blue LED-lit bookshelf" },
+  { src: "/images/locations/phoenix/phoenix-medical-room.jpg", alt: "Phoenix medical exam room with examination table and hand-washing station" },
+  { src: "/images/locations/phoenix/phoenix-kitchen-1.jpg", alt: "Phoenix kitchen and break room with modern cabinetry" },
+  { src: "/images/locations/phoenix/phoenix-kitchen-2.jpg", alt: "Phoenix kitchen wide view with island sink and appliances" },
+  { src: "/images/locations/phoenix/phoenix-kitchen-3.jpg", alt: "Phoenix kitchen showing wall-mounted TV and coffee station" },
+  { src: "/images/locations/phoenix/phoenix-bathroom-1.jpg", alt: "Phoenix bathroom with dark marble tile and LED backlit mirror" },
+  { src: "/images/locations/phoenix/phoenix-bathroom-2.jpg", alt: "Phoenix ADA-accessible bathroom with grab bars and marble tile" },
 ];
 
 export default function PhoenixLocationPage() {
@@ -180,6 +209,33 @@ export default function PhoenixLocationPage() {
                 </Link>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Photo Gallery */}
+      <section className="py-16 md:py-24 bg-cream">
+        <div className="max-w-container mx-auto px-6">
+          <div className="text-center mb-10">
+            <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
+              Our Facility
+            </span>
+            <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4">
+              Phoenix Facility Gallery
+            </h2>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {gallery.map((img) => (
+              <div key={img.src} className="relative aspect-square rounded-xl overflow-hidden">
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  className="object-cover hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                />
+              </div>
+            ))}
           </div>
         </div>
       </section>

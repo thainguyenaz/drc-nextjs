@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import Navigation from "@/components/Navigation";
 import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
@@ -12,6 +13,33 @@ export const metadata: Metadata = buildMetadata({
     "Structured sober living housing for clients enrolled in DRC PHP programs. 1623 W Moody Trail, Phoenix, AZ 85085. Call (623) 257-5384.",
   path: "/locations/phoenix-living",
 });
+
+const gallery = [
+  { src: "/images/locations/phoenix-living/phoenix-front.jpg", alt: "Phoenix sober living front exterior" },
+  { src: "/images/locations/phoenix-living/phoenix-entry.jpg", alt: "Phoenix sober living entryway" },
+  { src: "/images/locations/phoenix-living/phoenix-main-room.jpg", alt: "Phoenix sober living main room" },
+  { src: "/images/locations/phoenix-living/phoenix-living-area-1.jpg", alt: "Phoenix sober living living area" },
+  { src: "/images/locations/phoenix-living/phoenix-living-area-2.jpg", alt: "Phoenix sober living second living area" },
+  { src: "/images/locations/phoenix-living/phoenix-kitchen.jpg", alt: "Phoenix sober living kitchen" },
+  { src: "/images/locations/phoenix-living/phoenix-oven.jpg", alt: "Phoenix sober living kitchen oven area" },
+  { src: "/images/locations/phoenix-living/phoenix-dining-room.jpg", alt: "Phoenix sober living dining room" },
+  { src: "/images/locations/phoenix-living/phoenix-bedroom-1.jpg", alt: "Phoenix sober living bedroom" },
+  { src: "/images/locations/phoenix-living/phoenix-bedroom-2.jpg", alt: "Phoenix sober living second bedroom" },
+  { src: "/images/locations/phoenix-living/phoenix-bedroom-3.jpg", alt: "Phoenix sober living third bedroom" },
+  { src: "/images/locations/phoenix-living/phoenix-bedroom-4.jpg", alt: "Phoenix sober living fourth bedroom" },
+  { src: "/images/locations/phoenix-living/phoenix-bedroom-5.jpg", alt: "Phoenix sober living fifth bedroom" },
+  { src: "/images/locations/phoenix-living/phoenix-bathroom-1.jpg", alt: "Phoenix sober living bathroom" },
+  { src: "/images/locations/phoenix-living/phoenix-bathroom-2.jpg", alt: "Phoenix sober living second bathroom" },
+  { src: "/images/locations/phoenix-living/phoenix-group-room-1.jpg", alt: "Phoenix sober living group room" },
+  { src: "/images/locations/phoenix-living/phoenix-group-room-2.jpg", alt: "Phoenix sober living second group room" },
+  { src: "/images/locations/phoenix-living/phoenix-therapy-room.jpg", alt: "Phoenix sober living therapy room" },
+  { src: "/images/locations/phoenix-living/phoenix-theater-1.jpg", alt: "Phoenix sober living home theater" },
+  { src: "/images/locations/phoenix-living/phoenix-theater-2.jpg", alt: "Phoenix sober living theater seating" },
+  { src: "/images/locations/phoenix-living/phoenix-gym.jpg", alt: "Phoenix sober living gym" },
+  { src: "/images/locations/phoenix-living/phoenix-backyard.jpg", alt: "Phoenix sober living backyard" },
+  { src: "/images/locations/phoenix-living/phoenix-grill.jpg", alt: "Phoenix sober living outdoor grill area" },
+  { src: "/images/locations/phoenix-living/phoenix-pool.jpg", alt: "Phoenix sober living pool with waterfall" },
+];
 
 export default function PhoenixLivingPage() {
   return (
@@ -115,6 +143,33 @@ export default function PhoenixLivingPage() {
                 All Locations
               </Link>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Photo Gallery */}
+      <section className="py-16 md:py-24 bg-cream">
+        <div className="max-w-container mx-auto px-6">
+          <div className="text-center mb-10">
+            <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
+              Our Property
+            </span>
+            <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4">
+              Phoenix Sober Living Gallery
+            </h2>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {gallery.map((img) => (
+              <div key={img.src} className="relative aspect-square rounded-xl overflow-hidden">
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  className="object-cover hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                />
+              </div>
+            ))}
           </div>
         </div>
       </section>
