@@ -8,22 +8,32 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="py-20 md:py-28 bg-white">
+    <section className="py-20 md:py-28 bg-white overflow-hidden">
       <div className="max-w-container mx-auto px-6">
-        <div className="text-center mb-14">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-14"
+        >
           <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
             FAQ
           </span>
           <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold mt-4">
             Frequently Asked Questions
           </h2>
-        </div>
+        </motion.div>
 
         <div className="max-w-3xl mx-auto space-y-3">
           {siteData.faqs.map((faq, i) => (
-            <div
+            <motion.div
               key={i}
-              className="border border-gray-200 rounded-xl overflow-hidden"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-30px" }}
+              transition={{ duration: 0.4, delay: i * 0.05 }}
+              className="border border-gray-200 rounded-xl overflow-hidden hover:border-gold/30 transition-colors duration-300"
             >
               <button
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
@@ -33,7 +43,7 @@ export default function FAQ() {
                   {faq.q}
                 </span>
                 <svg
-                  className={`w-5 h-5 text-sage flex-shrink-0 transition-transform ${
+                  className={`w-5 h-5 text-sage flex-shrink-0 transition-transform duration-300 ${
                     openIndex === i ? "rotate-180" : ""
                   }`}
                   fill="none"
@@ -63,7 +73,7 @@ export default function FAQ() {
                   </motion.div>
                 )}
               </AnimatePresence>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

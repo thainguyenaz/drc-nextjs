@@ -3,7 +3,6 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
-import VideoLightbox from "./VideoLightbox";
 
 export default function IntroSection() {
   const sectionRef = useRef(null);
@@ -12,20 +11,16 @@ export default function IntroSection() {
     offset: ["start end", "end start"],
   });
 
-  const leftX = useTransform(scrollYProgress, [0, 0.5], [-120, 0]);
-  const rightX = useTransform(scrollYProgress, [0, 0.5], [120, 0]);
-  const imgOpacity = useTransform(scrollYProgress, [0, 0.3], [0, 1]);
+  const leftX = useTransform(scrollYProgress, [0, 0.4], [-120, 0]);
+  const rightX = useTransform(scrollYProgress, [0, 0.4], [120, 0]);
+  const imgOpacity = useTransform(scrollYProgress, [0, 0.25], [0, 1]);
 
   return (
     <section ref={sectionRef} className="py-20 md:py-28 bg-white overflow-hidden">
       <div className="max-w-container mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
+          {/* Left — collision text */}
+          <motion.div style={{ x: leftX, opacity: imgOpacity }}>
             <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
               About Desert Recovery Centers
             </span>
@@ -48,52 +43,40 @@ export default function IntroSection() {
               is uniquely yours.
             </p>
             <div className="flex flex-wrap gap-4">
-              <a
-                href="/about-us"
-                className="bg-sage hover:bg-forest text-white font-semibold text-sm px-6 py-3 rounded-xl transition-colors cursor-pointer"
-              >
+              <a href="/about-us" className="bg-sage hover:bg-forest text-white font-semibold text-sm px-6 py-3 rounded-xl transition-colors cursor-pointer">
                 Learn Our Approach
               </a>
-              <a
-                href="#team"
-                className="border border-sage text-sage hover:bg-sage hover:text-white font-semibold text-sm px-6 py-3 rounded-xl transition-colors cursor-pointer"
-              >
+              <a href="#team" className="border border-sage text-sage hover:bg-sage hover:text-white font-semibold text-sm px-6 py-3 rounded-xl transition-colors cursor-pointer">
                 Meet Our Team
               </a>
             </div>
           </motion.div>
 
-          {/* Parallax collision photos */}
-          <div className="relative h-[400px] md:h-[500px]">
-            <motion.div
-              style={{ x: leftX, opacity: imgOpacity }}
-              className="absolute top-0 left-0 w-[60%] h-[70%] rounded-2xl overflow-hidden shadow-xl z-10"
-            >
-              <VideoLightbox videoId="6x9IQq6h9Rk">
-                <Image
-                  src="/images/scottsdale/DRC-OUTSIDE-NORTH-SCOTTSDALE-08-01-2024-1553August-01-202400004-2.jpg"
-                  alt="Desert Recovery Centers Scottsdale outdoor area"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 60vw, 30vw"
-                />
-              </VideoLightbox>
-            </motion.div>
-            <motion.div
-              style={{ x: rightX, opacity: imgOpacity }}
-              className="absolute bottom-0 right-0 w-[55%] h-[65%] rounded-2xl overflow-hidden shadow-xl"
-            >
+          {/* Right — parallax collision photos, BOTH visible */}
+          <motion.div style={{ x: rightX, opacity: imgOpacity }} className="relative h-[420px] md:h-[520px]">
+            {/* LEFT/TOP photo — facility interior */}
+            <div className="absolute top-0 left-0 w-[60%] h-[70%] rounded-2xl overflow-hidden shadow-xl z-10 group">
               <Image
-                src="/images/scottsdale/DRC-LIVING-ROOMS-NORTH-SCOTTSDALE-08-01-2024-1317August-01-202400007-2.jpg"
-                alt="Desert Recovery Centers Scottsdale living room"
+                src="/images/scottsdale/DRC-LIVING-ROOMS-NORTH-SCOTTSDALE-08-01-2024-0553August-01-202400015-2.jpg"
+                alt="Desert Recovery Centers Scottsdale luxury living room"
                 fill
-                className="object-cover"
+                className="object-cover group-hover:scale-[1.04] transition-transform duration-300"
+                sizes="(max-width: 768px) 60vw, 30vw"
+              />
+            </div>
+            {/* RIGHT/BOTTOM photo — second facility */}
+            <div className="absolute bottom-0 right-0 w-[55%] h-[65%] rounded-2xl overflow-hidden shadow-xl group">
+              <Image
+                src="/images/scottsdale/DRC-UPSTAIRS-MASTER-BEDROOM-NORTH-SCOTTSDALE-08-01-2024-0658August-01-202400014-2.jpg"
+                alt="Desert Recovery Centers Scottsdale master bedroom suite"
+                fill
+                className="object-cover group-hover:scale-[1.04] transition-transform duration-300"
                 sizes="(max-width: 768px) 55vw, 28vw"
               />
-            </motion.div>
-            {/* Gold accent corner */}
+            </div>
+            {/* Gold accent */}
             <div className="absolute top-[35%] left-[28%] w-16 h-16 border-2 border-gold/30 rounded-xl -z-0" />
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

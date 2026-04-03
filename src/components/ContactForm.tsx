@@ -4,14 +4,14 @@ import { motion } from "framer-motion";
 
 export default function ContactForm() {
   return (
-    <section id="contact" className="py-20 md:py-28 bg-cream">
+    <section id="contact" className="py-20 md:py-28 bg-cream overflow-hidden">
       <div className="max-w-container mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
+            initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
           >
             <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
               Get Started
@@ -57,10 +57,10 @@ export default function ContactForm() {
           </motion.div>
 
           <motion.form
-            initial={{ opacity: 0, x: 30 }}
+            initial={{ opacity: 0, x: 100 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
             className="bg-white rounded-2xl p-8 shadow-sm space-y-5"
             onSubmit={(e) => e.preventDefault()}
           >

@@ -13,19 +13,26 @@ const locationVideos: Record<string, string> = {
 
 export default function LocationsSection() {
   return (
-    <section id="locations" className="py-20 md:py-28 bg-cream">
+    <section id="locations" className="py-20 md:py-28 bg-cream overflow-hidden">
       <div className="max-w-container mx-auto px-6 text-center mb-14">
-        <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
-          Our Locations
-        </span>
-        <div className="w-[60px] h-0.5 bg-gold mx-auto mt-4 mb-4" />
-        <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold mb-4">
-          Treatment Centers in Arizona
-        </h2>
-        <p className="text-gray-600 max-w-2xl mx-auto">
-          Three locations designed for comfort, privacy, and healing — nestled
-          in the beauty of the Arizona desert.
-        </p>
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.6 }}
+        >
+          <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
+            Our Locations
+          </span>
+          <div className="w-[60px] h-0.5 bg-gold mx-auto mt-4 mb-4" />
+          <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold mb-4">
+            Treatment Centers in Arizona
+          </h2>
+          <p className="text-gray-600 max-w-2xl mx-auto">
+            Three locations designed for comfort, privacy, and healing — nestled
+            in the beauty of the Arizona desert.
+          </p>
+        </motion.div>
       </div>
 
       <div className="space-y-0">
@@ -33,24 +40,26 @@ export default function LocationsSection() {
           const reversed = i % 2 === 1;
           const videoId = locationVideos[location.name];
           return (
-            <motion.div
+            <div
               key={location.name}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.7, ease: "easeOut" }}
-              className={`flex flex-col md:flex-row ${reversed ? "md:flex-row-reverse" : ""} min-h-[500px]`}
+              className={`flex flex-col md:flex-row ${reversed ? "md:flex-row-reverse" : ""} min-h-[500px] overflow-hidden`}
             >
-              {/* Image — 60% with video lightbox */}
-              <div className="relative w-full md:w-[60%] min-h-[300px] md:min-h-0">
+              {/* Image — 60% with video lightbox, collides from photo side */}
+              <motion.div
+                initial={{ opacity: 0, x: reversed ? 100 : -100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.7, ease: "easeOut" }}
+                className="relative w-full md:w-[60%] min-h-[300px] md:min-h-0 overflow-hidden"
+              >
                 {videoId ? (
                   <VideoLightbox videoId={videoId}>
-                    <div className="relative w-full h-full min-h-[300px] md:min-h-[500px]">
+                    <div className="relative w-full h-full min-h-[300px] md:min-h-[500px] overflow-hidden">
                       <Image
                         src={location.image}
                         alt={`Desert Recovery Centers ${location.name} facility`}
                         fill
-                        className="object-cover"
+                        className="object-cover hover:scale-[1.04] transition-transform duration-300"
                         sizes="(max-width: 768px) 100vw, 60vw"
                       />
                     </div>
@@ -60,15 +69,21 @@ export default function LocationsSection() {
                     src={location.image}
                     alt={`Desert Recovery Centers ${location.name} facility`}
                     fill
-                    className="object-cover"
+                    className="object-cover hover:scale-[1.04] transition-transform duration-300"
                     sizes="(max-width: 768px) 100vw, 60vw"
                   />
                 )}
                 <div className="absolute inset-0 bg-gradient-to-t from-forest/30 to-transparent md:hidden pointer-events-none" />
-              </div>
+              </motion.div>
 
-              {/* Content — 40% */}
-              <div className="w-full md:w-[40%] bg-forest flex items-center">
+              {/* Content — 40%, collides from content side */}
+              <motion.div
+                initial={{ opacity: 0, x: reversed ? -100 : 100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
+                className="w-full md:w-[40%] bg-forest flex items-center"
+              >
                 <div className="p-10 md:p-14 lg:p-16">
                   <div className="flex items-center gap-3 mb-4">
                     <span className="w-8 h-px bg-gold" />
@@ -85,7 +100,7 @@ export default function LocationsSection() {
                   </p>
                   {"sqft" in location && (
                     <p className="text-gold text-sm font-medium mb-4">
-                      {location.sqft} sq ft
+                      {(location as { sqft: string }).sqft} sq ft
                     </p>
                   )}
                   <div className="flex flex-wrap gap-2 mb-8">
@@ -113,8 +128,8 @@ export default function LocationsSection() {
                     </a>
                   </div>
                 </div>
-              </div>
-            </motion.div>
+              </motion.div>
+            </div>
           );
         })}
       </div>

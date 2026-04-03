@@ -62,7 +62,7 @@ export default function FacilityPhotoGrid() {
                     src={photo.src}
                     alt={photo.label}
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="object-cover group-hover:scale-[1.04] transition-transform duration-300"
                     sizes="(max-width: 768px) 50vw, 20vw"
                   />
                   <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-forest/80 to-transparent pt-8 pb-3 px-3">

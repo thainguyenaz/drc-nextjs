@@ -3,12 +3,6 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-const stagger = (i: number) => ({
-  initial: { opacity: 0, y: 24 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.6, ease: "easeOut", delay: 0.15 * i },
-});
-
 export default function Hero() {
   return (
     <section className="relative h-screen min-h-[700px] flex items-end overflow-hidden">
@@ -45,26 +39,38 @@ export default function Hero() {
       <div className="relative z-10 max-w-container mx-auto px-6 pb-24 w-full">
         <div className="max-w-3xl">
           {/* Eyebrow */}
-          <motion.div {...stagger(0)} className="flex items-center gap-3 mb-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
+            className="flex items-center gap-3 mb-6"
+          >
             <span className="text-gold font-body uppercase font-semibold" style={{ fontSize: 13, letterSpacing: 6 }}>
               Heal. Restore. Thrive.
             </span>
             <span className="flex-1 h-px bg-gold/30 max-w-[80px]" />
           </motion.div>
 
-          {/* Headline */}
-          <motion.h1
-            {...stagger(1)}
-            className="text-white font-display font-bold leading-[1.1] mb-6"
-            style={{ fontSize: "clamp(32px, 5vw, 52px)" }}
+          {/* Headline — collision slide-up animation */}
+          <motion.div
+            initial={{ opacity: 0, y: 60 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94], delay: 0.25 }}
           >
-            Treatment Centers for Mental Health,
-            <br className="hidden md:inline" /> Drug, &amp; Alcohol Addiction in AZ
-          </motion.h1>
+            <h1
+              className="text-white font-display font-bold leading-[1.1] mb-6"
+              style={{ fontSize: "clamp(32px, 5vw, 52px)" }}
+            >
+              Treatment Centers for Mental Health,
+              <br className="hidden md:inline" /> Drug, &amp; Alcohol Addiction in AZ
+            </h1>
+          </motion.div>
 
           {/* Subhead — sales copy */}
           <motion.p
-            {...stagger(2)}
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease: "easeOut", delay: 0.5 }}
             className="text-white/75 font-body text-lg md:text-xl max-w-2xl mb-10 leading-relaxed"
           >
             When you are ready to reclaim your life, we are ready to help. Arizona&apos;s most intimate luxury recovery program — 10 beds, doctoral-level care, and a team that understands recovery personally.
@@ -72,11 +78,13 @@ export default function Hero() {
 
           {/* Trust Badges with real images */}
           <motion.div
-            {...stagger(3)}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: 0.7 }}
             className="flex flex-wrap items-center gap-4 mb-10"
           >
             <a href="https://www.jointcommission.org" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/15 rounded-xl px-4 py-2.5 hover:bg-white/15 transition-colors">
-              <Image src="/JointCommission_GoldSeal.png" alt="Joint Commission Gold Seal" width={28} height={28} className="flex-shrink-0" />
+              <Image src="/images/branding/JointCommission_GoldSeal_National.png" alt="Joint Commission Gold Seal" width={28} height={28} className="flex-shrink-0" />
               <span className="text-white/90 text-sm font-medium">Joint Commission Accredited</span>
             </a>
             <a href="https://www.legitscript.com/websites/?checker_keywords=desertrecoverycenters.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/15 rounded-xl px-4 py-2.5 hover:bg-white/15 transition-colors">
@@ -91,7 +99,9 @@ export default function Hero() {
 
           {/* CTAs */}
           <motion.div
-            {...stagger(4)}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: 0.9 }}
             className="flex flex-col sm:flex-row items-start gap-4"
           >
             <a
@@ -108,7 +118,12 @@ export default function Hero() {
             </a>
           </motion.div>
 
-          <motion.p {...stagger(5)} className="text-cream/50 text-sm italic mt-5">
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 1.1 }}
+            className="text-cream/50 text-sm italic mt-5"
+          >
             Most clients begin treatment within 48 hours of their first call.
           </motion.p>
         </div>

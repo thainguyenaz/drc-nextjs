@@ -5,26 +5,32 @@ import { siteData } from "@/lib/site-data";
 
 export default function Testimonials() {
   return (
-    <section className="py-20 md:py-28 bg-forest">
+    <section className="py-20 md:py-28 bg-forest overflow-hidden">
       <div className="max-w-container mx-auto px-6">
-        <div className="text-center mb-14">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-14"
+        >
           <span className="text-gold font-body text-sm tracking-[0.2em] uppercase font-medium">
             Testimonials
           </span>
           <h2 className="font-display text-3xl md:text-4xl text-white font-semibold mt-4">
             Real People. Real Recovery.
           </h2>
-        </div>
+        </motion.div>
 
         <div className="grid md:grid-cols-3 gap-8">
           {siteData.testimonials.map((t, i) => (
             <motion.blockquote
               key={t.name}
-              initial={{ opacity: 0, y: 24 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8"
+              className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:-translate-y-1.5 hover:bg-white/10 transition-all duration-300"
             >
               <div className="flex gap-1 mb-4">
                 {[...Array(5)].map((_, j) => (
