@@ -147,7 +147,7 @@ export default function TreatmentIOPPage() {
             <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mb-8">Our Full Continuum of Care</h2>
             <div className="space-y-3 mb-6">
               {[
-                { level: "Phase 1 — Residential", desc: "24/7 immersive treatment, 30-90 days", href: "/programs/residential" },
+                { level: "Phase 1 — Residential", desc: "24/7 immersive treatment, 30 days", href: "/programs/residential" },
                 { level: "Phase 1B — PHP", desc: "5-6 hours daily, 5 days/week, 4-6 weeks", href: "/programs/php" },
                 { level: "Phase 2 — IOP", desc: "3-hour sessions, 5→3 days/week, 4-8 weeks", href: "/treatment/iop", current: true },
                 { level: "Aftercare", desc: "Ongoing therapy, alumni network, community support", href: "#" },

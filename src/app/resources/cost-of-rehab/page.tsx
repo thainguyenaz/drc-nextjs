@@ -111,7 +111,7 @@ export default function CostOfRehabPage() {
                 },
                 {
                   title: "Standard Residential Treatment",
-                  desc: "Residential programs provide 24/7 care in a structured environment. Clients live at the facility for 30 to 90 days. Standard residential programs in Arizona typically range from $15,000 to $40,000 for a 30-day stay, depending on the facility and services included.",
+                  desc: "Residential programs provide 24/7 care in a structured environment. Clients live at the facility for 30 days. Standard residential programs in Arizona typically range from $15,000 to $40,000 for a 30-day stay, depending on the facility and services included.",
                 },
                 {
                   title: "Luxury Residential Treatment",

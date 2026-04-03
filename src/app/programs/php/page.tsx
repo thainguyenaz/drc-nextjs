@@ -146,10 +146,20 @@ export default function PHPPage() {
           <span className="text-gold font-body text-sm tracking-[0.2em] uppercase font-medium">Better Outcomes</span>
           <div className="w-[60px] h-0.5 bg-gold mx-auto mt-4 mb-4" />
           <h2 className="font-display text-3xl md:text-4xl text-white font-semibold mb-10">How Outcomes Improve With a Full Continuum of Care</h2>
-          <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-xl ring-1 ring-white/10">
+          <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-xl ring-1 ring-white/10 mb-16">
             <iframe
               src="https://www.youtube.com/embed/Il5BV-EYP3E?rel=0"
               title="How Do Outcomes Improve When Clients Follow a Full Continuum of Care"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="absolute inset-0 w-full h-full border-0"
+            />
+          </div>
+          <h2 className="font-display text-3xl md:text-4xl text-white font-semibold mb-10">What If You Need to Step Back Up?</h2>
+          <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-xl ring-1 ring-white/10">
+            <iframe
+              src="https://www.youtube.com/embed/YRgC19rPIho?rel=0"
+              title="What Happens If Someone Needs to Step Back Up to a Higher Level of Care"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
               className="absolute inset-0 w-full h-full border-0"

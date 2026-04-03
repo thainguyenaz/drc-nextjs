@@ -24,7 +24,7 @@ const faqs = [
   {
     question: "How long does alcohol rehab take?",
     answer:
-      "The length of alcohol rehab varies by individual need. Detox typically lasts 5 to 10 days, followed by 30 to 90 days of residential treatment. Many clients continue with PHP or IOP for additional weeks. Desert Recovery Centers builds a custom treatment timeline based on your history, severity of dependence, and recovery goals.",
+      "The length of alcohol rehab varies by individual need. Detox typically lasts 5 to 10 days, followed by 30 days of residential treatment. Many clients continue with PHP or IOP for additional weeks. Desert Recovery Centers builds a custom treatment timeline based on your history, severity of dependence, and recovery goals.",
   },
   {
     question: "Does insurance cover alcohol addiction treatment?",
@@ -156,10 +156,40 @@ export default function AlcoholAddictionPage() {
           <span className="text-gold font-body text-sm tracking-[0.2em] uppercase font-medium">Understanding the Connection</span>
           <div className="w-[60px] h-0.5 bg-gold mx-auto mt-4 mb-4" />
           <h2 className="font-display text-3xl md:text-4xl text-white font-semibold mb-10">How Does Alcohol Affect Mental Health?</h2>
-          <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-xl ring-1 ring-white/10">
+          <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-xl ring-1 ring-white/10 mb-16">
             <iframe
               src="https://www.youtube.com/embed/-IAFRFF8DCQ?rel=0"
               title="How Does Alcohol Affect Mental Health?"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="absolute inset-0 w-full h-full border-0"
+            />
+          </div>
+          <h2 className="font-display text-3xl md:text-4xl text-white font-semibold mb-10">Is There a Link Between Alcohol Use and Suicide Risk?</h2>
+          <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-xl ring-1 ring-white/10 mb-16">
+            <iframe
+              src="https://www.youtube.com/embed/025O4_-fugI?rel=0"
+              title="Is There a Link Between Alcohol Use and Suicide Risk"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="absolute inset-0 w-full h-full border-0"
+            />
+          </div>
+          <h2 className="font-display text-3xl md:text-4xl text-white font-semibold mb-10">Long-Term Mental Health Effects of Chronic Alcohol Use</h2>
+          <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-xl ring-1 ring-white/10 mb-16">
+            <iframe
+              src="https://www.youtube.com/embed/MpZDZkqSJWQ?rel=0"
+              title="What Are the Long-Term Mental Health Effects of Chronic Alcohol Use"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="absolute inset-0 w-full h-full border-0"
+            />
+          </div>
+          <h2 className="font-display text-3xl md:text-4xl text-white font-semibold mb-10">What Is &ldquo;Gray-Area Drinking&rdquo;?</h2>
+          <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-xl ring-1 ring-white/10">
+            <iframe
+              src="https://www.youtube.com/embed/itGlGak_JOk?rel=0"
+              title="What Is Gray-Area Drinking, and Why Is It Dangerous"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
               className="absolute inset-0 w-full h-full border-0"

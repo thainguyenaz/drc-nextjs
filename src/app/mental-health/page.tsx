@@ -65,10 +65,20 @@ export default function MentalHealthPage() {
           <span className="text-gold font-body text-sm tracking-[0.2em] uppercase font-medium">Learn More</span>
           <div className="w-[60px] h-0.5 bg-gold mx-auto mt-4 mb-4" />
           <h2 className="font-display text-3xl md:text-4xl text-white font-semibold mb-10">Your Path to Wellness</h2>
-          <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-xl ring-1 ring-white/10">
+          <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-xl ring-1 ring-white/10 mb-16">
             <iframe
               src="https://www.youtube.com/embed/Q7hykWDiBSk?rel=0"
               title="Your Path to Mental Wellness"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="absolute inset-0 w-full h-full border-0"
+            />
+          </div>
+          <h2 className="font-display text-3xl md:text-4xl text-white font-semibold mb-10">What Is Executive Burnout?</h2>
+          <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-xl ring-1 ring-white/10">
+            <iframe
+              src="https://www.youtube.com/embed/nOBR_oQGTZU?rel=0"
+              title="What Is Executive Burnout, and How Does It Correlate to High Achievers"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
               className="absolute inset-0 w-full h-full border-0"

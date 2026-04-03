@@ -87,10 +87,20 @@ export default function FamilyProgramPage() {
             />
           </div>
           <h2 className="font-display text-3xl md:text-4xl text-white font-semibold mb-10">The Stages of Family Recovery</h2>
-          <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-xl ring-1 ring-white/10">
+          <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-xl ring-1 ring-white/10 mb-16">
             <iframe
               src="https://www.youtube.com/embed/xRhjvq3Jk5s?rel=0"
               title="What Are the Stages of Family Recovery, Even When the Addict is Still Active"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="absolute inset-0 w-full h-full border-0"
+            />
+          </div>
+          <h2 className="font-display text-3xl md:text-4xl text-white font-semibold mb-10">What Is CRAFT?</h2>
+          <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-xl ring-1 ring-white/10">
+            <iframe
+              src="https://www.youtube.com/embed/Gqb-9IG8Q8U?rel=0"
+              title="What Is CRAFT, and How Does It Work Better Than Confrontation"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
               className="absolute inset-0 w-full h-full border-0"

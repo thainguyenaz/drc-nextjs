@@ -24,7 +24,7 @@ const faqs = [
   {
     question: "How long does stimulant rehab take?",
     answer:
-      "Stimulant recovery requires time for neurological healing. Residential treatment typically lasts 30 to 90 days, with natural dopamine function improving steadily over weeks to months. Step-down care through PHP and IOP continues the recovery process. Desert Recovery Centers customizes every timeline to your needs.",
+      "Stimulant recovery requires time for neurological healing. Residential treatment typically lasts 30 days, with natural dopamine function improving steadily over weeks to months. Step-down care through PHP and IOP continues the recovery process. Desert Recovery Centers customizes every timeline to your needs.",
   },
   {
     question: "Does insurance cover stimulant addiction treatment?",

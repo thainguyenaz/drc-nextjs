@@ -27,10 +27,30 @@ export default function AboutPage() {
           <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">Our Story</span>
           <div className="w-[60px] h-0.5 bg-gold mx-auto mt-4 mb-4" />
           <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold mb-10">Who We Are</h2>
-          <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-xl">
+          <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-xl mb-16">
             <iframe
               src="https://www.youtube.com/embed/bqDzL4O3WDE?rel=0"
               title="About Desert Recovery Centers"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="absolute inset-0 w-full h-full border-0"
+            />
+          </div>
+          <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold mb-10">Why a Smaller, Boutique Program Leads to Better Outcomes</h2>
+          <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-xl mb-16">
+            <iframe
+              src="https://www.youtube.com/embed/ay9o6sxL4W8?rel=0"
+              title="Why Does a Smaller, Boutique Program Often Lead to Better Outcomes Than Large Corporate Rehabs"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="absolute inset-0 w-full h-full border-0"
+            />
+          </div>
+          <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold mb-10">Why Professionals Need Specialized Treatment</h2>
+          <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-xl">
+            <iframe
+              src="https://www.youtube.com/embed/bhnDyJ6acqY?rel=0"
+              title="Why Do Professionals (Doctors, Lawyers, Pilots) Often Need Specialized Treatment Programs"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
               className="absolute inset-0 w-full h-full border-0"

@@ -35,7 +35,7 @@ export default function AddictionTreatmentPage() {
             <h2 className="font-display text-2xl text-forest font-semibold mt-10 mb-4">Levels of Care</h2>
             <div className="grid sm:grid-cols-3 gap-6 mt-6">
               {[
-                { name: "Residential", duration: "30–90 days", desc: "Immersive 24/7 care in our luxury facilities with structured daily programming." },
+                { name: "Residential", duration: "30 days", desc: "Immersive 24/7 care in our luxury facilities with structured daily programming." },
                 { name: "PHP", duration: "4–6 weeks", desc: "5–6 hours of daily programming while living at home or in sober living." },
                 { name: "IOP", duration: "8–12 weeks", desc: "Flexible outpatient sessions 3–4 times per week for step-down support." },
               ].map((level) => (

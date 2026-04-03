@@ -24,7 +24,7 @@ const faqs = [
   {
     question: "How long does heroin rehab take?",
     answer:
-      "Heroin detox typically lasts 7 to 14 days, followed by 30 to 90 days of residential treatment. Many clients benefit from extended MAT and step-down care through PHP and IOP. Desert Recovery Centers tailors every treatment timeline to your unique situation and recovery goals.",
+      "Heroin detox typically lasts 7 to 14 days, followed by 30 days of residential treatment. Many clients benefit from extended MAT and step-down care through PHP and IOP. Desert Recovery Centers tailors every treatment timeline to your unique situation and recovery goals.",
   },
   {
     question: "Does insurance cover heroin addiction treatment?",

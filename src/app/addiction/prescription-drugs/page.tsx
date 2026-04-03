@@ -24,7 +24,7 @@ const faqs = [
   {
     question: "How long does prescription drug rehab take?",
     answer:
-      "Treatment length depends on the medication class involved. Benzodiazepine tapering can take weeks to months. Opioid detox typically lasts 7 to 14 days, followed by 30 to 90 days of residential care. Desert Recovery Centers creates a custom timeline based on your specific substance, dosage history, and recovery goals.",
+      "Treatment length depends on the medication class involved. Benzodiazepine tapering can take weeks to months. Opioid detox typically lasts 7 to 14 days, followed by 30 days of residential care. Desert Recovery Centers creates a custom timeline based on your specific substance, dosage history, and recovery goals.",
   },
   {
     question: "Does insurance cover prescription drug addiction treatment?",

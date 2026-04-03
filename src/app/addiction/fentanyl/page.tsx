@@ -24,7 +24,7 @@ const faqs = [
   {
     question: "How long does fentanyl rehab take?",
     answer:
-      "Fentanyl detox typically lasts 7 to 14 days due to the severity of withdrawal. Residential treatment usually follows for 30 to 90 days, with many clients continuing MAT and step-down care through PHP and IOP. Desert Recovery Centers builds your treatment timeline around your specific needs.",
+      "Fentanyl detox typically lasts 7 to 14 days due to the severity of withdrawal. Residential treatment usually follows for 30 days, with many clients continuing MAT and step-down care through PHP and IOP. Desert Recovery Centers builds your treatment timeline around your specific needs.",
   },
   {
     question: "Does insurance cover fentanyl addiction treatment?",

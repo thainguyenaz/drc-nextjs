@@ -71,7 +71,7 @@ const faqs = [
   },
   {
     q: "How long does residential treatment typically last?",
-    a: "Residential stays typically range from 30 to 90 days, depending on the severity and complexity of your condition. Your clinical team continuously evaluates your progress and adjusts the timeline to ensure you have the strongest possible foundation before stepping down to a lower level of care.",
+    a: "Residential stays typically range from 30 days, depending on the severity and complexity of your condition. Your clinical team continuously evaluates your progress and adjusts the timeline to ensure you have the strongest possible foundation before stepping down to a lower level of care.",
   },
   {
     q: "Can family members visit the Scottsdale facility?",

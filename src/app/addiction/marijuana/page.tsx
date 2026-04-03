@@ -150,6 +150,24 @@ export default function MarijuanaAddictionPage() {
           </div>
         </div>
       </section>
+      {/* ── Marijuana Dependence Video ─────────────────────────── */}
+      <section className="py-16 md:py-24 bg-forest">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <span className="text-gold font-body text-sm tracking-[0.2em] uppercase font-medium">Expert Insight</span>
+          <div className="w-[60px] h-0.5 bg-gold mx-auto mt-4 mb-4" />
+          <h2 className="font-display text-3xl md:text-4xl text-white font-semibold mb-10">Why Many Marijuana Users Underestimate Their Dependence</h2>
+          <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-xl ring-1 ring-white/10">
+            <iframe
+              src="https://www.youtube.com/embed/-kdPgVZItgY?rel=0"
+              title="Why Do Many Marijuana Addicts Underestimate Their Dependence"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="absolute inset-0 w-full h-full border-0"
+            />
+          </div>
+        </div>
+      </section>
+
       <AddictionPrograms />
       <ConditionFAQ items={faqs} />
       <AEOBlock

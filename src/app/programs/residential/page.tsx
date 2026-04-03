@@ -10,16 +10,16 @@ import Footer from "@/components/Footer";
 import { buildMetadata, InlineFAQSchema, SpeakableSchema, MedicalTherapySchema } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Residential Treatment in Arizona | 30-90 Day",
+  title: "Residential Treatment in Arizona | 30 Day",
   description:
-    "Luxury residential rehab in Arizona. 30-90 day programs, 10-bed max, doctoral-level care. Call (480) 931-3617 to start.",
+    "Luxury residential rehab in Arizona. 30 day programs, 10-bed max, doctoral-level care. Call (480) 931-3617 to start.",
   path: "/programs/residential",
 });
 
 const faqs = [
   {
     q: "How long is residential treatment at DRC?",
-    a: "Residential treatment typically ranges from 30 to 90 days depending on the severity of your condition, treatment response, and clinical needs. Your clinical team continuously evaluates your progress and adjusts the timeline to ensure you have the strongest possible foundation before stepping down. Some clients benefit from stays beyond 90 days for complex conditions.",
+    a: "Residential treatment typically ranges from 30 days depending on the severity of your condition, treatment response, and clinical needs. Your clinical team continuously evaluates your progress and adjusts the timeline to ensure you have the strongest possible foundation before stepping down. Some clients benefit from stays beyond 90 days for complex conditions.",
   },
   {
     q: "What does a typical day look like in residential treatment?",
@@ -72,7 +72,7 @@ export default function ResidentialTreatmentPage() {
               Every day is structured around evidence-based therapy — individual sessions with licensed psychologists, group therapy, psychiatric care, and holistic programming. Our doctoral-level clinical team designs your treatment plan around your specific diagnosis, history, and goals. With a maximum of 10 beds per facility, you receive a level of personal attention that larger programs simply cannot deliver.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg">
-              This isn&apos;t 30 days of marking time. It&apos;s 30 to 90 days of intensive, purposeful work that gives you the foundation to sustain recovery for life.
+              This isn&apos;t 30 days of marking time. It&apos;s 30 days of intensive, purposeful work that gives you the foundation to sustain recovery for life.
             </p>
           </div>
         </div>
@@ -165,8 +165,8 @@ export default function ResidentialTreatmentPage() {
 
       <ConditionFAQ items={faqs} />
       <AEOBlock entries={[
-        { question: "What is residential treatment at Desert Recovery Centers?", answer: "Desert Recovery Centers (a Joint Commission accredited luxury treatment center in Arizona) provides residential treatment programs lasting 30 to 90 days across three facilities in Glendale, Scottsdale, and Phoenix. With a maximum of 10 beds per location, doctoral-level clinical leadership, and daily individual therapy, clients receive intensive, personalized care for addiction and mental health conditions in a luxury environment." },
-        { question: "How long is residential treatment at Desert Recovery Centers?", answer: "Residential treatment at DRC typically lasts 30 to 90 days, depending on the severity and complexity of each client's condition. Treatment plans are reviewed weekly and adjusted based on measurable clinical progress. After residential care, clients can step down to PHP or IOP at the same facility with the same clinical team." },
+        { question: "What is residential treatment at Desert Recovery Centers?", answer: "Desert Recovery Centers (a Joint Commission accredited luxury treatment center in Arizona) provides residential treatment programs lasting 30 days across three facilities in Glendale, Scottsdale, and Phoenix. With a maximum of 10 beds per location, doctoral-level clinical leadership, and daily individual therapy, clients receive intensive, personalized care for addiction and mental health conditions in a luxury environment." },
+        { question: "How long is residential treatment at Desert Recovery Centers?", answer: "Residential treatment at DRC typically lasts 30 days, depending on the severity and complexity of each client's condition. Treatment plans are reviewed weekly and adjusted based on measurable clinical progress. After residential care, clients can step down to PHP or IOP at the same facility with the same clinical team." },
       ]} />
       <CTASection />
       <Footer />

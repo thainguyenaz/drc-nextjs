@@ -146,10 +146,20 @@ export default function TreatmentOPPage() {
           <span className="text-gold font-body text-sm tracking-[0.2em] uppercase font-medium">Life After Treatment</span>
           <div className="w-[60px] h-0.5 bg-gold mx-auto mt-4 mb-4" />
           <h2 className="font-display text-3xl md:text-4xl text-white font-semibold mb-10">Aftercare in Recovery</h2>
-          <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-xl ring-1 ring-white/10">
+          <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-xl ring-1 ring-white/10 mb-16">
             <iframe
               src="https://www.youtube.com/embed/SEZcflDyGOU?rel=0"
               title="Aftercare in Recovery"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="absolute inset-0 w-full h-full border-0"
+            />
+          </div>
+          <h2 className="font-display text-3xl md:text-4xl text-white font-semibold mb-10">Reintegrating Into Real Life After Treatment</h2>
+          <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-xl ring-1 ring-white/10">
+            <iframe
+              src="https://www.youtube.com/embed/Qm5PSJSD6Ds?rel=0"
+              title="How Do You Help Clients Reintegrate Into Real Life Successfully After Treatment"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
               className="absolute inset-0 w-full h-full border-0"
@@ -165,7 +175,7 @@ export default function TreatmentOPPage() {
             <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mb-8">Our Full Continuum of Care</h2>
             <div className="space-y-3 mb-6">
               {[
-                { level: "Phase 1 — Residential", desc: "24/7 immersive treatment, 30-90 days", href: "/programs/residential" },
+                { level: "Phase 1 — Residential", desc: "24/7 immersive treatment, 30 days", href: "/programs/residential" },
                 { level: "Phase 1B — PHP", desc: "5-6 hours daily, 5 days/week, 4-6 weeks", href: "/programs/php" },
                 { level: "Phase 2 — IOP", desc: "3-hour sessions, 5→3 days/week, 4-8 weeks", href: "/treatment/iop" },
                 { level: "Phase 3 — OP", desc: "3-hour sessions, 1-3 days/week, ongoing", href: "/treatment/op", current: true },

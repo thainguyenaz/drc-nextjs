@@ -33,7 +33,7 @@ const footerLinks = {
     { label: "Facilities", href: "/locations" },
     { label: "Resources", href: "/resources" },
     { label: "Insurance", href: "/insurance" },
-    { label: "Contact", href: "#contact" },
+    { label: "Contact", href: "/contact" },
   ],
 };
 

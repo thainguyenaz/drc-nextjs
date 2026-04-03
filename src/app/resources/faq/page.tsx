@@ -65,7 +65,7 @@ const categories = [
     items: [
       {
         q: "How long does treatment typically last?",
-        a: "Treatment duration varies by individual need. Residential programs typically range from 30 to 90 days. PHP runs 4-6 weeks with 5-6 hours of daily programming, and IOP is usually 8-12 weeks meeting 3-4 times per week. Your clinical team will adjust the timeline as needed.",
+        a: "Treatment duration varies by individual need. Residential programs typically range from 30 days. PHP runs 4-6 weeks with 5-6 hours of daily programming, and IOP is usually 8-12 weeks meeting 3-4 times per week. Your clinical team will adjust the timeline as needed.",
       },
       {
         q: "Do you treat both mental health and addiction?",

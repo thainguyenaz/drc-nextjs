@@ -24,7 +24,7 @@ const faqs = [
   {
     question: "How long does sex addiction treatment take?",
     answer:
-      "Sex addiction treatment typically involves 30 to 90 days of residential or outpatient care, depending on severity and co-occurring conditions. Many clients benefit from ongoing therapy after primary treatment. Desert Recovery Centers customizes every plan to your unique needs and recovery goals.",
+      "Sex addiction treatment typically involves 30 days of residential or outpatient care, depending on severity and co-occurring conditions. Many clients benefit from ongoing therapy after primary treatment. Desert Recovery Centers customizes every plan to your unique needs and recovery goals.",
   },
   {
     question: "Does insurance cover sex addiction treatment?",

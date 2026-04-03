@@ -24,7 +24,7 @@ const faqs = [
   {
     question: "How long does gambling addiction rehab take?",
     answer:
-      "Gambling addiction treatment typically involves 30 to 90 days of residential or outpatient care, depending on severity. Many clients benefit from ongoing therapy and support groups after primary treatment. Desert Recovery Centers tailors every plan to your unique situation and recovery goals.",
+      "Gambling addiction treatment typically involves 30 days of residential or outpatient care, depending on severity. Many clients benefit from ongoing therapy and support groups after primary treatment. Desert Recovery Centers tailors every plan to your unique situation and recovery goals.",
   },
   {
     question: "Does insurance cover gambling addiction treatment?",
@@ -150,6 +150,24 @@ export default function GamblingAddictionPage() {
           </div>
         </div>
       </section>
+      {/* ── Gambling Warning Signs Video ──────────────────────── */}
+      <section className="py-16 md:py-24 bg-forest">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <span className="text-gold font-body text-sm tracking-[0.2em] uppercase font-medium">Expert Insight</span>
+          <div className="w-[60px] h-0.5 bg-gold mx-auto mt-4 mb-4" />
+          <h2 className="font-display text-3xl md:text-4xl text-white font-semibold mb-10">When Gambling Crosses From Recreation to Addiction</h2>
+          <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-xl ring-1 ring-white/10">
+            <iframe
+              src="https://www.youtube.com/embed/Vgb-tnoS8R0?rel=0"
+              title="What Are the Warning Signs That Gambling Has Crossed From Recreation to Addiction"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="absolute inset-0 w-full h-full border-0"
+            />
+          </div>
+        </div>
+      </section>
+
       <AddictionPrograms />
       <ConditionFAQ items={faqs} />
       <AEOBlock

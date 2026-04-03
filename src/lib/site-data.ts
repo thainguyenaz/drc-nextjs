@@ -15,7 +15,7 @@ export const siteData = {
       sqft: "7,500",
       description:
         "Our flagship residential treatment center offering comprehensive mental health and addiction programs in a luxury home-like setting.",
-      programs: ["Residential Treatment", "PHP", "IOP"],
+      programs: ["Residential", "PHP", "IOP", "OP", "Detox"],
       amenities: ["Basketball Court", "Tennis Court", "Pool", "Gym", "Billiards", "Massage Room"],
       image: "/images/glendale/Gelndale-Front-1.jpg",
     },
@@ -26,20 +26,41 @@ export const siteData = {
       phoneTel: "+14809313617",
       description:
         "Residential mental health and addiction treatment nestled in north Scottsdale with stunning mountain views and serene desert surroundings.",
-      programs: ["Residential Treatment", "PHP", "IOP"],
+      programs: ["Residential", "PHP", "IOP", "OP"],
       amenities: ["Pool", "Tennis Court", "Basketball Court", "Gym", "Massage Room", "Mountain Views"],
       image: "/images/scottsdale/DRC-FRONT-ENTRANCE-NORTH-SCOTTSDALE-08-01-2024-1210August-01-202400002-2.jpg",
     },
     {
-      name: "Phoenix",
-      address: "1623 W Moody Trail, Phoenix, AZ 85041",
+      name: "Phoenix PHP/IOP",
+      address: "4160 N. 108th Ave, Phoenix, AZ 85037",
       phone: "(623) 257-5384",
       phoneTel: "+16232575384",
-      sqft: "5,500",
       description:
-        "Residential and outpatient services with expanded holistic programming, featuring a movie theater and pool with waterfall.",
-      programs: ["Residential Treatment", "Outpatient"],
-      amenities: ["Movie Theater", "Pool with Waterfall", "Gym", "Massage Room"],
+        "Outpatient treatment center offering PHP, IOP, OP, and NeuroStar TMS therapy in Phoenix.",
+      programs: ["PHP", "IOP", "OP", "TMS"],
+      amenities: ["Treatment Rooms", "Group Therapy Space"],
+      image: "/images/general/accom-group-room.jpg",
+    },
+    {
+      name: "Phoenix TMS",
+      address: "4160 N. 108th Ave, Phoenix, AZ 85037",
+      phone: "(623) 257-5384",
+      phoneTel: "+16232575384",
+      description:
+        "Dedicated NeuroStar TMS therapy center for depression, anxious depression, and OCD treatment.",
+      programs: ["TMS Therapy"],
+      amenities: ["NeuroStar TMS Suite"],
+      image: "/images/general/DRC-TREATMENTS.jpg",
+    },
+    {
+      name: "Phoenix PHP Living",
+      address: "1623 W Moody Trail, Phoenix, AZ 85085",
+      phone: "(623) 257-5384",
+      phoneTel: "+16232575384",
+      description:
+        "Supportive PHP living and sober living housing for clients enrolled in DRC outpatient programs.",
+      programs: ["PHP Living", "Sober Living"],
+      amenities: ["Pool with Waterfall", "Gym", "Massage Room"],
       image: "/images/general/accom-backyard.jpg",
     },
   ],
@@ -105,7 +126,7 @@ export const siteData = {
     },
     {
       q: "How long does treatment typically last?",
-      a: "Treatment duration varies by individual need. Residential programs typically range from 30 to 90 days. PHP runs 4-6 weeks with 5-6 hours of daily programming, and IOP is usually 8-12 weeks meeting 3-4 times per week. Your clinical team will adjust the timeline as needed.",
+      a: "Treatment duration varies by individual need. Residential programs typically range from 30 days. PHP runs 4-6 weeks with 5-6 hours of daily programming, and IOP is usually 8-12 weeks meeting 3-4 times per week. Your clinical team will adjust the timeline as needed.",
     },
     {
       q: "Do you treat both mental health and addiction?",

@@ -24,7 +24,7 @@ const faqs = [
   {
     question: "How long does cocaine rehab take?",
     answer:
-      "Cocaine rehab typically involves 30 to 90 days of residential treatment, followed by PHP and IOP for continued support. Because cocaine addiction is primarily psychological, treatment focuses on rebuilding your brain's natural reward system over time. Desert Recovery Centers customizes every treatment plan.",
+      "Cocaine rehab typically involves 30 days of residential treatment, followed by PHP and IOP for continued support. Because cocaine addiction is primarily psychological, treatment focuses on rebuilding your brain's natural reward system over time. Desert Recovery Centers customizes every treatment plan.",
   },
   {
     question: "Does insurance cover cocaine addiction treatment?",

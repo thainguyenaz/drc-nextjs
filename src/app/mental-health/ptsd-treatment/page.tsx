@@ -33,7 +33,7 @@ const faqs = [
   },
   {
     q: "How long does PTSD treatment take?",
-    a: "Residential PTSD treatment typically lasts 30 to 90 days, depending on the severity and complexity of your trauma. Some clients with complex or developmental trauma benefit from longer stays. Our outpatient PHP and IOP programs provide 6 to 12 weeks of continued support. Your clinical team adjusts the timeline based on your progress and needs.",
+    a: "Residential PTSD treatment typically lasts 30 days, depending on the severity and complexity of your trauma. Some clients with complex or developmental trauma benefit from longer stays. Our outpatient PHP and IOP programs provide 6 to 12 weeks of continued support. Your clinical team adjusts the timeline based on your progress and needs.",
   },
 ];
 
@@ -273,7 +273,7 @@ export default function PTSDTreatmentPage() {
         entries={[
           { question: "What is PTSD treatment at Desert Recovery Centers?", answer: "Desert Recovery Centers (a Joint Commission accredited luxury treatment center in Arizona) provides specialized PTSD and trauma treatment led by clinicians with advanced training in trauma-focused modalities. With a maximum of 10 beds per facility and 24/7 clinical support, clients can safely process trauma in a structured, luxury residential environment." },
           { question: "How does Desert Recovery Centers treat PTSD?", answer: "DRC treats PTSD using EMDR (Eye Movement Desensitization and Reprocessing), trauma-focused Cognitive Behavioral Therapy, somatic experiencing, and experiential therapies including art therapy and yoga. Each treatment plan is individualized by licensed clinical psychologists who specialize in trauma recovery." },
-          { question: "How long does PTSD treatment take at Desert Recovery Centers?", answer: "Residential PTSD treatment at DRC typically lasts 30 to 90 days, depending on the severity and complexity of the trauma. Clients with complex or developmental trauma may benefit from extended stays. Outpatient PHP and IOP programs provide 6 to 12 weeks of continued support after residential care." },
+          { question: "How long does PTSD treatment take at Desert Recovery Centers?", answer: "Residential PTSD treatment at DRC typically lasts 30 days, depending on the severity and complexity of the trauma. Clients with complex or developmental trauma may benefit from extended stays. Outpatient PHP and IOP programs provide 6 to 12 weeks of continued support after residential care." },
         ]}
       />
       <RelatedPages currentPath="/mental-health/ptsd-treatment" />

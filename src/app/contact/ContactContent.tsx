@@ -8,7 +8,7 @@ const locations = [
     address: "8105 W Frier Dr, Glendale, AZ 85303",
     phone: "(623) 323-1012",
     phoneTel: "+16233231012",
-    programs: ["Residential Treatment", "PHP", "IOP"],
+    programs: ["Residential", "PHP", "IOP", "OP", "Detox"],
     mapQuery: "8105+W+Frier+Dr+Glendale+AZ+85303",
   },
   {
@@ -16,16 +16,32 @@ const locations = [
     address: "23222 N Church Rd, Scottsdale, AZ 85255",
     phone: "(480) 931-3617",
     phoneTel: "+14809313617",
-    programs: ["Residential Treatment", "PHP", "IOP"],
+    programs: ["Residential", "PHP", "IOP", "OP"],
     mapQuery: "23222+N+Church+Rd+Scottsdale+AZ+85255",
   },
   {
-    name: "Phoenix",
-    address: "1623 W Moody Trail, Phoenix, AZ 85041",
+    name: "Phoenix PHP/IOP",
+    address: "4160 N. 108th Ave, Phoenix, AZ 85037",
     phone: "(623) 257-5384",
     phoneTel: "+16232575384",
-    programs: ["Residential Treatment", "Outpatient"],
-    mapQuery: "1623+W+Moody+Trail+Phoenix+AZ+85041",
+    programs: ["PHP", "IOP", "OP", "TMS"],
+    mapQuery: "4160+N+108th+Ave+Phoenix+AZ+85037",
+  },
+  {
+    name: "Phoenix TMS",
+    address: "4160 N. 108th Ave, Phoenix, AZ 85037",
+    phone: "(623) 257-5384",
+    phoneTel: "+16232575384",
+    programs: ["TMS Therapy"],
+    mapQuery: "4160+N+108th+Ave+Phoenix+AZ+85037",
+  },
+  {
+    name: "Phoenix PHP Living",
+    address: "1623 W Moody Trail, Phoenix, AZ 85085",
+    phone: "(623) 257-5384",
+    phoneTel: "+16232575384",
+    programs: ["PHP Living", "Sober Living"],
+    mapQuery: "1623+W+Moody+Trail+Phoenix+AZ+85085",
   },
 ];
 
@@ -160,7 +176,7 @@ export default function ContactContent() {
             </span>
             <div className="w-[60px] h-0.5 bg-gold mx-auto mt-4 mb-4" />
             <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold mb-4">
-              Three Facilities Across Arizona
+              Five Locations Across Arizona
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Each facility offers the same clinical excellence in a luxury residential setting designed for healing.

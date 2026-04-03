@@ -52,8 +52,20 @@ const navLinks = [
       { label: "Family Program", href: "/treatment/family-program" },
     ],
   },
-  { label: "Facilities", href: "/facilities/glendale" },
+  {
+    label: "Facilities",
+    href: "/locations",
+    image: "/images/glendale/Gelndale-Front-1.jpg",
+    children: [
+      { label: "Glendale", href: "/locations/glendale" },
+      { label: "Scottsdale", href: "/locations/scottsdale" },
+      { label: "Phoenix PHP/IOP", href: "/locations/phoenix" },
+      { label: "Phoenix TMS", href: "/treatments/tms-therapy" },
+      { label: "Phoenix PHP Living", href: "/locations/phoenix-living" },
+    ],
+  },
   { label: "About", href: "/about-us" },
+  { label: "Contact", href: "/contact" },
   { label: "Our Team", href: "/our-team" },
 ];
 
