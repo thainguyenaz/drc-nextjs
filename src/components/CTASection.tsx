@@ -1,7 +1,19 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 export default function CTASection() {
   return (
-    <section className="py-20 md:py-28 bg-forest">
-      <div className="max-w-container mx-auto px-6 text-center">
+    <section className="py-20 md:py-28 bg-forest relative overflow-hidden">
+      {/* Subtle gold accent line */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="max-w-container mx-auto px-6 text-center"
+      >
         <h2 className="font-display text-3xl md:text-4xl text-white font-semibold mb-6">
           Your Recovery Starts With One Call
         </h2>
@@ -24,7 +36,7 @@ export default function CTASection() {
             Verify Insurance Online
           </a>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

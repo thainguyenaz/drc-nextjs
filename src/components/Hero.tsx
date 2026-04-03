@@ -70,7 +70,7 @@ export default function Hero() {
         {/* Headline — matches live site */}
         <motion.h1
           {...fadeUp(0.4)}
-          className="text-white font-display text-4xl md:text-5xl lg:text-7xl font-semibold leading-[1.1] mb-6"
+          className="text-white font-display text-5xl md:text-6xl lg:text-8xl font-bold leading-[1.05] mb-8 tracking-tight"
         >
           Treatment Centers for Mental Health,
           <br className="hidden lg:inline" /> Drug, &amp; Alcohol Addiction in AZ

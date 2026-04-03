@@ -11,7 +11,7 @@ const config: Config = {
       colors: {
         forest: "#1C2B1E",
         sage: "#4A7C59",
-        cream: "#F5EFE6",
+        cream: "#FAF7F2",
         gold: "#C4973A",
         "gold-dark": "#A97E2E",
       },

@@ -32,7 +32,7 @@ export default function ConditionsGrid() {
             >
               <Link
                 href={condition.href}
-                className="block bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow h-full cursor-pointer"
+                className="block bg-white rounded-xl p-6 shadow-sm border-2 border-transparent hover:border-gold/40 hover:shadow-lg transition-all duration-300 h-full cursor-pointer"
               >
                 <h3 className="font-display text-lg text-forest font-semibold mb-2">
                   {condition.name}

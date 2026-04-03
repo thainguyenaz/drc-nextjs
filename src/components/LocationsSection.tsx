@@ -7,75 +7,93 @@ import { siteData } from "@/lib/site-data";
 export default function LocationsSection() {
   return (
     <section id="locations" className="py-20 md:py-28 bg-cream">
-      <div className="max-w-container mx-auto px-6">
-        <div className="text-center mb-14">
-          <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
-            Our Locations
-          </span>
-          <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold mt-4 mb-4">
-            Treatment Centers in Arizona
-          </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Three locations designed for comfort, privacy, and healing — nestled
-            in the beauty of the Arizona desert.
-          </p>
-        </div>
+      <div className="max-w-container mx-auto px-6 text-center mb-14">
+        <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
+          Our Locations
+        </span>
+        <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold mt-4 mb-4">
+          Treatment Centers in Arizona
+        </h2>
+        <p className="text-gray-600 max-w-2xl mx-auto">
+          Three locations designed for comfort, privacy, and healing — nestled
+          in the beauty of the Arizona desert.
+        </p>
+      </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {siteData.locations.map((location, i) => (
+      <div className="space-y-0">
+        {siteData.locations.map((location, i) => {
+          const reversed = i % 2 === 1;
+          return (
             <motion.div
               key={location.name}
-              initial={{ opacity: 0, y: 24 }}
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.7, ease: "easeOut" }}
+              className={`flex flex-col md:flex-row ${reversed ? "md:flex-row-reverse" : ""} min-h-[500px]`}
             >
-              <div className="relative aspect-[16/10]">
+              {/* Image — 60% */}
+              <div className="relative w-full md:w-[60%] min-h-[300px] md:min-h-0">
                 <Image
                   src={location.image}
                   alt={`Desert Recovery Centers ${location.name} facility`}
                   fill
                   className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 33vw"
+                  sizes="(max-width: 768px) 100vw, 60vw"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-forest/30 to-transparent md:hidden" />
               </div>
-              <div className="p-6">
-                <h3 className="font-display text-xl text-forest font-semibold mb-2">
-                  {location.name}
-                </h3>
-                <p className="text-gray-500 text-sm mb-3">{location.address}</p>
-                <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                  {location.description}
-                </p>
-                <div className="flex flex-wrap gap-2 mb-5">
-                  {location.programs.map((p) => (
-                    <span
-                      key={p}
-                      className="text-xs bg-sage/10 text-sage font-medium px-3 py-1 rounded-full"
-                    >
-                      {p}
+
+              {/* Content — 40% */}
+              <div className="w-full md:w-[40%] bg-forest flex items-center">
+                <div className="p-10 md:p-14 lg:p-16">
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className="w-8 h-px bg-gold" />
+                    <span className="text-gold text-xs tracking-[0.2em] uppercase font-medium">
+                      {location.name}, Arizona
                     </span>
-                  ))}
-                </div>
-                <div className="flex gap-3">
-                  <a
-                    href={`/locations/${location.name.toLowerCase()}`}
-                    className="flex-1 text-center bg-sage hover:bg-forest text-white font-semibold text-sm px-4 py-2.5 rounded-xl transition-colors cursor-pointer"
-                  >
-                    Learn More
-                  </a>
-                  <a
-                    href={`tel:${location.phoneTel}`}
-                    className="flex-1 text-center border border-sage text-sage hover:bg-sage hover:text-white font-semibold text-sm px-4 py-2.5 rounded-xl transition-colors cursor-pointer"
-                  >
-                    {location.phone}
-                  </a>
+                  </div>
+                  <h3 className="font-display text-2xl md:text-3xl text-white font-semibold mb-3">
+                    {location.name}
+                  </h3>
+                  <p className="text-white/50 text-sm mb-4">{location.address}</p>
+                  <p className="text-white/70 text-sm leading-relaxed mb-6">
+                    {location.description}
+                  </p>
+                  {"sqft" in location && (
+                    <p className="text-gold text-sm font-medium mb-4">
+                      {location.sqft} sq ft
+                    </p>
+                  )}
+                  <div className="flex flex-wrap gap-2 mb-8">
+                    {location.amenities.map((a) => (
+                      <span
+                        key={a}
+                        className="text-xs bg-white/10 text-white/80 px-3 py-1.5 rounded-full border border-white/10"
+                      >
+                        {a}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <a
+                      href={`/facilities/${location.name.toLowerCase()}`}
+                      className="text-center bg-gold hover:bg-gold-dark text-white font-semibold text-sm px-6 py-3 rounded-xl transition-colors cursor-pointer"
+                    >
+                      Explore Facility
+                    </a>
+                    <a
+                      href={`tel:${location.phoneTel}`}
+                      className="text-center border border-white/30 text-white hover:bg-white/10 font-semibold text-sm px-6 py-3 rounded-xl transition-colors cursor-pointer"
+                    >
+                      {location.phone}
+                    </a>
+                  </div>
                 </div>
               </div>
             </motion.div>
-          ))}
-        </div>
+          );
+        })}
       </div>
     </section>
   );
