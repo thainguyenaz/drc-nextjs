@@ -4,6 +4,10 @@ import PageHero from "@/components/PageHero";
 import AddictionPrograms from "@/components/AddictionPrograms";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import { InlineFAQSchema, MedicalConditionSchema } from "@/lib/seo";
+import AEOBlock from "@/components/AEOBlock";
+import RelatedPages from "@/components/RelatedPages";
+import ConditionFAQ from "@/components/ConditionFAQ";
 
 export const metadata: Metadata = {
   title: "Cocaine Addiction Treatment — Desert Recovery Centers",
@@ -11,9 +15,39 @@ export const metadata: Metadata = {
     "Cocaine and crack cocaine addiction treatment in Arizona. Behavioral therapies, dual diagnosis care, and structured recovery programs.",
 };
 
+const faqs = [
+  {
+    question: "Can cocaine addiction be treated?",
+    answer:
+      "Yes. Cocaine addiction responds well to evidence-based behavioral therapies. At Desert Recovery Centers, our doctoral-level clinicians use CBT, contingency management, and dual diagnosis treatment in our Arizona facilities with just 10 beds per location for highly personalized care.",
+  },
+  {
+    question: "How long does cocaine rehab take?",
+    answer:
+      "Cocaine rehab typically involves 30 to 90 days of residential treatment, followed by PHP and IOP for continued support. Because cocaine addiction is primarily psychological, treatment focuses on rebuilding your brain's natural reward system over time. Desert Recovery Centers customizes every treatment plan.",
+  },
+  {
+    question: "Does insurance cover cocaine addiction treatment?",
+    answer:
+      "Yes, most major insurance plans cover cocaine addiction treatment at Desert Recovery Centers. Coverage varies by plan and provider. Our admissions team will verify your benefits and explain your out-of-pocket costs before treatment begins.",
+  },
+  {
+    question: "What therapies are used for cocaine addiction?",
+    answer:
+      "Because there are no FDA-approved medications specifically for cocaine addiction, behavioral therapies are the cornerstone of treatment. CBT and contingency management are the gold standard. Our dual diagnosis approach also addresses co-occurring depression, anxiety, or bipolar disorder.",
+  },
+];
+
 export default function CocaineAddictionPage() {
   return (
     <>
+      <InlineFAQSchema items={faqs} />
+      <MedicalConditionSchema
+        name="Cocaine Addiction"
+        description="Cocaine addiction is a stimulant use disorder characterized by compulsive cocaine use despite negative consequences. Cocaine floods the brain with dopamine, hijacking the natural reward system and creating intense psychological dependence."
+        url="/addiction/cocaine"
+        possibleTreatments={["CBT", "Contingency Management", "Dual Diagnosis Treatment", "Residential Care"]}
+      />
       <Navigation />
       <PageHero
         eyebrow="Addiction Treatment"
@@ -117,6 +151,27 @@ export default function CocaineAddictionPage() {
         </div>
       </section>
       <AddictionPrograms />
+      <ConditionFAQ items={faqs} />
+      <AEOBlock
+        entries={[
+          {
+            question: "What is cocaine addiction treatment at Desert Recovery Centers?",
+            answer:
+              "Desert Recovery Centers is a Joint Commission accredited luxury treatment center in Arizona offering evidence-based behavioral therapies, dual diagnosis care, and structured residential programs for cocaine addiction. With just 10 beds per facility, every client receives individualized attention from doctoral-level clinicians.",
+          },
+          {
+            question: "How does Desert Recovery Centers treat cocaine addiction?",
+            answer:
+              "Treatment includes CBT, contingency management, dual diagnosis care for co-occurring mental health conditions, structured residential care in a substance-free environment, and comprehensive relapse prevention planning.",
+          },
+          {
+            question: "Does Desert Recovery Centers accept insurance for cocaine rehab?",
+            answer:
+              "Yes, Desert Recovery Centers accepts most major insurance plans for cocaine addiction treatment. Coverage varies by plan and provider, so our admissions team verifies your benefits and explains costs before treatment begins.",
+          },
+        ]}
+      />
+      <RelatedPages currentPath="/addiction/cocaine" />
       <CTASection />
       <Footer />
     </>

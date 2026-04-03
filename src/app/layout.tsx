@@ -23,7 +23,10 @@ export const metadata: Metadata = {
   },
   description:
     "Desert Recovery Centers offers luxury mental health and addiction treatment in Glendale, Scottsdale, and Phoenix, Arizona. Evidence-based care in a serene desert setting.",
-  alternates: { canonical: "https://www.desertrecoverycenters.com" },
+  alternates: {
+    canonical: "https://www.desertrecoverycenters.com",
+    languages: { "en-US": "https://www.desertrecoverycenters.com" },
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -41,7 +44,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
+    <html lang="en-US" className={`${inter.variable} ${playfair.variable}`}>
       <body className="font-body antialiased bg-white">
         <OrganizationSchema />
         <AllLocalBusinessSchemas />

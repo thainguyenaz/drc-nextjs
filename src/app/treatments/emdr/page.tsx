@@ -7,6 +7,7 @@ import Navigation from "@/components/Navigation";
 import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import { MedicalTherapySchema } from "@/lib/seo";
 
 const phases = [
   { name: "History & Preparation", description: "Building therapeutic rapport and identifying target memories for reprocessing." },
@@ -40,6 +41,12 @@ export default function EMDRPage() {
 
   return (
     <>
+      <MedicalTherapySchema
+        name="EMDR Therapy"
+        description="Eye Movement Desensitization and Reprocessing therapy that unlocks the brain's natural ability to heal from trauma and disturbing life experiences."
+        url="/treatments/emdr"
+        conditions={["PTSD", "Complex PTSD", "Childhood Trauma", "Grief", "Phobias", "Panic Disorders", "Addiction", "Performance Anxiety"]}
+      />
       <Navigation />
       <PageHero
         eyebrow="Treatment Modality"
@@ -225,6 +232,42 @@ export default function EMDRPage() {
               </a>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Related Treatment Programs */}
+      <section className="py-12 bg-cream border-t border-gray-100">
+        <div className="max-w-container mx-auto px-6">
+          <div className="max-w-3xl mx-auto">
+            <h3 className="text-forest font-display text-lg font-semibold mb-4">Related Treatment Programs</h3>
+            <div className="flex flex-wrap gap-3">
+              <a href="/treatments/trauma-therapy" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">Trauma Therapy</a>
+              <a href="/treatments/cbt" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">CBT Therapy</a>
+              <a href="/mental-health/ptsd-treatment" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">PTSD Treatment</a>
+              <a href="/mental-health/anxiety-treatment" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">Anxiety Treatment</a>
+              <a href="/treatments/holistic" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">Holistic Therapies</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* AEO Section */}
+      <section className="py-12 bg-white border-t border-gray-100" aria-label="Common questions" data-speakable="true">
+        <div className="max-w-container mx-auto px-6">
+          <div className="max-w-3xl mx-auto space-y-8">
+            <article className="border-l-2 border-gold/30 pl-5">
+              <h3 className="text-forest font-semibold text-sm mb-1">What is EMDR therapy at Desert Recovery Centers?</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">EMDR (Eye Movement Desensitization and Reprocessing) at Desert Recovery Centers is an evidence-based psychotherapy that uses bilateral stimulation to help the brain reprocess traumatic memories. Desert Recovery Centers is a Joint Commission accredited luxury treatment center in Arizona where EMDR is delivered exclusively by licensed clinical psychologists with specialized EMDR training.</p>
+            </article>
+            <article className="border-l-2 border-gold/30 pl-5">
+              <h3 className="text-forest font-semibold text-sm mb-1">How does EMDR work for addiction and mental health treatment?</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">EMDR activates the brain&apos;s natural information processing system through guided eye movements, tapping, or auditory tones while the client focuses on a traumatic memory. This allows disturbing memories to be reprocessed and stored in a way that no longer triggers overwhelming emotional responses — without requiring detailed verbal recounting of the trauma.</p>
+            </article>
+            <article className="border-l-2 border-gold/30 pl-5">
+              <h3 className="text-forest font-semibold text-sm mb-1">Who delivers EMDR at Desert Recovery Centers?</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">EMDR at Desert Recovery Centers is delivered exclusively by licensed clinical psychologists with doctoral-level training and specialized EMDR certification. Small client-to-clinician ratios ensure each client receives the focused, individualized attention that effective trauma reprocessing requires.</p>
+            </article>
+          </div>
         </div>
       </section>
 

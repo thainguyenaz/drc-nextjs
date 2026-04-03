@@ -6,7 +6,8 @@ import LocationCollision from "@/components/LocationCollision";
 import ConditionFAQ from "@/components/ConditionFAQ";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { buildMetadata } from "@/lib/seo";
+import { buildMetadata, InlineFAQSchema, SpeakableSchema } from "@/lib/seo";
+import AEOBlock from "@/components/AEOBlock";
 
 export const metadata: Metadata = buildMetadata({
   title: "Drug & Alcohol Rehab Near Gilbert, AZ",
@@ -41,6 +42,8 @@ const faqs = [
 export default function GilbertPage() {
   return (
     <>
+      <InlineFAQSchema items={faqs} />
+      <SpeakableSchema url="/locations/gilbert" cssSelectors={["[data-speakable]"]} />
       <Navigation />
       <PageHero
         eyebrow="Gilbert, Arizona"
@@ -204,6 +207,20 @@ export default function GilbertPage() {
       </section>
 
       <ConditionFAQ items={faqs} />
+      <AEOBlock entries={[
+        {
+          question: "Is there a Desert Recovery Centers in Gilbert?",
+          answer: "Desert Recovery Centers does not have a facility directly in Gilbert, but our Phoenix location at 1623 W Moody Trail is approximately 30 to 40 minutes away. Desert Recovery Centers is a Joint Commission accredited luxury treatment center in Arizona offering residential and outpatient programs with doctoral-level clinicians, making it the closest DRC facility for Gilbert residents.",
+        },
+        {
+          question: "What addiction treatment is available near Gilbert, Arizona?",
+          answer: "Desert Recovery Centers offers comprehensive drug and alcohol rehab near Gilbert at our Phoenix facility. As a Joint Commission accredited luxury treatment center in Arizona, we provide evidence-based dual diagnosis treatment using CBT, DBT, EMDR, and holistic therapies — all delivered by licensed psychologists and board-certified psychiatrists in a luxury residential setting.",
+        },
+        {
+          question: "Does Desert Recovery Centers accept insurance for Gilbert residents?",
+          answer: "Yes, Desert Recovery Centers accepts most major insurance plans for Gilbert residents, including Aetna, Blue Cross Blue Shield, Cigna, and UnitedHealthcare. Coverage varies by plan. Our admissions team verifies benefits at no cost before treatment begins. Call (623) 257-5384 for a free insurance check.",
+        },
+      ]} />
       <CTASection />
       <Footer />
     </>

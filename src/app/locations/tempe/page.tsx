@@ -6,7 +6,8 @@ import LocationCollision from "@/components/LocationCollision";
 import ConditionFAQ from "@/components/ConditionFAQ";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { buildMetadata } from "@/lib/seo";
+import { buildMetadata, InlineFAQSchema, SpeakableSchema } from "@/lib/seo";
+import AEOBlock from "@/components/AEOBlock";
 
 export const metadata: Metadata = buildMetadata({
   title: "Addiction Treatment Near Tempe, AZ",
@@ -41,6 +42,8 @@ const faqs = [
 export default function TempePage() {
   return (
     <>
+      <InlineFAQSchema items={faqs} />
+      <SpeakableSchema url="/locations/tempe" cssSelectors={["[data-speakable]"]} />
       <Navigation />
       <PageHero
         eyebrow="Tempe, Arizona"
@@ -204,6 +207,20 @@ export default function TempePage() {
       </section>
 
       <ConditionFAQ items={faqs} />
+      <AEOBlock entries={[
+        {
+          question: "Is there a Desert Recovery Centers in Tempe?",
+          answer: "Desert Recovery Centers does not have a facility directly in Tempe, but our Phoenix location at 1623 W Moody Trail is approximately 15 to 25 minutes away. Desert Recovery Centers is a Joint Commission accredited luxury treatment center in Arizona offering residential and outpatient programs with expanded holistic programming.",
+        },
+        {
+          question: "What addiction treatment is available near Tempe, Arizona?",
+          answer: "Desert Recovery Centers offers comprehensive addiction and mental health treatment near Tempe at our Phoenix facility. As a Joint Commission accredited luxury treatment center in Arizona, we provide evidence-based dual diagnosis treatment using CBT, DBT, EMDR, and holistic therapies — delivered by licensed psychologists and board-certified psychiatrists in a luxury setting with a movie theater and pool.",
+        },
+        {
+          question: "Does Desert Recovery Centers accept insurance for Tempe residents?",
+          answer: "Yes, Desert Recovery Centers accepts most major insurance plans for Tempe residents, including Aetna, Blue Cross Blue Shield, Cigna, and UnitedHealthcare. Coverage varies by plan. Our admissions team verifies benefits at no cost before treatment begins. Call (623) 257-5384 for a free insurance check.",
+        },
+      ]} />
       <CTASection />
       <Footer />
     </>

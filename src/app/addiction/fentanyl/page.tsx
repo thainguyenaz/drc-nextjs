@@ -4,6 +4,10 @@ import PageHero from "@/components/PageHero";
 import AddictionPrograms from "@/components/AddictionPrograms";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import { InlineFAQSchema, MedicalConditionSchema } from "@/lib/seo";
+import AEOBlock from "@/components/AEOBlock";
+import RelatedPages from "@/components/RelatedPages";
+import ConditionFAQ from "@/components/ConditionFAQ";
 
 export const metadata: Metadata = {
   title: "Fentanyl Addiction Treatment — Desert Recovery Centers",
@@ -11,9 +15,39 @@ export const metadata: Metadata = {
     "Specialized fentanyl addiction treatment in Arizona. Medically supervised detox, MAT programs, and residential care for fentanyl dependence.",
 };
 
+const faqs = [
+  {
+    question: "Can fentanyl addiction be treated?",
+    answer:
+      "Yes. Fentanyl addiction is treatable with medically supervised detox and medication-assisted treatment. At Desert Recovery Centers, our doctoral-level clinicians use specialized synthetic opioid detox protocols in our Arizona facilities with just 10 beds per location for safe, individualized care.",
+  },
+  {
+    question: "How long does fentanyl rehab take?",
+    answer:
+      "Fentanyl detox typically lasts 7 to 14 days due to the severity of withdrawal. Residential treatment usually follows for 30 to 90 days, with many clients continuing MAT and step-down care through PHP and IOP. Desert Recovery Centers builds your treatment timeline around your specific needs.",
+  },
+  {
+    question: "Does insurance cover fentanyl addiction treatment?",
+    answer:
+      "Yes, most major insurance plans cover fentanyl addiction treatment at Desert Recovery Centers. Coverage varies by plan and provider. Our admissions team will verify your benefits and explain your out-of-pocket costs before treatment begins.",
+  },
+  {
+    question: "What medications are used for fentanyl withdrawal?",
+    answer:
+      "Medically supervised fentanyl detox uses buprenorphine (Suboxone), naltrexone (Vivitrol), and comfort medications to manage withdrawal safely. Because fentanyl is 50 to 100 times more potent than morphine, our protocols are specifically designed for synthetic opioid detoxification. Our dual diagnosis approach also addresses underlying trauma and co-occurring conditions.",
+  },
+];
+
 export default function FentanylAddictionPage() {
   return (
     <>
+      <InlineFAQSchema items={faqs} />
+      <MedicalConditionSchema
+        name="Fentanyl Addiction"
+        description="Fentanyl addiction is a severe opioid use disorder involving one of the most potent synthetic opioids in existence. Fentanyl is 50 to 100 times more potent than morphine and creates rapid, severe physical dependence."
+        url="/addiction/fentanyl"
+        possibleTreatments={["Medically Supervised Detox", "MAT (Suboxone, Vivitrol)", "Trauma-Informed Therapy (EMDR)", "Dual Diagnosis Treatment"]}
+      />
       <Navigation />
       <PageHero
         eyebrow="Addiction Treatment"
@@ -117,6 +151,27 @@ export default function FentanylAddictionPage() {
         </div>
       </section>
       <AddictionPrograms />
+      <ConditionFAQ items={faqs} />
+      <AEOBlock
+        entries={[
+          {
+            question: "What is fentanyl addiction treatment at Desert Recovery Centers?",
+            answer:
+              "Desert Recovery Centers is a Joint Commission accredited luxury treatment center in Arizona specializing in fentanyl and synthetic opioid addiction treatment. With just 10 beds per facility, clients receive medically supervised detox with protocols designed specifically for synthetic opioid dependence, alongside personalized care from doctoral-level clinicians.",
+          },
+          {
+            question: "How does Desert Recovery Centers treat fentanyl addiction?",
+            answer:
+              "Treatment includes medically supervised detox with 24/7 monitoring, medication-assisted treatment with Suboxone and Vivitrol, trauma-informed therapy including EMDR and somatic experiencing, and dual diagnosis care for co-occurring mental health conditions.",
+          },
+          {
+            question: "Does Desert Recovery Centers accept insurance for fentanyl rehab?",
+            answer:
+              "Yes, Desert Recovery Centers accepts most major insurance plans for fentanyl addiction treatment. Coverage varies by plan and provider, so our admissions team verifies your benefits and explains costs before treatment begins.",
+          },
+        ]}
+      />
+      <RelatedPages currentPath="/addiction/fentanyl" />
       <CTASection />
       <Footer />
     </>

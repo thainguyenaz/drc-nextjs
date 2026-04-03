@@ -4,6 +4,10 @@ import PageHero from "@/components/PageHero";
 import AddictionPrograms from "@/components/AddictionPrograms";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import { InlineFAQSchema, MedicalConditionSchema } from "@/lib/seo";
+import AEOBlock from "@/components/AEOBlock";
+import RelatedPages from "@/components/RelatedPages";
+import ConditionFAQ from "@/components/ConditionFAQ";
 
 export const metadata: Metadata = {
   title: "Prescription Drug Addiction Treatment — Desert Recovery Centers",
@@ -11,9 +15,39 @@ export const metadata: Metadata = {
     "Prescription drug addiction treatment in Arizona for opioid painkillers, benzodiazepines, and stimulant medications. Medically supervised detox and therapy.",
 };
 
+const faqs = [
+  {
+    question: "Can prescription drug addiction be treated?",
+    answer:
+      "Yes. Prescription drug addiction — whether involving opioid painkillers, benzodiazepines, or stimulants — is a treatable medical condition. At Desert Recovery Centers, our doctoral-level clinicians use medically supervised tapering, MAT, and behavioral therapy in our Arizona facilities with just 10 beds per location for safe, individualized care.",
+  },
+  {
+    question: "How long does prescription drug rehab take?",
+    answer:
+      "Treatment length depends on the medication class involved. Benzodiazepine tapering can take weeks to months. Opioid detox typically lasts 7 to 14 days, followed by 30 to 90 days of residential care. Desert Recovery Centers creates a custom timeline based on your specific substance, dosage history, and recovery goals.",
+  },
+  {
+    question: "Does insurance cover prescription drug addiction treatment?",
+    answer:
+      "Yes, most major insurance plans cover prescription drug addiction treatment at Desert Recovery Centers. Coverage varies by plan and provider. Our admissions team will verify your benefits and explain your out-of-pocket costs before you begin treatment.",
+  },
+  {
+    question: "What medications are used for prescription drug withdrawal?",
+    answer:
+      "Withdrawal management depends on the medication class. Opioid painkiller withdrawal may use buprenorphine or naltrexone. Benzodiazepine withdrawal requires careful medical tapering. Our dual diagnosis approach addresses the underlying conditions — chronic pain, anxiety, or ADHD — that drove prescription use in the first place.",
+  },
+];
+
 export default function PrescriptionDrugAddictionPage() {
   return (
     <>
+      <InlineFAQSchema items={faqs} />
+      <MedicalConditionSchema
+        name="Prescription Drug Addiction"
+        description="Prescription drug addiction involves dependence on opioid painkillers, benzodiazepines, or stimulant medications. Dependence often develops gradually from legitimate medical use, making it difficult to recognize until it has significantly impacted your life."
+        url="/addiction/prescription-drugs"
+        possibleTreatments={["Medically Supervised Detox & Tapering", "Medication-Assisted Treatment", "CBT", "DBT", "Pain Management Alternatives"]}
+      />
       <Navigation />
       <PageHero
         eyebrow="Addiction Treatment"
@@ -117,6 +151,27 @@ export default function PrescriptionDrugAddictionPage() {
         </div>
       </section>
       <AddictionPrograms />
+      <ConditionFAQ items={faqs} />
+      <AEOBlock
+        entries={[
+          {
+            question: "What is prescription drug addiction treatment at Desert Recovery Centers?",
+            answer:
+              "Desert Recovery Centers is a Joint Commission accredited luxury treatment center in Arizona offering medically supervised detox, safe tapering protocols, and comprehensive therapy for prescription drug addiction. With just 10 beds per facility, every client receives individualized attention from doctoral-level clinicians.",
+          },
+          {
+            question: "How does Desert Recovery Centers treat prescription drug addiction?",
+            answer:
+              "Treatment includes medically supervised detox and tapering tailored to the specific drug class (opioids, benzodiazepines, or stimulants), medication-assisted treatment, CBT and DBT, non-addictive pain management alternatives, and dual diagnosis care for underlying conditions.",
+          },
+          {
+            question: "Does Desert Recovery Centers accept insurance for prescription drug rehab?",
+            answer:
+              "Yes, Desert Recovery Centers accepts most major insurance plans for prescription drug addiction treatment. Coverage varies by plan and provider, so our admissions team verifies your benefits and explains costs before treatment begins.",
+          },
+        ]}
+      />
+      <RelatedPages currentPath="/addiction/prescription-drugs" />
       <CTASection />
       <Footer />
     </>

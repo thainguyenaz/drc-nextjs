@@ -6,7 +6,8 @@ import LocationCollision from "@/components/LocationCollision";
 import ConditionFAQ from "@/components/ConditionFAQ";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { buildMetadata } from "@/lib/seo";
+import { buildMetadata, InlineFAQSchema, SpeakableSchema } from "@/lib/seo";
+import AEOBlock from "@/components/AEOBlock";
 
 export const metadata: Metadata = buildMetadata({
   title: "Addiction Treatment Near Mesa, AZ",
@@ -41,6 +42,8 @@ const faqs = [
 export default function MesaPage() {
   return (
     <>
+      <InlineFAQSchema items={faqs} />
+      <SpeakableSchema url="/locations/mesa" cssSelectors={["[data-speakable]"]} />
       <Navigation />
       <PageHero
         eyebrow="Mesa, Arizona"
@@ -204,6 +207,20 @@ export default function MesaPage() {
       </section>
 
       <ConditionFAQ items={faqs} />
+      <AEOBlock entries={[
+        {
+          question: "Is there a Desert Recovery Centers in Mesa?",
+          answer: "Desert Recovery Centers does not have a facility directly in Mesa, but our Phoenix location at 1623 W Moody Trail is approximately 25 to 35 minutes away. Desert Recovery Centers is a Joint Commission accredited luxury treatment center in Arizona offering residential and outpatient programs, making it the closest DRC facility for Mesa residents.",
+        },
+        {
+          question: "What addiction treatment is available near Mesa, Arizona?",
+          answer: "Desert Recovery Centers offers comprehensive addiction and mental health treatment near Mesa at our Phoenix facility. As a Joint Commission accredited luxury treatment center in Arizona, we specialize in dual diagnosis treatment using evidence-based therapies including CBT, DBT, EMDR, and expanded holistic programming — delivered by licensed psychologists and board-certified psychiatrists.",
+        },
+        {
+          question: "Does Desert Recovery Centers accept insurance for Mesa residents?",
+          answer: "Yes, Desert Recovery Centers accepts most major insurance plans for Mesa residents, including Aetna, Blue Cross Blue Shield, Cigna, and UnitedHealthcare. Coverage varies by plan. Our admissions team verifies benefits at no cost before treatment begins. Call (623) 257-5384 for a free insurance check.",
+        },
+      ]} />
       <CTASection />
       <Footer />
     </>

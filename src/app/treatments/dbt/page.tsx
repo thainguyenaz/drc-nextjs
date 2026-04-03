@@ -7,6 +7,7 @@ import Navigation from "@/components/Navigation";
 import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import { MedicalTherapySchema } from "@/lib/seo";
 
 const modules = [
   {
@@ -50,6 +51,12 @@ export default function DBTPage() {
 
   return (
     <>
+      <MedicalTherapySchema
+        name="Dialectical Behavior Therapy (DBT)"
+        description="Skills-based psychotherapy that balances acceptance and change, helping clients navigate intense emotions without self-destruction."
+        url="/treatments/dbt"
+        conditions={["Borderline Personality Disorder", "Emotional Dysregulation", "Substance Use Disorders", "Self-Harm", "PTSD", "Bipolar Disorder", "Eating Disorders", "Chronic Suicidal Ideation"]}
+      />
       <Navigation />
       <PageHero
         eyebrow="Treatment Modality"
@@ -237,6 +244,42 @@ export default function DBTPage() {
               </a>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Related Treatment Programs */}
+      <section className="py-12 bg-cream border-t border-gray-100">
+        <div className="max-w-container mx-auto px-6">
+          <div className="max-w-3xl mx-auto">
+            <h3 className="text-forest font-display text-lg font-semibold mb-4">Related Treatment Programs</h3>
+            <div className="flex flex-wrap gap-3">
+              <a href="/treatments/cbt" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">CBT Therapy</a>
+              <a href="/treatments/trauma-therapy" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">Trauma Therapy</a>
+              <a href="/mental-health/personality-disorder-treatment" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">Personality Disorders</a>
+              <a href="/mental-health/bipolar-disorder-treatment" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">Bipolar Disorder</a>
+              <a href="/treatments/dual-diagnosis" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">Dual Diagnosis</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* AEO Section */}
+      <section className="py-12 bg-white border-t border-gray-100" aria-label="Common questions" data-speakable="true">
+        <div className="max-w-container mx-auto px-6">
+          <div className="max-w-3xl mx-auto space-y-8">
+            <article className="border-l-2 border-gold/30 pl-5">
+              <h3 className="text-forest font-semibold text-sm mb-1">What is Dialectical Behavior Therapy (DBT) at Desert Recovery Centers?</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">DBT at Desert Recovery Centers is a comprehensive skills-based psychotherapy that teaches mindfulness, distress tolerance, emotion regulation, and interpersonal effectiveness. Desert Recovery Centers is a Joint Commission accredited luxury treatment center in Arizona where DBT is delivered in both individual and group formats as part of an integrated treatment plan.</p>
+            </article>
+            <article className="border-l-2 border-gold/30 pl-5">
+              <h3 className="text-forest font-semibold text-sm mb-1">How does DBT work for addiction and mental health treatment?</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">DBT works by balancing two core principles: accepting yourself as you are while simultaneously working to change destructive behaviors. Through four skill modules — mindfulness, distress tolerance, emotion regulation, and interpersonal effectiveness — clients learn to manage overwhelming emotions, tolerate pain without substance use, and build healthier relationships.</p>
+            </article>
+            <article className="border-l-2 border-gold/30 pl-5">
+              <h3 className="text-forest font-semibold text-sm mb-1">Who delivers DBT at Desert Recovery Centers?</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">Every DBT session at Desert Recovery Centers is led or supervised by a licensed clinical psychologist with specialized training in dialectical behavior therapy. With small client-to-clinician ratios, clients receive individualized attention during both skills training groups and one-on-one therapy sessions.</p>
+            </article>
+          </div>
         </div>
       </section>
 

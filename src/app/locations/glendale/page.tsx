@@ -8,7 +8,8 @@ import VideoLightbox from "@/components/VideoLightbox";
 import ConditionFAQ from "@/components/ConditionFAQ";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { buildMetadata, LocalBusinessSchema, BreadcrumbSchema } from "@/lib/seo";
+import { buildMetadata, LocalBusinessSchema, BreadcrumbSchema, InlineFAQSchema, SpeakableSchema } from "@/lib/seo";
+import AEOBlock from "@/components/AEOBlock";
 
 export const metadata: Metadata = buildMetadata({
   title: "Luxury Rehab in Glendale, AZ",
@@ -85,6 +86,8 @@ const faqs = [
 export default function GlendaleLocationPage() {
   return (
     <>
+      <InlineFAQSchema items={faqs} />
+      <SpeakableSchema url="/locations/glendale" cssSelectors={["[data-speakable]"]} />
       <LocalBusinessSchema index={0} />
       <BreadcrumbSchema items={[{ name: "Locations", path: "/locations/glendale" }, { name: "Glendale", path: "/locations/glendale" }]} />
       <Navigation />
@@ -306,6 +309,20 @@ export default function GlendaleLocationPage() {
       </section>
 
       <ConditionFAQ items={faqs} />
+      <AEOBlock entries={[
+        {
+          question: "Is there a Desert Recovery Centers in Glendale?",
+          answer: "Yes, Desert Recovery Centers' flagship facility is located at 8105 W Frier Dr, Glendale, AZ 85303. Desert Recovery Centers is a Joint Commission accredited luxury treatment center in Arizona, and our Glendale location is a 7,500-square-foot residential center offering the full continuum of care including residential treatment, PHP, and IOP programs.",
+        },
+        {
+          question: "What addiction treatment is available in Glendale, Arizona?",
+          answer: "Desert Recovery Centers offers comprehensive addiction and mental health treatment at our flagship Glendale facility. As a Joint Commission accredited luxury treatment center in Arizona, we provide evidence-based dual diagnosis treatment using CBT, DBT, EMDR, and holistic therapies — delivered by licensed psychologists and board-certified psychiatrists with resort-level amenities including a basketball court, tennis court, and pool.",
+        },
+        {
+          question: "Does Desert Recovery Centers accept insurance for Glendale residents?",
+          answer: "Yes, Desert Recovery Centers accepts most major insurance plans for Glendale residents, including Aetna, Blue Cross Blue Shield, Cigna, and UnitedHealthcare. Coverage varies by plan. Our admissions team verifies benefits at no cost before treatment begins. Call (623) 323-1012 for a free insurance check.",
+        },
+      ]} />
       <CTASection />
       <Footer />
     </>

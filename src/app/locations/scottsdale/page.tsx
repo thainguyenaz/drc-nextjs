@@ -8,7 +8,8 @@ import VideoLightbox from "@/components/VideoLightbox";
 import ConditionFAQ from "@/components/ConditionFAQ";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { buildMetadata, LocalBusinessSchema, BreadcrumbSchema } from "@/lib/seo";
+import { buildMetadata, LocalBusinessSchema, BreadcrumbSchema, InlineFAQSchema, SpeakableSchema } from "@/lib/seo";
+import AEOBlock from "@/components/AEOBlock";
 
 export const metadata: Metadata = buildMetadata({
   title: "Luxury Rehab in Scottsdale, AZ",
@@ -85,6 +86,8 @@ const faqs = [
 export default function ScottsdaleLocationPage() {
   return (
     <>
+      <InlineFAQSchema items={faqs} />
+      <SpeakableSchema url="/locations/scottsdale" cssSelectors={["[data-speakable]"]} />
       <LocalBusinessSchema index={1} />
       <BreadcrumbSchema items={[{ name: "Locations", path: "/locations/scottsdale" }, { name: "Scottsdale", path: "/locations/scottsdale" }]} />
       <Navigation />
@@ -306,6 +309,20 @@ export default function ScottsdaleLocationPage() {
       </section>
 
       <ConditionFAQ items={faqs} />
+      <AEOBlock entries={[
+        {
+          question: "Is there a Desert Recovery Centers in Scottsdale?",
+          answer: "Yes, Desert Recovery Centers has a facility located at 23222 N Church Rd in north Scottsdale, AZ 85255. Desert Recovery Centers is a Joint Commission accredited luxury treatment center in Arizona offering residential treatment, partial hospitalization (PHP), and intensive outpatient (IOP) programs surrounded by stunning mountain views.",
+        },
+        {
+          question: "What addiction treatment is available in Scottsdale, Arizona?",
+          answer: "Desert Recovery Centers offers comprehensive addiction and mental health treatment in Scottsdale. As a Joint Commission accredited luxury treatment center in Arizona, we provide evidence-based dual diagnosis treatment using CBT, DBT, EMDR, gender-specific group therapy, and holistic therapies — delivered by licensed psychologists and board-certified psychiatrists.",
+        },
+        {
+          question: "Does Desert Recovery Centers accept insurance for Scottsdale residents?",
+          answer: "Yes, Desert Recovery Centers accepts most major insurance plans for Scottsdale residents, including Aetna, Blue Cross Blue Shield, Cigna, and UnitedHealthcare. Coverage varies by plan. Our admissions team verifies benefits at no cost before treatment begins. Call (480) 931-3617 for a free insurance check.",
+        },
+      ]} />
       <CTASection />
       <Footer />
     </>

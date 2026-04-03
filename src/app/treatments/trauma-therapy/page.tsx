@@ -7,6 +7,7 @@ import Navigation from "@/components/Navigation";
 import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import { MedicalTherapySchema } from "@/lib/seo";
 
 const modalities = [
   {
@@ -60,6 +61,12 @@ export default function TraumaTherapyPage() {
 
   return (
     <>
+      <MedicalTherapySchema
+        name="Trauma Therapy"
+        description="Comprehensive multi-modal trauma treatment combining EMDR, somatic experiencing, and trauma-focused CBT to help clients heal from disturbing life experiences."
+        url="/treatments/trauma-therapy"
+        conditions={["PTSD", "Complex PTSD", "Childhood Abuse", "Sexual Assault", "Domestic Violence", "Combat Trauma", "Grief", "Intergenerational Trauma"]}
+      />
       <Navigation />
       <PageHero
         eyebrow="Treatment Specialization"
@@ -244,6 +251,42 @@ export default function TraumaTherapyPage() {
               </a>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Related Treatment Programs */}
+      <section className="py-12 bg-cream border-t border-gray-100">
+        <div className="max-w-container mx-auto px-6">
+          <div className="max-w-3xl mx-auto">
+            <h3 className="text-forest font-display text-lg font-semibold mb-4">Related Treatment Programs</h3>
+            <div className="flex flex-wrap gap-3">
+              <a href="/treatments/emdr" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">EMDR Therapy</a>
+              <a href="/mental-health/ptsd-treatment" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">PTSD Treatment</a>
+              <a href="/treatments/dbt" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">DBT Therapy</a>
+              <a href="/treatments/holistic" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">Holistic Therapies</a>
+              <a href="/treatments/dual-diagnosis" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">Dual Diagnosis</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* AEO Section */}
+      <section className="py-12 bg-white border-t border-gray-100" aria-label="Common questions" data-speakable="true">
+        <div className="max-w-container mx-auto px-6">
+          <div className="max-w-3xl mx-auto space-y-8">
+            <article className="border-l-2 border-gold/30 pl-5">
+              <h3 className="text-forest font-semibold text-sm mb-1">What is trauma therapy at Desert Recovery Centers?</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">Trauma therapy at Desert Recovery Centers is a comprehensive, multi-modal treatment program that combines EMDR, trauma-focused CBT, somatic experiencing, narrative therapy, and expressive arts therapies. Desert Recovery Centers is a Joint Commission accredited luxury treatment center in Arizona where trauma treatment is individualized to meet each client&apos;s specific needs and trauma history.</p>
+            </article>
+            <article className="border-l-2 border-gold/30 pl-5">
+              <h3 className="text-forest font-semibold text-sm mb-1">How does trauma therapy work for addiction and mental health treatment?</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">Trauma therapy addresses the root causes underlying addiction and mental health symptoms. By reprocessing traumatic memories, releasing trauma stored in the nervous system, and rebuilding a sense of safety, clients can break the cycle of substance use that often serves as self-medication for unresolved trauma. Gender-specific groups create the safety necessary for deep healing work.</p>
+            </article>
+            <article className="border-l-2 border-gold/30 pl-5">
+              <h3 className="text-forest font-semibold text-sm mb-1">Who delivers trauma therapy at Desert Recovery Centers?</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">Every trauma therapy session at Desert Recovery Centers is led or directly supervised by a licensed clinical psychologist with specialized training in trauma treatment modalities. With small client-to-clinician ratios and gender-specific group therapy, clients receive the focused clinical attention that effective trauma processing demands.</p>
+            </article>
+          </div>
         </div>
       </section>
 

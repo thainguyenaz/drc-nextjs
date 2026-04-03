@@ -4,6 +4,10 @@ import PageHero from "@/components/PageHero";
 import AddictionPrograms from "@/components/AddictionPrograms";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import { InlineFAQSchema, MedicalConditionSchema } from "@/lib/seo";
+import AEOBlock from "@/components/AEOBlock";
+import RelatedPages from "@/components/RelatedPages";
+import ConditionFAQ from "@/components/ConditionFAQ";
 
 export const metadata: Metadata = {
   title: "Heroin Addiction Treatment — Desert Recovery Centers",
@@ -11,9 +15,39 @@ export const metadata: Metadata = {
     "Heroin addiction treatment in Arizona with medically supervised detox, MAT programs, and comprehensive residential care.",
 };
 
+const faqs = [
+  {
+    question: "Can heroin addiction be treated?",
+    answer:
+      "Yes. Heroin addiction is a treatable medical condition. At Desert Recovery Centers, our doctoral-level clinicians use medically supervised detox combined with medication-assisted treatment (MAT) and behavioral therapy. Our Arizona facilities maintain just 10 beds per location for individualized, high-quality care.",
+  },
+  {
+    question: "How long does heroin rehab take?",
+    answer:
+      "Heroin detox typically lasts 7 to 14 days, followed by 30 to 90 days of residential treatment. Many clients benefit from extended MAT and step-down care through PHP and IOP. Desert Recovery Centers tailors every treatment timeline to your unique situation and recovery goals.",
+  },
+  {
+    question: "Does insurance cover heroin addiction treatment?",
+    answer:
+      "Yes, most major insurance plans cover heroin addiction treatment at Desert Recovery Centers. Coverage varies by plan and provider. Our admissions team will verify your benefits and walk you through any out-of-pocket costs before you begin.",
+  },
+  {
+    question: "What medications are used for heroin withdrawal?",
+    answer:
+      "Medically supervised heroin detox may include buprenorphine (Suboxone), naltrexone (Vivitrol), and comfort medications for pain, nausea, and insomnia. Our dual diagnosis approach also treats co-occurring conditions like depression, anxiety, and PTSD alongside opioid dependence.",
+  },
+];
+
 export default function HeroinAddictionPage() {
   return (
     <>
+      <InlineFAQSchema items={faqs} />
+      <MedicalConditionSchema
+        name="Opioid/Heroin Addiction"
+        description="Heroin addiction is a severe opioid use disorder characterized by rapid physical dependence and intense withdrawal. Heroin binds to opioid receptors, flooding the system with dopamine and creating dependence often within days of regular use."
+        url="/addiction/heroin"
+        possibleTreatments={["MAT (Suboxone, Vivitrol)", "CBT", "EMDR", "Dual Diagnosis Treatment"]}
+      />
       <Navigation />
       <PageHero
         eyebrow="Addiction Treatment"
@@ -117,6 +151,27 @@ export default function HeroinAddictionPage() {
         </div>
       </section>
       <AddictionPrograms />
+      <ConditionFAQ items={faqs} />
+      <AEOBlock
+        entries={[
+          {
+            question: "What is heroin addiction treatment at Desert Recovery Centers?",
+            answer:
+              "Desert Recovery Centers is a Joint Commission accredited luxury treatment center in Arizona providing medically supervised detox and MAT programs for heroin and opioid dependence. With only 10 beds per facility, clients receive intensive, personalized care from doctoral-level clinicians.",
+          },
+          {
+            question: "How does Desert Recovery Centers treat heroin addiction?",
+            answer:
+              "Treatment includes medically supervised detox, medication-assisted treatment with Suboxone and Vivitrol, individual and group therapy (CBT, motivational interviewing), EMDR for trauma, holistic therapies, and dual diagnosis care for co-occurring mental health conditions.",
+          },
+          {
+            question: "Does Desert Recovery Centers accept insurance for heroin rehab?",
+            answer:
+              "Yes, Desert Recovery Centers accepts most major insurance plans for heroin addiction treatment. Coverage varies by plan and provider, so our admissions team verifies your benefits and explains costs before treatment begins.",
+          },
+        ]}
+      />
+      <RelatedPages currentPath="/addiction/heroin" />
       <CTASection />
       <Footer />
     </>

@@ -4,6 +4,9 @@ import PageHero from "@/components/PageHero";
 import ConditionFAQ from "@/components/ConditionFAQ";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import { InlineFAQSchema, SpeakableSchema, MedicalConditionSchema } from "@/lib/seo";
+import AEOBlock from "@/components/AEOBlock";
+import RelatedPages from "@/components/RelatedPages";
 
 export const metadata: Metadata = {
   title: "Bipolar Disorder Treatment in Arizona — Desert Recovery Centers",
@@ -37,6 +40,14 @@ const faqs = [
 export default function BipolarTreatmentPage() {
   return (
     <>
+      <InlineFAQSchema items={faqs} />
+      <SpeakableSchema url="/mental-health/bipolar-disorder-treatment" cssSelectors={["[data-speakable]"]} />
+      <MedicalConditionSchema
+        name="Bipolar Disorder"
+        description="Bipolar disorder is a mood disorder characterized by alternating episodes of mania or hypomania and depression that significantly disrupt daily functioning and relationships."
+        url="/mental-health/bipolar-disorder-treatment"
+        possibleTreatments={["Medication Management", "Cognitive Behavioral Therapy", "Interpersonal and Social Rhythm Therapy", "Psychoeducation", "Family Therapy"]}
+      />
       <Navigation />
       <PageHero
         eyebrow="Mental Health Treatment"
@@ -225,6 +236,14 @@ export default function BipolarTreatmentPage() {
       </section>
 
       <ConditionFAQ items={faqs} />
+      <AEOBlock
+        entries={[
+          { question: "What is bipolar disorder treatment at Desert Recovery Centers?", answer: "Desert Recovery Centers (a Joint Commission accredited luxury treatment center in Arizona) offers specialized bipolar disorder treatment for both bipolar I and bipolar II. With board-certified psychiatrists, doctoral-level psychologists, and a maximum of 10 beds per facility, clients receive expert mood stabilization and intensive psychotherapy in a structured residential setting." },
+          { question: "How does Desert Recovery Centers treat bipolar disorder?", answer: "DRC treats bipolar disorder through psychiatric medication management using mood stabilizers and atypical antipsychotics, Cognitive Behavioral Therapy adapted for bipolar, Interpersonal and Social Rhythm Therapy (IPSRT), psychoeducation, and family therapy. Treatment plans are individualized to address each client's specific bipolar subtype and co-occurring conditions." },
+          { question: "How long does bipolar disorder treatment take at Desert Recovery Centers?", answer: "Residential bipolar disorder treatment at DRC typically lasts 30 to 90 days, allowing time for thorough medication optimization and therapeutic skill-building. Outpatient PHP and IOP programs provide 6 to 12 weeks of continued structured support. Treatment duration is tailored to each client's stabilization progress and aftercare needs." },
+        ]}
+      />
+      <RelatedPages currentPath="/mental-health/bipolar-disorder-treatment" />
       <CTASection />
       <Footer />
     </>

@@ -4,6 +4,9 @@ import PageHero from "@/components/PageHero";
 import ConditionFAQ from "@/components/ConditionFAQ";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import { InlineFAQSchema, SpeakableSchema, MedicalConditionSchema } from "@/lib/seo";
+import AEOBlock from "@/components/AEOBlock";
+import RelatedPages from "@/components/RelatedPages";
 
 export const metadata: Metadata = {
   title: "PTSD & Trauma Treatment in Arizona — Desert Recovery Centers",
@@ -37,6 +40,14 @@ const faqs = [
 export default function PTSDTreatmentPage() {
   return (
     <>
+      <InlineFAQSchema items={faqs} />
+      <SpeakableSchema url="/mental-health/ptsd-treatment" cssSelectors={["[data-speakable]"]} />
+      <MedicalConditionSchema
+        name="Post-Traumatic Stress Disorder (PTSD)"
+        description="PTSD is a psychiatric condition triggered by experiencing or witnessing traumatic events, characterized by flashbacks, hyperarousal, avoidance, and negative changes in mood and cognition."
+        url="/mental-health/ptsd-treatment"
+        possibleTreatments={["EMDR", "Trauma-Focused CBT", "Somatic Experiencing", "Medication Management", "Experiential Therapy"]}
+      />
       <Navigation />
       <PageHero
         eyebrow="Mental Health Treatment"
@@ -258,6 +269,14 @@ export default function PTSDTreatmentPage() {
       </section>
 
       <ConditionFAQ items={faqs} />
+      <AEOBlock
+        entries={[
+          { question: "What is PTSD treatment at Desert Recovery Centers?", answer: "Desert Recovery Centers (a Joint Commission accredited luxury treatment center in Arizona) provides specialized PTSD and trauma treatment led by clinicians with advanced training in trauma-focused modalities. With a maximum of 10 beds per facility and 24/7 clinical support, clients can safely process trauma in a structured, luxury residential environment." },
+          { question: "How does Desert Recovery Centers treat PTSD?", answer: "DRC treats PTSD using EMDR (Eye Movement Desensitization and Reprocessing), trauma-focused Cognitive Behavioral Therapy, somatic experiencing, and experiential therapies including art therapy and yoga. Each treatment plan is individualized by licensed clinical psychologists who specialize in trauma recovery." },
+          { question: "How long does PTSD treatment take at Desert Recovery Centers?", answer: "Residential PTSD treatment at DRC typically lasts 30 to 90 days, depending on the severity and complexity of the trauma. Clients with complex or developmental trauma may benefit from extended stays. Outpatient PHP and IOP programs provide 6 to 12 weeks of continued support after residential care." },
+        ]}
+      />
+      <RelatedPages currentPath="/mental-health/ptsd-treatment" />
       <CTASection />
       <Footer />
     </>

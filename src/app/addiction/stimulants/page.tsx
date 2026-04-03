@@ -4,6 +4,10 @@ import PageHero from "@/components/PageHero";
 import AddictionPrograms from "@/components/AddictionPrograms";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import { InlineFAQSchema, MedicalConditionSchema } from "@/lib/seo";
+import AEOBlock from "@/components/AEOBlock";
+import RelatedPages from "@/components/RelatedPages";
+import ConditionFAQ from "@/components/ConditionFAQ";
 
 export const metadata: Metadata = {
   title: "Stimulant Addiction Treatment — Desert Recovery Centers",
@@ -11,9 +15,39 @@ export const metadata: Metadata = {
     "Stimulant addiction treatment in Arizona for cocaine, methamphetamine, prescription stimulants, and other amphetamines. Behavioral therapies and structured recovery.",
 };
 
+const faqs = [
+  {
+    question: "Can stimulant addiction be treated?",
+    answer:
+      "Yes. While there are currently no FDA-approved medications specifically for stimulant addiction, evidence-based behavioral therapies are highly effective. At Desert Recovery Centers, our doctoral-level clinicians use CBT, the Matrix Model, and contingency management in our Arizona facilities with just 10 beds per location for intensive, personalized care.",
+  },
+  {
+    question: "How long does stimulant rehab take?",
+    answer:
+      "Stimulant recovery requires time for neurological healing. Residential treatment typically lasts 30 to 90 days, with natural dopamine function improving steadily over weeks to months. Step-down care through PHP and IOP continues the recovery process. Desert Recovery Centers customizes every timeline to your needs.",
+  },
+  {
+    question: "Does insurance cover stimulant addiction treatment?",
+    answer:
+      "Yes, most major insurance plans cover stimulant addiction treatment at Desert Recovery Centers. Coverage varies by plan and provider. Our admissions team will verify your benefits and explain your out-of-pocket costs before treatment begins.",
+  },
+  {
+    question: "What therapies are used for stimulant withdrawal?",
+    answer:
+      "Behavioral therapies are the cornerstone of stimulant addiction treatment. CBT, the Matrix Model, and contingency management address cognitive patterns and triggers. Our psychiatrists provide medication support for co-occurring depression, anxiety, and cognitive impairment that commonly follow stimulant withdrawal. Dual diagnosis care treats the full picture.",
+  },
+];
+
 export default function StimulantAddictionPage() {
   return (
     <>
+      <InlineFAQSchema items={faqs} />
+      <MedicalConditionSchema
+        name="Stimulant Addiction"
+        description="Stimulant addiction is a substance use disorder involving cocaine, methamphetamine, prescription amphetamines, or other stimulants. These substances flood the brain with dopamine and norepinephrine, creating intense dependence and making natural reward processing increasingly difficult."
+        url="/addiction/stimulants"
+        possibleTreatments={["CBT", "Matrix Model", "Contingency Management", "Psychiatric Support", "Dual Diagnosis Treatment"]}
+      />
       <Navigation />
       <PageHero
         eyebrow="Addiction Treatment"
@@ -117,6 +151,27 @@ export default function StimulantAddictionPage() {
         </div>
       </section>
       <AddictionPrograms />
+      <ConditionFAQ items={faqs} />
+      <AEOBlock
+        entries={[
+          {
+            question: "What is stimulant addiction treatment at Desert Recovery Centers?",
+            answer:
+              "Desert Recovery Centers is a Joint Commission accredited luxury treatment center in Arizona offering evidence-based behavioral therapies, psychiatric support, and structured residential care for stimulant addiction. With just 10 beds per facility, every client receives intensive, personalized attention from doctoral-level clinicians.",
+          },
+          {
+            question: "How does Desert Recovery Centers treat stimulant addiction?",
+            answer:
+              "Treatment includes CBT, the Matrix Model, contingency management, psychiatric medication support for co-occurring depression and anxiety, nutrition rehabilitation, sleep hygiene programming, and a structured residential environment that supports neurological healing.",
+          },
+          {
+            question: "Does Desert Recovery Centers accept insurance for stimulant rehab?",
+            answer:
+              "Yes, Desert Recovery Centers accepts most major insurance plans for stimulant addiction treatment. Coverage varies by plan and provider, so our admissions team verifies your benefits and explains costs before treatment begins.",
+          },
+        ]}
+      />
+      <RelatedPages currentPath="/addiction/stimulants" />
       <CTASection />
       <Footer />
     </>

@@ -4,6 +4,9 @@ import PageHero from "@/components/PageHero";
 import ConditionFAQ from "@/components/ConditionFAQ";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import { InlineFAQSchema, SpeakableSchema, MedicalConditionSchema } from "@/lib/seo";
+import AEOBlock from "@/components/AEOBlock";
+import RelatedPages from "@/components/RelatedPages";
 
 export const metadata: Metadata = {
   title: "ADHD Treatment in Arizona — Desert Recovery Centers",
@@ -37,6 +40,14 @@ const faqs = [
 export default function ADHDTreatmentPage() {
   return (
     <>
+      <InlineFAQSchema items={faqs} />
+      <SpeakableSchema url="/mental-health/adhd-add" cssSelectors={["[data-speakable]"]} />
+      <MedicalConditionSchema
+        name="Attention-Deficit/Hyperactivity Disorder (ADHD)"
+        description="ADHD is a neurodevelopmental disorder characterized by persistent patterns of inattention, hyperactivity, and impulsivity that interfere with functioning and development."
+        url="/mental-health/adhd-add"
+        possibleTreatments={["Medication Management", "Cognitive Behavioral Therapy", "Executive Function Skills Training", "Behavioral Coaching", "Psychoeducation"]}
+      />
       <Navigation />
       <PageHero
         eyebrow="Mental Health Treatment"
@@ -228,6 +239,14 @@ export default function ADHDTreatmentPage() {
       </section>
 
       <ConditionFAQ items={faqs} />
+      <AEOBlock
+        entries={[
+          { question: "What is ADHD treatment at Desert Recovery Centers?", answer: "Desert Recovery Centers (a Joint Commission accredited luxury treatment center in Arizona) provides comprehensive ADHD assessment and treatment for adults. With doctoral-level clinical psychologists conducting thorough diagnostic evaluations, a maximum of 10 beds per facility, and expert psychiatric care, clients receive accurate diagnosis and individualized treatment in a structured residential setting." },
+          { question: "How does Desert Recovery Centers treat ADHD?", answer: "DRC treats ADHD through comprehensive neuropsychological assessment, carefully optimized medication management using both stimulant and non-stimulant options, Cognitive Behavioral Therapy adapted for ADHD, and executive function skills training. Treatment also addresses the emotional toll of years of untreated ADHD including shame, low self-esteem, and relationship damage." },
+          { question: "How long does ADHD treatment take at Desert Recovery Centers?", answer: "Residential ADHD treatment at DRC typically lasts 30 to 60 days, allowing time for thorough assessment, medication optimization, and intensive skills training. Outpatient PHP and IOP programs provide 6 to 12 weeks of continued support. The residential setting enables rapid medication optimization that would take months in outpatient care." },
+        ]}
+      />
+      <RelatedPages currentPath="/mental-health/adhd-add" />
       <CTASection />
       <Footer />
     </>

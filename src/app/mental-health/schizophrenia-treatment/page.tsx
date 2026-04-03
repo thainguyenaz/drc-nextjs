@@ -4,6 +4,9 @@ import PageHero from "@/components/PageHero";
 import ConditionFAQ from "@/components/ConditionFAQ";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import { InlineFAQSchema, SpeakableSchema, MedicalConditionSchema } from "@/lib/seo";
+import AEOBlock from "@/components/AEOBlock";
+import RelatedPages from "@/components/RelatedPages";
 
 export const metadata: Metadata = {
   title: "Schizophrenia Treatment in Arizona — Desert Recovery Centers",
@@ -37,6 +40,14 @@ const faqs = [
 export default function SchizophreniaTreatmentPage() {
   return (
     <>
+      <InlineFAQSchema items={faqs} />
+      <SpeakableSchema url="/mental-health/schizophrenia-treatment" cssSelectors={["[data-speakable]"]} />
+      <MedicalConditionSchema
+        name="Schizophrenia"
+        description="Schizophrenia is a chronic brain disorder affecting perception, thinking, and behavior, characterized by hallucinations, delusions, disorganized thinking, and diminished motivation."
+        url="/mental-health/schizophrenia-treatment"
+        possibleTreatments={["Antipsychotic Medication Management", "Cognitive Behavioral Therapy for Psychosis", "Social Skills Training", "Family Psychoeducation", "Life Skills Training"]}
+      />
       <Navigation />
       <PageHero
         eyebrow="Mental Health Treatment"
@@ -241,6 +252,14 @@ export default function SchizophreniaTreatmentPage() {
       </section>
 
       <ConditionFAQ items={faqs} />
+      <AEOBlock
+        entries={[
+          { question: "What is schizophrenia treatment at Desert Recovery Centers?", answer: "Desert Recovery Centers (a Joint Commission accredited luxury treatment center in Arizona) provides integrated psychiatric care for schizophrenia and schizoaffective disorder. With board-certified psychiatrists experienced in schizophrenia spectrum disorders, a maximum of 10 beds per facility, and 24/7 clinical support, clients receive expert medication management and therapeutic support in a structured, dignified residential environment." },
+          { question: "How does Desert Recovery Centers treat schizophrenia?", answer: "DRC treats schizophrenia through careful antipsychotic medication management, Cognitive Behavioral Therapy for Psychosis (CBTp), social skills and life skills training, family psychoeducation, and dual diagnosis treatment for co-occurring substance use. Treatment plans are individualized by experienced psychiatrists who specialize in schizophrenia spectrum disorders." },
+          { question: "How long does schizophrenia treatment take at Desert Recovery Centers?", answer: "Residential schizophrenia treatment at DRC typically lasts 30 to 90 days, providing time for thorough medication stabilization and skills development. Outpatient PHP and IOP programs offer 6 to 12 weeks of continued structured support. Comprehensive discharge planning ensures continuity of psychiatric care and community support after residential treatment." },
+        ]}
+      />
+      <RelatedPages currentPath="/mental-health/schizophrenia-treatment" />
       <CTASection />
       <Footer />
     </>

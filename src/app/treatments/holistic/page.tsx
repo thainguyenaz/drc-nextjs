@@ -7,6 +7,7 @@ import Navigation from "@/components/Navigation";
 import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import { MedicalTherapySchema } from "@/lib/seo";
 
 const therapies = [
   {
@@ -55,6 +56,12 @@ export default function HolisticPage() {
 
   return (
     <>
+      <MedicalTherapySchema
+        name="Holistic Therapies"
+        description="Evidence-informed complementary therapies including yoga, mindfulness, art therapy, and nutrition counseling that enhance clinical treatment for whole-person recovery."
+        url="/treatments/holistic"
+        conditions={["Substance Use Disorders", "Anxiety", "Depression", "PTSD", "Chronic Stress", "Insomnia", "Chronic Pain"]}
+      />
       <Navigation />
       <PageHero
         eyebrow="Whole-Person Care"
@@ -243,6 +250,42 @@ export default function HolisticPage() {
               </a>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Related Treatment Programs */}
+      <section className="py-12 bg-cream border-t border-gray-100">
+        <div className="max-w-container mx-auto px-6">
+          <div className="max-w-3xl mx-auto">
+            <h3 className="text-forest font-display text-lg font-semibold mb-4">Related Treatment Programs</h3>
+            <div className="flex flex-wrap gap-3">
+              <a href="/treatments/bridgework" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">BridgeWork&trade;</a>
+              <a href="/treatments/softwave" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">SoftWave Therapy</a>
+              <a href="/treatments/trauma-therapy" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">Trauma Therapy</a>
+              <a href="/treatments/dbt" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">DBT Therapy</a>
+              <a href="/about/luxury-vs-standard" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">Luxury vs Standard Rehab</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* AEO Section */}
+      <section className="py-12 bg-white border-t border-gray-100" aria-label="Common questions" data-speakable="true">
+        <div className="max-w-container mx-auto px-6">
+          <div className="max-w-3xl mx-auto space-y-8">
+            <article className="border-l-2 border-gold/30 pl-5">
+              <h3 className="text-forest font-semibold text-sm mb-1">What are holistic therapies at Desert Recovery Centers?</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">Holistic therapies at Desert Recovery Centers include yoga, mindfulness meditation, art therapy, music therapy, breathwork, massage therapy, nutrition counseling, and biofeedback. Desert Recovery Centers is a Joint Commission accredited luxury treatment center in Arizona where holistic offerings are integrated into the clinical treatment plan and overseen by the clinical team to ensure alignment with therapeutic goals.</p>
+            </article>
+            <article className="border-l-2 border-gold/30 pl-5">
+              <h3 className="text-forest font-semibold text-sm mb-1">How do holistic therapies work for addiction and mental health treatment?</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">Holistic therapies complement evidence-based clinical treatment by addressing the physical, emotional, and spiritual dimensions of recovery. Yoga reduces cortisol levels, breathwork calms the nervous system, nutrition counseling restores biochemical balance, and creative therapies provide non-verbal outlets for processing difficult emotions. These modalities amplify clinical outcomes when integrated with therapies like CBT, DBT, and EMDR.</p>
+            </article>
+            <article className="border-l-2 border-gold/30 pl-5">
+              <h3 className="text-forest font-semibold text-sm mb-1">Who delivers holistic therapies at Desert Recovery Centers?</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">Holistic therapies at Desert Recovery Centers are delivered by certified practitioners in each modality — licensed massage therapists, certified yoga instructors, registered dietitians, and trained art therapists — all under the clinical oversight of our doctoral-level psychologists. Small client-to-clinician ratios ensure each client receives personalized holistic care integrated with their overall treatment plan.</p>
+            </article>
+          </div>
         </div>
       </section>
 

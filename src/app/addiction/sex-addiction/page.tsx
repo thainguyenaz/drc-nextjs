@@ -4,6 +4,10 @@ import PageHero from "@/components/PageHero";
 import AddictionPrograms from "@/components/AddictionPrograms";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import { InlineFAQSchema, MedicalConditionSchema } from "@/lib/seo";
+import AEOBlock from "@/components/AEOBlock";
+import RelatedPages from "@/components/RelatedPages";
+import ConditionFAQ from "@/components/ConditionFAQ";
 
 export const metadata: Metadata = {
   title: "Sex Addiction Treatment — Desert Recovery Centers",
@@ -11,9 +15,39 @@ export const metadata: Metadata = {
     "Compassionate sex addiction treatment in Arizona. Evidence-based therapy for compulsive sexual behavior in a confidential, judgment-free clinical setting.",
 };
 
+const faqs = [
+  {
+    question: "Can sex addiction be treated?",
+    answer:
+      "Yes. Compulsive sexual behavior disorder is a recognized impulse control disorder that responds to evidence-based therapy. At Desert Recovery Centers, our doctoral-level clinicians provide confidential, judgment-free treatment in our Arizona facilities with just 10 beds per location for highly personalized care.",
+  },
+  {
+    question: "How long does sex addiction treatment take?",
+    answer:
+      "Sex addiction treatment typically involves 30 to 90 days of residential or outpatient care, depending on severity and co-occurring conditions. Many clients benefit from ongoing therapy after primary treatment. Desert Recovery Centers customizes every plan to your unique needs and recovery goals.",
+  },
+  {
+    question: "Does insurance cover sex addiction treatment?",
+    answer:
+      "Yes, most major insurance plans cover treatment for compulsive sexual behavior at Desert Recovery Centers. Coverage varies by plan and provider. Our admissions team will verify your benefits and explain your out-of-pocket costs before treatment begins.",
+  },
+  {
+    question: "What therapies are used for sex addiction?",
+    answer:
+      "Treatment includes CBT and psychodynamic therapy to address emotional triggers, group process therapy to break isolation, trauma-focused approaches for underlying attachment issues, and dual diagnosis care for co-occurring depression, anxiety, or substance use disorders.",
+  },
+];
+
 export default function SexAddictionPage() {
   return (
     <>
+      <InlineFAQSchema items={faqs} />
+      <MedicalConditionSchema
+        name="Compulsive Sexual Behavior Disorder"
+        description="Compulsive sexual behavior disorder is recognized by the WHO as an impulse control disorder. It involves a cycle of escalating behavior driven by the brain's reward system, with temporary relief followed by guilt, shame, and intensified urges."
+        url="/addiction/sex-addiction"
+        possibleTreatments={["CBT", "Psychodynamic Therapy", "Group Process Therapy", "Trauma-Informed Care", "Dual Diagnosis Treatment"]}
+      />
       <Navigation />
       <PageHero
         eyebrow="Addiction Treatment"
@@ -117,6 +151,27 @@ export default function SexAddictionPage() {
         </div>
       </section>
       <AddictionPrograms />
+      <ConditionFAQ items={faqs} />
+      <AEOBlock
+        entries={[
+          {
+            question: "What is sex addiction treatment at Desert Recovery Centers?",
+            answer:
+              "Desert Recovery Centers is a Joint Commission accredited luxury treatment center in Arizona offering confidential, evidence-based therapy for compulsive sexual behavior. With just 10 beds per facility, every client receives individualized attention from doctoral-level clinicians in a judgment-free clinical setting.",
+          },
+          {
+            question: "How does Desert Recovery Centers treat sex addiction?",
+            answer:
+              "Treatment includes CBT and psychodynamic therapy, confidential group process therapy, trauma-informed care for underlying attachment issues, dual diagnosis treatment for co-occurring mental health conditions, and relapse prevention planning with healthy boundary development.",
+          },
+          {
+            question: "Does Desert Recovery Centers accept insurance for sex addiction rehab?",
+            answer:
+              "Yes, Desert Recovery Centers accepts most major insurance plans for compulsive sexual behavior treatment. Coverage varies by plan and provider, so our admissions team verifies your benefits and explains costs before treatment begins.",
+          },
+        ]}
+      />
+      <RelatedPages currentPath="/addiction/sex-addiction" />
       <CTASection />
       <Footer />
     </>

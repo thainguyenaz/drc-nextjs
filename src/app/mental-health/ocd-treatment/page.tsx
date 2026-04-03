@@ -4,6 +4,9 @@ import PageHero from "@/components/PageHero";
 import ConditionFAQ from "@/components/ConditionFAQ";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import { InlineFAQSchema, SpeakableSchema, MedicalConditionSchema } from "@/lib/seo";
+import AEOBlock from "@/components/AEOBlock";
+import RelatedPages from "@/components/RelatedPages";
 
 export const metadata: Metadata = {
   title: "OCD Treatment in Arizona — Desert Recovery Centers",
@@ -37,6 +40,14 @@ const faqs = [
 export default function OCDTreatmentPage() {
   return (
     <>
+      <InlineFAQSchema items={faqs} />
+      <SpeakableSchema url="/mental-health/ocd-treatment" cssSelectors={["[data-speakable]"]} />
+      <MedicalConditionSchema
+        name="Obsessive-Compulsive Disorder (OCD)"
+        description="OCD is a chronic mental health condition characterized by persistent, unwanted intrusive thoughts (obsessions) and repetitive behaviors or mental acts (compulsions) performed to reduce anxiety."
+        url="/mental-health/ocd-treatment"
+        possibleTreatments={["Exposure and Response Prevention", "Cognitive Therapy", "Medication Management", "Mindfulness-Based Therapy", "Acceptance and Commitment Therapy"]}
+      />
       <Navigation />
       <PageHero
         eyebrow="Mental Health Treatment"
@@ -229,6 +240,14 @@ export default function OCDTreatmentPage() {
       </section>
 
       <ConditionFAQ items={faqs} />
+      <AEOBlock
+        entries={[
+          { question: "What is OCD treatment at Desert Recovery Centers?", answer: "Desert Recovery Centers (a Joint Commission accredited luxury treatment center in Arizona) provides specialized OCD treatment anchored in Exposure and Response Prevention (ERP), the gold-standard therapy for OCD. With ERP-trained clinicians, a maximum of 10 beds per facility, and doctoral-level clinical leadership, clients receive intensive, evidence-based care in a supportive residential environment." },
+          { question: "How does Desert Recovery Centers treat OCD?", answer: "DRC treats OCD using Exposure and Response Prevention (ERP), cognitive therapy targeting distorted OCD beliefs, medication management with SSRIs when indicated, and mindfulness-based approaches. Multiple ERP sessions per week in a structured residential setting allow clients to make rapid progress under the guidance of specifically trained clinicians." },
+          { question: "How long does OCD treatment take at Desert Recovery Centers?", answer: "Residential OCD treatment at DRC typically lasts 30 to 90 days, depending on symptom severity and co-occurring conditions. Outpatient PHP and IOP programs provide 6 to 12 weeks of continued structured support. Treatment length is individually determined based on clinical progress and response to ERP therapy." },
+        ]}
+      />
+      <RelatedPages currentPath="/mental-health/ocd-treatment" />
       <CTASection />
       <Footer />
     </>

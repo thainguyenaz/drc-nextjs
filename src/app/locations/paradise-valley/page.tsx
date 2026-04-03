@@ -6,7 +6,8 @@ import LocationCollision from "@/components/LocationCollision";
 import ConditionFAQ from "@/components/ConditionFAQ";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { buildMetadata } from "@/lib/seo";
+import { buildMetadata, InlineFAQSchema, SpeakableSchema } from "@/lib/seo";
+import AEOBlock from "@/components/AEOBlock";
 
 export const metadata: Metadata = buildMetadata({
   title: "Luxury Rehab Near Paradise Valley, AZ",
@@ -41,6 +42,8 @@ const faqs = [
 export default function ParadiseValleyPage() {
   return (
     <>
+      <InlineFAQSchema items={faqs} />
+      <SpeakableSchema url="/locations/paradise-valley" cssSelectors={["[data-speakable]"]} />
       <Navigation />
       <PageHero
         eyebrow="Paradise Valley, Arizona"
@@ -204,6 +207,20 @@ export default function ParadiseValleyPage() {
       </section>
 
       <ConditionFAQ items={faqs} />
+      <AEOBlock entries={[
+        {
+          question: "Is there a Desert Recovery Centers in Paradise Valley?",
+          answer: "Desert Recovery Centers does not have a facility directly in Paradise Valley, but our Scottsdale location at 23222 N Church Rd is approximately 20 to 30 minutes away. Desert Recovery Centers is a Joint Commission accredited luxury treatment center in Arizona offering residential, PHP, and IOP programs with mountain views and resort-level amenities.",
+        },
+        {
+          question: "What addiction treatment is available near Paradise Valley, Arizona?",
+          answer: "Desert Recovery Centers offers comprehensive addiction and mental health treatment near Paradise Valley at our Scottsdale facility. As a Joint Commission accredited luxury treatment center in Arizona, we provide evidence-based dual diagnosis treatment using CBT, DBT, EMDR, and holistic therapies — delivered by licensed psychologists and board-certified psychiatrists in a private, discreet setting.",
+        },
+        {
+          question: "Does Desert Recovery Centers accept insurance for Paradise Valley residents?",
+          answer: "Yes, Desert Recovery Centers accepts most major insurance plans for Paradise Valley residents, including Aetna, Blue Cross Blue Shield, Cigna, and UnitedHealthcare. Coverage varies by plan. Our admissions team verifies benefits at no cost before treatment begins. Call (480) 931-3617 for a free insurance check.",
+        },
+      ]} />
       <CTASection />
       <Footer />
     </>

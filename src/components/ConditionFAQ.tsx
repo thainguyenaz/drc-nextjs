@@ -3,13 +3,17 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-interface FAQItem {
-  q: string;
-  a: string;
-}
+type FAQItem = { q: string; a: string } | { question: string; answer: string };
 
 interface ConditionFAQProps {
   items: FAQItem[];
+}
+
+function getQ(item: FAQItem): string {
+  return "q" in item ? item.q : item.question;
+}
+function getA(item: FAQItem): string {
+  return "a" in item ? item.a : item.answer;
 }
 
 export default function ConditionFAQ({ items }: ConditionFAQProps) {
@@ -48,7 +52,7 @@ export default function ConditionFAQ({ items }: ConditionFAQProps) {
                 className="w-full flex items-center justify-between px-6 py-5 text-left cursor-pointer"
               >
                 <span className="font-semibold text-forest text-sm pr-4">
-                  {faq.q}
+                  {getQ(faq)}
                 </span>
                 <svg
                   className={`w-5 h-5 text-sage flex-shrink-0 transition-transform duration-300 ${
@@ -76,7 +80,7 @@ export default function ConditionFAQ({ items }: ConditionFAQProps) {
                     className="overflow-hidden"
                   >
                     <p className="px-6 pb-5 text-gray-600 text-sm leading-relaxed">
-                      {faq.a}
+                      {getA(faq)}
                     </p>
                   </motion.div>
                 )}

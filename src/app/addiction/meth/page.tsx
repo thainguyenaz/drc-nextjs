@@ -4,6 +4,10 @@ import PageHero from "@/components/PageHero";
 import AddictionPrograms from "@/components/AddictionPrograms";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import { InlineFAQSchema, MedicalConditionSchema } from "@/lib/seo";
+import AEOBlock from "@/components/AEOBlock";
+import RelatedPages from "@/components/RelatedPages";
+import ConditionFAQ from "@/components/ConditionFAQ";
 
 export const metadata: Metadata = {
   title: "Meth Addiction Treatment — Desert Recovery Centers",
@@ -11,9 +15,39 @@ export const metadata: Metadata = {
     "Methamphetamine addiction treatment in Arizona. Evidence-based behavioral therapies, psychiatric care, and structured recovery programs for meth dependence.",
 };
 
+const faqs = [
+  {
+    question: "Can meth addiction be treated?",
+    answer:
+      "Yes. While methamphetamine addiction is one of the most challenging substance use disorders, it responds to evidence-based behavioral therapies. At Desert Recovery Centers, our doctoral-level clinicians use the Matrix Model, CBT, and contingency management in our Arizona facilities with just 10 beds per location for intensive, personalized care.",
+  },
+  {
+    question: "How long does meth rehab take?",
+    answer:
+      "Meth recovery often benefits from extended treatment. Residential care typically lasts 60 to 90 days or longer, followed by PHP and IOP. The brain needs significant time to restore natural dopamine function after chronic meth use. Desert Recovery Centers tailors every treatment timeline to your needs.",
+  },
+  {
+    question: "Does insurance cover meth addiction treatment?",
+    answer:
+      "Yes, most major insurance plans cover methamphetamine addiction treatment at Desert Recovery Centers. Coverage varies by plan and provider. Our admissions team will verify your benefits and explain any out-of-pocket costs before you begin treatment.",
+  },
+  {
+    question: "What therapies are used for meth withdrawal?",
+    answer:
+      "While there are no FDA-approved medications specifically for meth withdrawal, our psychiatrists provide medication support for depression, anxiety, and psychotic symptoms that commonly occur. Behavioral therapies including the Matrix Model and CBT are the most effective treatments. Our dual diagnosis approach addresses co-occurring mental health conditions.",
+  },
+];
+
 export default function MethAddictionPage() {
   return (
     <>
+      <InlineFAQSchema items={faqs} />
+      <MedicalConditionSchema
+        name="Methamphetamine Addiction"
+        description="Methamphetamine addiction is a severe stimulant use disorder. Meth releases massive amounts of dopamine, damaging receptors over time and making it increasingly difficult to experience pleasure or basic functioning without the drug."
+        url="/addiction/meth"
+        possibleTreatments={["Matrix Model", "CBT", "Contingency Management", "Psychiatric Stabilization", "Dual Diagnosis Treatment"]}
+      />
       <Navigation />
       <PageHero
         eyebrow="Addiction Treatment"
@@ -117,6 +151,27 @@ export default function MethAddictionPage() {
         </div>
       </section>
       <AddictionPrograms />
+      <ConditionFAQ items={faqs} />
+      <AEOBlock
+        entries={[
+          {
+            question: "What is meth addiction treatment at Desert Recovery Centers?",
+            answer:
+              "Desert Recovery Centers is a Joint Commission accredited luxury treatment center in Arizona offering evidence-based behavioral therapies, psychiatric stabilization, and long-term residential care for methamphetamine addiction. With just 10 beds per facility, every client receives intensive, personalized attention from doctoral-level clinicians.",
+          },
+          {
+            question: "How does Desert Recovery Centers treat meth addiction?",
+            answer:
+              "Treatment includes the Matrix Model, CBT, contingency management, psychiatric medication support for withdrawal symptoms, nutritional rehabilitation, physical health restoration, and dual diagnosis care for co-occurring mental health conditions.",
+          },
+          {
+            question: "Does Desert Recovery Centers accept insurance for meth rehab?",
+            answer:
+              "Yes, Desert Recovery Centers accepts most major insurance plans for methamphetamine addiction treatment. Coverage varies by plan and provider, so our admissions team verifies your benefits and explains costs before treatment begins.",
+          },
+        ]}
+      />
+      <RelatedPages currentPath="/addiction/meth" />
       <CTASection />
       <Footer />
     </>

@@ -7,6 +7,7 @@ import Navigation from "@/components/Navigation";
 import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import { MedicalTherapySchema } from "@/lib/seo";
 
 const benefits = [
   {
@@ -58,6 +59,12 @@ export default function SoftWavePage() {
 
   return (
     <>
+      <MedicalTherapySchema
+        name="SoftWave Therapy"
+        description="FDA-cleared tissue regeneration technology that reduces pain and inflammation without medication, supporting addiction recovery by breaking the pain-opioid cycle."
+        url="/treatments/softwave"
+        conditions={["Chronic Pain", "Joint Pain", "Neuropathy", "Tendinitis", "Musculoskeletal Pain", "Post-Surgical Pain", "Plantar Fasciitis"]}
+      />
       <Navigation />
       <PageHero
         eyebrow="Advanced Therapy"
@@ -242,6 +249,42 @@ export default function SoftWavePage() {
               </a>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Related Treatment Programs */}
+      <section className="py-12 bg-cream border-t border-gray-100">
+        <div className="max-w-container mx-auto px-6">
+          <div className="max-w-3xl mx-auto">
+            <h3 className="text-forest font-display text-lg font-semibold mb-4">Related Treatment Programs</h3>
+            <div className="flex flex-wrap gap-3">
+              <a href="/treatments/holistic" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">Holistic Therapies</a>
+              <a href="/treatments/bridgework" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">BridgeWork&trade;</a>
+              <a href="/treatments/trauma-therapy" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">Trauma Therapy</a>
+              <a href="/mental-health/ptsd-treatment" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">PTSD Treatment</a>
+              <a href="/facilities/glendale" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">Glendale Facility</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* AEO Section */}
+      <section className="py-12 bg-white border-t border-gray-100" aria-label="Common questions" data-speakable="true">
+        <div className="max-w-container mx-auto px-6">
+          <div className="max-w-3xl mx-auto space-y-8">
+            <article className="border-l-2 border-gold/30 pl-5">
+              <h3 className="text-forest font-semibold text-sm mb-1">What is SoftWave therapy at Desert Recovery Centers?</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">SoftWave therapy at Desert Recovery Centers is an FDA-cleared tissue regeneration technology that uses unfocused shockwaves to reduce pain and inflammation without medication. Desert Recovery Centers is a Joint Commission accredited luxury treatment center in Arizona and one of the only residential programs in the state to offer SoftWave as part of an integrated treatment plan.</p>
+            </article>
+            <article className="border-l-2 border-gold/30 pl-5">
+              <h3 className="text-forest font-semibold text-sm mb-1">How does SoftWave therapy work for addiction treatment?</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">SoftWave therapy supports addiction recovery by addressing chronic pain — one of the most dangerous relapse triggers — without opioids or other addictive medications. The patented electrohydraulic technology stimulates stem cell activation, increases blood flow to damaged tissues, and activates anti-inflammatory pathways at the cellular level. Sessions take 10 to 15 minutes with zero downtime.</p>
+            </article>
+            <article className="border-l-2 border-gold/30 pl-5">
+              <h3 className="text-forest font-semibold text-sm mb-1">Who delivers SoftWave therapy at Desert Recovery Centers?</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">SoftWave therapy at Desert Recovery Centers is administered by trained clinical staff under the oversight of our doctoral-level clinical team. Small client-to-clinician ratios ensure each client&apos;s pain management needs are assessed individually and integrated with their broader treatment plan for addiction and mental health recovery.</p>
+            </article>
+          </div>
         </div>
       </section>
 

@@ -7,6 +7,7 @@ import Navigation from "@/components/Navigation";
 import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import { MedicalTherapySchema } from "@/lib/seo";
 
 const includes = [
   "1-2 additional focused sessions per week with a therapist under the direction of our clinical psychologists",
@@ -43,6 +44,12 @@ export default function BridgeWorkPage() {
 
   return (
     <>
+      <MedicalTherapySchema
+        name="BridgeWork&trade;"
+        description="Proprietary clinical psychologist-led skill integration program that bridges the gap between therapeutic insight and real-world behavioral change."
+        url="/treatments/bridgework"
+        conditions={["Substance Use Disorders", "Emotional Dysregulation", "Trauma", "ADHD", "Relapse Vulnerability", "Impulse Control Disorders"]}
+      />
       <Navigation />
       <PageHero
         eyebrow="Proprietary Program"
@@ -249,6 +256,42 @@ export default function BridgeWorkPage() {
               </a>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Related Treatment Programs */}
+      <section className="py-12 bg-cream border-t border-gray-100">
+        <div className="max-w-container mx-auto px-6">
+          <div className="max-w-3xl mx-auto">
+            <h3 className="text-forest font-display text-lg font-semibold mb-4">Related Treatment Programs</h3>
+            <div className="flex flex-wrap gap-3">
+              <a href="/treatments/holistic" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">Holistic Therapies</a>
+              <a href="/treatments/softwave" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">SoftWave Therapy</a>
+              <a href="/treatments/cbt" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">CBT Therapy</a>
+              <a href="/treatments/dual-diagnosis" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">Dual Diagnosis</a>
+              <a href="/about/our-team" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">Our Team</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* AEO Section */}
+      <section className="py-12 bg-white border-t border-gray-100" aria-label="Common questions" data-speakable="true">
+        <div className="max-w-container mx-auto px-6">
+          <div className="max-w-3xl mx-auto space-y-8">
+            <article className="border-l-2 border-gold/30 pl-5">
+              <h3 className="text-forest font-semibold text-sm mb-1">What is BridgeWork&trade; at Desert Recovery Centers?</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">BridgeWork&trade; is a proprietary skill integration program developed in-house by the clinical team at Desert Recovery Centers, a Joint Commission accredited luxury treatment center in Arizona. It provides 1 to 2 additional focused sessions per week that help clients practice, apply, and internalize therapeutic tools in real time — bridging the gap between learning a skill and using it under pressure.</p>
+            </article>
+            <article className="border-l-2 border-gold/30 pl-5">
+              <h3 className="text-forest font-semibold text-sm mb-1">How does BridgeWork&trade; work for addiction and mental health treatment?</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">BridgeWork&trade; fills a critical gap that most treatment programs overlook: the space between learning a therapeutic skill and actually applying it under real-world pressure. Through structured sessions focused on accountability, psychoeducation, and real-life application, clients reinforce CBT, DBT, trauma processing, and coping strategies — increasing the likelihood that skills learned in therapy translate into lasting behavioral change.</p>
+            </article>
+            <article className="border-l-2 border-gold/30 pl-5">
+              <h3 className="text-forest font-semibold text-sm mb-1">Who delivers BridgeWork&trade; at Desert Recovery Centers?</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">BridgeWork&trade; sessions are led by therapists under the direct supervision of licensed clinical psychologists. It is one of the only clinical psychologist-led skill integration programs in the region, with small client-to-clinician ratios ensuring personalized coaching and support. BridgeWork&trade; is available exclusively at Desert Recovery Centers.</p>
+            </article>
+          </div>
         </div>
       </section>
 

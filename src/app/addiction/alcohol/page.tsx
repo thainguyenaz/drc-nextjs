@@ -4,6 +4,10 @@ import PageHero from "@/components/PageHero";
 import AddictionPrograms from "@/components/AddictionPrograms";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import { InlineFAQSchema, MedicalConditionSchema } from "@/lib/seo";
+import AEOBlock from "@/components/AEOBlock";
+import RelatedPages from "@/components/RelatedPages";
+import ConditionFAQ from "@/components/ConditionFAQ";
 
 export const metadata: Metadata = {
   title: "Alcohol Addiction Treatment — Desert Recovery Centers",
@@ -11,9 +15,39 @@ export const metadata: Metadata = {
     "Evidence-based alcohol addiction treatment in Arizona. Medically supervised detox, residential care, PHP, and IOP for alcohol use disorder.",
 };
 
+const faqs = [
+  {
+    question: "Can alcohol addiction be treated?",
+    answer:
+      "Yes. Alcohol use disorder is a medical condition that responds well to evidence-based treatment. At Desert Recovery Centers, our doctoral-level clinicians combine medically supervised detox, medication-assisted treatment, and behavioral therapy in our Arizona facilities with just 10 beds per location for highly personalized care.",
+  },
+  {
+    question: "How long does alcohol rehab take?",
+    answer:
+      "The length of alcohol rehab varies by individual need. Detox typically lasts 5 to 10 days, followed by 30 to 90 days of residential treatment. Many clients continue with PHP or IOP for additional weeks. Desert Recovery Centers builds a custom treatment timeline based on your history, severity of dependence, and recovery goals.",
+  },
+  {
+    question: "Does insurance cover alcohol addiction treatment?",
+    answer:
+      "Yes, most major insurance plans cover alcohol addiction treatment at Desert Recovery Centers. Coverage varies by plan and provider. Our admissions team will verify your benefits and explain your out-of-pocket costs before you begin treatment.",
+  },
+  {
+    question: "What medications are used for alcohol withdrawal?",
+    answer:
+      "Medically supervised alcohol detox may include benzodiazepines to prevent seizures, anti-nausea medications, and comfort medications for anxiety and insomnia. After detox, FDA-approved medications like naltrexone and acamprosate can help reduce cravings. Our dual diagnosis approach also addresses co-occurring mental health conditions.",
+  },
+];
+
 export default function AlcoholAddictionPage() {
   return (
     <>
+      <InlineFAQSchema items={faqs} />
+      <MedicalConditionSchema
+        name="Alcohol Use Disorder"
+        description="Alcohol use disorder (AUD) is a chronic condition characterized by an inability to control drinking despite negative consequences. Prolonged alcohol use changes brain chemistry, creating physical dependence that makes quitting dangerous without medical supervision."
+        url="/addiction/alcohol"
+        possibleTreatments={["Medically Supervised Detox", "Medication-Assisted Treatment", "CBT", "Dual Diagnosis Treatment"]}
+      />
       <Navigation />
       <PageHero
         eyebrow="Addiction Treatment"
@@ -117,6 +151,27 @@ export default function AlcoholAddictionPage() {
         </div>
       </section>
       <AddictionPrograms />
+      <ConditionFAQ items={faqs} />
+      <AEOBlock
+        entries={[
+          {
+            question: "What is alcohol addiction treatment at Desert Recovery Centers?",
+            answer:
+              "Desert Recovery Centers is a Joint Commission accredited luxury treatment center in Arizona offering medically supervised detox, residential care, and outpatient programs for alcohol use disorder. With just 10 beds per facility, every client receives individualized attention from doctoral-level clinicians.",
+          },
+          {
+            question: "How does Desert Recovery Centers treat alcohol addiction?",
+            answer:
+              "Treatment includes medically supervised detox with 24/7 monitoring, medication-assisted treatment using naltrexone and acamprosate, individual and group therapy (CBT, DBT, motivational interviewing), and dual diagnosis care for co-occurring mental health conditions.",
+          },
+          {
+            question: "Does Desert Recovery Centers accept insurance for alcohol rehab?",
+            answer:
+              "Yes, Desert Recovery Centers accepts most major insurance plans for alcohol addiction treatment. Coverage varies by plan and provider, so our admissions team verifies your benefits and explains costs before treatment begins.",
+          },
+        ]}
+      />
+      <RelatedPages currentPath="/addiction/alcohol" />
       <CTASection />
       <Footer />
     </>

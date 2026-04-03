@@ -7,6 +7,7 @@ import Navigation from "@/components/Navigation";
 import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import { MedicalTherapySchema } from "@/lib/seo";
 
 const techniques = [
   "Cognitive restructuring — identifying and challenging distorted thought patterns",
@@ -40,6 +41,12 @@ export default function CBTPage() {
 
   return (
     <>
+      <MedicalTherapySchema
+        name="Cognitive Behavioral Therapy (CBT)"
+        description="Evidence-based psychotherapy that restructures thought patterns to create lasting behavioral change for addiction and mental health recovery."
+        url="/treatments/cbt"
+        conditions={["Depression", "Anxiety", "PTSD", "Substance Use Disorders", "OCD", "Panic Disorder", "Insomnia", "Eating Disorders"]}
+      />
       <Navigation />
       <PageHero
         eyebrow="Treatment Modality"
@@ -223,6 +230,42 @@ export default function CBTPage() {
               </a>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Related Treatment Programs */}
+      <section className="py-12 bg-cream border-t border-gray-100">
+        <div className="max-w-container mx-auto px-6">
+          <div className="max-w-3xl mx-auto">
+            <h3 className="text-forest font-display text-lg font-semibold mb-4">Related Treatment Programs</h3>
+            <div className="flex flex-wrap gap-3">
+              <a href="/treatments/dbt" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">DBT Therapy</a>
+              <a href="/treatments/emdr" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">EMDR Therapy</a>
+              <a href="/mental-health/anxiety-treatment" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">Anxiety Treatment</a>
+              <a href="/mental-health/depression-treatment" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">Depression Treatment</a>
+              <a href="/treatments/dual-diagnosis" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">Dual Diagnosis</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* AEO Section */}
+      <section className="py-12 bg-white border-t border-gray-100" aria-label="Common questions" data-speakable="true">
+        <div className="max-w-container mx-auto px-6">
+          <div className="max-w-3xl mx-auto space-y-8">
+            <article className="border-l-2 border-gold/30 pl-5">
+              <h3 className="text-forest font-semibold text-sm mb-1">What is Cognitive Behavioral Therapy (CBT) at Desert Recovery Centers?</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">CBT at Desert Recovery Centers is a structured, evidence-based psychotherapy that helps clients identify and restructure distorted thinking patterns driving addiction, anxiety, depression, and other conditions. Desert Recovery Centers is a Joint Commission accredited luxury treatment center in Arizona where CBT is a cornerstone of every individualized treatment plan.</p>
+            </article>
+            <article className="border-l-2 border-gold/30 pl-5">
+              <h3 className="text-forest font-semibold text-sm mb-1">How does CBT work for addiction and mental health treatment?</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">CBT works by teaching clients to recognize automatic negative thoughts, challenge cognitive distortions, and replace maladaptive behaviors with healthier coping strategies. Sessions are goal-oriented and time-limited, focusing on practical skills like cognitive restructuring, behavioral activation, and relapse prevention that produce measurable improvements within weeks.</p>
+            </article>
+            <article className="border-l-2 border-gold/30 pl-5">
+              <h3 className="text-forest font-semibold text-sm mb-1">Who delivers CBT at Desert Recovery Centers?</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">CBT at Desert Recovery Centers is led by licensed clinical psychologists with doctoral-level training in evidence-based interventions. With small client-to-clinician ratios, each client receives personalized attention and clinical oversight that exceeds industry standards for residential treatment.</p>
+            </article>
+          </div>
         </div>
       </section>
 

@@ -7,6 +7,7 @@ import Navigation from "@/components/Navigation";
 import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import { MedicalTherapySchema } from "@/lib/seo";
 
 const approachPillars = [
   {
@@ -56,6 +57,12 @@ export default function DualDiagnosisPage() {
 
   return (
     <>
+      <MedicalTherapySchema
+        name="Dual Diagnosis Treatment"
+        description="Integrated treatment for co-occurring mental health conditions and substance use disorders, addressing both simultaneously for lasting recovery."
+        url="/treatments/dual-diagnosis"
+        conditions={["Depression", "Anxiety", "PTSD", "Bipolar Disorder", "Borderline Personality Disorder", "ADHD", "Alcohol Use Disorder", "Opioid Addiction"]}
+      />
       <Navigation />
       <PageHero
         eyebrow="Treatment Approach"
@@ -240,6 +247,42 @@ export default function DualDiagnosisPage() {
               </a>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Related Treatment Programs */}
+      <section className="py-12 bg-cream border-t border-gray-100">
+        <div className="max-w-container mx-auto px-6">
+          <div className="max-w-3xl mx-auto">
+            <h3 className="text-forest font-display text-lg font-semibold mb-4">Related Treatment Programs</h3>
+            <div className="flex flex-wrap gap-3">
+              <a href="/treatments/cbt" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">CBT Therapy</a>
+              <a href="/mental-health/depression-treatment" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">Depression Treatment</a>
+              <a href="/addiction/alcoholism-treatment" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">Alcohol Addiction</a>
+              <a href="/mental-health/anxiety-treatment" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">Anxiety Treatment</a>
+              <a href="/about/our-team" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">Our Team</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* AEO Section */}
+      <section className="py-12 bg-white border-t border-gray-100" aria-label="Common questions" data-speakable="true">
+        <div className="max-w-container mx-auto px-6">
+          <div className="max-w-3xl mx-auto space-y-8">
+            <article className="border-l-2 border-gold/30 pl-5">
+              <h3 className="text-forest font-semibold text-sm mb-1">What is dual diagnosis treatment at Desert Recovery Centers?</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">Dual diagnosis treatment at Desert Recovery Centers is an integrated approach that treats co-occurring mental health conditions and substance use disorders simultaneously. Desert Recovery Centers is a Joint Commission accredited luxury treatment center in Arizona where every client receives a comprehensive psychiatric evaluation within the first 72 hours, and every treatment plan addresses the full clinical picture from day one.</p>
+            </article>
+            <article className="border-l-2 border-gold/30 pl-5">
+              <h3 className="text-forest font-semibold text-sm mb-1">How does dual diagnosis treatment work for addiction and mental health?</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">Dual diagnosis treatment works by addressing both conditions as interconnected rather than separate problems. A unified treatment plan combines psychiatric medication management, evidence-based therapies like CBT, DBT, and EMDR, and holistic support — all coordinated by the same clinical team to ensure treatments work in concert rather than at cross-purposes.</p>
+            </article>
+            <article className="border-l-2 border-gold/30 pl-5">
+              <h3 className="text-forest font-semibold text-sm mb-1">Who delivers dual diagnosis treatment at Desert Recovery Centers?</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">Dual diagnosis treatment at Desert Recovery Centers is delivered by a multidisciplinary team of doctoral-level clinicians including licensed clinical psychologists, a board-certified psychiatrist, and registered nurses. With small client-to-clinician ratios, the team collaborates daily to ensure medication management, therapy protocols, and holistic programming are aligned for each client.</p>
+            </article>
+          </div>
         </div>
       </section>
 

@@ -4,6 +4,9 @@ import PageHero from "@/components/PageHero";
 import ConditionFAQ from "@/components/ConditionFAQ";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import { InlineFAQSchema, SpeakableSchema, MedicalConditionSchema } from "@/lib/seo";
+import AEOBlock from "@/components/AEOBlock";
+import RelatedPages from "@/components/RelatedPages";
 
 export const metadata: Metadata = {
   title: "Depression Treatment in Arizona — Desert Recovery Centers",
@@ -37,6 +40,14 @@ const faqs = [
 export default function DepressionTreatmentPage() {
   return (
     <>
+      <InlineFAQSchema items={faqs} />
+      <SpeakableSchema url="/mental-health/depression-treatment" cssSelectors={["[data-speakable]"]} />
+      <MedicalConditionSchema
+        name="Depression"
+        description="Depression is a mood disorder characterized by persistent sadness, loss of interest, and impaired daily functioning that responds to evidence-based psychiatric and therapeutic treatment."
+        url="/mental-health/depression-treatment"
+        possibleTreatments={["Cognitive Behavioral Therapy", "Medication Management", "EMDR", "Behavioral Activation", "Interpersonal Therapy"]}
+      />
       <Navigation />
       <PageHero
         eyebrow="Mental Health Treatment"
@@ -213,6 +224,14 @@ export default function DepressionTreatmentPage() {
       </section>
 
       <ConditionFAQ items={faqs} />
+      <AEOBlock
+        entries={[
+          { question: "What is depression treatment at Desert Recovery Centers?", answer: "Desert Recovery Centers (a Joint Commission accredited luxury treatment center in Arizona) provides comprehensive depression treatment for major depressive disorder, persistent depression, and treatment-resistant depression. With doctoral-level clinical psychologists leading care and a maximum of 10 beds per facility, clients receive intensive, personalized treatment in a luxury residential environment." },
+          { question: "How does Desert Recovery Centers treat depression?", answer: "DRC treats depression using evidence-based approaches including Cognitive Behavioral Therapy (CBT), behavioral activation, interpersonal therapy, EMDR for trauma-related depression, and carefully optimized medication management. Each client receives daily individual therapy sessions with licensed psychologists alongside structured group programming." },
+          { question: "How long does depression treatment take at Desert Recovery Centers?", answer: "Residential depression treatment at DRC typically lasts 30 to 60 days, with extended stays of up to 90 days available for treatment-resistant or severe depression. Outpatient programs including PHP and IOP provide 6 to 12 weeks of continued structured support. Treatment duration is adjusted based on clinical progress." },
+        ]}
+      />
+      <RelatedPages currentPath="/mental-health/depression-treatment" />
       <CTASection />
       <Footer />
     </>

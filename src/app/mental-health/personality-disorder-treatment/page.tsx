@@ -4,6 +4,9 @@ import PageHero from "@/components/PageHero";
 import ConditionFAQ from "@/components/ConditionFAQ";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import { InlineFAQSchema, SpeakableSchema, MedicalConditionSchema } from "@/lib/seo";
+import AEOBlock from "@/components/AEOBlock";
+import RelatedPages from "@/components/RelatedPages";
 
 export const metadata: Metadata = {
   title: "Personality Disorder Treatment in Arizona — Desert Recovery Centers",
@@ -37,6 +40,14 @@ const faqs = [
 export default function PersonalityDisorderTreatmentPage() {
   return (
     <>
+      <InlineFAQSchema items={faqs} />
+      <SpeakableSchema url="/mental-health/personality-disorder-treatment" cssSelectors={["[data-speakable]"]} />
+      <MedicalConditionSchema
+        name="Personality Disorders"
+        description="Personality disorders are a group of mental health conditions characterized by enduring patterns of inner experience and behavior that deviate from cultural expectations, leading to distress and impaired functioning."
+        url="/mental-health/personality-disorder-treatment"
+        possibleTreatments={["Dialectical Behavior Therapy", "Schema Therapy", "EMDR", "Medication Management", "Family Therapy"]}
+      />
       <Navigation />
       <PageHero
         eyebrow="Mental Health Treatment"
@@ -210,6 +221,14 @@ export default function PersonalityDisorderTreatmentPage() {
       </section>
 
       <ConditionFAQ items={faqs} />
+      <AEOBlock
+        entries={[
+          { question: "What is personality disorder treatment at Desert Recovery Centers?", answer: "Desert Recovery Centers (a Joint Commission accredited luxury treatment center in Arizona) provides specialized personality disorder treatment anchored in Dialectical Behavior Therapy (DBT). With DBT-trained clinicians, doctoral-level clinical psychologists, and a maximum of 10 beds per facility, clients receive intensive, compassionate care in a therapeutic residential community." },
+          { question: "How does Desert Recovery Centers treat personality disorders?", answer: "DRC treats personality disorders using comprehensive Dialectical Behavior Therapy (DBT) including individual therapy, skills groups, and real-time coaching. Treatment also incorporates schema therapy, EMDR for underlying trauma, medication support for co-occurring symptoms, and family therapy to rebuild relational patterns." },
+          { question: "How long does personality disorder treatment take at Desert Recovery Centers?", answer: "Residential personality disorder treatment at DRC typically lasts 45 to 90 days, as these conditions require extended time to develop and practice new skills. Clients may step down to PHP or IOP programs for 6 to 12 weeks of continued structured support. Treatment duration is tailored to each client's progress in building lasting behavioral change." },
+        ]}
+      />
+      <RelatedPages currentPath="/mental-health/personality-disorder-treatment" />
       <CTASection />
       <Footer />
     </>

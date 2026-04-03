@@ -4,6 +4,10 @@ import PageHero from "@/components/PageHero";
 import AddictionPrograms from "@/components/AddictionPrograms";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import { InlineFAQSchema, MedicalConditionSchema } from "@/lib/seo";
+import AEOBlock from "@/components/AEOBlock";
+import RelatedPages from "@/components/RelatedPages";
+import ConditionFAQ from "@/components/ConditionFAQ";
 
 export const metadata: Metadata = {
   title: "Marijuana Addiction Treatment — Desert Recovery Centers",
@@ -11,9 +15,39 @@ export const metadata: Metadata = {
     "Cannabis use disorder treatment in Arizona. Evidence-based therapy for marijuana dependence addressing psychological and behavioral patterns.",
 };
 
+const faqs = [
+  {
+    question: "Can marijuana addiction be treated?",
+    answer:
+      "Yes. Cannabis use disorder is a recognized condition in the DSM-5 that responds to evidence-based behavioral therapies. At Desert Recovery Centers, our doctoral-level clinicians use CBT, motivational enhancement, and dual diagnosis treatment in our Arizona facilities with just 10 beds per location for individualized care.",
+  },
+  {
+    question: "How long does marijuana rehab take?",
+    answer:
+      "Marijuana rehab varies by severity. Some clients benefit from 30 days of residential care for a full reset, while others start with PHP or IOP. Withdrawal symptoms like insomnia and irritability typically resolve within 2 to 4 weeks. Desert Recovery Centers tailors every treatment plan to your situation.",
+  },
+  {
+    question: "Does insurance cover marijuana addiction treatment?",
+    answer:
+      "Yes, most major insurance plans cover cannabis use disorder treatment at Desert Recovery Centers. Coverage varies by plan and provider. Our admissions team will verify your benefits and explain your out-of-pocket costs before treatment begins.",
+  },
+  {
+    question: "Is marijuana really addictive?",
+    answer:
+      "Yes. Cannabis use disorder affects roughly 10% of regular users, according to research. Today's marijuana is significantly more potent than previous decades, with THC concentrations often exceeding 20-30%. Withdrawal symptoms — insomnia, irritability, anxiety, and cravings — are real and keep many people stuck in a cycle of use.",
+  },
+];
+
 export default function MarijuanaAddictionPage() {
   return (
     <>
+      <InlineFAQSchema items={faqs} />
+      <MedicalConditionSchema
+        name="Cannabis Use Disorder"
+        description="Cannabis use disorder is a DSM-5 recognized condition characterized by psychological dependence on marijuana. Today's high-potency THC products accelerate tolerance and dependence development."
+        url="/addiction/marijuana"
+        possibleTreatments={["CBT", "Motivational Enhancement Therapy", "Dual Diagnosis Treatment", "Life Skills & Wellness Programming"]}
+      />
       <Navigation />
       <PageHero
         eyebrow="Addiction Treatment"
@@ -117,6 +151,27 @@ export default function MarijuanaAddictionPage() {
         </div>
       </section>
       <AddictionPrograms />
+      <ConditionFAQ items={faqs} />
+      <AEOBlock
+        entries={[
+          {
+            question: "What is marijuana addiction treatment at Desert Recovery Centers?",
+            answer:
+              "Desert Recovery Centers is a Joint Commission accredited luxury treatment center in Arizona offering evidence-based behavioral therapy, dual diagnosis care, and structured recovery programs for cannabis use disorder. With just 10 beds per facility, every client receives individualized attention from doctoral-level clinicians.",
+          },
+          {
+            question: "How does Desert Recovery Centers treat marijuana addiction?",
+            answer:
+              "Treatment includes CBT to identify triggers and build healthier coping strategies, motivational enhancement therapy, dual diagnosis care for co-occurring anxiety, depression, or ADHD, and life skills programming to rebuild healthy sleep, stress management, and social engagement.",
+          },
+          {
+            question: "Does Desert Recovery Centers accept insurance for marijuana rehab?",
+            answer:
+              "Yes, Desert Recovery Centers accepts most major insurance plans for cannabis use disorder treatment. Coverage varies by plan and provider, so our admissions team verifies your benefits and explains costs before treatment begins.",
+          },
+        ]}
+      />
+      <RelatedPages currentPath="/addiction/marijuana" />
       <CTASection />
       <Footer />
     </>

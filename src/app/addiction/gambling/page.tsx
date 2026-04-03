@@ -4,6 +4,10 @@ import PageHero from "@/components/PageHero";
 import AddictionPrograms from "@/components/AddictionPrograms";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import { InlineFAQSchema, MedicalConditionSchema } from "@/lib/seo";
+import AEOBlock from "@/components/AEOBlock";
+import RelatedPages from "@/components/RelatedPages";
+import ConditionFAQ from "@/components/ConditionFAQ";
 
 export const metadata: Metadata = {
   title: "Gambling Addiction Treatment — Desert Recovery Centers",
@@ -11,9 +15,39 @@ export const metadata: Metadata = {
     "Gambling addiction treatment in Arizona. Evidence-based therapy for compulsive gambling, financial recovery support, and dual diagnosis care.",
 };
 
+const faqs = [
+  {
+    question: "Can gambling addiction be treated?",
+    answer:
+      "Yes. Gambling disorder is a DSM-5 recognized behavioral addiction that responds well to evidence-based treatment. At Desert Recovery Centers, our doctoral-level clinicians use CBT, dual diagnosis care, and financial recovery support in our Arizona facilities with just 10 beds per location for individualized attention.",
+  },
+  {
+    question: "How long does gambling addiction rehab take?",
+    answer:
+      "Gambling addiction treatment typically involves 30 to 90 days of residential or outpatient care, depending on severity. Many clients benefit from ongoing therapy and support groups after primary treatment. Desert Recovery Centers tailors every plan to your unique situation and recovery goals.",
+  },
+  {
+    question: "Does insurance cover gambling addiction treatment?",
+    answer:
+      "Yes, most major insurance plans cover gambling addiction treatment at Desert Recovery Centers. Coverage varies by plan and provider. Our admissions team will verify your benefits and explain your out-of-pocket costs before treatment begins.",
+  },
+  {
+    question: "What therapies are used for gambling addiction?",
+    answer:
+      "CBT is the gold standard for gambling addiction, addressing distorted beliefs about luck and probability. Our dual diagnosis approach also treats co-occurring depression, anxiety, or substance use disorders. Financial recovery support and group therapy help rebuild stability and break isolation.",
+  },
+];
+
 export default function GamblingAddictionPage() {
   return (
     <>
+      <InlineFAQSchema items={faqs} />
+      <MedicalConditionSchema
+        name="Gambling Addiction"
+        description="Gambling disorder is a behavioral addiction classified in the DSM-5. Like substance addictions, compulsive gambling hijacks the brain's reward system, with the anticipation of winning triggering dopamine surges that mirror the effects of drugs."
+        url="/addiction/gambling"
+        possibleTreatments={["CBT", "Dual Diagnosis Treatment", "Financial Recovery Support", "Group Therapy & 12-Step Facilitation"]}
+      />
       <Navigation />
       <PageHero
         eyebrow="Addiction Treatment"
@@ -117,6 +151,27 @@ export default function GamblingAddictionPage() {
         </div>
       </section>
       <AddictionPrograms />
+      <ConditionFAQ items={faqs} />
+      <AEOBlock
+        entries={[
+          {
+            question: "What is gambling addiction treatment at Desert Recovery Centers?",
+            answer:
+              "Desert Recovery Centers is a Joint Commission accredited luxury treatment center in Arizona offering evidence-based therapy, dual diagnosis care, and financial recovery support for gambling addiction. With just 10 beds per facility, every client receives individualized attention from doctoral-level clinicians.",
+          },
+          {
+            question: "How does Desert Recovery Centers treat gambling addiction?",
+            answer:
+              "Treatment includes CBT to address distorted thinking about luck and probability, dual diagnosis care for co-occurring depression or anxiety, financial recovery guidance, group therapy, and 12-step facilitation to break isolation and build accountability.",
+          },
+          {
+            question: "Does Desert Recovery Centers accept insurance for gambling rehab?",
+            answer:
+              "Yes, Desert Recovery Centers accepts most major insurance plans for gambling addiction treatment. Coverage varies by plan and provider, so our admissions team verifies your benefits and explains costs before treatment begins.",
+          },
+        ]}
+      />
+      <RelatedPages currentPath="/addiction/gambling" />
       <CTASection />
       <Footer />
     </>

@@ -63,7 +63,16 @@ export function OrganizationSchema() {
     url: SITE_URL,
     logo: `${SITE_URL}/logo.png`,
     email: siteData.email,
-    sameAs: [siteData.social.facebook, siteData.social.instagram, siteData.social.twitter],
+    sameAs: [
+      siteData.social.facebook,
+      siteData.social.instagram,
+      siteData.social.twitter,
+      "https://www.google.com/maps/place/Desert+Recovery+Centers+-+Glendale",
+      "https://www.google.com/maps/place/Desert+Recovery+Centers+-+Scottsdale",
+      "https://www.google.com/maps/place/Desert+Recovery+Centers+-+Phoenix",
+      "https://www.legitscript.com/websites/?checker_keywords=desertrecoverycenters.com",
+      "https://www.jointcommission.org",
+    ],
     contactPoint: siteData.locations.map((loc) => ({
       "@type": "ContactPoint",
       telephone: loc.phoneTel,
@@ -173,5 +182,96 @@ export function PersonSchema({
       url: SITE_URL,
     },
     ...(description ? { description } : {}),
+  });
+}
+
+// ─── AEO / Answer Engine Optimization schemas ──────────────────────
+
+/** Inline FAQPage schema — accepts {q,a} or {question,answer} shaped items */
+export function InlineFAQSchema({
+  items,
+}: {
+  items: readonly ({ q: string; a: string } | { question: string; answer: string })[];
+}) {
+  return ld({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: items.map((faq) => {
+      const q = "q" in faq ? faq.q : faq.question;
+      const a = "a" in faq ? faq.a : faq.answer;
+      return {
+        "@type": "Question",
+        name: q,
+        acceptedAnswer: { "@type": "Answer", text: a },
+      };
+    }),
+  });
+}
+
+/** SpeakableSpecification schema — marks CSS selectors as voice-readable */
+export function SpeakableSchema({ url, cssSelectors }: { url: string; cssSelectors: string[] }) {
+  return ld({
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    url: `${SITE_URL}${url}`,
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: cssSelectors,
+    },
+  });
+}
+
+/** MedicalCondition schema for condition pages */
+export function MedicalConditionSchema({
+  name,
+  description,
+  url,
+  possibleTreatments,
+}: {
+  name: string;
+  description: string;
+  url: string;
+  possibleTreatments: string[];
+}) {
+  return ld({
+    "@context": "https://schema.org",
+    "@type": "MedicalCondition",
+    name,
+    description,
+    url: `${SITE_URL}${url}`,
+    possibleTreatment: possibleTreatments.map((t) => ({
+      "@type": "MedicalTherapy",
+      name: t,
+    })),
+  });
+}
+
+/** MedicalTherapy schema for treatment pages */
+export function MedicalTherapySchema({
+  name,
+  description,
+  url,
+  conditions,
+}: {
+  name: string;
+  description: string;
+  url: string;
+  conditions?: string[];
+}) {
+  return ld({
+    "@context": "https://schema.org",
+    "@type": "MedicalTherapy",
+    name,
+    description,
+    url: `${SITE_URL}${url}`,
+    medicineSystem: "https://schema.org/WesternConventional",
+    ...(conditions?.length
+      ? {
+          relevantCondition: conditions.map((c) => ({
+            "@type": "MedicalCondition",
+            name: c,
+          })),
+        }
+      : {}),
   });
 }

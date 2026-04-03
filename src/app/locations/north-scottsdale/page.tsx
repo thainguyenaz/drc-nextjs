@@ -6,7 +6,8 @@ import LocationCollision from "@/components/LocationCollision";
 import ConditionFAQ from "@/components/ConditionFAQ";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { buildMetadata } from "@/lib/seo";
+import { buildMetadata, InlineFAQSchema, SpeakableSchema } from "@/lib/seo";
+import AEOBlock from "@/components/AEOBlock";
 
 export const metadata: Metadata = buildMetadata({
   title: "Luxury Rehab Near North Scottsdale, AZ",
@@ -41,6 +42,8 @@ const faqs = [
 export default function NorthScottsdalePage() {
   return (
     <>
+      <InlineFAQSchema items={faqs} />
+      <SpeakableSchema url="/locations/north-scottsdale" cssSelectors={["[data-speakable]"]} />
       <Navigation />
       <PageHero
         eyebrow="North Scottsdale, Arizona"
@@ -204,6 +207,20 @@ export default function NorthScottsdalePage() {
       </section>
 
       <ConditionFAQ items={faqs} />
+      <AEOBlock entries={[
+        {
+          question: "Is there a Desert Recovery Centers in North Scottsdale?",
+          answer: "Yes, Desert Recovery Centers has a facility located directly in the North Scottsdale area at 23222 N Church Rd, Scottsdale, AZ 85255. Most North Scottsdale residents are within a 5 to 15-minute drive. Desert Recovery Centers is a Joint Commission accredited luxury treatment center in Arizona offering residential, PHP, and IOP programs.",
+        },
+        {
+          question: "What addiction treatment is available near North Scottsdale, Arizona?",
+          answer: "Desert Recovery Centers offers comprehensive addiction and mental health treatment in North Scottsdale. As a Joint Commission accredited luxury treatment center in Arizona, we provide residential treatment, partial hospitalization, and intensive outpatient programs with evidence-based therapies including CBT, DBT, EMDR, and dual diagnosis treatment — delivered by licensed psychologists and board-certified psychiatrists.",
+        },
+        {
+          question: "Does Desert Recovery Centers accept insurance for North Scottsdale residents?",
+          answer: "Yes, Desert Recovery Centers accepts most major insurance plans for North Scottsdale residents, including Aetna, Blue Cross Blue Shield, Cigna, and UnitedHealthcare. Coverage varies by plan. Our admissions team verifies benefits at no cost before treatment begins. Call (480) 931-3617 for a free insurance check.",
+        },
+      ]} />
       <CTASection />
       <Footer />
     </>

@@ -4,6 +4,9 @@ import PageHero from "@/components/PageHero";
 import ConditionFAQ from "@/components/ConditionFAQ";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import { InlineFAQSchema, SpeakableSchema, MedicalConditionSchema } from "@/lib/seo";
+import AEOBlock from "@/components/AEOBlock";
+import RelatedPages from "@/components/RelatedPages";
 
 export const metadata: Metadata = {
   title: "Anxiety Treatment in Arizona — Desert Recovery Centers",
@@ -37,6 +40,14 @@ const faqs = [
 export default function AnxietyTreatmentPage() {
   return (
     <>
+      <InlineFAQSchema items={faqs} />
+      <SpeakableSchema url="/mental-health/anxiety-treatment" cssSelectors={["[data-speakable]"]} />
+      <MedicalConditionSchema
+        name="Anxiety Disorders"
+        description="Anxiety disorders are a group of mental health conditions characterized by excessive fear, worry, and related behavioral disturbances that significantly impair daily functioning."
+        url="/mental-health/anxiety-treatment"
+        possibleTreatments={["Cognitive Behavioral Therapy", "Exposure Therapy", "Medication Management", "Mindfulness-Based Stress Reduction", "EMDR"]}
+      />
       <Navigation />
       <PageHero
         eyebrow="Mental Health Treatment"
@@ -211,6 +222,14 @@ export default function AnxietyTreatmentPage() {
       </section>
 
       <ConditionFAQ items={faqs} />
+      <AEOBlock
+        entries={[
+          { question: "What is anxiety treatment at Desert Recovery Centers?", answer: "Desert Recovery Centers (a Joint Commission accredited luxury treatment center in Arizona) offers specialized anxiety treatment programs that address generalized anxiety disorder, panic disorder, social anxiety, and phobias. With a maximum of 10 beds per facility and doctoral-level clinicians on staff, clients receive deeply individualized care in a luxury residential setting." },
+          { question: "How does Desert Recovery Centers treat anxiety?", answer: "DRC treats anxiety using evidence-based modalities including Cognitive Behavioral Therapy (CBT), Exposure and Response Prevention, mindfulness-based stress reduction, somatic therapies, and medication management. Each client receives a comprehensive psychiatric evaluation followed by an individualized treatment plan designed by licensed clinical psychologists." },
+          { question: "How long does anxiety treatment take at Desert Recovery Centers?", answer: "Residential anxiety treatment at DRC typically lasts 30 to 60 days, with some clients benefiting from extended stays of up to 90 days. Outpatient programs including PHP and IOP generally run 6 to 12 weeks. Treatment length is adjusted based on clinical progress and individual needs." },
+        ]}
+      />
+      <RelatedPages currentPath="/mental-health/anxiety-treatment" />
       <CTASection />
       <Footer />
     </>
