@@ -26,8 +26,8 @@ export default function IntroSection() {
             className="relative h-[320px] md:h-[400px] rounded-2xl overflow-hidden shadow-xl group"
           >
             <Image
-              src="/images/glendale/Glendale-Living-Room.jpg"
-              alt="Desert Recovery Centers Glendale luxury living room"
+              src="/images/glendale/Glendale-Pool.jpg"
+              alt="Desert Recovery Centers Glendale pool and outdoor area"
               fill
               className="object-cover group-hover:scale-[1.04] transition-transform duration-[350ms] ease-out"
               sizes="(max-width: 768px) 100vw, 50vw"
