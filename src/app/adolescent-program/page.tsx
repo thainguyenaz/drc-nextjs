@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
+// noindex set via <meta> in head below — client component cannot use metadata export
+
 export default function AdolescentProgramPage() {
   const [formStatus, setFormStatus] = useState<"idle" | "sending" | "sent">("idle");
 

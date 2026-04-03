@@ -107,9 +107,8 @@ export default function Footer() {
           <a href="https://www.jointcommission.org" target="_blank" rel="noopener noreferrer" className="opacity-70 hover:opacity-100 transition-opacity">
             <Image src="/JointCommission_GoldSeal.png" alt="Joint Commission Gold Seal" width={64} height={64} className="h-16 w-auto" />
           </a>
-          <a href="https://www.legitscript.com/websites/?checker_keywords=desertrecoverycenters.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 opacity-70 hover:opacity-100 transition-opacity">
-            <svg className="w-8 h-8 text-green-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <span className="text-white/60 text-sm font-medium">LegitScript<br/>Certified</span>
+          <a href="https://www.legitscript.com/websites/?checker_keywords=desertrecoverycenters.com" target="_blank" rel="noopener noreferrer" className="opacity-70 hover:opacity-100 transition-opacity">
+            <img src="https://static.legitscript.com/seals/4374.png" alt="LegitScript Certified" width={120} className="h-16 w-auto" />
           </a>
         </div>
 
