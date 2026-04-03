@@ -43,7 +43,7 @@ export default function Footer() {
       <div className="max-w-container mx-auto px-6 py-16">
         <div className="grid md:grid-cols-5 gap-10">
           {/* Brand */}
-          <div className="md:col-span-1">
+          <div className="md:col-span-1 min-w-0">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-10 h-10 rounded-full bg-sage flex items-center justify-center">
                 <span className="text-white font-display text-lg font-bold">D</span>
@@ -59,7 +59,7 @@ export default function Footer() {
             <div className="mt-3">
               <a
                 href={`mailto:${siteData.email}`}
-                className="text-white/60 text-sm hover:text-white transition-colors"
+                className="text-white/60 text-sm hover:text-white transition-colors break-all"
               >
                 {siteData.email}
               </a>

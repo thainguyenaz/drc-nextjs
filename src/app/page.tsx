@@ -14,6 +14,7 @@ import TeamSection from "@/components/TeamSection";
 import Testimonials from "@/components/Testimonials";
 import GoogleReviews from "@/components/GoogleReviews";
 import FAQ from "@/components/FAQ";
+import ContinuumOfCare from "@/components/ContinuumOfCare";
 import ContactForm from "@/components/ContactForm";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
@@ -32,6 +33,7 @@ export default function Home() {
       <HomepageVideo />
       <ConditionsGrid />
       <AddictionPrograms />
+      <ContinuumOfCare />
       <StatsSection />
       <LocationsSection />
       <FacilityPhotoGrid />

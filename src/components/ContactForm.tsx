@@ -18,13 +18,10 @@ export default function ContactForm() {
             </span>
             <div className="w-[60px] h-0.5 bg-gold mt-4 mb-4" />
             <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold mb-6">
-              One Conversation Can Change Everything
+              Ready to Start Your Recovery?
             </h2>
-            <p className="text-gray-600 leading-relaxed mb-4">
-              Our admissions team answers every call personally. No automated systems. No call centers. Just a real person who understands.
-            </p>
-            <p className="text-gold text-sm font-medium mb-8">
-              Most clients begin treatment within 48 hours of their first call.
+            <p className="text-gray-600 leading-relaxed mb-8">
+              Our admissions team is available 24/7 to answer your questions.
             </p>
             <div className="space-y-4 text-sm text-gray-600">
               <div className="flex items-center gap-3">
