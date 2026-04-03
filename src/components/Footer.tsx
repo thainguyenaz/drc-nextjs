@@ -44,10 +44,14 @@ export default function Footer() {
         <div className="grid md:grid-cols-5 gap-10">
           {/* Brand */}
           <div className="md:col-span-1 min-w-0">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-full bg-sage flex items-center justify-center">
-                <span className="text-white font-display text-lg font-bold">D</span>
-              </div>
+            <div className="mb-4">
+              <Image
+                src="/images/branding/drc-logo-white.png"
+                alt="Desert Recovery Centers"
+                width={320}
+                height={96}
+                className="h-20 w-auto"
+              />
             </div>
             <p className="text-white/60 text-sm leading-relaxed mb-4">
               Luxury mental health and addiction treatment in the heart of the

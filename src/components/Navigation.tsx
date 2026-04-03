@@ -90,11 +90,11 @@ export default function Navigation() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 flex-shrink-0">
           <Image
-            src="/logo.png"
+            src="/images/branding/drc-logo-white.png"
             alt="Desert Recovery Centers"
-            width={160}
-            height={48}
-            className="h-12 w-auto brightness-0 invert"
+            width={320}
+            height={96}
+            className="h-24 w-auto"
             priority
           />
         </Link>
