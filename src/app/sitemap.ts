@@ -13,6 +13,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/facilities/glendale", priority: 0.8, changeFrequency: "monthly" as const },
     { path: "/facilities/scottsdale", priority: 0.8, changeFrequency: "monthly" as const },
     { path: "/facilities/phoenix", priority: 0.8, changeFrequency: "monthly" as const },
+    { path: "/insurance/cigna", priority: 0.7, changeFrequency: "monthly" as const },
+    { path: "/insurance/aetna", priority: 0.7, changeFrequency: "monthly" as const },
+    { path: "/insurance/blue-cross", priority: 0.7, changeFrequency: "monthly" as const },
+    { path: "/insurance/united", priority: 0.7, changeFrequency: "monthly" as const },
+    { path: "/insurance/humana", priority: 0.7, changeFrequency: "monthly" as const },
+    { path: "/resources/luxury-vs-standard-rehab", priority: 0.7, changeFrequency: "monthly" as const },
+    { path: "/resources/cost-of-rehab", priority: 0.7, changeFrequency: "monthly" as const },
+    { path: "/resources/what-to-bring", priority: 0.6, changeFrequency: "monthly" as const },
   ];
 
   return routes.map((route) => ({
