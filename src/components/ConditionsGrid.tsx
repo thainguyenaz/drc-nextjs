@@ -12,7 +12,8 @@ export default function ConditionsGrid() {
           <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
             Conditions We Treat
           </span>
-          <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold mt-4 mb-4">
+          <div className="w-[60px] h-0.5 bg-gold mx-auto mt-4 mb-4" />
+          <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold mb-4">
             Mental Health Treatment
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
@@ -32,7 +33,7 @@ export default function ConditionsGrid() {
             >
               <Link
                 href={condition.href}
-                className="block bg-white rounded-xl p-6 shadow-sm border-2 border-transparent hover:border-gold/40 hover:shadow-lg transition-all duration-300 h-full cursor-pointer"
+                className="block bg-white rounded-xl p-6 shadow-sm border-t-2 border-t-transparent hover:border-t-gold hover:shadow-lg hover:-translate-y-1.5 transition-all duration-300 h-full cursor-pointer"
               >
                 <h3 className="font-display text-lg text-forest font-semibold mb-2">
                   {condition.name}

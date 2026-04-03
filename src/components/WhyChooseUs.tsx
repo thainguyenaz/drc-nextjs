@@ -43,7 +43,8 @@ export default function WhyChooseUs() {
           <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
             Why Choose Us
           </span>
-          <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold mt-4 mb-4">
+          <div className="w-[60px] h-0.5 bg-gold mx-auto mt-4 mb-4" />
+          <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold mb-4">
             Six Reasons to Choose Desert Recovery Centers
           </h2>
         </div>

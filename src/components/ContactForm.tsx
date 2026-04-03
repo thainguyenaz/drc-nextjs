@@ -16,12 +16,15 @@ export default function ContactForm() {
             <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
               Get Started
             </span>
-            <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold mt-4 mb-6">
-              Take the First Step
+            <div className="w-[60px] h-0.5 bg-gold mt-4 mb-4" />
+            <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold mb-6">
+              One Conversation Can Change Everything
             </h2>
-            <p className="text-gray-600 leading-relaxed mb-8">
-              Fill out this confidential form and our admissions team will reach
-              out within 15 minutes during business hours.
+            <p className="text-gray-600 leading-relaxed mb-4">
+              Our admissions team answers every call personally. No automated systems. No call centers. Just a real person who understands.
+            </p>
+            <p className="text-gold text-sm font-medium mb-8">
+              Most clients begin treatment within 48 hours of their first call.
             </p>
             <div className="space-y-4 text-sm text-gray-600">
               <div className="flex items-center gap-3">

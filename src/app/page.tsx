@@ -8,6 +8,7 @@ import LocationsSection from "@/components/LocationsSection";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import TeamSection from "@/components/TeamSection";
 import Testimonials from "@/components/Testimonials";
+import GoogleReviews from "@/components/GoogleReviews";
 import FAQ from "@/components/FAQ";
 import ContactForm from "@/components/ContactForm";
 import CTASection from "@/components/CTASection";
@@ -26,6 +27,7 @@ export default function Home() {
       <WhyChooseUs />
       <TeamSection />
       <Testimonials />
+      <GoogleReviews />
       <FAQ />
       <ContactForm />
       <CTASection />
