@@ -10,6 +10,7 @@ import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import { buildMetadata, LocalBusinessSchema, BreadcrumbSchema, InlineFAQSchema, SpeakableSchema } from "@/lib/seo";
 import AEOBlock from "@/components/AEOBlock";
+import PhotoGallery from "@/components/PhotoGallery";
 
 export const metadata: Metadata = buildMetadata({
   title: "Luxury Rehab in Scottsdale, AZ",
@@ -281,32 +282,7 @@ export default function ScottsdaleLocationPage() {
         </div>
       </section>
 
-      {/* Photo Gallery */}
-      <section className="py-16 md:py-24 bg-cream">
-        <div className="max-w-container mx-auto px-6">
-          <div className="text-center mb-10">
-            <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
-              Our Facility
-            </span>
-            <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4">
-              Scottsdale Facility Gallery
-            </h2>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {gallery.map((img) => (
-              <div key={img.src} className="relative aspect-square rounded-xl overflow-hidden">
-                <Image
-                  src={img.src}
-                  alt={img.alt}
-                  fill
-                  className="object-cover hover:scale-105 transition-transform duration-500"
-                  sizes="(max-width: 768px) 50vw, 25vw"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <PhotoGallery photos={gallery} title="Scottsdale Facility Gallery" />
 
       <ConditionFAQ items={faqs} />
       <AEOBlock entries={[

@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import Navigation from "@/components/Navigation";
 import PageHero from "@/components/PageHero";
 import ConditionFAQ from "@/components/ConditionFAQ";
@@ -8,6 +7,7 @@ import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import { buildMetadata, LocalBusinessSchema, BreadcrumbSchema, InlineFAQSchema, SpeakableSchema } from "@/lib/seo";
 import AEOBlock from "@/components/AEOBlock";
+import PhotoGallery from "@/components/PhotoGallery";
 
 export const metadata: Metadata = buildMetadata({
   title: "Phoenix PHP / IOP Center — Desert Recovery Centers",
@@ -83,8 +83,6 @@ const gallery = [
   { src: "/images/locations/phoenix/phoenix-medical-room.jpg", alt: "Phoenix medical exam room with examination table and hand-washing station" },
   { src: "/images/locations/phoenix/phoenix-kitchen-2.jpg", alt: "Phoenix kitchen wide view with island sink and appliances" },
   { src: "/images/locations/phoenix/phoenix-kitchen-3.jpg", alt: "Phoenix kitchen showing wall-mounted TV and coffee station" },
-  { src: "/images/locations/phoenix/phoenix-bathroom-1.jpg", alt: "Phoenix bathroom with dark marble tile and LED backlit mirror" },
-  { src: "/images/locations/phoenix/phoenix-bathroom-2.jpg", alt: "Phoenix ADA-accessible bathroom with grab bars and marble tile" },
 ];
 
 export default function PhoenixLocationPage() {
@@ -210,32 +208,7 @@ export default function PhoenixLocationPage() {
         </div>
       </section>
 
-      {/* Photo Gallery */}
-      <section className="py-16 md:py-24 bg-cream">
-        <div className="max-w-container mx-auto px-6">
-          <div className="text-center mb-10">
-            <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
-              Our Facility
-            </span>
-            <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4">
-              Phoenix Facility Gallery
-            </h2>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {gallery.map((img) => (
-              <div key={img.src} className="relative aspect-square rounded-xl overflow-hidden">
-                <Image
-                  src={img.src}
-                  alt={img.alt}
-                  fill
-                  className="object-cover hover:scale-105 transition-transform duration-500"
-                  sizes="(max-width: 768px) 50vw, 25vw"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <PhotoGallery photos={gallery} title="Phoenix Facility Gallery" />
 
       <ConditionFAQ items={faqs} />
       <AEOBlock entries={[

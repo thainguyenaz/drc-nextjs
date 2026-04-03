@@ -1,11 +1,11 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import Navigation from "@/components/Navigation";
 import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import { buildMetadata, BreadcrumbSchema } from "@/lib/seo";
+import PhotoGallery from "@/components/PhotoGallery";
 
 export const metadata: Metadata = buildMetadata({
   title: "Phoenix PHP Sober Living — Desert Recovery Centers",
@@ -147,32 +147,7 @@ export default function PhoenixLivingPage() {
         </div>
       </section>
 
-      {/* Photo Gallery */}
-      <section className="py-16 md:py-24 bg-cream">
-        <div className="max-w-container mx-auto px-6">
-          <div className="text-center mb-10">
-            <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
-              Our Property
-            </span>
-            <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4">
-              Phoenix Sober Living Gallery
-            </h2>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {gallery.map((img) => (
-              <div key={img.src} className="relative aspect-square rounded-xl overflow-hidden">
-                <Image
-                  src={img.src}
-                  alt={img.alt}
-                  fill
-                  className="object-cover hover:scale-105 transition-transform duration-500"
-                  sizes="(max-width: 768px) 50vw, 25vw"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <PhotoGallery photos={gallery} title="Phoenix Sober Living Gallery" eyebrow="Our Property" />
 
       <CTASection />
       <Footer />
