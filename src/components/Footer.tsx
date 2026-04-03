@@ -108,7 +108,8 @@ export default function Footer() {
             <Image src="/JointCommission_GoldSeal.png" alt="Joint Commission Gold Seal" width={64} height={64} className="h-16 w-auto" />
           </a>
           <a href="https://www.legitscript.com/websites/?checker_keywords=desertrecoverycenters.com" target="_blank" rel="noopener noreferrer" className="opacity-70 hover:opacity-100 transition-opacity">
-            <img src="https://static.legitscript.com/seals/4374.png" alt="LegitScript Certified" width={120} className="h-16 w-auto" />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="https://static.legitscript.com/seals/4374.png" alt="LegitScript Certified" width="120" height="100" style={{ height: "64px", width: "auto" }} />
           </a>
         </div>
 

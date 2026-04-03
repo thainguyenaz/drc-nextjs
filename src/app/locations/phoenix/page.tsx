@@ -1,10 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import Navigation from "@/components/Navigation";
 import PageHero from "@/components/PageHero";
-import LocationCollision from "@/components/LocationCollision";
-import VideoLightbox from "@/components/VideoLightbox";
 import ConditionFAQ from "@/components/ConditionFAQ";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
@@ -12,50 +9,39 @@ import { buildMetadata, LocalBusinessSchema, BreadcrumbSchema, InlineFAQSchema, 
 import AEOBlock from "@/components/AEOBlock";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Luxury Rehab in Phoenix, AZ",
+  title: "Phoenix PHP / IOP Center — Desert Recovery Centers",
   description:
-    "Luxury rehab & addiction treatment in Phoenix, Arizona. Movie theater, pool, holistic care. Call (623) 257-5384 today.",
+    "PHP, IOP, OP, and TMS therapy at 4160 N. 108th Ave, Phoenix, AZ 85037. Outpatient addiction and mental health treatment. Call (623) 257-5384.",
   path: "/locations/phoenix",
 });
 
-const amenities = [
-  "Movie Theater",
-  "Pool with Waterfall",
-  "State-of-the-Art Gym",
-  "Massage Room",
-  "Gourmet Kitchen",
-  "Private Rooms",
-  "Holistic Programming Studio",
-  "Outdoor Lounge Areas",
-  "Art Therapy Space",
-  "Meditation Garden",
-  "Recreation Room",
-  "Dining Area",
-];
-
-const gallery = [
-  { src: "/images/general/accom-backyard.jpg", alt: "Phoenix facility pool with waterfall" },
-  { src: "/images/general/accom-bedroom.jpg", alt: "Phoenix private bedroom" },
-  { src: "/images/general/accom-gym.jpg", alt: "Phoenix state-of-the-art gym" },
-  { src: "/images/general/accom-massage.jpg", alt: "Phoenix massage room" },
-  { src: "/images/general/accom-group-room.jpg", alt: "Phoenix group therapy room" },
-  { src: "/images/general/accom-recreation.jpg", alt: "Phoenix recreation area" },
-  { src: "/images/glendale/Glendale-Kitchen.jpg", alt: "Gourmet kitchen" },
-  { src: "/images/glendale/Glendale-Dining-Room.jpg", alt: "Dining room" },
+const services = [
+  {
+    name: "PHP — Partial Hospitalization",
+    desc: "5-6 hours of daily clinical programming, 5 days per week. Structured therapy with the flexibility to return home each evening.",
+  },
+  {
+    name: "IOP — Intensive Outpatient",
+    desc: "3-4 sessions per week designed to work around your schedule. Step-down from PHP or standalone entry point.",
+  },
+  {
+    name: "OP — Outpatient",
+    desc: "1-3 sessions per week for ongoing maintenance, skill reinforcement, and long-term recovery support.",
+  },
+  {
+    name: "TMS Therapy",
+    desc: "NeuroStar Transcranial Magnetic Stimulation — FDA-cleared for depression, anxious depression, OCD, and adolescents ages 15+.",
+  },
 ];
 
 const faqs = [
   {
-    q: "Where is the Phoenix facility located?",
-    a: "Our Phoenix center is located at 1623 W Moody Trail, Phoenix, AZ 85041. It's accessible from the I-10, I-17, and Loop 202, serving the South Phoenix, East Valley, and broader metro area including Tempe, Mesa, Chandler, and Gilbert.",
-  },
-  {
-    q: "What makes the Phoenix location unique?",
-    a: "Our Phoenix facility features expanded holistic programming and distinctive amenities including a movie theater and pool with waterfall. The 5,500-square-foot center emphasizes whole-person healing — integrating art therapy, yoga, mindfulness, and nutritional counseling alongside evidence-based clinical therapies.",
+    q: "Where is the Phoenix PHP/IOP center located?",
+    a: "Our Phoenix outpatient center is located at 4160 N. 108th Ave, Phoenix, AZ 85037. It is accessible from the I-10 and Loop 101, serving the West Valley and broader Phoenix metro area.",
   },
   {
     q: "What programs are available at the Phoenix location?",
-    a: "We offer residential treatment (24/7 immersive program) and outpatient programs. Your clinical team recommends the appropriate level of care based on a comprehensive evaluation of your condition, history, and personal circumstances.",
+    a: "We offer PHP (Partial Hospitalization), IOP (Intensive Outpatient), OP (Outpatient), and NeuroStar TMS therapy. This location does not offer residential treatment — for residential programs, please see our Glendale or Scottsdale facilities.",
   },
   {
     q: "What conditions do you treat at the Phoenix center?",
@@ -66,12 +52,8 @@ const faqs = [
     a: "Yes, we are in-network with most major insurance providers including Aetna, Blue Cross Blue Shield, Cigna, and UnitedHealthcare. Coverage varies by plan. Contact us to verify your benefits — our admissions team handles verification at no cost.",
   },
   {
-    q: "Who is on the clinical team at the Phoenix facility?",
-    a: "Your care is delivered by licensed clinical psychologists, a board-certified psychiatrist, registered nurses, and licensed therapists. Clinical Director Dr. An Nguyen, a Licensed Clinical Psychologist, oversees treatment quality. This is doctoral-level care — the highest standard available in residential treatment.",
-  },
-  {
-    q: "Can my family visit the Phoenix facility?",
-    a: "Yes, we encourage family involvement. Visiting hours are scheduled regularly, and our family therapy program includes education about addiction and mental health, communication skills, joint therapy sessions, and support groups. The Phoenix location is centrally located for families throughout the metro area.",
+    q: "Is TMS therapy available at Phoenix?",
+    a: "Yes, our Phoenix center offers NeuroStar TMS therapy — FDA-cleared for major depressive disorder, anxious depression, OCD, and adolescents ages 15 and older. TMS is a safe, non-invasive treatment that does not require medication or sedation.",
   },
   {
     q: "How quickly can I start treatment at the Phoenix center?",
@@ -85,13 +67,13 @@ export default function PhoenixLocationPage() {
       <InlineFAQSchema items={faqs} />
       <SpeakableSchema url="/locations/phoenix" cssSelectors={["[data-speakable]"]} />
       <LocalBusinessSchema index={2} />
-      <BreadcrumbSchema items={[{ name: "Locations", path: "/locations/phoenix" }, { name: "Phoenix", path: "/locations/phoenix" }]} />
+      <BreadcrumbSchema items={[{ name: "Locations", path: "/locations" }, { name: "Phoenix PHP/IOP", path: "/locations/phoenix" }]} />
       <Navigation />
       <PageHero
         eyebrow="Phoenix, Arizona"
-        title="Luxury Rehab and Addiction Treatment in Phoenix, Arizona"
-        description="Residential treatment with expanded holistic programming — where a movie theater meets doctoral-level clinical care."
-        bgImage="/images/general/accom-backyard.jpg"
+        title="Phoenix PHP / IOP Center"
+        description="Outpatient addiction and mental health treatment — PHP, IOP, OP, and TMS therapy in the West Valley."
+        bgImage="/images/general/accom-group-room.jpg"
       />
 
       {/* Overview */}
@@ -99,41 +81,31 @@ export default function PhoenixLocationPage() {
         <div className="max-w-container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mb-6">
-              Holistic Healing in the Heart of Phoenix
+              Outpatient Treatment in Phoenix
             </h2>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              Our Phoenix facility was built with a specific vision: create a treatment environment where clinical rigor and holistic wellness exist in perfect balance. The result is a 5,500-square-foot residential center that offers the clinical depth of a top-tier program with expanded holistic programming you won&apos;t find at most facilities.
+              Our Phoenix center at 4160 N. 108th Ave provides structured outpatient programming for clients stepping down from residential treatment or entering care directly. PHP, IOP, and OP programs are designed to deliver clinical depth while allowing you to maintain daily responsibilities.
             </p>
-            <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              A movie theater for therapeutic recreation. A pool with waterfall for decompression. Art therapy, yoga, mindfulness meditation, and nutritional counseling woven into a daily rhythm of evidence-based individual and group therapy. Licensed psychologists, a board-certified psychiatrist, and round-the-clock nursing staff ensuring you&apos;re supported at every moment.
+            <p className="text-gray-600 leading-relaxed text-lg mb-6">
+              This location also houses our NeuroStar TMS therapy suite — the only TMS system FDA-cleared for depression, anxious depression, OCD, and adolescents ages 15 and older.
             </p>
-            <p className="text-gray-600 leading-relaxed text-lg">
-              Our Phoenix center serves the broader metro area — Tempe, Mesa, Chandler, Gilbert, and beyond. If you&apos;re searching for treatment that addresses the whole person in a setting that inspires healing, this is it.
-            </p>
+
+            {/* Residential callout */}
+            <div className="bg-cream border border-gold/30 rounded-xl p-6">
+              <p className="text-forest text-sm leading-relaxed">
+                <strong>Looking for residential treatment?</strong> This location offers PHP, IOP, OP, and TMS therapy. For residential treatment, please see our{" "}
+                <Link href="/locations/glendale" className="text-gold font-semibold hover:underline">Glendale</Link> or{" "}
+                <Link href="/locations/scottsdale" className="text-gold font-semibold hover:underline">Scottsdale</Link> facilities.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Collision Animation */}
-      <section className="py-16 md:py-24 bg-cream overflow-hidden">
+      {/* Contact & Services */}
+      <section className="py-16 md:py-24 bg-cream">
         <div className="max-w-container mx-auto px-6">
-          <LocationCollision
-            leftImage={{
-              src: "/images/general/accom-backyard.jpg",
-              alt: "Desert Recovery Centers Phoenix pool with waterfall",
-            }}
-            rightImage={{
-              src: "/images/general/accom-group-room.jpg",
-              alt: "Desert Recovery Centers Phoenix group therapy space",
-            }}
-          />
-        </div>
-      </section>
-
-      {/* Facility Info + Video */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="max-w-container mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-start">
+          <div className="grid md:grid-cols-2 gap-12 items-start max-w-5xl mx-auto">
             <div>
               <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
                 Our Phoenix Center
@@ -141,65 +113,46 @@ export default function PhoenixLocationPage() {
               <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4 mb-6">
                 Contact & Location Details
               </h2>
-              <div className="bg-cream rounded-xl p-6 mb-6">
+              <div className="bg-white rounded-xl p-6 mb-6">
                 <h3 className="font-semibold text-forest mb-3">Address</h3>
-                <p className="text-gray-600 text-sm">1623 W Moody Trail</p>
-                <p className="text-gray-600 text-sm">Phoenix, AZ 85041</p>
+                <p className="text-gray-600 text-sm">4160 N. 108th Ave</p>
+                <p className="text-gray-600 text-sm">Phoenix, AZ 85037</p>
                 <a href="tel:+16232575384" className="text-gold font-semibold text-xl block mt-3">(623) 257-5384</a>
                 <p className="text-gray-500 text-xs mt-2">Admissions available 24/7</p>
               </div>
-              <div className="mb-6">
-                <h3 className="font-display text-xl text-forest font-semibold mb-4">Programs</h3>
-                <div className="flex flex-wrap gap-3">
-                  {["Residential Treatment", "Outpatient Programs"].map((p) => (
-                    <span key={p} className="text-sm bg-sage/10 text-sage font-medium px-4 py-2 rounded-full">{p}</span>
-                  ))}
-                </div>
-              </div>
               <div>
-                <h3 className="font-display text-xl text-forest font-semibold mb-4">Amenities</h3>
-                <div className="grid grid-cols-2 gap-3">
-                  {amenities.map((a) => (
-                    <div key={a} className="flex items-center gap-2 text-sm text-gray-600">
-                      <svg className="w-4 h-4 text-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                      {a}
-                    </div>
+                <h3 className="font-display text-xl text-forest font-semibold mb-4">Services</h3>
+                <div className="flex flex-wrap gap-3">
+                  {["PHP", "IOP", "OP", "TMS Therapy"].map((p) => (
+                    <span key={p} className="text-sm bg-sage/10 text-sage font-medium px-4 py-2 rounded-full">{p}</span>
                   ))}
                 </div>
               </div>
             </div>
             <div>
-              <h3 className="font-display text-xl text-forest font-semibold mb-4">Take a Virtual Tour</h3>
-              <VideoLightbox videoId="rMkEYhoW-kE">
-                <div className="relative aspect-video rounded-xl overflow-hidden shadow-xl">
-                  <Image
-                    src="/images/general/accom-backyard.jpg"
-                    alt="Desert Recovery Centers Phoenix virtual tour"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                  />
-                </div>
-              </VideoLightbox>
-              <p className="text-gray-500 text-xs mt-3 text-center">
-                Click to watch a video tour of our Phoenix facility
-              </p>
+              <h3 className="font-display text-xl text-forest font-semibold mb-6">Programs Available</h3>
+              <div className="space-y-4">
+                {services.map((svc) => (
+                  <div key={svc.name} className="bg-white rounded-xl p-5 border border-gray-100">
+                    <h4 className="font-display text-base text-forest font-semibold mb-2">{svc.name}</h4>
+                    <p className="text-gray-600 text-sm leading-relaxed">{svc.desc}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* What We Treat */}
-      <section className="py-16 md:py-24 bg-cream">
+      <section className="py-16 md:py-24 bg-white">
         <div className="max-w-container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
             <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
               What We Treat
             </span>
             <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4 mb-8">
-              Comprehensive Treatment at DRC Phoenix
+              Comprehensive Outpatient Treatment
             </h2>
             <p className="text-gray-600 leading-relaxed mb-8">
               Our Phoenix clinical team treats the full spectrum of addiction and mental health conditions. Our dual diagnosis specialization means co-occurring conditions are always addressed simultaneously.
@@ -220,86 +173,13 @@ export default function PhoenixLocationPage() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="flex items-center gap-3 bg-white rounded-lg p-4 hover:border-gold/30 border border-transparent transition-colors"
+                  className="flex items-center gap-3 bg-cream rounded-lg p-4 hover:border-gold/30 border border-transparent transition-colors"
                 >
                   <span className="w-2 h-2 bg-gold rounded-full flex-shrink-0" />
                   <span className="text-forest text-sm font-medium">{item.label}</span>
                 </Link>
               ))}
             </div>
-            <p className="text-gray-500 text-xs leading-relaxed">
-              Coverage varies by plan. Contact us to verify your benefits.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Treatment Approach */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="max-w-container mx-auto px-6">
-          <div className="max-w-3xl mx-auto">
-            <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
-              Our Approach
-            </span>
-            <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4 mb-8">
-              Where Clinical Depth Meets Holistic Healing
-            </h2>
-            <div className="space-y-6">
-              {[
-                {
-                  title: "Doctoral-Level Clinical Team",
-                  desc: "Licensed clinical psychologists lead your treatment, supported by a board-certified psychiatrist and 24/7 nursing staff. The clinical depth at our Phoenix facility matches the best programs in the country.",
-                },
-                {
-                  title: "Expanded Holistic Programming",
-                  desc: "Our Phoenix location features the most extensive holistic offerings of any DRC facility — art therapy, yoga, guided mindfulness, nutritional counseling, and therapeutic recreation including our on-site movie theater.",
-                },
-                {
-                  title: "Evidence-Based Therapies",
-                  desc: "CBT, DBT, EMDR, trauma-focused therapy, motivational interviewing, and medication management — each delivered by clinicians with specialized training in the modality.",
-                },
-                {
-                  title: "Individualized Treatment Plans",
-                  desc: "Your treatment plan is crafted around your specific diagnosis, history, and goals — then reviewed and adjusted weekly based on measurable clinical progress.",
-                },
-                {
-                  title: "Dual Diagnosis Specialization",
-                  desc: "Addiction and mental health conditions fuel each other. Our integrated dual diagnosis approach treats everything simultaneously — which is the only way to build a foundation for lasting recovery.",
-                },
-              ].map((item, i) => (
-                <div key={i} className="border-l-2 border-gold/40 pl-6">
-                  <h3 className="font-display text-lg text-forest font-semibold mb-2">{item.title}</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Photo Gallery */}
-      <section className="py-16 md:py-24 bg-cream">
-        <div className="max-w-container mx-auto px-6">
-          <div className="text-center mb-10">
-            <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
-              Our Facility
-            </span>
-            <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4">
-              Phoenix Facility Gallery
-            </h2>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {gallery.map((img) => (
-              <div key={img.src} className="relative aspect-square rounded-xl overflow-hidden">
-                <Image
-                  src={img.src}
-                  alt={img.alt}
-                  fill
-                  className="object-cover hover:scale-105 transition-transform duration-500"
-                  sizes="(max-width: 768px) 50vw, 25vw"
-                />
-              </div>
-            ))}
           </div>
         </div>
       </section>
@@ -308,11 +188,11 @@ export default function PhoenixLocationPage() {
       <AEOBlock entries={[
         {
           question: "Is there a Desert Recovery Centers in Phoenix?",
-          answer: "Yes, Desert Recovery Centers has a facility located at 1623 W Moody Trail, Phoenix, AZ 85041. Desert Recovery Centers is a Joint Commission accredited luxury treatment center in Arizona, and our Phoenix location is a 5,500-square-foot residential center with expanded holistic programming, a movie theater, and pool with waterfall.",
+          answer: "Yes, Desert Recovery Centers has an outpatient center at 4160 N. 108th Ave, Phoenix, AZ 85037, offering PHP, IOP, OP, and NeuroStar TMS therapy. For residential treatment, DRC operates facilities in Glendale and Scottsdale.",
         },
         {
-          question: "What addiction treatment is available in Phoenix, Arizona?",
-          answer: "Desert Recovery Centers offers comprehensive addiction and mental health treatment at our Phoenix facility. As a Joint Commission accredited luxury treatment center in Arizona, we provide residential and outpatient programs with evidence-based dual diagnosis treatment using CBT, DBT, EMDR, and expanded holistic therapies — delivered by licensed psychologists and board-certified psychiatrists.",
+          question: "What outpatient treatment is available in Phoenix, Arizona?",
+          answer: "Desert Recovery Centers Phoenix offers PHP (Partial Hospitalization), IOP (Intensive Outpatient), OP (Outpatient), and NeuroStar TMS therapy for depression, anxious depression, OCD, and adolescents ages 15+. Evidence-based dual diagnosis treatment delivered by licensed psychologists and board-certified psychiatrists.",
         },
         {
           question: "Does Desert Recovery Centers accept insurance for Phoenix residents?",
