@@ -48,6 +48,7 @@ const navLinks = [
       { label: "Dual Diagnosis", href: "/treatments/dual-diagnosis-treatment" },
       { label: "12-Step Program", href: "/treatments/12-step-program" },
       { label: "Holistic Therapies", href: "/treatments/holistic-therapies" },
+      { label: "BridgeWork™", href: "/treatments/bridgework" },
     ],
   },
   { label: "Facilities", href: "/facilities/glendale" },

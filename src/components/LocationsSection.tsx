@@ -44,11 +44,11 @@ export default function LocationsSection() {
               key={location.name}
               className={`flex flex-col md:flex-row ${reversed ? "md:flex-row-reverse" : ""} min-h-[500px] overflow-hidden`}
             >
-              {/* Image — 60% with video lightbox, collides from photo side */}
+              {/* Photo/video — slides in from LEFT (or right when reversed) */}
               <motion.div
-                initial={{ opacity: 0, x: reversed ? 100 : -100 }}
+                initial={{ opacity: 0, x: reversed ? 120 : -120 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
+                viewport={{ once: true, margin: "-60px" }}
                 transition={{ duration: 0.7, ease: "easeOut" }}
                 className="relative w-full md:w-[60%] min-h-[300px] md:min-h-0 overflow-hidden"
               >
@@ -76,11 +76,11 @@ export default function LocationsSection() {
                 <div className="absolute inset-0 bg-gradient-to-t from-forest/30 to-transparent md:hidden pointer-events-none" />
               </motion.div>
 
-              {/* Content — 40%, collides from content side */}
+              {/* Content — slides in from RIGHT (or left when reversed) */}
               <motion.div
-                initial={{ opacity: 0, x: reversed ? -100 : 100 }}
+                initial={{ opacity: 0, x: reversed ? -120 : 120 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
+                viewport={{ once: true, margin: "-60px" }}
                 transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
                 className="w-full md:w-[40%] bg-forest flex items-center"
               >

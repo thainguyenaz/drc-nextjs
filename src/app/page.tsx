@@ -9,6 +9,7 @@ import StatsSection from "@/components/StatsSection";
 import LocationsSection from "@/components/LocationsSection";
 import FacilityPhotoGrid from "@/components/FacilityPhotoGrid";
 import WhyChooseUs from "@/components/WhyChooseUs";
+import BridgeWork from "@/components/BridgeWork";
 import TeamSection from "@/components/TeamSection";
 import Testimonials from "@/components/Testimonials";
 import GoogleReviews from "@/components/GoogleReviews";
@@ -31,6 +32,7 @@ export default function Home() {
       <LocationsSection />
       <FacilityPhotoGrid />
       <WhyChooseUs />
+      <BridgeWork />
       <TeamSection />
       <Testimonials />
       <GoogleReviews />
