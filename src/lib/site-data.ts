@@ -45,9 +45,12 @@ export const siteData = {
   ],
   team: {
     leadership: [
-      { name: "Dr. An Nguyen", title: "Licensed Clinical Psychologist — Clinical Director", image: "/images/team/Dr-An-Nguyen.jpg" },
+      { name: "Dr. An Nguyen", title: "Licensed Clinical Psychologist, Clinical Director", image: "/images/team/Dr-An-Nguyen.jpg" },
       { name: "Jason Inserra", title: "Director of Operations", image: "/images/team/Jason-Inserra-3.jpg" },
       { name: "Adam Leonard", title: "Admissions Director", image: "/images/team/Adam-Leonard.jpg" },
+      { name: "Blayne Archer", title: "Admissions & Business Development", image: "/images/team/Blayne-Archer.jpg" },
+      { name: "Jeremy Stewart", title: "Admissions Coordinator & Business Development Liaison", image: "/images/team/Jeremy-Stewart.jpg" },
+      { name: "Ashley Inserra", title: "Human Resources", image: "/images/team/Ashley-Inserra.jpg" },
       { name: "Ron Alessi", title: "Director of Compliance", image: "/images/team/Ron-Alessi-2.jpg" },
     ],
     clinical: [
@@ -55,11 +58,8 @@ export const siteData = {
       { name: "Dr. Caitlin Ellis", title: "Licensed Clinical Psychologist", image: "/images/team/Caitlin-Ellis.jpg" },
       { name: "Dr. Jonathan Shelton", title: "Licensed Clinical Psychologist", image: "/images/team/Jonathan-Shelton.jpg" },
       { name: "Dr. Madison Day-Robinson", title: "Licensed Clinical Psychologist", image: "/images/team/dr-madison-day-robinson.jpg" },
-      { name: "Erica Tolley", title: "Clinical Staff", image: "/images/team/Erica-Tolley-Photo.jpg" },
-      { name: "Blayne Archer", title: "Clinical Staff", image: "/images/team/Blayne-Archer.jpg" },
-      { name: "Craig Huthmacher", title: "Clinical Staff", image: "/images/team/Craig-Huthmacher.jpg" },
-      { name: "Jeremy Stewart", title: "Clinical Staff", image: "/images/team/Jeremy-Stewart.jpg" },
-      { name: "Ashley Inserra", title: "Clinical Staff", image: "/images/team/Ashley-Inserra.jpg" },
+      { name: "Erica Tolley", title: "Registered Nurse", image: "/images/team/Erica-Tolley-Photo.jpg" },
+      { name: "Craig Huthmacher", title: "Program Supervisor (Glendale), Behavioral Health Professional", image: "/images/team/Craig-Huthmacher.jpg" },
     ],
   },
   mentalHealth: [
