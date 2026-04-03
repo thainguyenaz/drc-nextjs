@@ -1,0 +1,124 @@
+import { Metadata } from "next";
+import Navigation from "@/components/Navigation";
+import PageHero from "@/components/PageHero";
+import AddictionPrograms from "@/components/AddictionPrograms";
+import CTASection from "@/components/CTASection";
+import Footer from "@/components/Footer";
+
+export const metadata: Metadata = {
+  title: "Prescription Drug Addiction Treatment — Desert Recovery Centers",
+  description:
+    "Prescription drug addiction treatment in Arizona for opioid painkillers, benzodiazepines, and stimulant medications. Medically supervised detox and therapy.",
+};
+
+export default function PrescriptionDrugAddictionPage() {
+  return (
+    <>
+      <Navigation />
+      <PageHero
+        eyebrow="Addiction Treatment"
+        title="Prescription Drug Addiction Treatment"
+        description="It started with a prescription. That doesn't make the addiction any less real — or any less treatable."
+        bgImage="/images/general/DRC-ADDICTION.jpg"
+      />
+      <section className="py-16 md:py-24 bg-white">
+        <div className="max-w-container mx-auto px-6">
+          <div className="max-w-3xl mx-auto">
+            <p className="text-gray-600 leading-relaxed text-lg">
+              A doctor prescribed it. You took it as directed — at first. But the pain didn&apos;t go away, or the anxiety kept creeping back, or the medication stopped working at the dose you were on. Now you&apos;re taking more than prescribed, refilling early, doctor shopping, or buying from someone else. You feel ashamed because this isn&apos;t who you thought you were. You never imagined yourself here. But prescription drug addiction doesn&apos;t discriminate — it happens to people from every background, every profession, every walk of life.
+            </p>
+            <p className="text-gray-600 leading-relaxed text-lg mt-4">
+              At Desert Recovery Centers, we treat prescription drug dependence with the same clinical rigor and compassion we bring to every substance. Our medical team specializes in safe, medically supervised tapering and detox protocols tailored to the specific class of medication involved.
+            </p>
+
+            <h2 className="font-display text-2xl text-forest font-semibold mt-10 mb-4">
+              Understanding Prescription Drug Addiction
+            </h2>
+            <p className="text-gray-600 leading-relaxed">
+              Prescription drug addiction most commonly involves three categories: opioid painkillers (oxycodone, hydrocodone, codeine), benzodiazepines (Xanax, Valium, Klonopin, Ativan), and stimulants (Adderall, Ritalin). Each class carries unique risks and requires different detox and treatment approaches. Opioid and benzodiazepine withdrawal can be medically dangerous without supervision. Dependence often develops gradually, making it difficult to recognize until it has significantly impacted your life.
+            </p>
+
+            <h2 className="font-display text-2xl text-forest font-semibold mt-10 mb-4">
+              Signs It May Be Time to Get Help
+            </h2>
+            <ul className="space-y-3 text-gray-600 leading-relaxed">
+              <li className="flex items-start gap-3">
+                <span className="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0" />
+                Taking higher doses than prescribed or using medication more frequently
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0" />
+                Visiting multiple doctors or pharmacies to obtain prescriptions
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0" />
+                Anxiety or panic when your prescription runs out or you can&apos;t get a refill
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0" />
+                Withdrawal symptoms when you miss doses — shaking, sweating, nausea, rebound anxiety, or insomnia
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0" />
+                Hiding your use from family, friends, or your doctor
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0" />
+                Continuing to use despite negative effects on your health, work, or relationships
+              </li>
+            </ul>
+
+            <h2 className="font-display text-2xl text-forest font-semibold mt-10 mb-4">
+              How We Treat Prescription Drug Addiction
+            </h2>
+            <div className="grid md:grid-cols-2 gap-6 mt-6">
+              {[
+                {
+                  title: "Medically Supervised Detox & Tapering",
+                  desc: "Safe, gradual dose reduction under medical supervision. Benzodiazepine and opioid withdrawal require precise medical protocols — our team manages this process with expertise and care.",
+                },
+                {
+                  title: "Medication-Assisted Treatment",
+                  desc: "For opioid painkillers, MAT with buprenorphine or naltrexone reduces cravings and stabilizes brain chemistry. Alternative medications support benzodiazepine and stimulant recovery.",
+                },
+                {
+                  title: "Pain Management Alternatives",
+                  desc: "If chronic pain drove your prescription use, our team works with you to develop non-addictive pain management strategies including physical therapy referrals and holistic approaches.",
+                },
+                {
+                  title: "Therapy & Relapse Prevention",
+                  desc: "CBT, DBT, and individual therapy address the psychological patterns behind medication misuse. We build your toolkit for managing pain, anxiety, or attention issues without dependence.",
+                },
+              ].map((item) => (
+                <div
+                  key={item.title}
+                  className="bg-cream rounded-xl p-6 border-2 border-transparent hover:border-gold/40 transition-all"
+                >
+                  <h3 className="font-display text-lg text-forest font-semibold">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm mt-3 leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            <h2 className="font-display text-2xl text-forest font-semibold mt-10 mb-4">
+              What Recovery Looks Like Here
+            </h2>
+            <p className="text-gray-600 leading-relaxed">
+              Prescription drug recovery often involves unlearning the belief that you need a substance to function. Whether your dependence began with pain, anxiety, or attention issues, your treatment plan addresses the underlying condition alongside the addiction. Our step-down model — residential to PHP to IOP — gives you increasing autonomy as you build confidence in your ability to manage life without the medication that once controlled it.
+            </p>
+            <p className="text-gray-600 leading-relaxed mt-4">
+              We accept most major insurance plans. Coverage varies by plan. Contact us to verify your benefits.
+            </p>
+          </div>
+        </div>
+      </section>
+      <AddictionPrograms />
+      <CTASection />
+      <Footer />
+    </>
+  );
+}
