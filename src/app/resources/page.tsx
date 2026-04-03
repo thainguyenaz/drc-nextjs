@@ -21,6 +21,34 @@ export default function ResourcesPage() {
         description="Education is part of healing. Explore our library of guides, assessments, and insights designed to help you make informed decisions about treatment."
         bgImage="/images/general/DRC-TREATMENTS.jpg"
       />
+      {/* ── Recovery Resources Videos ───────────────────────── */}
+      <section className="py-16 md:py-24 bg-cream">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">Recovery Resources</span>
+          <div className="w-[60px] h-0.5 bg-gold mx-auto mt-4 mb-4" />
+          <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold mb-10">Warning Signs You&#39;re Headed Toward Relapse</h2>
+          <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-xl mb-16">
+            <iframe
+              src="https://www.youtube.com/embed/yHBds5yQGyM?rel=0"
+              title="What Are the Warning Signs You're Headed Toward Relapse"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="absolute inset-0 w-full h-full border-0"
+            />
+          </div>
+          <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold mb-10">Rebuilding Trust After Multiple Relapses</h2>
+          <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-xl">
+            <iframe
+              src="https://www.youtube.com/embed/9Py7xxFlGAs?rel=0"
+              title="What Are the Best Ways to Rebuild Trust with Family After Multiple Relapses"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="absolute inset-0 w-full h-full border-0"
+            />
+          </div>
+        </div>
+      </section>
+
       <ResourcesContent />
       <CTASection />
       <Footer />

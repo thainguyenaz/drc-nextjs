@@ -84,13 +84,13 @@ export default function TreatmentsPage() {
       {/* ── Treatment Therapies Video ─────────────────────────── */}
       <section className="py-16 md:py-24 bg-forest">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <span className="text-gold font-body text-sm tracking-[0.2em] uppercase font-medium">Our Therapies</span>
+          <span className="text-gold font-body text-sm tracking-[0.2em] uppercase font-medium">Our Approach</span>
           <div className="w-[60px] h-0.5 bg-gold mx-auto mt-4 mb-4" />
-          <h2 className="font-display text-3xl md:text-4xl text-white font-semibold mb-10">Evidence-Based Treatment in Action</h2>
+          <h2 className="font-display text-3xl md:text-4xl text-white font-semibold mb-10">How Treatment Is Individualized at DRC</h2>
           <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-xl ring-1 ring-white/10">
             <iframe
-              src="https://www.youtube.com/embed/SEZcflDyGOU?rel=0"
-              title="Evidence-Based Treatment Therapies at DRC"
+              src="https://www.youtube.com/embed/W8WKhAAhPM0?rel=0"
+              title="How Is Treatment Individualized Rather Than One Size Fits All"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
               className="absolute inset-0 w-full h-full border-0"

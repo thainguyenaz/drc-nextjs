@@ -139,6 +139,34 @@ export default function IOPPage() {
         </div>
       </section>
 
+      {/* ── IOP Videos ──────────────────────────────────────────── */}
+      <section className="py-16 md:py-24 bg-forest">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <span className="text-gold font-body text-sm tracking-[0.2em] uppercase font-medium">Inside IOP</span>
+          <div className="w-[60px] h-0.5 bg-gold mx-auto mt-4 mb-4" />
+          <h2 className="font-display text-3xl md:text-4xl text-white font-semibold mb-10">What Does a Weekly IOP Schedule Look Like?</h2>
+          <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-xl ring-1 ring-white/10 mb-16">
+            <iframe
+              src="https://www.youtube.com/embed/jGflpdsrC4I?rel=0"
+              title="What Does a Weekly IOP Schedule Typically Look Like"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="absolute inset-0 w-full h-full border-0"
+            />
+          </div>
+          <h2 className="font-display text-3xl md:text-4xl text-white font-semibold mb-10">Why Is Stepping Down Gradually So Important?</h2>
+          <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-xl ring-1 ring-white/10">
+            <iframe
+              src="https://www.youtube.com/embed/Rkj3tsy-eZ8?rel=0"
+              title="Why Is Stepping Down Gradually So Important In Recovery"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="absolute inset-0 w-full h-full border-0"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Continuum of Care */}
       <section className="py-16 md:py-24 bg-cream">
         <div className="max-w-container mx-auto px-6">

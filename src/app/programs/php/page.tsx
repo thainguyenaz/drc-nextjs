@@ -140,6 +140,24 @@ export default function PHPPage() {
         </div>
       </section>
 
+      {/* ── Continuum of Care Video ──────────────────────────── */}
+      <section className="py-16 md:py-24 bg-forest">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <span className="text-gold font-body text-sm tracking-[0.2em] uppercase font-medium">Better Outcomes</span>
+          <div className="w-[60px] h-0.5 bg-gold mx-auto mt-4 mb-4" />
+          <h2 className="font-display text-3xl md:text-4xl text-white font-semibold mb-10">How Outcomes Improve With a Full Continuum of Care</h2>
+          <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-xl ring-1 ring-white/10">
+            <iframe
+              src="https://www.youtube.com/embed/Il5BV-EYP3E?rel=0"
+              title="How Do Outcomes Improve When Clients Follow a Full Continuum of Care"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="absolute inset-0 w-full h-full border-0"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Links */}
       <section className="py-16 md:py-24 bg-cream">
         <div className="max-w-container mx-auto px-6">
