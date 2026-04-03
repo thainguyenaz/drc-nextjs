@@ -39,7 +39,44 @@ export default function MentalHealthPage() {
           </div>
         </div>
       </section>
+      {/* ── Mental Health Video 1 ─────────────────────────────── */}
+      <section className="py-16 md:py-24 bg-cream">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">Understanding Treatment</span>
+          <div className="w-[60px] h-0.5 bg-gold mx-auto mt-4 mb-4" />
+          <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold mb-10">Mental Health Recovery at DRC</h2>
+          <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-xl">
+            <iframe
+              src="https://www.youtube.com/embed/NEGnf9I1K2E?rel=0"
+              title="Mental Health Treatment at Desert Recovery Centers"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="absolute inset-0 w-full h-full border-0"
+            />
+          </div>
+        </div>
+      </section>
+
       <ConditionsGrid />
+
+      {/* ── Mental Health Video 2 ─────────────────────────────── */}
+      <section className="py-16 md:py-24 bg-forest">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <span className="text-gold font-body text-sm tracking-[0.2em] uppercase font-medium">Learn More</span>
+          <div className="w-[60px] h-0.5 bg-gold mx-auto mt-4 mb-4" />
+          <h2 className="font-display text-3xl md:text-4xl text-white font-semibold mb-10">Your Path to Wellness</h2>
+          <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-xl ring-1 ring-white/10">
+            <iframe
+              src="https://www.youtube.com/embed/Q7hykWDiBSk?rel=0"
+              title="Your Path to Mental Wellness"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="absolute inset-0 w-full h-full border-0"
+            />
+          </div>
+        </div>
+      </section>
+
       <CTASection />
       <Footer />
     </>

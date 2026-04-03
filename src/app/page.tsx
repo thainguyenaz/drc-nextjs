@@ -41,6 +41,25 @@ export default function Home() {
       <BridgeWork />
       <TeamSection />
       <Testimonials />
+
+      {/* ── Brand / Testimonial Video ──────────────────────────── */}
+      <section className="py-16 md:py-24 bg-cream">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">Real Stories</span>
+          <div className="w-[60px] h-0.5 bg-gold mx-auto mt-4 mb-4" />
+          <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold mb-10">Hear From Our Community</h2>
+          <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-xl">
+            <iframe
+              src="https://www.youtube.com/embed/LjK58DeWTSY?rel=0"
+              title="Desert Recovery Centers — Real Stories"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="absolute inset-0 w-full h-full border-0"
+            />
+          </div>
+        </div>
+      </section>
+
       <GoogleReviews />
       <FAQ />
       <ContactForm />

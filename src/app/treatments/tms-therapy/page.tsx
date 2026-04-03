@@ -300,6 +300,30 @@ export default function TMSTherapyPage() {
         </div>
       </section>
 
+      {/* ── Treatment Room Video ──────────────────────────────── */}
+      <section className="relative w-full overflow-hidden bg-forest">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.8 }}
+          className="max-w-5xl mx-auto px-6 py-16 md:py-24"
+        >
+          <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10">
+            <iframe
+              src="https://www.youtube.com/embed/4yWqQ_VVzgE?start=141&rel=0&modestbranding=1"
+              title="NeuroStar TMS Therapy — How It Works"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="absolute inset-0 w-full h-full"
+            />
+          </div>
+          <p className="text-white/60 font-body text-sm tracking-wide text-center mt-6">
+            See how NeuroStar TMS therapy works — FDA-cleared, non-invasive treatment for depression
+          </p>
+        </motion.div>
+      </section>
+
       {/* ── What Is TMS ──────────────────────────────────────── */}
       <section className="py-20 md:py-28 bg-white">
         <div className="max-w-container mx-auto px-6">
@@ -579,30 +603,6 @@ export default function TMSTherapyPage() {
             </p>
           </motion.div>
         </div>
-      </section>
-
-      {/* ── Treatment Room Video ──────────────────────────────── */}
-      <section className="relative w-full overflow-hidden bg-forest">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.8 }}
-          className="max-w-5xl mx-auto px-6 py-16 md:py-24"
-        >
-          <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10">
-            <iframe
-              src="https://www.youtube.com/embed/4yWqQ_VVzgE?start=141&rel=0&modestbranding=1"
-              title="NeuroStar TMS Therapy — How It Works"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="absolute inset-0 w-full h-full"
-            />
-          </div>
-          <p className="text-white/60 font-body text-sm tracking-wide text-center mt-6">
-            See how NeuroStar TMS therapy works — FDA-cleared, non-invasive treatment for depression
-          </p>
-        </motion.div>
       </section>
 
       {/* ── Waitlist Form ────────────────────────────────────── */}
