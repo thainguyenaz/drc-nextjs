@@ -5,6 +5,7 @@ import IntroSection from "@/components/IntroSection";
 import ConditionsGrid from "@/components/ConditionsGrid";
 import AddictionPrograms from "@/components/AddictionPrograms";
 import LocationsSection from "@/components/LocationsSection";
+import FacilityPhotoGrid from "@/components/FacilityPhotoGrid";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import TeamSection from "@/components/TeamSection";
 import Testimonials from "@/components/Testimonials";
@@ -24,6 +25,7 @@ export default function Home() {
       <ConditionsGrid />
       <AddictionPrograms />
       <LocationsSection />
+      <FacilityPhotoGrid />
       <WhyChooseUs />
       <TeamSection />
       <Testimonials />

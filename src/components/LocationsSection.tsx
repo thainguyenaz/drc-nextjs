@@ -3,6 +3,13 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { siteData } from "@/lib/site-data";
+import VideoLightbox from "./VideoLightbox";
+
+const locationVideos: Record<string, string> = {
+  Glendale: "00ZDcQjXoE8",
+  Scottsdale: "7qvyphmKNxg",
+  Phoenix: "rMkEYhoW-kE",
+};
 
 export default function LocationsSection() {
   return (
@@ -11,7 +18,8 @@ export default function LocationsSection() {
         <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
           Our Locations
         </span>
-        <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold mt-4 mb-4">
+        <div className="w-[60px] h-0.5 bg-gold mx-auto mt-4 mb-4" />
+        <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold mb-4">
           Treatment Centers in Arizona
         </h2>
         <p className="text-gray-600 max-w-2xl mx-auto">
@@ -23,6 +31,7 @@ export default function LocationsSection() {
       <div className="space-y-0">
         {siteData.locations.map((location, i) => {
           const reversed = i % 2 === 1;
+          const videoId = locationVideos[location.name];
           return (
             <motion.div
               key={location.name}
@@ -32,16 +41,30 @@ export default function LocationsSection() {
               transition={{ duration: 0.7, ease: "easeOut" }}
               className={`flex flex-col md:flex-row ${reversed ? "md:flex-row-reverse" : ""} min-h-[500px]`}
             >
-              {/* Image — 60% */}
+              {/* Image — 60% with video lightbox */}
               <div className="relative w-full md:w-[60%] min-h-[300px] md:min-h-0">
-                <Image
-                  src={location.image}
-                  alt={`Desert Recovery Centers ${location.name} facility`}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 60vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-forest/30 to-transparent md:hidden" />
+                {videoId ? (
+                  <VideoLightbox videoId={videoId}>
+                    <div className="relative w-full h-full min-h-[300px] md:min-h-[500px]">
+                      <Image
+                        src={location.image}
+                        alt={`Desert Recovery Centers ${location.name} facility`}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 100vw, 60vw"
+                      />
+                    </div>
+                  </VideoLightbox>
+                ) : (
+                  <Image
+                    src={location.image}
+                    alt={`Desert Recovery Centers ${location.name} facility`}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 60vw"
+                  />
+                )}
+                <div className="absolute inset-0 bg-gradient-to-t from-forest/30 to-transparent md:hidden pointer-events-none" />
               </div>
 
               {/* Content — 40% */}

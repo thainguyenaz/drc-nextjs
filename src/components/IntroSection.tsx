@@ -1,11 +1,23 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
+import VideoLightbox from "./VideoLightbox";
 
 export default function IntroSection() {
+  const sectionRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start end", "end start"],
+  });
+
+  const leftX = useTransform(scrollYProgress, [0, 0.5], [-120, 0]);
+  const rightX = useTransform(scrollYProgress, [0, 0.5], [120, 0]);
+  const imgOpacity = useTransform(scrollYProgress, [0, 0.3], [0, 1]);
+
   return (
-    <section className="py-20 md:py-28 bg-white">
+    <section ref={sectionRef} className="py-20 md:py-28 bg-white overflow-hidden">
       <div className="max-w-container mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <motion.div
@@ -17,7 +29,8 @@ export default function IntroSection() {
             <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
               About Desert Recovery Centers
             </span>
-            <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold mt-4 mb-6 leading-tight">
+            <div className="w-[60px] h-0.5 bg-gold mt-4 mb-4" />
+            <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold mb-6 leading-tight">
               A Different Kind of Treatment. A Better Path to Recovery.
             </h2>
             <p className="text-gray-600 leading-relaxed mb-4">
@@ -50,21 +63,37 @@ export default function IntroSection() {
             </div>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative rounded-2xl overflow-hidden aspect-[4/3]"
-          >
-            <Image
-              src="/images/scottsdale/DRC-OUTSIDE-NORTH-SCOTTSDALE-08-01-2024-1553August-01-202400004-2.jpg"
-              alt="Desert Recovery Centers outdoor courtyard in Scottsdale, Arizona"
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 50vw"
-            />
-          </motion.div>
+          {/* Parallax collision photos */}
+          <div className="relative h-[400px] md:h-[500px]">
+            <motion.div
+              style={{ x: leftX, opacity: imgOpacity }}
+              className="absolute top-0 left-0 w-[60%] h-[70%] rounded-2xl overflow-hidden shadow-xl z-10"
+            >
+              <VideoLightbox videoId="6x9IQq6h9Rk">
+                <Image
+                  src="/images/scottsdale/DRC-OUTSIDE-NORTH-SCOTTSDALE-08-01-2024-1553August-01-202400004-2.jpg"
+                  alt="Desert Recovery Centers Scottsdale outdoor area"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 60vw, 30vw"
+                />
+              </VideoLightbox>
+            </motion.div>
+            <motion.div
+              style={{ x: rightX, opacity: imgOpacity }}
+              className="absolute bottom-0 right-0 w-[55%] h-[65%] rounded-2xl overflow-hidden shadow-xl"
+            >
+              <Image
+                src="/images/scottsdale/DRC-LIVING-ROOMS-NORTH-SCOTTSDALE-08-01-2024-1317August-01-202400007-2.jpg"
+                alt="Desert Recovery Centers Scottsdale living room"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 55vw, 28vw"
+              />
+            </motion.div>
+            {/* Gold accent corner */}
+            <div className="absolute top-[35%] left-[28%] w-16 h-16 border-2 border-gold/30 rounded-xl -z-0" />
+          </div>
         </div>
       </div>
     </section>

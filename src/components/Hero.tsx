@@ -1,18 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const stagger = (i: number) => ({
   initial: { opacity: 0, y: 24 },
   animate: { opacity: 1, y: 0 },
   transition: { duration: 0.6, ease: "easeOut", delay: 0.15 * i },
 });
-
-const badges = [
-  { label: "Joint Commission Accredited" },
-  { label: "LegitScript Certified" },
-  { label: "In-Network Insurance" },
-];
 
 export default function Hero() {
   return (
@@ -75,22 +70,23 @@ export default function Hero() {
             When you are ready to reclaim your life, we are ready to help. Arizona&apos;s most intimate luxury recovery program — 10 beds, doctoral-level care, and a team that understands recovery personally.
           </motion.p>
 
-          {/* Trust Badges */}
+          {/* Trust Badges with real images */}
           <motion.div
             {...stagger(3)}
-            className="flex flex-wrap items-center gap-3 mb-10"
+            className="flex flex-wrap items-center gap-4 mb-10"
           >
-            {badges.map((badge) => (
-              <div
-                key={badge.label}
-                className="flex items-center gap-2 bg-white/8 backdrop-blur-sm border border-white/15 rounded-xl px-4 py-2.5"
-              >
-                <svg className="w-4 h-4 text-gold" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-                <span className="text-white/90 text-sm font-medium">{badge.label}</span>
-              </div>
-            ))}
+            <a href="https://www.jointcommission.org" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/15 rounded-xl px-4 py-2.5 hover:bg-white/15 transition-colors">
+              <Image src="/JointCommission_GoldSeal.png" alt="Joint Commission Gold Seal" width={28} height={28} className="flex-shrink-0" />
+              <span className="text-white/90 text-sm font-medium">Joint Commission Accredited</span>
+            </a>
+            <a href="https://www.legitscript.com/websites/?checker_keywords=desertrecoverycenters.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/15 rounded-xl px-4 py-2.5 hover:bg-white/15 transition-colors">
+              <svg className="w-6 h-6 text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <span className="text-white/90 text-sm font-medium">LegitScript Certified</span>
+            </a>
+            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/15 rounded-xl px-4 py-2.5">
+              <svg className="w-4 h-4 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+              <span className="text-white/90 text-sm font-medium">In-Network Insurance</span>
+            </div>
           </motion.div>
 
           {/* CTAs */}
