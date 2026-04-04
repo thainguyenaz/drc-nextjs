@@ -230,7 +230,7 @@ function ProgramsTabs() {
               key={prog.tag}
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, amount: 0.15 }}
+              viewport={{ once: false, amount: 0.15 }}
               transition={{ duration: 0.4, delay: i * 0.08 }}
               onClick={() => setActiveTab(prog.tag)}
               className={`w-full text-left px-4 py-4 rounded-lg border-l-[3px] transition-all duration-200 cursor-pointer ${
@@ -337,7 +337,7 @@ function OverviewImage() {
     <motion.div
       initial={{ opacity: 0, x: 80, scale: 0.96 }}
       whileInView={{ opacity: 1, x: 0, scale: 1 }}
-      viewport={{ once: true, amount: 0.2 }}
+      viewport={{ once: false, amount: 0.15 }}
       transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
       onViewportEnter={() => setEntered(true)}
       className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-xl"
@@ -372,7 +372,7 @@ export default function PhoenixPHPContent() {
               <motion.span
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.15 }}
+                viewport={{ once: false, amount: 0.15 }}
                 transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1], delay: 0 }}
                 className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium block"
               >
@@ -381,7 +381,7 @@ export default function PhoenixPHPContent() {
               <motion.h2
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.15 }}
+                viewport={{ once: false, amount: 0.15 }}
                 transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
                 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4 mb-6"
               >
@@ -390,7 +390,7 @@ export default function PhoenixPHPContent() {
               <motion.p
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.15 }}
+                viewport={{ once: false, amount: 0.15 }}
                 transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
                 className="text-gray-600 leading-relaxed text-lg mb-4"
               >
@@ -399,7 +399,7 @@ export default function PhoenixPHPContent() {
               <motion.p
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.15 }}
+                viewport={{ once: false, amount: 0.15 }}
                 transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
                 className="text-gray-600 leading-relaxed text-lg mb-4"
               >
@@ -408,7 +408,7 @@ export default function PhoenixPHPContent() {
               <motion.p
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.15 }}
+                viewport={{ once: false, amount: 0.15 }}
                 transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1], delay: 0.4 }}
                 className="text-gray-600 leading-relaxed text-lg mb-6"
               >
@@ -417,7 +417,7 @@ export default function PhoenixPHPContent() {
               <motion.div
                 initial={{ opacity: 0, x: -60 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, amount: 0.3 }}
+                viewport={{ once: false, amount: 0.15 }}
                 transition={{ type: "spring", stiffness: 70, damping: 16, delay: 0.3 }}
                 className="bg-cream border border-gold/30 rounded-xl p-6"
               >
@@ -437,7 +437,7 @@ export default function PhoenixPHPContent() {
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.1 }}
+        viewport={{ once: false, amount: 0.15 }}
         transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
       >
         <section className="py-16 md:py-24 bg-cream">
@@ -465,7 +465,7 @@ export default function PhoenixPHPContent() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
+            viewport={{ once: false, amount: 0.15 }}
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
             className="text-center mb-12"
           >
@@ -483,7 +483,7 @@ export default function PhoenixPHPContent() {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.1 }}
+            viewport={{ once: false, amount: 0.15 }}
             variants={diffContainerVariants}
             className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto"
           >
@@ -513,7 +513,7 @@ export default function PhoenixPHPContent() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
+            viewport={{ once: false, amount: 0.15 }}
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
             className="text-center mb-12"
           >
@@ -531,7 +531,7 @@ export default function PhoenixPHPContent() {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.1 }}
+            viewport={{ once: false, amount: 0.15 }}
             variants={timelineContainerVariants}
             className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto relative"
           >
@@ -539,7 +539,7 @@ export default function PhoenixPHPContent() {
             <motion.div
               initial={{ scaleX: 0 }}
               whileInView={{ scaleX: 1 }}
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: false, amount: 0.15 }}
               transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 0.4 }}
               className="hidden lg:block absolute top-[32px] left-[12.5%] right-[12.5%] h-[2px] bg-gold/30 origin-left z-0"
             />
@@ -720,7 +720,7 @@ export default function PhoenixPHPContent() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.12 }}
+          viewport={{ once: false, amount: 0.15 }}
           transition={{ duration: 0.7 }}
           className="max-w-container mx-auto px-6 text-center"
         >
@@ -762,7 +762,7 @@ export default function PhoenixPHPContent() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.12 }}
+            viewport={{ once: false, amount: 0.15 }}
             transition={{ duration: 0.6 }}
           >
             <p className="text-gray-600 text-sm mb-6">
