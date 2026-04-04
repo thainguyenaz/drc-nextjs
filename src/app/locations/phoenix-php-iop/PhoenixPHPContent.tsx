@@ -1,17 +1,48 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import ScrollReveal from "@/components/ScrollReveal";
 
-const fadeUp = {
-  hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0 },
+const diffContainerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.05,
+    },
+  },
 };
 
-const stagger = {
-  visible: { transition: { staggerChildren: 0.1 } },
+const diffCardVariants = {
+  hidden: { opacity: 0, y: 50, scale: 0.95 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] },
+  },
+};
+
+const timelineContainerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.12,
+      delayChildren: 0.05,
+    },
+  },
+};
+
+const timelineStepVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] },
+  },
 };
 
 const programs = [
@@ -159,6 +190,177 @@ const insuranceProviders = [
   "Beacon Health",
 ];
 
+function ProgramTabContent({ prog }: { prog: typeof programs[number] }) {
+  return (
+    <>
+      <span className="inline-block text-xs font-bold tracking-widest uppercase text-gold bg-gold/10 px-3 py-1 rounded-full mb-3">
+        {prog.tag}
+      </span>
+      <h3 className="font-display text-lg text-forest font-semibold mb-1">
+        {prog.title}
+      </h3>
+      <p className="text-sage text-sm font-medium mb-3">{prog.schedule}</p>
+      <p className="text-gray-600 text-sm leading-relaxed mb-4">{prog.body}</p>
+      <ul className="space-y-2">
+        {prog.features.map((f) => (
+          <li key={f} className="flex items-start gap-2 text-sm text-gray-600">
+            <svg className="w-4 h-4 text-gold flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+            </svg>
+            {f}
+          </li>
+        ))}
+      </ul>
+    </>
+  );
+}
+
+function ProgramsTabs() {
+  const [activeTab, setActiveTab] = useState("PHP");
+  const [openAccordion, setOpenAccordion] = useState("PHP");
+  const activeProg = programs.find((p) => p.tag === activeTab) ?? programs[0];
+
+  return (
+    <div className="max-w-5xl mx-auto">
+      {/* Desktop: vertical tabs left, content right */}
+      <div className="hidden md:grid md:grid-cols-[240px_1fr] gap-8">
+        <div className="space-y-2">
+          {programs.map((prog, i) => (
+            <motion.button
+              key={prog.tag}
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.15 }}
+              transition={{ duration: 0.4, delay: i * 0.08 }}
+              onClick={() => setActiveTab(prog.tag)}
+              className={`w-full text-left px-4 py-4 rounded-lg border-l-[3px] transition-all duration-200 cursor-pointer ${
+                activeTab === prog.tag
+                  ? "border-l-gold bg-white shadow-sm"
+                  : "border-l-transparent hover:border-l-gold/40 hover:bg-white/50"
+              }`}
+            >
+              <span
+                className={`text-xs font-bold tracking-widest uppercase block mb-0.5 ${
+                  activeTab === prog.tag ? "text-gold" : "text-gray-400"
+                }`}
+              >
+                {prog.tag}
+              </span>
+              <span
+                className={`text-sm font-medium block ${
+                  activeTab === prog.tag ? "text-forest" : "text-gray-500"
+                }`}
+              >
+                {prog.title}
+              </span>
+            </motion.button>
+          ))}
+        </div>
+
+        <div className="bg-white rounded-xl p-8 border border-gray-100 min-h-[400px]">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={activeProg.tag}
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: 20 }}
+              transition={{ duration: 0.3 }}
+            >
+              <ProgramTabContent prog={activeProg} />
+            </motion.div>
+          </AnimatePresence>
+        </div>
+      </div>
+
+      {/* Mobile: accordion */}
+      <div className="md:hidden space-y-3">
+        {programs.map((prog) => (
+          <div key={prog.tag} className="bg-white rounded-xl border border-gray-100 overflow-hidden">
+            <button
+              onClick={() => setOpenAccordion(openAccordion === prog.tag ? "" : prog.tag)}
+              className="w-full flex items-center justify-between px-5 py-4 text-left cursor-pointer"
+            >
+              <div>
+                <span className="text-xs font-bold tracking-widest uppercase text-gold mr-2">
+                  {prog.tag}
+                </span>
+                <span className="text-sm font-medium text-forest">{prog.title}</span>
+              </div>
+              <svg
+                className={`w-5 h-5 text-sage flex-shrink-0 transition-transform duration-300 ${
+                  openAccordion === prog.tag ? "rotate-180" : ""
+                }`}
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <AnimatePresence>
+              {openAccordion === prog.tag && (
+                <motion.div
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: "auto", opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+                  className="overflow-hidden"
+                >
+                  <div className="px-5 pb-5">
+                    <p className="text-sage text-sm font-medium mb-3">{prog.schedule}</p>
+                    <p className="text-gray-600 text-sm leading-relaxed mb-4">{prog.body}</p>
+                    <ul className="space-y-2">
+                      {prog.features.map((f) => (
+                        <li key={f} className="flex items-start gap-2 text-sm text-gray-600">
+                          <svg className="w-4 h-4 text-gold flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                          </svg>
+                          {f}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function OverviewImage() {
+  const [entered, setEntered] = useState(false);
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, x: 80, scale: 0.96 }}
+      whileInView={{ opacity: 1, x: 0, scale: 1 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+      onViewportEnter={() => setEntered(true)}
+      className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-xl"
+    >
+      <motion.div
+        animate={entered ? { scale: [1, 1.012, 1] } : {}}
+        transition={entered ? { duration: 9, repeat: Infinity, ease: "easeInOut", repeatType: "loop" as const } : {}}
+        whileHover={{ scale: 1.04 }}
+        className="relative w-full h-full overflow-hidden rounded-[inherit]"
+        style={{ transition: "scale 0.7s" }}
+      >
+        <Image
+          src="/images/locations/phoenix/phoenix-lobby-2.jpg"
+          alt="Lobby at Desert Recovery Centers Phoenix PHP IOP treatment center"
+          fill
+          className="object-cover"
+          sizes="(max-width: 768px) 100vw, 50vw"
+        />
+      </motion.div>
+    </motion.div>
+  );
+}
+
 export default function PhoenixPHPContent() {
   return (
     <>
@@ -167,116 +369,104 @@ export default function PhoenixPHPContent() {
         <div className="max-w-container mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 items-start">
             <div>
-              <ScrollReveal direction="left">
-                <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
-                  Our Phoenix Center
-                </span>
-                <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4 mb-6">
-                  Outpatient Treatment That Does Not Ask You to Choose
-                </h2>
-                <p className="text-gray-600 leading-relaxed text-lg mb-4">
-                  Most treatment centers ask you to disappear from your life to get better. We do not believe that is the only way. Our Phoenix center at 4160 N. 108th Ave was designed for people who need real clinical care and real accountability, without leaving their job, their family, or their responsibilities behind. PHP, IOP, and OP programs give you the structure that makes recovery stick, on a schedule that fits the life you are trying to protect.
+              <motion.span
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.15 }}
+                transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1], delay: 0 }}
+                className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium block"
+              >
+                Our Phoenix Center
+              </motion.span>
+              <motion.h2
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.15 }}
+                transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
+                className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4 mb-6"
+              >
+                Outpatient Treatment That Does Not Ask You to Choose
+              </motion.h2>
+              <motion.p
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.15 }}
+                transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
+                className="text-gray-600 leading-relaxed text-lg mb-4"
+              >
+                Most treatment centers ask you to disappear from your life to get better. We do not believe that is the only way. Our Phoenix center at 4160 N. 108th Ave was designed for people who need real clinical care and real accountability, without leaving their job, their family, or their responsibilities behind. PHP, IOP, and OP programs give you the structure that makes recovery stick, on a schedule that fits the life you are trying to protect.
+              </motion.p>
+              <motion.p
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.15 }}
+                transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
+                className="text-gray-600 leading-relaxed text-lg mb-4"
+              >
+                Every client at our Phoenix location works with a licensed clinical team that includes therapists, psychiatrists, and case managers. Treatment is individualized from day one. You are not placed into a generic group and forgotten. You get a plan built around your specific diagnosis, your history, and your goals, reviewed and adjusted as you progress.
+              </motion.p>
+              <motion.p
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.15 }}
+                transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1], delay: 0.4 }}
+                className="text-gray-600 leading-relaxed text-lg mb-6"
+              >
+                This location also houses our NeuroStar TMS therapy suite, the only TMS system FDA cleared for depression, anxious depression, OCD, and adolescents ages 15 and older. If you have tried medications and they have not worked, TMS may be the answer you have been looking for.
+              </motion.p>
+              <motion.div
+                initial={{ opacity: 0, x: -60 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ type: "spring", stiffness: 70, damping: 16, delay: 0.3 }}
+                className="bg-cream border border-gold/30 rounded-xl p-6"
+              >
+                <p className="text-forest text-sm leading-relaxed">
+                  <strong>Looking for residential treatment?</strong> Our Phoenix location specializes in PHP, IOP, OP, and TMS therapy. For full residential care, see our{" "}
+                  <Link href="/locations/glendale" className="text-gold font-semibold hover:underline">Glendale</Link> and{" "}
+                  <Link href="/locations/scottsdale" className="text-gold font-semibold hover:underline">Scottsdale</Link> campuses.
                 </p>
-                <p className="text-gray-600 leading-relaxed text-lg mb-4">
-                  Every client at our Phoenix location works with a licensed clinical team that includes therapists, psychiatrists, and case managers. Treatment is individualized from day one. You are not placed into a generic group and forgotten. You get a plan built around your specific diagnosis, your history, and your goals, reviewed and adjusted as you progress.
-                </p>
-                <p className="text-gray-600 leading-relaxed text-lg mb-6">
-                  This location also houses our NeuroStar TMS therapy suite, the only TMS system FDA cleared for depression, anxious depression, OCD, and adolescents ages 15 and older. If you have tried medications and they have not worked, TMS may be the answer you have been looking for.
-                </p>
-                <div className="bg-cream border border-gold/30 rounded-xl p-6">
-                  <p className="text-forest text-sm leading-relaxed">
-                    <strong>Looking for residential treatment?</strong> Our Phoenix location specializes in PHP, IOP, OP, and TMS therapy. For full residential care, see our{" "}
-                    <Link href="/locations/glendale" className="text-gold font-semibold hover:underline">Glendale</Link> and{" "}
-                    <Link href="/locations/scottsdale" className="text-gold font-semibold hover:underline">Scottsdale</Link> campuses.
-                  </p>
-                </div>
-              </ScrollReveal>
+              </motion.div>
             </div>
-            <ScrollReveal direction="right">
-              <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-xl group">
-                <Image
-                  src="/images/locations/phoenix/phoenix-lobby-2.jpg"
-                  alt="Lobby at Desert Recovery Centers Phoenix PHP IOP treatment center"
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-              </div>
-            </ScrollReveal>
+            <OverviewImage />
           </div>
         </div>
       </section>
 
-      {/* ── SECTION 4: Programs Grid ────────────────────────── */}
-      <section className="py-16 md:py-24 bg-cream">
-        <div className="max-w-container mx-auto px-6">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.12 }}
-            variants={fadeUp}
-            transition={{ duration: 0.7 }}
-            className="text-center mb-12"
-          >
-            <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
-              Treatment Programs
-            </span>
-            <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold mt-4 mb-3">
-              Every Level of Care, One Location
-            </h2>
-            <p className="text-gray-500 max-w-2xl mx-auto">
-              We meet you where you are. Whether you are stepping down from residential or starting outpatient care for the first time, there is a program here built for exactly your situation.
-            </p>
-          </motion.div>
+      {/* ── SECTION 4: Programs — Tabbed Panel ────────────── */}
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.1 }}
+        transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+      >
+        <section className="py-16 md:py-24 bg-cream">
+          <div className="max-w-container mx-auto px-6">
+            <div className="text-center mb-12">
+              <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
+                Treatment Programs
+              </span>
+              <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold mt-4 mb-3">
+                Every Level of Care, One Location
+              </h2>
+              <p className="text-gray-500 max-w-2xl mx-auto">
+                We meet you where you are. Whether you are stepping down from residential or starting outpatient care for the first time, there is a program here built for exactly your situation.
+              </p>
+            </div>
 
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.12 }}
-            variants={stagger}
-            className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto"
-          >
-            {programs.map((prog, i) => (
-              <motion.div
-                key={prog.tag}
-                variants={fadeUp}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="bg-white rounded-xl p-6 border border-gray-100 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 group relative overflow-hidden"
-              >
-                <div className="absolute left-0 top-0 w-1 bg-gold h-0 group-hover:h-full transition-all duration-500" />
-                <span className="inline-block text-xs font-bold tracking-widest uppercase text-gold bg-gold/10 px-3 py-1 rounded-full mb-3">
-                  {prog.tag}
-                </span>
-                <h3 className="font-display text-lg text-forest font-semibold mb-1">
-                  {prog.title}
-                </h3>
-                <p className="text-sage text-sm font-medium mb-3">{prog.schedule}</p>
-                <p className="text-gray-600 text-sm leading-relaxed mb-4">{prog.body}</p>
-                <ul className="space-y-2">
-                  {prog.features.map((f) => (
-                    <li key={f} className="flex items-start gap-2 text-sm text-gray-600">
-                      <svg className="w-4 h-4 text-gold flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                      {f}
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
+            <ProgramsTabs />
+          </div>
+        </section>
+      </motion.div>
 
       {/* ── SECTION 6: Why DRC Phoenix ──────────────────────── */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-container mx-auto px-6">
           <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.12 }}
-            variants={fadeUp}
-            transition={{ duration: 0.7 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
             className="text-center mb-12"
           >
             <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
@@ -293,17 +483,19 @@ export default function PhoenixPHPContent() {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.12 }}
-            variants={stagger}
+            viewport={{ once: true, amount: 0.1 }}
+            variants={diffContainerVariants}
             className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto"
           >
-            {differentiators.map((item, i) => (
+            {differentiators.map((item) => (
               <motion.div
                 key={item.title}
-                variants={fadeUp}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="bg-cream rounded-xl p-6 hover:-translate-y-1 hover:shadow-md transition-all duration-300"
+                variants={diffCardVariants}
+                whileHover={{ y: -8, boxShadow: "0 20px 40px rgba(0,0,0,0.12)" }}
+                transition={{ duration: 0.25, ease: "easeOut" }}
+                className="bg-cream rounded-xl p-6 relative overflow-hidden group"
               >
+                <div className="absolute left-0 top-0 h-full w-[3px] bg-gold scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-top" />
                 <div className="text-gold mb-4">{item.icon}</div>
                 <h3 className="font-display text-base text-forest font-semibold mb-2">
                   {item.title}
@@ -319,11 +511,10 @@ export default function PhoenixPHPContent() {
       <section className="py-16 md:py-24 bg-cream">
         <div className="max-w-container mx-auto px-6">
           <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.12 }}
-            variants={fadeUp}
-            transition={{ duration: 0.7 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
             className="text-center mb-12"
           >
             <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
@@ -340,19 +531,26 @@ export default function PhoenixPHPContent() {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.12 }}
-            variants={stagger}
+            viewport={{ once: true, amount: 0.1 }}
+            variants={timelineContainerVariants}
             className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto relative"
           >
-            {/* Connecting line (desktop only) */}
-            <div className="hidden lg:block absolute top-12 left-[12.5%] right-[12.5%] h-px bg-gold/30" />
+            {/* Connecting line — draws in left to right (desktop only) */}
+            <motion.div
+              initial={{ scaleX: 0 }}
+              whileInView={{ scaleX: 1 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 0.4 }}
+              className="hidden lg:block absolute top-[32px] left-[12.5%] right-[12.5%] h-[2px] bg-gold/30 origin-left z-0"
+            />
 
-            {admissionSteps.map((step, i) => (
+            {admissionSteps.map((step) => (
               <motion.div
                 key={step.step}
-                variants={fadeUp}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="relative bg-white rounded-xl p-6 hover:-translate-y-1.5 hover:shadow-md transition-all duration-300"
+                variants={timelineStepVariants}
+                whileHover={{ y: -6 }}
+                transition={{ duration: 0.2 }}
+                className="relative bg-white rounded-xl p-6 transition-shadow duration-300 hover:shadow-md"
               >
                 <div className="w-10 h-10 bg-gold text-white rounded-full flex items-center justify-center font-display font-bold text-sm mb-4 relative z-10">
                   {step.step}
