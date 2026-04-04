@@ -61,7 +61,7 @@ export default function DBTPage() {
       <PageHero
         eyebrow="Treatment Modality"
         title="Dialectical Behavior Therapy (DBT)"
-        description="Balancing acceptance and change — building the skills to navigate intense emotions without self-destruction."
+        description="Balancing acceptance and change, building the skills to navigate intense emotions without self-destruction."
         bgImage="/images/general/DRC-Treatment-Therapies-BG-Fade.jpg"
       />
 
@@ -110,7 +110,7 @@ export default function DBTPage() {
               When Emotions Feel Unmanageable
             </h2>
             <p className="text-gray-600 leading-relaxed mb-4">
-              Dialectical Behavior Therapy was originally developed by Dr. Marsha Linehan for individuals with borderline personality disorder, but its effectiveness extends far beyond. DBT is now a first-line treatment for anyone who experiences emotions so intensely that they overwhelm coping capacity — leading to impulsive decisions, substance use, self-harm, or relationship destruction.
+              Dialectical Behavior Therapy was originally developed by Dr. Marsha Linehan for individuals with borderline personality disorder, but its effectiveness extends far beyond. DBT is now a first-line treatment for anyone who experiences emotions so intensely that they overwhelm coping capacity, leading to impulsive decisions, substance use, self-harm, or relationship destruction.
             </p>
             <p className="text-gray-600 leading-relaxed mb-4">
               The word &quot;dialectical&quot; refers to the balance between two opposing truths: accepting yourself as you are right now, while simultaneously working to change behaviors that cause suffering. This paradox is at the heart of DBT and what makes it transformative.
@@ -230,7 +230,7 @@ export default function DBTPage() {
               DBT Skills That Last a Lifetime
             </h2>
             <p className="text-gray-600 leading-relaxed mb-4">
-              Our DBT program goes beyond weekly skills groups. Clients at Desert Recovery Centers receive individual DBT-informed therapy, structured skills training groups, and real-time coaching through our BridgeWork™ program — ensuring that skills are not just learned, but practiced and internalized.
+              Our DBT program goes beyond weekly skills groups. Clients at Desert Recovery Centers receive individual DBT-informed therapy, structured skills training groups, and real-time coaching through our BridgeWork™ program, ensuring that skills are not just learned, but practiced and internalized.
             </p>
             <p className="text-gray-600 leading-relaxed mb-8">
               Every DBT session is led or supervised by a licensed clinical psychologist with specialized training in dialectical behavior therapy. This level of clinical oversight is rare in residential treatment and reflects our commitment to evidence-based excellence.
@@ -273,7 +273,7 @@ export default function DBTPage() {
             </article>
             <article className="border-l-2 border-gold/30 pl-5">
               <h3 className="text-forest font-semibold text-sm mb-1">How does DBT work for addiction and mental health treatment?</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">DBT works by balancing two core principles: accepting yourself as you are while simultaneously working to change destructive behaviors. Through four skill modules — mindfulness, distress tolerance, emotion regulation, and interpersonal effectiveness — clients learn to manage overwhelming emotions, tolerate pain without substance use, and build healthier relationships.</p>
+              <p className="text-gray-600 text-sm leading-relaxed">DBT works by balancing two core principles: accepting yourself as you are while simultaneously working to change destructive behaviors. Through four skill modules, mindfulness, distress tolerance, emotion regulation, and interpersonal effectiveness, clients learn to manage overwhelming emotions, tolerate pain without substance use, and build healthier relationships.</p>
             </article>
             <article className="border-l-2 border-gold/30 pl-5">
               <h3 className="text-forest font-semibold text-sm mb-1">Who delivers DBT at Desert Recovery Centers?</h3>

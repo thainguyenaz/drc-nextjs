@@ -7,9 +7,9 @@ import Footer from "@/components/Footer";
 import { buildMetadata, BreadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Luxury Rehab vs Standard Rehab: What the Difference Actually Means — Desert Recovery Centers",
+  title: "Luxury Rehab vs Standard Rehab: What the Difference Actually Means, Desert Recovery Centers",
   description:
-    "Understand the real differences between luxury and standard rehab programs — from clinical depth and staff ratios to environment, privacy, and long-term outcomes.",
+    "Understand the real differences between luxury and standard rehab programs, from clinical depth and staff ratios to environment, privacy, and long-term outcomes.",
   path: "/resources/luxury-vs-standard-rehab",
 });
 
@@ -32,7 +32,7 @@ const faqs = [
   },
   {
     q: "Are the amenities in luxury rehab really necessary for recovery?",
-    a: "Many amenities commonly associated with luxury rehab — such as fitness facilities, nutritious meals, and recreational activities — serve clinical purposes. Exercise has been shown to reduce cravings and improve mood. Proper nutrition supports neurological repair. Recreation and social activities help clients build sober social skills. These elements complement evidence-based therapies rather than replacing them.",
+    a: "Many amenities commonly associated with luxury rehab, such as fitness facilities, nutritious meals, and recreational activities, serve clinical purposes. Exercise has been shown to reduce cravings and improve mood. Proper nutrition supports neurological repair. Recreation and social activities help clients build sober social skills. These elements complement evidence-based therapies rather than replacing them.",
   },
 ];
 
@@ -70,13 +70,13 @@ export default function LuxuryVsStandardRehabPage() {
               Beyond the Price Tag
             </h2>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              When most people hear &quot;luxury rehab,&quot; they picture infinity pools and spa treatments. And while those things may exist, they miss the point entirely. The real difference between luxury and standard rehab isn&apos;t about comfort — it&apos;s about clinical depth, personalized attention, and the quality of the treatment experience itself.
+              When most people hear &quot;luxury rehab,&quot; they picture infinity pools and spa treatments. And while those things may exist, they miss the point entirely. The real difference between luxury and standard rehab isn&apos;t about comfort, it&apos;s about clinical depth, personalized attention, and the quality of the treatment experience itself.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              Standard rehab programs serve an important purpose. They provide structure, group therapy, and a safe environment for people beginning their recovery journey. But they also operate under constraints — larger client populations, fewer individual therapy sessions, limited psychiatric access, and shorter average stays.
+              Standard rehab programs serve an important purpose. They provide structure, group therapy, and a safe environment for people beginning their recovery journey. But they also operate under constraints, larger client populations, fewer individual therapy sessions, limited psychiatric access, and shorter average stays.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg">
-              Luxury rehab programs, at their best, remove those constraints. The result isn&apos;t just a nicer room — it&apos;s a fundamentally different treatment experience. Here&apos;s what that actually looks like.
+              Luxury rehab programs, at their best, remove those constraints. The result isn&apos;t just a nicer room, it&apos;s a fundamentally different treatment experience. Here&apos;s what that actually looks like.
             </p>
           </div>
         </div>
@@ -99,7 +99,7 @@ export default function LuxuryVsStandardRehabPage() {
               {[
                 {
                   title: "Staff-to-Client Ratios",
-                  desc: "Standard facilities often operate with 30 to 50 beds, meaning therapists and psychiatrists divide their attention across large groups. Luxury programs like Desert Recovery Centers maintain intentionally small program sizes, which allows clinicians to know each client deeply — not just their diagnosis, but their story, their triggers, and what motivates their recovery.",
+                  desc: "Standard facilities often operate with 30 to 50 beds, meaning therapists and psychiatrists divide their attention across large groups. Luxury programs like Desert Recovery Centers maintain intentionally small program sizes, which allows clinicians to know each client deeply, not just their diagnosis, but their story, their triggers, and what motivates their recovery.",
                 },
                 {
                   title: "Frequency of Individual Therapy",
@@ -140,13 +140,13 @@ export default function LuxuryVsStandardRehabPage() {
               The environment in which a person recovers matters more than many realize. Research in behavioral health consistently points to the relationship between a person&apos;s surroundings and their ability to engage in treatment, manage stress, and build new habits.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              Standard rehab facilities are functional but often institutional — shared rooms, fluorescent lighting, and utilitarian spaces. For someone already struggling with vulnerability, these settings can feel more like a hospital than a place of healing.
+              Standard rehab facilities are functional but often institutional, shared rooms, fluorescent lighting, and utilitarian spaces. For someone already struggling with vulnerability, these settings can feel more like a hospital than a place of healing.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
               Luxury rehab environments are designed with intention. Private or semi-private rooms, natural light, comfortable common areas, and thoughtful design elements reduce the baseline stress that clients carry into every therapy session. When a person feels safe and comfortable in their physical space, they&apos;re more likely to open up in therapy, engage with the process, and do the hard emotional work that recovery demands.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg">
-              For professionals — executives, healthcare workers, attorneys — the environment also supports something practical: the ability to step away from a high-pressure life without feeling like they&apos;ve been punished for seeking help.
+              For professionals, executives, healthcare workers, attorneys, the environment also supports something practical: the ability to step away from a high-pressure life without feeling like they&apos;ve been punished for seeking help.
             </p>
           </div>
         </div>
@@ -168,7 +168,7 @@ export default function LuxuryVsStandardRehabPage() {
             <div className="grid md:grid-cols-2 gap-4">
               {[
                 "Exercise has been shown to reduce cravings, improve mood, and support neurological repair during early recovery",
-                "Proper nutrition helps restore neurochemistry disrupted by substance use — gourmet meals built around recovery nutrition aren&apos;t indulgence, they&apos;re medicine",
+                "Proper nutrition helps restore neurochemistry disrupted by substance use, gourmet meals built around recovery nutrition aren&apos;t indulgence, they&apos;re medicine",
                 "Recreational activities like swimming, hiking, and sports help clients build sober social skills and rediscover enjoyment without substances",
                 "Yoga, meditation, and mindfulness spaces support nervous system regulation and emotional processing",
                 "Comfortable outdoor spaces encourage clients to spend time in nature, which research links to reduced anxiety and improved mental clarity",
@@ -184,7 +184,7 @@ export default function LuxuryVsStandardRehabPage() {
               ))}
             </div>
             <p className="text-gray-600 leading-relaxed mt-6 text-sm">
-              The best luxury programs integrate these elements into the treatment plan itself — not as optional extras, but as components of a holistic recovery experience.
+              The best luxury programs integrate these elements into the treatment plan itself, not as optional extras, but as components of a holistic recovery experience.
             </p>
           </div>
         </div>
@@ -201,13 +201,13 @@ export default function LuxuryVsStandardRehabPage() {
               Privacy and Discretion
             </h2>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              For many people considering rehab, privacy is a significant concern. Executives worried about professional reputation, healthcare workers navigating licensing implications, public figures concerned about media exposure, and parents who don&apos;t want to alarm their children — all of them need discretion.
+              For many people considering rehab, privacy is a significant concern. Executives worried about professional reputation, healthcare workers navigating licensing implications, public figures concerned about media exposure, and parents who don&apos;t want to alarm their children, all of them need discretion.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              Standard facilities, with their larger census sizes, inherently offer less privacy. More clients means more people aware of your presence, more shared spaces, and more opportunities for confidentiality to be compromised — not through malice, but simply through volume.
+              Standard facilities, with their larger census sizes, inherently offer less privacy. More clients means more people aware of your presence, more shared spaces, and more opportunities for confidentiality to be compromised, not through malice, but simply through volume.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg">
-              Luxury programs with small census sizes naturally provide greater privacy. Fewer clients means fewer people know you&apos;re there. Private rooms mean your space is your own. And smaller group therapy sessions create a more intimate, controlled environment where vulnerability feels safer. For professionals whose careers depend on discretion, this isn&apos;t a luxury — it&apos;s a necessity.
+              Luxury programs with small census sizes naturally provide greater privacy. Fewer clients means fewer people know you&apos;re there. Private rooms mean your space is your own. And smaller group therapy sessions create a more intimate, controlled environment where vulnerability feels safer. For professionals whose careers depend on discretion, this isn&apos;t a luxury, it&apos;s a necessity.
             </p>
           </div>
         </div>
@@ -224,13 +224,13 @@ export default function LuxuryVsStandardRehabPage() {
               Outcomes and Aftercare
             </h2>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              Research in addiction treatment consistently suggests that longer stays in treatment are associated with improved long-term outcomes. While a 28-day standard program can begin the recovery process, many clinical experts recommend 60 to 90 days for more durable results — particularly for individuals with co-occurring mental health conditions or long histories of substance use.
+              Research in addiction treatment consistently suggests that longer stays in treatment are associated with improved long-term outcomes. While a 28-day standard program can begin the recovery process, many clinical experts recommend 60 to 90 days for more durable results, particularly for individuals with co-occurring mental health conditions or long histories of substance use.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
               Luxury programs are more likely to support extended stays, both because their environments make longer treatment more sustainable and because their clinical models are designed for deeper, more gradual therapeutic work.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg">
-              Equally important is what happens after discharge. The best luxury programs invest heavily in aftercare planning — step-down recommendations, outpatient referrals, therapist matching, alumni support networks, and ongoing check-ins. Recovery doesn&apos;t end when treatment does, and comprehensive aftercare can make the difference between sustained sobriety and relapse.
+              Equally important is what happens after discharge. The best luxury programs invest heavily in aftercare planning, step-down recommendations, outpatient referrals, therapist matching, alumni support networks, and ongoing check-ins. Recovery doesn&apos;t end when treatment does, and comprehensive aftercare can make the difference between sustained sobriety and relapse.
             </p>
           </div>
         </div>
@@ -253,15 +253,15 @@ export default function LuxuryVsStandardRehabPage() {
               {[
                 {
                   title: "Smaller Program Sizes",
-                  desc: "DRC maintains intentionally small client cohorts across our Arizona facilities. This means your clinical team doesn&apos;t just know your chart — they know you. Treatment plans are genuinely individualized, not templated.",
+                  desc: "DRC maintains intentionally small client cohorts across our Arizona facilities. This means your clinical team doesn&apos;t just know your chart, they know you. Treatment plans are genuinely individualized, not templated.",
                 },
                 {
                   title: "Local Clinical Leadership",
-                  desc: "Our Clinical Director, Dr. An Nguyen, is on-site and actively involved in treatment planning. You&apos;re not being treated by rotating staff or remote oversight — you&apos;re receiving care from a consistent, invested clinical team.",
+                  desc: "Our Clinical Director, Dr. An Nguyen, is on-site and actively involved in treatment planning. You&apos;re not being treated by rotating staff or remote oversight, you&apos;re receiving care from a consistent, invested clinical team.",
                 },
                 {
                   title: "Arizona-Rooted Aftercare",
-                  desc: "Because DRC is based in Arizona, our aftercare network — therapists, psychiatrists, support groups, sober living — is local. When you transition out of residential care, you&apos;re stepping into a recovery community we&apos;ve helped build, not being handed a generic referral list for a state you don&apos;t live in.",
+                  desc: "Because DRC is based in Arizona, our aftercare network, therapists, psychiatrists, support groups, sober living, is local. When you transition out of residential care, you&apos;re stepping into a recovery community we&apos;ve helped build, not being handed a generic referral list for a state you don&apos;t live in.",
                 },
                 {
                   title: "Multiple Facility Options",
@@ -269,7 +269,7 @@ export default function LuxuryVsStandardRehabPage() {
                 },
                 {
                   title: "Comparable Clinical Depth",
-                  desc: "DRC provides the same evidence-based therapies, psychiatric oversight, and dual diagnosis treatment that national luxury programs offer — with the added benefit of a smaller, more personal environment where you won&apos;t get lost in the system.",
+                  desc: "DRC provides the same evidence-based therapies, psychiatric oversight, and dual diagnosis treatment that national luxury programs offer, with the added benefit of a smaller, more personal environment where you won&apos;t get lost in the system.",
                 },
               ].map((item, i) => (
                 <div
@@ -298,10 +298,10 @@ export default function LuxuryVsStandardRehabPage() {
               Is Luxury Rehab Worth It?
             </h2>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              This is a fair question, and the honest answer is: it depends on your situation. Luxury rehab isn&apos;t the right fit for everyone. What matters most is that someone gets into treatment — any treatment — when they need it.
+              This is a fair question, and the honest answer is: it depends on your situation. Luxury rehab isn&apos;t the right fit for everyone. What matters most is that someone gets into treatment, any treatment, when they need it.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              That said, for individuals who can access luxury-level care — whether through insurance coverage, self-pay, or financing — the clinical advantages are meaningful. More individual therapy, better psychiatric access, smaller groups, longer stays, and comprehensive aftercare all contribute to a more thorough and personalized recovery experience.
+              That said, for individuals who can access luxury-level care, whether through insurance coverage, self-pay, or financing, the clinical advantages are meaningful. More individual therapy, better psychiatric access, smaller groups, longer stays, and comprehensive aftercare all contribute to a more thorough and personalized recovery experience.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
               Many people are surprised to learn that their insurance plans cover a significant portion of luxury residential treatment. The Mental Health Parity and Addiction Equity Act has expanded access considerably, and programs like DRC work directly with insurers to help clients access the coverage they&apos;re entitled to.

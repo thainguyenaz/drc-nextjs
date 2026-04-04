@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import { buildMetadata, BreadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "HIPAA Notice — Desert Recovery Centers",
+  title: "HIPAA Notice, Desert Recovery Centers",
   description: "Desert Recovery Centers HIPAA Notice of Privacy Practices. Learn how your protected health information may be used and disclosed.",
   path: "/hipaa-notice",
 });

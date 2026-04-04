@@ -19,7 +19,7 @@ export const metadata: Metadata = buildMetadata({
 const faqs = [
   {
     q: "Is alcohol withdrawal dangerous?",
-    a: "Yes, alcohol withdrawal can be medically dangerous and in severe cases, life-threatening. Symptoms can range from anxiety, tremors, and nausea to seizures and delirium tremens (DTs). This is why medically supervised detox is critical — never attempt to stop heavy drinking abruptly without medical support. Our clinical team monitors your vitals around the clock and manages symptoms safely.",
+    a: "Yes, alcohol withdrawal can be medically dangerous and in severe cases, life-threatening. Symptoms can range from anxiety, tremors, and nausea to seizures and delirium tremens (DTs). This is why medically supervised detox is critical, never attempt to stop heavy drinking abruptly without medical support. Our clinical team monitors your vitals around the clock and manages symptoms safely.",
   },
   {
     q: "How long does alcohol detox take?",
@@ -31,11 +31,11 @@ const faqs = [
   },
   {
     q: "What happens after detox is complete?",
-    a: "Detox is only the first step — it addresses the physical dependence but not the underlying addiction. After detox, clients transition directly into our residential treatment program where the real therapeutic work begins: individual therapy, group therapy, dual diagnosis treatment, and holistic healing. This seamless transition from detox to treatment is a key advantage of our program.",
+    a: "Detox is only the first step, it addresses the physical dependence but not the underlying addiction. After detox, clients transition directly into our residential treatment program where the real therapeutic work begins: individual therapy, group therapy, dual diagnosis treatment, and holistic healing. This seamless transition from detox to treatment is a key advantage of our program.",
   },
   {
     q: "Do you accept insurance for alcohol detox?",
-    a: "Yes, we are in-network with most major insurance providers including Aetna, Blue Cross Blue Shield, Cigna, and UnitedHealthcare. Coverage varies by plan. Contact us to verify your benefits — our admissions team handles verification at no cost and can often get you started within 48 hours.",
+    a: "Yes, we are in-network with most major insurance providers including Aetna, Blue Cross Blue Shield, Cigna, and UnitedHealthcare. Coverage varies by plan. Contact us to verify your benefits, our admissions team handles verification at no cost and can often get you started within 48 hours.",
   },
 ];
 
@@ -54,7 +54,7 @@ export default function AlcoholDetoxPage() {
       <PageHero
         eyebrow="Addiction Treatment"
         title="Alcohol Detox in Arizona"
-        description="Safe, medically supervised alcohol withdrawal with 24/7 physician oversight — the first step toward lasting recovery."
+        description="Safe, medically supervised alcohol withdrawal with 24/7 physician oversight, the first step toward lasting recovery."
         bgImage="/images/general/DRC-ADDICTION.jpg"
       />
 
@@ -75,10 +75,10 @@ export default function AlcoholDetoxPage() {
               You Cannot Do This Safely Alone
             </h2>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              If you&apos;ve been drinking heavily and you&apos;re thinking about stopping, please read this carefully: alcohol withdrawal can be life-threatening. Unlike most other substances, stopping alcohol abruptly after prolonged heavy use can cause seizures, delirium tremens, and in rare cases, death. This is not meant to scare you — it&apos;s meant to protect you.
+              If you&apos;ve been drinking heavily and you&apos;re thinking about stopping, please read this carefully: alcohol withdrawal can be life-threatening. Unlike most other substances, stopping alcohol abruptly after prolonged heavy use can cause seizures, delirium tremens, and in rare cases, death. This is not meant to scare you, it&apos;s meant to protect you.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              Medically supervised detox ensures that your withdrawal is managed safely, with round-the-clock monitoring by physicians and nurses who specialize in addiction medicine. At Desert Recovery Centers, detox isn&apos;t an isolated event — it&apos;s the first step in a comprehensive treatment journey, with seamless transition into our residential program once you&apos;re medically stabilized.
+              Medically supervised detox ensures that your withdrawal is managed safely, with round-the-clock monitoring by physicians and nurses who specialize in addiction medicine. At Desert Recovery Centers, detox isn&apos;t an isolated event, it&apos;s the first step in a comprehensive treatment journey, with seamless transition into our residential program once you&apos;re medically stabilized.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg">
               If you&apos;re ready to stop drinking, we can help you do it safely. Most clients begin treatment within 48 hours of their first call.
@@ -107,7 +107,7 @@ export default function AlcoholDetoxPage() {
               {[
                 { phase: "6-12 Hours", title: "Early Withdrawal", desc: "Anxiety, insomnia, nausea, tremors, sweating. Our medical team begins monitoring and may start medications to prevent escalation." },
                 { phase: "12-48 Hours", title: "Peak Symptoms", desc: "Withdrawal symptoms typically intensify. Risk of seizures is highest during this window. 24/7 medical monitoring and medication management are critical." },
-                { phase: "48-72 Hours", title: "Acute Phase", desc: "For severe cases, delirium tremens can develop — involving confusion, hallucinations, and dangerous vital sign changes. Our medical team is prepared to manage all complications." },
+                { phase: "48-72 Hours", title: "Acute Phase", desc: "For severe cases, delirium tremens can develop, involving confusion, hallucinations, and dangerous vital sign changes. Our medical team is prepared to manage all complications." },
                 { phase: "5-10 Days", title: "Resolution & Stabilization", desc: "Acute symptoms gradually resolve. Mood and sleep begin to normalize. Your clinical team prepares you for transition into residential treatment programming." },
               ].map((item, i) => (
                 <div key={i} className="bg-white rounded-xl p-6 border border-gray-100">
@@ -132,9 +132,9 @@ export default function AlcoholDetoxPage() {
             <div className="space-y-6">
               {[
                 { title: "24/7 Medical Monitoring", desc: "Registered nurses monitor your vitals, symptoms, and comfort around the clock. Our physicians are available for any medical need at any hour." },
-                { title: "Individualized Medication Protocols", desc: "Our medical team develops a personalized medication plan to manage withdrawal symptoms safely — including seizure prevention, anxiety management, and nutritional support." },
+                { title: "Individualized Medication Protocols", desc: "Our medical team develops a personalized medication plan to manage withdrawal symptoms safely, including seizure prevention, anxiety management, and nutritional support." },
                 { title: "Comfort-Focused Environment", desc: "Detox is physically and emotionally challenging. Our luxury facilities provide private rooms, gourmet meals, and a calm environment that reduces the distress of the process." },
-                { title: "Seamless Treatment Transition", desc: "Once medically stabilized, you transition directly into our residential treatment program — same facility, same team. No gap, no disruption, no having to start over somewhere else." },
+                { title: "Seamless Treatment Transition", desc: "Once medically stabilized, you transition directly into our residential treatment program, same facility, same team. No gap, no disruption, no having to start over somewhere else." },
                 { title: "Dual Diagnosis Assessment", desc: "During detox, our psychiatric team begins evaluating for co-occurring mental health conditions. This early assessment ensures your residential treatment plan addresses everything from day one." },
               ].map((item, i) => (
                 <div key={i} className="border-l-2 border-gold/40 pl-6">

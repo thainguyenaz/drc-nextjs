@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import { buildMetadata, BreadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Privacy Policy — Desert Recovery Centers",
+  title: "Privacy Policy, Desert Recovery Centers",
   description: "Desert Recovery Centers privacy policy. Learn how we collect, use, and protect your personal information.",
   path: "/privacy-policy",
 });

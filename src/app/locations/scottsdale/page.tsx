@@ -8,16 +8,30 @@ import VideoLightbox from "@/components/VideoLightbox";
 import ConditionFAQ from "@/components/ConditionFAQ";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { buildMetadata, LocalBusinessSchema, BreadcrumbSchema, InlineFAQSchema, SpeakableSchema } from "@/lib/seo";
+import { LocalBusinessSchema, BreadcrumbSchema, InlineFAQSchema, SpeakableSchema, VideoSchemas } from "@/lib/seo";
 import AEOBlock from "@/components/AEOBlock";
 import PhotoGallery from "@/components/PhotoGallery";
+import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
+import { faqData } from "@/data/faq-data";
+import SchemaScript from "@/components/SchemaScript";
+import FAQSection from "@/components/FAQSection";
+import Breadcrumb from "@/components/Breadcrumb";
+import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
+import { getPageMeta } from "@/data/page-metadata";
 
-export const metadata: Metadata = buildMetadata({
-  title: "Luxury Rehab in Scottsdale, AZ",
-  description:
-    "Luxury rehab & addiction treatment in Scottsdale, Arizona. Mountain views, doctoral-level care. Call (480) 931-3617 today.",
-  path: "/locations/scottsdale",
-});
+const meta = getPageMeta("/locations/scottsdale/");
+
+export const metadata: Metadata = {
+  title: meta.title,
+  description: meta.description,
+  alternates: { canonical: meta.canonical },
+  openGraph: {
+    title: meta.title,
+    description: meta.description,
+    url: meta.canonical,
+    images: [{ url: meta.ogImage ?? "https://desertrecoverycenters.com/wp-content/uploads/2024/10/DRC-DRONE-SCOTTSDALE-08-01-2024-August-01-202400020-2.jpg", alt: meta.title }],
+  },
+};
 
 const amenities = [
   "Large Pool",
@@ -52,7 +66,7 @@ const gallery = [
 const faqs = [
   {
     q: "Where exactly is the Scottsdale facility?",
-    a: "Our Scottsdale center is located at 23222 N Church Rd, Scottsdale, AZ 85255 — in the north Scottsdale area surrounded by stunning mountain views and serene desert landscape. It's easily accessible from the Loop 101, Scottsdale Road, and the Pima Freeway.",
+    a: "Our Scottsdale center is located at 23222 N Church Rd, Scottsdale, AZ 85255, in the north Scottsdale area surrounded by stunning mountain views and serene desert landscape. It's easily accessible from the Loop 101, Scottsdale Road, and the Pima Freeway.",
   },
   {
     q: "What programs are available at the Scottsdale location?",
@@ -60,15 +74,15 @@ const faqs = [
   },
   {
     q: "What conditions do you treat at the Scottsdale center?",
-    a: "We treat the full spectrum of mental health conditions and substance use disorders — including anxiety, depression, PTSD, bipolar disorder, OCD, alcohol addiction, opioid dependence, stimulant addiction, and more. Our dual diagnosis approach treats co-occurring conditions simultaneously for stronger outcomes.",
+    a: "We treat the full spectrum of mental health conditions and substance use disorders, including anxiety, depression, PTSD, bipolar disorder, OCD, alcohol addiction, opioid dependence, stimulant addiction, and more. Our dual diagnosis approach treats co-occurring conditions simultaneously for stronger outcomes.",
   },
   {
     q: "Do you accept insurance at the Scottsdale location?",
-    a: "Yes, we are in-network with most major insurance providers including Aetna, Blue Cross Blue Shield, Cigna, and UnitedHealthcare. Coverage varies by plan. Contact us to verify your benefits — our admissions team handles verification at no cost before you begin treatment.",
+    a: "Yes, we are in-network with most major insurance providers including Aetna, Blue Cross Blue Shield, Cigna, and UnitedHealthcare. Coverage varies by plan. Contact us to verify your benefits, our admissions team handles verification at no cost before you begin treatment.",
   },
   {
     q: "What is the clinical team like at Scottsdale?",
-    a: "Your care team includes licensed clinical psychologists, a board-certified psychiatrist, registered nurses, and licensed therapists. Our clinical director, Dr. An Nguyen, is a Licensed Clinical Psychologist who oversees treatment quality across all locations. This is doctoral-level care — not a counselor-driven program.",
+    a: "Your care team includes licensed clinical psychologists, a board-certified psychiatrist, registered nurses, and licensed therapists. Our clinical director, Dr. An Nguyen, is a Licensed Clinical Psychologist who oversees treatment quality across all locations. This is doctoral-level care, not a counselor-driven program.",
   },
   {
     q: "How long does residential treatment typically last?",
@@ -76,7 +90,7 @@ const faqs = [
   },
   {
     q: "Can family members visit the Scottsdale facility?",
-    a: "Absolutely. We encourage family involvement as a core part of recovery. Family members can visit during designated hours and participate in our family therapy program — including education sessions, joint therapy, and family support groups. The north Scottsdale location is convenient for families throughout the metro area.",
+    a: "Absolutely. We encourage family involvement as a core part of recovery. Family members can visit during designated hours and participate in our family therapy program, including education sessions, joint therapy, and family support groups. The north Scottsdale location is convenient for families throughout the metro area.",
   },
   {
     q: "What makes the Scottsdale location different from other DRC facilities?",
@@ -87,15 +101,18 @@ const faqs = [
 export default function ScottsdaleLocationPage() {
   return (
     <>
+      <SchemaScript schema={[getFAQSchema(faqData["locations/scottsdale"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/locations/scottsdale"))]} />
       <InlineFAQSchema items={faqs} />
       <SpeakableSchema url="/locations/scottsdale" cssSelectors={["[data-speakable]"]} />
       <LocalBusinessSchema index={1} />
-      <BreadcrumbSchema items={[{ name: "Locations", path: "/locations/scottsdale" }, { name: "Scottsdale", path: "/locations/scottsdale" }]} />
+      <BreadcrumbSchema items={[{ name: "Facilities", path: "/locations" }, { name: "Scottsdale", path: "/locations/scottsdale" }]} />
+      <VideoSchemas path="/locations/scottsdale/" />
       <Navigation />
+      <Breadcrumb items={getBreadcrumbsFromPathname("/locations/scottsdale")} />
       <PageHero
         eyebrow="Scottsdale, Arizona"
         title="Luxury Rehab and Addiction Treatment in Scottsdale, Arizona"
-        description="Residential mental health and addiction treatment nestled in north Scottsdale — where mountain views meet doctoral-level care."
+        description="Residential mental health and addiction treatment nestled in north Scottsdale, where mountain views meet doctoral-level care."
         bgImage="/images/scottsdale/DRC-DRONE-SCOTTSDALE-08-01-2024-0068August-01-202400009-2.jpg"
       />
 
@@ -107,7 +124,7 @@ export default function ScottsdaleLocationPage() {
               A Recovery Oasis in North Scottsdale
             </h2>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              Our Scottsdale center sits between stunning mountain ranges in one of Arizona&apos;s most beautiful neighborhoods. But what happens inside these walls matters far more than the views outside them. This is where people come to face the hardest challenges of their lives — and where our doctoral-level clinical team helps them do exactly that.
+              Our Scottsdale center sits between stunning mountain ranges in one of Arizona&apos;s most beautiful neighborhoods. But what happens inside these walls matters far more than the views outside them. This is where people come to face the hardest challenges of their lives, and where our doctoral-level clinical team helps them do exactly that.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
               Licensed psychologists, a board-certified psychiatrist, and a dedicated nursing staff deliver evidence-based treatment for addiction and mental health conditions in a residential setting designed for comfort, privacy, and deep personal transformation. Every treatment plan is individualized. Every client receives the attention they deserve.
@@ -207,7 +224,7 @@ export default function ScottsdaleLocationPage() {
               Comprehensive Treatment at DRC Scottsdale
             </h2>
             <p className="text-gray-600 leading-relaxed mb-8">
-              Our Scottsdale clinical team treats the full spectrum of addiction and mental health conditions, with a specialization in dual diagnosis — treating co-occurring conditions simultaneously for lasting recovery.
+              Our Scottsdale clinical team treats the full spectrum of addiction and mental health conditions, with a specialization in dual diagnosis, treating co-occurring conditions simultaneously for lasting recovery.
             </p>
             <div className="grid md:grid-cols-2 gap-4 mb-6">
               {[
@@ -253,19 +270,19 @@ export default function ScottsdaleLocationPage() {
               {[
                 {
                   title: "Doctoral-Level Clinical Team",
-                  desc: "Your treatment is led by licensed clinical psychologists and overseen by a board-certified psychiatrist. This isn't a counselor-driven program — it's the highest standard of clinical care available in residential treatment.",
+                  desc: "Your treatment is led by licensed clinical psychologists and overseen by a board-certified psychiatrist. This isn't a counselor-driven program, it's the highest standard of clinical care available in residential treatment.",
                 },
                 {
                   title: "Individualized Treatment Plans",
-                  desc: "No two clients are alike. Your treatment plan is designed specifically around your diagnosis, history, goals, and strengths — and adjusted continuously as you progress.",
+                  desc: "No two clients are alike. Your treatment plan is designed specifically around your diagnosis, history, goals, and strengths, and adjusted continuously as you progress.",
                 },
                 {
                   title: "Evidence-Based Therapies",
-                  desc: "CBT, DBT, EMDR, trauma-focused therapy, motivational interviewing, and medication management — delivered by specialists trained in each modality.",
+                  desc: "CBT, DBT, EMDR, trauma-focused therapy, motivational interviewing, and medication management, delivered by specialists trained in each modality.",
                 },
                 {
                   title: "Holistic Wellness Programming",
-                  desc: "Yoga, mindfulness meditation, art therapy, nutritional counseling, fitness programming, and nature-based activities that heal the whole person — not just the diagnosis.",
+                  desc: "Yoga, mindfulness meditation, art therapy, nutritional counseling, fitness programming, and nature-based activities that heal the whole person, not just the diagnosis.",
                 },
                 {
                   title: "Gender-Specific Group Therapy",
@@ -292,13 +309,14 @@ export default function ScottsdaleLocationPage() {
         },
         {
           question: "What addiction treatment is available in Scottsdale, Arizona?",
-          answer: "Desert Recovery Centers offers comprehensive addiction and mental health treatment in Scottsdale. As a Joint Commission accredited luxury treatment center in Arizona, we provide evidence-based dual diagnosis treatment using CBT, DBT, EMDR, gender-specific group therapy, and holistic therapies — delivered by licensed psychologists and board-certified psychiatrists.",
+          answer: "Desert Recovery Centers offers comprehensive addiction and mental health treatment in Scottsdale. As a Joint Commission accredited luxury treatment center in Arizona, we provide evidence-based dual diagnosis treatment using CBT, DBT, EMDR, gender-specific group therapy, and holistic therapies, delivered by licensed psychologists and board-certified psychiatrists.",
         },
         {
           question: "Does Desert Recovery Centers accept insurance for Scottsdale residents?",
           answer: "Yes, Desert Recovery Centers accepts most major insurance plans for Scottsdale residents, including Aetna, Blue Cross Blue Shield, Cigna, and UnitedHealthcare. Coverage varies by plan. Our admissions team verifies benefits at no cost before treatment begins. Call (480) 931-3617 for a free insurance check.",
         },
       ]} />
+      <FAQSection faqs={faqData["locations/scottsdale"]} />
       <CTASection />
       <Footer />
     </>

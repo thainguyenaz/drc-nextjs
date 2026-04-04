@@ -11,7 +11,7 @@ import { MedicalTherapySchema } from "@/lib/seo";
 
 const includes = [
   "1-2 additional focused sessions per week with a therapist under the direction of our clinical psychologists",
-  "Brief, structured sessions between formal therapy — designed to reinforce and apply what clients learn",
+  "Brief, structured sessions between formal therapy, designed to reinforce and apply what clients learn",
   "Focused on accountability, psychoeducation, and real-life application of clinical skills",
   "Reinforcement of CBT, DBT, trauma processing, coping skills, and recovery strategies",
   "Real-time coaching to help clients use therapeutic tools when they need them most",
@@ -20,7 +20,7 @@ const includes = [
 const isNot = [
   "Not case management or administrative check-ins",
   "Not a replacement for primary individual therapy sessions",
-  "Not peer support — BridgeWork is clinician-led and clinically supervised",
+  "Not peer support, BridgeWork is clinician-led and clinically supervised",
 ];
 
 const idealFor = [
@@ -54,7 +54,7 @@ export default function BridgeWorkPage() {
       <PageHero
         eyebrow="Proprietary Program"
         title={`BridgeWork™`}
-        description="Clinical psychologist-led skill integration — where therapeutic insight becomes real-world action. Exclusive to Desert Recovery Centers."
+        description="Clinical psychologist-led skill integration, where therapeutic insight becomes real-world action. Exclusive to Desert Recovery Centers."
         bgImage="/images/general/DRC-Treatment-Therapies-BG-Fade.jpg"
       />
 
@@ -106,7 +106,7 @@ export default function BridgeWorkPage() {
               In traditional residential treatment, clients attend individual therapy, group therapy, and perhaps a skills group. But there&apos;s a critical gap that most programs overlook: the space between learning a skill and actually using it under pressure.
             </p>
             <p className="text-gray-600 leading-relaxed mb-4">
-              BridgeWork™ was developed in-house by the clinical team at Desert Recovery Centers to fill this exact gap. It offers 1-2 additional focused sessions per week with a therapist under the direct supervision of our clinical psychologists — sessions designed specifically to help clients practice, apply, and internalize therapeutic tools in real time.
+              BridgeWork™ was developed in-house by the clinical team at Desert Recovery Centers to fill this exact gap. It offers 1-2 additional focused sessions per week with a therapist under the direct supervision of our clinical psychologists, sessions designed specifically to help clients practice, apply, and internalize therapeutic tools in real time.
             </p>
             <p className="text-gray-600 leading-relaxed">
               BridgeWork™ is one of the only clinical psychologist-led skill integration programs in the region, and it is available exclusively at Desert Recovery Centers.
@@ -115,7 +115,7 @@ export default function BridgeWorkPage() {
         </div>
       </section>
 
-      {/* What it includes — collision */}
+      {/* What it includes, collision */}
       <section className="bg-forest py-20 md:py-28 overflow-hidden">
         <div className="max-w-container mx-auto px-6">
           <div className="flex flex-col md:flex-row gap-12 lg:gap-20 items-center">
@@ -169,7 +169,7 @@ export default function BridgeWorkPage() {
               <div className="relative h-[400px] md:h-[600px] rounded-2xl overflow-hidden shadow-xl group">
                 <Image
                   src="/images/scottsdale/DRC-VHARMONY-ROOM-NORTH-SCOTTSDALE-08-01-2024-0631August-01-202400010-2.jpg"
-                  alt="Harmony therapy room — BridgeWork program"
+                  alt="Harmony therapy room, BridgeWork program"
                   fill
                   className="object-cover group-hover:scale-[1.04] transition-transform duration-[350ms] ease-out"
                   sizes="(max-width: 768px) 100vw, 40vw"
@@ -242,7 +242,7 @@ export default function BridgeWorkPage() {
               Where Therapy Becomes Practice
             </h2>
             <p className="text-gray-600 leading-relaxed mb-4">
-              BridgeWork™ represents our belief that knowing what to do and being able to do it under pressure are two different things. This program closes that gap — and it&apos;s available only at Desert Recovery Centers.
+              BridgeWork™ represents our belief that knowing what to do and being able to do it under pressure are two different things. This program closes that gap, and it&apos;s available only at Desert Recovery Centers.
             </p>
             <p className="text-gold text-sm font-medium italic mb-8">
               BridgeWork™ is one of the only clinical psychologist-led skill integration programs in the region.
@@ -281,11 +281,11 @@ export default function BridgeWorkPage() {
           <div className="max-w-3xl mx-auto space-y-8">
             <article className="border-l-2 border-gold/30 pl-5">
               <h3 className="text-forest font-semibold text-sm mb-1">What is BridgeWork&trade; at Desert Recovery Centers?</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">BridgeWork&trade; is a proprietary skill integration program developed in-house by the clinical team at Desert Recovery Centers, a Joint Commission accredited luxury treatment center in Arizona. It provides 1 to 2 additional focused sessions per week that help clients practice, apply, and internalize therapeutic tools in real time — bridging the gap between learning a skill and using it under pressure.</p>
+              <p className="text-gray-600 text-sm leading-relaxed">BridgeWork&trade; is a proprietary skill integration program developed in-house by the clinical team at Desert Recovery Centers, a Joint Commission accredited luxury treatment center in Arizona. It provides 1 to 2 additional focused sessions per week that help clients practice, apply, and internalize therapeutic tools in real time, bridging the gap between learning a skill and using it under pressure.</p>
             </article>
             <article className="border-l-2 border-gold/30 pl-5">
               <h3 className="text-forest font-semibold text-sm mb-1">How does BridgeWork&trade; work for addiction and mental health treatment?</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">BridgeWork&trade; fills a critical gap that most treatment programs overlook: the space between learning a therapeutic skill and actually applying it under real-world pressure. Through structured sessions focused on accountability, psychoeducation, and real-life application, clients reinforce CBT, DBT, trauma processing, and coping strategies — increasing the likelihood that skills learned in therapy translate into lasting behavioral change.</p>
+              <p className="text-gray-600 text-sm leading-relaxed">BridgeWork&trade; fills a critical gap that most treatment programs overlook: the space between learning a therapeutic skill and actually applying it under real-world pressure. Through structured sessions focused on accountability, psychoeducation, and real-life application, clients reinforce CBT, DBT, trauma processing, and coping strategies, increasing the likelihood that skills learned in therapy translate into lasting behavioral change.</p>
             </article>
             <article className="border-l-2 border-gold/30 pl-5">
               <h3 className="text-forest font-semibold text-sm mb-1">Who delivers BridgeWork&trade; at Desert Recovery Centers?</h3>

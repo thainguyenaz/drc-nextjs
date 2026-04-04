@@ -31,11 +31,11 @@ const faqs = [
   },
   {
     q: "Is residential treatment necessary for trauma?",
-    a: "For moderate to severe trauma — especially when symptoms significantly impair daily functioning or when outpatient therapy hasn't produced sufficient improvement — residential care provides intensive, structured support. You have 24/7 clinical availability, no external stressors, and the ability to go deeper and faster than weekly outpatient sessions allow.",
+    a: "For moderate to severe trauma, especially when symptoms significantly impair daily functioning or when outpatient therapy hasn't produced sufficient improvement, residential care provides intensive, structured support. You have 24/7 clinical availability, no external stressors, and the ability to go deeper and faster than weekly outpatient sessions allow.",
   },
   {
     q: "Do you treat trauma alongside substance use disorders?",
-    a: "Yes — this is one of our core specializations. Trauma and addiction are deeply intertwined. Many people use substances to cope with unresolved trauma, and substance use can create additional traumatic experiences. Our dual diagnosis approach treats both simultaneously, which research shows produces significantly better outcomes than treating them separately.",
+    a: "Yes, this is one of our core specializations. Trauma and addiction are deeply intertwined. Many people use substances to cope with unresolved trauma, and substance use can create additional traumatic experiences. Our dual diagnosis approach treats both simultaneously, which research shows produces significantly better outcomes than treating them separately.",
   },
 ];
 
@@ -75,13 +75,13 @@ export default function TraumaTreatmentPage() {
               Trauma Changes Everything. The Right Treatment Changes It Back.
             </h2>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              Trauma doesn&apos;t just live in your memory. It lives in your body — in the way your heart races when something reminds you of what happened, in the tension you carry without realizing it, in the hypervigilance that won&apos;t let you relax even when you&apos;re safe.
+              Trauma doesn&apos;t just live in your memory. It lives in your body, in the way your heart races when something reminds you of what happened, in the tension you carry without realizing it, in the hypervigilance that won&apos;t let you relax even when you&apos;re safe.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              Maybe you&apos;ve tried to push through it. Maybe you&apos;ve been told to &quot;move on&quot; or &quot;let it go.&quot; But trauma doesn&apos;t respond to willpower. It responds to specialized treatment that helps your brain and nervous system process what happened — so you can finally stop surviving and start living again.
+              Maybe you&apos;ve tried to push through it. Maybe you&apos;ve been told to &quot;move on&quot; or &quot;let it go.&quot; But trauma doesn&apos;t respond to willpower. It responds to specialized treatment that helps your brain and nervous system process what happened, so you can finally stop surviving and start living again.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg">
-              At Desert Recovery Centers, our trauma specialists use the most advanced, evidence-based therapies available — EMDR, somatic experiencing, trauma-focused CBT — delivered by clinicians with advanced training in trauma treatment. In our luxury residential setting, you have the safety, structure, and clinical support to do the deepest healing work of your life.
+              At Desert Recovery Centers, our trauma specialists use the most advanced, evidence-based therapies available, EMDR, somatic experiencing, trauma-focused CBT, delivered by clinicians with advanced training in trauma treatment. In our luxury residential setting, you have the safety, structure, and clinical support to do the deepest healing work of your life.
             </p>
           </div>
         </div>
@@ -106,7 +106,7 @@ export default function TraumaTreatmentPage() {
             <div className="grid md:grid-cols-2 gap-4">
               {[
                 "Flashbacks, intrusive memories, or nightmares about past events",
-                "Hypervigilance — constantly scanning for danger in safe situations",
+                "Hypervigilance, constantly scanning for danger in safe situations",
                 "Emotional numbness or feeling disconnected from others",
                 "Avoiding people, places, or situations that trigger memories",
                 "Difficulty trusting others or maintaining close relationships",
@@ -133,10 +133,10 @@ export default function TraumaTreatmentPage() {
             <div className="space-y-6">
               {[
                 { title: "EMDR Therapy", desc: "Our trained EMDR therapists guide you through structured sessions that help your brain reprocess traumatic memories, reducing their emotional intensity and the power they hold over your daily life." },
-                { title: "Trauma-Focused CBT", desc: "Cognitive behavioral therapy adapted for trauma helps you identify and restructure distorted beliefs that trauma has implanted — such as 'it was my fault' or 'the world is unsafe.'" },
+                { title: "Trauma-Focused CBT", desc: "Cognitive behavioral therapy adapted for trauma helps you identify and restructure distorted beliefs that trauma has implanted, such as 'it was my fault' or 'the world is unsafe.'" },
                 { title: "Somatic Experiencing", desc: "Trauma lives in the body, not just the mind. Somatic therapies help release the physical tension and survival energy your body has been holding, restoring your nervous system to balance." },
-                { title: "Experiential Therapies", desc: "Art therapy, yoga, mindfulness meditation, and nature-based activities offer non-verbal pathways to process trauma — especially important for experiences that are difficult to put into words." },
-                { title: "Dual Diagnosis Treatment", desc: "When trauma co-occurs with substance use — which it frequently does — our integrated approach treats both simultaneously. Addressing the trauma reduces the drive to self-medicate." },
+                { title: "Experiential Therapies", desc: "Art therapy, yoga, mindfulness meditation, and nature-based activities offer non-verbal pathways to process trauma, especially important for experiences that are difficult to put into words." },
+                { title: "Dual Diagnosis Treatment", desc: "When trauma co-occurs with substance use, which it frequently does, our integrated approach treats both simultaneously. Addressing the trauma reduces the drive to self-medicate." },
               ].map((item, i) => (
                 <div key={i} className="border-l-2 border-gold/40 pl-6">
                   <h3 className="font-display text-lg text-forest font-semibold mb-2">{item.title}</h3>
@@ -158,7 +158,7 @@ export default function TraumaTreatmentPage() {
               {[
                 { title: "Trauma-Specialized Clinicians", desc: "Our licensed psychologists and therapists have advanced training in EMDR, somatic experiencing, and trauma-focused modalities. This is specialized treatment from people who understand trauma at its deepest level." },
                 { title: "Safety as a Foundation", desc: "Our small program sizes, consistent clinical teams, and predictable daily structure create the stability your nervous system needs to begin healing." },
-                { title: "24/7 Clinical Support", desc: "Processing trauma can surface intense emotions. Our clinical and nursing staff are available around the clock — so you're never alone with a flashback, nightmare, or overwhelming feeling." },
+                { title: "24/7 Clinical Support", desc: "Processing trauma can surface intense emotions. Our clinical and nursing staff are available around the clock, so you're never alone with a flashback, nightmare, or overwhelming feeling." },
                 { title: "Luxury Environment", desc: "Healing from trauma requires feeling genuinely safe and cared for. Our resort-level facilities in Glendale, Scottsdale, and Phoenix provide the comfort that supports deeper therapeutic work." },
               ].map((item, i) => (
                 <div key={i} className="bg-white rounded-xl p-6 border border-gray-100">

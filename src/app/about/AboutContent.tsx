@@ -6,11 +6,11 @@ import { motion } from "framer-motion";
 const values = [
   {
     title: "Dual Diagnosis Specialization",
-    desc: "Mental health and addiction rarely exist in isolation. Our clinical team treats both conditions simultaneously — because addressing only one leaves the other untreated and recovery incomplete.",
+    desc: "Mental health and addiction rarely exist in isolation. Our clinical team treats both conditions simultaneously, because addressing only one leaves the other untreated and recovery incomplete.",
   },
   {
     title: "10-Bed Maximum Philosophy",
-    desc: "We intentionally limit each facility to 10 beds. This ensures every client receives deeply personalized attention from licensed psychologists, psychiatrists, and therapists — not assembly-line care.",
+    desc: "We intentionally limit each facility to 10 beds. This ensures every client receives deeply personalized attention from licensed psychologists, psychiatrists, and therapists, not assembly-line care.",
   },
   {
     title: "Joint Commission Accredited",
@@ -22,7 +22,7 @@ const values = [
   },
   {
     title: "Luxury Healing Environment",
-    desc: "Recovery happens best when you feel safe. Our Arizona facilities feature private rooms, gourmet meals, pools, fitness centers, and mountain views — clinical treatment in a setting that supports whole-person healing.",
+    desc: "Recovery happens best when you feel safe. Our Arizona facilities feature private rooms, gourmet meals, pools, fitness centers, and mountain views, clinical treatment in a setting that supports whole-person healing.",
   },
   {
     title: "Comprehensive Aftercare",
@@ -76,7 +76,7 @@ export default function AboutContent() {
                 Too many treatment centers prioritize volume over outcomes. We chose a different path. By limiting each facility to just 10 beds, we ensure that every person who walks through our doors receives the individualized attention that drives real, lasting change.
               </p>
               <p className="text-gray-600 leading-relaxed text-lg">
-                Our founding team saw firsthand what works in behavioral health — and what doesn&apos;t. DRC was built to be the treatment center they wished existed: clinically rigorous, deeply personal, and relentlessly focused on outcomes.
+                Our founding team saw firsthand what works in behavioral health, and what doesn&apos;t. DRC was built to be the treatment center they wished existed: clinically rigorous, deeply personal, and relentlessly focused on outcomes.
               </p>
             </motion.div>
             <motion.div
@@ -112,7 +112,7 @@ export default function AboutContent() {
             Heal. <span className="text-gold">Restore.</span> Thrive.
           </h2>
           <p className="text-white/60 mt-4 max-w-xl mx-auto text-sm leading-relaxed">
-            Three words that guide everything we do — from the clinical protocols we follow to the way we greet you at the door.
+            Three words that guide everything we do, from the clinical protocols we follow to the way we greet you at the door.
           </p>
         </motion.div>
       </section>
@@ -228,10 +228,10 @@ export default function AboutContent() {
                 Why We Built DRC
               </h2>
               <p className="text-gray-600 leading-relaxed mb-4">
-                Desert Recovery Centers grew from a recognition that the behavioral health industry needed a fundamentally different model. Our founders — clinicians and operators who spent years inside traditional treatment systems — saw patients cycling through programs that treated symptoms without addressing root causes, and discharged people before they were ready.
+                Desert Recovery Centers grew from a recognition that the behavioral health industry needed a fundamentally different model. Our founders, clinicians and operators who spent years inside traditional treatment systems, saw patients cycling through programs that treated symptoms without addressing root causes, and discharged people before they were ready.
               </p>
               <p className="text-gray-600 leading-relaxed mb-4">
-                DRC was designed from the ground up to correct those failures. Small facility sizes ensure no one gets lost. Doctoral-level clinical leadership means treatment plans are informed by the latest research. A dual diagnosis model ensures that mental health and addiction are treated together — because they almost always occur together.
+                DRC was designed from the ground up to correct those failures. Small facility sizes ensure no one gets lost. Doctoral-level clinical leadership means treatment plans are informed by the latest research. A dual diagnosis model ensures that mental health and addiction are treated together, because they almost always occur together.
               </p>
               <p className="text-gray-600 leading-relaxed">
                 Today, DRC operates three luxury residential facilities across Arizona. Our approach hasn&apos;t changed: treat fewer people, treat them better, and give them every possible advantage in building a life worth living. <strong className="text-forest">Heal. Restore. Thrive.</strong>
@@ -259,7 +259,7 @@ export default function AboutContent() {
                 Held to the Highest Standards
               </h2>
               <p className="text-gray-600 leading-relaxed mb-8">
-                Desert Recovery Centers is accredited by The Joint Commission — the gold standard in healthcare accreditation. This means our clinical protocols, safety procedures, patient rights protections, and treatment outcomes are regularly evaluated against the most rigorous benchmarks in the industry. We also maintain LegitScript certification, verifying that our advertising and business practices meet the highest ethical standards.
+                Desert Recovery Centers is accredited by The Joint Commission, the gold standard in healthcare accreditation. This means our clinical protocols, safety procedures, patient rights protections, and treatment outcomes are regularly evaluated against the most rigorous benchmarks in the industry. We also maintain LegitScript certification, verifying that our advertising and business practices meet the highest ethical standards.
               </p>
               <div className="flex items-center justify-center gap-8">
                 <Image

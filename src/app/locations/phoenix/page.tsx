@@ -5,33 +5,47 @@ import PageHero from "@/components/PageHero";
 import ConditionFAQ from "@/components/ConditionFAQ";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { buildMetadata, LocalBusinessSchema, BreadcrumbSchema, InlineFAQSchema, SpeakableSchema } from "@/lib/seo";
+import { LocalBusinessSchema, BreadcrumbSchema, InlineFAQSchema, SpeakableSchema, VideoSchemas } from "@/lib/seo";
 import AEOBlock from "@/components/AEOBlock";
 import PhotoGallery from "@/components/PhotoGallery";
+import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
+import { faqData } from "@/data/faq-data";
+import SchemaScript from "@/components/SchemaScript";
+import FAQSection from "@/components/FAQSection";
+import Breadcrumb from "@/components/Breadcrumb";
+import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
+import { getPageMeta } from "@/data/page-metadata";
 
-export const metadata: Metadata = buildMetadata({
-  title: "Phoenix PHP / IOP Center — Desert Recovery Centers",
-  description:
-    "PHP, IOP, OP, and TMS therapy at 4160 N. 108th Ave, Phoenix, AZ 85037. Outpatient addiction and mental health treatment. Call (623) 257-5384.",
-  path: "/locations/phoenix",
-});
+const meta = getPageMeta("/locations/phoenix/");
+
+export const metadata: Metadata = {
+  title: meta.title,
+  description: meta.description,
+  alternates: { canonical: meta.canonical },
+  openGraph: {
+    title: meta.title,
+    description: meta.description,
+    url: meta.canonical,
+    images: [{ url: meta.ogImage ?? "https://desertrecoverycenters.com/wp-content/uploads/2024/10/DRC-DRONE-SCOTTSDALE-08-01-2024-August-01-202400020-2.jpg", alt: meta.title }],
+  },
+};
 
 const services = [
   {
-    name: "PHP — Partial Hospitalization",
+    name: "PHP, Partial Hospitalization",
     desc: "5-6 hours of daily clinical programming, 5 days per week. Structured therapy with the flexibility to return home each evening.",
   },
   {
-    name: "IOP — Intensive Outpatient",
+    name: "IOP, Intensive Outpatient",
     desc: "3-4 sessions per week designed to work around your schedule. Step-down from PHP or standalone entry point.",
   },
   {
-    name: "OP — Outpatient",
+    name: "OP, Outpatient",
     desc: "1-3 sessions per week for ongoing maintenance, skill reinforcement, and long-term recovery support.",
   },
   {
     name: "TMS Therapy",
-    desc: "NeuroStar Transcranial Magnetic Stimulation — FDA-cleared for depression, anxious depression, OCD, and adolescents ages 15+.",
+    desc: "NeuroStar Transcranial Magnetic Stimulation, FDA-cleared for depression, anxious depression, OCD, and adolescents ages 15+.",
   },
 ];
 
@@ -42,19 +56,19 @@ const faqs = [
   },
   {
     q: "What programs are available at the Phoenix location?",
-    a: "We offer PHP (Partial Hospitalization), IOP (Intensive Outpatient), OP (Outpatient), and NeuroStar TMS therapy. This location does not offer residential treatment — for residential programs, please see our Glendale or Scottsdale facilities.",
+    a: "We offer PHP (Partial Hospitalization), IOP (Intensive Outpatient), OP (Outpatient), and NeuroStar TMS therapy. This location does not offer residential treatment, for residential programs, please see our Glendale or Scottsdale facilities.",
   },
   {
     q: "What conditions do you treat at the Phoenix center?",
-    a: "We treat substance use disorders — alcohol, opioids, fentanyl, cocaine, meth, prescription drugs — and mental health conditions including anxiety, depression, PTSD, bipolar disorder, OCD, ADHD, personality disorders, and schizophrenia. Our dual diagnosis approach treats co-occurring conditions simultaneously.",
+    a: "We treat substance use disorders, alcohol, opioids, fentanyl, cocaine, meth, prescription drugs, and mental health conditions including anxiety, depression, PTSD, bipolar disorder, OCD, ADHD, personality disorders, and schizophrenia. Our dual diagnosis approach treats co-occurring conditions simultaneously.",
   },
   {
     q: "Do you accept insurance at the Phoenix location?",
-    a: "Yes, we are in-network with most major insurance providers including Aetna, Blue Cross Blue Shield, Cigna, and UnitedHealthcare. Coverage varies by plan. Contact us to verify your benefits — our admissions team handles verification at no cost.",
+    a: "Yes, we are in-network with most major insurance providers including Aetna, Blue Cross Blue Shield, Cigna, and UnitedHealthcare. Coverage varies by plan. Contact us to verify your benefits, our admissions team handles verification at no cost.",
   },
   {
     q: "Is TMS therapy available at Phoenix?",
-    a: "Yes, our Phoenix center offers NeuroStar TMS therapy — FDA-cleared for major depressive disorder, anxious depression, OCD, and adolescents ages 15 and older. TMS is a safe, non-invasive treatment that does not require medication or sedation.",
+    a: "Yes, our Phoenix center offers NeuroStar TMS therapy, FDA-cleared for major depressive disorder, anxious depression, OCD, and adolescents ages 15 and older. TMS is a safe, non-invasive treatment that does not require medication or sedation.",
   },
   {
     q: "How quickly can I start treatment at the Phoenix center?",
@@ -88,15 +102,18 @@ const gallery = [
 export default function PhoenixLocationPage() {
   return (
     <>
+      <SchemaScript schema={[getFAQSchema(faqData["locations/phoenix"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/locations/phoenix"))]} />
       <InlineFAQSchema items={faqs} />
       <SpeakableSchema url="/locations/phoenix" cssSelectors={["[data-speakable]"]} />
       <LocalBusinessSchema index={2} />
-      <BreadcrumbSchema items={[{ name: "Locations", path: "/locations" }, { name: "Phoenix PHP/IOP", path: "/locations/phoenix" }]} />
+      <BreadcrumbSchema items={[{ name: "Facilities", path: "/locations" }, { name: "Phoenix", path: "/locations/phoenix" }]} />
+      <VideoSchemas path="/locations/phoenix/" />
       <Navigation />
+      <Breadcrumb items={getBreadcrumbsFromPathname("/locations/phoenix")} />
       <PageHero
         eyebrow="Phoenix, Arizona"
         title="Phoenix PHP / IOP Center"
-        description="Outpatient addiction and mental health treatment — PHP, IOP, OP, and TMS therapy in the West Valley."
+        description="Outpatient addiction and mental health treatment, PHP, IOP, OP, and TMS therapy in the West Valley."
         bgImage="/images/general/accom-group-room.jpg"
       />
 
@@ -111,7 +128,7 @@ export default function PhoenixLocationPage() {
               Our Phoenix center at 4160 N. 108th Ave provides structured outpatient programming for clients stepping down from residential treatment or entering care directly. PHP, IOP, and OP programs are designed to deliver clinical depth while allowing you to maintain daily responsibilities.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg mb-6">
-              This location also houses our NeuroStar TMS therapy suite — the only TMS system FDA-cleared for depression, anxious depression, OCD, and adolescents ages 15 and older.
+              This location also houses our NeuroStar TMS therapy suite, the only TMS system FDA-cleared for depression, anxious depression, OCD, and adolescents ages 15 and older.
             </p>
 
             {/* Residential callout */}
@@ -225,6 +242,7 @@ export default function PhoenixLocationPage() {
           answer: "Yes, Desert Recovery Centers accepts most major insurance plans for Phoenix residents, including Aetna, Blue Cross Blue Shield, Cigna, and UnitedHealthcare. Coverage varies by plan. Our admissions team verifies benefits at no cost before treatment begins. Call (623) 257-5384 for a free insurance check.",
         },
       ]} />
+      <FAQSection faqs={faqData["locations/phoenix"]} />
       <CTASection />
       <Footer />
     </>

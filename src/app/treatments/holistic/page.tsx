@@ -20,7 +20,7 @@ const therapies = [
   },
   {
     name: "Art Therapy",
-    description: "Facilitated creative expression that allows clients to process emotions non-verbally — especially valuable for trauma survivors.",
+    description: "Facilitated creative expression that allows clients to process emotions non-verbally, especially valuable for trauma survivors.",
   },
   {
     name: "Music Therapy",
@@ -66,7 +66,7 @@ export default function HolisticPage() {
       <PageHero
         eyebrow="Whole-Person Care"
         title="Holistic Therapies"
-        description="Healing the whole person — mind, body, and spirit — through evidence-informed complementary therapies that enhance clinical treatment."
+        description="Healing the whole person, mind, body, and spirit, through evidence-informed complementary therapies that enhance clinical treatment."
         bgImage="/images/general/DRC-Treatment-Therapies-BG-Fade.jpg"
       />
 
@@ -115,10 +115,10 @@ export default function HolisticPage() {
               Recovery Is More Than Talk Therapy
             </h2>
             <p className="text-gray-600 leading-relaxed mb-4">
-              Mental health conditions and addiction don&apos;t just live in the mind — they manifest in the body, disrupt sleep, alter nutrition, and erode spiritual well-being. True recovery requires addressing all of these dimensions simultaneously.
+              Mental health conditions and addiction don&apos;t just live in the mind, they manifest in the body, disrupt sleep, alter nutrition, and erode spiritual well-being. True recovery requires addressing all of these dimensions simultaneously.
             </p>
             <p className="text-gray-600 leading-relaxed mb-4">
-              At Desert Recovery Centers, holistic therapies are not alternatives to evidence-based clinical treatment — they are complements that amplify outcomes. Yoga reduces cortisol. Breathwork calms the nervous system. Nutrition counseling restores the biochemical foundation that medication and therapy depend on.
+              At Desert Recovery Centers, holistic therapies are not alternatives to evidence-based clinical treatment, they are complements that amplify outcomes. Yoga reduces cortisol. Breathwork calms the nervous system. Nutrition counseling restores the biochemical foundation that medication and therapy depend on.
             </p>
             <p className="text-gray-600 leading-relaxed">
               Every holistic offering is integrated into the clinical treatment plan and overseen by our clinical team, ensuring alignment with each client&apos;s therapeutic goals.
@@ -182,10 +182,10 @@ export default function HolisticPage() {
                 Environments Designed for Holistic Healing
               </h2>
               <p className="text-white/70 text-sm leading-relaxed mb-6">
-                Our luxury facilities are purpose-built for whole-person recovery. Each location features dedicated wellness spaces — massage rooms, yoga areas, meditation gardens, and state-of-the-art fitness centers — alongside the natural beauty of the Arizona desert.
+                Our luxury facilities are purpose-built for whole-person recovery. Each location features dedicated wellness spaces, massage rooms, yoga areas, meditation gardens, and state-of-the-art fitness centers, alongside the natural beauty of the Arizona desert.
               </p>
               <p className="text-white/70 text-sm leading-relaxed mb-8">
-                Gourmet, nutritionist-designed meals fuel the body. Resort-style amenities — pools, tennis courts, basketball courts — encourage physical activity and healthy recreation. The environment itself becomes part of the healing process.
+                Gourmet, nutritionist-designed meals fuel the body. Resort-style amenities, pools, tennis courts, basketball courts, encourage physical activity and healthy recreation. The environment itself becomes part of the healing process.
               </p>
               <div className="flex flex-wrap gap-3">
                 <a href="/facilities/glendale" className="text-center bg-gold hover:bg-gold-dark text-white font-semibold text-sm px-6 py-3 rounded-xl transition-colors cursor-pointer">
@@ -283,7 +283,7 @@ export default function HolisticPage() {
             </article>
             <article className="border-l-2 border-gold/30 pl-5">
               <h3 className="text-forest font-semibold text-sm mb-1">Who delivers holistic therapies at Desert Recovery Centers?</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">Holistic therapies at Desert Recovery Centers are delivered by certified practitioners in each modality — licensed massage therapists, certified yoga instructors, registered dietitians, and trained art therapists — all under the clinical oversight of our doctoral-level psychologists. Small client-to-clinician ratios ensure each client receives personalized holistic care integrated with their overall treatment plan.</p>
+              <p className="text-gray-600 text-sm leading-relaxed">Holistic therapies at Desert Recovery Centers are delivered by certified practitioners in each modality, licensed massage therapists, certified yoga instructors, registered dietitians, and trained art therapists, all under the clinical oversight of our doctoral-level psychologists. Small client-to-clinician ratios ensure each client receives personalized holistic care integrated with their overall treatment plan.</p>
             </article>
           </div>
         </div>

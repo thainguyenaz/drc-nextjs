@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 import { buildMetadata, BreadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Does United Healthcare Cover Rehab in Arizona? — Desert Recovery Centers",
+  title: "Does United Healthcare Cover Rehab in Arizona?, Desert Recovery Centers",
   description:
     "Find out if UHC covers drug and alcohol rehab in Arizona. Learn about Optum behavioral health, medical necessity criteria, and how to verify your UHC benefits.",
   path: "/insurance/united",
@@ -57,7 +57,7 @@ export default function UnitedInsurancePage() {
       <div className="bg-cream border-b border-gold/20">
         <div className="max-w-container mx-auto px-6 py-3 text-center">
           <p className="text-xs text-sage font-body tracking-wide">
-            Insurance information reviewed by Desert Recovery Centers admissions team — updated April 2026
+            Insurance information reviewed by Desert Recovery Centers admissions team, updated April 2026
           </p>
         </div>
       </div>
@@ -73,7 +73,7 @@ export default function UnitedInsurancePage() {
               United Healthcare (UHC) is the largest health insurance company in the United States, covering more than 50 million members through employer-sponsored, individual, Medicare, and Medicaid plans. The vast majority of UHC plans include behavioral health benefits that cover substance use disorder treatment.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              UHC manages its behavioral health benefits through Optum, a subsidiary that oversees clinical reviews, prior authorizations, and network management for mental health and addiction services. Understanding how Optum operates is key to navigating your UHC coverage — and it&apos;s something our admissions team does every day.
+              UHC manages its behavioral health benefits through Optum, a subsidiary that oversees clinical reviews, prior authorizations, and network management for mental health and addiction services. Understanding how Optum operates is key to navigating your UHC coverage, and it&apos;s something our admissions team does every day.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg">
               Rather than spending hours on hold with UHC or Optum, let our team verify your benefits for you. Call{" "}
@@ -182,7 +182,7 @@ export default function UnitedInsurancePage() {
               How to Verify Your UHC Benefits in 3 Simple Steps
             </h2>
             <p className="text-gray-600 leading-relaxed text-lg mb-8">
-              Navigating UHC and Optum on your own can be confusing. We handle the insurance verification for you — here&apos;s what to expect:
+              Navigating UHC and Optum on your own can be confusing. We handle the insurance verification for you, here&apos;s what to expect:
             </p>
             <div className="grid md:grid-cols-3 gap-6">
               {[
@@ -199,7 +199,7 @@ export default function UnitedInsurancePage() {
                 {
                   step: "3",
                   title: "Know Your Options",
-                  desc: "We explain your coverage in clear terms — including deductibles, copays, authorized levels of care, and any estimated out-of-pocket costs.",
+                  desc: "We explain your coverage in clear terms, including deductibles, copays, authorized levels of care, and any estimated out-of-pocket costs.",
                 },
               ].map((item, i) => (
                 <div key={i} className="bg-white rounded-xl p-6 border border-gray-100 text-center">

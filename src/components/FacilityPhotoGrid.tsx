@@ -17,7 +17,7 @@ export default function FacilityPhotoGrid() {
     <section className="py-20 md:py-28 bg-white">
       <div className="max-w-container mx-auto px-6">
         <div className="flex flex-col md:flex-row gap-12 md:gap-16 items-center">
-          {/* Left — 40% text */}
+          {/* Left, 40% text */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -33,7 +33,7 @@ export default function FacilityPhotoGrid() {
               Luxury Accommodations Designed for Healing
             </h2>
             <p className="text-gray-600 leading-relaxed mb-4">
-              Our facilities are designed to feel like high-end residences, not clinical environments. Every detail — from the gourmet kitchen to the private therapy rooms — is curated to support your comfort and recovery.
+              Our facilities are designed to feel like high-end residences, not clinical environments. Every detail, from the gourmet kitchen to the private therapy rooms, is curated to support your comfort and recovery.
             </p>
             <p className="text-gray-600 leading-relaxed mb-8">
               Private rooms, resort-style amenities, and serene desert surroundings create the ideal environment for deep healing and personal transformation.
@@ -46,7 +46,7 @@ export default function FacilityPhotoGrid() {
             </a>
           </motion.div>
 
-          {/* Right — 60% photo grid */}
+          {/* Right, 60% photo grid */}
           <div className="md:w-[60%]">
             <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
               {photos.map((photo, i) => (

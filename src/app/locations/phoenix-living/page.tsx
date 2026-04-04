@@ -8,7 +8,7 @@ import { buildMetadata, BreadcrumbSchema } from "@/lib/seo";
 import PhotoGallery from "@/components/PhotoGallery";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Phoenix PHP Sober Living — Desert Recovery Centers",
+  title: "Phoenix PHP Sober Living, Desert Recovery Centers",
   description:
     "Structured sober living housing for clients enrolled in DRC PHP programs. 1623 W Moody Trail, Phoenix, AZ 85085. Call (623) 257-5384.",
   path: "/locations/phoenix-living",
@@ -49,7 +49,7 @@ export default function PhoenixLivingPage() {
       <PageHero
         eyebrow="Our Locations"
         title="Phoenix PHP Sober Living"
-        description="Structured sober living housing for clients enrolled in DRC's PHP program — a stable foundation while you build your recovery."
+        description="Structured sober living housing for clients enrolled in DRC's PHP program, a stable foundation while you build your recovery."
         bgImage="/images/general/accom-backyard.jpg"
       />
 
@@ -60,7 +60,7 @@ export default function PhoenixLivingPage() {
               Supportive Housing for PHP Clients
             </h2>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              Our Phoenix PHP Sober Living property at 1623 W Moody Trail provides structured housing for clients actively enrolled in DRC&apos;s Partial Hospitalization Program. This is not a treatment facility — it is supportive sober living housing designed to complement your outpatient care with stability, accountability, and community.
+              Our Phoenix PHP Sober Living property at 1623 W Moody Trail provides structured housing for clients actively enrolled in DRC&apos;s Partial Hospitalization Program. This is not a treatment facility, it is supportive sober living housing designed to complement your outpatient care with stability, accountability, and community.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
               Living here means you have a safe, substance-free home to return to each evening after your daily programming. An on-site house manager provides structure and support, while the property is located in close proximity to our PHP programming at the Phoenix PHP/IOP center.

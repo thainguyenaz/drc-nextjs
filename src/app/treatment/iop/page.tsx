@@ -19,11 +19,11 @@ export const metadata: Metadata = buildMetadata({
 const faqs = [
   {
     q: "What is Phase 2 IOP at Desert Recovery Centers?",
-    a: "Phase 2 IOP is a structured step-down from our PHP program. Clients attend 5 days per week initially, gradually reducing to 3 days per week over 4-8 weeks. Programming includes group therapy, Bridge Work individual sessions, relapse prevention, case management, and peer support — all with the same doctoral-level clinicians from earlier phases of treatment.",
+    a: "Phase 2 IOP is a structured step-down from our PHP program. Clients attend 5 days per week initially, gradually reducing to 3 days per week over 4-8 weeks. Programming includes group therapy, Bridge Work individual sessions, relapse prevention, case management, and peer support, all with the same doctoral-level clinicians from earlier phases of treatment.",
   },
   {
     q: "How does IOP differ from PHP?",
-    a: "PHP provides 5-6 hours of daily programming, 5 days per week. IOP starts at 5 days per week and steps down to 3 days, with 3-hour sessions. IOP gives you more time to practice recovery skills in real-world settings — work, family, daily routines — while maintaining meaningful clinical support. Bridge Work individual therapy continues from PHP into IOP to maintain therapeutic continuity.",
+    a: "PHP provides 5-6 hours of daily programming, 5 days per week. IOP starts at 5 days per week and steps down to 3 days, with 3-hour sessions. IOP gives you more time to practice recovery skills in real-world settings, work, family, daily routines, while maintaining meaningful clinical support. Bridge Work individual therapy continues from PHP into IOP to maintain therapeutic continuity.",
   },
   {
     q: "What is Bridge Work and how does it continue in IOP?",
@@ -35,7 +35,7 @@ const faqs = [
   },
   {
     q: "Do you accept insurance for IOP?",
-    a: "Yes, we are in-network with most major insurance providers including Aetna, Blue Cross Blue Shield, Cigna, and UnitedHealthcare. Coverage varies by plan. Contact us to verify your benefits — our admissions team handles verification at no cost.",
+    a: "Yes, we are in-network with most major insurance providers including Aetna, Blue Cross Blue Shield, Cigna, and UnitedHealthcare. Coverage varies by plan. Contact us to verify your benefits, our admissions team handles verification at no cost.",
   },
 ];
 
@@ -45,16 +45,16 @@ export default function TreatmentIOPPage() {
       <InlineFAQSchema items={faqs} />
       <SpeakableSchema url="/treatment/iop" cssSelectors={["[data-speakable]"]} />
       <MedicalTherapySchema
-        name="Intensive Outpatient Program (IOP) — Phase 2"
+        name="Intensive Outpatient Program (IOP), Phase 2"
         description="Phase 2 step-down IOP providing group therapy, Bridge Work individual sessions, relapse prevention, case management, and peer support over 4-8 weeks at 5 to 3 days per week."
         url="/treatment/iop"
         conditions={["Substance Use Disorders", "Depression", "Anxiety", "PTSD", "Co-Occurring Disorders"]}
       />
       <Navigation />
       <PageHero
-        eyebrow="Phase 2 — Levels of Care"
+        eyebrow="Phase 2, Levels of Care"
         title="Intensive Outpatient Program (IOP) in Arizona"
-        description="Step down from PHP with structured clinical support that fits your life — Bridge Work continues, independence grows, recovery deepens."
+        description="Step down from PHP with structured clinical support that fits your life, Bridge Work continues, independence grows, recovery deepens."
         bgImage="/images/glendale/Glendale-Group-Room.jpg"
       />
 
@@ -66,13 +66,13 @@ export default function TreatmentIOPPage() {
               Phase 2: From Stabilization to Independence
             </h2>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              After the intensive stabilization of PHP, our IOP provides a structured step-down that gradually increases your independence while maintaining the clinical depth that drives lasting recovery. You&apos;ll start at 5 days per week and taper to 3 days over 4-8 weeks — building confidence in your ability to manage daily life with progressively less clinical scaffolding.
+              After the intensive stabilization of PHP, our IOP provides a structured step-down that gradually increases your independence while maintaining the clinical depth that drives lasting recovery. You&apos;ll start at 5 days per week and taper to 3 days over 4-8 weeks, building confidence in your ability to manage daily life with progressively less clinical scaffolding.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              Bridge Work — DRC&apos;s proprietary individual therapy model — continues seamlessly from PHP into IOP. The same doctoral-level clinician who guided your earlier treatment stays with you, ensuring no therapeutic ground is lost in the transition. This continuity is what separates a true continuum of care from a series of disconnected programs.
+              Bridge Work, DRC&apos;s proprietary individual therapy model, continues seamlessly from PHP into IOP. The same doctoral-level clinician who guided your earlier treatment stays with you, ensuring no therapeutic ground is lost in the transition. This continuity is what separates a true continuum of care from a series of disconnected programs.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg">
-              Group therapy, relapse prevention, case management, and peer support round out the program — giving you a full clinical team even as your schedule opens up for work, family, and the daily routines of a recovered life.
+              Group therapy, relapse prevention, case management, and peer support round out the program, giving you a full clinical team even as your schedule opens up for work, family, and the daily routines of a recovered life.
             </p>
           </div>
         </div>
@@ -127,8 +127,8 @@ export default function TreatmentIOPPage() {
               {[
                 { title: "Are completing PHP and ready to step down", desc: "You've built a strong clinical foundation during PHP and are ready for more independence while continuing Bridge Work and group therapy with the same treatment team." },
                 { title: "Need to return to work or school", desc: "As IOP tapers from 5 to 3 days per week, you can progressively re-engage with professional and personal responsibilities while maintaining structured clinical support." },
-                { title: "Want continuity with your treatment team", desc: "Bridge Work ensures your individual therapist follows you from PHP into IOP — no starting over, no re-explaining your history, no lost momentum." },
-                { title: "Are building relapse prevention skills", desc: "IOP is where you practice recovery in the real world — applying coping strategies, peer accountability, and relapse prevention skills in your actual daily environment with clinical backup." },
+                { title: "Want continuity with your treatment team", desc: "Bridge Work ensures your individual therapist follows you from PHP into IOP, no starting over, no re-explaining your history, no lost momentum." },
+                { title: "Are building relapse prevention skills", desc: "IOP is where you practice recovery in the real world, applying coping strategies, peer accountability, and relapse prevention skills in your actual daily environment with clinical backup." },
               ].map((item, i) => (
                 <div key={i} className="bg-cream rounded-xl p-6">
                   <h3 className="font-display text-lg text-forest font-semibold mb-2">{item.title}</h3>
@@ -147,9 +147,9 @@ export default function TreatmentIOPPage() {
             <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mb-8">Our Full Continuum of Care</h2>
             <div className="space-y-3 mb-6">
               {[
-                { level: "Phase 1 — Residential", desc: "24/7 immersive treatment, 30 days", href: "/programs/residential" },
-                { level: "Phase 1B — PHP", desc: "5-6 hours daily, 5 days/week, 4-6 weeks", href: "/programs/php" },
-                { level: "Phase 2 — IOP", desc: "3-hour sessions, 5→3 days/week, 4-8 weeks", href: "/treatment/iop", current: true },
+                { level: "Phase 1, Residential", desc: "24/7 immersive treatment, 30 days", href: "/programs/residential" },
+                { level: "Phase 1B, PHP", desc: "5-6 hours daily, 5 days/week, 4-6 weeks", href: "/programs/php" },
+                { level: "Phase 2, IOP", desc: "3-hour sessions, 5→3 days/week, 4-8 weeks", href: "/treatment/iop", current: true },
                 { level: "Aftercare", desc: "Ongoing therapy, alumni network, community support", href: "#" },
               ].map((item) => (
                 <div key={item.level} className={`rounded-xl p-5 border ${item.current ? "border-gold bg-gold/5" : "border-gray-100 bg-white"}`}>

@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 import { buildMetadata, BreadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Does Humana Cover Drug & Alcohol Rehab in Arizona? — Desert Recovery Centers",
+  title: "Does Humana Cover Drug & Alcohol Rehab in Arizona?, Desert Recovery Centers",
   description:
     "Find out if Humana covers addiction treatment in Arizona. Learn about behavioral health benefits, Medicare Advantage coverage, and how to verify your Humana plan.",
   path: "/insurance/humana",
@@ -16,7 +16,7 @@ export const metadata: Metadata = buildMetadata({
 const faqs = [
   {
     q: "Does Humana cover residential rehab for substance abuse?",
-    a: "Most Humana commercial and Marketplace plans include behavioral health benefits that cover residential substance abuse treatment when it is deemed medically necessary. Coverage details vary by plan type and benefit tier. Our admissions team can verify your specific Humana benefits at no cost — call (480) 931-3617 to get started.",
+    a: "Most Humana commercial and Marketplace plans include behavioral health benefits that cover residential substance abuse treatment when it is deemed medically necessary. Coverage details vary by plan type and benefit tier. Our admissions team can verify your specific Humana benefits at no cost, call (480) 931-3617 to get started.",
   },
   {
     q: "Does Humana Medicare Advantage cover drug and alcohol rehab?",
@@ -57,7 +57,7 @@ export default function HumanaInsurancePage() {
       <div className="bg-cream border-b border-gold/20">
         <div className="max-w-container mx-auto px-6 py-3 text-center">
           <p className="text-xs text-sage font-body tracking-wide">
-            Insurance information reviewed by Desert Recovery Centers admissions team — updated April 2026
+            Insurance information reviewed by Desert Recovery Centers admissions team, updated April 2026
           </p>
         </div>
       </div>
@@ -76,7 +76,7 @@ export default function HumanaInsurancePage() {
               Under the Mental Health Parity and Addiction Equity Act, Humana is required to provide addiction treatment coverage comparable to coverage for medical and surgical conditions. This means that if your Humana plan covers hospital stays for physical health conditions, it must also cover residential treatment for addiction at a similar level.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg">
-              Because Humana offers a wide range of plan types — each with different benefit structures — the best way to understand your coverage is to have it verified directly. Call our admissions team at{" "}
+              Because Humana offers a wide range of plan types, each with different benefit structures, the best way to understand your coverage is to have it verified directly. Call our admissions team at{" "}
               <a href="tel:+14809313617" className="text-gold-dark font-semibold hover:underline">(480) 931-3617</a>
               {" "}and we will confirm your Humana benefits at no charge.
             </p>
@@ -103,7 +103,7 @@ export default function HumanaInsurancePage() {
                   Commercial and Employer-Sponsored Plans
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  Humana&apos;s commercial plans, including those offered through employers, typically include behavioral health benefits covering the full continuum of addiction treatment. Coverage specifics — including deductibles, copays, and network restrictions — vary based on the plan your employer selected or the individual plan you purchased.
+                  Humana&apos;s commercial plans, including those offered through employers, typically include behavioral health benefits covering the full continuum of addiction treatment. Coverage specifics, including deductibles, copays, and network restrictions, vary based on the plan your employer selected or the individual plan you purchased.
                 </p>
               </div>
               <div className="bg-white rounded-xl p-6 border border-gray-100">
@@ -190,14 +190,14 @@ export default function HumanaInsurancePage() {
               How to Verify Your Humana Benefits in 3 Simple Steps
             </h2>
             <p className="text-gray-600 leading-relaxed text-lg mb-8">
-              We handle the insurance verification for you — whether you have a commercial plan, Medicare Advantage, or TRICARE through Humana. Here&apos;s how it works:
+              We handle the insurance verification for you, whether you have a commercial plan, Medicare Advantage, or TRICARE through Humana. Here&apos;s how it works:
             </p>
             <div className="grid md:grid-cols-3 gap-6">
               {[
                 {
                   step: "1",
                   title: "Call Our Admissions Team",
-                  desc: "Reach us at (480) 931-3617. Have your Humana member ID card ready if available — it helps us identify your plan type and benefits quickly.",
+                  desc: "Reach us at (480) 931-3617. Have your Humana member ID card ready if available, it helps us identify your plan type and benefits quickly.",
                 },
                 {
                   step: "2",

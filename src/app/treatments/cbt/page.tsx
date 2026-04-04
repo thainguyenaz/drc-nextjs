@@ -10,12 +10,12 @@ import Footer from "@/components/Footer";
 import { MedicalTherapySchema } from "@/lib/seo";
 
 const techniques = [
-  "Cognitive restructuring — identifying and challenging distorted thought patterns",
-  "Behavioral activation — scheduling positive activities to counteract avoidance and withdrawal",
-  "Exposure therapy — gradual, structured confrontation of feared situations",
-  "Thought records — journaling exercises to track and reframe automatic negative thoughts",
-  "Problem-solving training — systematic approaches to address real-life stressors",
-  "Relapse prevention planning — identifying triggers and developing coping strategies",
+  "Cognitive restructuring, identifying and challenging distorted thought patterns",
+  "Behavioral activation, scheduling positive activities to counteract avoidance and withdrawal",
+  "Exposure therapy, gradual, structured confrontation of feared situations",
+  "Thought records, journaling exercises to track and reframe automatic negative thoughts",
+  "Problem-solving training, systematic approaches to address real-life stressors",
+  "Relapse prevention planning, identifying triggers and developing coping strategies",
 ];
 
 const treatsConditions = [
@@ -51,7 +51,7 @@ export default function CBTPage() {
       <PageHero
         eyebrow="Treatment Modality"
         title="Cognitive Behavioral Therapy (CBT)"
-        description="The gold standard in evidence-based psychotherapy — restructuring thought patterns to create lasting behavioral change."
+        description="The gold standard in evidence-based psychotherapy, restructuring thought patterns to create lasting behavioral change."
         bgImage="/images/general/DRC-Treatment-Therapies-BG-Fade.jpg"
       />
 
@@ -103,7 +103,7 @@ export default function CBTPage() {
               Cognitive Behavioral Therapy is built on a powerful premise: the way we think directly influences how we feel and behave. At Desert Recovery Centers, our licensed clinical psychologists use CBT to help clients identify the distorted thinking patterns that fuel anxiety, depression, addiction, and self-destructive behavior.
             </p>
             <p className="text-gray-600 leading-relaxed mb-4">
-              CBT is structured, goal-oriented, and time-limited — which means clients begin experiencing measurable improvements within weeks. Sessions focus on developing practical skills that translate directly into everyday life, long after treatment ends.
+              CBT is structured, goal-oriented, and time-limited, which means clients begin experiencing measurable improvements within weeks. Sessions focus on developing practical skills that translate directly into everyday life, long after treatment ends.
             </p>
             <p className="text-gray-600 leading-relaxed">
               Research consistently ranks CBT among the most effective therapies for both mental health conditions and substance use disorders. It is a cornerstone of every treatment plan at Desert Recovery Centers.
@@ -112,7 +112,7 @@ export default function CBTPage() {
         </div>
       </section>
 
-      {/* Techniques — collision layout */}
+      {/* Techniques, collision layout */}
       <section className="bg-forest py-20 md:py-28 overflow-hidden">
         <div className="max-w-container mx-auto px-6">
           <div className="flex flex-col md:flex-row gap-12 lg:gap-20 items-center">
@@ -219,7 +219,7 @@ export default function CBTPage() {
               Unlike many treatment centers that rely on master&apos;s-level therapists for primary therapy, Desert Recovery Centers provides CBT led by licensed clinical psychologists. This means your treatment is guided by clinicians with the highest level of training in evidence-based interventions.
             </p>
             <p className="text-gray-600 leading-relaxed mb-8">
-              CBT at DRC is not a standalone intervention — it integrates seamlessly with DBT skills training, EMDR for trauma processing, holistic therapies, and our proprietary BridgeWork™ program to deliver comprehensive, whole-person care.
+              CBT at DRC is not a standalone intervention, it integrates seamlessly with DBT skills training, EMDR for trauma processing, holistic therapies, and our proprietary BridgeWork™ program to deliver comprehensive, whole-person care.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <a href="tel:+14809313617" className="bg-gold hover:bg-gold-dark text-white font-semibold text-sm px-6 py-3 rounded-xl transition-colors cursor-pointer">

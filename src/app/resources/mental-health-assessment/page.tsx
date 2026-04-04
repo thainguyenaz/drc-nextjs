@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 import { buildMetadata, BreadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Free Mental Health Assessment — DRC",
+  title: "Free Mental Health Assessment, DRC",
   description:
     "Take a free, confidential mental health self-assessment. 10 questions to help you understand your symptoms and explore treatment options in Arizona.",
   path: "/resources/mental-health-assessment",
@@ -26,7 +26,7 @@ export default function MentalHealthAssessmentPage() {
       <PageHero
         eyebrow="Self-Assessment Tool"
         title="Free Mental Health Assessment"
-        description="A brief, confidential self-assessment to help you understand your symptoms — and whether professional support could make a difference."
+        description="A brief, confidential self-assessment to help you understand your symptoms, and whether professional support could make a difference."
         bgImage="/images/general/DRC-MENTAL-HEALTH.jpg"
       />
 
@@ -49,7 +49,7 @@ export default function MentalHealthAssessmentPage() {
               It can be difficult to know when normal stress, sadness, or anxiety has crossed into something that needs professional attention. This brief self-assessment is designed to help you reflect on your recent experiences and determine whether reaching out for support might be a helpful next step.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              The questions below are based on widely used clinical screening tools. They are not a diagnosis — only a licensed professional can provide that — but they can help you gauge whether your symptoms warrant a conversation with a clinician.
+              The questions below are based on widely used clinical screening tools. They are not a diagnosis, only a licensed professional can provide that, but they can help you gauge whether your symptoms warrant a conversation with a clinician.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg">
               Your answers are completely private. Nothing is stored, recorded, or transmitted. This tool runs entirely in your browser.

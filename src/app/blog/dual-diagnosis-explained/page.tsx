@@ -3,37 +3,81 @@ import Navigation from "@/components/Navigation";
 import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { buildMetadata, BreadcrumbSchema } from "@/lib/seo";
+import SchemaScript from "@/components/SchemaScript";
+import MedicalReview from "@/components/MedicalReview";
+import Breadcrumb from "@/components/Breadcrumb";
+import Citations from "@/components/Citations";
+import { getArticleSchema, getBreadcrumbSchema } from "@/lib/schema";
+import { defaultAuthor, defaultReviewer } from "@/data/blog-defaults";
+import { buildMetadata } from "@/lib/seo";
+
+const SITE_URL = "https://desertrecoverycenters.com";
+const POST_TITLE = "What Is Dual Diagnosis?";
+const DATE_PUBLISHED = "2026-03-01";
+const DATE_MODIFIED = "2026-03-01";
+const POST_DESCRIPTION =
+  "Understand co-occurring disorders: when mental health and addiction overlap. Learn why integrated dual diagnosis treatment leads to better outcomes.";
 
 export const metadata: Metadata = buildMetadata({
-  title: "What Is Dual Diagnosis? — DRC",
-  description:
-    "Understand co-occurring disorders: when mental health and addiction overlap. Learn why integrated dual diagnosis treatment leads to better outcomes.",
+  title: "What Is Dual Diagnosis?, DRC",
+  description: POST_DESCRIPTION,
   path: "/blog/dual-diagnosis-explained",
 });
 
 export default function DualDiagnosisExplainedPage() {
+  const articleSchema = getArticleSchema({
+    headline: POST_TITLE,
+    author: defaultAuthor.name,
+    authorUrl: `${SITE_URL}${defaultAuthor.url}`,
+    datePublished: DATE_PUBLISHED,
+    dateModified: DATE_MODIFIED,
+    image: "https://desertrecoverycenters.com/wp-content/uploads/2024/12/DRC-BALCONY-SCOTTSDALE-08-01-2024-Optimized.jpg",
+    description: POST_DESCRIPTION,
+  });
+
+  const breadcrumbItems = [
+    { name: "Home", url: SITE_URL },
+    { name: "Blog", url: `${SITE_URL}/blog` },
+    { name: POST_TITLE, url: `${SITE_URL}/blog/dual-diagnosis-explained` },
+  ];
+
+  const breadcrumbSchema = getBreadcrumbSchema(breadcrumbItems);
+
   return (
     <>
-      <BreadcrumbSchema
-        items={[
-          { name: "Blog", path: "/blog" },
-          { name: "Dual Diagnosis Explained", path: "/blog/dual-diagnosis-explained" },
-        ]}
-      />
+      <SchemaScript schema={[articleSchema, breadcrumbSchema]} />
       <Navigation />
+
+      <div className="bg-white">
+        <div className="max-w-container mx-auto px-6 pt-6">
+          <Breadcrumb items={breadcrumbItems} />
+        </div>
+      </div>
+
       <PageHero
         eyebrow="Educational Resource"
-        title="What Is Dual Diagnosis?"
-        description="Understanding co-occurring disorders — and why treating both conditions simultaneously is the key to lasting recovery."
+        title={POST_TITLE}
+        description="Understanding co-occurring disorders, and why treating both conditions simultaneously is the key to lasting recovery."
         bgImage="/images/general/DRC-MENTAL-HEALTH.jpg"
       />
 
-      <div className="bg-cream border-b border-gold/20">
-        <div className="max-w-container mx-auto px-6 py-3 text-center">
-          <p className="text-xs text-sage font-body tracking-wide">
-            Medically reviewed by Dr. An Nguyen, Licensed Clinical Psychologist, Clinical Director, Desert Recovery Centers
-          </p>
+      <div className="bg-white">
+        <div className="max-w-container mx-auto px-6">
+          <div className="max-w-3xl mx-auto">
+            <p className="text-sm text-gray-500 mt-4">
+              Last Updated:{" "}
+              {new Date(DATE_MODIFIED).toLocaleDateString("en-US", {
+                month: "long",
+                day: "numeric",
+                year: "numeric",
+              })}
+            </p>
+            <MedicalReview
+              reviewer={defaultReviewer.name}
+              credentials={defaultReviewer.credentials}
+              reviewerUrl={defaultReviewer.url}
+            />
+          </div>
         </div>
       </div>
 
@@ -45,10 +89,10 @@ export default function DualDiagnosisExplainedPage() {
               Two Conditions, One Disease Process
             </h2>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              Dual diagnosis — also called co-occurring disorders — refers to the simultaneous presence of a mental health condition and a substance use disorder in the same individual. It is not a rare phenomenon. According to the Substance Abuse and Mental Health Services Administration (SAMHSA), approximately 9.2 million adults in the United States have a co-occurring disorder. Nearly half of all people who seek treatment for addiction also meet the diagnostic criteria for at least one mental health condition.
+              Dual diagnosis, also called co-occurring disorders, refers to the simultaneous presence of a mental health condition and a substance use disorder in the same individual. It is not a rare phenomenon. According to the Substance Abuse and Mental Health Services Administration (SAMHSA), approximately 9.2 million adults in the United States have a co-occurring disorder. Nearly half of all people who seek treatment for addiction also meet the diagnostic criteria for at least one mental health condition.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              Despite its prevalence, dual diagnosis remains widely misunderstood — by the public, by families, and even by many treatment providers. The result is that millions of people receive treatment for only one of their conditions, leading to incomplete recovery and high rates of relapse.
+              Despite its prevalence, dual diagnosis remains widely misunderstood, by the public, by families, and even by many treatment providers. The result is that millions of people receive treatment for only one of their conditions, leading to incomplete recovery and high rates of relapse.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg">
               Understanding dual diagnosis is not just an academic exercise. It is the difference between treatment that works and treatment that fails.
@@ -68,25 +112,25 @@ export default function DualDiagnosisExplainedPage() {
               Why Mental Health and Addiction So Often Co-Occur
             </h2>
             <p className="text-gray-600 leading-relaxed mb-6">
-              Mental health conditions and substance use disorders are not simply correlated — they are deeply interconnected through shared neurobiology, environmental risk factors, and behavioral feedback loops:
+              Mental health conditions and substance use disorders are not simply correlated, they are deeply interconnected through shared neurobiology, environmental risk factors, and behavioral feedback loops:
             </p>
             <div className="space-y-6">
               {[
                 {
                   title: "Self-Medication",
-                  desc: "The most common pathway to dual diagnosis. A person with untreated depression uses alcohol to numb the pain. Someone with anxiety discovers that benzodiazepines quiet the noise. A trauma survivor finds that opioids are the only thing that makes the flashbacks stop. The substance provides temporary relief — but it worsens the underlying condition over time, creating a vicious cycle of escalating use and deepening mental illness.",
+                  desc: "The most common pathway to dual diagnosis. A person with untreated depression uses alcohol to numb the pain. Someone with anxiety discovers that benzodiazepines quiet the noise. A trauma survivor finds that opioids are the only thing that makes the flashbacks stop. The substance provides temporary relief, but it worsens the underlying condition over time, creating a vicious cycle of escalating use and deepening mental illness.",
                 },
                 {
                   title: "Shared Neurobiology",
-                  desc: "Mental health conditions and addiction affect many of the same brain circuits — particularly those governing reward, stress response, impulse control, and emotional regulation. Genetic factors that predispose a person to one condition often predispose them to the other. This is why conditions like depression, PTSD, and bipolar disorder carry significantly elevated risk for developing substance use disorders.",
+                  desc: "Mental health conditions and addiction affect many of the same brain circuits, particularly those governing reward, stress response, impulse control, and emotional regulation. Genetic factors that predispose a person to one condition often predispose them to the other. This is why conditions like depression, PTSD, and bipolar disorder carry significantly elevated risk for developing substance use disorders.",
                 },
                 {
                   title: "Substance-Induced Mental Health Symptoms",
-                  desc: "Chronic substance use can trigger or unmask mental health conditions that may not have manifested otherwise. Chronic marijuana use can trigger psychotic symptoms. Stimulant abuse can produce anxiety and paranoia. Alcohol — a central nervous system depressant — can cause or worsen depression. In some cases, the mental health symptoms resolve with sustained sobriety; in others, they persist and require ongoing treatment.",
+                  desc: "Chronic substance use can trigger or unmask mental health conditions that may not have manifested otherwise. Chronic marijuana use can trigger psychotic symptoms. Stimulant abuse can produce anxiety and paranoia. Alcohol, a central nervous system depressant, can cause or worsen depression. In some cases, the mental health symptoms resolve with sustained sobriety; in others, they persist and require ongoing treatment.",
                 },
                 {
                   title: "Environmental Overlap",
-                  desc: "Childhood trauma, adverse childhood experiences (ACEs), chronic stress, poverty, and social isolation are risk factors for both mental health conditions and addiction. A person who grows up in an environment saturated with these stressors is at elevated risk for developing both conditions — not because of personal weakness, but because of the cumulative neurobiological toll of chronic adversity.",
+                  desc: "Childhood trauma, adverse childhood experiences (ACEs), chronic stress, poverty, and social isolation are risk factors for both mental health conditions and addiction. A person who grows up in an environment saturated with these stressors is at elevated risk for developing both conditions, not because of personal weakness, but because of the cumulative neurobiological toll of chronic adversity.",
                 },
               ].map((item, i) => (
                 <div key={i} className="border-l-2 border-gold/40 pl-6">
@@ -144,10 +188,10 @@ export default function DualDiagnosisExplainedPage() {
               Why Integrated Treatment Is Essential
             </h2>
             <p className="text-gray-600 leading-relaxed mb-4">
-              Historically, mental health and addiction were treated as separate conditions by separate providers in separate systems. A person might complete a 30-day rehab program for their addiction, only to return home with their depression untreated — and relapse within weeks because the pain that drove the substance use was never addressed.
+              Historically, mental health and addiction were treated as separate conditions by separate providers in separate systems. A person might complete a 30-day rehab program for their addiction, only to return home with their depression untreated, and relapse within weeks because the pain that drove the substance use was never addressed.
             </p>
             <p className="text-gray-600 leading-relaxed mb-4">
-              Integrated treatment — where both conditions are treated simultaneously by the same clinical team — is now the gold standard endorsed by the National Institute on Drug Abuse (NIDA), SAMHSA, and the American Psychiatric Association. The evidence is clear: individuals who receive integrated dual diagnosis treatment have significantly better outcomes than those treated for only one condition.
+              Integrated treatment, where both conditions are treated simultaneously by the same clinical team, is now the gold standard endorsed by the National Institute on Drug Abuse (NIDA), SAMHSA, and the American Psychiatric Association. The evidence is clear: individuals who receive integrated dual diagnosis treatment have significantly better outcomes than those treated for only one condition.
             </p>
             <p className="text-gray-600 leading-relaxed mb-6">
               At Desert Recovery Centers, dual diagnosis is not a specialty track. It is the foundation of every treatment plan. Every client receives a comprehensive psychiatric evaluation within the first 72 hours, and every treatment plan is designed to address all diagnosed conditions from day one.
@@ -156,7 +200,7 @@ export default function DualDiagnosisExplainedPage() {
               {[
                 {
                   title: "One Clinical Team, One Plan",
-                  desc: "The same team of psychologists, psychiatrists, and therapists manages both your mental health and addiction treatment — ensuring medications, therapy protocols, and holistic programming are coordinated rather than contradictory.",
+                  desc: "The same team of psychologists, psychiatrists, and therapists manages both your mental health and addiction treatment, ensuring medications, therapy protocols, and holistic programming are coordinated rather than contradictory.",
                 },
                 {
                   title: "Evidence-Based Modalities",
@@ -164,7 +208,7 @@ export default function DualDiagnosisExplainedPage() {
                 },
                 {
                   title: "Medication Management",
-                  desc: "Our medical director ensures that psychiatric medications support both mental health stability and addiction recovery — a nuanced clinical judgment that requires specialized expertise.",
+                  desc: "Our medical director ensures that psychiatric medications support both mental health stability and addiction recovery, a nuanced clinical judgment that requires specialized expertise.",
                 },
               ].map((item, i) => (
                 <div
@@ -190,7 +234,7 @@ export default function DualDiagnosisExplainedPage() {
               If This Sounds Like You or Someone You Love
             </h2>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              Dual diagnosis is not a death sentence. It is a treatable medical condition that responds well to comprehensive, evidence-based care. But it requires the right kind of treatment — integrated, clinically sophisticated, and delivered by providers who understand the complex interplay between mental health and addiction.
+              Dual diagnosis is not a death sentence. It is a treatable medical condition that responds well to comprehensive, evidence-based care. But it requires the right kind of treatment, integrated, clinically sophisticated, and delivered by providers who understand the complex interplay between mental health and addiction.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg mb-8">
               Desert Recovery Centers is one of Arizona&apos;s leading dual diagnosis treatment providers. Our clinical team, led by doctoral-level psychologists and a board-certified psychiatrist, treats both conditions from the same treatment plan, in the same clinical setting, with the same team. No fragmented care. No gaps. No falling through the cracks.
@@ -224,6 +268,14 @@ export default function DualDiagnosisExplainedPage() {
                 ))}
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white">
+        <div className="max-w-container mx-auto px-6">
+          <div className="max-w-3xl mx-auto">
+            <Citations />
           </div>
         </div>
       </section>

@@ -28,7 +28,7 @@ const benefits = [
   },
   {
     name: "Non-Invasive Treatment",
-    description: "No surgery, no needles, no medication — each session takes 10-15 minutes with zero downtime.",
+    description: "No surgery, no needles, no medication, each session takes 10-15 minutes with zero downtime.",
   },
   {
     name: "Supports Recovery",
@@ -69,7 +69,7 @@ export default function SoftWavePage() {
       <PageHero
         eyebrow="Advanced Therapy"
         title="SoftWave Therapy"
-        description="FDA-cleared tissue regeneration technology — reducing pain and inflammation without medication, supporting recovery from the inside out."
+        description="FDA-cleared tissue regeneration technology, reducing pain and inflammation without medication, supporting recovery from the inside out."
         bgImage="/images/general/DRC-Treatment-Therapies-BG-Fade.jpg"
       />
 
@@ -121,7 +121,7 @@ export default function SoftWavePage() {
               SoftWave Tissue Regeneration Technology uses patented unfocused shockwave therapy to stimulate the body&apos;s natural healing processes at the cellular level. Unlike traditional shockwave devices, SoftWave&apos;s proprietary electrohydraulic technology produces a broad, unfocused wave that treats a larger area more safely and effectively.
             </p>
             <p className="text-gray-600 leading-relaxed mb-4">
-              For individuals in recovery, chronic pain is one of the most dangerous relapse triggers. Many people initially turned to opioids to manage legitimate pain conditions. SoftWave provides a powerful alternative — addressing pain at its source without the risks of medication dependence.
+              For individuals in recovery, chronic pain is one of the most dangerous relapse triggers. Many people initially turned to opioids to manage legitimate pain conditions. SoftWave provides a powerful alternative, addressing pain at its source without the risks of medication dependence.
             </p>
             <p className="text-gray-600 leading-relaxed">
               Desert Recovery Centers is one of the only residential treatment programs in Arizona to offer SoftWave therapy as part of an integrated treatment plan. Sessions are quick, painless, and require no recovery time.
@@ -166,7 +166,7 @@ export default function SoftWavePage() {
         </div>
       </section>
 
-      {/* Conditions — collision */}
+      {/* Conditions, collision */}
       <section className="bg-forest py-20 md:py-28 overflow-hidden">
         <div className="max-w-container mx-auto px-6">
           <div className="flex flex-col md:flex-row gap-12 lg:gap-20 items-center">
@@ -238,7 +238,7 @@ export default function SoftWavePage() {
               Break the Pain-Addiction Cycle
             </h2>
             <p className="text-gray-600 leading-relaxed mb-8">
-              Chronic pain doesn&apos;t have to be managed with addictive substances. SoftWave therapy at Desert Recovery Centers offers a safe, effective, medication-free path to pain relief — supporting your recovery from every angle.
+              Chronic pain doesn&apos;t have to be managed with addictive substances. SoftWave therapy at Desert Recovery Centers offers a safe, effective, medication-free path to pain relief, supporting your recovery from every angle.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <a href="tel:+14809313617" className="bg-gold hover:bg-gold-dark text-white font-semibold text-sm px-6 py-3 rounded-xl transition-colors cursor-pointer">
@@ -278,7 +278,7 @@ export default function SoftWavePage() {
             </article>
             <article className="border-l-2 border-gold/30 pl-5">
               <h3 className="text-forest font-semibold text-sm mb-1">How does SoftWave therapy work for addiction treatment?</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">SoftWave therapy supports addiction recovery by addressing chronic pain — one of the most dangerous relapse triggers — without opioids or other addictive medications. The patented electrohydraulic technology stimulates stem cell activation, increases blood flow to damaged tissues, and activates anti-inflammatory pathways at the cellular level. Sessions take 10 to 15 minutes with zero downtime.</p>
+              <p className="text-gray-600 text-sm leading-relaxed">SoftWave therapy supports addiction recovery by addressing chronic pain, one of the most dangerous relapse triggers, without opioids or other addictive medications. The patented electrohydraulic technology stimulates stem cell activation, increases blood flow to damaged tissues, and activates anti-inflammatory pathways at the cellular level. Sessions take 10 to 15 minutes with zero downtime.</p>
             </article>
             <article className="border-l-2 border-gold/30 pl-5">
               <h3 className="text-forest font-semibold text-sm mb-1">Who delivers SoftWave therapy at Desert Recovery Centers?</h3>

@@ -31,7 +31,7 @@ const faqs = [
   },
   {
     q: "Do you accept insurance for PHP?",
-    a: "Yes, we are in-network with most major insurance providers including Aetna, Blue Cross Blue Shield, Cigna, and UnitedHealthcare. Coverage varies by plan. Contact us to verify your benefits — our admissions team handles verification at no cost.",
+    a: "Yes, we are in-network with most major insurance providers including Aetna, Blue Cross Blue Shield, Cigna, and UnitedHealthcare. Coverage varies by plan. Contact us to verify your benefits, our admissions team handles verification at no cost.",
   },
   {
     q: "What happens after PHP is complete?",
@@ -54,7 +54,7 @@ export default function PHPPage() {
       <PageHero
         eyebrow="Levels of Care"
         title="Partial Hospitalization Program (PHP) in Arizona"
-        description="Intensive daily treatment with the flexibility to go home in the evening — the bridge between residential care and independent living."
+        description="Intensive daily treatment with the flexibility to go home in the evening, the bridge between residential care and independent living."
         bgImage="/images/glendale/Glendale-Group-Room.jpg"
       />
 
@@ -66,10 +66,10 @@ export default function PHPPage() {
               Intensive Treatment. Real-World Practice.
             </h2>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              Our Partial Hospitalization Program provides the clinical intensity of residential treatment — daily individual therapy, group sessions, psychiatric care — while allowing you to return home or to a sober living environment each evening. It&apos;s the ideal level of care for those who have completed residential treatment and are ready for more independence, or for those whose condition requires intensive support but not 24/7 supervision.
+              Our Partial Hospitalization Program provides the clinical intensity of residential treatment, daily individual therapy, group sessions, psychiatric care, while allowing you to return home or to a sober living environment each evening. It&apos;s the ideal level of care for those who have completed residential treatment and are ready for more independence, or for those whose condition requires intensive support but not 24/7 supervision.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              With 5-6 hours of structured programming daily, 5 days per week, PHP gives you the opportunity to apply what you&apos;re learning in therapy to real-world situations — relationships, work, daily routines — while still having the safety net of daily clinical contact with your treatment team.
+              With 5-6 hours of structured programming daily, 5 days per week, PHP gives you the opportunity to apply what you&apos;re learning in therapy to real-world situations, relationships, work, daily routines, while still having the safety net of daily clinical contact with your treatment team.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg">
               At DRC, PHP clients receive the same caliber of doctoral-level care, evidence-based therapies, and personalized attention as our residential clients. The only difference is where you sleep.
@@ -127,7 +127,7 @@ export default function PHPPage() {
               {[
                 { title: "Are stepping down from residential treatment", desc: "You've completed residential care and are ready for more independence while maintaining intensive clinical support during the day." },
                 { title: "Need intensive care but have a stable home", desc: "Your condition requires more than weekly therapy, but you have a safe, supportive living situation and don't need 24/7 supervision." },
-                { title: "Want to practice recovery skills in real life", desc: "PHP lets you apply coping strategies, communication skills, and healthy routines in your actual daily life — with clinical support the next morning if challenges arise." },
+                { title: "Want to practice recovery skills in real life", desc: "PHP lets you apply coping strategies, communication skills, and healthy routines in your actual daily life, with clinical support the next morning if challenges arise." },
                 { title: "Are managing co-occurring conditions", desc: "Dual diagnosis treatment benefits from intensive daily contact. PHP provides the frequency needed to manage both addiction and mental health conditions effectively." },
               ].map((item, i) => (
                 <div key={i} className="bg-cream rounded-xl p-6">
@@ -195,7 +195,7 @@ export default function PHPPage() {
 
       <ConditionFAQ items={faqs} />
       <AEOBlock entries={[
-        { question: "What is PHP at Desert Recovery Centers?", answer: "Desert Recovery Centers' Partial Hospitalization Program (PHP) provides 5-6 hours of daily clinical programming, 5 days per week, at our Joint Commission accredited facilities in Glendale and Scottsdale. Led by doctoral-level clinicians, PHP includes individual therapy, group therapy, psychiatric care, and holistic programming — serving as a step-down from residential or standalone intensive treatment." },
+        { question: "What is PHP at Desert Recovery Centers?", answer: "Desert Recovery Centers' Partial Hospitalization Program (PHP) provides 5-6 hours of daily clinical programming, 5 days per week, at our Joint Commission accredited facilities in Glendale and Scottsdale. Led by doctoral-level clinicians, PHP includes individual therapy, group therapy, psychiatric care, and holistic programming, serving as a step-down from residential or standalone intensive treatment." },
         { question: "How long is the PHP program at Desert Recovery Centers?", answer: "PHP at DRC typically runs 4 to 6 weeks, with programming 5 days per week for 5-6 hours daily. Treatment duration is individualized based on clinical progress. After PHP, most clients step down to Intensive Outpatient (IOP) for continued support with the same clinical team." },
       ]} />
       <CTASection />

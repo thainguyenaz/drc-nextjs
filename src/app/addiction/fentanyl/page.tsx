@@ -8,11 +8,27 @@ import { InlineFAQSchema, MedicalConditionSchema } from "@/lib/seo";
 import AEOBlock from "@/components/AEOBlock";
 import RelatedPages from "@/components/RelatedPages";
 import ConditionFAQ from "@/components/ConditionFAQ";
+import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
+import { faqData } from "@/data/faq-data";
+import SchemaScript from "@/components/SchemaScript";
+import FAQSection from "@/components/FAQSection";
+import Breadcrumb from "@/components/Breadcrumb";
+import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
+import Citations from "@/components/Citations";
+import { getPageMeta } from "@/data/page-metadata";
+
+const meta = getPageMeta("/addiction/fentanyl-addiction-treatment/");
 
 export const metadata: Metadata = {
-  title: "Fentanyl Addiction Treatment — Desert Recovery Centers",
-  description:
-    "Specialized fentanyl addiction treatment in Arizona. Medically supervised detox, MAT programs, and residential care for fentanyl dependence.",
+  title: meta.title,
+  description: meta.description,
+  alternates: { canonical: meta.canonical },
+  openGraph: {
+    title: meta.title,
+    description: meta.description,
+    url: meta.canonical,
+    images: [{ url: meta.ogImage ?? "https://desertrecoverycenters.com/wp-content/uploads/2024/10/DRC-DRONE-SCOTTSDALE-08-01-2024-August-01-202400020-2.jpg", alt: meta.title }],
+  },
 };
 
 const faqs = [
@@ -41,6 +57,7 @@ const faqs = [
 export default function FentanylAddictionPage() {
   return (
     <>
+      <SchemaScript schema={[getFAQSchema(faqData["fentanyl-addiction-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/addiction/fentanyl"))]} />
       <InlineFAQSchema items={faqs} />
       <MedicalConditionSchema
         name="Fentanyl Addiction"
@@ -49,6 +66,7 @@ export default function FentanylAddictionPage() {
         possibleTreatments={["Medically Supervised Detox", "MAT (Suboxone, Vivitrol)", "Trauma-Informed Therapy (EMDR)", "Dual Diagnosis Treatment"]}
       />
       <Navigation />
+      <Breadcrumb items={getBreadcrumbsFromPathname("/addiction/fentanyl")} />
       <PageHero
         eyebrow="Addiction Treatment"
         title="Fentanyl Addiction Treatment"
@@ -59,7 +77,7 @@ export default function FentanylAddictionPage() {
         <div className="max-w-container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
             <p className="text-gray-600 leading-relaxed text-lg">
-              You know how dangerous this is. Every time you use, you&apos;re gambling with your life — and you know it. Maybe you started with prescription painkillers, or maybe fentanyl found its way into something else you were using. Either way, your body now depends on one of the most potent opioids in existence, and the withdrawal is so brutal that stopping feels impossible. The fear of getting sick keeps you trapped. You&apos;re not choosing this anymore. Your brain chemistry is.
+              You know how dangerous this is. Every time you use, you&apos;re gambling with your life, and you know it. Maybe you started with prescription painkillers, or maybe fentanyl found its way into something else you were using. Either way, your body now depends on one of the most potent opioids in existence, and the withdrawal is so brutal that stopping feels impossible. The fear of getting sick keeps you trapped. You&apos;re not choosing this anymore. Your brain chemistry is.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg mt-4">
               At Desert Recovery Centers, we specialize in fentanyl addiction treatment with medically supervised detox protocols designed specifically for synthetic opioid dependence. Our medical team understands the intensity of fentanyl withdrawal and uses evidence-based interventions to keep you safe and as comfortable as possible through the process.
@@ -69,7 +87,7 @@ export default function FentanylAddictionPage() {
               Understanding Fentanyl Addiction
             </h2>
             <p className="text-gray-600 leading-relaxed">
-              Fentanyl is 50 to 100 times more potent than morphine. It binds aggressively to opioid receptors, creating rapid and severe physical dependence — often within days or weeks of regular use. Because of its extreme potency, fentanyl tolerance escalates quickly, and withdrawal symptoms are among the most intense of any opioid. The margin between a dose that gets you high and a dose that stops your breathing is dangerously thin, which is why fentanyl is now the leading cause of overdose deaths in the United States.
+              Fentanyl is 50 to 100 times more potent than morphine. It binds aggressively to opioid receptors, creating rapid and severe physical dependence, often within days or weeks of regular use. Because of its extreme potency, fentanyl tolerance escalates quickly, and withdrawal symptoms are among the most intense of any opioid. The margin between a dose that gets you high and a dose that stops your breathing is dangerously thin, which is why fentanyl is now the leading cause of overdose deaths in the United States.
             </p>
 
             <h2 className="font-display text-2xl text-forest font-semibold mt-10 mb-4">
@@ -82,7 +100,7 @@ export default function FentanylAddictionPage() {
               </li>
               <li className="flex items-start gap-3">
                 <span className="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0" />
-                Experiencing severe withdrawal symptoms — muscle pain, vomiting, cold sweats, insomnia — within hours of your last dose
+                Experiencing severe withdrawal symptoms, muscle pain, vomiting, cold sweats, insomnia, within hours of your last dose
               </li>
               <li className="flex items-start gap-3">
                 <span className="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0" />
@@ -142,7 +160,7 @@ export default function FentanylAddictionPage() {
               What Recovery Looks Like Here
             </h2>
             <p className="text-gray-600 leading-relaxed">
-              Fentanyl recovery requires patience, medical precision, and unwavering clinical support. The first days are the hardest, and our medical team is with you every step. Once stabilized, your treatment shifts to rebuilding — repairing relationships, processing trauma, developing the coping skills and emotional awareness that keep you grounded. Recovery from fentanyl is possible, and it begins with the decision to reach out.
+              Fentanyl recovery requires patience, medical precision, and unwavering clinical support. The first days are the hardest, and our medical team is with you every step. Once stabilized, your treatment shifts to rebuilding, repairing relationships, processing trauma, developing the coping skills and emotional awareness that keep you grounded. Recovery from fentanyl is possible, and it begins with the decision to reach out.
             </p>
             <p className="text-gray-600 leading-relaxed mt-4">
               We accept most major insurance plans. Coverage varies by plan. Contact us to verify your benefits.
@@ -190,8 +208,10 @@ export default function FentanylAddictionPage() {
         ]}
       />
       <RelatedPages currentPath="/addiction/fentanyl" />
+      <FAQSection faqs={faqData["fentanyl-addiction-treatment"]} />
       <CTASection />
       <Footer />
+      <Citations />
     </>
   );
 }

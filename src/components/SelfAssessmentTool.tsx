@@ -43,7 +43,7 @@ function getResult(score: number) {
       message:
         "Your responses suggest mild to moderate symptoms that may be affecting your quality of life. Many people experience these symptoms and benefit significantly from professional support. You do not need to wait until things get worse to seek help.",
       recommendation:
-        "We recommend speaking with a mental health professional who can provide a comprehensive evaluation. Desert Recovery Centers offers free, confidential clinical assessments — call our admissions team to learn more about your options.",
+        "We recommend speaking with a mental health professional who can provide a comprehensive evaluation. Desert Recovery Centers offers free, confidential clinical assessments, call our admissions team to learn more about your options.",
     };
   }
   return {
@@ -53,7 +53,7 @@ function getResult(score: number) {
     message:
       "Your responses indicate moderate to severe symptoms that are likely having a significant impact on your daily life, relationships, and functioning. These results suggest that professional support could make a meaningful difference.",
     recommendation:
-      "We strongly recommend reaching out to a mental health professional as soon as possible. Desert Recovery Centers provides comprehensive mental health and dual diagnosis treatment in a supportive, luxury environment. Our admissions team is available 24/7 — call us today for a free, confidential assessment.",
+      "We strongly recommend reaching out to a mental health professional as soon as possible. Desert Recovery Centers provides comprehensive mental health and dual diagnosis treatment in a supportive, luxury environment. Our admissions team is available 24/7, call us today for a free, confidential assessment.",
   };
 }
 

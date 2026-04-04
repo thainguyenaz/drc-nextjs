@@ -7,9 +7,9 @@ import FAQAccordion from "@/components/FAQAccordion";
 import { buildMetadata, BreadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Rehab FAQ — Desert Recovery Centers",
+  title: "Rehab FAQ, Desert Recovery Centers",
   description:
-    "Comprehensive answers to 30+ questions about rehab in Arizona — admissions, insurance, treatment, facilities, family involvement, and aftercare.",
+    "Comprehensive answers to 30+ questions about rehab in Arizona, admissions, insurance, treatment, facilities, family involvement, and aftercare.",
   path: "/resources/faq",
 });
 
@@ -23,11 +23,11 @@ const categories = [
       },
       {
         q: "How do I know if I need residential vs. outpatient treatment?",
-        a: "The right level of care depends on the severity of your condition, your home environment, previous treatment history, and daily responsibilities. During your free clinical assessment, our admissions team will recommend the best level of care — no pressure, no obligation.",
+        a: "The right level of care depends on the severity of your condition, your home environment, previous treatment history, and daily responsibilities. During your free clinical assessment, our admissions team will recommend the best level of care, no pressure, no obligation.",
       },
       {
         q: "What should I expect on my first day?",
-        a: "On your first day, you will complete a medical intake assessment that includes vital signs, lab work, a psychiatric evaluation, and a thorough review of your substance use and mental health history. You will be assigned a private room, meet your primary therapist and nursing staff, receive an orientation to the facility, and begin settling in. Most clients describe the first day as nerve-wracking but surprisingly welcoming — our staff understands what you are going through and is trained to make the transition as smooth as possible.",
+        a: "On your first day, you will complete a medical intake assessment that includes vital signs, lab work, a psychiatric evaluation, and a thorough review of your substance use and mental health history. You will be assigned a private room, meet your primary therapist and nursing staff, receive an orientation to the facility, and begin settling in. Most clients describe the first day as nerve-wracking but surprisingly welcoming, our staff understands what you are going through and is trained to make the transition as smooth as possible.",
       },
       {
         q: "Is the admissions process confidential?",
@@ -35,7 +35,7 @@ const categories = [
       },
       {
         q: "Can I tour the facility before committing to treatment?",
-        a: "Yes. We welcome pre-admission facility tours at all three of our Arizona locations — Glendale, Scottsdale, and Phoenix. Seeing the facility firsthand helps many clients and families feel more comfortable about the treatment decision. Contact our admissions team to schedule a private tour.",
+        a: "Yes. We welcome pre-admission facility tours at all three of our Arizona locations, Glendale, Scottsdale, and Phoenix. Seeing the facility firsthand helps many clients and families feel more comfortable about the treatment decision. Contact our admissions team to schedule a private tour.",
       },
       {
         q: "How quickly can I start treatment?",
@@ -69,7 +69,7 @@ const categories = [
       },
       {
         q: "Do you treat both mental health and addiction?",
-        a: "Yes. Desert Recovery Centers specializes in dual diagnosis treatment — addressing mental health conditions and substance use disorders simultaneously. Research shows that treating both conditions together leads to significantly better long-term outcomes.",
+        a: "Yes. Desert Recovery Centers specializes in dual diagnosis treatment, addressing mental health conditions and substance use disorders simultaneously. Research shows that treating both conditions together leads to significantly better long-term outcomes.",
       },
       {
         q: "What does a typical day look like in residential treatment?",
@@ -81,19 +81,19 @@ const categories = [
       },
       {
         q: "What credentials do your therapists have?",
-        a: "Our clinical team is led by licensed clinical psychologists (doctoral-level clinicians), supported by a board-certified psychiatrist serving as medical director, licensed professional counselors, registered nurses, and behavioral health professionals. Every primary therapist holds at minimum a master's degree in a clinical discipline, and all clinical work is supervised by doctoral-level psychologists — a level of oversight that is rare in residential treatment.",
+        a: "Our clinical team is led by licensed clinical psychologists (doctoral-level clinicians), supported by a board-certified psychiatrist serving as medical director, licensed professional counselors, registered nurses, and behavioral health professionals. Every primary therapist holds at minimum a master's degree in a clinical discipline, and all clinical work is supervised by doctoral-level psychologists, a level of oversight that is rare in residential treatment.",
       },
       {
         q: "Do you offer gender-specific groups?",
-        a: "Yes. We provide gender-specific group therapy sessions across all of our programs. Research supports that gender-specific groups create a safer environment for clients to discuss sensitive topics like trauma, relationships, and body image — leading to deeper therapeutic engagement and better outcomes.",
+        a: "Yes. We provide gender-specific group therapy sessions across all of our programs. Research supports that gender-specific groups create a safer environment for clients to discuss sensitive topics like trauma, relationships, and body image, leading to deeper therapeutic engagement and better outcomes.",
       },
       {
         q: "Do you use medication-assisted treatment (MAT)?",
-        a: "Yes. When clinically appropriate, our medical director prescribes FDA-approved medications such as buprenorphine (Suboxone), naltrexone (Vivitrol), and other medications to support recovery from opioid and alcohol use disorders. MAT is always used in conjunction with therapy — never as a standalone treatment.",
+        a: "Yes. When clinically appropriate, our medical director prescribes FDA-approved medications such as buprenorphine (Suboxone), naltrexone (Vivitrol), and other medications to support recovery from opioid and alcohol use disorders. MAT is always used in conjunction with therapy, never as a standalone treatment.",
       },
       {
         q: "What if I relapse during or after treatment?",
-        a: "Relapse is not failure — it is a common part of the recovery process for many people, and it does not erase the progress you have made. If a client relapses during treatment, our clinical team adjusts the treatment plan to address the underlying triggers. If relapse occurs after discharge, our alumni program provides immediate re-engagement support, and in many cases, clients can return for additional treatment. The most important thing is to seek help immediately rather than letting shame or discouragement prevent you from getting back on track.",
+        a: "Relapse is not failure, it is a common part of the recovery process for many people, and it does not erase the progress you have made. If a client relapses during treatment, our clinical team adjusts the treatment plan to address the underlying triggers. If relapse occurs after discharge, our alumni program provides immediate re-engagement support, and in many cases, clients can return for additional treatment. The most important thing is to seek help immediately rather than letting shame or discouragement prevent you from getting back on track.",
       },
     ],
   },
@@ -114,7 +114,7 @@ const categories = [
       },
       {
         q: "What are the facilities like?",
-        a: "Our three Arizona locations are luxury residential homes — not clinical institutions. Amenities vary by location but include swimming pools, basketball and tennis courts, gyms, massage rooms, gourmet kitchens, private bedrooms, game rooms, and outdoor recreation areas. Our Scottsdale facility features mountain views, and our Phoenix location includes a movie theater and pool with waterfall.",
+        a: "Our three Arizona locations are luxury residential homes, not clinical institutions. Amenities vary by location but include swimming pools, basketball and tennis courts, gyms, massage rooms, gourmet kitchens, private bedrooms, game rooms, and outdoor recreation areas. Our Scottsdale facility features mountain views, and our Phoenix location includes a movie theater and pool with waterfall.",
       },
       {
         q: "Can I work during IOP?",
@@ -160,7 +160,7 @@ const categories = [
       },
       {
         q: "What is your approach to relapse prevention?",
-        a: "Relapse prevention is integrated throughout the treatment experience — not added at the end. Clients develop individualized relapse prevention plans that identify triggers, warning signs, coping strategies, and emergency contacts. Our BridgeWork™ program specifically focuses on the practical application of these skills under real-world conditions, and aftercare planning ensures ongoing support structures are in place.",
+        a: "Relapse prevention is integrated throughout the treatment experience, not added at the end. Clients develop individualized relapse prevention plans that identify triggers, warning signs, coping strategies, and emergency contacts. Our BridgeWork™ program specifically focuses on the practical application of these skills under real-world conditions, and aftercare planning ensures ongoing support structures are in place.",
       },
     ],
   },

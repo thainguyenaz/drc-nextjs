@@ -19,7 +19,7 @@ export const metadata: Metadata = buildMetadata({
 const locations = [
   {
     name: "DRC Glendale",
-    tagline: "Flagship Facility — West Valley",
+    tagline: "Flagship Facility, West Valley",
     address: "8105 W Frier Dr, Glendale, AZ 85303",
     phone: "(623) 323-1012",
     phoneTel: "+16233231012",
@@ -36,7 +36,7 @@ const locations = [
   },
   {
     name: "DRC Scottsdale",
-    tagline: "Mountain Views — North Scottsdale",
+    tagline: "Mountain Views, North Scottsdale",
     address: "23222 N Church Rd, Scottsdale, AZ 85255",
     phone: "(480) 931-3617",
     phoneTel: "+14809313617",
@@ -52,7 +52,7 @@ const locations = [
   },
   {
     name: "DRC Phoenix",
-    tagline: "Holistic Focus — Central Phoenix",
+    tagline: "Holistic Focus, Central Phoenix",
     address: "1623 W Moody Trail, Phoenix, AZ 85041",
     phone: "(623) 257-5384",
     phoneTel: "+16232575384",
@@ -76,7 +76,7 @@ const faqs = [
   },
   {
     q: "Which DRC location is closest to me?",
-    a: "If you're in the West Valley (Peoria, Surprise, Avondale, Goodyear) — Glendale is closest. If you're in North Scottsdale, Paradise Valley, Fountain Hills, or Cave Creek — Scottsdale is nearest. If you're in Tempe, Mesa, Chandler, or Gilbert — Phoenix is your closest facility. Call (480) 931-3617 and we'll help you determine the best option.",
+    a: "If you're in the West Valley (Peoria, Surprise, Avondale, Goodyear), Glendale is closest. If you're in North Scottsdale, Paradise Valley, Fountain Hills, or Cave Creek, Scottsdale is nearest. If you're in Tempe, Mesa, Chandler, or Gilbert, Phoenix is your closest facility. Call (480) 931-3617 and we'll help you determine the best option.",
   },
   {
     q: "Can I tour a facility before committing?",
@@ -88,7 +88,7 @@ const faqs = [
   },
   {
     q: "Do all three locations accept the same insurance?",
-    a: "Yes, all DRC locations are in-network with the same major insurance providers including Aetna, Blue Cross Blue Shield, Cigna, and UnitedHealthcare. Coverage varies by plan. Contact us to verify your benefits — our admissions team handles verification at no cost.",
+    a: "Yes, all DRC locations are in-network with the same major insurance providers including Aetna, Blue Cross Blue Shield, Cigna, and UnitedHealthcare. Coverage varies by plan. Contact us to verify your benefits, our admissions team handles verification at no cost.",
   },
 ];
 
@@ -114,7 +114,7 @@ export default function RehabNearMePage() {
               Luxury Treatment Across the Valley
             </h2>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              Desert Recovery Centers operates three treatment facilities across the Phoenix metropolitan area — in Glendale, Scottsdale, and Phoenix. No matter where you are in Arizona, world-class addiction and mental health treatment is within driving distance.
+              Desert Recovery Centers operates three treatment facilities across the Phoenix metropolitan area, in Glendale, Scottsdale, and Phoenix. No matter where you are in Arizona, world-class addiction and mental health treatment is within driving distance.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg">
               Every location is staffed by the same caliber of doctoral-level clinicians, accredited by the Joint Commission, and limited to a maximum of 10 beds. The difference is in the surroundings and specific amenities. Below, find the facility closest to you.

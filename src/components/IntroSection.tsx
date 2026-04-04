@@ -20,7 +20,7 @@ export default function IntroSection() {
       <div className="max-w-container mx-auto px-6">
         {/* Top row: photo left + photo right, collision animation */}
         <div className="grid md:grid-cols-2 gap-8 mb-16">
-          {/* LEFT image — slides in from left */}
+          {/* LEFT image, slides in from left */}
           <motion.div
             style={{ x: leftX, opacity: imgOpacity }}
             className="relative h-[320px] md:h-[400px] rounded-2xl overflow-hidden shadow-xl group"
@@ -34,7 +34,7 @@ export default function IntroSection() {
             />
           </motion.div>
 
-          {/* RIGHT image — slides in from right */}
+          {/* RIGHT image, slides in from right */}
           <motion.div
             style={{ x: rightX, opacity: imgOpacity }}
             className="relative h-[320px] md:h-[400px] rounded-2xl overflow-hidden shadow-xl group"
@@ -73,7 +73,7 @@ export default function IntroSection() {
           </p>
           <p className="text-gray-600 leading-relaxed mb-8">
             Our multidisciplinary clinical team combines proven therapeutic
-            modalities — including CBT, DBT, EMDR, and holistic practices —
+            modalities, including CBT, DBT, EMDR, and holistic practices , 
             with the warmth and attention of a boutique program. Every
             treatment plan is crafted around you, because your recovery story
             is uniquely yours.

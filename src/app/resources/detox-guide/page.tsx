@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 import { buildMetadata, BreadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Medical Detox in Arizona — DRC",
+  title: "Medical Detox in Arizona, DRC",
   description:
     "Learn what medical detox involves, why it matters, and what to expect. Medically supervised detox at Desert Recovery Centers in Arizona.",
   path: "/resources/detox-guide",
@@ -16,11 +16,11 @@ export const metadata: Metadata = buildMetadata({
 const faqs = [
   {
     q: "Is detox painful?",
-    a: "Medical detox is designed to manage withdrawal symptoms as safely and comfortably as possible. While withdrawal can be uncomfortable, our medical team uses evidence-based medications and 24/7 monitoring to significantly reduce discomfort. The experience varies by substance and individual, but our goal is always to minimize suffering while ensuring safety. We never use the term 'painless detox' because honesty about the process is important — but medically supervised detox is vastly more comfortable and safer than attempting withdrawal alone.",
+    a: "Medical detox is designed to manage withdrawal symptoms as safely and comfortably as possible. While withdrawal can be uncomfortable, our medical team uses evidence-based medications and 24/7 monitoring to significantly reduce discomfort. The experience varies by substance and individual, but our goal is always to minimize suffering while ensuring safety. We never use the term 'painless detox' because honesty about the process is important, but medically supervised detox is vastly more comfortable and safer than attempting withdrawal alone.",
   },
   {
     q: "How long does detox take?",
-    a: "Detox timelines vary significantly by substance. Alcohol detox typically takes 5-7 days, opioid detox 5-10 days, benzodiazepine detox can take 2-4 weeks due to the tapering process, and stimulant withdrawal may last 1-2 weeks. These are general ranges — your actual timeline depends on the substance, duration of use, dosage, overall health, and whether you're withdrawing from multiple substances simultaneously.",
+    a: "Detox timelines vary significantly by substance. Alcohol detox typically takes 5-7 days, opioid detox 5-10 days, benzodiazepine detox can take 2-4 weeks due to the tapering process, and stimulant withdrawal may last 1-2 weeks. These are general ranges, your actual timeline depends on the substance, duration of use, dosage, overall health, and whether you're withdrawing from multiple substances simultaneously.",
   },
   {
     q: "Can I detox at home?",
@@ -28,7 +28,7 @@ const faqs = [
   },
   {
     q: "What happens after detox is complete?",
-    a: "At Desert Recovery Centers, clients transition directly from detox stabilization into our residential treatment program. This is critical because detox only addresses physical dependence — it does not treat the psychological, behavioral, and emotional dimensions of addiction. Clients who complete detox without entering treatment have extremely high relapse rates. Our integrated approach ensures a seamless transition from medical stabilization to comprehensive treatment.",
+    a: "At Desert Recovery Centers, clients transition directly from detox stabilization into our residential treatment program. This is critical because detox only addresses physical dependence, it does not treat the psychological, behavioral, and emotional dimensions of addiction. Clients who complete detox without entering treatment have extremely high relapse rates. Our integrated approach ensures a seamless transition from medical stabilization to comprehensive treatment.",
   },
   {
     q: "Does insurance cover medical detox?",
@@ -53,7 +53,7 @@ export default function DetoxGuidePage() {
       <PageHero
         eyebrow="Clinical Resource"
         title="Medical Detox in Arizona"
-        description="What to expect from medically supervised detoxification — and why it is the critical first step that makes treatment possible."
+        description="What to expect from medically supervised detoxification, and why it is the critical first step that makes treatment possible."
         bgImage="/images/general/DRC-Treatment-Therapies-BG-Fade.jpg"
       />
 
@@ -71,16 +71,16 @@ export default function DetoxGuidePage() {
         <div className="max-w-container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mb-6">
-              Detox Is the First Step — Not the Last
+              Detox Is the First Step, Not the Last
             </h2>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              Detox is not treatment. It is the necessary first step that makes treatment possible. Done without medical supervision, withdrawal from alcohol, benzodiazepines, or opioids can be dangerous — even fatal.
+              Detox is not treatment. It is the necessary first step that makes treatment possible. Done without medical supervision, withdrawal from alcohol, benzodiazepines, or opioids can be dangerous, even fatal.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              Medically supervised detoxification provides the clinical oversight, medication management, and 24/7 monitoring needed to safely navigate the withdrawal process. It clears the body of substances so that the real work of recovery — therapy, skill-building, and behavioral change — can begin.
+              Medically supervised detoxification provides the clinical oversight, medication management, and 24/7 monitoring needed to safely navigate the withdrawal process. It clears the body of substances so that the real work of recovery, therapy, skill-building, and behavioral change, can begin.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg">
-              At Desert Recovery Centers, detox stabilization is integrated into our treatment continuum. Clients are never discharged after detox alone — they transition directly into our residential program where the underlying causes of addiction are addressed through evidence-based clinical care.
+              At Desert Recovery Centers, detox stabilization is integrated into our treatment continuum. Clients are never discharged after detox alone, they transition directly into our residential program where the underlying causes of addiction are addressed through evidence-based clinical care.
             </p>
           </div>
         </div>
@@ -94,7 +94,7 @@ export default function DetoxGuidePage() {
               Setting Expectations
             </span>
             <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4 mb-8">
-              What Detox Is — and What It Is Not
+              What Detox Is, and What It Is Not
             </h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div>
@@ -106,7 +106,7 @@ export default function DetoxGuidePage() {
                 </h3>
                 <div className="space-y-3">
                   {[
-                    "Medical stabilization — safely managing the physical symptoms of withdrawal",
+                    "Medical stabilization, safely managing the physical symptoms of withdrawal",
                     "24/7 monitoring by nurses and physicians who can respond to complications immediately",
                     "Medication management to reduce withdrawal severity and prevent dangerous outcomes like seizures",
                     "The bridge between active substance use and the beginning of therapeutic treatment",
@@ -128,11 +128,11 @@ export default function DetoxGuidePage() {
                 </h3>
                 <div className="space-y-3">
                   {[
-                    "Not treatment for addiction — it addresses physical dependence only, not the psychological or behavioral components",
-                    "Not sufficient on its own — clients who leave after detox without entering treatment have extremely high relapse rates",
-                    "Not a shortcut — there is no safe way to accelerate withdrawal beyond what the body can handle",
+                    "Not treatment for addiction, it addresses physical dependence only, not the psychological or behavioral components",
+                    "Not sufficient on its own, clients who leave after detox without entering treatment have extremely high relapse rates",
+                    "Not a shortcut, there is no safe way to accelerate withdrawal beyond what the body can handle",
                     "Not a substitute for therapy, skill-building, or the clinical work that creates lasting recovery",
-                    "Not a one-time event for everyone — some individuals require medical support through multiple phases of stabilization",
+                    "Not a one-time event for everyone, some individuals require medical support through multiple phases of stabilization",
                   ].map((item, i) => (
                     <div key={i} className="flex items-start gap-3 bg-white rounded-lg p-3 border border-gray-100">
                       <span className="w-2 h-2 bg-red-300 rounded-full mt-2 flex-shrink-0" />
@@ -163,15 +163,15 @@ export default function DetoxGuidePage() {
               {[
                 {
                   title: "Alcohol",
-                  desc: "Alcohol withdrawal can produce tremors, hallucinations, seizures, and delirium tremens (DTs) — a potentially fatal condition. The risk is highest for heavy, long-term drinkers and those with a history of withdrawal seizures. Medically supervised detox uses benzodiazepines and other medications to prevent these complications.",
+                  desc: "Alcohol withdrawal can produce tremors, hallucinations, seizures, and delirium tremens (DTs), a potentially fatal condition. The risk is highest for heavy, long-term drinkers and those with a history of withdrawal seizures. Medically supervised detox uses benzodiazepines and other medications to prevent these complications.",
                 },
                 {
                   title: "Benzodiazepines (Xanax, Valium, Klonopin, Ativan)",
-                  desc: "Benzodiazepine withdrawal is similar to alcohol withdrawal in its severity and can produce seizures, psychosis, and life-threatening complications. Benzodiazepines must be tapered gradually under medical supervision — abrupt discontinuation is dangerous regardless of dosage. The tapering process can take weeks to months depending on the duration and dosage of use.",
+                  desc: "Benzodiazepine withdrawal is similar to alcohol withdrawal in its severity and can produce seizures, psychosis, and life-threatening complications. Benzodiazepines must be tapered gradually under medical supervision, abrupt discontinuation is dangerous regardless of dosage. The tapering process can take weeks to months depending on the duration and dosage of use.",
                 },
                 {
                   title: "Opioids (Heroin, Fentanyl, Oxycodone, Hydrocodone)",
-                  desc: "While opioid withdrawal is rarely life-threatening, it produces extremely uncomfortable symptoms — severe muscle aches, nausea, vomiting, diarrhea, insomnia, and intense cravings — that drive the majority of relapses. Medical detox uses FDA-approved medications like buprenorphine (Suboxone) and clonidine to manage symptoms and reduce the risk of relapse during this vulnerable period.",
+                  desc: "While opioid withdrawal is rarely life-threatening, it produces extremely uncomfortable symptoms, severe muscle aches, nausea, vomiting, diarrhea, insomnia, and intense cravings, that drive the majority of relapses. Medical detox uses FDA-approved medications like buprenorphine (Suboxone) and clonidine to manage symptoms and reduce the risk of relapse during this vulnerable period.",
                 },
                 {
                   title: "Stimulants (Methamphetamine, Cocaine)",
@@ -207,11 +207,11 @@ export default function DetoxGuidePage() {
               {[
                 {
                   title: "Intake Assessment",
-                  desc: "Upon arrival, our medical team conducts a comprehensive evaluation — substance use history, medical history, mental health screening, vital signs, and laboratory work. This assessment determines the appropriate detox protocol and identifies any co-occurring conditions that require attention.",
+                  desc: "Upon arrival, our medical team conducts a comprehensive evaluation, substance use history, medical history, mental health screening, vital signs, and laboratory work. This assessment determines the appropriate detox protocol and identifies any co-occurring conditions that require attention.",
                 },
                 {
                   title: "Medical Stabilization",
-                  desc: "Our medical director prescribes an individualized medication protocol based on the substances involved and the severity of dependence. Vital signs are monitored regularly — every 2-4 hours in the acute phase. Nursing staff are available 24/7 to respond to any changes in condition.",
+                  desc: "Our medical director prescribes an individualized medication protocol based on the substances involved and the severity of dependence. Vital signs are monitored regularly, every 2-4 hours in the acute phase. Nursing staff are available 24/7 to respond to any changes in condition.",
                 },
                 {
                   title: "Comfort and Support",
@@ -219,7 +219,7 @@ export default function DetoxGuidePage() {
                 },
                 {
                   title: "Transition to Treatment",
-                  desc: "As withdrawal symptoms stabilize, the clinical team begins introducing therapeutic elements — light psychoeducation, motivational interviewing, and treatment planning. This creates a seamless transition from medical detox into the full residential treatment program, where the deeper work of recovery begins.",
+                  desc: "As withdrawal symptoms stabilize, the clinical team begins introducing therapeutic elements, light psychoeducation, motivational interviewing, and treatment planning. This creates a seamless transition from medical detox into the full residential treatment program, where the deeper work of recovery begins.",
                 },
               ].map((item, i) => (
                 <div key={i} className="border-l-2 border-gold/40 pl-6">
@@ -252,7 +252,7 @@ export default function DetoxGuidePage() {
                 { substance: "Alcohol", onset: "6-24 hours after last drink", peak: "24-72 hours", duration: "5-7 days", note: "Risk of seizures highest in first 48 hours" },
                 { substance: "Opioids (Short-acting: heroin, fentanyl)", onset: "8-24 hours", peak: "36-72 hours", duration: "5-10 days", note: "Acute symptoms resolve within a week; psychological cravings may persist longer" },
                 { substance: "Opioids (Long-acting: methadone)", onset: "24-48 hours", peak: "3-8 days", duration: "14-21 days", note: "Longer timeline due to extended half-life" },
-                { substance: "Benzodiazepines", onset: "1-4 days", peak: "7-14 days", duration: "2-8 weeks (with taper)", note: "Must be tapered — never discontinued abruptly" },
+                { substance: "Benzodiazepines", onset: "1-4 days", peak: "7-14 days", duration: "2-8 weeks (with taper)", note: "Must be tapered, never discontinued abruptly" },
                 { substance: "Stimulants (meth, cocaine)", onset: "Hours to 1 day", peak: "3-5 days", duration: "1-2 weeks", note: "Primarily psychological; monitor for severe depression" },
               ].map((item, i) => (
                 <div key={i} className="bg-cream rounded-xl p-5 border border-gray-100">
@@ -293,7 +293,7 @@ export default function DetoxGuidePage() {
               {[
                 {
                   title: "Physician-Led Medical Oversight",
-                  desc: "Our medical director oversees all detox protocols, with registered nurses providing 24/7 bedside monitoring. Every medication decision is made by a physician — never delegated to unlicensed staff.",
+                  desc: "Our medical director oversees all detox protocols, with registered nurses providing 24/7 bedside monitoring. Every medication decision is made by a physician, never delegated to unlicensed staff.",
                 },
                 {
                   title: "Individualized Medication Protocols",
@@ -305,7 +305,7 @@ export default function DetoxGuidePage() {
                 },
                 {
                   title: "Comfort in a Luxury Environment",
-                  desc: "Detox at DRC takes place in private rooms within our luxury residential facilities — not a sterile hospital unit. Comfortable surroundings, nutritious meals, and compassionate staff make a difficult process significantly more bearable.",
+                  desc: "Detox at DRC takes place in private rooms within our luxury residential facilities, not a sterile hospital unit. Comfortable surroundings, nutritious meals, and compassionate staff make a difficult process significantly more bearable.",
                 },
                 {
                   title: "Dual Diagnosis Awareness",

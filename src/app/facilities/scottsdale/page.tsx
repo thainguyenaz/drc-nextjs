@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 import { buildMetadata, BreadcrumbSchema, LocalBusinessSchema } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Scottsdale Treatment Center — Desert Recovery Centers",
+  title: "Scottsdale Treatment Center, Desert Recovery Centers",
   description: "Luxury residential treatment at 23222 N Church Rd, Scottsdale, AZ. Mountain views, pool, gym, and comprehensive programs. Call (480) 931-3617.",
   path: "/facilities/scottsdale",
 });

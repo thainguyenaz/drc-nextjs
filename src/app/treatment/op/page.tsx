@@ -23,11 +23,11 @@ const faqs = [
   },
   {
     q: "How does OP differ from IOP?",
-    a: "IOP meets 5 to 3 days per week and focuses on building recovery skills during the transition from PHP. OP meets 1 to 3 days per week and focuses on long-term maintenance — sustaining the gains made in earlier phases while reintegrating fully into work, family, and community life. OP provides ongoing psychiatric support, group therapy, and individual check-ins at a frequency that supports independence.",
+    a: "IOP meets 5 to 3 days per week and focuses on building recovery skills during the transition from PHP. OP meets 1 to 3 days per week and focuses on long-term maintenance, sustaining the gains made in earlier phases while reintegrating fully into work, family, and community life. OP provides ongoing psychiatric support, group therapy, and individual check-ins at a frequency that supports independence.",
   },
   {
     q: "How long does the Outpatient Program last?",
-    a: "OP has no fixed end date — duration is individualized based on clinical progress and personal goals. Some clients attend for a few months as a final step-down before transitioning to aftercare, while others maintain OP sessions longer for ongoing psychiatric care and accountability. Your clinical team collaborates with you to determine the right timeline.",
+    a: "OP has no fixed end date, duration is individualized based on clinical progress and personal goals. Some clients attend for a few months as a final step-down before transitioning to aftercare, while others maintain OP sessions longer for ongoing psychiatric care and accountability. Your clinical team collaborates with you to determine the right timeline.",
   },
   {
     q: "Can I work full-time while in OP?",
@@ -35,7 +35,7 @@ const faqs = [
   },
   {
     q: "Do you accept insurance for OP?",
-    a: "Yes, we are in-network with most major insurance providers including Aetna, Blue Cross Blue Shield, Cigna, and UnitedHealthcare. Coverage varies by plan. Contact us to verify your benefits — our admissions team handles verification at no cost.",
+    a: "Yes, we are in-network with most major insurance providers including Aetna, Blue Cross Blue Shield, Cigna, and UnitedHealthcare. Coverage varies by plan. Contact us to verify your benefits, our admissions team handles verification at no cost.",
   },
 ];
 
@@ -52,9 +52,9 @@ export default function TreatmentOPPage() {
       />
       <Navigation />
       <PageHero
-        eyebrow="Phase 3 — Levels of Care"
+        eyebrow="Phase 3, Levels of Care"
         title="Outpatient Program (OP) in Arizona"
-        description="Long-term stabilization and community reintegration — the final structured phase before independent recovery."
+        description="Long-term stabilization and community reintegration, the final structured phase before independent recovery."
         bgImage="/images/glendale/Glendale-Group-Room.jpg"
       />
 
@@ -66,13 +66,13 @@ export default function TreatmentOPPage() {
               Long-Term Maintenance. Full Community Integration.
             </h2>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              After completing IOP, our Outpatient Program provides the ongoing clinical structure that keeps recovery on track while you fully re-engage with daily life. Meeting 1 to 3 days per week for 3-hour sessions, OP is where the skills you&apos;ve built across residential, PHP, and IOP become your daily reality — with your treatment team still within reach.
+              After completing IOP, our Outpatient Program provides the ongoing clinical structure that keeps recovery on track while you fully re-engage with daily life. Meeting 1 to 3 days per week for 3-hour sessions, OP is where the skills you&apos;ve built across residential, PHP, and IOP become your daily reality, with your treatment team still within reach.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              This is the phase where independence takes the lead. You&apos;re working, managing relationships, handling stress — and doing it with the coping strategies, relapse prevention skills, and self-awareness you&apos;ve developed through DRC&apos;s continuum of care. OP sessions provide a consistent touchpoint: group therapy, individual check-ins, and ongoing psychiatric care to adjust medications and monitor progress.
+              This is the phase where independence takes the lead. You&apos;re working, managing relationships, handling stress, and doing it with the coping strategies, relapse prevention skills, and self-awareness you&apos;ve developed through DRC&apos;s continuum of care. OP sessions provide a consistent touchpoint: group therapy, individual check-ins, and ongoing psychiatric care to adjust medications and monitor progress.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg">
-              Available at all three DRC locations — Glendale, Scottsdale, and Phoenix — OP ensures you have access to clinical support close to home as you build the life you&apos;ve been working toward.
+              Available at all three DRC locations, Glendale, Scottsdale, and Phoenix, OP ensures you have access to clinical support close to home as you build the life you&apos;ve been working toward.
             </p>
           </div>
         </div>
@@ -126,7 +126,7 @@ export default function TreatmentOPPage() {
             <div className="space-y-4">
               {[
                 { title: "Have completed IOP and are stepping down", desc: "You've progressed through IOP and are ready for less frequent sessions while maintaining the clinical connection that keeps your recovery strong." },
-                { title: "Are maintaining long-term sobriety", desc: "You're stable in your recovery and need ongoing structure — not intensive intervention. OP provides the regular touchpoints that prevent drift without disrupting the life you've rebuilt." },
+                { title: "Are maintaining long-term sobriety", desc: "You're stable in your recovery and need ongoing structure, not intensive intervention. OP provides the regular touchpoints that prevent drift without disrupting the life you've rebuilt." },
                 { title: "Need ongoing psychiatric support", desc: "Medication management, psychiatric monitoring, and clinical check-ins continue at the frequency you need. Your psychiatric team adjusts your care plan as you progress." },
                 { title: "Are reintegrating into work and family life", desc: "You're fully engaged with career, relationships, and daily responsibilities. OP's 1-3 day schedule fits around your life, not the other way around." },
               ].map((item, i) => (
@@ -175,10 +175,10 @@ export default function TreatmentOPPage() {
             <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mb-8">Our Full Continuum of Care</h2>
             <div className="space-y-3 mb-6">
               {[
-                { level: "Phase 1 — Residential", desc: "24/7 immersive treatment, 30 days", href: "/programs/residential" },
-                { level: "Phase 1B — PHP", desc: "5-6 hours daily, 5 days/week, 4-6 weeks", href: "/programs/php" },
-                { level: "Phase 2 — IOP", desc: "3-hour sessions, 5→3 days/week, 4-8 weeks", href: "/treatment/iop" },
-                { level: "Phase 3 — OP", desc: "3-hour sessions, 1-3 days/week, ongoing", href: "/treatment/op", current: true },
+                { level: "Phase 1, Residential", desc: "24/7 immersive treatment, 30 days", href: "/programs/residential" },
+                { level: "Phase 1B, PHP", desc: "5-6 hours daily, 5 days/week, 4-6 weeks", href: "/programs/php" },
+                { level: "Phase 2, IOP", desc: "3-hour sessions, 5→3 days/week, 4-8 weeks", href: "/treatment/iop" },
+                { level: "Phase 3, OP", desc: "3-hour sessions, 1-3 days/week, ongoing", href: "/treatment/op", current: true },
                 { level: "Aftercare", desc: "Alumni network, community support, ongoing therapy", href: "#" },
               ].map((item) => (
                 <div key={item.level} className={`rounded-xl p-5 border ${item.current ? "border-gold bg-gold/5" : "border-gray-100 bg-white"}`}>
@@ -227,7 +227,7 @@ export default function TreatmentOPPage() {
       <ConditionFAQ items={faqs} />
       <AEOBlock entries={[
         { question: "What is the Outpatient Program at Desert Recovery Centers?", answer: "Desert Recovery Centers' Outpatient Program (OP) meets 1 to 3 days per week for 3-hour sessions, providing long-term stabilization and community reintegration support. Available at all three Joint Commission accredited facilities in Glendale, Scottsdale, and Phoenix, OP includes group therapy, individual check-ins, psychiatric care, relapse prevention, and alumni network integration." },
-        { question: "How long is the Outpatient Program at Desert Recovery Centers?", answer: "OP at DRC has no fixed end date — duration is individualized based on clinical progress and personal goals. The program provides ongoing structure at 1-3 days per week as the final step before transitioning to independent aftercare and the DRC alumni network." },
+        { question: "How long is the Outpatient Program at Desert Recovery Centers?", answer: "OP at DRC has no fixed end date, duration is individualized based on clinical progress and personal goals. The program provides ongoing structure at 1-3 days per week as the final step before transitioning to independent aftercare and the DRC alumni network." },
       ]} />
       <CTASection />
       <Footer />

@@ -7,9 +7,9 @@ import Footer from "@/components/Footer";
 import { buildMetadata, BreadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "What to Bring to Rehab: A Complete Packing Guide — Desert Recovery Centers",
+  title: "What to Bring to Rehab: A Complete Packing Guide, Desert Recovery Centers",
   description:
-    "Complete packing checklist for rehab — what to bring, what to leave at home, and practical tips for your first day at a treatment center in Arizona.",
+    "Complete packing checklist for rehab, what to bring, what to leave at home, and practical tips for your first day at a treatment center in Arizona.",
   path: "/resources/what-to-bring",
 });
 
@@ -28,11 +28,11 @@ const faqs = [
   },
   {
     q: "How much clothing should I pack for rehab?",
-    a: "Plan for 7 to 10 days of comfortable, casual clothing. DRC facilities have laundry access, so you don&apos;t need to pack for your entire stay. Focus on comfort — you&apos;ll be spending your time in therapy, group sessions, and recreational activities, not formal events. Don&apos;t forget workout clothes and swimwear if your facility has a pool.",
+    a: "Plan for 7 to 10 days of comfortable, casual clothing. DRC facilities have laundry access, so you don&apos;t need to pack for your entire stay. Focus on comfort, you&apos;ll be spending your time in therapy, group sessions, and recreational activities, not formal events. Don&apos;t forget workout clothes and swimwear if your facility has a pool.",
   },
   {
     q: "Are there things that will be confiscated at intake?",
-    a: "During the intake process, staff will review your belongings to ensure the safety of all clients. Items containing alcohol (certain mouthwashes, colognes), sharp objects, and any prohibited substances will be stored securely or returned to family members. Valuables like expensive jewelry or large amounts of cash are discouraged — staff can securely store essential valuables if needed. This process exists to keep everyone safe, not to be invasive.",
+    a: "During the intake process, staff will review your belongings to ensure the safety of all clients. Items containing alcohol (certain mouthwashes, colognes), sharp objects, and any prohibited substances will be stored securely or returned to family members. Valuables like expensive jewelry or large amounts of cash are discouraged, staff can securely store essential valuables if needed. This process exists to keep everyone safe, not to be invasive.",
   },
 ];
 
@@ -49,7 +49,7 @@ export default function WhatToBringPage() {
       <PageHero
         eyebrow="Resources"
         title="What to Bring to Rehab: A Complete Packing Guide"
-        description="Packing for rehab can feel overwhelming. Here&apos;s everything you need — and don&apos;t need — for your stay."
+        description="Packing for rehab can feel overwhelming. Here&apos;s everything you need, and don&apos;t need, for your stay."
         bgImage="/images/general/DRC-OUR-TEAM.jpg"
       />
 
@@ -61,10 +61,10 @@ export default function WhatToBringPage() {
               Preparing for Your Stay
             </h2>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              Making the decision to enter treatment is the hard part. Packing for it shouldn&apos;t be. Whether you&apos;re preparing for yourself or helping a loved one get ready, knowing what to bring — and what to leave behind — makes the transition smoother and less stressful.
+              Making the decision to enter treatment is the hard part. Packing for it shouldn&apos;t be. Whether you&apos;re preparing for yourself or helping a loved one get ready, knowing what to bring, and what to leave behind, makes the transition smoother and less stressful.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg">
-              This guide covers everything you need for a residential rehab stay, with specific tips for Desert Recovery Centers facilities in Arizona. When in doubt, pack light — DRC provides most of what you&apos;ll need, and you can always have items brought to you later.
+              This guide covers everything you need for a residential rehab stay, with specific tips for Desert Recovery Centers facilities in Arizona. When in doubt, pack light, DRC provides most of what you&apos;ll need, and you can always have items brought to you later.
             </p>
           </div>
         </div>
@@ -86,10 +86,10 @@ export default function WhatToBringPage() {
             <div className="grid md:grid-cols-2 gap-4">
               {[
                 "Valid photo ID (driver&apos;s license, state ID, or passport)",
-                "Insurance cards — both medical and behavioral health if separate",
+                "Insurance cards, both medical and behavioral health if separate",
                 "A complete list of current medications with dosages and prescribing doctors",
                 "All current medications in their original, labeled prescription bottles",
-                "Emergency contact information — names, phone numbers, and relationships",
+                "Emergency contact information, names, phone numbers, and relationships",
                 "Any court or legal documents related to your admission (if applicable)",
                 "A list of your current healthcare providers (primary care, psychiatrist, therapist)",
                 "Advance directive or power of attorney documents, if you have them",
@@ -118,13 +118,13 @@ export default function WhatToBringPage() {
               Clothing and Personal Items
             </h2>
             <p className="text-gray-600 leading-relaxed text-lg mb-6">
-              Think comfort over style. You&apos;ll spend most of your time in therapy sessions, group activities, and recreation — not formal events. Pack for about 7 to 10 days, as laundry facilities are available.
+              Think comfort over style. You&apos;ll spend most of your time in therapy sessions, group activities, and recreation, not formal events. Pack for about 7 to 10 days, as laundry facilities are available.
             </p>
             <div className="space-y-4">
               {[
                 {
                   title: "Everyday Clothing",
-                  desc: "Comfortable, casual clothing for daily wear — think t-shirts, shorts, sweatpants, and jeans. Bring enough for 7 to 10 days. Layering is smart, as indoor temperatures and outdoor Arizona heat can vary.",
+                  desc: "Comfortable, casual clothing for daily wear, think t-shirts, shorts, sweatpants, and jeans. Bring enough for 7 to 10 days. Layering is smart, as indoor temperatures and outdoor Arizona heat can vary.",
                 },
                 {
                   title: "Workout and Active Wear",
@@ -144,7 +144,7 @@ export default function WhatToBringPage() {
                 },
                 {
                   title: "Toiletries",
-                  desc: "Shampoo, conditioner, body wash, deodorant, toothbrush, toothpaste, and any personal hygiene items. Important: all toiletries must be alcohol-free. This includes mouthwash, hand sanitizer, and any other products. Sunscreen is essential in Arizona — SPF 30 or higher is recommended.",
+                  desc: "Shampoo, conditioner, body wash, deodorant, toothbrush, toothpaste, and any personal hygiene items. Important: all toiletries must be alcohol-free. This includes mouthwash, hand sanitizer, and any other products. Sunscreen is essential in Arizona, SPF 30 or higher is recommended.",
                 },
               ].map((item, i) => (
                 <div key={i} className="border-l-2 border-gold/40 pl-6">
@@ -174,12 +174,12 @@ export default function WhatToBringPage() {
             </p>
             <div className="grid md:grid-cols-2 gap-4">
               {[
-                "A journal or notebook — writing is a powerful therapeutic tool, and many programs incorporate journaling into the recovery process",
-                "Books or a reading device (check your facility&apos;s electronics policy first) — downtime is part of the schedule, and reading is a healthy way to spend it",
-                "Photos of loved ones — a visual reminder of the people you&apos;re getting better for can be a powerful motivator during difficult days",
-                "A personal pillow or small blanket — familiar items from home can ease the transition into a new environment",
-                "A small spiritual or inspirational text — whatever gives you strength, whether religious or secular",
-                "Stamps, envelopes, and a pen — letter writing is encouraged in many programs and can be a meaningful way to reconnect with family",
+                "A journal or notebook, writing is a powerful therapeutic tool, and many programs incorporate journaling into the recovery process",
+                "Books or a reading device (check your facility&apos;s electronics policy first), downtime is part of the schedule, and reading is a healthy way to spend it",
+                "Photos of loved ones, a visual reminder of the people you&apos;re getting better for can be a powerful motivator during difficult days",
+                "A personal pillow or small blanket, familiar items from home can ease the transition into a new environment",
+                "A small spiritual or inspirational text, whatever gives you strength, whether religious or secular",
+                "Stamps, envelopes, and a pen, letter writing is encouraged in many programs and can be a meaningful way to reconnect with family",
               ].map((item, i) => (
                 <div
                   key={i}
@@ -219,7 +219,7 @@ export default function WhatToBringPage() {
                 },
                 {
                   title: "Alcohol-Containing Products",
-                  desc: "Many common products contain alcohol — mouthwash, cologne, perfume, aftershave, some hair products, and hand sanitizer. Bring alcohol-free versions of these items.",
+                  desc: "Many common products contain alcohol, mouthwash, cologne, perfume, aftershave, some hair products, and hand sanitizer. Bring alcohol-free versions of these items.",
                 },
                 {
                   title: "Valuables and Expensive Jewelry",
@@ -231,7 +231,7 @@ export default function WhatToBringPage() {
                 },
                 {
                   title: "Laptops and Work Equipment",
-                  desc: "Most residential programs discourage or prohibit laptops to help clients disengage from work and focus on recovery. Phone policies vary by program — check with your admissions coordinator.",
+                  desc: "Most residential programs discourage or prohibit laptops to help clients disengage from work and focus on recovery. Phone policies vary by program, check with your admissions coordinator.",
                 },
                 {
                   title: "Revealing or Inappropriate Clothing",
@@ -268,12 +268,12 @@ export default function WhatToBringPage() {
             </p>
             <div className="grid md:grid-cols-2 gap-4">
               {[
-                "All bed linens, pillows, and bedding — your room is fully set up before you arrive",
+                "All bed linens, pillows, and bedding, your room is fully set up before you arrive",
                 "Fresh towels and washcloths, laundered and replaced regularly",
-                "Gourmet meals prepared daily — nutritionally balanced and designed to support recovery. Special dietary needs are accommodated",
-                "Fully equipped fitness center and gym equipment — no need to bring your own workout gear beyond clothing",
-                "Pool and recreational equipment — available for use during designated recreation times",
-                "Laundry facilities — available for client use, so packing for 7 to 10 days is more than enough",
+                "Gourmet meals prepared daily, nutritionally balanced and designed to support recovery. Special dietary needs are accommodated",
+                "Fully equipped fitness center and gym equipment, no need to bring your own workout gear beyond clothing",
+                "Pool and recreational equipment, available for use during designated recreation times",
+                "Laundry facilities, available for client use, so packing for 7 to 10 days is more than enough",
               ].map((item, i) => (
                 <div
                   key={i}
@@ -313,7 +313,7 @@ export default function WhatToBringPage() {
               {[
                 {
                   title: "Welcome and Check-In",
-                  desc: "You&apos;ll be greeted by staff and guided through the arrival process. The atmosphere is warm and supportive — the team understands that this is a significant and often nerve-wracking moment.",
+                  desc: "You&apos;ll be greeted by staff and guided through the arrival process. The atmosphere is warm and supportive, the team understands that this is a significant and often nerve-wracking moment.",
                 },
                 {
                   title: "Belongings Review",

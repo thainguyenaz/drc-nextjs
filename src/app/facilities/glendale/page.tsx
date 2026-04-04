@@ -7,13 +7,13 @@ import Footer from "@/components/Footer";
 import { buildMetadata, BreadcrumbSchema, LocalBusinessSchema } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Glendale Treatment Center — Desert Recovery Centers",
+  title: "Glendale Treatment Center, Desert Recovery Centers",
   description: "Luxury residential treatment at 8105 W Frier Dr, Glendale, AZ. 7,500 sq ft facility with pool, gym, tennis court, and basketball court. Call (623) 323-1012.",
   path: "/facilities/glendale",
 });
 
 const gallery = [
-  { src: "/images/glendale/Gelndale-Front-1.jpg", label: "Front Entrance" },
+  { src: "/images/glendale/Glendale-Front.jpg", label: "Front Entrance" },
   { src: "/images/glendale/Glendale-Pool.jpg", label: "Swimming Pool" },
   { src: "/images/glendale/Glendale-Gym.jpg", label: "Fitness Center" },
   { src: "/images/glendale/Glendale-Living-Room.jpg", label: "Living Room" },
@@ -37,7 +37,7 @@ export default function GlendalePage() {
         eyebrow="Glendale, Arizona"
         title="Glendale Treatment Center"
         description="Our flagship residential treatment center offering comprehensive mental health and addiction programs in a luxury home-like setting."
-        bgImage="/images/glendale/Gelndale-Front-1.jpg"
+        bgImage="/images/glendale/Glendale-Front.jpg"
       />
       <FacilityPageContent
         name="Glendale"
@@ -45,7 +45,7 @@ export default function GlendalePage() {
         phone="(623) 323-1012"
         phoneTel="+16233231012"
         sqft="7,500"
-        description="Located in the heart of Glendale, our flagship 7,500 sq ft facility provides a serene, home-like environment for residential treatment, partial hospitalization (PHP), and intensive outpatient (IOP) programs. Every detail — from the gourmet kitchen to the private therapy rooms — is curated to support your comfort and recovery."
+        description="Located in the heart of Glendale, our flagship 7,500 sq ft facility provides a serene, home-like environment for residential treatment, partial hospitalization (PHP), and intensive outpatient (IOP) programs. Every detail, from the gourmet kitchen to the private therapy rooms, is curated to support your comfort and recovery."
         programs={["Residential Treatment", "PHP", "IOP"]}
         amenities={[
           "Full-Size Basketball Court",
@@ -60,7 +60,7 @@ export default function GlendalePage() {
           "Outdoor Recreation Areas",
         ]}
         videoId="00ZDcQjXoE8"
-        heroImage="/images/glendale/Gelndale-Front-1.jpg"
+        heroImage="/images/glendale/Glendale-Front.jpg"
         collisionImages={[
           "/images/glendale/Glendale-Pool.jpg",
           "/images/glendale/Glendale-Living-Room.jpg",

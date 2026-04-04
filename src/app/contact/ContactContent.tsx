@@ -200,7 +200,7 @@ export default function ContactContent() {
                       {location.name} Facility
                     </span>
                     <h3 className="font-display text-2xl text-forest font-semibold mb-4">
-                      Desert Recovery Centers — {location.name}
+                      Desert Recovery Centers, {location.name}
                     </h3>
 
                     <div className="space-y-3 text-sm text-gray-600 mb-6">

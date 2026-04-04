@@ -31,11 +31,11 @@ const faqs = [
   },
   {
     q: "What is the difference between residential and inpatient treatment?",
-    a: "Residential treatment at DRC takes place in a home-like luxury environment, not a hospital. You live at the facility and receive structured daily programming, but the atmosphere is warm and comfortable — not clinical. The clinical intensity is comparable to inpatient care, but the environment supports healing in a fundamentally different way.",
+    a: "Residential treatment at DRC takes place in a home-like luxury environment, not a hospital. You live at the facility and receive structured daily programming, but the atmosphere is warm and comfortable, not clinical. The clinical intensity is comparable to inpatient care, but the environment supports healing in a fundamentally different way.",
   },
   {
     q: "Do you accept insurance for residential treatment?",
-    a: "Yes, we are in-network with most major insurance providers including Aetna, Blue Cross Blue Shield, Cigna, and UnitedHealthcare. Coverage varies by plan. Contact us to verify your benefits — our admissions team handles verification at no cost before you begin treatment.",
+    a: "Yes, we are in-network with most major insurance providers including Aetna, Blue Cross Blue Shield, Cigna, and UnitedHealthcare. Coverage varies by plan. Contact us to verify your benefits, our admissions team handles verification at no cost before you begin treatment.",
   },
 ];
 
@@ -54,7 +54,7 @@ export default function ResidentialTreatmentPage() {
       <PageHero
         eyebrow="Levels of Care"
         title="Residential Treatment Program in Arizona"
-        description="Immersive, 24/7 luxury residential care with doctoral-level clinicians — the foundation for lasting recovery."
+        description="Immersive, 24/7 luxury residential care with doctoral-level clinicians, the foundation for lasting recovery."
         bgImage="/images/scottsdale/DRC-FRONT-ENTRANCE-NORTH-SCOTTSDALE-08-01-2024-1210August-01-202400002-2.jpg"
       />
 
@@ -66,10 +66,10 @@ export default function ResidentialTreatmentPage() {
               Full Immersion. Total Focus. Real Results.
             </h2>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              Residential treatment is our most intensive level of care — and for many people, it&apos;s the difference between trying to recover and actually recovering. You live at one of our three Arizona facilities, removed from the triggers, stressors, and routines that keep the cycle going, and immerse yourself fully in the work of healing.
+              Residential treatment is our most intensive level of care, and for many people, it&apos;s the difference between trying to recover and actually recovering. You live at one of our three Arizona facilities, removed from the triggers, stressors, and routines that keep the cycle going, and immerse yourself fully in the work of healing.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              Every day is structured around evidence-based therapy — individual sessions with licensed psychologists, group therapy, psychiatric care, and holistic programming. Our doctoral-level clinical team designs your treatment plan around your specific diagnosis, history, and goals. With a maximum of 10 beds per facility, you receive a level of personal attention that larger programs simply cannot deliver.
+              Every day is structured around evidence-based therapy, individual sessions with licensed psychologists, group therapy, psychiatric care, and holistic programming. Our doctoral-level clinical team designs your treatment plan around your specific diagnosis, history, and goals. With a maximum of 10 beds per facility, you receive a level of personal attention that larger programs simply cannot deliver.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg">
               This isn&apos;t 30 days of marking time. It&apos;s 30 days of intensive, purposeful work that gives you the foundation to sustain recovery for life.

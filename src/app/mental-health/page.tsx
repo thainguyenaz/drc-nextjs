@@ -4,23 +4,41 @@ import PageHero from "@/components/PageHero";
 import ConditionsGrid from "@/components/ConditionsGrid";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { buildMetadata, BreadcrumbSchema } from "@/lib/seo";
+import { BreadcrumbSchema, VideoSchemas } from "@/lib/seo";
+import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
+import { faqData } from "@/data/faq-data";
+import SchemaScript from "@/components/SchemaScript";
+import FAQSection from "@/components/FAQSection";
+import Breadcrumb from "@/components/Breadcrumb";
+import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
+import { getPageMeta } from "@/data/page-metadata";
 
-export const metadata: Metadata = buildMetadata({
-  title: "Mental Health Treatment — Desert Recovery Centers",
-  description: "Comprehensive, evidence-based mental health treatment for anxiety, depression, PTSD, bipolar disorder, OCD, and more in Arizona.",
-  path: "/mental-health",
-});
+const meta = getPageMeta("/mental-health/");
+
+export const metadata: Metadata = {
+  title: meta.title,
+  description: meta.description,
+  alternates: { canonical: meta.canonical },
+  openGraph: {
+    title: meta.title,
+    description: meta.description,
+    url: meta.canonical,
+    images: [{ url: meta.ogImage ?? "https://desertrecoverycenters.com/wp-content/uploads/2024/10/DRC-DRONE-SCOTTSDALE-08-01-2024-August-01-202400020-2.jpg", alt: meta.title }],
+  },
+};
 
 export default function MentalHealthPage() {
   return (
     <>
+      <SchemaScript schema={[getFAQSchema(faqData["mental-health"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/mental-health"))]} />
       <BreadcrumbSchema items={[{ name: "Mental Health Treatment", path: "/mental-health" }]} />
+      <VideoSchemas path="/mental-health/" />
       <Navigation />
+      <Breadcrumb items={getBreadcrumbsFromPathname("/mental-health")} />
       <PageHero
         eyebrow="Mental Health"
         title="Mental Health Treatment"
-        description="Comprehensive, evidence-based care for a wide range of mental health conditions — delivered with compassion in a luxury setting."
+        description="Comprehensive, evidence-based care for a wide range of mental health conditions, delivered with compassion in a luxury setting."
         bgImage="/images/general/DRC-MENTAL-HEALTH.jpg"
       />
       <section className="py-16 md:py-24 bg-white">
@@ -87,6 +105,7 @@ export default function MentalHealthPage() {
         </div>
       </section>
 
+      <FAQSection faqs={faqData["mental-health"]} />
       <CTASection />
       <Footer />
     </>

@@ -18,19 +18,19 @@ export const metadata: Metadata = buildMetadata({
 const faqs = [
   {
     q: "What is an Intensive Outpatient Program (IOP)?",
-    a: "IOP is a structured treatment program that meets 3-4 times per week for approximately 3 hours per session, typically over 8-12 weeks. It provides meaningful clinical support — individual therapy, group therapy, psychiatric care — while allowing you to maintain work, school, and family responsibilities. It's the most flexible level of intensive treatment.",
+    a: "IOP is a structured treatment program that meets 3-4 times per week for approximately 3 hours per session, typically over 8-12 weeks. It provides meaningful clinical support, individual therapy, group therapy, psychiatric care, while allowing you to maintain work, school, and family responsibilities. It's the most flexible level of intensive treatment.",
   },
   {
     q: "Can I work while in IOP?",
-    a: "Yes, IOP is specifically designed to be compatible with work and other daily responsibilities. Sessions are scheduled to accommodate professional schedules. Many clients continue working, attending school, or caring for family while in IOP — applying what they learn in treatment directly to their daily lives.",
+    a: "Yes, IOP is specifically designed to be compatible with work and other daily responsibilities. Sessions are scheduled to accommodate professional schedules. Many clients continue working, attending school, or caring for family while in IOP, applying what they learn in treatment directly to their daily lives.",
   },
   {
     q: "What is the difference between PHP and IOP?",
-    a: "PHP provides 5-6 hours of daily programming, 5 days per week — a more intensive schedule that limits other commitments. IOP meets 3-4 times per week for about 3 hours — allowing you to maintain work and daily life while receiving structured clinical support. IOP is often a step-down from PHP, though you can enter IOP directly based on your clinical assessment.",
+    a: "PHP provides 5-6 hours of daily programming, 5 days per week, a more intensive schedule that limits other commitments. IOP meets 3-4 times per week for about 3 hours, allowing you to maintain work and daily life while receiving structured clinical support. IOP is often a step-down from PHP, though you can enter IOP directly based on your clinical assessment.",
   },
   {
     q: "Do you accept insurance for IOP?",
-    a: "Yes, we are in-network with most major insurance providers including Aetna, Blue Cross Blue Shield, Cigna, and UnitedHealthcare. Coverage varies by plan. Contact us to verify your benefits — our admissions team handles verification at no cost.",
+    a: "Yes, we are in-network with most major insurance providers including Aetna, Blue Cross Blue Shield, Cigna, and UnitedHealthcare. Coverage varies by plan. Contact us to verify your benefits, our admissions team handles verification at no cost.",
   },
   {
     q: "What happens after IOP?",
@@ -53,7 +53,7 @@ export default function IOPPage() {
       <PageHero
         eyebrow="Levels of Care"
         title="Intensive Outpatient Program (IOP) in Arizona"
-        description="Structured clinical support that works with your life — not against it. Recovery without putting everything on hold."
+        description="Structured clinical support that works with your life, not against it. Recovery without putting everything on hold."
         bgImage="/images/glendale/Glendale-Group-Room.jpg"
       />
 
@@ -65,10 +65,10 @@ export default function IOPPage() {
               Real Treatment That Fits Your Real Life
             </h2>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              Not everyone can — or needs to — step away from daily life for residential treatment. Our Intensive Outpatient Program provides the clinical depth of an evidence-based treatment program in a schedule that allows you to keep working, caring for your family, and maintaining the responsibilities you can&apos;t set aside.
+              Not everyone can, or needs to, step away from daily life for residential treatment. Our Intensive Outpatient Program provides the clinical depth of an evidence-based treatment program in a schedule that allows you to keep working, caring for your family, and maintaining the responsibilities you can&apos;t set aside.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              Meeting 3-4 times per week for approximately 3 hours per session, IOP delivers individual therapy with licensed psychologists, structured group sessions, psychiatric care, and holistic programming — the same caliber of treatment our residential clients receive, adapted to a flexible format.
+              Meeting 3-4 times per week for approximately 3 hours per session, IOP delivers individual therapy with licensed psychologists, structured group sessions, psychiatric care, and holistic programming, the same caliber of treatment our residential clients receive, adapted to a flexible format.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg">
               Whether you&apos;re stepping down from residential or PHP, or entering treatment for the first time, IOP provides the structure and clinical support you need to build lasting recovery while living your life.
@@ -126,8 +126,8 @@ export default function IOPPage() {
               {[
                 { title: "Are stepping down from residential or PHP", desc: "You've built a strong foundation and are ready for more independence while maintaining structured clinical support during the transition." },
                 { title: "Need to keep working during treatment", desc: "Your job, business, or professional responsibilities require your presence. IOP's flexible schedule allows you to maintain your career while getting the help you need." },
-                { title: "Have a stable home environment", desc: "You have a safe, supportive living situation and don't need 24/7 supervision — but you do need more than weekly therapy to maintain your recovery." },
-                { title: "Are building long-term recovery skills", desc: "IOP is where you practice recovery in real life — applying coping strategies, healthy communication, and relapse prevention skills in your actual daily environment." },
+                { title: "Have a stable home environment", desc: "You have a safe, supportive living situation and don't need 24/7 supervision, but you do need more than weekly therapy to maintain your recovery." },
+                { title: "Are building long-term recovery skills", desc: "IOP is where you practice recovery in real life, applying coping strategies, healthy communication, and relapse prevention skills in your actual daily environment." },
               ].map((item, i) => (
                 <div key={i} className="bg-cream rounded-xl p-6">
                   <h3 className="font-display text-lg text-forest font-semibold mb-2">{item.title}</h3>

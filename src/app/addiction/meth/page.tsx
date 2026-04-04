@@ -8,11 +8,27 @@ import { InlineFAQSchema, MedicalConditionSchema } from "@/lib/seo";
 import AEOBlock from "@/components/AEOBlock";
 import RelatedPages from "@/components/RelatedPages";
 import ConditionFAQ from "@/components/ConditionFAQ";
+import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
+import { faqData } from "@/data/faq-data";
+import SchemaScript from "@/components/SchemaScript";
+import FAQSection from "@/components/FAQSection";
+import Breadcrumb from "@/components/Breadcrumb";
+import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
+import Citations from "@/components/Citations";
+import { getPageMeta } from "@/data/page-metadata";
+
+const meta = getPageMeta("/addiction/meth-addiction-treatment/");
 
 export const metadata: Metadata = {
-  title: "Meth Addiction Treatment — Desert Recovery Centers",
-  description:
-    "Methamphetamine addiction treatment in Arizona. Evidence-based behavioral therapies, psychiatric care, and structured recovery programs for meth dependence.",
+  title: meta.title,
+  description: meta.description,
+  alternates: { canonical: meta.canonical },
+  openGraph: {
+    title: meta.title,
+    description: meta.description,
+    url: meta.canonical,
+    images: [{ url: meta.ogImage ?? "https://desertrecoverycenters.com/wp-content/uploads/2024/10/DRC-DRONE-SCOTTSDALE-08-01-2024-August-01-202400020-2.jpg", alt: meta.title }],
+  },
 };
 
 const faqs = [
@@ -41,6 +57,7 @@ const faqs = [
 export default function MethAddictionPage() {
   return (
     <>
+      <SchemaScript schema={[getFAQSchema(faqData["meth-addiction-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/addiction/meth"))]} />
       <InlineFAQSchema items={faqs} />
       <MedicalConditionSchema
         name="Methamphetamine Addiction"
@@ -49,17 +66,18 @@ export default function MethAddictionPage() {
         possibleTreatments={["Matrix Model", "CBT", "Contingency Management", "Psychiatric Stabilization", "Dual Diagnosis Treatment"]}
       />
       <Navigation />
+      <Breadcrumb items={getBreadcrumbsFromPathname("/addiction/meth")} />
       <PageHero
         eyebrow="Addiction Treatment"
         title="Meth Addiction Treatment"
-        description="Meth rewires your brain faster than almost any other substance. Recovery is possible — but it takes the right kind of help."
+        description="Meth rewires your brain faster than almost any other substance. Recovery is possible, but it takes the right kind of help."
         bgImage="/images/general/DRC-ADDICTION.jpg"
       />
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
             <p className="text-gray-600 leading-relaxed text-lg">
-              The energy, the focus, the confidence — that&apos;s what hooked you. But now the other side has taken over. The paranoia. The skin picking. The days without sleep that blur into weeks. You don&apos;t recognize yourself in the mirror anymore. Your teeth are deteriorating, your weight has dropped, and the people who love you are terrified. You want to stop, but the crash is so devastating that using again feels like the only option. It&apos;s not — even if it feels that way right now.
+              The energy, the focus, the confidence, that&apos;s what hooked you. But now the other side has taken over. The paranoia. The skin picking. The days without sleep that blur into weeks. You don&apos;t recognize yourself in the mirror anymore. Your teeth are deteriorating, your weight has dropped, and the people who love you are terrified. You want to stop, but the crash is so devastating that using again feels like the only option. It&apos;s not, even if it feels that way right now.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg mt-4">
               At Desert Recovery Centers, we understand the devastating physical and neurological impact of methamphetamine addiction. Our clinical team uses evidence-based protocols specifically designed for stimulant use disorders, providing the intensive support your brain and body need to heal.
@@ -69,7 +87,7 @@ export default function MethAddictionPage() {
               Understanding Meth Addiction
             </h2>
             <p className="text-gray-600 leading-relaxed">
-              Methamphetamine releases massive amounts of dopamine — up to 10 times what natural rewards produce. This flood damages dopamine receptors over time, making it increasingly difficult to experience pleasure, motivation, or even basic functioning without the drug. Chronic meth use causes measurable brain changes, including reduced gray matter, impaired memory and decision-making, and emotional dysregulation. The good news: research shows that with sustained abstinence and proper treatment, significant neurological recovery is possible.
+              Methamphetamine releases massive amounts of dopamine, up to 10 times what natural rewards produce. This flood damages dopamine receptors over time, making it increasingly difficult to experience pleasure, motivation, or even basic functioning without the drug. Chronic meth use causes measurable brain changes, including reduced gray matter, impaired memory and decision-making, and emotional dysregulation. The good news: research shows that with sustained abstinence and proper treatment, significant neurological recovery is possible.
             </p>
 
             <h2 className="font-display text-2xl text-forest font-semibold mt-10 mb-4">
@@ -142,7 +160,7 @@ export default function MethAddictionPage() {
               What Recovery Looks Like Here
             </h2>
             <p className="text-gray-600 leading-relaxed">
-              Meth recovery is a marathon, not a sprint. The first weeks are often the hardest as your brain adjusts to functioning without massive dopamine surges. But with consistent clinical support, your cognition, emotional regulation, and physical health improve steadily. Our team walks with you through residential care, PHP, IOP, and aftercare — providing the stability and accountability that make sustained recovery achievable.
+              Meth recovery is a marathon, not a sprint. The first weeks are often the hardest as your brain adjusts to functioning without massive dopamine surges. But with consistent clinical support, your cognition, emotional regulation, and physical health improve steadily. Our team walks with you through residential care, PHP, IOP, and aftercare, providing the stability and accountability that make sustained recovery achievable.
             </p>
             <p className="text-gray-600 leading-relaxed mt-4">
               We accept most major insurance plans. Coverage varies by plan. Contact us to verify your benefits.
@@ -172,8 +190,10 @@ export default function MethAddictionPage() {
         ]}
       />
       <RelatedPages currentPath="/addiction/meth" />
+      <FAQSection faqs={faqData["meth-addiction-treatment"]} />
       <CTASection />
       <Footer />
+      <Citations />
     </>
   );
 }

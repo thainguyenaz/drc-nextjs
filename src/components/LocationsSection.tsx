@@ -29,7 +29,7 @@ export default function LocationsSection() {
             Treatment Centers in Arizona
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Three locations designed for comfort, privacy, and healing — nestled
+            Three locations designed for comfort, privacy, and healing, nestled
             in the beauty of the Arizona desert.
           </p>
         </motion.div>
@@ -44,7 +44,7 @@ export default function LocationsSection() {
               key={location.name}
               className={`flex flex-col md:flex-row ${reversed ? "md:flex-row-reverse" : ""} min-h-[500px] overflow-hidden`}
             >
-              {/* Photo/video — slides in from LEFT (or right when reversed) */}
+              {/* Photo/video, slides in from LEFT (or right when reversed) */}
               <motion.div
                 initial={{ opacity: 0, x: reversed ? 120 : -120 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -76,7 +76,7 @@ export default function LocationsSection() {
                 <div className="absolute inset-0 bg-gradient-to-t from-forest/30 to-transparent md:hidden pointer-events-none" />
               </motion.div>
 
-              {/* Content — slides in from RIGHT (or left when reversed) */}
+              {/* Content, slides in from RIGHT (or left when reversed) */}
               <motion.div
                 initial={{ opacity: 0, x: reversed ? -120 : 120 }}
                 whileInView={{ opacity: 1, x: 0 }}

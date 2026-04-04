@@ -100,13 +100,13 @@ export default function FacilityPageContent({
               {description}
             </p>
             <p className="text-gray-600 leading-relaxed">
-              Gender-specific groups ensure a safe, focused healing environment. Our multidisciplinary clinical team — led by licensed clinical psychologists — delivers evidence-based treatment including CBT, DBT, EMDR, trauma therapy, and our proprietary BridgeWork™ program.
+              Gender-specific groups ensure a safe, focused healing environment. Our multidisciplinary clinical team, led by licensed clinical psychologists, delivers evidence-based treatment including CBT, DBT, EMDR, trauma therapy, and our proprietary BridgeWork™ program.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Contact, amenities & video — collision */}
+      {/* Contact, amenities & video, collision */}
       <section className="bg-forest py-20 md:py-28 overflow-hidden">
         <div className="max-w-container mx-auto px-6">
           <div className="flex flex-col md:flex-row gap-12 lg:gap-20 items-center">

@@ -3,37 +3,82 @@ import Navigation from "@/components/Navigation";
 import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { buildMetadata, BreadcrumbSchema } from "@/lib/seo";
+import SchemaScript from "@/components/SchemaScript";
+import MedicalReview from "@/components/MedicalReview";
+import Breadcrumb from "@/components/Breadcrumb";
+import Citations from "@/components/Citations";
+import { getArticleSchema, getBreadcrumbSchema } from "@/lib/schema";
+import { defaultAuthor, defaultReviewer } from "@/data/blog-defaults";
+import { buildMetadata } from "@/lib/seo";
+
+const SITE_URL = "https://desertrecoverycenters.com";
+const POST_TITLE = "Is Luxury Rehab Worth the Cost?";
+const DATE_PUBLISHED = "2026-02-15";
+const DATE_MODIFIED = "2026-02-15";
+const POST_DESCRIPTION =
+  "Honest analysis of luxury rehab costs vs outcomes. Learn what separates genuine clinical excellence from resort amenities and marketing.";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Is Luxury Rehab Worth It? — DRC",
-  description:
-    "Honest analysis of luxury rehab costs vs outcomes. Learn what separates genuine clinical excellence from resort amenities and marketing.",
+  title: "Is Luxury Rehab Worth It?, DRC",
+  description: POST_DESCRIPTION,
   path: "/blog/luxury-rehab-worth-it",
 });
 
 export default function LuxuryRehabWorthItPage() {
+  const articleSchema = getArticleSchema({
+    headline: POST_TITLE,
+    author: defaultAuthor.name,
+    authorUrl: `${SITE_URL}${defaultAuthor.url}`,
+    datePublished: DATE_PUBLISHED,
+    dateModified: DATE_MODIFIED,
+    image:
+      "https://desertrecoverycenters.com/wp-content/uploads/2024/12/DRC-BALCONY-SCOTTSDALE-08-01-2024-Optimized.jpg",
+    description: POST_DESCRIPTION,
+  });
+
+  const breadcrumbItems = [
+    { name: "Home", url: SITE_URL },
+    { name: "Blog", url: `${SITE_URL}/blog` },
+    { name: POST_TITLE, url: `${SITE_URL}/blog/luxury-rehab-worth-it` },
+  ];
+
+  const breadcrumbSchema = getBreadcrumbSchema(breadcrumbItems);
+
   return (
     <>
-      <BreadcrumbSchema
-        items={[
-          { name: "Blog", path: "/blog" },
-          { name: "Is Luxury Rehab Worth It?", path: "/blog/luxury-rehab-worth-it" },
-        ]}
-      />
+      <SchemaScript schema={[articleSchema, breadcrumbSchema]} />
       <Navigation />
+
+      <div className="bg-white">
+        <div className="max-w-container mx-auto px-6 pt-6">
+          <Breadcrumb items={breadcrumbItems} />
+        </div>
+      </div>
+
       <PageHero
         eyebrow="Honest Analysis"
-        title="Is Luxury Rehab Worth the Cost?"
-        description="A balanced, evidence-based look at whether luxury treatment programs deliver better outcomes — and what to look for if you are considering one."
+        title={POST_TITLE}
+        description="A balanced, evidence-based look at whether luxury treatment programs deliver better outcomes, and what to look for if you are considering one."
         bgImage="/images/general/DRC-Treatment-Therapies-BG-Fade.jpg"
       />
 
-      <div className="bg-cream border-b border-gold/20">
-        <div className="max-w-container mx-auto px-6 py-3 text-center">
-          <p className="text-xs text-sage font-body tracking-wide">
-            Written by Dr. An Nguyen, Licensed Clinical Psychologist, Clinical Director, Desert Recovery Centers
-          </p>
+      <div className="bg-white">
+        <div className="max-w-container mx-auto px-6">
+          <div className="max-w-3xl mx-auto">
+            <p className="text-sm text-gray-500 mt-4">
+              Last Updated:{" "}
+              {new Date(DATE_MODIFIED).toLocaleDateString("en-US", {
+                month: "long",
+                day: "numeric",
+                year: "numeric",
+              })}
+            </p>
+            <MedicalReview
+              reviewer={defaultReviewer.name}
+              credentials={defaultReviewer.credentials}
+              reviewerUrl={defaultReviewer.url}
+            />
+          </div>
         </div>
       </div>
 
@@ -45,7 +90,7 @@ export default function LuxuryRehabWorthItPage() {
               The Question Everyone Asks
             </h2>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              &quot;Is luxury rehab worth it?&quot; is one of the most common questions families ask when researching treatment options — and it deserves an honest answer.
+              &quot;Is luxury rehab worth it?&quot; is one of the most common questions families ask when researching treatment options, and it deserves an honest answer.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
               The short answer is: it depends entirely on what &quot;luxury&quot; means at a specific facility. A beautiful building with a swimming pool and gourmet meals is meaningless if the clinical program behind it is thin, staffed by under-qualified therapists, or relying on a one-size-fits-all treatment model. Conversely, a program that combines genuine clinical depth with a healing environment can produce outcomes that far exceed standard residential treatment.
@@ -107,7 +152,7 @@ export default function LuxuryRehabWorthItPage() {
               </div>
             </div>
             <p className="text-gray-600 leading-relaxed mt-6 text-sm">
-              The amenities column is table stakes for any program calling itself luxury. The clinical depth column is where the real difference lies — and where many luxury programs fall short.
+              The amenities column is table stakes for any program calling itself luxury. The clinical depth column is where the real difference lies, and where many luxury programs fall short.
             </p>
           </div>
         </div>
@@ -134,7 +179,7 @@ export default function LuxuryRehabWorthItPage() {
                 },
                 {
                   title: "Higher Clinical Qualifications",
-                  desc: "Many standard programs rely primarily on master's-level therapists and peer counselors for the majority of direct clinical care. The best luxury programs employ doctoral-level psychologists, board-certified psychiatrists, and clinicians with specialized training in evidence-based modalities like EMDR, DBT, and trauma-focused CBT. The difference in clinical expertise translates directly into more accurate diagnoses, more effective treatment plans, and better outcomes — particularly for clients with complex presentations like dual diagnosis or treatment-resistant conditions.",
+                  desc: "Many standard programs rely primarily on master's-level therapists and peer counselors for the majority of direct clinical care. The best luxury programs employ doctoral-level psychologists, board-certified psychiatrists, and clinicians with specialized training in evidence-based modalities like EMDR, DBT, and trauma-focused CBT. The difference in clinical expertise translates directly into more accurate diagnoses, more effective treatment plans, and better outcomes, particularly for clients with complex presentations like dual diagnosis or treatment-resistant conditions.",
                 },
                 {
                   title: "Comfort Reduces Dropout Rates",
@@ -146,7 +191,7 @@ export default function LuxuryRehabWorthItPage() {
                 },
                 {
                   title: "Holistic Integration",
-                  desc: "Well-run luxury programs integrate holistic modalities — yoga, nutrition counseling, fitness programming, massage therapy, mindfulness — as clinical tools rather than recreational add-ons. When these modalities are overseen by the clinical team and integrated into the treatment plan, they address the physical and somatic dimensions of addiction that talk therapy alone cannot reach.",
+                  desc: "Well-run luxury programs integrate holistic modalities, yoga, nutrition counseling, fitness programming, massage therapy, mindfulness, as clinical tools rather than recreational add-ons. When these modalities are overseen by the clinical team and integrated into the treatment plan, they address the physical and somatic dimensions of addiction that talk therapy alone cannot reach.",
                 },
               ].map((item, i) => (
                 <div key={i} className="border-l-2 border-gold/40 pl-6">
@@ -206,7 +251,7 @@ export default function LuxuryRehabWorthItPage() {
               What Sets Desert Recovery Centers Apart
             </h2>
             <p className="text-gray-600 leading-relaxed mb-6">
-              We built Desert Recovery Centers on the conviction that a truly luxury treatment program should be defined by clinical excellence — not just beautiful surroundings. Here is what that looks like in practice:
+              We built Desert Recovery Centers on the conviction that a truly luxury treatment program should be defined by clinical excellence, not just beautiful surroundings. Here is what that looks like in practice:
             </p>
             <div className="space-y-4">
               {[
@@ -216,7 +261,7 @@ export default function LuxuryRehabWorthItPage() {
                 },
                 {
                   title: "Doctoral-Level Clinical Staff",
-                  desc: "Your primary therapy is delivered by or under the direct supervision of licensed clinical psychologists — the highest clinical qualification in behavioral health. This is rare in residential treatment and reflects our commitment to clinical rigor.",
+                  desc: "Your primary therapy is delivered by or under the direct supervision of licensed clinical psychologists, the highest clinical qualification in behavioral health. This is rare in residential treatment and reflects our commitment to clinical rigor.",
                 },
                 {
                   title: "Comprehensive Dual Diagnosis",
@@ -224,15 +269,15 @@ export default function LuxuryRehabWorthItPage() {
                 },
                 {
                   title: "Evidence-Based Modalities",
-                  desc: "CBT, DBT, EMDR, trauma-focused therapies, somatic experiencing, and our proprietary BridgeWork™ skill integration program — all delivered by clinicians with specialized training in each modality.",
+                  desc: "CBT, DBT, EMDR, trauma-focused therapies, somatic experiencing, and our proprietary BridgeWork™ skill integration program, all delivered by clinicians with specialized training in each modality.",
                 },
                 {
                   title: "Joint Commission Accredited",
-                  desc: "Our facilities meet the highest standards for patient safety, clinical quality, and organizational performance — independently verified by the same body that accredits the nation's top hospitals.",
+                  desc: "Our facilities meet the highest standards for patient safety, clinical quality, and organizational performance, independently verified by the same body that accredits the nation's top hospitals.",
                 },
                 {
                   title: "Luxury That Serves Recovery",
-                  desc: "Our Arizona facilities feature pools, gyms, tennis and basketball courts, massage rooms, gourmet kitchens, and private bedrooms — not as marketing points, but as tools that support physical health, reduce dropout rates, and create the comfort necessary for deep healing work.",
+                  desc: "Our Arizona facilities feature pools, gyms, tennis and basketball courts, massage rooms, gourmet kitchens, and private bedrooms, not as marketing points, but as tools that support physical health, reduce dropout rates, and create the comfort necessary for deep healing work.",
                 },
               ].map((item, i) => (
                 <div
@@ -261,10 +306,10 @@ export default function LuxuryRehabWorthItPage() {
               Is luxury rehab worth the cost? If &quot;luxury&quot; means a beautiful facility with thin clinical programming, the answer is no. You are paying for an expensive vacation that will not address the medical condition that brought you there.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              But if &quot;luxury&quot; means a program that combines genuine clinical depth — doctoral-level clinicians, low ratios, integrated dual diagnosis treatment, multiple evidence-based modalities — with an environment designed to support healing, reduce dropout, and restore dignity to the treatment experience, then the answer is yes. The investment in the right luxury program can produce outcomes that justify the cost many times over — in health, in relationships, in career, and in quality of life.
+              But if &quot;luxury&quot; means a program that combines genuine clinical depth, doctoral-level clinicians, low ratios, integrated dual diagnosis treatment, multiple evidence-based modalities, with an environment designed to support healing, reduce dropout, and restore dignity to the treatment experience, then the answer is yes. The investment in the right luxury program can produce outcomes that justify the cost many times over, in health, in relationships, in career, and in quality of life.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg mb-8">
-              The key is knowing what to look for — and asking the right questions before you commit.
+              The key is knowing what to look for, and asking the right questions before you commit.
             </p>
             <div className="flex flex-wrap gap-4">
               <a href="tel:+14809313617" className="bg-gold hover:bg-gold-dark text-white font-semibold text-sm px-6 py-3 rounded-xl transition-colors cursor-pointer">
@@ -295,6 +340,14 @@ export default function LuxuryRehabWorthItPage() {
                 ))}
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white">
+        <div className="max-w-container mx-auto px-6">
+          <div className="max-w-3xl mx-auto">
+            <Citations />
           </div>
         </div>
       </section>

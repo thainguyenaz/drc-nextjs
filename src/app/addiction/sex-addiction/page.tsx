@@ -8,11 +8,20 @@ import { InlineFAQSchema, MedicalConditionSchema } from "@/lib/seo";
 import AEOBlock from "@/components/AEOBlock";
 import RelatedPages from "@/components/RelatedPages";
 import ConditionFAQ from "@/components/ConditionFAQ";
+import { getPageMeta } from "@/data/page-metadata";
+
+const meta = getPageMeta("/addiction/sex-addiction-treatment/");
 
 export const metadata: Metadata = {
-  title: "Sex Addiction Treatment — Desert Recovery Centers",
-  description:
-    "Compassionate sex addiction treatment in Arizona. Evidence-based therapy for compulsive sexual behavior in a confidential, judgment-free clinical setting.",
+  title: meta.title,
+  description: meta.description,
+  alternates: { canonical: meta.canonical },
+  openGraph: {
+    title: meta.title,
+    description: meta.description,
+    url: meta.canonical,
+    images: [{ url: meta.ogImage ?? "https://desertrecoverycenters.com/wp-content/uploads/2024/10/DRC-DRONE-SCOTTSDALE-08-01-2024-August-01-202400020-2.jpg", alt: meta.title }],
+  },
 };
 
 const faqs = [
@@ -59,17 +68,17 @@ export default function SexAddictionPage() {
         <div className="max-w-container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
             <p className="text-gray-600 leading-relaxed text-lg">
-              You swore you&apos;d stop. You deleted the apps, cleared the history, made promises to yourself and to the people you love. But the compulsion keeps pulling you back. The behavior that once felt like relief now creates more pain than it eases — the secrecy, the double life, the risk-taking that puts your relationships, your career, and your health in jeopardy. The shame is suffocating, and it keeps you from asking for help. You&apos;re not a bad person. You&apos;re caught in a compulsive pattern that requires clinical treatment, not willpower.
+              You swore you&apos;d stop. You deleted the apps, cleared the history, made promises to yourself and to the people you love. But the compulsion keeps pulling you back. The behavior that once felt like relief now creates more pain than it eases, the secrecy, the double life, the risk-taking that puts your relationships, your career, and your health in jeopardy. The shame is suffocating, and it keeps you from asking for help. You&apos;re not a bad person. You&apos;re caught in a compulsive pattern that requires clinical treatment, not willpower.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg mt-4">
-              At Desert Recovery Centers, we provide compassionate, confidential treatment for compulsive sexual behavior. Our clinical team understands the complexity and sensitivity of this condition, and we approach it without judgment — with the same evidence-based rigor we apply to every behavioral health condition we treat.
+              At Desert Recovery Centers, we provide compassionate, confidential treatment for compulsive sexual behavior. Our clinical team understands the complexity and sensitivity of this condition, and we approach it without judgment, with the same evidence-based rigor we apply to every behavioral health condition we treat.
             </p>
 
             <h2 className="font-display text-2xl text-forest font-semibold mt-10 mb-4">
               Understanding Compulsive Sexual Behavior
             </h2>
             <p className="text-gray-600 leading-relaxed">
-              Compulsive sexual behavior disorder is recognized by the World Health Organization as an impulse control disorder. Like other behavioral addictions, it involves a cycle of escalating behavior driven by the brain&apos;s reward system — the pursuit of sexual experiences triggers dopamine release that temporarily relieves emotional distress, but the relief is followed by guilt, shame, and an intensified urge to repeat the behavior. Compulsive pornography use, affairs, risky sexual encounters, and other patterns can all be manifestations of this condition.
+              Compulsive sexual behavior disorder is recognized by the World Health Organization as an impulse control disorder. Like other behavioral addictions, it involves a cycle of escalating behavior driven by the brain&apos;s reward system, the pursuit of sexual experiences triggers dopamine release that temporarily relieves emotional distress, but the relief is followed by guilt, shame, and an intensified urge to repeat the behavior. Compulsive pornography use, affairs, risky sexual encounters, and other patterns can all be manifestations of this condition.
             </p>
 
             <h2 className="font-display text-2xl text-forest font-semibold mt-10 mb-4">
@@ -82,7 +91,7 @@ export default function SexAddictionPage() {
               </li>
               <li className="flex items-start gap-3">
                 <span className="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0" />
-                Escalating patterns — needing more intense or risky experiences to feel satisfied
+                Escalating patterns, needing more intense or risky experiences to feel satisfied
               </li>
               <li className="flex items-start gap-3">
                 <span className="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0" />
@@ -142,7 +151,7 @@ export default function SexAddictionPage() {
               What Recovery Looks Like Here
             </h2>
             <p className="text-gray-600 leading-relaxed">
-              Recovery from compulsive sexual behavior is not about eliminating sexuality — it&apos;s about reclaiming control over it. Treatment helps you develop a healthy relationship with intimacy, understand the emotional wounds driving the compulsion, and build the self-awareness to recognize and manage urges before they escalate. Our confidential residential and outpatient programs provide a safe space to do this work at your own pace, with the clinical support you need.
+              Recovery from compulsive sexual behavior is not about eliminating sexuality, it&apos;s about reclaiming control over it. Treatment helps you develop a healthy relationship with intimacy, understand the emotional wounds driving the compulsion, and build the self-awareness to recognize and manage urges before they escalate. Our confidential residential and outpatient programs provide a safe space to do this work at your own pace, with the clinical support you need.
             </p>
             <p className="text-gray-600 leading-relaxed mt-4">
               We accept most major insurance plans. Coverage varies by plan. Contact us to verify your benefits.

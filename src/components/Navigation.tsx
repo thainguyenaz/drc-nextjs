@@ -56,7 +56,7 @@ const navLinks = [
   {
     label: "Facilities",
     href: "/locations",
-    image: "/images/glendale/Gelndale-Front-1.jpg",
+    image: "/images/glendale/Glendale-Front.jpg",
     children: [
       { label: "Glendale", href: "/locations/glendale" },
       { label: "Scottsdale", href: "/locations/scottsdale" },

@@ -3,13 +3,22 @@ import Navigation from "@/components/Navigation";
 import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { buildMetadata, BreadcrumbSchema } from "@/lib/seo";
+import { BreadcrumbSchema, VideoSchemas } from "@/lib/seo";
+import { getPageMeta } from "@/data/page-metadata";
 
-export const metadata: Metadata = buildMetadata({
-  title: "Treatment Therapies — Desert Recovery Centers",
-  description: "Evidence-based therapies including CBT, DBT, EMDR, trauma therapy, holistic therapies, dual diagnosis treatment, SoftWave therapy, and BridgeWork in Arizona.",
-  path: "/treatments",
-});
+const meta = getPageMeta("/treatments/");
+
+export const metadata: Metadata = {
+  title: meta.title,
+  description: meta.description,
+  alternates: { canonical: meta.canonical },
+  openGraph: {
+    title: meta.title,
+    description: meta.description,
+    url: meta.canonical,
+    images: [{ url: meta.ogImage ?? "https://desertrecoverycenters.com/wp-content/uploads/2024/10/DRC-DRONE-SCOTTSDALE-08-01-2024-August-01-202400020-2.jpg", alt: meta.title }],
+  },
+};
 
 const therapies = [
   {
@@ -58,11 +67,12 @@ export default function TreatmentsPage() {
   return (
     <>
       <BreadcrumbSchema items={[{ name: "Treatments", path: "/treatments" }]} />
+      <VideoSchemas path="/treatments/" />
       <Navigation />
       <PageHero
         eyebrow="Our Treatments"
         title="Evidence-Based Treatment Therapies"
-        description="Every protocol is grounded in peer-reviewed clinical research. Our therapeutic modalities address the whole person — mind, body, and spirit."
+        description="Every protocol is grounded in peer-reviewed clinical research. Our therapeutic modalities address the whole person, mind, body, and spirit."
         bgImage="/images/general/DRC-TREATMENTS.jpg"
       />
       <section className="py-16 md:py-24 bg-white">

@@ -7,17 +7,33 @@ import Footer from "@/components/Footer";
 import { InlineFAQSchema, SpeakableSchema, MedicalConditionSchema } from "@/lib/seo";
 import AEOBlock from "@/components/AEOBlock";
 import RelatedPages from "@/components/RelatedPages";
+import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
+import { faqData } from "@/data/faq-data";
+import SchemaScript from "@/components/SchemaScript";
+import FAQSection from "@/components/FAQSection";
+import Breadcrumb from "@/components/Breadcrumb";
+import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
+import Citations from "@/components/Citations";
+import { getPageMeta } from "@/data/page-metadata";
+
+const meta = getPageMeta("/mental-health/ptsd-treatment/");
 
 export const metadata: Metadata = {
-  title: "PTSD & Trauma Treatment in Arizona — Desert Recovery Centers",
-  description:
-    "Specialized PTSD and trauma treatment using EMDR, somatic experiencing, and trauma-focused CBT. Residential and outpatient programs in Arizona.",
+  title: meta.title,
+  description: meta.description,
+  alternates: { canonical: meta.canonical },
+  openGraph: {
+    title: meta.title,
+    description: meta.description,
+    url: meta.canonical,
+    images: [{ url: meta.ogImage ?? "https://desertrecoverycenters.com/wp-content/uploads/2024/10/DRC-DRONE-SCOTTSDALE-08-01-2024-August-01-202400020-2.jpg", alt: meta.title }],
+  },
 };
 
 const faqs = [
   {
     q: "Do I need a formal PTSD diagnosis to get treatment?",
-    a: "No. You don't need a diagnosis to reach out. Many people experience significant trauma-related symptoms without meeting the full clinical criteria for PTSD. Our clinical team conducts a thorough evaluation during the admissions process and designs a treatment plan based on your specific symptoms and experiences — whether you have a formal diagnosis or not.",
+    a: "No. You don't need a diagnosis to reach out. Many people experience significant trauma-related symptoms without meeting the full clinical criteria for PTSD. Our clinical team conducts a thorough evaluation during the admissions process and designs a treatment plan based on your specific symptoms and experiences, whether you have a formal diagnosis or not.",
   },
   {
     q: "What is EMDR and how does it work?",
@@ -25,7 +41,7 @@ const faqs = [
   },
   {
     q: "Is it safe to process trauma in a residential setting?",
-    a: "Yes — in many ways, residential treatment is the safest place to do deep trauma work. You have 24/7 clinical support, a structured daily routine, and no external stressors. If a therapy session brings up intense emotions, your clinical team is immediately available to help you process and stabilize. Many clients find they can go deeper faster in residential treatment than they ever could in weekly outpatient sessions.",
+    a: "Yes, in many ways, residential treatment is the safest place to do deep trauma work. You have 24/7 clinical support, a structured daily routine, and no external stressors. If a therapy session brings up intense emotions, your clinical team is immediately available to help you process and stabilize. Many clients find they can go deeper faster in residential treatment than they ever could in weekly outpatient sessions.",
   },
   {
     q: "What types of trauma do you treat?",
@@ -40,6 +56,7 @@ const faqs = [
 export default function PTSDTreatmentPage() {
   return (
     <>
+      <SchemaScript schema={[getFAQSchema(faqData["ptsd-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/mental-health/ptsd-treatment"))]} />
       <InlineFAQSchema items={faqs} />
       <SpeakableSchema url="/mental-health/ptsd-treatment" cssSelectors={["[data-speakable]"]} />
       <MedicalConditionSchema
@@ -49,6 +66,7 @@ export default function PTSDTreatmentPage() {
         possibleTreatments={["EMDR", "Trauma-Focused CBT", "Somatic Experiencing", "Medication Management", "Experiential Therapy"]}
       />
       <Navigation />
+      <Breadcrumb items={getBreadcrumbsFromPathname("/mental-health/ptsd-treatment")} />
       <PageHero
         eyebrow="Mental Health Treatment"
         title="PTSD & Trauma Treatment"
@@ -76,10 +94,10 @@ export default function PTSDTreatmentPage() {
               You&apos;ve tried to move on. Maybe you&apos;ve told yourself it was a long time ago, that you should be over it by now. But your body hasn&apos;t forgotten. The flashbacks still come. The nightmares still wake you. Certain sounds, smells, or situations still send you right back to the moment you&apos;re trying so hard to leave behind.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              Post-traumatic stress disorder isn&apos;t a sign of weakness. It&apos;s your nervous system doing exactly what it was designed to do — protect you from danger. The problem is that it can&apos;t tell the difference between the original threat and the present moment. So it keeps you on high alert, keeps you braced for impact, long after the danger has passed.
+              Post-traumatic stress disorder isn&apos;t a sign of weakness. It&apos;s your nervous system doing exactly what it was designed to do, protect you from danger. The problem is that it can&apos;t tell the difference between the original threat and the present moment. So it keeps you on high alert, keeps you braced for impact, long after the danger has passed.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg">
-              At Desert Recovery Centers, our trauma specialists use the most advanced, evidence-based therapies available to help your brain and body finally process what happened — so you can stop surviving and start living again.
+              At Desert Recovery Centers, our trauma specialists use the most advanced, evidence-based therapies available to help your brain and body finally process what happened, so you can stop surviving and start living again.
             </p>
           </div>
         </div>
@@ -141,7 +159,7 @@ export default function PTSDTreatmentPage() {
                     "Being easily startled or constantly on guard",
                     "Difficulty sleeping or concentrating",
                     "Irritability, angry outbursts, or aggressive behavior",
-                    "Hypervigilance — scanning for danger in safe situations",
+                    "Hypervigilance, scanning for danger in safe situations",
                   ].map((s, i) => (
                     <div key={i} className="flex items-start gap-3 bg-white rounded-lg p-4 border border-gray-100">
                       <span className="w-2 h-2 bg-gold rounded-full mt-2 flex-shrink-0" />
@@ -183,7 +201,7 @@ export default function PTSDTreatmentPage() {
               How We Treat PTSD at DRC
             </h2>
             <p className="text-gray-600 leading-relaxed text-lg mb-6">
-              Our trauma program is built by clinicians who specialize in trauma — not generalists who treat it on the side. Every modality we use has robust evidence behind it.
+              Our trauma program is built by clinicians who specialize in trauma, not generalists who treat it on the side. Every modality we use has robust evidence behind it.
             </p>
             <div className="space-y-6">
               {[
@@ -193,7 +211,7 @@ export default function PTSDTreatmentPage() {
                 },
                 {
                   title: "Trauma-Focused CBT",
-                  desc: "Cognitive behavioral therapy adapted specifically for trauma — helping you identify and restructure the distorted beliefs that trauma has planted, such as 'it was my fault' or 'the world is unsafe.'",
+                  desc: "Cognitive behavioral therapy adapted specifically for trauma, helping you identify and restructure the distorted beliefs that trauma has planted, such as 'it was my fault' or 'the world is unsafe.'",
                 },
                 {
                   title: "Somatic Experiencing",
@@ -205,7 +223,7 @@ export default function PTSDTreatmentPage() {
                 },
                 {
                   title: "Experiential & Holistic Therapies",
-                  desc: "Art therapy, equine-assisted activities, yoga, and mindfulness meditation offer non-verbal pathways to process trauma — especially important for experiences that are difficult to put into words.",
+                  desc: "Art therapy, equine-assisted activities, yoga, and mindfulness meditation offer non-verbal pathways to process trauma, especially important for experiences that are difficult to put into words.",
                 },
               ].map((item, i) => (
                 <div key={i} className="border-l-2 border-gold/40 pl-6">
@@ -234,7 +252,7 @@ export default function PTSDTreatmentPage() {
               {[
                 {
                   title: "Trauma-Specialized Clinicians",
-                  desc: "Our licensed psychologists and therapists have advanced training in EMDR, somatic experiencing, and trauma-focused modalities. This isn't general therapy — it's specialized treatment from people who understand trauma at its deepest level.",
+                  desc: "Our licensed psychologists and therapists have advanced training in EMDR, somatic experiencing, and trauma-focused modalities. This isn't general therapy, it's specialized treatment from people who understand trauma at its deepest level.",
                 },
                 {
                   title: "Safety as a Foundation",
@@ -242,11 +260,11 @@ export default function PTSDTreatmentPage() {
                 },
                 {
                   title: "24/7 Support for Difficult Moments",
-                  desc: "Processing trauma can bring up intense emotions. Our clinical and nursing staff are available around the clock — so you're never alone with a flashback, a nightmare, or an overwhelming feeling.",
+                  desc: "Processing trauma can bring up intense emotions. Our clinical and nursing staff are available around the clock, so you're never alone with a flashback, a nightmare, or an overwhelming feeling.",
                 },
                 {
                   title: "Confidential & Respectful",
-                  desc: "We treat veterans, first responders, professionals, and individuals from all walks of life. Your privacy is fiercely protected, and your experiences are met with clinical expertise — never judgment.",
+                  desc: "We treat veterans, first responders, professionals, and individuals from all walks of life. Your privacy is fiercely protected, and your experiences are met with clinical expertise, never judgment.",
                 },
                 {
                   title: "Healing Beyond the Diagnosis",
@@ -277,8 +295,10 @@ export default function PTSDTreatmentPage() {
         ]}
       />
       <RelatedPages currentPath="/mental-health/ptsd-treatment" />
+      <FAQSection faqs={faqData["ptsd-treatment"]} />
       <CTASection />
       <Footer />
+      <Citations />
     </>
   );
 }

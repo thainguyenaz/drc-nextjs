@@ -8,11 +8,20 @@ import { InlineFAQSchema, MedicalConditionSchema } from "@/lib/seo";
 import AEOBlock from "@/components/AEOBlock";
 import RelatedPages from "@/components/RelatedPages";
 import ConditionFAQ from "@/components/ConditionFAQ";
+import { getPageMeta } from "@/data/page-metadata";
+
+const meta = getPageMeta("/addiction/cocaine-addiction-treatment/");
 
 export const metadata: Metadata = {
-  title: "Cocaine Addiction Treatment — Desert Recovery Centers",
-  description:
-    "Cocaine and crack cocaine addiction treatment in Arizona. Behavioral therapies, dual diagnosis care, and structured recovery programs.",
+  title: meta.title,
+  description: meta.description,
+  alternates: { canonical: meta.canonical },
+  openGraph: {
+    title: meta.title,
+    description: meta.description,
+    url: meta.canonical,
+    images: [{ url: meta.ogImage ?? "https://desertrecoverycenters.com/wp-content/uploads/2024/10/DRC-DRONE-SCOTTSDALE-08-01-2024-August-01-202400020-2.jpg", alt: meta.title }],
+  },
 };
 
 const faqs = [
@@ -59,7 +68,7 @@ export default function CocaineAddictionPage() {
         <div className="max-w-container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
             <p className="text-gray-600 leading-relaxed text-lg">
-              The highs don&apos;t last. But the consequences do — the financial damage, the relationships you&apos;ve strained, the paranoia that creeps in after a binge, the crash that leaves you unable to function. You tell yourself you can stop whenever you want, but every time you try, the pull drags you back. Cocaine doesn&apos;t let go easily, and it doesn&apos;t care what it costs you.
+              The highs don&apos;t last. But the consequences do, the financial damage, the relationships you&apos;ve strained, the paranoia that creeps in after a binge, the crash that leaves you unable to function. You tell yourself you can stop whenever you want, but every time you try, the pull drags you back. Cocaine doesn&apos;t let go easily, and it doesn&apos;t care what it costs you.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg mt-4">
               At Desert Recovery Centers, we understand the unique grip cocaine has on the brain&apos;s dopamine system. Our treatment programs are designed specifically to address stimulant addiction through evidence-based behavioral therapies and structured recovery support.
@@ -69,7 +78,7 @@ export default function CocaineAddictionPage() {
               Understanding Cocaine Addiction
             </h2>
             <p className="text-gray-600 leading-relaxed">
-              Cocaine floods the brain with dopamine, creating an intense but short-lived euphoria. Over time, the brain&apos;s natural reward system is hijacked — you need more cocaine just to feel baseline levels of pleasure, and nothing else produces the same rush. This neurological rewiring makes cocaine one of the most psychologically addictive substances. Both powder cocaine and crack cocaine carry severe risks including cardiac events, stroke, and cognitive impairment.
+              Cocaine floods the brain with dopamine, creating an intense but short-lived euphoria. Over time, the brain&apos;s natural reward system is hijacked, you need more cocaine just to feel baseline levels of pleasure, and nothing else produces the same rush. This neurological rewiring makes cocaine one of the most psychologically addictive substances. Both powder cocaine and crack cocaine carry severe risks including cardiac events, stroke, and cognitive impairment.
             </p>
 
             <h2 className="font-display text-2xl text-forest font-semibold mt-10 mb-4">
@@ -142,7 +151,7 @@ export default function CocaineAddictionPage() {
               What Recovery Looks Like Here
             </h2>
             <p className="text-gray-600 leading-relaxed">
-              Cocaine recovery requires rebuilding your brain&apos;s ability to experience pleasure naturally. That takes time, clinical support, and a treatment environment that understands stimulant addiction specifically. At Desert Recovery Centers, your program moves at your pace — from intensive residential care to PHP and IOP as you regain stability. We help you develop the emotional resilience, healthy habits, and community connections that make sustained recovery possible.
+              Cocaine recovery requires rebuilding your brain&apos;s ability to experience pleasure naturally. That takes time, clinical support, and a treatment environment that understands stimulant addiction specifically. At Desert Recovery Centers, your program moves at your pace, from intensive residential care to PHP and IOP as you regain stability. We help you develop the emotional resilience, healthy habits, and community connections that make sustained recovery possible.
             </p>
             <p className="text-gray-600 leading-relaxed mt-4">
               We accept most major insurance plans. Coverage varies by plan. Contact us to verify your benefits.

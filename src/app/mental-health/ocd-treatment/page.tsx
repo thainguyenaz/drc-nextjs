@@ -7,29 +7,38 @@ import Footer from "@/components/Footer";
 import { InlineFAQSchema, SpeakableSchema, MedicalConditionSchema } from "@/lib/seo";
 import AEOBlock from "@/components/AEOBlock";
 import RelatedPages from "@/components/RelatedPages";
+import { getPageMeta } from "@/data/page-metadata";
+
+const meta = getPageMeta("/mental-health/ocd-treatment/");
 
 export const metadata: Metadata = {
-  title: "OCD Treatment in Arizona — Desert Recovery Centers",
-  description:
-    "Evidence-based OCD treatment with Exposure and Response Prevention (ERP) and cognitive therapy. Residential and outpatient programs in Arizona.",
+  title: meta.title,
+  description: meta.description,
+  alternates: { canonical: meta.canonical },
+  openGraph: {
+    title: meta.title,
+    description: meta.description,
+    url: meta.canonical,
+    images: [{ url: meta.ogImage ?? "https://desertrecoverycenters.com/wp-content/uploads/2024/10/DRC-DRONE-SCOTTSDALE-08-01-2024-August-01-202400020-2.jpg", alt: meta.title }],
+  },
 };
 
 const faqs = [
   {
     q: "What is Exposure and Response Prevention (ERP)?",
-    a: "ERP is the most effective therapy for OCD. It involves gradually and systematically exposing you to the thoughts, images, or situations that trigger your obsessions — while helping you resist the urge to perform compulsions. Over time, your brain learns that the feared consequences don't happen, and the anxiety naturally decreases. Our therapists are specifically trained in ERP and guide you through each step at a pace that feels manageable.",
+    a: "ERP is the most effective therapy for OCD. It involves gradually and systematically exposing you to the thoughts, images, or situations that trigger your obsessions, while helping you resist the urge to perform compulsions. Over time, your brain learns that the feared consequences don't happen, and the anxiety naturally decreases. Our therapists are specifically trained in ERP and guide you through each step at a pace that feels manageable.",
   },
   {
     q: "Is residential treatment necessary for OCD?",
-    a: "For moderate to severe OCD — especially when symptoms significantly impair daily functioning, when outpatient therapy hasn't produced sufficient improvement, or when co-occurring conditions complicate treatment — residential care provides the intensive, structured support that accelerates progress. Our residential program offers multiple ERP sessions per week plus daily therapeutic support that simply isn't possible in weekly outpatient treatment.",
+    a: "For moderate to severe OCD, especially when symptoms significantly impair daily functioning, when outpatient therapy hasn't produced sufficient improvement, or when co-occurring conditions complicate treatment, residential care provides the intensive, structured support that accelerates progress. Our residential program offers multiple ERP sessions per week plus daily therapeutic support that simply isn't possible in weekly outpatient treatment.",
   },
   {
     q: "Can OCD be cured?",
-    a: "While OCD is typically considered a chronic condition, it can be managed extremely well with proper treatment. Most people who complete evidence-based treatment experience significant reduction in symptoms — many by 50-80%. The goal isn't perfection; it's freedom. We help you reach a place where OCD no longer controls your life.",
+    a: "While OCD is typically considered a chronic condition, it can be managed extremely well with proper treatment. Most people who complete evidence-based treatment experience significant reduction in symptoms, many by 50-80%. The goal isn't perfection; it's freedom. We help you reach a place where OCD no longer controls your life.",
   },
   {
     q: "What if my OCD themes are embarrassing or disturbing?",
-    a: "Many forms of OCD involve intrusive thoughts that feel deeply shameful — thoughts about harm, violence, inappropriate sexual content, or religious blasphemy. These are among the most common forms of OCD, and our clinicians have treated them extensively. You will never be judged for your thoughts. OCD thoughts are not reflections of who you are — they are symptoms of a treatable condition.",
+    a: "Many forms of OCD involve intrusive thoughts that feel deeply shameful, thoughts about harm, violence, inappropriate sexual content, or religious blasphemy. These are among the most common forms of OCD, and our clinicians have treated them extensively. You will never be judged for your thoughts. OCD thoughts are not reflections of who you are, they are symptoms of a treatable condition.",
   },
   {
     q: "Do you treat OCD alongside other conditions?",
@@ -73,10 +82,10 @@ export default function OCDTreatmentPage() {
               Trapped in a Loop You Can&apos;t Break
             </h2>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              You know the thought isn&apos;t rational. You know checking that lock for the fifteenth time won&apos;t change anything. You know washing your hands again won&apos;t make the contamination fear go away — at least not for long. But the anxiety is so intense, so unbearable, that performing the ritual feels like the only way to breathe.
+              You know the thought isn&apos;t rational. You know checking that lock for the fifteenth time won&apos;t change anything. You know washing your hands again won&apos;t make the contamination fear go away, at least not for long. But the anxiety is so intense, so unbearable, that performing the ritual feels like the only way to breathe.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              OCD is one of the most misunderstood mental health conditions. It&apos;s not about being &quot;organized&quot; or &quot;particular.&quot; It&apos;s a relentless cycle of intrusive, unwanted thoughts (obsessions) followed by behaviors or mental rituals (compulsions) that temporarily relieve the distress — only for the cycle to start again, often stronger than before.
+              OCD is one of the most misunderstood mental health conditions. It&apos;s not about being &quot;organized&quot; or &quot;particular.&quot; It&apos;s a relentless cycle of intrusive, unwanted thoughts (obsessions) followed by behaviors or mental rituals (compulsions) that temporarily relieve the distress, only for the cycle to start again, often stronger than before.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg">
               OCD can consume hours of your day. It can make you late for work, damage your relationships, and leave you exhausted from a battle that nobody else can see. But here&apos;s what we need you to know: OCD responds remarkably well to the right treatment. At Desert Recovery Centers, we use the most effective, evidence-based approaches to help you break free from the cycle.
@@ -106,7 +115,7 @@ export default function OCDTreatmentPage() {
                     "Excessive concern with symmetry, order, or exactness",
                     "Unwanted sexual, violent, or blasphemous thoughts",
                     "Fear of losing control or acting on unwanted impulses",
-                    "Persistent doubt — 'Did I lock the door? Did I turn off the stove?'",
+                    "Persistent doubt, 'Did I lock the door? Did I turn off the stove?'",
                   ].map((s, i) => (
                     <div key={i} className="flex items-start gap-3 bg-white rounded-lg p-4 border border-gray-100">
                       <span className="w-2 h-2 bg-gold rounded-full mt-2 flex-shrink-0" />
@@ -154,7 +163,7 @@ export default function OCDTreatmentPage() {
               How We Treat OCD at DRC
             </h2>
             <p className="text-gray-600 leading-relaxed text-lg mb-6">
-              Our OCD program is built around the therapies with the strongest research support — delivered by clinicians trained specifically in OCD treatment.
+              Our OCD program is built around the therapies with the strongest research support, delivered by clinicians trained specifically in OCD treatment.
             </p>
             <div className="space-y-6">
               {[
@@ -164,7 +173,7 @@ export default function OCDTreatmentPage() {
                 },
                 {
                   title: "Cognitive Therapy for OCD",
-                  desc: "We help you identify and restructure the distorted beliefs that fuel your OCD — such as overestimation of threat, intolerance of uncertainty, and inflated responsibility — reducing the power these thoughts have over you.",
+                  desc: "We help you identify and restructure the distorted beliefs that fuel your OCD, such as overestimation of threat, intolerance of uncertainty, and inflated responsibility, reducing the power these thoughts have over you.",
                 },
                 {
                   title: "Medication Management",
@@ -209,7 +218,7 @@ export default function OCDTreatmentPage() {
                 },
                 {
                   title: "Intensive Treatment Format",
-                  desc: "Our residential program offers multiple ERP sessions per week in a structured environment — allowing you to make rapid progress that would take months or longer in traditional weekly outpatient therapy.",
+                  desc: "Our residential program offers multiple ERP sessions per week in a structured environment, allowing you to make rapid progress that would take months or longer in traditional weekly outpatient therapy.",
                 },
                 {
                   title: "A Non-Judgmental Space",
@@ -221,7 +230,7 @@ export default function OCDTreatmentPage() {
                 },
                 {
                   title: "Sustainable Recovery Plan",
-                  desc: "We teach you to be your own therapist. By the time you leave, you'll have the tools and knowledge to continue applying ERP principles independently — with an aftercare plan and alumni support to back you up.",
+                  desc: "We teach you to be your own therapist. By the time you leave, you'll have the tools and knowledge to continue applying ERP principles independently, with an aftercare plan and alumni support to back you up.",
                 },
               ].map((item, i) => (
                 <div

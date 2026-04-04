@@ -8,11 +8,27 @@ import { InlineFAQSchema, MedicalConditionSchema } from "@/lib/seo";
 import AEOBlock from "@/components/AEOBlock";
 import RelatedPages from "@/components/RelatedPages";
 import ConditionFAQ from "@/components/ConditionFAQ";
+import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
+import { faqData } from "@/data/faq-data";
+import SchemaScript from "@/components/SchemaScript";
+import FAQSection from "@/components/FAQSection";
+import Breadcrumb from "@/components/Breadcrumb";
+import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
+import Citations from "@/components/Citations";
+import { getPageMeta } from "@/data/page-metadata";
+
+const meta = getPageMeta("/addiction/alcoholism-treatment/");
 
 export const metadata: Metadata = {
-  title: "Alcohol Addiction Treatment — Desert Recovery Centers",
-  description:
-    "Evidence-based alcohol addiction treatment in Arizona. Medically supervised detox, residential care, PHP, and IOP for alcohol use disorder.",
+  title: meta.title,
+  description: meta.description,
+  alternates: { canonical: meta.canonical },
+  openGraph: {
+    title: meta.title,
+    description: meta.description,
+    url: meta.canonical,
+    images: [{ url: meta.ogImage ?? "https://desertrecoverycenters.com/wp-content/uploads/2024/10/DRC-DRONE-SCOTTSDALE-08-01-2024-August-01-202400020-2.jpg", alt: meta.title }],
+  },
 };
 
 const faqs = [
@@ -41,6 +57,7 @@ const faqs = [
 export default function AlcoholAddictionPage() {
   return (
     <>
+      <SchemaScript schema={[getFAQSchema(faqData["alcoholism-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/addiction/alcohol"))]} />
       <InlineFAQSchema items={faqs} />
       <MedicalConditionSchema
         name="Alcohol Use Disorder"
@@ -49,17 +66,18 @@ export default function AlcoholAddictionPage() {
         possibleTreatments={["Medically Supervised Detox", "Medication-Assisted Treatment", "CBT", "Dual Diagnosis Treatment"]}
       />
       <Navigation />
+      <Breadcrumb items={getBreadcrumbsFromPathname("/addiction/alcohol")} />
       <PageHero
         eyebrow="Addiction Treatment"
         title="Alcohol Addiction Treatment"
-        description="Medically supervised detox and comprehensive care for alcohol use disorder — because you deserve more than white-knuckling your way through another day."
+        description="Medically supervised detox and comprehensive care for alcohol use disorder, because you deserve more than white-knuckling your way through another day."
         bgImage="/images/general/DRC-ADDICTION.jpg"
       />
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
             <p className="text-gray-600 leading-relaxed text-lg">
-              Maybe it started as a way to unwind. A glass of wine after work, a few beers on the weekend. But somewhere along the way, the line moved. Now you&apos;re drinking to feel normal. You&apos;re hiding bottles, making excuses, waking up with dread instead of rest. The people closest to you are pulling away — or they&apos;ve already gone. You&apos;re not weak. You&apos;re caught in a cycle that rewires your brain chemistry, and breaking free takes more than willpower alone.
+              Maybe it started as a way to unwind. A glass of wine after work, a few beers on the weekend. But somewhere along the way, the line moved. Now you&apos;re drinking to feel normal. You&apos;re hiding bottles, making excuses, waking up with dread instead of rest. The people closest to you are pulling away, or they&apos;ve already gone. You&apos;re not weak. You&apos;re caught in a cycle that rewires your brain chemistry, and breaking free takes more than willpower alone.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg mt-4">
               At Desert Recovery Centers, we treat alcohol use disorder as the medical condition it is. Our clinical team has helped hundreds of individuals move from dependence to recovery through structured, evidence-based care.
@@ -69,7 +87,7 @@ export default function AlcoholAddictionPage() {
               Understanding Alcohol Use Disorder
             </h2>
             <p className="text-gray-600 leading-relaxed">
-              Alcohol use disorder (AUD) is a chronic condition characterized by an inability to control drinking despite negative consequences. Prolonged alcohol use changes brain chemistry — particularly the GABA and glutamate systems — creating physical dependence that makes quitting dangerous without medical supervision. Withdrawal symptoms can range from anxiety and tremors to life-threatening seizures, which is why medically managed detox is a critical first step.
+              Alcohol use disorder (AUD) is a chronic condition characterized by an inability to control drinking despite negative consequences. Prolonged alcohol use changes brain chemistry, particularly the GABA and glutamate systems, creating physical dependence that makes quitting dangerous without medical supervision. Withdrawal symptoms can range from anxiety and tremors to life-threatening seizures, which is why medically managed detox is a critical first step.
             </p>
 
             <h2 className="font-display text-2xl text-forest font-semibold mt-10 mb-4">
@@ -86,7 +104,7 @@ export default function AlcoholAddictionPage() {
               </li>
               <li className="flex items-start gap-3">
                 <span className="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0" />
-                Experiencing withdrawal symptoms — shaking, sweating, nausea, or anxiety — when you don&apos;t drink
+                Experiencing withdrawal symptoms, shaking, sweating, nausea, or anxiety, when you don&apos;t drink
               </li>
               <li className="flex items-start gap-3">
                 <span className="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0" />
@@ -220,8 +238,10 @@ export default function AlcoholAddictionPage() {
         ]}
       />
       <RelatedPages currentPath="/addiction/alcohol" />
+      <FAQSection faqs={faqData["alcoholism-treatment"]} />
       <CTASection />
       <Footer />
+      <Citations />
     </>
   );
 }

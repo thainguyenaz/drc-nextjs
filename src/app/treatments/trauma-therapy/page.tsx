@@ -8,6 +8,13 @@ import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import { MedicalTherapySchema } from "@/lib/seo";
+import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
+import { faqData } from "@/data/faq-data";
+import SchemaScript from "@/components/SchemaScript";
+import FAQSection from "@/components/FAQSection";
+import Breadcrumb from "@/components/Breadcrumb";
+import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
+import Citations from "@/components/Citations";
 
 const modalities = [
   {
@@ -20,7 +27,7 @@ const modalities = [
   },
   {
     name: "Somatic Experiencing",
-    description: "Body-based therapy that addresses trauma stored in the nervous system — releasing physical tension, chronic pain, and hypervigilance.",
+    description: "Body-based therapy that addresses trauma stored in the nervous system, releasing physical tension, chronic pain, and hypervigilance.",
   },
   {
     name: "Narrative Therapy",
@@ -28,7 +35,7 @@ const modalities = [
   },
   {
     name: "Art & Expressive Therapies",
-    description: "Creative modalities that allow trauma processing through non-verbal channels — particularly valuable when words feel inadequate.",
+    description: "Creative modalities that allow trauma processing through non-verbal channels, particularly valuable when words feel inadequate.",
   },
   {
     name: "Mindfulness & Grounding",
@@ -61,6 +68,7 @@ export default function TraumaTherapyPage() {
 
   return (
     <>
+      <SchemaScript schema={[getFAQSchema(faqData["trauma-therapy"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/treatments/trauma-therapy"))]} />
       <MedicalTherapySchema
         name="Trauma Therapy"
         description="Comprehensive multi-modal trauma treatment combining EMDR, somatic experiencing, and trauma-focused CBT to help clients heal from disturbing life experiences."
@@ -68,10 +76,11 @@ export default function TraumaTherapyPage() {
         conditions={["PTSD", "Complex PTSD", "Childhood Abuse", "Sexual Assault", "Domestic Violence", "Combat Trauma", "Grief", "Intergenerational Trauma"]}
       />
       <Navigation />
+      <Breadcrumb items={getBreadcrumbsFromPathname("/treatments/trauma-therapy")} />
       <PageHero
         eyebrow="Treatment Specialization"
         title="Trauma Therapy"
-        description="Trauma doesn't disappear on its own. Our specialized trauma program helps you process what happened — so it stops controlling what happens next."
+        description="Trauma doesn't disappear on its own. Our specialized trauma program helps you process what happened, so it stops controlling what happens next."
         bgImage="/images/general/DRC-Treatment-Therapies-BG-Fade.jpg"
       />
 
@@ -117,13 +126,13 @@ export default function TraumaTherapyPage() {
             </span>
             <div className="w-[60px] h-0.5 bg-gold mt-4 mb-4" />
             <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold mb-6 leading-tight">
-              Trauma Is Not What Happened to You — It&apos;s What Lives Inside You
+              Trauma Is Not What Happened to You, It&apos;s What Lives Inside You
             </h2>
             <p className="text-gray-600 leading-relaxed mb-4">
               Trauma rewires the brain and nervous system. It changes how you perceive danger, how you relate to others, and how you cope with stress. For many, substance use becomes the only way to manage the flashbacks, hypervigilance, numbness, and emotional pain that trauma leaves behind.
             </p>
             <p className="text-gray-600 leading-relaxed mb-4">
-              At Desert Recovery Centers, trauma therapy is not a single modality — it is a comprehensive, multi-modal approach designed by our clinical psychologists to meet each client exactly where they are. Some clients need the structured reprocessing of EMDR. Others benefit from the body-based release of somatic experiencing. Many need both.
+              At Desert Recovery Centers, trauma therapy is not a single modality, it is a comprehensive, multi-modal approach designed by our clinical psychologists to meet each client exactly where they are. Some clients need the structured reprocessing of EMDR. Others benefit from the body-based release of somatic experiencing. Many need both.
             </p>
             <p className="text-gray-600 leading-relaxed">
               Our trauma program is delivered in individual and group formats, with gender-specific groups that create the safety necessary for deep healing work. Every session is led or directly supervised by a licensed clinical psychologist.
@@ -168,7 +177,7 @@ export default function TraumaTherapyPage() {
         </div>
       </section>
 
-      {/* Trauma types — collision */}
+      {/* Trauma types, collision */}
       <section className="bg-forest py-20 md:py-28 overflow-hidden">
         <div className="max-w-container mx-auto px-6">
           <div className="flex flex-col md:flex-row gap-12 lg:gap-20 items-center">
@@ -290,8 +299,10 @@ export default function TraumaTherapyPage() {
         </div>
       </section>
 
+      <FAQSection faqs={faqData["trauma-therapy"]} />
       <CTASection />
       <Footer />
+      <Citations />
     </>
   );
 }

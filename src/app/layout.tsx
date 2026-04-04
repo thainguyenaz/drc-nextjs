@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { OrganizationSchema, AllLocalBusinessSchemas } from "@/lib/seo";
+import SchemaScript from "@/components/SchemaScript";
+import { getMedicalOrganizationSchema, getWebSiteSchema } from "@/lib/schema";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -18,8 +20,8 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.desertrecoverycenters.com"),
   title: {
-    default: "Desert Recovery Centers — Luxury Behavioral Health Treatment in Arizona",
-    template: "%s — Desert Recovery Centers",
+    default: "Desert Recovery Centers, Luxury Behavioral Health Treatment in Arizona",
+    template: "%s, Desert Recovery Centers",
   },
   description:
     "Desert Recovery Centers offers luxury mental health and addiction treatment in Glendale, Scottsdale, and Phoenix, Arizona. Evidence-based care in a serene desert setting.",
@@ -45,6 +47,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en-US" className={`${inter.variable} ${playfair.variable}`}>
+      <head>
+        <SchemaScript schema={[getMedicalOrganizationSchema(), getWebSiteSchema()]} />
+      </head>
       <body className="font-body antialiased bg-white">
         <OrganizationSchema />
         <AllLocalBusinessSchemas />

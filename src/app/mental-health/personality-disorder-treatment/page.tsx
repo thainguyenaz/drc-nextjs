@@ -7,11 +7,20 @@ import Footer from "@/components/Footer";
 import { InlineFAQSchema, SpeakableSchema, MedicalConditionSchema } from "@/lib/seo";
 import AEOBlock from "@/components/AEOBlock";
 import RelatedPages from "@/components/RelatedPages";
+import { getPageMeta } from "@/data/page-metadata";
+
+const meta = getPageMeta("/mental-health/personality-disorder-treatment/");
 
 export const metadata: Metadata = {
-  title: "Personality Disorder Treatment in Arizona — Desert Recovery Centers",
-  description:
-    "DBT-based personality disorder treatment for borderline personality disorder and other personality conditions. Residential programs in Arizona.",
+  title: meta.title,
+  description: meta.description,
+  alternates: { canonical: meta.canonical },
+  openGraph: {
+    title: meta.title,
+    description: meta.description,
+    url: meta.canonical,
+    images: [{ url: meta.ogImage ?? "https://desertrecoverycenters.com/wp-content/uploads/2024/10/DRC-DRONE-SCOTTSDALE-08-01-2024-August-01-202400020-2.jpg", alt: meta.title }],
+  },
 };
 
 const faqs = [
@@ -25,7 +34,7 @@ const faqs = [
   },
   {
     q: "Can personality disorders actually be treated?",
-    a: "Yes — and this is one of the most important things to know. Despite outdated beliefs that personality disorders are 'untreatable,' modern research consistently shows that with evidence-based treatment like DBT, most people with personality disorders experience significant improvement. Many clients no longer meet diagnostic criteria after completing treatment. Recovery is not only possible — it's the expected outcome with proper care.",
+    a: "Yes, and this is one of the most important things to know. Despite outdated beliefs that personality disorders are 'untreatable,' modern research consistently shows that with evidence-based treatment like DBT, most people with personality disorders experience significant improvement. Many clients no longer meet diagnostic criteria after completing treatment. Recovery is not only possible, it's the expected outcome with proper care.",
   },
   {
     q: "How long does treatment for personality disorders take?",
@@ -33,7 +42,7 @@ const faqs = [
   },
   {
     q: "Do you work with family members during treatment?",
-    a: "Absolutely. Personality disorders significantly impact family relationships, and family involvement is an important part of recovery. Our family programming includes education about the condition, communication skills training, boundary-setting guidance, and joint therapy sessions — helping your loved ones understand your experience and learn how to support your recovery effectively.",
+    a: "Absolutely. Personality disorders significantly impact family relationships, and family involvement is an important part of recovery. Our family programming includes education about the condition, communication skills training, boundary-setting guidance, and joint therapy sessions, helping your loved ones understand your experience and learn how to support your recovery effectively.",
   },
 ];
 
@@ -73,13 +82,13 @@ export default function PersonalityDisorderTreatmentPage() {
               When Emotions Are Too Intense and Relationships Keep Breaking
             </h2>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              Maybe relationships have always been the hardest part of your life. One moment you feel deeply connected to someone; the next, you&apos;re convinced they&apos;re going to leave. You swing between needing people intensely and pushing them away. Your emotions hit like a tidal wave — and by the time they pass, there&apos;s damage you didn&apos;t intend.
+              Maybe relationships have always been the hardest part of your life. One moment you feel deeply connected to someone; the next, you&apos;re convinced they&apos;re going to leave. You swing between needing people intensely and pushing them away. Your emotions hit like a tidal wave, and by the time they pass, there&apos;s damage you didn&apos;t intend.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              Or perhaps you&apos;ve spent years feeling fundamentally different from other people — unable to connect the way others seem to, always struggling with a sense of emptiness or identity confusion that you can&apos;t quite explain.
+              Or perhaps you&apos;ve spent years feeling fundamentally different from other people, unable to connect the way others seem to, always struggling with a sense of emptiness or identity confusion that you can&apos;t quite explain.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg">
-              Personality disorders are among the most misunderstood conditions in mental health. They carry heavy stigma, and too many clinicians still approach them with pessimism. But at Desert Recovery Centers, we know the truth: personality disorders respond powerfully to specialized treatment. With the right care, the patterns that have controlled your life can fundamentally change — and your relationships, your stability, and your sense of self can heal.
+              Personality disorders are among the most misunderstood conditions in mental health. They carry heavy stigma, and too many clinicians still approach them with pessimism. But at Desert Recovery Centers, we know the truth: personality disorders respond powerfully to specialized treatment. With the right care, the patterns that have controlled your life can fundamentally change, and your relationships, your stability, and your sense of self can heal.
             </p>
           </div>
         </div>
@@ -103,7 +112,7 @@ export default function PersonalityDisorderTreatmentPage() {
                 "Intense, unstable relationships that swing between idealization and devaluation",
                 "Chronic feelings of emptiness or a fragmented sense of identity",
                 "Extreme emotional reactions that feel disproportionate to the situation",
-                "Intense fear of abandonment — real or imagined",
+                "Intense fear of abandonment, real or imagined",
                 "Impulsive behaviors that provide short-term relief but long-term harm",
                 "Difficulty controlling anger or experiencing chronic irritability",
                 "Self-harming behaviors or recurrent suicidal thoughts",
@@ -135,7 +144,7 @@ export default function PersonalityDisorderTreatmentPage() {
               How We Treat Personality Disorders at DRC
             </h2>
             <p className="text-gray-600 leading-relaxed text-lg mb-6">
-              Our personality disorder program is anchored in Dialectical Behavior Therapy — the most researched and effective treatment for these conditions — enhanced with complementary therapies for comprehensive healing.
+              Our personality disorder program is anchored in Dialectical Behavior Therapy, the most researched and effective treatment for these conditions, enhanced with complementary therapies for comprehensive healing.
             </p>
             <div className="space-y-6">
               {[
@@ -149,11 +158,11 @@ export default function PersonalityDisorderTreatmentPage() {
                 },
                 {
                   title: "Trauma-Informed Care",
-                  desc: "Many personality disorders develop in response to early trauma or adverse childhood experiences. Our EMDR and trauma-focused therapies address these root causes — because healing the wound beneath the symptoms is how true recovery happens.",
+                  desc: "Many personality disorders develop in response to early trauma or adverse childhood experiences. Our EMDR and trauma-focused therapies address these root causes, because healing the wound beneath the symptoms is how true recovery happens.",
                 },
                 {
                   title: "Medication Support",
-                  desc: "While there's no medication that treats personality disorders directly, our psychiatrists can prescribe medications to manage specific symptoms like mood instability, anxiety, impulsivity, or co-occurring conditions — always as part of a broader therapeutic plan.",
+                  desc: "While there's no medication that treats personality disorders directly, our psychiatrists can prescribe medications to manage specific symptoms like mood instability, anxiety, impulsivity, or co-occurring conditions, always as part of a broader therapeutic plan.",
                 },
                 {
                   title: "Therapeutic Community",
@@ -186,19 +195,19 @@ export default function PersonalityDisorderTreatmentPage() {
               {[
                 {
                   title: "DBT-Trained Clinical Team",
-                  desc: "Our clinicians have advanced training in DBT and personality disorder treatment — not just general mental health experience. This specialization matters because personality disorders require specific therapeutic approaches that differ significantly from standard treatment.",
+                  desc: "Our clinicians have advanced training in DBT and personality disorder treatment, not just general mental health experience. This specialization matters because personality disorders require specific therapeutic approaches that differ significantly from standard treatment.",
                 },
                 {
                   title: "Compassion, Not Stigma",
-                  desc: "Personality disorders carry more clinical stigma than almost any other diagnosis. At DRC, we approach these conditions with the same respect and clinical rigor we bring to any condition — because we know that with the right treatment, profound change is possible.",
+                  desc: "Personality disorders carry more clinical stigma than almost any other diagnosis. At DRC, we approach these conditions with the same respect and clinical rigor we bring to any condition, because we know that with the right treatment, profound change is possible.",
                 },
                 {
                   title: "Dual Diagnosis Expertise",
-                  desc: "Substance use disorders are extremely common alongside personality disorders. Our integrated approach treats both simultaneously — breaking the cycle where emotional dysregulation drives substance use and substance use worsens emotional instability.",
+                  desc: "Substance use disorders are extremely common alongside personality disorders. Our integrated approach treats both simultaneously, breaking the cycle where emotional dysregulation drives substance use and substance use worsens emotional instability.",
                 },
                 {
                   title: "Longer Treatment Windows",
-                  desc: "Personality disorders benefit from extended treatment. We offer flexible program lengths that allow enough time for new skills to become second nature — not just concepts you understand intellectually, but automatic responses you can rely on in real life.",
+                  desc: "Personality disorders benefit from extended treatment. We offer flexible program lengths that allow enough time for new skills to become second nature, not just concepts you understand intellectually, but automatic responses you can rely on in real life.",
                 },
                 {
                   title: "Family Healing",

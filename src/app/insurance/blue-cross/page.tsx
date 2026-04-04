@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 import { buildMetadata, BreadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Does Blue Cross Blue Shield Cover Rehab in Arizona? — Desert Recovery Centers",
+  title: "Does Blue Cross Blue Shield Cover Rehab in Arizona?, Desert Recovery Centers",
   description:
     "Learn if BCBS covers drug and alcohol rehab in Arizona. Understand PPO vs HMO plans, BCBS of Arizona benefits, and how to verify your coverage for treatment.",
   path: "/insurance/blue-cross",
@@ -32,7 +32,7 @@ const faqs = [
   },
   {
     q: "How many days of rehab will BCBS cover?",
-    a: "The number of covered days varies by plan and is determined through medical necessity reviews. BCBS conducts utilization reviews at regular intervals during treatment to assess whether continued care is warranted. Our clinical team provides thorough documentation to support authorization for the full duration of treatment your condition requires. Coverage varies by plan — contact us to verify your benefits.",
+    a: "The number of covered days varies by plan and is determined through medical necessity reviews. BCBS conducts utilization reviews at regular intervals during treatment to assess whether continued care is warranted. Our clinical team provides thorough documentation to support authorization for the full duration of treatment your condition requires. Coverage varies by plan, contact us to verify your benefits.",
   },
 ];
 
@@ -57,7 +57,7 @@ export default function BlueCrossInsurancePage() {
       <div className="bg-cream border-b border-gold/20">
         <div className="max-w-container mx-auto px-6 py-3 text-center">
           <p className="text-xs text-sage font-body tracking-wide">
-            Insurance information reviewed by Desert Recovery Centers admissions team — updated April 2026
+            Insurance information reviewed by Desert Recovery Centers admissions team, updated April 2026
           </p>
         </div>
       </div>
@@ -76,7 +76,7 @@ export default function BlueCrossInsurancePage() {
               The good news is that under the Mental Health Parity and Addiction Equity Act and the Affordable Care Act, virtually all BCBS plans are required to include substance use disorder treatment as an essential health benefit. This means your plan almost certainly provides some level of coverage for drug and alcohol rehab.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg">
-              The question is not usually whether you have coverage — it&apos;s understanding the details. That&apos;s where we come in. Call our admissions team at{" "}
+              The question is not usually whether you have coverage, it&apos;s understanding the details. That&apos;s where we come in. Call our admissions team at{" "}
               <a href="tel:+14809313617" className="text-gold-dark font-semibold hover:underline">(480) 931-3617</a>
               {" "}and we will verify your BCBS benefits completely free of charge.
             </p>
@@ -103,7 +103,7 @@ export default function BlueCrossInsurancePage() {
                   PPO Plans (Preferred Provider Organization)
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  PPO plans offer the greatest flexibility for rehab coverage. You can typically access both in-network and out-of-network providers without a referral. While in-network care costs less, you still receive meaningful coverage for out-of-network treatment — making PPO plans ideal for accessing specialized addiction facilities.
+                  PPO plans offer the greatest flexibility for rehab coverage. You can typically access both in-network and out-of-network providers without a referral. While in-network care costs less, you still receive meaningful coverage for out-of-network treatment, making PPO plans ideal for accessing specialized addiction facilities.
                 </p>
               </div>
               <div className="bg-white rounded-xl p-6 border border-gray-100">
@@ -190,14 +190,14 @@ export default function BlueCrossInsurancePage() {
               How to Verify Your BCBS Benefits in 3 Simple Steps
             </h2>
             <p className="text-gray-600 leading-relaxed text-lg mb-8">
-              With so many BCBS plan variations, verifying your benefits on your own can feel overwhelming. We handle the insurance verification for you — call our admissions team and let us do the work:
+              With so many BCBS plan variations, verifying your benefits on your own can feel overwhelming. We handle the insurance verification for you, call our admissions team and let us do the work:
             </p>
             <div className="grid md:grid-cols-3 gap-6">
               {[
                 {
                   step: "1",
                   title: "Call Our Admissions Team",
-                  desc: "Reach us at (480) 931-3617. If you have your BCBS member ID card available, that helps us get started faster — but it is not required.",
+                  desc: "Reach us at (480) 931-3617. If you have your BCBS member ID card available, that helps us get started faster, but it is not required.",
                 },
                 {
                   step: "2",
@@ -207,7 +207,7 @@ export default function BlueCrossInsurancePage() {
                 {
                   step: "3",
                   title: "Get a Clear Picture",
-                  desc: "We explain your benefits in plain language — what is covered, what your estimated costs will be, and what steps are needed to begin treatment.",
+                  desc: "We explain your benefits in plain language, what is covered, what your estimated costs will be, and what steps are needed to begin treatment.",
                 },
               ].map((item, i) => (
                 <div key={i} className="bg-white rounded-xl p-6 border border-gray-100 text-center">

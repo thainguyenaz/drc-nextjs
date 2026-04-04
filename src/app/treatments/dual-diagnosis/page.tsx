@@ -8,11 +8,18 @@ import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import { MedicalTherapySchema } from "@/lib/seo";
+import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
+import { faqData } from "@/data/faq-data";
+import SchemaScript from "@/components/SchemaScript";
+import FAQSection from "@/components/FAQSection";
+import Breadcrumb from "@/components/Breadcrumb";
+import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
+import Citations from "@/components/Citations";
 
 const approachPillars = [
   {
     name: "Integrated Assessment",
-    description: "Comprehensive psychiatric evaluation that identifies all co-occurring conditions from day one — no missed diagnoses, no fragmented care.",
+    description: "Comprehensive psychiatric evaluation that identifies all co-occurring conditions from day one, no missed diagnoses, no fragmented care.",
   },
   {
     name: "Unified Treatment Planning",
@@ -32,7 +39,7 @@ const approachPillars = [
   },
   {
     name: "Aftercare Continuity",
-    description: "Discharge planning that maintains integrated care — connecting clients with dual diagnosis-competent providers and support systems.",
+    description: "Discharge planning that maintains integrated care, connecting clients with dual diagnosis-competent providers and support systems.",
   },
 ];
 
@@ -57,6 +64,7 @@ export default function DualDiagnosisPage() {
 
   return (
     <>
+      <SchemaScript schema={[getFAQSchema(faqData["dual-diagnosis-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/treatments/dual-diagnosis"))]} />
       <MedicalTherapySchema
         name="Dual Diagnosis Treatment"
         description="Integrated treatment for co-occurring mental health conditions and substance use disorders, addressing both simultaneously for lasting recovery."
@@ -64,10 +72,11 @@ export default function DualDiagnosisPage() {
         conditions={["Depression", "Anxiety", "PTSD", "Bipolar Disorder", "Borderline Personality Disorder", "ADHD", "Alcohol Use Disorder", "Opioid Addiction"]}
       />
       <Navigation />
+      <Breadcrumb items={getBreadcrumbsFromPathname("/treatments/dual-diagnosis")} />
       <PageHero
         eyebrow="Treatment Approach"
         title="Dual Diagnosis Treatment"
-        description="When mental health and addiction collide, treating one without the other is a recipe for relapse. We treat both — together."
+        description="When mental health and addiction collide, treating one without the other is a recipe for relapse. We treat both, together."
         bgImage="/images/general/DRC-Treatment-Therapies-BG-Fade.jpg"
       />
 
@@ -116,13 +125,13 @@ export default function DualDiagnosisPage() {
               Two Conditions. One Integrated Treatment.
             </h2>
             <p className="text-gray-600 leading-relaxed mb-4">
-              Nearly half of all individuals with a substance use disorder also have a co-occurring mental health condition. Depression fuels drinking. Trauma drives opioid use. Anxiety triggers benzodiazepine dependence. These conditions don&apos;t exist in isolation — and they can&apos;t be treated that way.
+              Nearly half of all individuals with a substance use disorder also have a co-occurring mental health condition. Depression fuels drinking. Trauma drives opioid use. Anxiety triggers benzodiazepine dependence. These conditions don&apos;t exist in isolation, and they can&apos;t be treated that way.
             </p>
             <p className="text-gray-600 leading-relaxed mb-4">
               Dual diagnosis treatment at Desert Recovery Centers is not an add-on. It is our foundation. Every client receives a comprehensive psychiatric evaluation within the first 72 hours, and every treatment plan is designed to address the full clinical picture from day one.
             </p>
             <p className="text-gray-600 leading-relaxed">
-              Our clinical psychologists, psychiatrist, and medical team collaborate daily to ensure that medication management, therapy protocols, and holistic programming work in concert — not at cross-purposes.
+              Our clinical psychologists, psychiatrist, and medical team collaborate daily to ensure that medication management, therapy protocols, and holistic programming work in concert, not at cross-purposes.
             </p>
           </motion.div>
         </div>
@@ -236,7 +245,7 @@ export default function DualDiagnosisPage() {
               One Call. Both Conditions. Real Answers.
             </h2>
             <p className="text-gray-600 leading-relaxed mb-8">
-              Our admissions team conducts a free, confidential clinical pre-assessment that evaluates both mental health and substance use concerns. You&apos;ll know within one call whether dual diagnosis treatment is right for you — and what your insurance will cover.
+              Our admissions team conducts a free, confidential clinical pre-assessment that evaluates both mental health and substance use concerns. You&apos;ll know within one call whether dual diagnosis treatment is right for you, and what your insurance will cover.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <a href="tel:+14809313617" className="bg-gold hover:bg-gold-dark text-white font-semibold text-sm px-6 py-3 rounded-xl transition-colors cursor-pointer">
@@ -276,7 +285,7 @@ export default function DualDiagnosisPage() {
             </article>
             <article className="border-l-2 border-gold/30 pl-5">
               <h3 className="text-forest font-semibold text-sm mb-1">How does dual diagnosis treatment work for addiction and mental health?</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">Dual diagnosis treatment works by addressing both conditions as interconnected rather than separate problems. A unified treatment plan combines psychiatric medication management, evidence-based therapies like CBT, DBT, and EMDR, and holistic support — all coordinated by the same clinical team to ensure treatments work in concert rather than at cross-purposes.</p>
+              <p className="text-gray-600 text-sm leading-relaxed">Dual diagnosis treatment works by addressing both conditions as interconnected rather than separate problems. A unified treatment plan combines psychiatric medication management, evidence-based therapies like CBT, DBT, and EMDR, and holistic support, all coordinated by the same clinical team to ensure treatments work in concert rather than at cross-purposes.</p>
             </article>
             <article className="border-l-2 border-gold/30 pl-5">
               <h3 className="text-forest font-semibold text-sm mb-1">Who delivers dual diagnosis treatment at Desert Recovery Centers?</h3>
@@ -286,8 +295,10 @@ export default function DualDiagnosisPage() {
         </div>
       </section>
 
+      <FAQSection faqs={faqData["dual-diagnosis-treatment"]} />
       <CTASection />
       <Footer />
+      <Citations />
     </>
   );
 }

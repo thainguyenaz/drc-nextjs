@@ -8,11 +8,20 @@ import { InlineFAQSchema, MedicalConditionSchema } from "@/lib/seo";
 import AEOBlock from "@/components/AEOBlock";
 import RelatedPages from "@/components/RelatedPages";
 import ConditionFAQ from "@/components/ConditionFAQ";
+import { getPageMeta } from "@/data/page-metadata";
+
+const meta = getPageMeta("/addiction/gambling-addiction-treatment/");
 
 export const metadata: Metadata = {
-  title: "Gambling Addiction Treatment — Desert Recovery Centers",
-  description:
-    "Gambling addiction treatment in Arizona. Evidence-based therapy for compulsive gambling, financial recovery support, and dual diagnosis care.",
+  title: meta.title,
+  description: meta.description,
+  alternates: { canonical: meta.canonical },
+  openGraph: {
+    title: meta.title,
+    description: meta.description,
+    url: meta.canonical,
+    images: [{ url: meta.ogImage ?? "https://desertrecoverycenters.com/wp-content/uploads/2024/10/DRC-DRONE-SCOTTSDALE-08-01-2024-August-01-202400020-2.jpg", alt: meta.title }],
+  },
 };
 
 const faqs = [
@@ -59,17 +68,17 @@ export default function GamblingAddictionPage() {
         <div className="max-w-container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
             <p className="text-gray-600 leading-relaxed text-lg">
-              You keep telling yourself you&apos;ll stop after one more win — the one that will make everything even. But it never comes, or when it does, it&apos;s never enough. The debt is mounting. You&apos;re hiding bank statements, borrowing money with lies about what it&apos;s for, chasing losses that only create bigger ones. The shame keeps you silent, and the secrecy keeps you stuck. You&apos;re not chasing money anymore — you&apos;re chasing the feeling. And that feeling has taken everything from you.
+              You keep telling yourself you&apos;ll stop after one more win, the one that will make everything even. But it never comes, or when it does, it&apos;s never enough. The debt is mounting. You&apos;re hiding bank statements, borrowing money with lies about what it&apos;s for, chasing losses that only create bigger ones. The shame keeps you silent, and the secrecy keeps you stuck. You&apos;re not chasing money anymore, you&apos;re chasing the feeling. And that feeling has taken everything from you.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg mt-4">
-              At Desert Recovery Centers, we treat gambling addiction as the behavioral health condition it is — one that activates the same reward pathways in the brain as substance use disorders. Our clinical team provides structured, evidence-based treatment to help you break the cycle.
+              At Desert Recovery Centers, we treat gambling addiction as the behavioral health condition it is, one that activates the same reward pathways in the brain as substance use disorders. Our clinical team provides structured, evidence-based treatment to help you break the cycle.
             </p>
 
             <h2 className="font-display text-2xl text-forest font-semibold mt-10 mb-4">
               Understanding Gambling Addiction
             </h2>
             <p className="text-gray-600 leading-relaxed">
-              Gambling disorder is classified as a behavioral addiction in the DSM-5. Like substance addictions, compulsive gambling hijacks the brain&apos;s reward system — the anticipation of a win triggers dopamine surges that mirror the effects of drugs. Over time, you need higher stakes or more frequent gambling to achieve the same rush. The &ldquo;near miss&rdquo; effect keeps you playing long past the point of reason, and the cycle of winning, losing, and chasing losses becomes compulsive. Online gambling, sports betting apps, and 24/7 casino access have made this condition more widespread and harder to escape than ever.
+              Gambling disorder is classified as a behavioral addiction in the DSM-5. Like substance addictions, compulsive gambling hijacks the brain&apos;s reward system, the anticipation of a win triggers dopamine surges that mirror the effects of drugs. Over time, you need higher stakes or more frequent gambling to achieve the same rush. The &ldquo;near miss&rdquo; effect keeps you playing long past the point of reason, and the cycle of winning, losing, and chasing losses becomes compulsive. Online gambling, sports betting apps, and 24/7 casino access have made this condition more widespread and harder to escape than ever.
             </p>
 
             <h2 className="font-display text-2xl text-forest font-semibold mt-10 mb-4">
@@ -78,7 +87,7 @@ export default function GamblingAddictionPage() {
             <ul className="space-y-3 text-gray-600 leading-relaxed">
               <li className="flex items-start gap-3">
                 <span className="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0" />
-                Gambling with money you can&apos;t afford to lose — rent, savings, borrowed funds
+                Gambling with money you can&apos;t afford to lose, rent, savings, borrowed funds
               </li>
               <li className="flex items-start gap-3">
                 <span className="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0" />
@@ -109,7 +118,7 @@ export default function GamblingAddictionPage() {
               {[
                 {
                   title: "Cognitive Behavioral Therapy (CBT)",
-                  desc: "CBT addresses the distorted thinking patterns — irrational beliefs about luck, control, and probability — that fuel compulsive gambling. You learn to recognize and interrupt the urge cycle.",
+                  desc: "CBT addresses the distorted thinking patterns, irrational beliefs about luck, control, and probability, that fuel compulsive gambling. You learn to recognize and interrupt the urge cycle.",
                 },
                 {
                   title: "Dual Diagnosis Treatment",
@@ -117,7 +126,7 @@ export default function GamblingAddictionPage() {
                 },
                 {
                   title: "Financial Recovery Support",
-                  desc: "Practical guidance on managing debt, rebuilding financial stability, and establishing healthy money behaviors — an essential part of gambling recovery that many programs overlook.",
+                  desc: "Practical guidance on managing debt, rebuilding financial stability, and establishing healthy money behaviors, an essential part of gambling recovery that many programs overlook.",
                 },
                 {
                   title: "Group Therapy & Peer Support",
@@ -142,7 +151,7 @@ export default function GamblingAddictionPage() {
               What Recovery Looks Like Here
             </h2>
             <p className="text-gray-600 leading-relaxed">
-              Gambling recovery is about more than stopping the behavior — it&apos;s about understanding what drove it. Whether gambling was an escape from stress, a response to boredom, or a symptom of an underlying condition, your treatment plan addresses the root cause. Our residential and outpatient programs give you the time, structure, and clinical support to rebuild your life, your finances, and your relationships on a healthier foundation.
+              Gambling recovery is about more than stopping the behavior, it&apos;s about understanding what drove it. Whether gambling was an escape from stress, a response to boredom, or a symptom of an underlying condition, your treatment plan addresses the root cause. Our residential and outpatient programs give you the time, structure, and clinical support to rebuild your life, your finances, and your relationships on a healthier foundation.
             </p>
             <p className="text-gray-600 leading-relaxed mt-4">
               We accept most major insurance plans. Coverage varies by plan. Contact us to verify your benefits.

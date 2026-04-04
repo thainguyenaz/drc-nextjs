@@ -17,7 +17,8 @@ export const siteData = {
         "Our flagship residential treatment center offering comprehensive mental health and addiction programs in a luxury home-like setting.",
       programs: ["Residential", "PHP", "IOP", "OP", "Detox"],
       amenities: ["Basketball Court", "Tennis Court", "Pool", "Gym", "Billiards", "Massage Room"],
-      image: "/images/glendale/Gelndale-Front-1.jpg",
+      image: "/images/glendale/Glendale-Front.jpg",
+      sameAs: ["https://www.yelp.com/biz/desert-recovery-centers-glendale"],
     },
     {
       name: "Scottsdale",
@@ -29,6 +30,7 @@ export const siteData = {
       programs: ["Residential", "PHP", "IOP", "OP"],
       amenities: ["Pool", "Tennis Court", "Basketball Court", "Gym", "Massage Room", "Mountain Views"],
       image: "/images/scottsdale/DRC-FRONT-ENTRANCE-NORTH-SCOTTSDALE-08-01-2024-1210August-01-202400002-2.jpg",
+      sameAs: [] as string[],
     },
     {
       name: "Phoenix PHP/IOP",
@@ -40,6 +42,7 @@ export const siteData = {
       programs: ["PHP", "IOP", "OP", "TMS"],
       amenities: ["Treatment Rooms", "Group Therapy Space"],
       image: "/images/general/accom-group-room.jpg",
+      sameAs: [] as string[],
     },
     {
       name: "Phoenix TMS",
@@ -51,6 +54,7 @@ export const siteData = {
       programs: ["TMS Therapy"],
       amenities: ["NeuroStar TMS Suite"],
       image: "/images/general/DRC-TREATMENTS.jpg",
+      sameAs: [] as string[],
     },
     {
       name: "Phoenix PHP Living",
@@ -62,6 +66,7 @@ export const siteData = {
       programs: ["PHP Living", "Sober Living"],
       amenities: ["Pool with Waterfall", "Gym", "Massage Room"],
       image: "/images/general/accom-backyard.jpg",
+      sameAs: [] as string[],
     },
   ],
   team: {
@@ -115,7 +120,7 @@ export const siteData = {
     },
     {
       name: "Eddy",
-      text: "The facilities are like none other — from the wonderful food to all the activities. All the staff were truly caring individuals. If you are struggling with addiction, this would be the rehab I would recommend to anyone.",
+      text: "The facilities are like none other, from the wonderful food to all the activities. All the staff were truly caring individuals. If you are struggling with addiction, this would be the rehab I would recommend to anyone.",
     },
   ],
   faqs: [
@@ -129,7 +134,7 @@ export const siteData = {
     },
     {
       q: "Do you treat both mental health and addiction?",
-      a: "Yes. Desert Recovery Centers specializes in dual diagnosis treatment — addressing mental health conditions and substance use disorders simultaneously. Research shows that treating both conditions together leads to significantly better long-term outcomes.",
+      a: "Yes. Desert Recovery Centers specializes in dual diagnosis treatment, addressing mental health conditions and substance use disorders simultaneously. Research shows that treating both conditions together leads to significantly better long-term outcomes.",
     },
     {
       q: "What does a typical day look like in residential treatment?",
@@ -149,7 +154,7 @@ export const siteData = {
     },
     {
       q: "How do I know if I need residential vs. outpatient treatment?",
-      a: "The right level of care depends on the severity of your condition, your home environment, previous treatment history, and daily responsibilities. During your free clinical assessment, our admissions team will recommend the best level of care — no pressure, no obligation.",
+      a: "The right level of care depends on the severity of your condition, your home environment, previous treatment history, and daily responsibilities. During your free clinical assessment, our admissions team will recommend the best level of care, no pressure, no obligation.",
     },
   ],
 } as const;

@@ -7,11 +7,27 @@ import Footer from "@/components/Footer";
 import { InlineFAQSchema, SpeakableSchema, MedicalConditionSchema } from "@/lib/seo";
 import AEOBlock from "@/components/AEOBlock";
 import RelatedPages from "@/components/RelatedPages";
+import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
+import { faqData } from "@/data/faq-data";
+import SchemaScript from "@/components/SchemaScript";
+import FAQSection from "@/components/FAQSection";
+import Breadcrumb from "@/components/Breadcrumb";
+import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
+import Citations from "@/components/Citations";
+import { getPageMeta } from "@/data/page-metadata";
+
+const meta = getPageMeta("/mental-health/depression-treatment/");
 
 export const metadata: Metadata = {
-  title: "Depression Treatment in Arizona — Desert Recovery Centers",
-  description:
-    "Comprehensive depression treatment for major depressive disorder, persistent depression, and co-occurring conditions. Residential and outpatient programs in Arizona.",
+  title: meta.title,
+  description: meta.description,
+  alternates: { canonical: meta.canonical },
+  openGraph: {
+    title: meta.title,
+    description: meta.description,
+    url: meta.canonical,
+    images: [{ url: meta.ogImage ?? "https://desertrecoverycenters.com/wp-content/uploads/2024/10/DRC-DRONE-SCOTTSDALE-08-01-2024-August-01-202400020-2.jpg", alt: meta.title }],
+  },
 };
 
 const faqs = [
@@ -25,11 +41,11 @@ const faqs = [
   },
   {
     q: "How is depression treatment different at DRC compared to outpatient therapy?",
-    a: "In our residential program, you're fully immersed in your recovery — receiving daily individual therapy, group sessions, psychiatric care, and holistic treatments in a structured, supportive environment. This level of intensity can accomplish in weeks what might take months or years in weekly outpatient sessions, especially for moderate to severe depression.",
+    a: "In our residential program, you're fully immersed in your recovery, receiving daily individual therapy, group sessions, psychiatric care, and holistic treatments in a structured, supportive environment. This level of intensity can accomplish in weeks what might take months or years in weekly outpatient sessions, especially for moderate to severe depression.",
   },
   {
     q: "Will I need medication for depression?",
-    a: "Not necessarily. While many clients benefit from antidepressant medication — especially during the early phase of treatment — our approach is always individualized. Our psychiatrists conduct thorough evaluations and discuss all options with you. Some clients respond well to therapy alone, while others find that a combination of medication and therapy produces the best results.",
+    a: "Not necessarily. While many clients benefit from antidepressant medication, especially during the early phase of treatment, our approach is always individualized. Our psychiatrists conduct thorough evaluations and discuss all options with you. Some clients respond well to therapy alone, while others find that a combination of medication and therapy produces the best results.",
   },
   {
     q: "What happens if my depression returns after treatment?",
@@ -40,6 +56,7 @@ const faqs = [
 export default function DepressionTreatmentPage() {
   return (
     <>
+      <SchemaScript schema={[getFAQSchema(faqData["depression-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/mental-health/depression-treatment"))]} />
       <InlineFAQSchema items={faqs} />
       <SpeakableSchema url="/mental-health/depression-treatment" cssSelectors={["[data-speakable]"]} />
       <MedicalConditionSchema
@@ -49,6 +66,7 @@ export default function DepressionTreatmentPage() {
         possibleTreatments={["Cognitive Behavioral Therapy", "Medication Management", "EMDR", "Behavioral Activation", "Interpersonal Therapy"]}
       />
       <Navigation />
+      <Breadcrumb items={getBreadcrumbsFromPathname("/mental-health/depression-treatment")} />
       <PageHero
         eyebrow="Mental Health Treatment"
         title="Depression Treatment"
@@ -73,13 +91,13 @@ export default function DepressionTreatmentPage() {
               When the Weight Becomes Too Much to Carry
             </h2>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              Depression doesn&apos;t always look like sadness. Sometimes it looks like numbness — a flat, gray emptiness where feelings used to be. Sometimes it looks like exhaustion so deep that even small tasks feel impossible. Sometimes it looks like going through the motions while feeling completely disconnected from the life you&apos;re living.
+              Depression doesn&apos;t always look like sadness. Sometimes it looks like numbness, a flat, gray emptiness where feelings used to be. Sometimes it looks like exhaustion so deep that even small tasks feel impossible. Sometimes it looks like going through the motions while feeling completely disconnected from the life you&apos;re living.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
               You may have tried to push through it. Told yourself it would pass. Maybe others have told you to &quot;think positive&quot; or &quot;just exercise more.&quot; And maybe you&apos;ve started to wonder if this heaviness is just who you are now.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg">
-              It&apos;s not. Depression is a medical condition — one that changes your brain chemistry, your energy, your ability to experience joy. And with the right treatment, it responds. At Desert Recovery Centers, we&apos;ve watched hundreds of people who felt exactly the way you do right now walk out of our program feeling genuinely, durably better. That possibility exists for you too.
+              It&apos;s not. Depression is a medical condition, one that changes your brain chemistry, your energy, your ability to experience joy. And with the right treatment, it responds. At Desert Recovery Centers, we&apos;ve watched hundreds of people who felt exactly the way you do right now walk out of our program feeling genuinely, durably better. That possibility exists for you too.
             </p>
           </div>
         </div>
@@ -96,7 +114,7 @@ export default function DepressionTreatmentPage() {
               Symptoms of Depression
             </h2>
             <p className="text-gray-600 leading-relaxed mb-6">
-              Depression affects every part of your life — mind, body, and spirit. Common symptoms include:
+              Depression affects every part of your life, mind, body, and spirit. Common symptoms include:
             </p>
             <div className="grid md:grid-cols-2 gap-4">
               {[
@@ -104,8 +122,8 @@ export default function DepressionTreatmentPage() {
                 "Loss of interest or pleasure in activities you once enjoyed",
                 "Fatigue and low energy, even after adequate sleep",
                 "Difficulty concentrating, making decisions, or remembering things",
-                "Changes in appetite — eating significantly more or less than usual",
-                "Sleep disturbances — insomnia or sleeping excessively",
+                "Changes in appetite, eating significantly more or less than usual",
+                "Sleep disturbances, insomnia or sleeping excessively",
                 "Feelings of worthlessness, guilt, or self-blame",
                 "Thoughts of death, self-harm, or suicide",
               ].map((symptom, i) => (
@@ -144,15 +162,15 @@ export default function DepressionTreatmentPage() {
               {[
                 {
                   title: "Comprehensive Psychiatric Evaluation",
-                  desc: "Every client receives a thorough assessment by our psychiatric team to understand the biological, psychological, and social factors contributing to your depression — ensuring your treatment plan targets the actual drivers of your condition.",
+                  desc: "Every client receives a thorough assessment by our psychiatric team to understand the biological, psychological, and social factors contributing to your depression, ensuring your treatment plan targets the actual drivers of your condition.",
                 },
                 {
                   title: "Individual & Group Psychotherapy",
-                  desc: "Daily individual sessions with licensed psychologists, plus structured group therapy using CBT, behavioral activation, and interpersonal therapy — proven approaches that help you understand your depression and build the skills to move beyond it.",
+                  desc: "Daily individual sessions with licensed psychologists, plus structured group therapy using CBT, behavioral activation, and interpersonal therapy, proven approaches that help you understand your depression and build the skills to move beyond it.",
                 },
                 {
                   title: "Medication Optimization",
-                  desc: "Our psychiatrists specialize in finding the right medication at the right dose — and monitoring your response closely. For clients with treatment-resistant depression, we explore advanced options to find what works.",
+                  desc: "Our psychiatrists specialize in finding the right medication at the right dose, and monitoring your response closely. For clients with treatment-resistant depression, we explore advanced options to find what works.",
                 },
                 {
                   title: "Trauma-Informed Care",
@@ -160,7 +178,7 @@ export default function DepressionTreatmentPage() {
                 },
                 {
                   title: "Body-Based & Holistic Healing",
-                  desc: "Exercise programming, yoga, mindfulness meditation, nutritional counseling, and art therapy — because healing the body and engaging the spirit are essential parts of lifting depression.",
+                  desc: "Exercise programming, yoga, mindfulness meditation, nutritional counseling, and art therapy, because healing the body and engaging the spirit are essential parts of lifting depression.",
                 },
               ].map((item, i) => (
                 <div key={i} className="border-l-2 border-gold/40 pl-6">
@@ -189,7 +207,7 @@ export default function DepressionTreatmentPage() {
               {[
                 {
                   title: "Dual Diagnosis Specialists",
-                  desc: "Depression and substance use fuel each other in a devastating cycle. Our integrated approach treats both simultaneously — because treating one without the other is treating neither.",
+                  desc: "Depression and substance use fuel each other in a devastating cycle. Our integrated approach treats both simultaneously, because treating one without the other is treating neither.",
                 },
                 {
                   title: "Doctor-Led Clinical Teams",
@@ -197,7 +215,7 @@ export default function DepressionTreatmentPage() {
                 },
                 {
                   title: "A Healing Environment",
-                  desc: "Depression thrives in isolation and monotony. Our luxury Arizona facilities surround you with warmth, natural beauty, and meaningful daily structure — creating conditions where healing happens naturally.",
+                  desc: "Depression thrives in isolation and monotony. Our luxury Arizona facilities surround you with warmth, natural beauty, and meaningful daily structure, creating conditions where healing happens naturally.",
                 },
                 {
                   title: "Connection & Community",
@@ -205,7 +223,7 @@ export default function DepressionTreatmentPage() {
                 },
                 {
                   title: "Outcomes-Focused",
-                  desc: "We measure progress with validated clinical instruments and adjust your plan accordingly. You'll see tangible improvement — not vague reassurances — throughout your treatment.",
+                  desc: "We measure progress with validated clinical instruments and adjust your plan accordingly. You'll see tangible improvement, not vague reassurances, throughout your treatment.",
                 },
               ].map((item, i) => (
                 <div
@@ -232,8 +250,10 @@ export default function DepressionTreatmentPage() {
         ]}
       />
       <RelatedPages currentPath="/mental-health/depression-treatment" />
+      <FAQSection faqs={faqData["depression-treatment"]} />
       <CTASection />
       <Footer />
+      <Citations />
     </>
   );
 }

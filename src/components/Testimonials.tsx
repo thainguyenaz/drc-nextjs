@@ -43,7 +43,7 @@ export default function Testimonials() {
                 &ldquo;{t.text}&rdquo;
               </p>
               <footer className="text-gold font-semibold text-sm">
-                — {t.name}
+                {t.name}
               </footer>
             </motion.blockquote>
           ))}

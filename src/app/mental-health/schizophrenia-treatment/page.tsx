@@ -7,11 +7,20 @@ import Footer from "@/components/Footer";
 import { InlineFAQSchema, SpeakableSchema, MedicalConditionSchema } from "@/lib/seo";
 import AEOBlock from "@/components/AEOBlock";
 import RelatedPages from "@/components/RelatedPages";
+import { getPageMeta } from "@/data/page-metadata";
+
+const meta = getPageMeta("/mental-health/schizophrenia-treatment/");
 
 export const metadata: Metadata = {
-  title: "Schizophrenia Treatment in Arizona — Desert Recovery Centers",
-  description:
-    "Integrated psychiatric care and therapeutic support for schizophrenia spectrum disorders. Residential treatment programs in Arizona.",
+  title: meta.title,
+  description: meta.description,
+  alternates: { canonical: meta.canonical },
+  openGraph: {
+    title: meta.title,
+    description: meta.description,
+    url: meta.canonical,
+    images: [{ url: meta.ogImage ?? "https://desertrecoverycenters.com/wp-content/uploads/2024/10/DRC-DRONE-SCOTTSDALE-08-01-2024-August-01-202400020-2.jpg", alt: meta.title }],
+  },
 };
 
 const faqs = [
@@ -21,7 +30,7 @@ const faqs = [
   },
   {
     q: "Is schizophrenia dangerous?",
-    a: "This is one of the most harmful myths about schizophrenia. People with schizophrenia are far more likely to be victims of violence than perpetrators. The condition is a medical disorder — not a personality trait or moral failing. The vast majority of people with schizophrenia are not violent. With proper treatment and support, people with schizophrenia live safely and productively in their communities.",
+    a: "This is one of the most harmful myths about schizophrenia. People with schizophrenia are far more likely to be victims of violence than perpetrators. The condition is a medical disorder, not a personality trait or moral failing. The vast majority of people with schizophrenia are not violent. With proper treatment and support, people with schizophrenia live safely and productively in their communities.",
   },
   {
     q: "How important is medication in schizophrenia treatment?",
@@ -29,11 +38,11 @@ const faqs = [
   },
   {
     q: "Can someone with schizophrenia live independently?",
-    a: "Many people with well-managed schizophrenia live independently, hold jobs, maintain relationships, and pursue their goals. The key is consistent treatment — particularly medication adherence — combined with ongoing support. Our program prepares you with the skills, medication stability, and support connections needed for the most independent life possible.",
+    a: "Many people with well-managed schizophrenia live independently, hold jobs, maintain relationships, and pursue their goals. The key is consistent treatment, particularly medication adherence, combined with ongoing support. Our program prepares you with the skills, medication stability, and support connections needed for the most independent life possible.",
   },
   {
     q: "Do you treat schizoaffective disorder as well?",
-    a: "Yes. Schizoaffective disorder — which combines symptoms of schizophrenia with a mood disorder (depression or bipolar disorder) — is within our clinical expertise. Treatment follows a similar integrated approach, with particular attention to managing both the psychotic and mood components of the condition.",
+    a: "Yes. Schizoaffective disorder, which combines symptoms of schizophrenia with a mood disorder (depression or bipolar disorder), is within our clinical expertise. Treatment follows a similar integrated approach, with particular attention to managing both the psychotic and mood components of the condition.",
   },
 ];
 
@@ -73,10 +82,10 @@ export default function SchizophreniaTreatmentPage() {
               When Reality Feels Unreliable
             </h2>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              Schizophrenia is one of the most misunderstood conditions in all of medicine. The media portrays it as something to fear. Society stigmatizes it. And too often, the people living with it — and the families who love them — are left feeling isolated, hopeless, and unsure where to turn.
+              Schizophrenia is one of the most misunderstood conditions in all of medicine. The media portrays it as something to fear. Society stigmatizes it. And too often, the people living with it, and the families who love them, are left feeling isolated, hopeless, and unsure where to turn.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              If you or someone you love is experiencing symptoms of schizophrenia — hearing voices, holding beliefs that others don&apos;t share, struggling to organize thoughts, withdrawing from life — know this: schizophrenia is a treatable medical condition. Not a life sentence. Not a lost cause. A condition that responds to expert psychiatric care.
+              If you or someone you love is experiencing symptoms of schizophrenia, hearing voices, holding beliefs that others don&apos;t share, struggling to organize thoughts, withdrawing from life, know this: schizophrenia is a treatable medical condition. Not a life sentence. Not a lost cause. A condition that responds to expert psychiatric care.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg">
               At Desert Recovery Centers, our psychiatric team brings deep experience in treating schizophrenia spectrum disorders. We combine medication management with therapeutic support, life skills training, and family education to help stabilize symptoms and build the foundation for a life worth living.
@@ -104,10 +113,10 @@ export default function SchizophreniaTreatmentPage() {
                 <h3 className="font-display text-lg text-forest font-semibold mb-3">Positive Symptoms</h3>
                 <div className="grid md:grid-cols-2 gap-3">
                   {[
-                    "Hallucinations — hearing voices, seeing things, or sensing things others don't",
-                    "Delusions — fixed false beliefs, such as being persecuted, surveilled, or having special powers",
-                    "Disorganized speech — jumping between unrelated topics, incoherent communication",
-                    "Disorganized or unusual behavior — unpredictable agitation, odd postures, catatonia",
+                    "Hallucinations, hearing voices, seeing things, or sensing things others don't",
+                    "Delusions, fixed false beliefs, such as being persecuted, surveilled, or having special powers",
+                    "Disorganized speech, jumping between unrelated topics, incoherent communication",
+                    "Disorganized or unusual behavior, unpredictable agitation, odd postures, catatonia",
                   ].map((s, i) => (
                     <div key={i} className="flex items-start gap-3 bg-white rounded-lg p-4 border border-gray-100">
                       <span className="w-2 h-2 bg-gold rounded-full mt-2 flex-shrink-0" />
@@ -121,10 +130,10 @@ export default function SchizophreniaTreatmentPage() {
                 <h3 className="font-display text-lg text-forest font-semibold mb-3">Negative Symptoms</h3>
                 <div className="grid md:grid-cols-2 gap-3">
                   {[
-                    "Flat affect — reduced emotional expression in face, voice, or gestures",
-                    "Avolition — loss of motivation to initiate or sustain activities",
-                    "Social withdrawal — pulling away from relationships and interactions",
-                    "Anhedonia — inability to experience pleasure from normally enjoyable activities",
+                    "Flat affect, reduced emotional expression in face, voice, or gestures",
+                    "Avolition, loss of motivation to initiate or sustain activities",
+                    "Social withdrawal, pulling away from relationships and interactions",
+                    "Anhedonia, inability to experience pleasure from normally enjoyable activities",
                   ].map((s, i) => (
                     <div key={i} className="flex items-start gap-3 bg-white rounded-lg p-4 border border-gray-100">
                       <span className="w-2 h-2 bg-gold rounded-full mt-2 flex-shrink-0" />
@@ -139,7 +148,7 @@ export default function SchizophreniaTreatmentPage() {
                 <div className="grid md:grid-cols-2 gap-3">
                   {[
                     "Difficulty with attention, concentration, and working memory",
-                    "Impaired executive functioning — trouble planning, organizing, and problem-solving",
+                    "Impaired executive functioning, trouble planning, organizing, and problem-solving",
                     "Slowed processing speed affecting daily tasks and communication",
                     "Difficulty understanding and using information to make decisions",
                   ].map((s, i) => (
@@ -172,7 +181,7 @@ export default function SchizophreniaTreatmentPage() {
               {[
                 {
                   title: "Psychiatric Assessment & Medication Management",
-                  desc: "Our board-certified psychiatrists conduct comprehensive evaluations and develop individualized medication protocols using antipsychotic medications. We monitor your response meticulously — adjusting type, dosage, and combinations to achieve optimal symptom control with minimal side effects.",
+                  desc: "Our board-certified psychiatrists conduct comprehensive evaluations and develop individualized medication protocols using antipsychotic medications. We monitor your response meticulously, adjusting type, dosage, and combinations to achieve optimal symptom control with minimal side effects.",
                 },
                 {
                   title: "Cognitive Behavioral Therapy for Psychosis (CBTp)",
@@ -180,7 +189,7 @@ export default function SchizophreniaTreatmentPage() {
                 },
                 {
                   title: "Social Skills & Life Skills Training",
-                  desc: "Schizophrenia can erode social confidence and daily living skills. Our structured programming rebuilds these competencies — communication, self-care, household management, vocational readiness — restoring your ability to function independently.",
+                  desc: "Schizophrenia can erode social confidence and daily living skills. Our structured programming rebuilds these competencies, communication, self-care, household management, vocational readiness, restoring your ability to function independently.",
                 },
                 {
                   title: "Family Psychoeducation",
@@ -188,7 +197,7 @@ export default function SchizophreniaTreatmentPage() {
                 },
                 {
                   title: "Dual Diagnosis Integration",
-                  desc: "Substance use disorders affect nearly half of people with schizophrenia and dramatically worsen outcomes. Our integrated approach treats both conditions simultaneously — stabilizing psychotic symptoms while addressing the substance use that can trigger relapse.",
+                  desc: "Substance use disorders affect nearly half of people with schizophrenia and dramatically worsen outcomes. Our integrated approach treats both conditions simultaneously, stabilizing psychotic symptoms while addressing the substance use that can trigger relapse.",
                 },
               ].map((item, i) => (
                 <div key={i} className="border-l-2 border-gold/40 pl-6">
@@ -217,7 +226,7 @@ export default function SchizophreniaTreatmentPage() {
               {[
                 {
                   title: "Experienced Psychiatric Team",
-                  desc: "Our psychiatrists and psychologists have specific experience treating schizophrenia spectrum disorders — understanding the nuances of medication management, the importance of therapeutic rapport, and the patience this condition requires.",
+                  desc: "Our psychiatrists and psychologists have specific experience treating schizophrenia spectrum disorders, understanding the nuances of medication management, the importance of therapeutic rapport, and the patience this condition requires.",
                 },
                 {
                   title: "Structured, Stable Environment",
@@ -225,7 +234,7 @@ export default function SchizophreniaTreatmentPage() {
                 },
                 {
                   title: "Dignity & Respect",
-                  desc: "Schizophrenia carries enormous stigma. At DRC, you or your loved one will be treated with the same clinical respect and genuine care that we extend to every client — because a diagnosis doesn't diminish a person's worth.",
+                  desc: "Schizophrenia carries enormous stigma. At DRC, you or your loved one will be treated with the same clinical respect and genuine care that we extend to every client, because a diagnosis doesn't diminish a person's worth.",
                 },
                 {
                   title: "Comprehensive Discharge Planning",
@@ -233,7 +242,7 @@ export default function SchizophreniaTreatmentPage() {
                 },
                 {
                   title: "Family as Partners",
-                  desc: "We view family members as essential partners in recovery. Our family education, therapy, and ongoing support help create a home environment that fosters stability and reduces the risk of relapse — because recovery doesn't happen in isolation.",
+                  desc: "We view family members as essential partners in recovery. Our family education, therapy, and ongoing support help create a home environment that fosters stability and reduces the risk of relapse, because recovery doesn't happen in isolation.",
                 },
               ].map((item, i) => (
                 <div

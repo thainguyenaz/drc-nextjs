@@ -8,11 +8,20 @@ import { InlineFAQSchema, MedicalConditionSchema } from "@/lib/seo";
 import AEOBlock from "@/components/AEOBlock";
 import RelatedPages from "@/components/RelatedPages";
 import ConditionFAQ from "@/components/ConditionFAQ";
+import { getPageMeta } from "@/data/page-metadata";
+
+const meta = getPageMeta("/addiction/marijuana-addiction-treatment/");
 
 export const metadata: Metadata = {
-  title: "Marijuana Addiction Treatment — Desert Recovery Centers",
-  description:
-    "Cannabis use disorder treatment in Arizona. Evidence-based therapy for marijuana dependence addressing psychological and behavioral patterns.",
+  title: meta.title,
+  description: meta.description,
+  alternates: { canonical: meta.canonical },
+  openGraph: {
+    title: meta.title,
+    description: meta.description,
+    url: meta.canonical,
+    images: [{ url: meta.ogImage ?? "https://desertrecoverycenters.com/wp-content/uploads/2024/10/DRC-DRONE-SCOTTSDALE-08-01-2024-August-01-202400020-2.jpg", alt: meta.title }],
+  },
 };
 
 const faqs = [
@@ -34,7 +43,7 @@ const faqs = [
   {
     question: "Is marijuana really addictive?",
     answer:
-      "Yes. Cannabis use disorder affects roughly 10% of regular users, according to research. Today's marijuana is significantly more potent than previous decades, with THC concentrations often exceeding 20-30%. Withdrawal symptoms — insomnia, irritability, anxiety, and cravings — are real and keep many people stuck in a cycle of use.",
+      "Yes. Cannabis use disorder affects roughly 10% of regular users, according to research. Today's marijuana is significantly more potent than previous decades, with THC concentrations often exceeding 20-30%. Withdrawal symptoms, insomnia, irritability, anxiety, and cravings, are real and keep many people stuck in a cycle of use.",
   },
 ];
 
@@ -59,7 +68,7 @@ export default function MarijuanaAddictionPage() {
         <div className="max-w-container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
             <p className="text-gray-600 leading-relaxed text-lg">
-              People around you probably say it&apos;s not a big deal. &ldquo;It&apos;s just weed.&rdquo; But you know something they don&apos;t — you can&apos;t stop. You&apos;ve tried cutting back, tried taking breaks, but you keep coming back to it. You smoke before work, before social events, before bed — before everything. Without it, you&apos;re anxious, irritable, unable to sleep. Your motivation has flatlined. You know you&apos;re not living up to your potential, and the gap between where you are and where you want to be gets wider every month.
+              People around you probably say it&apos;s not a big deal. &ldquo;It&apos;s just weed.&rdquo; But you know something they don&apos;t, you can&apos;t stop. You&apos;ve tried cutting back, tried taking breaks, but you keep coming back to it. You smoke before work, before social events, before bed, before everything. Without it, you&apos;re anxious, irritable, unable to sleep. Your motivation has flatlined. You know you&apos;re not living up to your potential, and the gap between where you are and where you want to be gets wider every month.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg mt-4">
               At Desert Recovery Centers, we take cannabis use disorder seriously. While marijuana may carry less physical risk than other substances, the psychological dependence it creates can be deeply disruptive to your life, your relationships, and your mental health.
@@ -69,7 +78,7 @@ export default function MarijuanaAddictionPage() {
               Understanding Cannabis Use Disorder
             </h2>
             <p className="text-gray-600 leading-relaxed">
-              Today&apos;s marijuana is significantly more potent than previous decades, with THC concentrations often exceeding 20&ndash;30% in flower and 80&ndash;90% in concentrates. This increased potency accelerates the development of tolerance and psychological dependence. Cannabis use disorder is recognized by the DSM-5 and affects roughly 10% of regular users. Withdrawal symptoms — insomnia, irritability, decreased appetite, anxiety, and cravings — are real, and they keep many people stuck in a cycle of use.
+              Today&apos;s marijuana is significantly more potent than previous decades, with THC concentrations often exceeding 20&ndash;30% in flower and 80&ndash;90% in concentrates. This increased potency accelerates the development of tolerance and psychological dependence. Cannabis use disorder is recognized by the DSM-5 and affects roughly 10% of regular users. Withdrawal symptoms, insomnia, irritability, decreased appetite, anxiety, and cravings, are real, and they keep many people stuck in a cycle of use.
             </p>
 
             <h2 className="font-display text-2xl text-forest font-semibold mt-10 mb-4">
@@ -121,7 +130,7 @@ export default function MarijuanaAddictionPage() {
                 },
                 {
                   title: "Life Skills & Wellness",
-                  desc: "Rebuilding healthy sleep patterns, stress management, physical fitness, and social engagement — the skills that replace what cannabis was doing for you.",
+                  desc: "Rebuilding healthy sleep patterns, stress management, physical fitness, and social engagement, the skills that replace what cannabis was doing for you.",
                 },
               ].map((item) => (
                 <div
@@ -142,7 +151,7 @@ export default function MarijuanaAddictionPage() {
               What Recovery Looks Like Here
             </h2>
             <p className="text-gray-600 leading-relaxed">
-              Recovery from marijuana addiction is about rediscovering clarity, motivation, and emotional regulation without relying on a substance. Your treatment plan may include residential care for a full reset, or PHP and IOP if you need flexibility while making changes. Our therapists help you uncover what was driving the use — and give you real tools to handle life without reaching for cannabis.
+              Recovery from marijuana addiction is about rediscovering clarity, motivation, and emotional regulation without relying on a substance. Your treatment plan may include residential care for a full reset, or PHP and IOP if you need flexibility while making changes. Our therapists help you uncover what was driving the use, and give you real tools to handle life without reaching for cannabis.
             </p>
             <p className="text-gray-600 leading-relaxed mt-4">
               We accept most major insurance plans. Coverage varies by plan. Contact us to verify your benefits.

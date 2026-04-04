@@ -8,16 +8,30 @@ import VideoLightbox from "@/components/VideoLightbox";
 import ConditionFAQ from "@/components/ConditionFAQ";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { buildMetadata, LocalBusinessSchema, BreadcrumbSchema, InlineFAQSchema, SpeakableSchema } from "@/lib/seo";
+import { LocalBusinessSchema, BreadcrumbSchema, InlineFAQSchema, SpeakableSchema, VideoSchemas } from "@/lib/seo";
 import AEOBlock from "@/components/AEOBlock";
 import PhotoGallery from "@/components/PhotoGallery";
+import { getPageMeta } from "@/data/page-metadata";
+import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
+import { faqData } from "@/data/faq-data";
+import SchemaScript from "@/components/SchemaScript";
+import FAQSection from "@/components/FAQSection";
+import Breadcrumb from "@/components/Breadcrumb";
+import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
 
-export const metadata: Metadata = buildMetadata({
-  title: "Luxury Rehab in Glendale, AZ",
-  description:
-    "Luxury rehab & addiction treatment in Glendale, Arizona. Our flagship 7,500 sq ft facility. Call (623) 323-1012 today.",
-  path: "/locations/glendale",
-});
+const meta = getPageMeta("/locations/glendale/");
+
+export const metadata: Metadata = {
+  title: meta.title,
+  description: meta.description,
+  alternates: { canonical: meta.canonical },
+  openGraph: {
+    title: meta.title,
+    description: meta.description,
+    url: meta.canonical,
+    images: [{ url: meta.ogImage ?? "https://desertrecoverycenters.com/wp-content/uploads/2024/10/DRC-DRONE-SCOTTSDALE-08-01-2024-August-01-202400020-2.jpg", alt: meta.title }],
+  },
+};
 
 const amenities = [
   "Basketball Court",
@@ -35,7 +49,7 @@ const amenities = [
 ];
 
 const gallery = [
-  { src: "/images/glendale/Gelndale-Front-1.jpg", alt: "Glendale facility front entrance" },
+  { src: "/images/glendale/Glendale-Front.jpg", alt: "Glendale facility front entrance" },
   { src: "/images/glendale/Glendale-Living-Room.jpg", alt: "Glendale luxury living room" },
   { src: "/images/glendale/Glendale-Pool.jpg", alt: "Glendale pool area" },
   { src: "/images/glendale/Glendale-Gym.jpg", alt: "Glendale state-of-the-art gym" },
@@ -56,7 +70,7 @@ const faqs = [
   },
   {
     q: "Why is Glendale considered your flagship facility?",
-    a: "Our Glendale location was our first center and remains our largest at 7,500 square feet. It offers the widest range of amenities — basketball court, tennis court, pool, gym, billiards, and massage room — and the full continuum of care: residential treatment, PHP, and IOP.",
+    a: "Our Glendale location was our first center and remains our largest at 7,500 square feet. It offers the widest range of amenities, basketball court, tennis court, pool, gym, billiards, and massage room, and the full continuum of care: residential treatment, PHP, and IOP.",
   },
   {
     q: "What programs are available at the Glendale location?",
@@ -64,11 +78,11 @@ const faqs = [
   },
   {
     q: "What conditions do you treat at the Glendale center?",
-    a: "We treat the full spectrum of substance use disorders — alcohol, opioids, fentanyl, cocaine, meth, prescription drugs — and mental health conditions including anxiety, depression, PTSD, bipolar disorder, OCD, personality disorders, ADHD, and schizophrenia. Our dual diagnosis approach treats co-occurring conditions simultaneously.",
+    a: "We treat the full spectrum of substance use disorders, alcohol, opioids, fentanyl, cocaine, meth, prescription drugs, and mental health conditions including anxiety, depression, PTSD, bipolar disorder, OCD, personality disorders, ADHD, and schizophrenia. Our dual diagnosis approach treats co-occurring conditions simultaneously.",
   },
   {
     q: "Do you accept insurance at the Glendale location?",
-    a: "Yes, we are in-network with most major insurance providers including Aetna, Blue Cross Blue Shield, Cigna, and UnitedHealthcare. Coverage varies by plan. Contact us to verify your benefits — our admissions team handles verification at no cost before you begin treatment.",
+    a: "Yes, we are in-network with most major insurance providers including Aetna, Blue Cross Blue Shield, Cigna, and UnitedHealthcare. Coverage varies by plan. Contact us to verify your benefits, our admissions team handles verification at no cost before you begin treatment.",
   },
   {
     q: "What is the clinical team like at Glendale?",
@@ -87,16 +101,19 @@ const faqs = [
 export default function GlendaleLocationPage() {
   return (
     <>
+      <SchemaScript schema={[getFAQSchema(faqData["locations/glendale"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/locations/glendale"))]} />
       <InlineFAQSchema items={faqs} />
       <SpeakableSchema url="/locations/glendale" cssSelectors={["[data-speakable]"]} />
       <LocalBusinessSchema index={0} />
-      <BreadcrumbSchema items={[{ name: "Locations", path: "/locations/glendale" }, { name: "Glendale", path: "/locations/glendale" }]} />
+      <BreadcrumbSchema items={[{ name: "Facilities", path: "/locations" }, { name: "Glendale", path: "/locations/glendale" }]} />
+      <VideoSchemas path="/locations/glendale/" />
       <Navigation />
+      <Breadcrumb items={getBreadcrumbsFromPathname("/locations/glendale")} />
       <PageHero
         eyebrow="Glendale, Arizona"
         title="Luxury Rehab and Addiction Treatment in Glendale, Arizona"
-        description="Our flagship 7,500 sq ft residential treatment center — where evidence-based clinical care meets resort-level comfort."
-        bgImage="/images/glendale/Gelndale-Front-1.jpg"
+        description="Our flagship 7,500 sq ft residential treatment center, where evidence-based clinical care meets resort-level comfort."
+        bgImage="/images/glendale/Glendale-Front.jpg"
       />
 
       {/* Overview */}
@@ -107,13 +124,13 @@ export default function GlendaleLocationPage() {
               The Flagship Center Where It All Started
             </h2>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              Our Glendale facility is where Desert Recovery Centers began — and it remains the heart of our mission. At 7,500 square feet, it&apos;s our largest and most comprehensive treatment center, offering the full continuum of care from intensive residential treatment through outpatient programming.
+              Our Glendale facility is where Desert Recovery Centers began, and it remains the heart of our mission. At 7,500 square feet, it&apos;s our largest and most comprehensive treatment center, offering the full continuum of care from intensive residential treatment through outpatient programming.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              What you&apos;ll find here is a program built on clinical depth, not marketing promises. Licensed psychologists, a board-certified psychiatrist, and registered nurses deliver evidence-based treatment around the clock — in a luxury home-like setting with amenities that rival a resort. Basketball court, tennis court, pool, massage room, gourmet meals — because we believe that healing the whole person requires treating the whole person.
+              What you&apos;ll find here is a program built on clinical depth, not marketing promises. Licensed psychologists, a board-certified psychiatrist, and registered nurses deliver evidence-based treatment around the clock, in a luxury home-like setting with amenities that rival a resort. Basketball court, tennis court, pool, massage room, gourmet meals, because we believe that healing the whole person requires treating the whole person.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg">
-              Our Glendale center serves the entire West Valley — Peoria, Surprise, Avondale, Goodyear, Buckeye, and beyond. If you or someone you love is ready for treatment that actually works, this is where it starts.
+              Our Glendale center serves the entire West Valley, Peoria, Surprise, Avondale, Goodyear, Buckeye, and beyond. If you or someone you love is ready for treatment that actually works, this is where it starts.
             </p>
           </div>
         </div>
@@ -180,7 +197,7 @@ export default function GlendaleLocationPage() {
               <VideoLightbox videoId="00ZDcQjXoE8">
                 <div className="relative aspect-video rounded-xl overflow-hidden shadow-xl">
                   <Image
-                    src="/images/glendale/Gelndale-Front-1.jpg"
+                    src="/images/glendale/Glendale-Front.jpg"
                     alt="Desert Recovery Centers Glendale virtual tour"
                     fill
                     className="object-cover"
@@ -207,7 +224,7 @@ export default function GlendaleLocationPage() {
               Comprehensive Treatment at DRC Glendale
             </h2>
             <p className="text-gray-600 leading-relaxed mb-8">
-              Our flagship Glendale team treats the full spectrum of addiction and mental health conditions with a dual diagnosis specialization — ensuring all co-occurring conditions are addressed simultaneously.
+              Our flagship Glendale team treats the full spectrum of addiction and mental health conditions with a dual diagnosis specialization, ensuring all co-occurring conditions are addressed simultaneously.
             </p>
             <div className="grid md:grid-cols-2 gap-4 mb-6">
               {[
@@ -253,7 +270,7 @@ export default function GlendaleLocationPage() {
               {[
                 {
                   title: "Doctoral-Level Clinical Team",
-                  desc: "Your treatment is directed by licensed clinical psychologists with doctoral degrees — not counselors or paraprofessionals. Board-certified psychiatrists provide medication management, and registered nurses offer 24/7 medical monitoring.",
+                  desc: "Your treatment is directed by licensed clinical psychologists with doctoral degrees, not counselors or paraprofessionals. Board-certified psychiatrists provide medication management, and registered nurses offer 24/7 medical monitoring.",
                 },
                 {
                   title: "Individualized Treatment Plans",
@@ -261,15 +278,15 @@ export default function GlendaleLocationPage() {
                 },
                 {
                   title: "Evidence-Based Therapies",
-                  desc: "CBT, DBT, EMDR, motivational interviewing, trauma-focused therapy, and behavioral activation — delivered by clinicians specifically trained in each modality.",
+                  desc: "CBT, DBT, EMDR, motivational interviewing, trauma-focused therapy, and behavioral activation, delivered by clinicians specifically trained in each modality.",
                 },
                 {
                   title: "Holistic Wellness",
-                  desc: "Yoga, mindfulness meditation, art therapy, nutritional counseling, and fitness programming complement clinical therapies — because lasting recovery requires healing the whole person.",
+                  desc: "Yoga, mindfulness meditation, art therapy, nutritional counseling, and fitness programming complement clinical therapies, because lasting recovery requires healing the whole person.",
                 },
                 {
                   title: "Family Therapy Program",
-                  desc: "Our comprehensive family program includes psychoeducation, communication skills training, joint therapy sessions, and family support groups — rebuilding relationships damaged by addiction and mental health conditions.",
+                  desc: "Our comprehensive family program includes psychoeducation, communication skills training, joint therapy sessions, and family support groups, rebuilding relationships damaged by addiction and mental health conditions.",
                 },
               ].map((item, i) => (
                 <div key={i} className="border-l-2 border-gold/40 pl-6">
@@ -292,13 +309,14 @@ export default function GlendaleLocationPage() {
         },
         {
           question: "What addiction treatment is available in Glendale, Arizona?",
-          answer: "Desert Recovery Centers offers comprehensive addiction and mental health treatment at our flagship Glendale facility. As a Joint Commission accredited luxury treatment center in Arizona, we provide evidence-based dual diagnosis treatment using CBT, DBT, EMDR, and holistic therapies — delivered by licensed psychologists and board-certified psychiatrists with resort-level amenities including a basketball court, tennis court, and pool.",
+          answer: "Desert Recovery Centers offers comprehensive addiction and mental health treatment at our flagship Glendale facility. As a Joint Commission accredited luxury treatment center in Arizona, we provide evidence-based dual diagnosis treatment using CBT, DBT, EMDR, and holistic therapies, delivered by licensed psychologists and board-certified psychiatrists with resort-level amenities including a basketball court, tennis court, and pool.",
         },
         {
           question: "Does Desert Recovery Centers accept insurance for Glendale residents?",
           answer: "Yes, Desert Recovery Centers accepts most major insurance plans for Glendale residents, including Aetna, Blue Cross Blue Shield, Cigna, and UnitedHealthcare. Coverage varies by plan. Our admissions team verifies benefits at no cost before treatment begins. Call (623) 323-1012 for a free insurance check.",
         },
       ]} />
+      <FAQSection faqs={faqData["locations/glendale"]} />
       <CTASection />
       <Footer />
     </>

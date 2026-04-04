@@ -6,7 +6,7 @@ import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Addiction Treatment Programs — Desert Recovery Centers",
+  title: "Addiction Treatment Programs, Desert Recovery Centers",
   description:
     "Evidence-based addiction treatment in Arizona for alcohol, opioids, cocaine, meth, fentanyl, prescription drugs, and behavioral addictions. Residential, PHP, and IOP programs available.",
 };
@@ -25,10 +25,10 @@ export default function AddictionPage() {
         <div className="max-w-container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
             <p className="text-gray-600 leading-relaxed text-lg">
-              You already know something has to change. The cycle of using, hiding, and recovering just enough to do it all over again — it takes everything from you. Your relationships, your health, the version of yourself you actually want to be. If you&apos;re reading this, you&apos;re already looking for a way out. That matters.
+              You already know something has to change. The cycle of using, hiding, and recovering just enough to do it all over again, it takes everything from you. Your relationships, your health, the version of yourself you actually want to be. If you&apos;re reading this, you&apos;re already looking for a way out. That matters.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg mt-4">
-              At Desert Recovery Centers, we treat addiction as the chronic medical condition it is — not a moral failing, not a lack of willpower. Our clinical team builds individualized treatment plans that address the root causes driving your substance use, using FDA-approved Medication-Assisted Treatment (MAT) alongside proven behavioral therapies.
+              At Desert Recovery Centers, we treat addiction as the chronic medical condition it is, not a moral failing, not a lack of willpower. Our clinical team builds individualized treatment plans that address the root causes driving your substance use, using FDA-approved Medication-Assisted Treatment (MAT) alongside proven behavioral therapies.
             </p>
 
             <h2 className="font-display text-2xl text-forest font-semibold mt-10 mb-4">
@@ -73,7 +73,7 @@ export default function AddictionPage() {
               Our Approach
             </h2>
             <p className="text-gray-600 leading-relaxed">
-              Every person who walks through our doors receives a comprehensive clinical assessment. From there, your treatment team — psychiatrists, psychologists, licensed therapists, and nursing staff — designs a plan tailored to your specific needs. Therapies include Cognitive Behavioral Therapy (CBT), Dialectical Behavior Therapy (DBT), EMDR, motivational interviewing, 12-step facilitation, and holistic modalities like yoga, mindfulness, and nutritional counseling.
+              Every person who walks through our doors receives a comprehensive clinical assessment. From there, your treatment team, psychiatrists, psychologists, licensed therapists, and nursing staff, designs a plan tailored to your specific needs. Therapies include Cognitive Behavioral Therapy (CBT), Dialectical Behavior Therapy (DBT), EMDR, motivational interviewing, 12-step facilitation, and holistic modalities like yoga, mindfulness, and nutritional counseling.
             </p>
             <p className="text-gray-600 leading-relaxed mt-4">
               We accept most major insurance plans. Coverage varies by plan. Contact us to verify your benefits.

@@ -19,11 +19,11 @@ export const metadata: Metadata = buildMetadata({
 const faqs = [
   {
     q: "Where is APN located compared to Desert Recovery Centers?",
-    a: "APN Lodge (All Points North) is headquartered in Edwards, Colorado — requiring Arizona families to travel out of state for treatment. Desert Recovery Centers operates three facilities within Arizona: Glendale, Scottsdale, and Phoenix. Staying local allows family to participate in therapy, visit regularly, and support the recovery process without cross-country travel.",
+    a: "APN Lodge (All Points North) is headquartered in Edwards, Colorado, requiring Arizona families to travel out of state for treatment. Desert Recovery Centers operates three facilities within Arizona: Glendale, Scottsdale, and Phoenix. Staying local allows family to participate in therapy, visit regularly, and support the recovery process without cross-country travel.",
   },
   {
     q: "How does DRC's clinical team compare?",
-    a: "Desert Recovery Centers is led by doctoral-level clinicians — licensed clinical psychologists and board-certified psychiatrists — who direct treatment. Every treatment plan is overseen by Clinical Director Dr. An Nguyen, a Licensed Clinical Psychologist. This doctoral-level clinical leadership distinguishes DRC from many programs that rely primarily on master's-level counselors.",
+    a: "Desert Recovery Centers is led by doctoral-level clinicians, licensed clinical psychologists and board-certified psychiatrists, who direct treatment. Every treatment plan is overseen by Clinical Director Dr. An Nguyen, a Licensed Clinical Psychologist. This doctoral-level clinical leadership distinguishes DRC from many programs that rely primarily on master's-level counselors.",
   },
   {
     q: "What is DRC's bed count per facility?",
@@ -31,7 +31,7 @@ const faqs = [
   },
   {
     q: "Does DRC specialize in dual diagnosis?",
-    a: "Yes. Dual diagnosis treatment — simultaneously addressing mental health conditions and substance use disorders — is a core specialization at Desert Recovery Centers. Our clinical team treats the full spectrum of co-occurring conditions using integrated treatment plans, not separate tracks.",
+    a: "Yes. Dual diagnosis treatment, simultaneously addressing mental health conditions and substance use disorders, is a core specialization at Desert Recovery Centers. Our clinical team treats the full spectrum of co-occurring conditions using integrated treatment plans, not separate tracks.",
   },
   {
     q: "Do both programs accept insurance?",
@@ -60,7 +60,7 @@ export default function DRCvsAPNPage() {
               Choosing the Right Treatment Center Matters
             </h2>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              When you&apos;re comparing rehab options, you deserve clear, honest information — not marketing spin. Both Desert Recovery Centers and APN (All Points North) offer treatment for addiction and mental health conditions. But there are meaningful differences that may affect which program is right for you or your loved one.
+              When you&apos;re comparing rehab options, you deserve clear, honest information, not marketing spin. Both Desert Recovery Centers and APN (All Points North) offer treatment for addiction and mental health conditions. But there are meaningful differences that may affect which program is right for you or your loved one.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg">
               This page presents a factual comparison to help you make an informed decision. We believe the right choice is the one that fits your clinical needs, your family&apos;s situation, and your recovery goals.
@@ -93,7 +93,7 @@ export default function DRCvsAPNPage() {
                     { factor: "Location", drc: "3 facilities in Arizona (Glendale, Scottsdale, Phoenix)", apn: "Edwards, Colorado (out of state)" },
                     { factor: "Bed Count", drc: "Maximum 10 beds per facility", apn: "Larger program capacity" },
                     { factor: "Clinical Leadership", drc: "Doctoral-level psychologists + board-certified psychiatrists", apn: "Multidisciplinary clinical team" },
-                    { factor: "Dual Diagnosis", drc: "Core specialization — integrated treatment", apn: "Available as part of broader offerings" },
+                    { factor: "Dual Diagnosis", drc: "Core specialization, integrated treatment", apn: "Available as part of broader offerings" },
                     { factor: "Family Involvement", drc: "Easy: local facilities allow regular visits", apn: "Requires travel to Colorado for visits" },
                     { factor: "Levels of Care", drc: "Residential, PHP, IOP", apn: "Residential, PHP, IOP, virtual" },
                     { factor: "Accreditation", drc: "Joint Commission accredited", apn: "Joint Commission accredited" },
@@ -142,7 +142,7 @@ export default function DRCvsAPNPage() {
               {[
                 {
                   title: "Stay in Arizona, Close to Family",
-                  desc: "DRC operates three facilities within Arizona — in Glendale, Scottsdale, and Phoenix. You don't have to leave the state, and your family doesn't have to fly to Colorado for visits. Research consistently shows that family involvement improves treatment outcomes, and proximity makes that involvement practical.",
+                  desc: "DRC operates three facilities within Arizona, in Glendale, Scottsdale, and Phoenix. You don't have to leave the state, and your family doesn't have to fly to Colorado for visits. Research consistently shows that family involvement improves treatment outcomes, and proximity makes that involvement practical.",
                 },
                 {
                   title: "10-Bed Maximum Per Facility",
@@ -150,11 +150,11 @@ export default function DRCvsAPNPage() {
                 },
                 {
                   title: "Doctoral-Level Clinical Leadership",
-                  desc: "Your treatment at DRC is led by licensed clinical psychologists with doctoral degrees, not master's-level counselors. Board-certified psychiatrists provide medication management, and our clinical director — a Licensed Clinical Psychologist — oversees all treatment quality.",
+                  desc: "Your treatment at DRC is led by licensed clinical psychologists with doctoral degrees, not master's-level counselors. Board-certified psychiatrists provide medication management, and our clinical director, a Licensed Clinical Psychologist, oversees all treatment quality.",
                 },
                 {
                   title: "Dual Diagnosis Specialization",
-                  desc: "Treating addiction without addressing underlying mental health conditions — or vice versa — leads to relapse. Dual diagnosis treatment is not a feature we offer; it's the foundation our entire program is built on.",
+                  desc: "Treating addiction without addressing underlying mental health conditions, or vice versa, leads to relapse. Dual diagnosis treatment is not a feature we offer; it's the foundation our entire program is built on.",
                 },
                 {
                   title: "Seamless Continuum of Care",

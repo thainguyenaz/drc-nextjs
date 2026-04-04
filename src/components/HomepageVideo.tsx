@@ -39,7 +39,7 @@ export default function HomepageVideo() {
             <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-xl group">
               <Image
                 src="/images/scottsdale/DRC-DRONE-SCOTTSDALE-08-01-2024-August-01-202400006-2.jpg"
-                alt="Desert Recovery Centers brand video — aerial view of Scottsdale facility"
+                alt="Desert Recovery Centers brand video, aerial view of Scottsdale facility"
                 fill
                 className="object-cover group-hover:scale-[1.04] transition-transform duration-[350ms] ease-out"
                 sizes="(max-width: 768px) 100vw, 800px"

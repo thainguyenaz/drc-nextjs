@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 import { buildMetadata, BreadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Our Locations — Desert Recovery Centers",
+  title: "Our Locations, Desert Recovery Centers",
   description:
     "Desert Recovery Centers operates five locations across Arizona: Glendale, Scottsdale, Phoenix PHP/IOP, Phoenix TMS, and Phoenix PHP Living.",
   path: "/locations",
@@ -64,7 +64,7 @@ export default function LocationsPage() {
       <PageHero
         eyebrow="Our Locations"
         title="Five Locations Across Arizona"
-        description="From residential treatment to outpatient care and TMS therapy — find the DRC location that fits your recovery needs."
+        description="From residential treatment to outpatient care and TMS therapy, find the DRC location that fits your recovery needs."
         bgImage="/images/scottsdale/DRC-FRONT-ENTRANCE-NORTH-SCOTTSDALE-08-01-2024-1210August-01-202400002-2.jpg"
       />
 

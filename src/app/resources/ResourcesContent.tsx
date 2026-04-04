@@ -6,7 +6,7 @@ const featuredResources = [
   {
     category: "Guide",
     title: "The Complete Detox Guide",
-    desc: "What to expect during medically supervised detox — timelines, symptoms, medications, and how to prepare. A straightforward guide for anyone considering detoxification as the first step in recovery.",
+    desc: "What to expect during medically supervised detox, timelines, symptoms, medications, and how to prepare. A straightforward guide for anyone considering detoxification as the first step in recovery.",
     href: "/resources/detox-guide",
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -17,7 +17,7 @@ const featuredResources = [
   {
     category: "Assessment",
     title: "Mental Health Self-Assessment",
-    desc: "A confidential screening tool to help you understand your symptoms and determine whether professional evaluation may be beneficial. Not a diagnosis — a starting point.",
+    desc: "A confidential screening tool to help you understand your symptoms and determine whether professional evaluation may be beneficial. Not a diagnosis, a starting point.",
     href: "/resources/mental-health-assessment",
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -50,7 +50,7 @@ const featuredResources = [
   {
     category: "Podcast",
     title: "Recovery Conversations Podcast",
-    desc: "Candid conversations with clinicians, people in recovery, and thought leaders about what actually works in treatment — and what doesn't. New episodes weekly.",
+    desc: "Candid conversations with clinicians, people in recovery, and thought leaders about what actually works in treatment, and what doesn't. New episodes weekly.",
     href: "/resources/podcast",
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -78,7 +78,7 @@ const quickLinks = [
   },
   {
     title: "Signs You Need Professional Help",
-    desc: "When self-help isn't enough — and what to do next.",
+    desc: "When self-help isn't enough, and what to do next.",
     href: "/resources/signs-you-need-help",
   },
   {
@@ -104,10 +104,10 @@ export default function ResourcesContent() {
               Knowledge Is Part of Recovery
             </h2>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              Making the decision to seek treatment is hard enough without having to navigate confusing information. Our resource library is designed to give you clear, honest answers — written by clinicians, not marketers. Whether you&apos;re researching for yourself or a loved one, start here.
+              Making the decision to seek treatment is hard enough without having to navigate confusing information. Our resource library is designed to give you clear, honest answers, written by clinicians, not marketers. Whether you&apos;re researching for yourself or a loved one, start here.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg">
-              <strong className="text-forest">Heal. Restore. Thrive.</strong> — it starts with understanding what you&apos;re facing and knowing what help looks like.
+              <strong className="text-forest">Heal. Restore. Thrive.</strong>, it starts with understanding what you&apos;re facing and knowing what help looks like.
             </p>
           </div>
         </div>

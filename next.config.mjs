@@ -15,6 +15,12 @@ const nextConfig = {
       { source: "/about/luxury-vs-standard", destination: "/resources/luxury-vs-standard-rehab", permanent: true },
       { source: "/about/our-team", destination: "/our-team", permanent: true },
       { source: "/facilities", destination: "/locations", permanent: false },
+      // SEO redirects — renamed content pages
+      { source: "/addiction/understanding-gambling-addiction/", destination: "/addiction/gambling-addiction-treatment/", permanent: true },
+      { source: "/addiction/understanding-sex-addiction/", destination: "/addiction/sex-addiction-treatment/", permanent: true },
+      { source: "/treatments/alternative-therapy/", destination: "/treatments/softwave-therapy/", permanent: true },
+      { source: "/treatments/understanding-cbt-cognitive-behavioral-therapy/", destination: "/treatments/cognitive-behavioral-therapy-cbt/", permanent: true },
+      { source: "/treatments/understanding-dbt-dialectic-behavior-therapy/", destination: "/treatments/dialectical-behavior-therapy-dbt/", permanent: true },
     ];
   },
 };

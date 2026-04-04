@@ -13,7 +13,7 @@ const phases = [
   {
     step: "02",
     title: "Partial Hospitalization Program (PHP)",
-    desc: "Up to 60 days of structured day programming — 5-6 hours daily, 5 days per week — while returning home each evening.",
+    desc: "Up to 60 days of structured day programming, 5-6 hours daily, 5 days per week, while returning home each evening.",
     href: "/programs/php",
   },
   {
@@ -31,13 +31,13 @@ const phases = [
   {
     step: "05",
     title: "Alumni Program",
-    desc: "Lifetime access to our recovery community — peer events, check-ins, and ongoing support from the team that knows your journey.",
+    desc: "Lifetime access to our recovery community, peer events, check-ins, and ongoing support from the team that knows your journey.",
     href: "/about-us",
   },
   {
     step: "06",
     title: "Family Workshop",
-    desc: "Education and healing for the whole family — communication skills, boundary setting, and understanding the recovery process.",
+    desc: "Education and healing for the whole family, communication skills, boundary setting, and understanding the recovery process.",
     href: "/contact",
   },
 ];

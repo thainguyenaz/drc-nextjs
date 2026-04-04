@@ -7,9 +7,9 @@ import Footer from "@/components/Footer";
 import { buildMetadata, BreadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "How Much Does Rehab Cost in Arizona? — Desert Recovery Centers",
+  title: "How Much Does Rehab Cost in Arizona?, Desert Recovery Centers",
   description:
-    "Honest breakdown of rehab costs in Arizona — from outpatient to luxury residential. Learn about insurance coverage, financing options, and what affects pricing.",
+    "Honest breakdown of rehab costs in Arizona, from outpatient to luxury residential. Learn about insurance coverage, financing options, and what affects pricing.",
   path: "/resources/cost-of-rehab",
 });
 
@@ -20,7 +20,7 @@ const faqs = [
   },
   {
     q: "Does insurance cover rehab in Arizona?",
-    a: "Yes, most health insurance plans are required to cover substance abuse and mental health treatment under the Mental Health Parity and Addiction Equity Act. This includes employer-sponsored plans, ACA marketplace plans, and many others. Coverage specifics — including deductibles, copays, and approved lengths of stay — vary by plan. Contact your provider or reach out to Desert Recovery Centers for a free insurance verification.",
+    a: "Yes, most health insurance plans are required to cover substance abuse and mental health treatment under the Mental Health Parity and Addiction Equity Act. This includes employer-sponsored plans, ACA marketplace plans, and many others. Coverage specifics, including deductibles, copays, and approved lengths of stay, vary by plan. Contact your provider or reach out to Desert Recovery Centers for a free insurance verification.",
   },
   {
     q: "What if I don&apos;t have insurance for rehab?",
@@ -28,7 +28,7 @@ const faqs = [
   },
   {
     q: "Is luxury rehab covered by insurance?",
-    a: "Insurance plans typically cover the clinical components of treatment regardless of the facility type. This means the therapy, psychiatric care, medical monitoring, and clinical services at a luxury facility may be covered similarly to those at a standard facility. The difference in out-of-pocket cost often relates to amenities and room accommodations. Many DRC clients are surprised by how much their insurance covers. Coverage varies by plan — contact us to verify your benefits.",
+    a: "Insurance plans typically cover the clinical components of treatment regardless of the facility type. This means the therapy, psychiatric care, medical monitoring, and clinical services at a luxury facility may be covered similarly to those at a standard facility. The difference in out-of-pocket cost often relates to amenities and room accommodations. Many DRC clients are surprised by how much their insurance covers. Coverage varies by plan, contact us to verify your benefits.",
   },
   {
     q: "How does Desert Recovery Centers handle payment?",
@@ -49,7 +49,7 @@ export default function CostOfRehabPage() {
       <PageHero
         eyebrow="Resources"
         title="How Much Does Rehab Cost in Arizona?"
-        description="Cost is the number one barrier to treatment. Here&apos;s an honest, transparent breakdown of what rehab actually costs — and how to pay for it."
+        description="Cost is the number one barrier to treatment. Here&apos;s an honest, transparent breakdown of what rehab actually costs, and how to pay for it."
         bgImage="/images/general/DRC-ADDICTION.jpg"
       />
 
@@ -76,7 +76,7 @@ export default function CostOfRehabPage() {
               The challenge is that rehab costs vary enormously depending on the type of program, the length of stay, the level of clinical care, and your insurance coverage. A quick Google search will give you ranges so wide they&apos;re almost meaningless.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg">
-              This guide breaks it down honestly — what different levels of care cost in Arizona, what factors affect pricing, how insurance works, and how Desert Recovery Centers approaches the financial side of treatment. No hidden agendas, just clear information to help you make the best decision.
+              This guide breaks it down honestly, what different levels of care cost in Arizona, what factors affect pricing, how insurance works, and how Desert Recovery Centers approaches the financial side of treatment. No hidden agendas, just clear information to help you make the best decision.
             </p>
           </div>
         </div>
@@ -93,7 +93,7 @@ export default function CostOfRehabPage() {
               Understanding the Cost Spectrum
             </h2>
             <p className="text-gray-600 leading-relaxed text-lg mb-6">
-              Here&apos;s a general overview of what different levels of addiction treatment typically cost in Arizona. These are approximate ranges — actual costs depend on the specific program, location, and services included.
+              Here&apos;s a general overview of what different levels of addiction treatment typically cost in Arizona. These are approximate ranges, actual costs depend on the specific program, location, and services included.
             </p>
             <div className="space-y-4">
               {[
@@ -103,7 +103,7 @@ export default function CostOfRehabPage() {
                 },
                 {
                   title: "Intensive Outpatient Programs (IOP)",
-                  desc: "IOP provides more structure than standard outpatient — typically 9 to 15 hours of programming per week — while still allowing clients to live at home. Costs generally range from $5,000 to $12,000 for a full program cycle. A strong option for people who need intensive support but have stable living situations.",
+                  desc: "IOP provides more structure than standard outpatient, typically 9 to 15 hours of programming per week, while still allowing clients to live at home. Costs generally range from $5,000 to $12,000 for a full program cycle. A strong option for people who need intensive support but have stable living situations.",
                 },
                 {
                   title: "Partial Hospitalization Programs (PHP)",
@@ -148,14 +148,14 @@ export default function CostOfRehabPage() {
             </p>
             <div className="grid md:grid-cols-2 gap-4">
               {[
-                "Length of stay — 30-day programs cost less than 60 or 90-day programs, but longer stays are often associated with better long-term outcomes",
-                "Level of care — residential costs more than outpatient because it includes housing, meals, and 24/7 clinical support",
-                "Detox requirements — medical detox adds to the cost due to the need for medical monitoring and potential medication-assisted treatment",
-                "Dual diagnosis treatment — treating co-occurring mental health conditions requires additional psychiatric and therapeutic resources",
-                "Staff credentials — programs staffed by doctoral-level clinicians and board-certified psychiatrists cost more but provide a higher level of clinical care",
-                "Amenities and environment — private rooms, fitness facilities, and specialized programming all factor into cost but often serve clinical purposes",
-                "Location — treatment centers in metropolitan areas like Phoenix typically cost more than those in rural settings",
-                "Aftercare services — programs that include comprehensive discharge planning, alumni support, and follow-up care may have higher upfront costs but can reduce the risk of relapse",
+                "Length of stay, 30-day programs cost less than 60 or 90-day programs, but longer stays are often associated with better long-term outcomes",
+                "Level of care, residential costs more than outpatient because it includes housing, meals, and 24/7 clinical support",
+                "Detox requirements, medical detox adds to the cost due to the need for medical monitoring and potential medication-assisted treatment",
+                "Dual diagnosis treatment, treating co-occurring mental health conditions requires additional psychiatric and therapeutic resources",
+                "Staff credentials, programs staffed by doctoral-level clinicians and board-certified psychiatrists cost more but provide a higher level of clinical care",
+                "Amenities and environment, private rooms, fitness facilities, and specialized programming all factor into cost but often serve clinical purposes",
+                "Location, treatment centers in metropolitan areas like Phoenix typically cost more than those in rural settings",
+                "Aftercare services, programs that include comprehensive discharge planning, alumni support, and follow-up care may have higher upfront costs but can reduce the risk of relapse",
               ].map((item, i) => (
                 <div
                   key={i}
@@ -231,7 +231,7 @@ export default function CostOfRehabPage() {
               How DRC Works With Insurance
             </h2>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              Navigating insurance for addiction treatment shouldn&apos;t be another source of stress. At Desert Recovery Centers, our admissions team handles the financial side so you can focus on what matters — getting into treatment.
+              Navigating insurance for addiction treatment shouldn&apos;t be another source of stress. At Desert Recovery Centers, our admissions team handles the financial side so you can focus on what matters, getting into treatment.
             </p>
             <div className="space-y-4">
               {[
@@ -245,7 +245,7 @@ export default function CostOfRehabPage() {
                 },
                 {
                   title: "We Advocate for Maximum Coverage",
-                  desc: "Our utilization review team works alongside your clinical team to document medical necessity and advocate for the full length of stay your treatment requires. We don&apos;t just accept the first authorization — we push for what you need.",
+                  desc: "Our utilization review team works alongside your clinical team to document medical necessity and advocate for the full length of stay your treatment requires. We don&apos;t just accept the first authorization, we push for what you need.",
                 },
                 {
                   title: "Transparent Out-of-Pocket Estimates",
@@ -307,12 +307,12 @@ export default function CostOfRehabPage() {
             </p>
             <div className="grid md:grid-cols-2 gap-4">
               {[
-                "Lost wages and career damage — addiction frequently leads to job loss, missed promotions, and reduced earning potential over a lifetime",
-                "Legal costs — DUIs, drug-related charges, and legal proceedings can cost tens of thousands of dollars and carry lasting consequences",
-                "Healthcare expenses — emergency room visits, hospitalizations, and chronic health conditions caused by substance use add up rapidly",
-                "Relationship damage — the toll on marriages, family relationships, and friendships often leads to costly divorces and fractured support systems",
-                "Mental health deterioration — untreated addiction worsens co-occurring conditions like depression and anxiety, compounding the cost of eventual treatment",
-                "Risk of overdose — the most devastating cost of all. Every day without treatment is a day of unnecessary risk.",
+                "Lost wages and career damage, addiction frequently leads to job loss, missed promotions, and reduced earning potential over a lifetime",
+                "Legal costs, DUIs, drug-related charges, and legal proceedings can cost tens of thousands of dollars and carry lasting consequences",
+                "Healthcare expenses, emergency room visits, hospitalizations, and chronic health conditions caused by substance use add up rapidly",
+                "Relationship damage, the toll on marriages, family relationships, and friendships often leads to costly divorces and fractured support systems",
+                "Mental health deterioration, untreated addiction worsens co-occurring conditions like depression and anxiety, compounding the cost of eventual treatment",
+                "Risk of overdose, the most devastating cost of all. Every day without treatment is a day of unnecessary risk.",
               ].map((item, i) => (
                 <div
                   key={i}
@@ -324,7 +324,7 @@ export default function CostOfRehabPage() {
               ))}
             </div>
             <p className="text-gray-600 leading-relaxed mt-6 text-lg">
-              Treatment isn&apos;t an expense — it&apos;s an investment in your life, your health, your relationships, and your future. When viewed against the ongoing costs of untreated addiction, the math becomes clear.
+              Treatment isn&apos;t an expense, it&apos;s an investment in your life, your health, your relationships, and your future. When viewed against the ongoing costs of untreated addiction, the math becomes clear.
             </p>
           </div>
         </div>

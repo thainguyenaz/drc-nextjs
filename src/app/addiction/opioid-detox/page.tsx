@@ -19,7 +19,7 @@ export const metadata: Metadata = buildMetadata({
 const faqs = [
   {
     q: "What is medication-assisted treatment (MAT) for opioid detox?",
-    a: "MAT uses FDA-approved medications like buprenorphine (Suboxone) or naltrexone (Vivitrol) alongside therapy to manage withdrawal symptoms, reduce cravings, and support long-term recovery. These medications are prescribed and monitored by our physicians as part of a comprehensive treatment plan — not as a standalone solution.",
+    a: "MAT uses FDA-approved medications like buprenorphine (Suboxone) or naltrexone (Vivitrol) alongside therapy to manage withdrawal symptoms, reduce cravings, and support long-term recovery. These medications are prescribed and monitored by our physicians as part of a comprehensive treatment plan, not as a standalone solution.",
   },
   {
     q: "How long does opioid detox take?",
@@ -27,7 +27,7 @@ const faqs = [
   },
   {
     q: "Is opioid withdrawal dangerous?",
-    a: "While opioid withdrawal is rarely life-threatening, it is intensely uncomfortable and can lead to dangerous dehydration. More importantly, the relapse risk during unsupervised withdrawal is extremely high — and relapse after a period of abstinence dramatically increases the risk of fatal overdose due to reduced tolerance. Medical supervision ensures safety and significantly improves your chances of successful detox.",
+    a: "While opioid withdrawal is rarely life-threatening, it is intensely uncomfortable and can lead to dangerous dehydration. More importantly, the relapse risk during unsupervised withdrawal is extremely high, and relapse after a period of abstinence dramatically increases the risk of fatal overdose due to reduced tolerance. Medical supervision ensures safety and significantly improves your chances of successful detox.",
   },
   {
     q: "Do you treat fentanyl addiction specifically?",
@@ -35,7 +35,7 @@ const faqs = [
   },
   {
     q: "What happens after opioid detox?",
-    a: "Detox addresses physical dependence but not the addiction itself. After detox, you transition seamlessly into our residential treatment program where the real work begins — individual therapy, group therapy, dual diagnosis treatment, and holistic healing. This immediate transition is critical because the weeks following detox represent the highest relapse risk period.",
+    a: "Detox addresses physical dependence but not the addiction itself. After detox, you transition seamlessly into our residential treatment program where the real work begins, individual therapy, group therapy, dual diagnosis treatment, and holistic healing. This immediate transition is critical because the weeks following detox represent the highest relapse risk period.",
   },
 ];
 
@@ -54,7 +54,7 @@ export default function OpioidDetoxPage() {
       <PageHero
         eyebrow="Addiction Treatment"
         title="Opioid Detox in Arizona"
-        description="Safe, medically supervised opioid withdrawal with MAT support and 24/7 physician oversight — your first step to freedom."
+        description="Safe, medically supervised opioid withdrawal with MAT support and 24/7 physician oversight, your first step to freedom."
         bgImage="/images/general/DRC-ADDICTION.jpg"
       />
 
@@ -75,13 +75,13 @@ export default function OpioidDetoxPage() {
               The First Step Is the Hardest. We Make It Safe.
             </h2>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              If you&apos;ve been using opioids — whether heroin, fentanyl, oxycodone, or other prescription painkillers — the fear of withdrawal is one of the biggest barriers to getting help. The physical agony of detoxing without medical support is real, and the relapse risk during unsupervised withdrawal is dangerously high.
+              If you&apos;ve been using opioids, whether heroin, fentanyl, oxycodone, or other prescription painkillers, the fear of withdrawal is one of the biggest barriers to getting help. The physical agony of detoxing without medical support is real, and the relapse risk during unsupervised withdrawal is dangerously high.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              At Desert Recovery Centers, our medical detox program ensures you withdraw safely and with as little discomfort as possible. Our physicians use medication-assisted treatment (MAT) when appropriate — FDA-approved medications that ease withdrawal symptoms and reduce cravings — while our nursing staff monitors your vitals and comfort around the clock.
+              At Desert Recovery Centers, our medical detox program ensures you withdraw safely and with as little discomfort as possible. Our physicians use medication-assisted treatment (MAT) when appropriate, FDA-approved medications that ease withdrawal symptoms and reduce cravings, while our nursing staff monitors your vitals and comfort around the clock.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg">
-              Once you&apos;re medically stable, you transition directly into our residential treatment program — same facility, same team. No gap in care, no moment where you&apos;re left vulnerable. This seamless approach is how real recovery starts.
+              Once you&apos;re medically stable, you transition directly into our residential treatment program, same facility, same team. No gap in care, no moment where you&apos;re left vulnerable. This seamless approach is how real recovery starts.
             </p>
           </div>
         </div>
@@ -105,7 +105,7 @@ export default function OpioidDetoxPage() {
             <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4 mb-8">Opioid Withdrawal Timeline</h2>
             <div className="space-y-4">
               {[
-                { phase: "8-24 Hours", title: "Early Withdrawal", desc: "Muscle aches, anxiety, agitation, tearing eyes, runny nose, sweating, insomnia. Onset timing varies — shorter-acting opioids (heroin) begin earlier than longer-acting ones (fentanyl)." },
+                { phase: "8-24 Hours", title: "Early Withdrawal", desc: "Muscle aches, anxiety, agitation, tearing eyes, runny nose, sweating, insomnia. Onset timing varies, shorter-acting opioids (heroin) begin earlier than longer-acting ones (fentanyl)." },
                 { phase: "1-3 Days", title: "Peak Symptoms", desc: "Nausea, vomiting, diarrhea, abdominal cramps, dilated pupils, rapid heartbeat. This is when symptoms are most intense. MAT medications significantly reduce the severity." },
                 { phase: "3-7 Days", title: "Gradual Improvement", desc: "Physical symptoms begin to ease. Sleep disturbances and mood changes may persist. Medical support continues to ensure comfort and prevent complications." },
                 { phase: "7-14 Days", title: "Stabilization", desc: "Acute withdrawal resolves. Your clinical team prepares you for transition into full residential treatment programming. Some post-acute symptoms (fatigue, mild mood changes) may continue to improve over weeks." },
@@ -131,11 +131,11 @@ export default function OpioidDetoxPage() {
             <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4 mb-8">How We Manage Opioid Detox at DRC</h2>
             <div className="space-y-6">
               {[
-                { title: "Medication-Assisted Treatment (MAT)", desc: "When clinically appropriate, our physicians prescribe FDA-approved medications like buprenorphine to ease withdrawal, reduce cravings, and stabilize your body chemistry — making the process significantly more manageable." },
+                { title: "Medication-Assisted Treatment (MAT)", desc: "When clinically appropriate, our physicians prescribe FDA-approved medications like buprenorphine to ease withdrawal, reduce cravings, and stabilize your body chemistry, making the process significantly more manageable." },
                 { title: "24/7 Medical Monitoring", desc: "Registered nurses monitor your vitals, hydration, and symptom severity around the clock. Our physicians are available for any medical need at any hour of the day or night." },
                 { title: "Comfort & Dignity", desc: "Withdrawal is hard enough without feeling like you're in a clinical ward. Our luxury facilities provide private rooms, gourmet meals, and a warm environment that preserves your dignity during the most vulnerable phase of recovery." },
                 { title: "Fentanyl-Specific Protocols", desc: "Fentanyl's extreme potency requires adjusted detox protocols. Our medical team has specific experience managing fentanyl withdrawal, including extended timelines and modified medication approaches." },
-                { title: "Direct Transition to Treatment", desc: "Detox without treatment is a setup for relapse. At DRC, you move seamlessly from detox into our residential program — same facility, same team — so the momentum of your recovery never stops." },
+                { title: "Direct Transition to Treatment", desc: "Detox without treatment is a setup for relapse. At DRC, you move seamlessly from detox into our residential program, same facility, same team, so the momentum of your recovery never stops." },
               ].map((item, i) => (
                 <div key={i} className="border-l-2 border-gold/40 pl-6">
                   <h3 className="font-display text-lg text-forest font-semibold mb-2">{item.title}</h3>

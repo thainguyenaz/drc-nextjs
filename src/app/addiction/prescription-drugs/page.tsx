@@ -8,18 +8,27 @@ import { InlineFAQSchema, MedicalConditionSchema } from "@/lib/seo";
 import AEOBlock from "@/components/AEOBlock";
 import RelatedPages from "@/components/RelatedPages";
 import ConditionFAQ from "@/components/ConditionFAQ";
+import { getPageMeta } from "@/data/page-metadata";
+
+const meta = getPageMeta("/addiction/prescription-drug-addiction-treatment/");
 
 export const metadata: Metadata = {
-  title: "Prescription Drug Addiction Treatment — Desert Recovery Centers",
-  description:
-    "Prescription drug addiction treatment in Arizona for opioid painkillers, benzodiazepines, and stimulant medications. Medically supervised detox and therapy.",
+  title: meta.title,
+  description: meta.description,
+  alternates: { canonical: meta.canonical },
+  openGraph: {
+    title: meta.title,
+    description: meta.description,
+    url: meta.canonical,
+    images: [{ url: meta.ogImage ?? "https://desertrecoverycenters.com/wp-content/uploads/2024/10/DRC-DRONE-SCOTTSDALE-08-01-2024-August-01-202400020-2.jpg", alt: meta.title }],
+  },
 };
 
 const faqs = [
   {
     question: "Can prescription drug addiction be treated?",
     answer:
-      "Yes. Prescription drug addiction — whether involving opioid painkillers, benzodiazepines, or stimulants — is a treatable medical condition. At Desert Recovery Centers, our doctoral-level clinicians use medically supervised tapering, MAT, and behavioral therapy in our Arizona facilities with just 10 beds per location for safe, individualized care.",
+      "Yes. Prescription drug addiction, whether involving opioid painkillers, benzodiazepines, or stimulants, is a treatable medical condition. At Desert Recovery Centers, our doctoral-level clinicians use medically supervised tapering, MAT, and behavioral therapy in our Arizona facilities with just 10 beds per location for safe, individualized care.",
   },
   {
     question: "How long does prescription drug rehab take?",
@@ -34,7 +43,7 @@ const faqs = [
   {
     question: "What medications are used for prescription drug withdrawal?",
     answer:
-      "Withdrawal management depends on the medication class. Opioid painkiller withdrawal may use buprenorphine or naltrexone. Benzodiazepine withdrawal requires careful medical tapering. Our dual diagnosis approach addresses the underlying conditions — chronic pain, anxiety, or ADHD — that drove prescription use in the first place.",
+      "Withdrawal management depends on the medication class. Opioid painkiller withdrawal may use buprenorphine or naltrexone. Benzodiazepine withdrawal requires careful medical tapering. Our dual diagnosis approach addresses the underlying conditions, chronic pain, anxiety, or ADHD, that drove prescription use in the first place.",
   },
 ];
 
@@ -52,14 +61,14 @@ export default function PrescriptionDrugAddictionPage() {
       <PageHero
         eyebrow="Addiction Treatment"
         title="Prescription Drug Addiction Treatment"
-        description="It started with a prescription. That doesn't make the addiction any less real — or any less treatable."
+        description="It started with a prescription. That doesn't make the addiction any less real, or any less treatable."
         bgImage="/images/general/DRC-ADDICTION.jpg"
       />
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
             <p className="text-gray-600 leading-relaxed text-lg">
-              A doctor prescribed it. You took it as directed — at first. But the pain didn&apos;t go away, or the anxiety kept creeping back, or the medication stopped working at the dose you were on. Now you&apos;re taking more than prescribed, refilling early, doctor shopping, or buying from someone else. You feel ashamed because this isn&apos;t who you thought you were. You never imagined yourself here. But prescription drug addiction doesn&apos;t discriminate — it happens to people from every background, every profession, every walk of life.
+              A doctor prescribed it. You took it as directed, at first. But the pain didn&apos;t go away, or the anxiety kept creeping back, or the medication stopped working at the dose you were on. Now you&apos;re taking more than prescribed, refilling early, doctor shopping, or buying from someone else. You feel ashamed because this isn&apos;t who you thought you were. You never imagined yourself here. But prescription drug addiction doesn&apos;t discriminate, it happens to people from every background, every profession, every walk of life.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg mt-4">
               At Desert Recovery Centers, we treat prescription drug dependence with the same clinical rigor and compassion we bring to every substance. Our medical team specializes in safe, medically supervised tapering and detox protocols tailored to the specific class of medication involved.
@@ -90,7 +99,7 @@ export default function PrescriptionDrugAddictionPage() {
               </li>
               <li className="flex items-start gap-3">
                 <span className="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0" />
-                Withdrawal symptoms when you miss doses — shaking, sweating, nausea, rebound anxiety, or insomnia
+                Withdrawal symptoms when you miss doses, shaking, sweating, nausea, rebound anxiety, or insomnia
               </li>
               <li className="flex items-start gap-3">
                 <span className="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0" />
@@ -109,7 +118,7 @@ export default function PrescriptionDrugAddictionPage() {
               {[
                 {
                   title: "Medically Supervised Detox & Tapering",
-                  desc: "Safe, gradual dose reduction under medical supervision. Benzodiazepine and opioid withdrawal require precise medical protocols — our team manages this process with expertise and care.",
+                  desc: "Safe, gradual dose reduction under medical supervision. Benzodiazepine and opioid withdrawal require precise medical protocols, our team manages this process with expertise and care.",
                 },
                 {
                   title: "Medication-Assisted Treatment",
@@ -142,7 +151,7 @@ export default function PrescriptionDrugAddictionPage() {
               What Recovery Looks Like Here
             </h2>
             <p className="text-gray-600 leading-relaxed">
-              Prescription drug recovery often involves unlearning the belief that you need a substance to function. Whether your dependence began with pain, anxiety, or attention issues, your treatment plan addresses the underlying condition alongside the addiction. Our step-down model — residential to PHP to IOP — gives you increasing autonomy as you build confidence in your ability to manage life without the medication that once controlled it.
+              Prescription drug recovery often involves unlearning the belief that you need a substance to function. Whether your dependence began with pain, anxiety, or attention issues, your treatment plan addresses the underlying condition alongside the addiction. Our step-down model, residential to PHP to IOP, gives you increasing autonomy as you build confidence in your ability to manage life without the medication that once controlled it.
             </p>
             <p className="text-gray-600 leading-relaxed mt-4">
               We accept most major insurance plans. Coverage varies by plan. Contact us to verify your benefits.

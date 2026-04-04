@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import { buildMetadata, BreadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Terms of Service — Desert Recovery Centers",
+  title: "Terms of Service, Desert Recovery Centers",
   description: "Terms of service for the Desert Recovery Centers website. Please read these terms carefully before using our site.",
   path: "/terms-of-service",
 });

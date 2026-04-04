@@ -1,5 +1,7 @@
 import { Metadata } from "next";
 import { siteData } from "./site-data";
+import { videoData } from "@/data/video-data";
+import { getYouTubeVideoSchema } from "./schema";
 
 const SITE_URL = "https://www.desertrecoverycenters.com";
 const SITE_NAME = "Desert Recovery Centers";
@@ -93,13 +95,14 @@ export function LocalBusinessSchema({ index }: { index: number }) {
 
   return ld({
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": ["LocalBusiness", "MedicalClinic"],
     "@id": `${SITE_URL}/facilities/${loc.name.toLowerCase()}`,
-    name: `Desert Recovery Centers — ${loc.name}`,
+    name: `Desert Recovery Centers - ${loc.name}`,
     image: `${SITE_URL}${loc.image}`,
     url: `${SITE_URL}/facilities/${loc.name.toLowerCase()}`,
-    telephone: loc.phoneTel,
+    telephone: loc.phone,
     email: siteData.email,
+    description: loc.description,
     address: {
       "@type": "PostalAddress",
       streetAddress: street,
@@ -108,13 +111,14 @@ export function LocalBusinessSchema({ index }: { index: number }) {
       postalCode: zip,
       addressCountry: "US",
     },
-    priceRange: "$$$",
-    openingHoursSpecification: {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-      opens: "00:00",
-      closes: "23:59",
+    priceRange: "$$$$",
+    openingHours: "Mo-Su 00:00-24:00",
+    parentOrganization: {
+      "@type": "MedicalOrganization",
+      name: SITE_NAME,
+      url: SITE_URL,
     },
+    ...(loc.sameAs?.length ? { sameAs: loc.sameAs } : {}),
   });
 }
 
@@ -187,7 +191,7 @@ export function PersonSchema({
 
 // ─── AEO / Answer Engine Optimization schemas ──────────────────────
 
-/** Inline FAQPage schema — accepts {q,a} or {question,answer} shaped items */
+/** Inline FAQPage schema, accepts {q,a} or {question,answer} shaped items */
 export function InlineFAQSchema({
   items,
 }: {
@@ -208,7 +212,7 @@ export function InlineFAQSchema({
   });
 }
 
-/** SpeakableSpecification schema — marks CSS selectors as voice-readable */
+/** SpeakableSpecification schema, marks CSS selectors as voice-readable */
 export function SpeakableSchema({ url, cssSelectors }: { url: string; cssSelectors: string[] }) {
   return ld({
     "@context": "https://schema.org",
@@ -274,4 +278,27 @@ export function MedicalTherapySchema({
         }
       : {}),
   });
+}
+
+/**
+ * VideoObject schemas for a given page path.
+ * Safe usage of dangerouslySetInnerHTML: only serializes our own static
+ * video data via JSON.stringify, no user-supplied HTML content.
+ */
+export function VideoSchemas({ path }: { path: string }) {
+  const videos = videoData[path];
+  if (!videos?.length) return null;
+  return (
+    <>
+      {videos.map((v) => (
+        <script
+          key={v.youtubeId}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(getYouTubeVideoSchema(v)),
+          }}
+        />
+      ))}
+    </>
+  );
 }

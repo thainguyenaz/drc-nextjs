@@ -7,17 +7,33 @@ import Footer from "@/components/Footer";
 import { InlineFAQSchema, SpeakableSchema, MedicalConditionSchema } from "@/lib/seo";
 import AEOBlock from "@/components/AEOBlock";
 import RelatedPages from "@/components/RelatedPages";
+import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
+import { faqData } from "@/data/faq-data";
+import SchemaScript from "@/components/SchemaScript";
+import FAQSection from "@/components/FAQSection";
+import Breadcrumb from "@/components/Breadcrumb";
+import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
+import Citations from "@/components/Citations";
+import { getPageMeta } from "@/data/page-metadata";
+
+const meta = getPageMeta("/mental-health/bipolar-disorder-treatment/");
 
 export const metadata: Metadata = {
-  title: "Bipolar Disorder Treatment in Arizona — Desert Recovery Centers",
-  description:
-    "Specialized bipolar disorder treatment with mood stabilization, medication management, and psychotherapy for bipolar I and II. Residential programs in Arizona.",
+  title: meta.title,
+  description: meta.description,
+  alternates: { canonical: meta.canonical },
+  openGraph: {
+    title: meta.title,
+    description: meta.description,
+    url: meta.canonical,
+    images: [{ url: meta.ogImage ?? "https://desertrecoverycenters.com/wp-content/uploads/2024/10/DRC-DRONE-SCOTTSDALE-08-01-2024-August-01-202400020-2.jpg", alt: meta.title }],
+  },
 };
 
 const faqs = [
   {
     q: "What is the difference between bipolar I and bipolar II?",
-    a: "Bipolar I involves full manic episodes — periods of extremely elevated mood, energy, and sometimes psychotic symptoms — that last at least seven days or require hospitalization. Bipolar II involves hypomanic episodes (less severe than full mania) alternating with major depressive episodes. Both are serious conditions, and both respond to proper treatment. Our clinical team determines the specific diagnosis during your evaluation.",
+    a: "Bipolar I involves full manic episodes, periods of extremely elevated mood, energy, and sometimes psychotic symptoms, that last at least seven days or require hospitalization. Bipolar II involves hypomanic episodes (less severe than full mania) alternating with major depressive episodes. Both are serious conditions, and both respond to proper treatment. Our clinical team determines the specific diagnosis during your evaluation.",
   },
   {
     q: "How important is medication in bipolar treatment?",
@@ -29,17 +45,18 @@ const faqs = [
   },
   {
     q: "What if I've been misdiagnosed with depression instead of bipolar disorder?",
-    a: "Misdiagnosis is extremely common with bipolar disorder — studies suggest up to 40% of people with bipolar are initially diagnosed with major depression alone. This matters because antidepressants without a mood stabilizer can actually trigger manic episodes. Our comprehensive psychiatric evaluation includes a detailed personal and family history specifically designed to catch bipolar disorder that may have been missed.",
+    a: "Misdiagnosis is extremely common with bipolar disorder, studies suggest up to 40% of people with bipolar are initially diagnosed with major depression alone. This matters because antidepressants without a mood stabilizer can actually trigger manic episodes. Our comprehensive psychiatric evaluation includes a detailed personal and family history specifically designed to catch bipolar disorder that may have been missed.",
   },
   {
     q: "Do you treat bipolar disorder with co-occurring substance use?",
-    a: "Yes — this is one of our specialties. Research shows that nearly half of people with bipolar disorder also struggle with substance use. Our dual diagnosis approach treats both conditions simultaneously, which is essential because untreated substance use destabilizes mood, and untreated bipolar disorder drives continued substance use.",
+    a: "Yes, this is one of our specialties. Research shows that nearly half of people with bipolar disorder also struggle with substance use. Our dual diagnosis approach treats both conditions simultaneously, which is essential because untreated substance use destabilizes mood, and untreated bipolar disorder drives continued substance use.",
   },
 ];
 
 export default function BipolarTreatmentPage() {
   return (
     <>
+      <SchemaScript schema={[getFAQSchema(faqData["bipolar-disorder-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/mental-health/bipolar-disorder-treatment"))]} />
       <InlineFAQSchema items={faqs} />
       <SpeakableSchema url="/mental-health/bipolar-disorder-treatment" cssSelectors={["[data-speakable]"]} />
       <MedicalConditionSchema
@@ -49,10 +66,11 @@ export default function BipolarTreatmentPage() {
         possibleTreatments={["Medication Management", "Cognitive Behavioral Therapy", "Interpersonal and Social Rhythm Therapy", "Psychoeducation", "Family Therapy"]}
       />
       <Navigation />
+      <Breadcrumb items={getBreadcrumbsFromPathname("/mental-health/bipolar-disorder-treatment")} />
       <PageHero
         eyebrow="Mental Health Treatment"
         title="Bipolar Disorder Treatment"
-        description="Stability isn't just possible — it's within reach. Expert bipolar disorder treatment that brings balance back to your life."
+        description="Stability isn't just possible, it's within reach. Expert bipolar disorder treatment that brings balance back to your life."
         bgImage="/images/general/DRC-MENTAL-HEALTH.jpg"
       />
 
@@ -76,10 +94,10 @@ export default function BipolarTreatmentPage() {
               One week, you&apos;re on top of the world. Your mind is racing with ideas, you barely need sleep, everything feels possible. The next, you can&apos;t get out of bed. The energy is gone, replaced by a heaviness so dense you can barely think, let alone function.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              Bipolar disorder isn&apos;t just &quot;mood swings.&quot; It&apos;s a neurological condition that sends your brain through extreme states — mania or hypomania at one end, deep depression at the other — often with devastating consequences for your relationships, career, finances, and sense of self.
+              Bipolar disorder isn&apos;t just &quot;mood swings.&quot; It&apos;s a neurological condition that sends your brain through extreme states, mania or hypomania at one end, deep depression at the other, often with devastating consequences for your relationships, career, finances, and sense of self.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg">
-              The hardest part? During manic episodes, you may not even realize anything is wrong. And during depressive episodes, it&apos;s nearly impossible to imagine feeling better. This unpredictability is what makes bipolar disorder so exhausting — and why specialized treatment is essential. At Desert Recovery Centers, our clinical team has deep experience stabilizing bipolar disorder and helping you build a life that isn&apos;t dictated by your mood.
+              The hardest part? During manic episodes, you may not even realize anything is wrong. And during depressive episodes, it&apos;s nearly impossible to imagine feeling better. This unpredictability is what makes bipolar disorder so exhausting, and why specialized treatment is essential. At Desert Recovery Centers, our clinical team has deep experience stabilizing bipolar disorder and helping you build a life that isn&apos;t dictated by your mood.
             </p>
           </div>
         </div>
@@ -104,7 +122,7 @@ export default function BipolarTreatmentPage() {
                     "Abnormally elevated or irritable mood lasting days or weeks",
                     "Dramatically decreased need for sleep without feeling tired",
                     "Racing thoughts, rapid speech, jumping between ideas",
-                    "Grandiosity — inflated self-esteem or unrealistic beliefs about abilities",
+                    "Grandiosity, inflated self-esteem or unrealistic beliefs about abilities",
                     "Impulsive, risky behavior: spending sprees, reckless driving, risky sex",
                     "Inability to focus, starting many projects but finishing none",
                   ].map((s, i) => (
@@ -124,7 +142,7 @@ export default function BipolarTreatmentPage() {
                     "Loss of interest or pleasure in all activities",
                     "Extreme fatigue and difficulty with basic daily tasks",
                     "Difficulty concentrating, making decisions, or remembering",
-                    "Changes in sleep — insomnia or sleeping excessively",
+                    "Changes in sleep, insomnia or sleeping excessively",
                     "Thoughts of death or suicide",
                   ].map((s, i) => (
                     <div key={i} className="flex items-start gap-3 bg-white rounded-lg p-4 border border-gray-100">
@@ -156,7 +174,7 @@ export default function BipolarTreatmentPage() {
               {[
                 {
                   title: "Psychiatric Evaluation & Medication Management",
-                  desc: "Our board-certified psychiatrists conduct thorough diagnostic evaluations, develop targeted medication protocols using mood stabilizers and other appropriate medications, and monitor your response closely — adjusting as needed to achieve optimal stabilization with minimal side effects.",
+                  desc: "Our board-certified psychiatrists conduct thorough diagnostic evaluations, develop targeted medication protocols using mood stabilizers and other appropriate medications, and monitor your response closely, adjusting as needed to achieve optimal stabilization with minimal side effects.",
                 },
                 {
                   title: "Cognitive Behavioral Therapy (CBT)",
@@ -164,7 +182,7 @@ export default function BipolarTreatmentPage() {
                 },
                 {
                   title: "Interpersonal & Social Rhythm Therapy (IPSRT)",
-                  desc: "This specialized therapy helps you establish and maintain consistent daily routines — sleep, meals, activity, social interactions — which research shows is one of the most powerful tools for preventing bipolar mood episodes.",
+                  desc: "This specialized therapy helps you establish and maintain consistent daily routines, sleep, meals, activity, social interactions, which research shows is one of the most powerful tools for preventing bipolar mood episodes.",
                 },
                 {
                   title: "Psychoeducation",
@@ -201,15 +219,15 @@ export default function BipolarTreatmentPage() {
               {[
                 {
                   title: "Expert Psychiatric Care",
-                  desc: "Our psychiatrists specialize in mood disorders and have extensive experience with the nuances of bipolar medication management — including clients who haven't responded to previous treatments.",
+                  desc: "Our psychiatrists specialize in mood disorders and have extensive experience with the nuances of bipolar medication management, including clients who haven't responded to previous treatments.",
                 },
                 {
                   title: "Dual Diagnosis Integration",
-                  desc: "Up to 60% of people with bipolar disorder also struggle with substance use. We treat both conditions in an integrated program — because stabilizing one without addressing the other leads to relapse in both.",
+                  desc: "Up to 60% of people with bipolar disorder also struggle with substance use. We treat both conditions in an integrated program, because stabilizing one without addressing the other leads to relapse in both.",
                 },
                 {
                   title: "Structured Environment",
-                  desc: "Routine is medicine for bipolar disorder. Our residential program provides the consistent daily structure — regular sleep, meals, activities, and therapy — that helps regulate your biological rhythms and stabilize mood.",
+                  desc: "Routine is medicine for bipolar disorder. Our residential program provides the consistent daily structure, regular sleep, meals, activities, and therapy, that helps regulate your biological rhythms and stabilize mood.",
                 },
                 {
                   title: "Comprehensive Aftercare",
@@ -217,7 +235,7 @@ export default function BipolarTreatmentPage() {
                 },
                 {
                   title: "Dignity & Understanding",
-                  desc: "Bipolar disorder carries stigma that can make seeking help feel shameful. At DRC, you'll be met with clinical expertise and genuine compassion — by a team that understands the courage it takes to ask for help.",
+                  desc: "Bipolar disorder carries stigma that can make seeking help feel shameful. At DRC, you'll be met with clinical expertise and genuine compassion, by a team that understands the courage it takes to ask for help.",
                 },
               ].map((item, i) => (
                 <div
@@ -244,8 +262,10 @@ export default function BipolarTreatmentPage() {
         ]}
       />
       <RelatedPages currentPath="/mental-health/bipolar-disorder-treatment" />
+      <FAQSection faqs={faqData["bipolar-disorder-treatment"]} />
       <CTASection />
       <Footer />
+      <Citations />
     </>
   );
 }

@@ -19,15 +19,15 @@ export const metadata: Metadata = buildMetadata({
 const faqs = [
   {
     q: "What makes a rehab center 'luxury'?",
-    a: "True luxury rehab goes beyond amenities. While comfortable environments matter, what distinguishes a genuine luxury program is the clinical quality: doctoral-level staff, low client-to-clinician ratios, individualized treatment plans, evidence-based therapies, and comprehensive aftercare. Pools and gourmet meals help — but they're not what heals you.",
+    a: "True luxury rehab goes beyond amenities. While comfortable environments matter, what distinguishes a genuine luxury program is the clinical quality: doctoral-level staff, low client-to-clinician ratios, individualized treatment plans, evidence-based therapies, and comprehensive aftercare. Pools and gourmet meals help, but they're not what heals you.",
   },
   {
     q: "How much does luxury rehab cost in Arizona?",
-    a: "Costs vary significantly depending on the facility, length of stay, and level of care. However, many luxury programs — including Desert Recovery Centers — are in-network with major insurance providers. This means your out-of-pocket cost may be significantly lower than the sticker price. Coverage varies by plan. Contact us to verify your benefits at no cost.",
+    a: "Costs vary significantly depending on the facility, length of stay, and level of care. However, many luxury programs, including Desert Recovery Centers, are in-network with major insurance providers. This means your out-of-pocket cost may be significantly lower than the sticker price. Coverage varies by plan. Contact us to verify your benefits at no cost.",
   },
   {
     q: "Is luxury rehab more effective than standard rehab?",
-    a: "What matters most for outcomes is clinical quality, individualized treatment, and program completion rates — not the amenities themselves. However, luxury programs tend to have lower client-to-staff ratios, doctoral-level clinicians, and environments that reduce dropout rates. Clients who complete treatment have dramatically better outcomes, and comfort reduces the likelihood of leaving early.",
+    a: "What matters most for outcomes is clinical quality, individualized treatment, and program completion rates, not the amenities themselves. However, luxury programs tend to have lower client-to-staff ratios, doctoral-level clinicians, and environments that reduce dropout rates. Clients who complete treatment have dramatically better outcomes, and comfort reduces the likelihood of leaving early.",
   },
   {
     q: "Should I stay in Arizona for rehab or travel out of state?",
@@ -35,7 +35,7 @@ const faqs = [
   },
   {
     q: "What should I look for when choosing a luxury rehab in Arizona?",
-    a: "Focus on five factors: (1) clinical team credentials — are psychologists and psychiatrists leading treatment? (2) Client-to-staff ratio — smaller programs deliver more individualized care. (3) Dual diagnosis capability — can they treat co-occurring conditions simultaneously? (4) Accreditation — Joint Commission accreditation indicates quality standards. (5) Aftercare planning — how do they support you after discharge?",
+    a: "Focus on five factors: (1) clinical team credentials, are psychologists and psychiatrists leading treatment? (2) Client-to-staff ratio, smaller programs deliver more individualized care. (3) Dual diagnosis capability, can they treat co-occurring conditions simultaneously? (4) Accreditation, Joint Commission accreditation indicates quality standards. (5) Aftercare planning, how do they support you after discharge?",
   },
 ];
 
@@ -48,7 +48,7 @@ export default function LuxuryRehabArizonaPage() {
       <PageHero
         eyebrow="Arizona Treatment Guide"
         title="Best Luxury Rehab Centers in Arizona: A Complete Guide"
-        description="What truly separates luxury rehab from standard programs — and how to choose the right one for your recovery."
+        description="What truly separates luxury rehab from standard programs, and how to choose the right one for your recovery."
         bgImage="/images/scottsdale/DRC-DRONE-SCOTTSDALE-08-01-2024-0068August-01-202400009-2.jpg"
       />
 
@@ -63,10 +63,10 @@ export default function LuxuryRehabArizonaPage() {
               The word &quot;luxury&quot; gets thrown around a lot in the treatment industry. Granite countertops and infinity pools look good on a website, but they don&apos;t treat addiction. What truly makes a luxury rehab worth your investment is what happens in the therapy room, not the amenities brochure.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              The best luxury rehab centers combine clinical excellence — doctoral-level clinicians, evidence-based therapies, low client-to-staff ratios — with an environment that supports deep healing. The comfort reduces dropout rates. The clinical depth produces lasting results. That&apos;s the combination that matters.
+              The best luxury rehab centers combine clinical excellence, doctoral-level clinicians, evidence-based therapies, low client-to-staff ratios, with an environment that supports deep healing. The comfort reduces dropout rates. The clinical depth produces lasting results. That&apos;s the combination that matters.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg">
-              This guide covers what to look for, what to avoid, and how Arizona&apos;s top programs compare — so you can make an informed decision about the most important investment of your life.
+              This guide covers what to look for, what to avoid, and how Arizona&apos;s top programs compare, so you can make an informed decision about the most important investment of your life.
             </p>
           </div>
         </div>
@@ -94,7 +94,7 @@ export default function LuxuryRehabArizonaPage() {
                 },
                 {
                   title: "3. Dual Diagnosis Capability",
-                  desc: "The majority of people seeking treatment have both a substance use disorder and a mental health condition. Programs that treat only one — or treat them in separate tracks — miss the integrated approach that research shows produces the best outcomes.",
+                  desc: "The majority of people seeking treatment have both a substance use disorder and a mental health condition. Programs that treat only one, or treat them in separate tracks, miss the integrated approach that research shows produces the best outcomes.",
                 },
                 {
                   title: "4. Accreditation & Licensing",
@@ -149,7 +149,7 @@ export default function LuxuryRehabArizonaPage() {
                 },
                 {
                   title: "10-Bed Maximum Per Facility",
-                  desc: "Three intimate facilities in Glendale (7,500 sq ft), Scottsdale (mountain views), and Phoenix (holistic focus) — each with a maximum of 10 beds for deeply personalized care.",
+                  desc: "Three intimate facilities in Glendale (7,500 sq ft), Scottsdale (mountain views), and Phoenix (holistic focus), each with a maximum of 10 beds for deeply personalized care.",
                 },
                 {
                   title: "Integrated Dual Diagnosis Treatment",
@@ -157,7 +157,7 @@ export default function LuxuryRehabArizonaPage() {
                 },
                 {
                   title: "Resort-Level Amenities",
-                  desc: "Pools, tennis courts, basketball courts, gyms, massage rooms, gourmet meals, and unique amenities like a movie theater (Phoenix) and mountain views (Scottsdale) — because comfort supports completion.",
+                  desc: "Pools, tennis courts, basketball courts, gyms, massage rooms, gourmet meals, and unique amenities like a movie theater (Phoenix) and mountain views (Scottsdale), because comfort supports completion.",
                 },
                 {
                   title: "Full Continuum of Care",

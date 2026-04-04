@@ -224,7 +224,7 @@ export default function TMSTherapyPage() {
     <>
       <MedicalTherapySchema
         name="NeuroStar TMS Therapy"
-        description="FDA-cleared Transcranial Magnetic Stimulation therapy for depression, anxious depression, OCD, and adolescents — coming soon to Desert Recovery Centers in Arizona."
+        description="FDA-cleared Transcranial Magnetic Stimulation therapy for depression, anxious depression, OCD, and adolescents, coming soon to Desert Recovery Centers in Arizona."
         url="/treatments/tms-therapy"
         conditions={["Major Depressive Disorder", "Anxious Depression", "OCD", "Adolescent Depression"]}
       />
@@ -275,7 +275,7 @@ export default function TMSTherapyPage() {
             </h1>
             <p className="text-white/70 font-body text-lg md:text-xl max-w-3xl mx-auto leading-relaxed mb-10">
               A breakthrough in depression treatment is coming to Desert Recovery
-              Centers. NeuroStar TMS therapy — FDA-cleared, drug-free, and backed
+              Centers. NeuroStar TMS therapy, FDA-cleared, drug-free, and backed
               by the largest clinical dataset of any TMS system in the world.
             </p>
           </motion.div>
@@ -312,14 +312,14 @@ export default function TMSTherapyPage() {
           <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10">
             <iframe
               src="https://www.youtube.com/embed/4yWqQ_VVzgE?start=141&rel=0&modestbranding=1"
-              title="NeuroStar TMS Therapy — How It Works"
+              title="NeuroStar TMS Therapy, How It Works"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
               className="absolute inset-0 w-full h-full"
             />
           </div>
           <p className="text-white/60 font-body text-sm tracking-wide text-center mt-6">
-            See how NeuroStar TMS therapy works — FDA-cleared, non-invasive treatment for depression
+            See how NeuroStar TMS therapy works, FDA-cleared, non-invasive treatment for depression
           </p>
         </motion.div>
       </section>
@@ -825,7 +825,7 @@ export default function TMSTherapyPage() {
               TMS Therapy for Adolescents
             </h2>
             <p className="text-white/70 font-body text-lg leading-relaxed mb-10">
-              NeuroStar is the only TMS system FDA-cleared for adolescents ages 15 and older — offering a safe, drug-free treatment option for teens with treatment-resistant depression.
+              NeuroStar is the only TMS system FDA-cleared for adolescents ages 15 and older, offering a safe, drug-free treatment option for teens with treatment-resistant depression.
             </p>
             <div className="grid sm:grid-cols-2 gap-4 text-left max-w-2xl mx-auto mb-12">
               {[

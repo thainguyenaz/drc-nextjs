@@ -27,7 +27,7 @@ export default function BridgeWork() {
     <section className="bg-forest py-20 md:py-28 overflow-hidden">
       <div className="max-w-container mx-auto px-6">
         <div className="flex flex-col md:flex-row gap-12 lg:gap-20 items-center">
-          {/* Left content — 60% */}
+          {/* Left content, 60% */}
           <motion.div
             initial={{ opacity: 0, x: -120 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -116,7 +116,7 @@ export default function BridgeWork() {
             </div>
           </motion.div>
 
-          {/* Right photo — 40%, slides in from right */}
+          {/* Right photo, 40%, slides in from right */}
           <motion.div
             initial={{ opacity: 0, x: 120 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -127,7 +127,7 @@ export default function BridgeWork() {
             <div className="relative h-[400px] md:h-[600px] rounded-2xl overflow-hidden shadow-xl group">
               <Image
                 src="/images/scottsdale/DRC-SERANITY-NORTH-SCOTTSDALE-08-01-2024-August-01-202400001-2.jpg"
-                alt="Desert Recovery Centers therapy room — BridgeWork program"
+                alt="Desert Recovery Centers therapy room, BridgeWork program"
                 fill
                 className="object-cover group-hover:scale-[1.04] transition-transform duration-[350ms] ease-out"
                 sizes="(max-width: 768px) 100vw, 40vw"

@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 import { buildMetadata, BreadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Does Aetna Cover Drug & Alcohol Rehab in Arizona? — Desert Recovery Centers",
+  title: "Does Aetna Cover Drug & Alcohol Rehab in Arizona?, Desert Recovery Centers",
   description:
     "Learn if Aetna insurance covers addiction treatment in Arizona. Understand behavioral health benefits, prior authorization, and how to verify your Aetna coverage.",
   path: "/insurance/aetna",
@@ -24,7 +24,7 @@ const faqs = [
   },
   {
     q: "How long will Aetna cover treatment at Desert Recovery Centers?",
-    a: "The length of covered treatment depends on your plan and ongoing medical necessity reviews. Aetna uses a utilization review process where they periodically assess whether continued treatment is warranted. Our clinical team provides regular documentation to support continued stays when clinically appropriate. Coverage varies by plan — contact us to verify your benefits.",
+    a: "The length of covered treatment depends on your plan and ongoing medical necessity reviews. Aetna uses a utilization review process where they periodically assess whether continued treatment is warranted. Our clinical team provides regular documentation to support continued stays when clinically appropriate. Coverage varies by plan, contact us to verify your benefits.",
   },
   {
     q: "Does Aetna require prior authorization before I can enter rehab?",
@@ -57,7 +57,7 @@ export default function AetnaInsurancePage() {
       <div className="bg-cream border-b border-gold/20">
         <div className="max-w-container mx-auto px-6 py-3 text-center">
           <p className="text-xs text-sage font-body tracking-wide">
-            Insurance information reviewed by Desert Recovery Centers admissions team — updated April 2026
+            Insurance information reviewed by Desert Recovery Centers admissions team, updated April 2026
           </p>
         </div>
       </div>
@@ -103,7 +103,7 @@ export default function AetnaInsurancePage() {
                   Prior Authorization Requirements
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  Aetna typically requires prior authorization before residential or intensive outpatient treatment can begin. This means a clinical review must confirm that the requested level of care is medically necessary. Our admissions team handles this process entirely — gathering clinical documentation, submitting the request, and following up with Aetna until a determination is made.
+                  Aetna typically requires prior authorization before residential or intensive outpatient treatment can begin. This means a clinical review must confirm that the requested level of care is medically necessary. Our admissions team handles this process entirely, gathering clinical documentation, submitting the request, and following up with Aetna until a determination is made.
                 </p>
               </div>
               <div className="bg-white rounded-xl p-6 border border-gray-100">
@@ -174,7 +174,7 @@ export default function AetnaInsurancePage() {
               How to Verify Your Aetna Benefits in 3 Simple Steps
             </h2>
             <p className="text-gray-600 leading-relaxed text-lg mb-8">
-              You do not need to call Aetna yourself or spend hours deciphering your plan documents. We handle the insurance verification for you — here&apos;s how:
+              You do not need to call Aetna yourself or spend hours deciphering your plan documents. We handle the insurance verification for you, here&apos;s how:
             </p>
             <div className="grid md:grid-cols-3 gap-6">
               {[
@@ -191,7 +191,7 @@ export default function AetnaInsurancePage() {
                 {
                   step: "3",
                   title: "Understand Your Coverage",
-                  desc: "We present your benefits in clear, straightforward terms — including any deductibles, copays, and estimated out-of-pocket costs — so you can make an informed decision.",
+                  desc: "We present your benefits in clear, straightforward terms, including any deductibles, copays, and estimated out-of-pocket costs, so you can make an informed decision.",
                 },
               ].map((item, i) => (
                 <div key={i} className="bg-white rounded-xl p-6 border border-gray-100 text-center">

@@ -4,19 +4,37 @@ import PageHero from "@/components/PageHero";
 import AddictionPrograms from "@/components/AddictionPrograms";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { buildMetadata, BreadcrumbSchema } from "@/lib/seo";
+import { BreadcrumbSchema, VideoSchemas } from "@/lib/seo";
+import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
+import { faqData } from "@/data/faq-data";
+import SchemaScript from "@/components/SchemaScript";
+import FAQSection from "@/components/FAQSection";
+import Breadcrumb from "@/components/Breadcrumb";
+import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
+import { getPageMeta } from "@/data/page-metadata";
 
-export const metadata: Metadata = buildMetadata({
-  title: "Addiction Treatment Programs — Desert Recovery Centers",
-  description: "Luxury addiction treatment in Arizona for alcohol, opioids, cocaine, meth, fentanyl, prescription drugs, and behavioral addictions.",
-  path: "/addiction-treatment",
-});
+const meta = getPageMeta("/addiction-treatment/");
+
+export const metadata: Metadata = {
+  title: meta.title,
+  description: meta.description,
+  alternates: { canonical: meta.canonical },
+  openGraph: {
+    title: meta.title,
+    description: meta.description,
+    url: meta.canonical,
+    images: [{ url: meta.ogImage ?? "https://desertrecoverycenters.com/wp-content/uploads/2024/10/DRC-DRONE-SCOTTSDALE-08-01-2024-August-01-202400020-2.jpg", alt: meta.title }],
+  },
+};
 
 export default function AddictionTreatmentPage() {
   return (
     <>
+      <SchemaScript schema={[getFAQSchema(faqData["addiction-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/addiction-treatment"))]} />
       <BreadcrumbSchema items={[{ name: "Addiction Treatment", path: "/addiction-treatment" }]} />
+      <VideoSchemas path="/addiction-treatment/" />
       <Navigation />
+      <Breadcrumb items={getBreadcrumbsFromPathname("/addiction-treatment")} />
       <PageHero
         eyebrow="Addiction Treatment"
         title="Addiction Treatment Programs"
@@ -27,7 +45,7 @@ export default function AddictionTreatmentPage() {
         <div className="max-w-container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
             <p className="text-gray-600 leading-relaxed text-lg">
-              Addiction is a chronic medical condition that requires specialized, evidence-based treatment. At Desert Recovery Centers, we offer a full continuum of care — from medically supervised detoxification to residential treatment, partial hospitalization (PHP), intensive outpatient (IOP), and aftercare planning.
+              Addiction is a chronic medical condition that requires specialized, evidence-based treatment. At Desert Recovery Centers, we offer a full continuum of care, from medically supervised detoxification to residential treatment, partial hospitalization (PHP), intensive outpatient (IOP), and aftercare planning.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg mt-4">
               Our Medication-Assisted Treatment (MAT) program utilizes FDA-approved medications including Suboxone, Vivitrol, and naltrexone alongside behavioral therapies for optimal recovery outcomes.
@@ -50,6 +68,7 @@ export default function AddictionTreatmentPage() {
         </div>
       </section>
       <AddictionPrograms />
+      <FAQSection faqs={faqData["addiction-treatment"]} />
       <CTASection />
       <Footer />
     </>

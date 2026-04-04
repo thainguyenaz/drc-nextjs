@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import { buildMetadata, BreadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Blog — Desert Recovery Centers",
+  title: "Blog, Desert Recovery Centers",
   description:
     "Mental health and addiction recovery resources, expert insights, and educational articles from Desert Recovery Centers in Arizona.",
   path: "/blog",
@@ -15,7 +15,7 @@ export const metadata: Metadata = buildMetadata({
 const articles = [
   {
     title: "10 Warning Signs of Addiction You Should Not Ignore",
-    excerpt: "Addiction rarely announces itself. It builds quietly — through subtle shifts in behavior, mood, and priorities that are easy to dismiss until they are impossible to ignore.",
+    excerpt: "Addiction rarely announces itself. It builds quietly, through subtle shifts in behavior, mood, and priorities that are easy to dismiss until they are impossible to ignore.",
     href: "/blog/signs-of-addiction",
     category: "Addiction",
     date: "March 2026",
@@ -43,7 +43,7 @@ const articles = [
   },
   {
     title: "Medical Detox in Arizona: What to Expect",
-    excerpt: "Detox is not treatment — it is the necessary first step that makes treatment possible. Learn what medically supervised detox involves.",
+    excerpt: "Detox is not treatment, it is the necessary first step that makes treatment possible. Learn what medically supervised detox involves.",
     href: "/resources/detox-guide",
     category: "Clinical",
     date: "January 2026",

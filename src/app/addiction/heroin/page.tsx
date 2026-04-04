@@ -8,11 +8,27 @@ import { InlineFAQSchema, MedicalConditionSchema } from "@/lib/seo";
 import AEOBlock from "@/components/AEOBlock";
 import RelatedPages from "@/components/RelatedPages";
 import ConditionFAQ from "@/components/ConditionFAQ";
+import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
+import { faqData } from "@/data/faq-data";
+import SchemaScript from "@/components/SchemaScript";
+import FAQSection from "@/components/FAQSection";
+import Breadcrumb from "@/components/Breadcrumb";
+import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
+import Citations from "@/components/Citations";
+import { getPageMeta } from "@/data/page-metadata";
+
+const meta = getPageMeta("/addiction/heroin-addiction-treatment/");
 
 export const metadata: Metadata = {
-  title: "Heroin Addiction Treatment — Desert Recovery Centers",
-  description:
-    "Heroin addiction treatment in Arizona with medically supervised detox, MAT programs, and comprehensive residential care.",
+  title: meta.title,
+  description: meta.description,
+  alternates: { canonical: meta.canonical },
+  openGraph: {
+    title: meta.title,
+    description: meta.description,
+    url: meta.canonical,
+    images: [{ url: meta.ogImage ?? "https://desertrecoverycenters.com/wp-content/uploads/2024/10/DRC-DRONE-SCOTTSDALE-08-01-2024-August-01-202400020-2.jpg", alt: meta.title }],
+  },
 };
 
 const faqs = [
@@ -41,6 +57,7 @@ const faqs = [
 export default function HeroinAddictionPage() {
   return (
     <>
+      <SchemaScript schema={[getFAQSchema(faqData["heroin-addiction-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/addiction/heroin"))]} />
       <InlineFAQSchema items={faqs} />
       <MedicalConditionSchema
         name="Opioid/Heroin Addiction"
@@ -49,17 +66,18 @@ export default function HeroinAddictionPage() {
         possibleTreatments={["MAT (Suboxone, Vivitrol)", "CBT", "EMDR", "Dual Diagnosis Treatment"]}
       />
       <Navigation />
+      <Breadcrumb items={getBreadcrumbsFromPathname("/addiction/heroin")} />
       <PageHero
         eyebrow="Addiction Treatment"
         title="Heroin Addiction Treatment"
-        description="Heroin takes everything — your health, your relationships, your sense of self. Treatment gives you a real path back."
+        description="Heroin takes everything, your health, your relationships, your sense of self. Treatment gives you a real path back."
         bgImage="/images/general/DRC-ADDICTION.jpg"
       />
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
             <p className="text-gray-600 leading-relaxed text-lg">
-              You&apos;re tired. Tired of the hustle — finding it, using it, coming down, and doing it all over again just to feel okay. Tired of the lies, the track marks you try to cover, the look on your family&apos;s face when they figure it out. Heroin has narrowed your entire world down to one thing, and everything else has fallen away. You didn&apos;t plan for this. Nobody does.
+              You&apos;re tired. Tired of the hustle, finding it, using it, coming down, and doing it all over again just to feel okay. Tired of the lies, the track marks you try to cover, the look on your family&apos;s face when they figure it out. Heroin has narrowed your entire world down to one thing, and everything else has fallen away. You didn&apos;t plan for this. Nobody does.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg mt-4">
               At Desert Recovery Centers, we&apos;ve worked with hundreds of people in exactly your situation. Our heroin addiction treatment program combines medically supervised detox with long-term behavioral therapy and MAT to give you the strongest possible foundation for recovery.
@@ -69,7 +87,7 @@ export default function HeroinAddictionPage() {
               Understanding Heroin Addiction
             </h2>
             <p className="text-gray-600 leading-relaxed">
-              Heroin binds to opioid receptors in the brain, flooding the system with dopamine and creating an intense rush followed by a warm, sedated state. With repeated use, the brain stops producing adequate dopamine on its own, leaving you dependent on heroin just to avoid the agony of withdrawal. Physical dependence develops rapidly, and the psychological grip — the belief that you cannot cope without it — becomes equally powerful. Many heroin users originally started with prescription opioids before transitioning to heroin due to cost and availability.
+              Heroin binds to opioid receptors in the brain, flooding the system with dopamine and creating an intense rush followed by a warm, sedated state. With repeated use, the brain stops producing adequate dopamine on its own, leaving you dependent on heroin just to avoid the agony of withdrawal. Physical dependence develops rapidly, and the psychological grip, the belief that you cannot cope without it, becomes equally powerful. Many heroin users originally started with prescription opioids before transitioning to heroin due to cost and availability.
             </p>
 
             <h2 className="font-display text-2xl text-forest font-semibold mt-10 mb-4">
@@ -82,7 +100,7 @@ export default function HeroinAddictionPage() {
               </li>
               <li className="flex items-start gap-3">
                 <span className="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0" />
-                Experiencing severe withdrawal — body aches, nausea, diarrhea, insomnia, restless legs
+                Experiencing severe withdrawal, body aches, nausea, diarrhea, insomnia, restless legs
               </li>
               <li className="flex items-start gap-3">
                 <span className="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0" />
@@ -90,7 +108,7 @@ export default function HeroinAddictionPage() {
               </li>
               <li className="flex items-start gap-3">
                 <span className="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0" />
-                Health complications — infections, abscesses, collapsed veins, or overdose
+                Health complications, infections, abscesses, collapsed veins, or overdose
               </li>
               <li className="flex items-start gap-3">
                 <span className="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0" />
@@ -142,7 +160,7 @@ export default function HeroinAddictionPage() {
               What Recovery Looks Like Here
             </h2>
             <p className="text-gray-600 leading-relaxed">
-              Heroin recovery isn&apos;t about going back to who you were before — it&apos;s about building someone stronger. After detox, you&apos;ll move into a structured residential program where daily therapy, peer support, and wellness activities help you rediscover what matters. As you stabilize, you&apos;ll step down through PHP and IOP, gradually re-engaging with work, family, and community. Our aftercare team ensures you&apos;re never without support when you need it.
+              Heroin recovery isn&apos;t about going back to who you were before, it&apos;s about building someone stronger. After detox, you&apos;ll move into a structured residential program where daily therapy, peer support, and wellness activities help you rediscover what matters. As you stabilize, you&apos;ll step down through PHP and IOP, gradually re-engaging with work, family, and community. Our aftercare team ensures you&apos;re never without support when you need it.
             </p>
             <p className="text-gray-600 leading-relaxed mt-4">
               We accept most major insurance plans. Coverage varies by plan. Contact us to verify your benefits.
@@ -172,8 +190,10 @@ export default function HeroinAddictionPage() {
         ]}
       />
       <RelatedPages currentPath="/addiction/heroin" />
+      <FAQSection faqs={faqData["heroin-addiction-treatment"]} />
       <CTASection />
       <Footer />
+      <Citations />
     </>
   );
 }

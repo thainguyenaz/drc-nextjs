@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const insurers = [
   { name: "Cigna", desc: "In-network coverage for residential, PHP, and IOP programs." },
   { name: "Aetna", desc: "In-network behavioral health benefits accepted across all facilities." },
-  { name: "Blue Cross Blue Shield", desc: "BCBS plans accepted — including PPO and select HMO plans." },
+  { name: "Blue Cross Blue Shield", desc: "BCBS plans accepted, including PPO and select HMO plans." },
   { name: "UnitedHealthcare", desc: "UHC commercial plans accepted for all levels of care." },
   { name: "Humana", desc: "In-network coverage for mental health and addiction treatment." },
   { name: "Tricare", desc: "Coverage accepted for active-duty service members, veterans, and dependents." },
@@ -16,7 +16,7 @@ const steps = [
   {
     step: "1",
     title: "Submit Your Information",
-    desc: "Fill out the confidential form below with your insurance details — or call us directly. No obligation.",
+    desc: "Fill out the confidential form below with your insurance details, or call us directly. No obligation.",
   },
   {
     step: "2",
@@ -26,7 +26,7 @@ const steps = [
   {
     step: "3",
     title: "Review Your Options",
-    desc: "We walk you through your coverage in plain language — what's covered, what's not, and what financial options are available to you.",
+    desc: "We walk you through your coverage in plain language, what's covered, what's not, and what financial options are available to you.",
   },
   {
     step: "4",
@@ -46,7 +46,7 @@ export default function InsuranceContent() {
               Don&apos;t Let Cost Be the Reason You Don&apos;t Get Help
             </h2>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              The fear of what treatment will cost keeps too many people from picking up the phone. We understand. That&apos;s why our admissions team verifies your insurance benefits before you commit to anything — at no cost and with no obligation. Most of our clients discover they have significantly more coverage than they expected.
+              The fear of what treatment will cost keeps too many people from picking up the phone. We understand. That&apos;s why our admissions team verifies your insurance benefits before you commit to anything, at no cost and with no obligation. Most of our clients discover they have significantly more coverage than they expected.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
               Desert Recovery Centers is in-network with most major insurance providers. Our team handles the paperwork, fights for approvals, and ensures you get the maximum benefit your plan allows.
@@ -96,7 +96,7 @@ export default function InsuranceContent() {
             ))}
           </div>
           <p className="text-center text-gray-500 text-sm mt-8">
-            Don&apos;t see your insurance listed? Call us — we may still be able to work with your plan.
+            Don&apos;t see your insurance listed? Call us, we may still be able to work with your plan.
           </p>
         </div>
       </section>
@@ -183,7 +183,7 @@ export default function InsuranceContent() {
                   <svg className="w-5 h-5 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
-                  <span>Available 24/7 — call anytime, day or night</span>
+                  <span>Available 24/7, call anytime, day or night</span>
                 </div>
               </div>
             </motion.div>

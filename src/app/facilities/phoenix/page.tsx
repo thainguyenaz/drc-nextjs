@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 import { buildMetadata, BreadcrumbSchema, LocalBusinessSchema } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Phoenix Treatment Center — Desert Recovery Centers",
+  title: "Phoenix Treatment Center, Desert Recovery Centers",
   description: "Residential and outpatient treatment at 1623 W Moody Trail, Phoenix, AZ. 5,500 sq ft with movie theater, pool with waterfall, and gym. Call (623) 257-5384.",
   path: "/facilities/phoenix",
 });

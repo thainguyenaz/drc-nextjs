@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 import { buildMetadata, BreadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Does Cigna Cover Drug & Alcohol Rehab in Arizona? — Desert Recovery Centers",
+  title: "Does Cigna Cover Drug & Alcohol Rehab in Arizona?, Desert Recovery Centers",
   description:
     "Find out if Cigna insurance covers addiction treatment and rehab in Arizona. Learn about in-network benefits, levels of care, and how to verify your coverage.",
   path: "/insurance/cigna",
@@ -57,7 +57,7 @@ export default function CignaInsurancePage() {
       <div className="bg-cream border-b border-gold/20">
         <div className="max-w-container mx-auto px-6 py-3 text-center">
           <p className="text-xs text-sage font-body tracking-wide">
-            Insurance information reviewed by Desert Recovery Centers admissions team — updated April 2026
+            Insurance information reviewed by Desert Recovery Centers admissions team, updated April 2026
           </p>
         </div>
       </div>
@@ -73,7 +73,7 @@ export default function CignaInsurancePage() {
               Cigna is one of the largest health insurance providers in the United States, and the majority of Cigna plans include behavioral health benefits that cover substance abuse and addiction treatment. Under the Mental Health Parity and Addiction Equity Act, Cigna is required to provide addiction treatment coverage that is comparable to coverage for medical and surgical conditions.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              This means that if you carry a Cigna plan — whether through your employer, the Health Insurance Marketplace, or a private policy — you likely have coverage for drug and alcohol rehab. However, the specifics of that coverage, including which facilities are in-network, how many days are approved, and what your out-of-pocket costs will be, depend entirely on the details of your individual plan.
+              This means that if you carry a Cigna plan, whether through your employer, the Health Insurance Marketplace, or a private policy, you likely have coverage for drug and alcohol rehab. However, the specifics of that coverage, including which facilities are in-network, how many days are approved, and what your out-of-pocket costs will be, depend entirely on the details of your individual plan.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg">
               That&apos;s why we encourage you to call our admissions team at{" "}
@@ -111,7 +111,7 @@ export default function CignaInsurancePage() {
                   Out-of-Network Benefits
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  Many Cigna plans also offer out-of-network benefits, though at a higher cost to you. If Desert Recovery Centers is out-of-network with your specific plan, you may still receive substantial coverage — our team can help you understand the difference and explore options to minimize your financial responsibility.
+                  Many Cigna plans also offer out-of-network benefits, though at a higher cost to you. If Desert Recovery Centers is out-of-network with your specific plan, you may still receive substantial coverage, our team can help you understand the difference and explore options to minimize your financial responsibility.
                 </p>
               </div>
             </div>
@@ -174,7 +174,7 @@ export default function CignaInsurancePage() {
               How to Verify Your Cigna Benefits in 3 Simple Steps
             </h2>
             <p className="text-gray-600 leading-relaxed text-lg mb-8">
-              We handle the insurance verification for you — there&apos;s no need to navigate this alone. Here&apos;s how it works:
+              We handle the insurance verification for you, there&apos;s no need to navigate this alone. Here&apos;s how it works:
             </p>
             <div className="grid md:grid-cols-3 gap-6">
               {[

@@ -35,7 +35,7 @@ export default function Hero() {
         }}
       />
 
-      {/* Content — left-aligned */}
+      {/* Content, left-aligned */}
       <div className="relative z-10 max-w-container mx-auto px-6 pb-24 w-full">
         <div className="max-w-3xl">
           {/* Eyebrow */}
@@ -51,7 +51,7 @@ export default function Hero() {
             <span className="flex-1 h-px bg-gold/30 max-w-[80px]" />
           </motion.div>
 
-          {/* Headline — collision slide-up animation */}
+          {/* Headline, collision slide-up animation */}
           <motion.div
             initial={{ opacity: 0, y: 60 }}
             animate={{ opacity: 1, y: 0 }}
@@ -66,14 +66,14 @@ export default function Hero() {
             </h1>
           </motion.div>
 
-          {/* Subhead — sales copy */}
+          {/* Subhead, sales copy */}
           <motion.p
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: "easeOut", delay: 0.5 }}
             className="text-white/75 font-body text-lg md:text-xl max-w-2xl mb-10 leading-relaxed"
           >
-            When you are ready to reclaim your life, we are ready to help. Arizona&apos;s most intimate luxury recovery program — 10 beds, doctoral-level care, and a team that understands recovery personally.
+            When you are ready to reclaim your life, we are ready to help. Arizona&apos;s most intimate luxury recovery program, 10 beds, doctoral-level care, and a team that understands recovery personally.
           </motion.p>
 
           {/* Trust Badges with real images */}

@@ -7,11 +7,27 @@ import Footer from "@/components/Footer";
 import { InlineFAQSchema, SpeakableSchema, MedicalConditionSchema } from "@/lib/seo";
 import AEOBlock from "@/components/AEOBlock";
 import RelatedPages from "@/components/RelatedPages";
+import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
+import { faqData } from "@/data/faq-data";
+import SchemaScript from "@/components/SchemaScript";
+import FAQSection from "@/components/FAQSection";
+import Breadcrumb from "@/components/Breadcrumb";
+import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
+import Citations from "@/components/Citations";
+import { getPageMeta } from "@/data/page-metadata";
+
+const meta = getPageMeta("/mental-health/anxiety-treatment/");
 
 export const metadata: Metadata = {
-  title: "Anxiety Treatment in Arizona — Desert Recovery Centers",
-  description:
-    "Evidence-based anxiety treatment for generalized anxiety, panic disorder, social anxiety, and phobias. Residential and outpatient programs in Arizona.",
+  title: meta.title,
+  description: meta.description,
+  alternates: { canonical: meta.canonical },
+  openGraph: {
+    title: meta.title,
+    description: meta.description,
+    url: meta.canonical,
+    images: [{ url: meta.ogImage ?? "https://desertrecoverycenters.com/wp-content/uploads/2024/10/DRC-DRONE-SCOTTSDALE-08-01-2024-August-01-202400020-2.jpg", alt: meta.title }],
+  },
 };
 
 const faqs = [
@@ -29,7 +45,7 @@ const faqs = [
   },
   {
     q: "Can anxiety be treated without medication?",
-    a: "Yes, many clients achieve significant relief through therapy alone — particularly CBT and exposure-based therapies, which have strong research support. However, some individuals benefit from medication as part of a comprehensive plan. Our psychiatrists work closely with you to determine the best approach, and medication is never prescribed without your full understanding and consent.",
+    a: "Yes, many clients achieve significant relief through therapy alone, particularly CBT and exposure-based therapies, which have strong research support. However, some individuals benefit from medication as part of a comprehensive plan. Our psychiatrists work closely with you to determine the best approach, and medication is never prescribed without your full understanding and consent.",
   },
   {
     q: "Will I be able to manage anxiety after treatment ends?",
@@ -40,6 +56,7 @@ const faqs = [
 export default function AnxietyTreatmentPage() {
   return (
     <>
+      <SchemaScript schema={[getFAQSchema(faqData["anxiety-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/mental-health/anxiety-treatment"))]} />
       <InlineFAQSchema items={faqs} />
       <SpeakableSchema url="/mental-health/anxiety-treatment" cssSelectors={["[data-speakable]"]} />
       <MedicalConditionSchema
@@ -49,6 +66,7 @@ export default function AnxietyTreatmentPage() {
         possibleTreatments={["Cognitive Behavioral Therapy", "Exposure Therapy", "Medication Management", "Mindfulness-Based Stress Reduction", "EMDR"]}
       />
       <Navigation />
+      <Breadcrumb items={getBreadcrumbsFromPathname("/mental-health/anxiety-treatment")} />
       <PageHero
         eyebrow="Mental Health Treatment"
         title="Anxiety Treatment"
@@ -76,7 +94,7 @@ export default function AnxietyTreatmentPage() {
               You know the feeling. The tightness in your chest that arrives without warning. The racing thoughts that won&apos;t stop, no matter how hard you try to quiet them. The way a simple social situation or an upcoming event can spiral into hours of dread.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              Anxiety isn&apos;t just &quot;being stressed.&quot; It&apos;s a condition that rewires the way you experience the world — making everything feel urgent, dangerous, or overwhelming. And when it goes untreated, it doesn&apos;t stay still. It grows. It takes more from you: your sleep, your relationships, your confidence, your ability to simply be present.
+              Anxiety isn&apos;t just &quot;being stressed.&quot; It&apos;s a condition that rewires the way you experience the world, making everything feel urgent, dangerous, or overwhelming. And when it goes untreated, it doesn&apos;t stay still. It grows. It takes more from you: your sleep, your relationships, your confidence, your ability to simply be present.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg">
               If this sounds like your life, we want you to know something: this is not your fault, and it absolutely can get better. At Desert Recovery Centers, we treat anxiety not as a character flaw, but as a treatable condition that responds powerfully to the right care.
@@ -101,11 +119,11 @@ export default function AnxietyTreatmentPage() {
             <div className="grid md:grid-cols-2 gap-4">
               {[
                 "Persistent, excessive worry that feels impossible to control",
-                "Panic attacks — sudden surges of intense fear with physical symptoms",
+                "Panic attacks, sudden surges of intense fear with physical symptoms",
                 "Avoidance of situations, places, or people that trigger anxiety",
                 "Restlessness, irritability, or feeling constantly on edge",
                 "Difficulty concentrating or mind going blank",
-                "Sleep disturbances — trouble falling or staying asleep",
+                "Sleep disturbances, trouble falling or staying asleep",
                 "Physical symptoms: rapid heartbeat, sweating, trembling, nausea",
                 "Social withdrawal or isolation due to fear of judgment",
               ].map((symptom, i) => (
@@ -136,7 +154,7 @@ export default function AnxietyTreatmentPage() {
               How We Treat Anxiety at DRC
             </h2>
             <p className="text-gray-600 leading-relaxed text-lg mb-6">
-              Our anxiety treatment program is built on the understanding that lasting relief requires more than managing symptoms — it means addressing the root causes that fuel your anxiety.
+              Our anxiety treatment program is built on the understanding that lasting relief requires more than managing symptoms, it means addressing the root causes that fuel your anxiety.
             </p>
             <div className="space-y-6">
               {[
@@ -146,7 +164,7 @@ export default function AnxietyTreatmentPage() {
                 },
                 {
                   title: "Exposure & Response Prevention",
-                  desc: "Gradual, guided exposure to anxiety triggers in a safe environment — helping your nervous system learn that the situations you fear are manageable and survivable.",
+                  desc: "Gradual, guided exposure to anxiety triggers in a safe environment, helping your nervous system learn that the situations you fear are manageable and survivable.",
                 },
                 {
                   title: "Mindfulness & Somatic Therapies",
@@ -154,7 +172,7 @@ export default function AnxietyTreatmentPage() {
                 },
                 {
                   title: "Medication Management",
-                  desc: "When appropriate, our psychiatrists provide carefully monitored medication to reduce acute symptoms while therapy takes hold — always as part of a broader treatment plan, never as a standalone solution.",
+                  desc: "When appropriate, our psychiatrists provide carefully monitored medication to reduce acute symptoms while therapy takes hold, always as part of a broader treatment plan, never as a standalone solution.",
                 },
                 {
                   title: "Holistic Wellness",
@@ -187,7 +205,7 @@ export default function AnxietyTreatmentPage() {
               {[
                 {
                   title: "Dual Diagnosis Expertise",
-                  desc: "Anxiety rarely exists in isolation. Many of our clients struggle with co-occurring depression, trauma, or substance use. We treat the whole picture — not just one piece of it.",
+                  desc: "Anxiety rarely exists in isolation. Many of our clients struggle with co-occurring depression, trauma, or substance use. We treat the whole picture, not just one piece of it.",
                 },
                 {
                   title: "Small Client-to-Clinician Ratios",
@@ -195,11 +213,11 @@ export default function AnxietyTreatmentPage() {
                 },
                 {
                   title: "Luxury Healing Environment",
-                  desc: "Recovery happens best when you feel safe and comfortable. Our Arizona facilities offer resort-level amenities — pools, fitness centers, gourmet meals — in a clinical setting designed for healing.",
+                  desc: "Recovery happens best when you feel safe and comfortable. Our Arizona facilities offer resort-level amenities, pools, fitness centers, gourmet meals, in a clinical setting designed for healing.",
                 },
                 {
                   title: "24/7 Clinical Support",
-                  desc: "Anxiety doesn't follow a schedule. Our clinical and nursing staff are available around the clock, ensuring you have support whenever you need it — including during nighttime anxiety episodes.",
+                  desc: "Anxiety doesn't follow a schedule. Our clinical and nursing staff are available around the clock, ensuring you have support whenever you need it, including during nighttime anxiety episodes.",
                 },
                 {
                   title: "Aftercare That Lasts",
@@ -230,8 +248,10 @@ export default function AnxietyTreatmentPage() {
         ]}
       />
       <RelatedPages currentPath="/mental-health/anxiety-treatment" />
+      <FAQSection faqs={faqData["anxiety-treatment"]} />
       <CTASection />
       <Footer />
+      <Citations />
     </>
   );
 }

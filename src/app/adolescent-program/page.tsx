@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
-// noindex set via <meta> in head below — client component cannot use metadata export
+// noindex set via <meta> in head below, client component cannot use metadata export
 
 export default function AdolescentProgramPage() {
   const [formStatus, setFormStatus] = useState<"idle" | "sending" | "sent">("idle");
@@ -116,7 +116,7 @@ export default function AdolescentProgramPage() {
             <span className="text-gold font-body text-sm tracking-[0.2em] uppercase font-medium">Advanced Treatment</span>
             <div className="w-[60px] h-0.5 bg-gold mx-auto mt-4 mb-4" />
             <h2 className="font-display text-3xl md:text-4xl text-white font-semibold mb-6">
-              TMS for Adolescents &mdash; Ages 15 and Older
+              TMS for Adolescents, Ages 15 and Older
             </h2>
             <p className="text-white/70 font-body text-lg leading-relaxed mb-10">
               NeuroStar TMS is the only system FDA-cleared for adolescents ages 15 and older with treatment-resistant depression. A safe, non-invasive option when medication alone isn&apos;t enough.
@@ -125,7 +125,7 @@ export default function AdolescentProgramPage() {
               {[
                 "FDA-cleared for patients ages 15 and older since 2008",
                 "Clinically proven for treatment-resistant depression in teens",
-                "Safe, non-invasive — no medication required",
+                "Safe, non-invasive, no medication required",
                 "Sessions fit around school schedules",
                 "No sedation, no recovery time",
                 "No impact on daily activities",

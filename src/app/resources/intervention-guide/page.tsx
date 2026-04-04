@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 import { buildMetadata, BreadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "How to Stage an Intervention — DRC",
+  title: "How to Stage an Intervention, DRC",
   description:
     "Step-by-step family guide to staging an intervention in Arizona. Learn ARISE, Johnson Model, and CRAFT approaches. Free consultation at Desert Recovery Centers.",
   path: "/resources/intervention-guide",
@@ -53,7 +53,7 @@ export default function InterventionGuidePage() {
       <PageHero
         eyebrow="Family Resource Guide"
         title="How to Stage an Intervention"
-        description="A complete family guide to planning and conducting an intervention that actually works — with compassion, preparation, and professional support."
+        description="A complete family guide to planning and conducting an intervention that actually works, with compassion, preparation, and professional support."
         bgImage="/images/general/DRC-Treatment-Therapies-BG-Fade.jpg"
       />
 
@@ -80,7 +80,7 @@ export default function InterventionGuidePage() {
               An intervention is a carefully planned conversation in which family members and close friends come together to express their concern, share the impact of their loved one&apos;s addiction, and present a clear path to treatment. It is not an ambush. It is not an ultimatum. When done well, it is an act of love that breaks through the denial and isolation that addiction creates.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg">
-              This guide will walk you through every step of the process — from understanding what an intervention is, to planning it, to knowing exactly what to say and what to avoid. If your family is facing this situation right now, you are not alone. The admissions team at Desert Recovery Centers helps families navigate this process every day, and we are here for you.
+              This guide will walk you through every step of the process, from understanding what an intervention is, to planning it, to knowing exactly what to say and what to avoid. If your family is facing this situation right now, you are not alone. The admissions team at Desert Recovery Centers helps families navigate this process every day, and we are here for you.
             </p>
           </div>
         </div>
@@ -97,7 +97,7 @@ export default function InterventionGuidePage() {
               What Is an Intervention?
             </h2>
             <p className="text-gray-600 leading-relaxed mb-4">
-              An intervention is a structured, guided conversation between a person struggling with addiction and the people who care about them most. The goal is not to force someone into treatment — it is to help them see the reality of their situation through the eyes of the people they love, and to offer a clear, immediate pathway to help.
+              An intervention is a structured, guided conversation between a person struggling with addiction and the people who care about them most. The goal is not to force someone into treatment, it is to help them see the reality of their situation through the eyes of the people they love, and to offer a clear, immediate pathway to help.
             </p>
             <p className="text-gray-600 leading-relaxed mb-4">
               Most people struggling with addiction are in some degree of denial about how severe their situation has become. They may minimize the consequences, rationalize their behavior, or genuinely not see the damage being done to themselves and others. An intervention compassionately disrupts that denial by presenting a unified message from the people closest to them.
@@ -120,14 +120,14 @@ export default function InterventionGuidePage() {
               When to Consider an Intervention
             </h2>
             <p className="text-gray-600 leading-relaxed mb-6">
-              There is no perfect time — but there are clear signs that the moment has come:
+              There is no perfect time, but there are clear signs that the moment has come:
             </p>
             <div className="grid md:grid-cols-2 gap-4">
               {[
                 "Your loved one has tried to quit on their own and failed repeatedly",
                 "Their substance use has led to legal problems, job loss, or financial ruin",
                 "Relationships with family and friends are deteriorating or severed",
-                "They are engaging in dangerous behavior — driving under the influence, mixing substances, or overdosing",
+                "They are engaging in dangerous behavior, driving under the influence, mixing substances, or overdosing",
                 "Their physical health is visibly declining",
                 "They refuse to discuss their substance use or become hostile when confronted",
                 "Children or dependents are being neglected or exposed to harmful environments",
@@ -143,7 +143,7 @@ export default function InterventionGuidePage() {
               ))}
             </div>
             <p className="text-gray-600 leading-relaxed mt-6 text-sm">
-              If you are seeing several of these signs, waiting is unlikely to make things better. Addiction is a progressive disease — it does not resolve on its own.
+              If you are seeing several of these signs, waiting is unlikely to make things better. Addiction is a progressive disease, it does not resolve on its own.
             </p>
           </div>
         </div>
@@ -174,7 +174,7 @@ export default function InterventionGuidePage() {
                 },
                 {
                   title: "CRAFT (Community Reinforcement and Family Training)",
-                  desc: "CRAFT is not a single-event intervention — it is a skill-based program that teaches family members how to change their own behavior in ways that encourage their loved one to seek treatment. CRAFT helps families stop enabling, improve communication, take care of themselves, and strategically reinforce sober behavior while allowing natural consequences for substance use. Research shows CRAFT increases the likelihood of treatment entry to approximately 64-74%, significantly higher than traditional Al-Anon approaches.",
+                  desc: "CRAFT is not a single-event intervention, it is a skill-based program that teaches family members how to change their own behavior in ways that encourage their loved one to seek treatment. CRAFT helps families stop enabling, improve communication, take care of themselves, and strategically reinforce sober behavior while allowing natural consequences for substance use. Research shows CRAFT increases the likelihood of treatment entry to approximately 64-74%, significantly higher than traditional Al-Anon approaches.",
                 },
               ].map((item, i) => (
                 <div key={i} className="border-l-2 border-gold/40 pl-6">
@@ -207,7 +207,7 @@ export default function InterventionGuidePage() {
                 },
                 {
                   title: "2. Assemble the Right Team",
-                  desc: "Choose 4-8 people who are emotionally significant to the individual — parents, siblings, a close friend, a spouse, a mentor, or a respected colleague. Avoid including anyone who is actively using substances, has unresolved conflicts with the person, or is likely to become aggressive or overly emotional.",
+                  desc: "Choose 4-8 people who are emotionally significant to the individual, parents, siblings, a close friend, a spouse, a mentor, or a respected colleague. Avoid including anyone who is actively using substances, has unresolved conflicts with the person, or is likely to become aggressive or overly emotional.",
                 },
                 {
                   title: "3. Research Treatment Options",
@@ -246,7 +246,7 @@ export default function InterventionGuidePage() {
               Communication
             </span>
             <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4 mb-8">
-              What to Say — and What to Avoid
+              What to Say, and What to Avoid
             </h2>
             <div className="grid md:grid-cols-2 gap-8">
               <div>
@@ -261,7 +261,7 @@ export default function InterventionGuidePage() {
                     "\"I love you, and that's why I'm here.\"",
                     "\"I've seen how this has changed you, and it scares me.\"",
                     "\"I want to support you, and I've found a place that can help.\"",
-                    "\"This isn't about blame — it's about getting you the help you deserve.\"",
+                    "\"This isn't about blame, it's about getting you the help you deserve.\"",
                     "\"We've already taken care of the details. A bed is ready for you today.\"",
                     "Share specific, factual examples of how the addiction has affected you personally.",
                   ].map((item, i) => (
@@ -281,12 +281,12 @@ export default function InterventionGuidePage() {
                 </h3>
                 <div className="space-y-3">
                   {[
-                    "\"You're ruining everyone's life.\" — Focus on impact, not blame.",
-                    "\"If you loved us, you'd stop.\" — Addiction is not a choice or a reflection of love.",
-                    "\"You're a terrible parent/spouse/friend.\" — Attack the disease, not the person.",
-                    "\"This is your last chance.\" — Avoid ultimatums you cannot enforce.",
-                    "\"Why can't you just stop?\" — Minimizes the medical reality of addiction.",
-                    "Never threaten, scream, or use profanity — even if the person becomes hostile.",
+                    "\"You're ruining everyone's life.\", Focus on impact, not blame.",
+                    "\"If you loved us, you'd stop.\", Addiction is not a choice or a reflection of love.",
+                    "\"You're a terrible parent/spouse/friend.\", Attack the disease, not the person.",
+                    "\"This is your last chance.\", Avoid ultimatums you cannot enforce.",
+                    "\"Why can't you just stop?\", Minimizes the medical reality of addiction.",
+                    "Never threaten, scream, or use profanity, even if the person becomes hostile.",
                   ].map((item, i) => (
                     <div key={i} className="flex items-start gap-3 bg-white rounded-lg p-3 border border-gray-100">
                       <span className="w-2 h-2 bg-red-300 rounded-full mt-2 flex-shrink-0" />
@@ -311,13 +311,13 @@ export default function InterventionGuidePage() {
               What Happens Next
             </h2>
             <p className="text-gray-600 leading-relaxed mb-4">
-              If your loved one agrees to treatment, the transition should happen as quickly as possible — ideally the same day. This is why having a treatment center ready in advance is so critical. At Desert Recovery Centers, our admissions team can complete the intake process within hours, and most clients begin treatment within 48 hours of their first call.
+              If your loved one agrees to treatment, the transition should happen as quickly as possible, ideally the same day. This is why having a treatment center ready in advance is so critical. At Desert Recovery Centers, our admissions team can complete the intake process within hours, and most clients begin treatment within 48 hours of their first call.
             </p>
             <p className="text-gray-600 leading-relaxed mb-4">
-              If your loved one refuses, it is essential that the family follows through on the boundaries set during the intervention. This is not punishment — it is the removal of enabling behaviors that allow the addiction to continue. Many individuals who initially refuse ultimately enter treatment within days or weeks, once they experience the consequences of their family&apos;s new boundaries.
+              If your loved one refuses, it is essential that the family follows through on the boundaries set during the intervention. This is not punishment, it is the removal of enabling behaviors that allow the addiction to continue. Many individuals who initially refuse ultimately enter treatment within days or weeks, once they experience the consequences of their family&apos;s new boundaries.
             </p>
             <p className="text-gray-600 leading-relaxed">
-              Regardless of the outcome, every family member should seek their own support — whether through Al-Anon, family therapy, or individual counseling. Living with a loved one&apos;s addiction takes a profound toll, and you deserve help too.
+              Regardless of the outcome, every family member should seek their own support, whether through Al-Anon, family therapy, or individual counseling. Living with a loved one&apos;s addiction takes a profound toll, and you deserve help too.
             </p>
           </div>
         </div>

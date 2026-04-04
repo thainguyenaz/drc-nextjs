@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import { buildMetadata, BreadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Family Program — Desert Recovery Centers",
+  title: "Family Program, Desert Recovery Centers",
   description:
     "Family therapy and education program at Desert Recovery Centers. Structural family therapy, recovery coaching, and support for families navigating addiction and mental health treatment in Arizona.",
   path: "/treatment/family-program",
@@ -32,13 +32,13 @@ export default function FamilyProgramPage() {
               Healing Doesn&apos;t Happen in Isolation
             </h2>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              When someone you love is struggling with addiction or a mental health condition, the impact ripples through the entire family. Trust erodes, communication breaks down, and everyone develops their own coping mechanisms — some healthy, many not. Recovery that doesn&apos;t address these family dynamics is incomplete.
+              When someone you love is struggling with addiction or a mental health condition, the impact ripples through the entire family. Trust erodes, communication breaks down, and everyone develops their own coping mechanisms, some healthy, many not. Recovery that doesn&apos;t address these family dynamics is incomplete.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
               At Desert Recovery Centers, our Family Program brings loved ones into the treatment process through structured family therapy sessions, psychoeducation, and ongoing support. We use evidence-based approaches including Structural Family Therapy to help families understand the disease model of addiction, rebuild communication, establish healthy boundaries, and develop a shared recovery plan.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg">
-              Families are not the problem — they are part of the solution. Our clinical team works with your family to repair relationships and build the foundation for lasting recovery.
+              Families are not the problem, they are part of the solution. Our clinical team works with your family to repair relationships and build the foundation for lasting recovery.
             </p>
           </div>
         </div>

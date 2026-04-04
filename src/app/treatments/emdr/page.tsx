@@ -51,7 +51,7 @@ export default function EMDRPage() {
       <PageHero
         eyebrow="Treatment Modality"
         title="EMDR Therapy"
-        description="Eye Movement Desensitization and Reprocessing — unlocking the brain's natural ability to heal from trauma."
+        description="Eye Movement Desensitization and Reprocessing, unlocking the brain's natural ability to heal from trauma."
         bgImage="/images/general/DRC-Treatment-Therapies-BG-Fade.jpg"
       />
 
@@ -103,7 +103,7 @@ export default function EMDRPage() {
               EMDR is a powerful, extensively researched psychotherapy that enables people to heal from the symptoms and emotional distress resulting from disturbing life experiences. Recognized by the World Health Organization, the American Psychological Association, and the Department of Veterans Affairs as a frontline trauma treatment, EMDR has helped millions recover from events that once felt impossible to move past.
             </p>
             <p className="text-gray-600 leading-relaxed mb-4">
-              Unlike traditional talk therapy, EMDR does not require you to talk in detail about the traumatic event. Instead, it uses bilateral stimulation — typically guided eye movements — to activate the brain&apos;s natural information processing system, allowing traumatic memories to be reprocessed and stored in a way that no longer triggers overwhelming emotional responses.
+              Unlike traditional talk therapy, EMDR does not require you to talk in detail about the traumatic event. Instead, it uses bilateral stimulation, typically guided eye movements, to activate the brain&apos;s natural information processing system, allowing traumatic memories to be reprocessed and stored in a way that no longer triggers overwhelming emotional responses.
             </p>
             <p className="text-gray-600 leading-relaxed">
               At Desert Recovery Centers, EMDR is delivered exclusively by licensed clinical psychologists with specialized EMDR training, ensuring the highest standard of care for our clients.
@@ -261,7 +261,7 @@ export default function EMDRPage() {
             </article>
             <article className="border-l-2 border-gold/30 pl-5">
               <h3 className="text-forest font-semibold text-sm mb-1">How does EMDR work for addiction and mental health treatment?</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">EMDR activates the brain&apos;s natural information processing system through guided eye movements, tapping, or auditory tones while the client focuses on a traumatic memory. This allows disturbing memories to be reprocessed and stored in a way that no longer triggers overwhelming emotional responses — without requiring detailed verbal recounting of the trauma.</p>
+              <p className="text-gray-600 text-sm leading-relaxed">EMDR activates the brain&apos;s natural information processing system through guided eye movements, tapping, or auditory tones while the client focuses on a traumatic memory. This allows disturbing memories to be reprocessed and stored in a way that no longer triggers overwhelming emotional responses, without requiring detailed verbal recounting of the trauma.</p>
             </article>
             <article className="border-l-2 border-gold/30 pl-5">
               <h3 className="text-forest font-semibold text-sm mb-1">Who delivers EMDR at Desert Recovery Centers?</h3>
