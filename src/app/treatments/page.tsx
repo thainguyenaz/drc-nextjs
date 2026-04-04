@@ -4,6 +4,7 @@ import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import { BreadcrumbSchema, VideoSchemas } from "@/lib/seo";
+import YouTubeEmbed from "@/components/YouTubeEmbed";
 import { getPageMeta } from "@/data/page-metadata";
 
 const meta = getPageMeta("/treatments/");
@@ -91,6 +92,10 @@ export default function TreatmentsPage() {
           </div>
         </div>
       </section>
+      <div className="my-10 max-w-3xl mx-auto px-6">
+        <YouTubeEmbed youtubeId="SEZcflDyGOU" title="Treatment Programs at Desert Recovery Centers" />
+      </div>
+
       {/* ── DRC Levels of Care Overview ────────────────────────── */}
       <section className="py-16 md:py-24 bg-cream">
         <div className="max-w-4xl mx-auto px-6 text-center">

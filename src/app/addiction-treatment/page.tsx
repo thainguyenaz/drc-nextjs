@@ -12,6 +12,7 @@ import FAQSection from "@/components/FAQSection";
 import Breadcrumb from "@/components/Breadcrumb";
 import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
 import { getPageMeta } from "@/data/page-metadata";
+import YouTubeEmbed from "@/components/YouTubeEmbed";
 
 const meta = getPageMeta("/addiction-treatment/");
 
@@ -67,6 +68,10 @@ export default function AddictionTreatmentPage() {
           </div>
         </div>
       </section>
+      <div className="my-10 max-w-3xl mx-auto px-6">
+        <YouTubeEmbed youtubeId="THSeLEff0I4" title="Addiction Treatment Programs at Desert Recovery Centers" />
+      </div>
+
       <AddictionPrograms />
       <FAQSection faqs={faqData["addiction-treatment"]} />
       <CTASection />

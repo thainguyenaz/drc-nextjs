@@ -12,6 +12,7 @@ import FAQSection from "@/components/FAQSection";
 import Breadcrumb from "@/components/Breadcrumb";
 import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
 import { getPageMeta } from "@/data/page-metadata";
+import YouTubeEmbed from "@/components/YouTubeEmbed";
 
 const meta = getPageMeta("/mental-health/");
 
@@ -57,6 +58,12 @@ export default function MentalHealthPage() {
           </div>
         </div>
       </section>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-10 max-w-container mx-auto px-6">
+        <YouTubeEmbed youtubeId="s5Xb6AyDNS4" title="Mental Health Treatment at Desert Recovery Centers" />
+        <YouTubeEmbed youtubeId="NEGnf9I1K2E" title="Desert Recovery Centers Mental Health Approach" />
+        <YouTubeEmbed youtubeId="Q7hykWDiBSk" title="Dual Diagnosis Treatment at Desert Recovery Centers" />
+      </div>
+
       {/* ── Mental Health Video 1 ─────────────────────────────── */}
       <section className="py-16 md:py-24 bg-cream">
         <div className="max-w-4xl mx-auto px-6 text-center">

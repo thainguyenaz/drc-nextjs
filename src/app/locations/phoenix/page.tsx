@@ -15,6 +15,7 @@ import FAQSection from "@/components/FAQSection";
 import Breadcrumb from "@/components/Breadcrumb";
 import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
 import { getPageMeta } from "@/data/page-metadata";
+import FacilityVideoSection from "@/components/FacilityVideoSection";
 
 const meta = getPageMeta("/locations/phoenix/");
 
@@ -142,6 +143,17 @@ export default function PhoenixLocationPage() {
           </div>
         </div>
       </section>
+
+      <FacilityVideoSection
+        youtubeId="rMkEYhoW-kE"
+        title="Desert Recovery Centers Phoenix Facility Tour"
+        videoTitle="Phoenix Recovery Center Tour"
+        location="Phoenix, Arizona"
+        address="1623 W Moody Trail, Phoenix, AZ 85041"
+        phone="(623) 257-5384"
+        amenities={["Private Bedrooms", "Group Therapy Rooms", "Dining Room", "Living Areas", "Kitchen", "Outdoor Space"]}
+        ctaPhone="6232575384"
+      />
 
       {/* Contact & Services */}
       <section className="py-16 md:py-24 bg-cream">

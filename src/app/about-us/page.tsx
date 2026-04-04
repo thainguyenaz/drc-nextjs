@@ -6,6 +6,7 @@ import Testimonials from "@/components/Testimonials";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import { BreadcrumbSchema, VideoSchemas } from "@/lib/seo";
+import YouTubeEmbed from "@/components/YouTubeEmbed";
 import { getPageMeta } from "@/data/page-metadata";
 
 const meta = getPageMeta("/about-us/");
@@ -71,6 +72,10 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      <div className="my-10 max-w-3xl mx-auto px-6">
+        <YouTubeEmbed youtubeId="bqDzL4O3WDE" title="About Desert Recovery Centers" />
+      </div>
 
       <WhyChooseUs />
       <Testimonials />

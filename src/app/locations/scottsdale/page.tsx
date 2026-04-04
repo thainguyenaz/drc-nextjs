@@ -18,6 +18,7 @@ import FAQSection from "@/components/FAQSection";
 import Breadcrumb from "@/components/Breadcrumb";
 import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
 import { getPageMeta } from "@/data/page-metadata";
+import FacilityVideoSection from "@/components/FacilityVideoSection";
 
 const meta = getPageMeta("/locations/scottsdale/");
 
@@ -135,6 +136,17 @@ export default function ScottsdaleLocationPage() {
           </div>
         </div>
       </section>
+
+      <FacilityVideoSection
+        youtubeId="7qvyphmKNxg"
+        title="Desert Recovery Centers Scottsdale Facility Tour"
+        videoTitle="Scottsdale Recovery Center Tour"
+        location="North Scottsdale, Arizona"
+        address="23222 N Church Rd, Scottsdale, AZ 85255"
+        phone="(480) 931-3617"
+        amenities={["Pool", "Private Suites", "Gym", "Game Room", "Massage Therapy", "Yoga", "SoftWave Therapy", "Outdoor Recreation", "Chiropractic Care"]}
+        ctaPhone="4809313617"
+      />
 
       {/* Collision Animation */}
       <section className="py-16 md:py-24 bg-cream overflow-hidden">

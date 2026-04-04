@@ -18,6 +18,7 @@ import SchemaScript from "@/components/SchemaScript";
 import FAQSection from "@/components/FAQSection";
 import Breadcrumb from "@/components/Breadcrumb";
 import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
+import FacilityVideoSection from "@/components/FacilityVideoSection";
 
 const meta = getPageMeta("/locations/glendale/");
 
@@ -135,6 +136,18 @@ export default function GlendaleLocationPage() {
           </div>
         </div>
       </section>
+
+      <FacilityVideoSection
+        youtubeId="00ZDcQjXoE8"
+        title="Desert Recovery Centers Glendale Facility Tour"
+        videoTitle="Glendale Recovery Center Tour"
+        location="Glendale, Arizona"
+        address="8105 W Frier Dr, Glendale, AZ 85303"
+        phone="(623) 323-1012"
+        sqft="7,500 sq ft"
+        amenities={["Pool", "Tennis Court", "Basketball Court", "Massage Therapy", "Gym", "Group Therapy Rooms", "Private Bedrooms", "Outdoor Recreation"]}
+        ctaPhone="6233231012"
+      />
 
       {/* Collision Animation */}
       <section className="py-16 md:py-24 bg-cream overflow-hidden">

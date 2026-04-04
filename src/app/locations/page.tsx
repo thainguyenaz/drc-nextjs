@@ -5,6 +5,7 @@ import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import { buildMetadata, BreadcrumbSchema } from "@/lib/seo";
+import FacilityVideoSection from "@/components/FacilityVideoSection";
 
 export const metadata: Metadata = buildMetadata({
   title: "Our Locations, Desert Recovery Centers",
@@ -96,6 +97,44 @@ export default function LocationsPage() {
           </div>
         </div>
       </section>
+
+      <FacilityVideoSection
+        youtubeId="00ZDcQjXoE8"
+        title="Desert Recovery Centers Glendale Facility Tour"
+        videoTitle="Glendale Recovery Center Tour"
+        location="Glendale, Arizona"
+        address="8105 W Frier Dr, Glendale, AZ 85303"
+        phone="(623) 323-1012"
+        sqft="7,500 sq ft"
+        amenities={["Pool", "Tennis Court", "Basketball Court", "Massage Therapy", "Gym", "Group Therapy Rooms", "Private Bedrooms", "Outdoor Recreation"]}
+        ctaPhone="6233231012"
+      />
+
+      <hr className="border-gray-200 my-8" />
+
+      <FacilityVideoSection
+        youtubeId="7qvyphmKNxg"
+        title="Desert Recovery Centers Scottsdale Facility Tour"
+        videoTitle="Scottsdale Recovery Center Tour"
+        location="North Scottsdale, Arizona"
+        address="23222 N Church Rd, Scottsdale, AZ 85255"
+        phone="(480) 931-3617"
+        amenities={["Pool", "Private Suites", "Gym", "Game Room", "Massage Therapy", "Yoga", "SoftWave Therapy", "Outdoor Recreation", "Chiropractic Care"]}
+        ctaPhone="4809313617"
+      />
+
+      <hr className="border-gray-200 my-8" />
+
+      <FacilityVideoSection
+        youtubeId="rMkEYhoW-kE"
+        title="Desert Recovery Centers Phoenix Facility Tour"
+        videoTitle="Phoenix Recovery Center Tour"
+        location="Phoenix, Arizona"
+        address="1623 W Moody Trail, Phoenix, AZ 85041"
+        phone="(623) 257-5384"
+        amenities={["Private Bedrooms", "Group Therapy Rooms", "Dining Room", "Living Areas", "Kitchen", "Outdoor Space"]}
+        ctaPhone="6232575384"
+      />
 
       <CTASection />
       <Footer />
