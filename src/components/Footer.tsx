@@ -23,6 +23,7 @@ const footerLinks = {
     { label: "Residential", href: "/treatments" },
     { label: "PHP Program", href: "/treatments" },
     { label: "IOP Program", href: "/treatments" },
+    { label: "PHP / IOP Phoenix", href: "/locations/phoenix-php-iop" },
     { label: "CBT Therapy", href: "/treatments/cbt" },
     { label: "DBT Therapy", href: "/treatments/dbt" },
     { label: "EMDR Therapy", href: "/treatments/emdr" },

@@ -42,6 +42,7 @@ const navLinks = [
     href: "/treatments",
     image: "/images/general/DRC-TREATMENTS.jpg",
     children: [
+      { label: "PHP / IOP", href: "/locations/phoenix-php-iop" },
       { label: "CBT", href: "/treatments/cbt" },
       { label: "DBT", href: "/treatments/dbt" },
       { label: "EMDR", href: "/treatments/emdr" },
