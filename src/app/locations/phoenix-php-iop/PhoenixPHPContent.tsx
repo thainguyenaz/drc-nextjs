@@ -572,7 +572,7 @@ export default function PhoenixPHPContent() {
             <ScrollReveal direction="left">
               <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-xl">
                 <Image
-                  src="/images/locations/phoenix/phoenix-therapy-room.jpg"
+                  src="/images/locations/phoenix/phoenix-medical-room.jpg"
                   alt="TMS therapy suite at Desert Recovery Centers Phoenix PHP IOP treatment center"
                   fill
                   className="object-cover"
