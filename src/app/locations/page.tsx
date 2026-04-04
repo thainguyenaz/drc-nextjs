@@ -11,7 +11,7 @@ import { buildMetadata, BreadcrumbSchema } from "@/lib/seo";
 export const metadata: Metadata = buildMetadata({
   title: "Our Locations — Desert Recovery Centers",
   description:
-    "Desert Recovery Centers operates three locations across Arizona: Glendale residential, Scottsdale residential, and Phoenix PHP/IOP/TMS.",
+    "Desert Recovery Centers operates three locations across Arizona: Glendale residential, Scottsdale residential, and Phoenix PHP / IOP / TMS.",
   path: "/locations",
 });
 
@@ -46,17 +46,17 @@ const locations = [
     videoId: "7qvyphmKNxg",
   },
   {
-    name: "Phoenix",
+    name: "Phoenix PHP / IOP",
     label: "PHOENIX, ARIZONA",
     address: "4160 N. 108th Ave, Phoenix, AZ 85037",
     phone: "(623) 257-5384",
     phoneTel: "+16232575384",
     description:
-      "Outpatient addiction and mental health treatment — PHP, IOP, OP, and NeuroStar TMS therapy.",
+      "Outpatient addiction and mental health treatment, PHP, IOP, OP, and NeuroStar TMS therapy. The only integrated TMS program in west Phoenix.",
     services: ["PHP", "IOP", "OP", "TMS Therapy"],
-    amenities: ["Treatment Rooms", "Group Therapy Space", "Game Room", "Kitchen"],
+    amenities: ["Treatment Rooms", "Group Therapy Space", "TMS Suite", "Kitchen"],
     image: "/images/locations/phoenix/phoenix-lobby-2.jpg",
-    href: "/locations/phoenix",
+    href: "/locations/phoenix-php-iop",
     videoId: "rMkEYhoW-kE",
   },
 ];
@@ -209,7 +209,7 @@ export default function LocationsPage() {
                     Scottsdale
                   </th>
                   <th className="text-center text-white font-display font-semibold text-sm px-6 py-4 rounded-tr-xl">
-                    Phoenix
+                    Phoenix PHP / IOP
                   </th>
                 </tr>
               </thead>

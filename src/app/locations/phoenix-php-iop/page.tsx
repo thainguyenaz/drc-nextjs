@@ -1,144 +1,323 @@
 import { Metadata } from "next";
-import Link from "next/link";
 import Navigation from "@/components/Navigation";
 import PageHero from "@/components/PageHero";
 import ConditionFAQ from "@/components/ConditionFAQ";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { LocalBusinessSchema, BreadcrumbSchema, InlineFAQSchema, VideoSchemas } from "@/lib/seo";
-import { buildMetadata } from "@/lib/seo";
+import { InlineFAQSchema, SpeakableSchema } from "@/lib/seo";
+import AEOBlock from "@/components/AEOBlock";
+import PhotoGallery from "@/components/PhotoGallery";
+import SchemaScript from "@/components/SchemaScript";
+import Breadcrumb from "@/components/Breadcrumb";
+import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
+import PhoenixPHPContent from "./PhoenixPHPContent";
 
-export const metadata: Metadata = buildMetadata({
-  title: "Phoenix PHP/IOP Center — Desert Recovery Centers",
+const SITE_URL = "https://www.desertrecoverycenters.com";
+
+export const metadata: Metadata = {
+  title: "Phoenix PHP / IOP Treatment Center | Desert Recovery Centers",
   description:
-    "PHP, IOP, OP, and TMS therapy at 4160 N. 108th Ave, Phoenix, AZ 85037. Outpatient addiction and mental health treatment. Call (623) 257-5384.",
-  path: "/locations/phoenix-php-iop",
-});
-
-const services = [
-  {
-    name: "PHP — Partial Hospitalization",
-    desc: "Structured daily treatment 5-6 hours per day, 5 days per week. Intensive clinical programming including group therapy, individual therapy, and psychiatric care.",
+    "Desert Recovery Centers Phoenix offers Partial Hospitalization (PHP), Intensive Outpatient (IOP), Outpatient (OP), and TMS therapy at 4160 N. 108th Ave, Phoenix, AZ 85037. Joint Commission accredited. Insurance accepted. Call 24/7.",
+  alternates: { canonical: `${SITE_URL}/locations/phoenix-php-iop` },
+  openGraph: {
+    title: "Phoenix PHP / IOP Treatment Center | Desert Recovery Centers",
+    description:
+      "Desert Recovery Centers Phoenix offers Partial Hospitalization (PHP), Intensive Outpatient (IOP), Outpatient (OP), and TMS therapy at 4160 N. 108th Ave, Phoenix, AZ 85037. Joint Commission accredited. Insurance accepted. Call 24/7.",
+    url: `${SITE_URL}/locations/phoenix-php-iop`,
+    images: [
+      {
+        url: `${SITE_URL}/images/locations/phoenix/phoenix-lobby-2.jpg`,
+        alt: "Desert Recovery Centers Phoenix PHP IOP treatment center lobby",
+      },
+    ],
+    siteName: "Desert Recovery Centers",
+    locale: "en_US",
+    type: "website",
   },
-  {
-    name: "IOP — Intensive Outpatient",
-    desc: "3 hours per day, 3-5 days per week. Flexible scheduling for clients transitioning from PHP or residential care.",
+  twitter: {
+    card: "summary_large_image",
+    title: "Phoenix PHP / IOP Treatment Center | Desert Recovery Centers",
+    description:
+      "Desert Recovery Centers Phoenix offers PHP, IOP, OP, and TMS therapy at 4160 N. 108th Ave, Phoenix, AZ 85037. Joint Commission accredited.",
+    images: [`${SITE_URL}/images/locations/phoenix/phoenix-lobby-2.jpg`],
   },
-  {
-    name: "OP — Outpatient",
-    desc: "1-2 sessions per week for ongoing support and relapse prevention.",
-  },
-  {
-    name: "TMS — Transcranial Magnetic Stimulation",
-    desc: "FDA-cleared non-invasive brain stimulation therapy for treatment-resistant depression and mental health conditions.",
-  },
-];
+  keywords: [
+    "PHP Phoenix AZ",
+    "IOP Phoenix AZ",
+    "outpatient treatment Phoenix",
+    "TMS therapy Phoenix",
+    "mental health treatment Phoenix",
+    "addiction treatment Phoenix",
+    "Desert Recovery Centers Phoenix",
+    "partial hospitalization Phoenix",
+    "intensive outpatient Phoenix",
+    "dual diagnosis Phoenix",
+  ],
+};
 
 const faqs = [
   {
-    q: "What is PHP treatment?",
-    a: "Partial Hospitalization Program (PHP) provides structured daily clinical treatment 5-6 hours per day, 5 days per week, offering intensive care while clients live at home or in sober living.",
+    q: "What is a Partial Hospitalization Program (PHP)?",
+    a: "PHP is the most intensive outpatient level of care, meeting 5 to 6 hours per day, 5 days per week. At Desert Recovery Centers Phoenix, PHP includes group therapy, individual therapy, psychiatric care, and medication management. It is built for individuals who need significant daily clinical support without overnight residential stay, and is commonly used as a step down from inpatient treatment or as a first level of care for moderate to severe mental health or substance use disorders.",
   },
   {
-    q: "What is the address of the Phoenix PHP/IOP center?",
-    a: "Our Phoenix PHP/IOP Center is located at 4160 N. 108th Ave, Phoenix, AZ 85037.",
+    q: "What is an Intensive Outpatient Program (IOP)?",
+    a: "IOP meets 3 hours per day, 3 to 5 days per week. It delivers meaningful therapy, including group sessions and individual appointments, while allowing you to maintain your daily responsibilities like work, school, and family. IOP is commonly used as a step down from PHP or as a primary level of care for clients with a stable home environment and the motivation to do the work.",
   },
   {
-    q: "What programs are available at the Phoenix location?",
-    a: "The Phoenix location offers PHP, IOP, Outpatient programs, and TMS therapy for addiction and mental health.",
+    q: "How is outpatient treatment different from residential treatment?",
+    a: "Residential treatment means you live at the facility full time, typically for 30 to 90 days. Outpatient treatment, whether PHP, IOP, or OP, means you come in for scheduled programming and go home each day. Both involve serious clinical care. The difference is structure and setting. Some people need the containment of residential first. Others can begin with outpatient. Our admissions team helps you figure out which is right for you.",
   },
   {
-    q: "Do you accept insurance at the Phoenix location?",
-    a: "Yes, we are in-network with most major insurance providers including Aetna, Blue Cross Blue Shield, Cigna, and UnitedHealthcare. Coverage varies by plan. Contact us to verify your benefits.",
+    q: "Does Desert Recovery Centers accept insurance?",
+    a: "Yes. We accept most major commercial insurance plans including Blue Cross Blue Shield, Aetna, Cigna, UnitedHealthcare, and many others. Our team verifies your benefits before you start, at no cost to you, and walks you through exactly what is covered. Call (623) 257-5384 or use our online verification tool to get started.",
   },
   {
-    q: "Is TMS therapy available at Phoenix?",
-    a: "Yes, our Phoenix center offers NeuroStar TMS therapy — FDA-cleared for major depressive disorder, anxious depression, OCD, and adolescents ages 15 and older. TMS is a safe, non-invasive treatment that does not require medication or sedation.",
+    q: "What is TMS therapy and is it available at the Phoenix location?",
+    a: "Yes. TMS stands for Transcranial Magnetic Stimulation. It is an FDA cleared, non-invasive treatment that uses magnetic pulses to stimulate specific brain regions involved in mood regulation. It is used for clients with treatment resistant depression, anxious depression, and OCD, and is FDA cleared for adolescents ages 15 and older. Sessions take about 19 minutes, require no sedation, and have no systemic side effects. Our Phoenix location has a dedicated NeuroStar TMS suite integrated into our outpatient programming.",
+  },
+  {
+    q: "What conditions do you treat at the Phoenix PHP / IOP center?",
+    a: "We treat depression, anxiety disorders, PTSD and trauma, bipolar disorder, OCD, and co-occurring substance use disorders. All care is individualized, evidence based, and supervised by licensed clinicians. We are Joint Commission accredited, which means our standards of care have been independently verified.",
+  },
+  {
+    q: "What is the difference between PHP and IOP?",
+    a: "PHP is more intensive. It meets 5 to 6 hours per day, 5 days per week, and is appropriate for clients who need daily clinical support. IOP meets 3 hours per day, 3 to 5 days per week, and is better suited for clients who are more stabilized or who have a strong support system at home. Our clinical team recommends the right level during your admissions assessment, and your level of care adjusts as you progress.",
+  },
+  {
+    q: "How do I get started?",
+    a: "Call (623) 257-5384 any time. Our admissions team picks up 24 hours a day, conducts a brief phone assessment, verifies your insurance, and gets you scheduled. Most clients start within 48 hours. If you are not ready to call, you can also request a callback or start your insurance verification online.",
+  },
+  {
+    q: "Does the Phoenix location offer residential treatment?",
+    a: "No. The Phoenix center at 4160 N. 108th Ave is an outpatient facility offering PHP, IOP, OP, and TMS therapy. For residential treatment, Desert Recovery Centers operates separate luxury facilities in Glendale and Scottsdale, Arizona. Many clients complete residential care at one of those campuses and then transition to the Phoenix outpatient programs to continue their recovery while returning to daily life.",
+  },
+  {
+    q: "How quickly can I start treatment?",
+    a: "Most clients begin treatment within 48 hours of their first call. Once your clinical assessment is complete and your insurance is verified, we get you on the schedule fast. If you are in crisis or need to start sooner, tell us. We will do everything we can to move immediately.",
   },
 ];
+
+const gallery = [
+  { src: "/images/locations/phoenix/phoenix-lobby-2.jpg", alt: "Modern lobby at Desert Recovery Centers Phoenix PHP IOP treatment center" },
+  { src: "/images/locations/phoenix/phoenix-reception-2.jpg", alt: "Reception desk at Desert Recovery Centers Phoenix PHP IOP treatment center" },
+  { src: "/images/locations/phoenix/phoenix-reception-1.jpg", alt: "Reception area entrance at Desert Recovery Centers Phoenix PHP IOP treatment center" },
+  { src: "/images/locations/phoenix/phoenix-lobby-1.jpg", alt: "Waiting area at Desert Recovery Centers Phoenix PHP IOP treatment center" },
+  { src: "/images/locations/phoenix/phoenix-lobby-lounge.jpg", alt: "Lobby lounge at Desert Recovery Centers Phoenix PHP IOP treatment center" },
+  { src: "/images/locations/phoenix/phoenix-hallway.jpg", alt: "Hallway with artwork at Desert Recovery Centers Phoenix PHP IOP treatment center" },
+  { src: "/images/locations/phoenix/phoenix-game-room-1.jpg", alt: "Game room with pool table at Desert Recovery Centers Phoenix PHP IOP treatment center" },
+  { src: "/images/locations/phoenix/phoenix-game-room-2.jpg", alt: "Recreation room at Desert Recovery Centers Phoenix PHP IOP treatment center" },
+  { src: "/images/locations/phoenix/phoenix-classroom-1.jpg", alt: "Classroom at Desert Recovery Centers Phoenix PHP IOP treatment center" },
+  { src: "/images/locations/phoenix/phoenix-group-room-2.jpg", alt: "Group therapy room at Desert Recovery Centers Phoenix PHP IOP treatment center" },
+  { src: "/images/locations/phoenix/phoenix-therapy-office-2.jpg", alt: "Therapy office at Desert Recovery Centers Phoenix PHP IOP treatment center" },
+  { src: "/images/locations/phoenix/phoenix-therapy-office-3.jpg", alt: "Private therapy office at Desert Recovery Centers Phoenix PHP IOP treatment center" },
+  { src: "/images/locations/phoenix/phoenix-medical-room.jpg", alt: "Medical room at Desert Recovery Centers Phoenix PHP IOP treatment center" },
+  { src: "/images/locations/phoenix/phoenix-kitchen-2.jpg", alt: "Kitchen at Desert Recovery Centers Phoenix PHP IOP treatment center" },
+  { src: "/images/locations/phoenix/phoenix-therapy-room.jpg", alt: "Therapy room at Desert Recovery Centers Phoenix PHP IOP treatment center" },
+  { src: "/images/locations/phoenix/phoenix-main-room.jpg", alt: "Main room at Desert Recovery Centers Phoenix PHP IOP treatment center" },
+];
+
+const clinicSchema = {
+  "@context": "https://schema.org",
+  "@type": ["MedicalClinic", "LocalBusiness"],
+  "@id": `${SITE_URL}/locations/phoenix-php-iop#clinic`,
+  name: "Desert Recovery Centers Phoenix PHP / IOP",
+  alternateName: "Desert Recovery Centers Phoenix",
+  description:
+    "Joint Commission accredited behavioral health treatment center offering PHP, IOP, OP, and TMS therapy in Phoenix, AZ.",
+  url: `${SITE_URL}/locations/phoenix-php-iop`,
+  telephone: "+16232575384",
+  email: "contact@desertrecoverycenters.com",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "4160 N. 108th Ave",
+    addressLocality: "Phoenix",
+    addressRegion: "AZ",
+    postalCode: "85037",
+    addressCountry: "US",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 33.4743,
+    longitude: -112.3012,
+  },
+  openingHoursSpecification: {
+    "@type": "OpeningHoursSpecification",
+    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+    opens: "00:00",
+    closes: "23:59",
+  },
+  priceRange: "$$$$",
+  paymentAccepted: "Insurance, Private Pay",
+  medicalSpecialty: ["Psychiatry", "Addiction Medicine"],
+  availableService: [
+    {
+      "@type": "MedicalTherapy",
+      name: "Partial Hospitalization Program (PHP)",
+      description: "5 to 6 hours per day, 5 days per week. Group therapy, individual therapy, psychiatric care, and medication management.",
+    },
+    {
+      "@type": "MedicalTherapy",
+      name: "Intensive Outpatient Program (IOP)",
+      description: "3 hours per day, 3 to 5 days per week. Flexible scheduling for clients transitioning from PHP or residential care.",
+    },
+    {
+      "@type": "MedicalTherapy",
+      name: "Outpatient Program (OP)",
+      description: "1 to 2 sessions per week for ongoing support and relapse prevention.",
+    },
+    {
+      "@type": "MedicalTherapy",
+      name: "TMS Therapy",
+      description: "FDA cleared NeuroStar TMS for depression, anxious depression, OCD, and adolescents ages 15 and older.",
+    },
+  ],
+  hasCredential: {
+    "@type": "EducationalOccupationalCredential",
+    name: "Joint Commission Accreditation",
+  },
+  areaServed: ["Phoenix", "Glendale", "Peoria", "Goodyear", "Avondale", "Tolleson", "Surprise"],
+  parentOrganization: {
+    "@type": "Organization",
+    name: "Desert Recovery Centers",
+    url: SITE_URL,
+  },
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is a Partial Hospitalization Program (PHP) in Phoenix?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "A Partial Hospitalization Program (PHP) is a structured outpatient level of care where clients attend treatment 5 to 6 hours per day, 5 days per week. At Desert Recovery Centers Phoenix, PHP includes group therapy, individual therapy, psychiatric care, and medication management. It is designed for individuals who need intensive clinical support but do not require overnight residential care. PHP is often used as a step down from inpatient treatment or as a direct entry point for those with moderate to severe mental health or substance use disorders.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is an Intensive Outpatient Program (IOP) in Phoenix?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "An Intensive Outpatient Program (IOP) at Desert Recovery Centers Phoenix meets 3 hours per day, 3 to 5 days per week. IOP provides meaningful clinical programming, including group and individual therapy, while allowing clients to maintain daily responsibilities like work, school, or family. It is commonly used as a step down from PHP or residential treatment, or as a primary level of care for clients with a supportive home environment.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is the address of the Desert Recovery Centers Phoenix PHP / IOP location?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The Desert Recovery Centers Phoenix PHP / IOP center is located at 4160 N. 108th Ave, Phoenix, AZ 85037. You can reach the facility at (623) 257-5384. Admissions support is available 24 hours a day, 7 days a week.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Does Desert Recovery Centers Phoenix accept insurance?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. Desert Recovery Centers accepts most major commercial insurance plans including Blue Cross Blue Shield, Aetna, Cigna, UnitedHealthcare, and others. Our admissions team verifies your benefits at no cost before treatment begins. Call (623) 257-5384 or visit our website to start a free insurance verification.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is TMS therapy available at the Phoenix location?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. The Phoenix center houses a dedicated NeuroStar TMS therapy suite. NeuroStar is the only TMS system FDA cleared for depression, anxious depression, OCD, and adolescents ages 15 and older. TMS is non-invasive, requires no sedation, and sessions take approximately 19 minutes. It can be combined with PHP, IOP, or outpatient programming.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is the difference between PHP and IOP treatment?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "PHP meets 5 to 6 hours per day, 5 days per week and is the more intensive option, appropriate for individuals who need significant daily clinical support. IOP meets 3 hours per day, 3 to 5 days per week, offering more schedule flexibility while still delivering meaningful therapy. Both include group therapy, individual therapy, and psychiatric support at Desert Recovery Centers Phoenix.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What mental health conditions are treated at the Phoenix PHP / IOP center?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Desert Recovery Centers Phoenix treats depression, anxiety disorders, PTSD and trauma, bipolar disorder, OCD, and co-occurring substance use disorders. All programming is individualized, evidence based, and clinically supervised. The facility is Joint Commission accredited.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How do I get admitted to the Phoenix PHP or IOP program?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Call (623) 257-5384 any time, day or night. Our admissions team conducts a brief clinical assessment by phone, verifies your insurance, and answers all your questions. Most clients are able to begin treatment within 48 hours of their first call.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Does the Phoenix location offer residential treatment?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "No. The Phoenix center specializes in outpatient services: PHP, IOP, OP, and TMS therapy. For residential (inpatient) treatment, Desert Recovery Centers operates separate facilities in Glendale and Scottsdale, Arizona. Clients often complete residential care and then step down to the Phoenix outpatient programs.",
+      },
+    },
+  ],
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+    { "@type": "ListItem", position: 2, name: "Locations", item: `${SITE_URL}/locations` },
+    { "@type": "ListItem", position: 3, name: "Phoenix PHP / IOP", item: `${SITE_URL}/locations/phoenix-php-iop` },
+  ],
+};
 
 export default function PhoenixPhpIopPage() {
   return (
     <>
+      <SchemaScript schema={[clinicSchema, faqSchema, breadcrumbSchema]} />
       <InlineFAQSchema items={faqs} />
-      <LocalBusinessSchema index={2} />
-      <BreadcrumbSchema items={[{ name: "Facilities", path: "/locations" }, { name: "Phoenix PHP/IOP", path: "/locations/phoenix-php-iop" }]} />
-      <VideoSchemas path="/locations/phoenix/" />
+      <SpeakableSchema url="/locations/phoenix-php-iop" cssSelectors={["[data-speakable]"]} />
       <Navigation />
+      <Breadcrumb items={getBreadcrumbsFromPathname("/locations/phoenix-php-iop")} />
       <PageHero
         eyebrow="Phoenix, Arizona"
-        title="Phoenix PHP / IOP Center"
-        description="Partial Hospitalization, Intensive Outpatient, Outpatient, and TMS Therapy Programs"
-        bgImage="/images/general/accom-group-room.jpg"
+        title="Real Treatment. Real Life. All at Once."
+        description="Most people cannot put their life on hold. You still have a job, a family, responsibilities that do not stop because you are struggling. Our Phoenix center was built for exactly that, delivering the same clinical depth as residential treatment, structured around the life you still have to live."
+        bgImage="/images/locations/phoenix/phoenix-lobby-2.jpg"
       />
 
-      {/* Overview */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="max-w-container mx-auto px-6">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mb-6">
-              Outpatient Treatment in Phoenix
-            </h2>
-            <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              Our Phoenix center at 4160 N. 108th Ave provides structured outpatient programming for clients stepping down from residential treatment or entering care directly. PHP, IOP, and OP programs are designed to deliver clinical depth while allowing you to maintain daily responsibilities.
-            </p>
-            <p className="text-gray-600 leading-relaxed text-lg mb-6">
-              This location also houses our NeuroStar TMS therapy suite — the only TMS system FDA-cleared for depression, anxious depression, OCD, and adolescents ages 15 and older.
-            </p>
-            <div className="bg-cream border border-gold/30 rounded-xl p-6">
-              <p className="text-forest text-sm leading-relaxed">
-                <strong>Looking for residential treatment?</strong> This location offers PHP, IOP, OP, and TMS therapy. For residential treatment, please see our{" "}
-                <Link href="/locations/glendale" className="text-gold font-semibold hover:underline">Glendale</Link> or{" "}
-                <Link href="/locations/scottsdale" className="text-gold font-semibold hover:underline">Scottsdale</Link> facilities.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* All animated content sections */}
+      <PhoenixPHPContent />
 
-      {/* Contact & Services */}
-      <section className="py-16 md:py-24 bg-cream">
-        <div className="max-w-container mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-start max-w-5xl mx-auto">
-            <div>
-              <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
-                Our Phoenix Center
-              </span>
-              <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4 mb-6">
-                Contact & Location Details
-              </h2>
-              <div className="bg-white rounded-xl p-6 mb-6">
-                <h3 className="font-semibold text-forest mb-3">Address</h3>
-                <p className="text-gray-600 text-sm">4160 N. 108th Ave</p>
-                <p className="text-gray-600 text-sm">Phoenix, AZ 85037</p>
-                <a href="tel:+16232575384" className="text-gold font-semibold text-xl block mt-3">(623) 257-5384</a>
-                <p className="text-gray-500 text-xs mt-2">Admissions available 24/7</p>
-              </div>
-              <div>
-                <h3 className="font-display text-xl text-forest font-semibold mb-4">Services</h3>
-                <div className="flex flex-wrap gap-3">
-                  {["PHP", "IOP", "OP", "TMS Therapy"].map((p) => (
-                    <span key={p} className="text-sm bg-sage/10 text-sage font-medium px-4 py-2 rounded-full">{p}</span>
-                  ))}
-                </div>
-              </div>
-            </div>
-            <div>
-              <h3 className="font-display text-xl text-forest font-semibold mb-6">Programs Available</h3>
-              <div className="space-y-4">
-                {services.map((svc) => (
-                  <div key={svc.name} className="bg-white rounded-xl p-5 border border-gray-100">
-                    <h4 className="font-display text-base text-forest font-semibold mb-2">{svc.name}</h4>
-                    <p className="text-gray-600 text-sm leading-relaxed">{svc.desc}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Photo Gallery (uses yet-another-react-lightbox) */}
+      <PhotoGallery photos={gallery} title="See the Space" eyebrow="Our Facility" />
 
+      {/* FAQ Accordion */}
       <ConditionFAQ items={faqs} />
+
+      {/* AEO Blocks */}
+      <AEOBlock
+        entries={[
+          {
+            question: "Is there a Desert Recovery Centers PHP / IOP center in Phoenix?",
+            answer:
+              "Yes. Desert Recovery Centers operates a dedicated outpatient treatment center at 4160 N. 108th Ave, Phoenix, AZ 85037. This location offers Partial Hospitalization (PHP), Intensive Outpatient (IOP), Outpatient (OP), and NeuroStar TMS therapy. It is Joint Commission accredited and accepts most major insurance plans. Call (623) 257-5384 for admissions.",
+          },
+          {
+            question: "What outpatient mental health treatment is available in Phoenix, Arizona?",
+            answer:
+              "Desert Recovery Centers Phoenix offers PHP (5 to 6 hours per day, 5 days per week), IOP (3 hours per day, 3 to 5 days per week), and OP (1 to 2 sessions per week). Treatment covers depression, anxiety, PTSD, bipolar disorder, OCD, and co-occurring substance use disorders. NeuroStar TMS therapy is also available on site for treatment resistant depression, anxious depression, and OCD.",
+          },
+          {
+            question: "Does Desert Recovery Centers Phoenix accept insurance?",
+            answer:
+              "Yes. Desert Recovery Centers accepts most major commercial insurance plans including Blue Cross Blue Shield, Aetna, Cigna, UnitedHealthcare, and others. Benefits are verified at no cost before treatment begins. Call (623) 257-5384 for a free insurance check.",
+          },
+        ]}
+      />
+
       <CTASection />
       <Footer />
     </>
