@@ -15,6 +15,7 @@ import FAQSection from "@/components/FAQSection";
 import Breadcrumb from "@/components/Breadcrumb";
 import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
 import Citations from "@/components/Citations";
+import YouTubeEmbed from "@/components/YouTubeEmbed";
 import { getPageMeta } from "@/data/page-metadata";
 
 const meta = getPageMeta("/addiction/fentanyl-addiction-treatment/");
@@ -174,15 +175,7 @@ export default function FentanylAddictionPage() {
           <span className="text-gold font-body text-sm tracking-[0.2em] uppercase font-medium">Expert Insight</span>
           <div className="w-[60px] h-0.5 bg-gold mx-auto mt-4 mb-4" />
           <h2 className="font-display text-3xl md:text-4xl text-white font-semibold mb-10">What Makes Fentanyl Withdrawal Uniquely Dangerous?</h2>
-          <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-xl ring-1 ring-white/10">
-            <iframe
-              src="https://www.youtube.com/embed/TlAJvaoXrlw?rel=0"
-              title="What Makes Fentanyl Withdrawal Uniquely Dangerous Compared to Other Opioids"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="absolute inset-0 w-full h-full border-0"
-            />
-          </div>
+          <YouTubeEmbed youtubeId="TlAJvaoXrlw" title="What Makes Fentanyl Withdrawal Uniquely Dangerous Compared to Other Opioids" />
         </div>
       </section>
 

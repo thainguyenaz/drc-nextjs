@@ -92,14 +92,15 @@ export function LocalBusinessSchema({ index }: { index: number }) {
   const city = parts[1];
   const stateZip = parts[2] ?? "AZ";
   const [state, zip] = stateZip.split(" ");
+  const slug = city.toLowerCase().replace(/\s+/g, "-");
 
   return ld({
     "@context": "https://schema.org",
     "@type": ["LocalBusiness", "MedicalClinic"],
-    "@id": `${SITE_URL}/facilities/${loc.name.toLowerCase()}`,
-    name: `Desert Recovery Centers - ${loc.name}`,
+    "@id": `${SITE_URL}/locations/${slug}`,
+    name: `Desert Recovery Centers - ${city}`,
     image: `${SITE_URL}${loc.image}`,
-    url: `${SITE_URL}/facilities/${loc.name.toLowerCase()}`,
+    url: `${SITE_URL}/locations/${slug}`,
     telephone: loc.phone,
     email: siteData.email,
     description: loc.description,

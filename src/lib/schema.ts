@@ -132,14 +132,14 @@ export function getVideoSchema(video: {
 
 export function getYouTubeVideoSchema(video: {
   youtubeId: string;
-  name: string;
+  title: string;
   description: string;
   uploadDate: string;
 }) {
   return {
     "@context": "https://schema.org",
     "@type": "VideoObject",
-    name: video.name,
+    name: video.title,
     description: video.description,
     thumbnailUrl: `https://i.ytimg.com/vi/${video.youtubeId}/maxresdefault.jpg`,
     embedUrl: `https://www.youtube.com/embed/${video.youtubeId}`,

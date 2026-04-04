@@ -8,6 +8,8 @@ import { InlineFAQSchema, MedicalConditionSchema } from "@/lib/seo";
 import AEOBlock from "@/components/AEOBlock";
 import RelatedPages from "@/components/RelatedPages";
 import ConditionFAQ from "@/components/ConditionFAQ";
+import YouTubeEmbed from "@/components/YouTubeEmbed";
+import Citations from "@/components/Citations";
 import { getPageMeta } from "@/data/page-metadata";
 
 const meta = getPageMeta("/addiction/cocaine-addiction-treatment/");
@@ -159,6 +161,16 @@ export default function CocaineAddictionPage() {
           </div>
         </div>
       </section>
+      {/* ── Dopamine & Cocaine Video ─────────────────────────── */}
+      <section className="py-16 md:py-24 bg-forest">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <span className="text-gold font-body text-sm tracking-[0.2em] uppercase font-medium">Expert Insight</span>
+          <div className="w-[60px] h-0.5 bg-gold mx-auto mt-4 mb-4" />
+          <h2 className="font-display text-3xl md:text-4xl text-white font-semibold mb-10">Do Addicts and Alcoholics Crave Dopamine?</h2>
+          <YouTubeEmbed youtubeId="FObOcPKSfH8" title="Do Drug Addicts and Alcoholics Crave Dopamine?" />
+        </div>
+      </section>
+
       <AddictionPrograms />
       <ConditionFAQ items={faqs} />
       <AEOBlock
@@ -183,6 +195,7 @@ export default function CocaineAddictionPage() {
       <RelatedPages currentPath="/addiction/cocaine" />
       <CTASection />
       <Footer />
+      <Citations />
     </>
   );
 }

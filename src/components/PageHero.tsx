@@ -22,7 +22,7 @@ export default function PageHero({ eyebrow, title, description, bgImage }: PageH
           background: "linear-gradient(135deg, rgba(28,43,30,0.92) 0%, rgba(28,43,30,0.75) 100%)",
         }}
       />
-      <div className="relative z-10 text-center max-w-container mx-auto px-6 py-32">
+      <div className="relative z-10 text-center max-w-container mx-auto px-6 pt-28 md:pt-36 pb-16 md:pb-24">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

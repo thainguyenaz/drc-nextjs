@@ -60,9 +60,8 @@ const navLinks = [
     children: [
       { label: "Glendale", href: "/locations/glendale" },
       { label: "Scottsdale", href: "/locations/scottsdale" },
-      { label: "Phoenix PHP/IOP", href: "/locations/phoenix" },
-      { label: "Phoenix TMS", href: "/treatments/tms-therapy" },
-      { label: "Phoenix PHP Living", href: "/locations/phoenix-living" },
+      { label: "Phoenix PHP/IOP", href: "/locations/phoenix-php-iop" },
+      { label: "Phoenix Sober Living", href: "/locations/phoenix-living" },
     ],
   },
   { label: "About", href: "/about-us" },
@@ -76,7 +75,8 @@ export default function Navigation() {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
+    const onScroll = () => setScrolled(window.scrollY > 80);
+    onScroll(); // set correct initial state on mount
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -84,18 +84,22 @@ export default function Navigation() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-forest shadow-lg" : "bg-transparent"
+        scrolled ? "bg-white/95 backdrop-blur-sm shadow-md" : "bg-transparent"
       }`}
     >
-      <div className="max-w-container mx-auto px-6 flex items-center justify-between h-20">
+      <div className="max-w-container mx-auto px-6 flex items-center justify-between h-14">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 flex-shrink-0">
           <Image
-            src="/images/branding/drc-logo-white.png"
+            src="/images/branding/drc-logo-black.png"
             alt="Desert Recovery Centers"
             width={320}
             height={96}
-            className="h-24 w-auto"
+            className="h-12 w-auto"
+            style={{
+              filter: scrolled ? "none" : "brightness(0) invert(1)",
+              transition: "filter 0.3s ease",
+            }}
             priority
           />
         </Link>
@@ -111,7 +115,9 @@ export default function Navigation() {
             >
               <Link
                 href={link.href}
-                className="text-white/90 hover:text-gold text-sm font-medium transition-colors py-6 block"
+                className={`text-sm font-medium transition-colors py-6 block ${
+                  scrolled ? "text-gray-900 hover:text-gold" : "text-white hover:text-gold"
+                }`}
               >
                 {link.label}
               </Link>
@@ -158,7 +164,10 @@ export default function Navigation() {
 
         {/* Desktop CTA */}
         <div className="hidden lg:flex items-center gap-4 flex-shrink-0">
-          <a href="tel:+14809313617" className="text-gold font-semibold text-sm">
+          <a
+            href="tel:+14809313617"
+            className={`font-semibold text-sm transition-colors ${scrolled ? "text-gray-900" : "text-white"}`}
+          >
             (480) 931-3617
           </a>
           <Link
@@ -172,13 +181,13 @@ export default function Navigation() {
         {/* Mobile Hamburger */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="lg:hidden text-white p-2"
+          className={`lg:hidden p-2 ${scrolled ? "text-gray-900" : "text-white"}`}
           aria-label={mobileOpen ? "Close menu" : "Open menu"}
         >
           <div className="space-y-1.5">
-            <span className={`block w-6 h-0.5 bg-white transition-all ${mobileOpen ? "rotate-45 translate-y-2" : ""}`} />
-            <span className={`block w-6 h-0.5 bg-white transition-all ${mobileOpen ? "opacity-0" : ""}`} />
-            <span className={`block w-6 h-0.5 bg-white transition-all ${mobileOpen ? "-rotate-45 -translate-y-2" : ""}`} />
+            <span className={`block w-6 h-0.5 transition-all ${scrolled ? "bg-gray-900" : "bg-white"} ${mobileOpen ? "rotate-45 translate-y-2" : ""}`} />
+            <span className={`block w-6 h-0.5 transition-all ${scrolled ? "bg-gray-900" : "bg-white"} ${mobileOpen ? "opacity-0" : ""}`} />
+            <span className={`block w-6 h-0.5 transition-all ${scrolled ? "bg-gray-900" : "bg-white"} ${mobileOpen ? "-rotate-45 -translate-y-2" : ""}`} />
           </div>
         </button>
       </div>

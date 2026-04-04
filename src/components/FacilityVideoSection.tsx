@@ -1,4 +1,5 @@
 import YouTubeEmbed from "./YouTubeEmbed";
+import ScrollReveal from "./ScrollReveal";
 
 export default function FacilityVideoSection({
   youtubeId,
@@ -28,15 +29,15 @@ export default function FacilityVideoSection({
       <div className="max-w-container mx-auto">
         <div className="flex flex-col lg:flex-row gap-8 items-start">
           {/* Left Column - Video (60%) */}
-          <div className="w-full lg:w-3/5">
+          <ScrollReveal direction="left" className="w-full lg:w-3/5">
             <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mb-6">
               {videoTitle}
             </h2>
             <YouTubeEmbed youtubeId={youtubeId} title={title} />
-          </div>
+          </ScrollReveal>
 
           {/* Right Column - Details (40%) */}
-          <div className="w-full lg:w-2/5">
+          <ScrollReveal direction="right" delay={0.2} className="w-full lg:w-2/5">
             <h3 className="font-display text-xl text-forest font-semibold mb-4">
               Facility Details
             </h3>
@@ -114,7 +115,7 @@ export default function FacilityVideoSection({
             >
               {ctaText}
             </a>
-          </div>
+          </ScrollReveal>
         </div>
       </div>
     </section>
