@@ -11,7 +11,6 @@ const navLinks = [
     href: "/mental-health",
     image: "/images/general/DRC-MENTAL-HEALTH.jpg",
     children: [
-      { label: "Adolescent Treatment", href: "/adolescent-treatment" },
       { label: "Anxiety Disorders", href: "/mental-health/anxiety-treatment" },
       { label: "Depression", href: "/mental-health/depression-treatment" },
       { label: "PTSD & Trauma", href: "/mental-health/ptsd-treatment" },
@@ -43,7 +42,6 @@ const navLinks = [
     image: "/images/general/DRC-TREATMENTS.jpg",
     children: [
       { label: "PHP / IOP", href: "/locations/phoenix-php-iop" },
-      { label: "Adolescent Programs", href: "/adolescent-treatment" },
       { label: "CBT", href: "/treatments/cbt" },
       { label: "DBT", href: "/treatments/dbt" },
       { label: "EMDR", href: "/treatments/emdr" },
@@ -166,7 +164,7 @@ export default function Navigation() {
         </div>
 
         {/* Desktop CTA */}
-        <div className="hidden lg:flex items-center gap-4 flex-shrink-0">
+        <div className="hidden lg:flex items-center gap-4 flex-shrink-0 ml-auto">
           <a
             href="tel:+14809313617"
             className={`font-semibold text-sm transition-colors ${scrolled ? "text-gray-900" : "text-white"}`}
