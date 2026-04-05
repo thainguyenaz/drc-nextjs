@@ -9,6 +9,7 @@ import AEOBlock from "@/components/AEOBlock";
 import RelatedPages from "@/components/RelatedPages";
 import ConditionFAQ from "@/components/ConditionFAQ";
 import { getPageMeta } from "@/data/page-metadata";
+import AnimatedSection from "@/components/animated/AnimatedSection";
 
 const meta = getPageMeta("/addiction/sex-addiction-treatment/");
 
@@ -67,6 +68,7 @@ export default function SexAddictionPage() {
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
+            <AnimatedSection>
             <p className="text-gray-600 leading-relaxed text-lg">
               You swore you&apos;d stop. You deleted the apps, cleared the history, made promises to yourself and to the people you love. But the compulsion keeps pulling you back. The behavior that once felt like relief now creates more pain than it eases, the secrecy, the double life, the risk-taking that puts your relationships, your career, and your health in jeopardy. The shame is suffocating, and it keeps you from asking for help. You&apos;re not a bad person. You&apos;re caught in a compulsive pattern that requires clinical treatment, not willpower.
             </p>
@@ -156,6 +158,7 @@ export default function SexAddictionPage() {
             <p className="text-gray-600 leading-relaxed mt-4">
               We accept most major insurance plans. Coverage varies by plan. Contact us to verify your benefits.
             </p>
+            </AnimatedSection>
           </div>
         </div>
       </section>

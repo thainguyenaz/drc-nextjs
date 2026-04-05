@@ -9,6 +9,7 @@ import AEOBlock from "@/components/AEOBlock";
 import RelatedPages from "@/components/RelatedPages";
 import ConditionFAQ from "@/components/ConditionFAQ";
 import { getPageMeta } from "@/data/page-metadata";
+import AnimatedSection from "@/components/animated/AnimatedSection";
 
 const meta = getPageMeta("/addiction/gambling-addiction-treatment/");
 
@@ -67,6 +68,7 @@ export default function GamblingAddictionPage() {
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
+            <AnimatedSection>
             <p className="text-gray-600 leading-relaxed text-lg">
               You keep telling yourself you&apos;ll stop after one more win, the one that will make everything even. But it never comes, or when it does, it&apos;s never enough. The debt is mounting. You&apos;re hiding bank statements, borrowing money with lies about what it&apos;s for, chasing losses that only create bigger ones. The shame keeps you silent, and the secrecy keeps you stuck. You&apos;re not chasing money anymore, you&apos;re chasing the feeling. And that feeling has taken everything from you.
             </p>
@@ -156,6 +158,7 @@ export default function GamblingAddictionPage() {
             <p className="text-gray-600 leading-relaxed mt-4">
               We accept most major insurance plans. Coverage varies by plan. Contact us to verify your benefits.
             </p>
+            </AnimatedSection>
           </div>
         </div>
       </section>

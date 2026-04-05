@@ -16,6 +16,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
 import Citations from "@/components/Citations";
 import { getPageMeta } from "@/data/page-metadata";
+import AnimatedSection from "@/components/animated/AnimatedSection";
 
 const meta = getPageMeta("/addiction/alcoholism-treatment/");
 
@@ -76,6 +77,7 @@ export default function AlcoholAddictionPage() {
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
+            <AnimatedSection>
             <p className="text-gray-600 leading-relaxed text-lg">
               Maybe it started as a way to unwind. A glass of wine after work, a few beers on the weekend. But somewhere along the way, the line moved. Now you&apos;re drinking to feel normal. You&apos;re hiding bottles, making excuses, waking up with dread instead of rest. The people closest to you are pulling away, or they&apos;ve already gone. You&apos;re not weak. You&apos;re caught in a cycle that rewires your brain chemistry, and breaking free takes more than willpower alone.
             </p>
@@ -165,6 +167,7 @@ export default function AlcoholAddictionPage() {
             <p className="text-gray-600 leading-relaxed mt-4">
               We accept most major insurance plans. Coverage varies by plan. Contact us to verify your benefits.
             </p>
+            </AnimatedSection>
           </div>
         </div>
       </section>

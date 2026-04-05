@@ -15,6 +15,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
 import Citations from "@/components/Citations";
 import { getPageMeta } from "@/data/page-metadata";
+import AnimatedSection from "@/components/animated/AnimatedSection";
 
 const meta = getPageMeta("/mental-health/depression-treatment/");
 
@@ -87,6 +88,7 @@ export default function DepressionTreatmentPage() {
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
+            <AnimatedSection>
             <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mb-6">
               When the Weight Becomes Too Much to Carry
             </h2>
@@ -99,6 +101,7 @@ export default function DepressionTreatmentPage() {
             <p className="text-gray-600 leading-relaxed text-lg">
               It&apos;s not. Depression is a medical condition, one that changes your brain chemistry, your energy, your ability to experience joy. And with the right treatment, it responds. At Desert Recovery Centers, we&apos;ve watched hundreds of people who felt exactly the way you do right now walk out of our program feeling genuinely, durably better. That possibility exists for you too.
             </p>
+            </AnimatedSection>
           </div>
         </div>
       </section>
@@ -149,6 +152,7 @@ export default function DepressionTreatmentPage() {
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
+            <AnimatedSection>
             <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
               Our Approach
             </span>
@@ -189,6 +193,7 @@ export default function DepressionTreatmentPage() {
                 </div>
               ))}
             </div>
+            </AnimatedSection>
           </div>
         </div>
       </section>

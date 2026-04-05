@@ -4,6 +4,7 @@ import { siteData } from "@/lib/site-data";
 
 const footerLinks = {
   "Mental Health": [
+    { label: "Adolescent Treatment", href: "/adolescent-treatment" },
     { label: "Anxiety Disorders", href: "/mental-health/anxiety-treatment" },
     { label: "Depression", href: "/mental-health/depression-treatment" },
     { label: "PTSD & Trauma", href: "/mental-health/ptsd-treatment" },

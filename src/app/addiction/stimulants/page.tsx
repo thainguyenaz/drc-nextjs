@@ -9,6 +9,7 @@ import AEOBlock from "@/components/AEOBlock";
 import RelatedPages from "@/components/RelatedPages";
 import ConditionFAQ from "@/components/ConditionFAQ";
 import { getPageMeta } from "@/data/page-metadata";
+import AnimatedSection from "@/components/animated/AnimatedSection";
 
 const meta = getPageMeta("/addiction/stimulant-addiction-treatment/");
 
@@ -67,6 +68,7 @@ export default function StimulantAddictionPage() {
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
+            <AnimatedSection>
             <p className="text-gray-600 leading-relaxed text-lg">
               At first, stimulants made you sharper, more productive, more social, more alive. But now you can&apos;t function without them. The crashes are brutal. The anxiety between doses is unbearable. You&apos;re irritable, paranoid, and running on empty. Your sleep is destroyed, your appetite is gone, and the version of yourself that stimulants promised to create has been replaced by someone you barely recognize. Whether it&apos;s cocaine, meth, Adderall, or another stimulant, the pattern is the same, and it&apos;s not sustainable.
             </p>
@@ -156,6 +158,7 @@ export default function StimulantAddictionPage() {
             <p className="text-gray-600 leading-relaxed mt-4">
               We accept most major insurance plans. Coverage varies by plan. Contact us to verify your benefits.
             </p>
+            </AnimatedSection>
           </div>
         </div>
       </section>

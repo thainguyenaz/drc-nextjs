@@ -8,6 +8,7 @@ import { InlineFAQSchema, SpeakableSchema, MedicalConditionSchema } from "@/lib/
 import AEOBlock from "@/components/AEOBlock";
 import RelatedPages from "@/components/RelatedPages";
 import { getPageMeta } from "@/data/page-metadata";
+import AnimatedSection from "@/components/animated/AnimatedSection";
 
 const meta = getPageMeta("/mental-health/personality-disorder-treatment/");
 
@@ -78,6 +79,7 @@ export default function PersonalityDisorderTreatmentPage() {
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
+            <AnimatedSection>
             <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mb-6">
               When Emotions Are Too Intense and Relationships Keep Breaking
             </h2>
@@ -90,6 +92,7 @@ export default function PersonalityDisorderTreatmentPage() {
             <p className="text-gray-600 leading-relaxed text-lg">
               Personality disorders are among the most misunderstood conditions in mental health. They carry heavy stigma, and too many clinicians still approach them with pessimism. But at Desert Recovery Centers, we know the truth: personality disorders respond powerfully to specialized treatment. With the right care, the patterns that have controlled your life can fundamentally change, and your relationships, your stability, and your sense of self can heal.
             </p>
+            </AnimatedSection>
           </div>
         </div>
       </section>
@@ -137,6 +140,7 @@ export default function PersonalityDisorderTreatmentPage() {
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
+            <AnimatedSection>
             <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
               Our Approach
             </span>
@@ -177,6 +181,7 @@ export default function PersonalityDisorderTreatmentPage() {
                 </div>
               ))}
             </div>
+            </AnimatedSection>
           </div>
         </div>
       </section>

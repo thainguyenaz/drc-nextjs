@@ -11,6 +11,7 @@ import ConditionFAQ from "@/components/ConditionFAQ";
 import YouTubeEmbed from "@/components/YouTubeEmbed";
 import Citations from "@/components/Citations";
 import { getPageMeta } from "@/data/page-metadata";
+import AnimatedSection from "@/components/animated/AnimatedSection";
 
 const meta = getPageMeta("/addiction/cocaine-addiction-treatment/");
 
@@ -69,6 +70,7 @@ export default function CocaineAddictionPage() {
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
+            <AnimatedSection>
             <p className="text-gray-600 leading-relaxed text-lg">
               The highs don&apos;t last. But the consequences do, the financial damage, the relationships you&apos;ve strained, the paranoia that creeps in after a binge, the crash that leaves you unable to function. You tell yourself you can stop whenever you want, but every time you try, the pull drags you back. Cocaine doesn&apos;t let go easily, and it doesn&apos;t care what it costs you.
             </p>
@@ -158,6 +160,7 @@ export default function CocaineAddictionPage() {
             <p className="text-gray-600 leading-relaxed mt-4">
               We accept most major insurance plans. Coverage varies by plan. Contact us to verify your benefits.
             </p>
+            </AnimatedSection>
           </div>
         </div>
       </section>

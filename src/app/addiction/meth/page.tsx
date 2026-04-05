@@ -17,6 +17,7 @@ import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
 import Citations from "@/components/Citations";
 import YouTubeEmbed from "@/components/YouTubeEmbed";
 import { getPageMeta } from "@/data/page-metadata";
+import AnimatedSection from "@/components/animated/AnimatedSection";
 
 const meta = getPageMeta("/addiction/meth-addiction-treatment/");
 
@@ -77,6 +78,7 @@ export default function MethAddictionPage() {
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
+            <AnimatedSection>
             <p className="text-gray-600 leading-relaxed text-lg">
               The energy, the focus, the confidence, that&apos;s what hooked you. But now the other side has taken over. The paranoia. The skin picking. The days without sleep that blur into weeks. You don&apos;t recognize yourself in the mirror anymore. Your teeth are deteriorating, your weight has dropped, and the people who love you are terrified. You want to stop, but the crash is so devastating that using again feels like the only option. It&apos;s not, even if it feels that way right now.
             </p>
@@ -166,6 +168,7 @@ export default function MethAddictionPage() {
             <p className="text-gray-600 leading-relaxed mt-4">
               We accept most major insurance plans. Coverage varies by plan. Contact us to verify your benefits.
             </p>
+            </AnimatedSection>
           </div>
         </div>
       </section>

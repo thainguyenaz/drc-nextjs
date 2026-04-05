@@ -8,6 +8,7 @@ import { InlineFAQSchema, SpeakableSchema, MedicalConditionSchema } from "@/lib/
 import AEOBlock from "@/components/AEOBlock";
 import RelatedPages from "@/components/RelatedPages";
 import { getPageMeta } from "@/data/page-metadata";
+import AnimatedSection from "@/components/animated/AnimatedSection";
 
 const meta = getPageMeta("/mental-health/schizophrenia-treatment/");
 
@@ -78,6 +79,7 @@ export default function SchizophreniaTreatmentPage() {
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
+            <AnimatedSection>
             <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mb-6">
               When Reality Feels Unreliable
             </h2>
@@ -90,6 +92,7 @@ export default function SchizophreniaTreatmentPage() {
             <p className="text-gray-600 leading-relaxed text-lg">
               At Desert Recovery Centers, our psychiatric team brings deep experience in treating schizophrenia spectrum disorders. We combine medication management with therapeutic support, life skills training, and family education to help stabilize symptoms and build the foundation for a life worth living.
             </p>
+            </AnimatedSection>
           </div>
         </div>
       </section>
@@ -168,6 +171,7 @@ export default function SchizophreniaTreatmentPage() {
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
+            <AnimatedSection>
             <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
               Our Approach
             </span>
@@ -208,6 +212,7 @@ export default function SchizophreniaTreatmentPage() {
                 </div>
               ))}
             </div>
+            </AnimatedSection>
           </div>
         </div>
       </section>

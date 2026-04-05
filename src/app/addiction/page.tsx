@@ -4,6 +4,8 @@ import PageHero from "@/components/PageHero";
 import AddictionPrograms from "@/components/AddictionPrograms";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
+import AnimatedSection from "@/components/animated/AnimatedSection";
+import AnimatedGrid from "@/components/animated/AnimatedGrid";
 
 export const metadata: Metadata = {
   title: "Addiction Treatment Programs, Desert Recovery Centers",
@@ -24,17 +26,21 @@ export default function AddictionPage() {
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
-            <p className="text-gray-600 leading-relaxed text-lg">
-              You already know something has to change. The cycle of using, hiding, and recovering just enough to do it all over again, it takes everything from you. Your relationships, your health, the version of yourself you actually want to be. If you&apos;re reading this, you&apos;re already looking for a way out. That matters.
-            </p>
-            <p className="text-gray-600 leading-relaxed text-lg mt-4">
-              At Desert Recovery Centers, we treat addiction as the chronic medical condition it is, not a moral failing, not a lack of willpower. Our clinical team builds individualized treatment plans that address the root causes driving your substance use, using FDA-approved Medication-Assisted Treatment (MAT) alongside proven behavioral therapies.
-            </p>
+            <AnimatedSection>
+              <p className="text-gray-600 leading-relaxed text-lg">
+                You already know something has to change. The cycle of using, hiding, and recovering just enough to do it all over again, it takes everything from you. Your relationships, your health, the version of yourself you actually want to be. If you&apos;re reading this, you&apos;re already looking for a way out. That matters.
+              </p>
+              <p className="text-gray-600 leading-relaxed text-lg mt-4">
+                At Desert Recovery Centers, we treat addiction as the chronic medical condition it is, not a moral failing, not a lack of willpower. Our clinical team builds individualized treatment plans that address the root causes driving your substance use, using FDA-approved Medication-Assisted Treatment (MAT) alongside proven behavioral therapies.
+              </p>
+            </AnimatedSection>
 
-            <h2 className="font-display text-2xl text-forest font-semibold mt-10 mb-4">
-              Levels of Care
-            </h2>
-            <div className="grid sm:grid-cols-3 gap-6 mt-6">
+            <AnimatedSection>
+              <h2 className="font-display text-2xl text-forest font-semibold mt-10 mb-4">
+                Levels of Care
+              </h2>
+            </AnimatedSection>
+            <AnimatedGrid className="grid sm:grid-cols-3 gap-6 mt-6">
               {[
                 {
                   name: "Residential",
@@ -67,53 +73,63 @@ export default function AddictionPage() {
                   </p>
                 </div>
               ))}
-            </div>
+            </AnimatedGrid>
 
-            <h2 className="font-display text-2xl text-forest font-semibold mt-10 mb-4">
-              Our Approach
-            </h2>
-            <p className="text-gray-600 leading-relaxed">
-              Every person who walks through our doors receives a comprehensive clinical assessment. From there, your treatment team, psychiatrists, psychologists, licensed therapists, and nursing staff, designs a plan tailored to your specific needs. Therapies include Cognitive Behavioral Therapy (CBT), Dialectical Behavior Therapy (DBT), EMDR, motivational interviewing, 12-step facilitation, and holistic modalities like yoga, mindfulness, and nutritional counseling.
-            </p>
-            <p className="text-gray-600 leading-relaxed mt-4">
-              We accept most major insurance plans. Coverage varies by plan. Contact us to verify your benefits.
-            </p>
+            <AnimatedSection>
+              <h2 className="font-display text-2xl text-forest font-semibold mt-10 mb-4">
+                Our Approach
+              </h2>
+              <p className="text-gray-600 leading-relaxed">
+                Every person who walks through our doors receives a comprehensive clinical assessment. From there, your treatment team, psychiatrists, psychologists, licensed therapists, and nursing staff, designs a plan tailored to your specific needs. Therapies include Cognitive Behavioral Therapy (CBT), Dialectical Behavior Therapy (DBT), EMDR, motivational interviewing, 12-step facilitation, and holistic modalities like yoga, mindfulness, and nutritional counseling.
+              </p>
+              <p className="text-gray-600 leading-relaxed mt-4">
+                We accept most major insurance plans. Coverage varies by plan. Contact us to verify your benefits.
+              </p>
+            </AnimatedSection>
           </div>
         </div>
       </section>
       {/* ── Addiction Treatment Video ──────────────────────────── */}
       <section className="py-16 md:py-24 bg-cream">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">Recovery in Action</span>
-          <div className="w-[60px] h-0.5 bg-gold mx-auto mt-4 mb-4" />
-          <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold mb-10">See Our Approach to Addiction Treatment</h2>
-          <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-xl">
-            <iframe
-              src="https://www.youtube.com/embed/THSeLEff0I4?rel=0"
-              title="Addiction Treatment at Desert Recovery Centers"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="absolute inset-0 w-full h-full border-0"
-            />
-          </div>
+          <AnimatedSection>
+            <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">Recovery in Action</span>
+            <div className="w-[60px] h-0.5 bg-gold mx-auto mt-4 mb-4" />
+            <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold mb-10">See Our Approach to Addiction Treatment</h2>
+          </AnimatedSection>
+          <AnimatedSection animation="fadeIn" delay={0.15}>
+            <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-xl">
+              <iframe
+                src="https://www.youtube.com/embed/THSeLEff0I4?rel=0"
+                title="Addiction Treatment at Desert Recovery Centers"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="absolute inset-0 w-full h-full border-0"
+              />
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 
       {/* ── High-Functioning Addiction Video ──────────────────── */}
       <section className="py-16 md:py-24 bg-forest">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <span className="text-gold font-body text-sm tracking-[0.2em] uppercase font-medium">Expert Insight</span>
-          <div className="w-[60px] h-0.5 bg-gold mx-auto mt-4 mb-4" />
-          <h2 className="font-display text-3xl md:text-4xl text-white font-semibold mb-10">What Is High-Functioning Addiction?</h2>
-          <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-xl ring-1 ring-white/10">
-            <iframe
-              src="https://www.youtube.com/embed/9-8VxGYFlE0?rel=0"
-              title="What Is High-Functioning Addiction, and Why Is It So Hard to Recognize"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="absolute inset-0 w-full h-full border-0"
-            />
-          </div>
+          <AnimatedSection>
+            <span className="text-gold font-body text-sm tracking-[0.2em] uppercase font-medium">Expert Insight</span>
+            <div className="w-[60px] h-0.5 bg-gold mx-auto mt-4 mb-4" />
+            <h2 className="font-display text-3xl md:text-4xl text-white font-semibold mb-10">What Is High-Functioning Addiction?</h2>
+          </AnimatedSection>
+          <AnimatedSection animation="fadeIn" delay={0.15}>
+            <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-xl ring-1 ring-white/10">
+              <iframe
+                src="https://www.youtube.com/embed/9-8VxGYFlE0?rel=0"
+                title="What Is High-Functioning Addiction, and Why Is It So Hard to Recognize"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="absolute inset-0 w-full h-full border-0"
+              />
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 

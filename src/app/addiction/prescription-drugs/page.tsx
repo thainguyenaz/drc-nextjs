@@ -9,6 +9,7 @@ import AEOBlock from "@/components/AEOBlock";
 import RelatedPages from "@/components/RelatedPages";
 import ConditionFAQ from "@/components/ConditionFAQ";
 import { getPageMeta } from "@/data/page-metadata";
+import AnimatedSection from "@/components/animated/AnimatedSection";
 
 const meta = getPageMeta("/addiction/prescription-drug-addiction-treatment/");
 
@@ -67,6 +68,7 @@ export default function PrescriptionDrugAddictionPage() {
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
+            <AnimatedSection>
             <p className="text-gray-600 leading-relaxed text-lg">
               A doctor prescribed it. You took it as directed, at first. But the pain didn&apos;t go away, or the anxiety kept creeping back, or the medication stopped working at the dose you were on. Now you&apos;re taking more than prescribed, refilling early, doctor shopping, or buying from someone else. You feel ashamed because this isn&apos;t who you thought you were. You never imagined yourself here. But prescription drug addiction doesn&apos;t discriminate, it happens to people from every background, every profession, every walk of life.
             </p>
@@ -156,6 +158,7 @@ export default function PrescriptionDrugAddictionPage() {
             <p className="text-gray-600 leading-relaxed mt-4">
               We accept most major insurance plans. Coverage varies by plan. Contact us to verify your benefits.
             </p>
+            </AnimatedSection>
           </div>
         </div>
       </section>

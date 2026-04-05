@@ -8,6 +8,7 @@ import AEOBlock from "@/components/AEOBlock";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import { buildMetadata, InlineFAQSchema, SpeakableSchema, MedicalTherapySchema } from "@/lib/seo";
+import AnimatedSection from "@/components/animated/AnimatedSection";
 
 export const metadata: Metadata = buildMetadata({
   title: "Trauma Treatment Center in Arizona",
@@ -71,6 +72,7 @@ export default function TraumaTreatmentPage() {
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-container mx-auto px-6">
           <div className="max-w-3xl mx-auto" data-speakable="true">
+            <AnimatedSection>
             <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mb-6">
               Trauma Changes Everything. The Right Treatment Changes It Back.
             </h2>
@@ -83,6 +85,7 @@ export default function TraumaTreatmentPage() {
             <p className="text-gray-600 leading-relaxed text-lg">
               At Desert Recovery Centers, our trauma specialists use the most advanced, evidence-based therapies available, EMDR, somatic experiencing, trauma-focused CBT, delivered by clinicians with advanced training in trauma treatment. In our luxury residential setting, you have the safety, structure, and clinical support to do the deepest healing work of your life.
             </p>
+            </AnimatedSection>
           </div>
         </div>
       </section>
@@ -128,6 +131,7 @@ export default function TraumaTreatmentPage() {
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
+            <AnimatedSection>
             <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">Our Approach</span>
             <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4 mb-8">How We Treat Trauma at DRC</h2>
             <div className="space-y-6">
@@ -144,6 +148,7 @@ export default function TraumaTreatmentPage() {
                 </div>
               ))}
             </div>
+            </AnimatedSection>
           </div>
         </div>
       </section>

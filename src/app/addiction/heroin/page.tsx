@@ -17,6 +17,7 @@ import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
 import Citations from "@/components/Citations";
 import YouTubeEmbed from "@/components/YouTubeEmbed";
 import { getPageMeta } from "@/data/page-metadata";
+import AnimatedSection from "@/components/animated/AnimatedSection";
 
 const meta = getPageMeta("/addiction/heroin-addiction-treatment/");
 
@@ -77,6 +78,7 @@ export default function HeroinAddictionPage() {
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
+            <AnimatedSection>
             <p className="text-gray-600 leading-relaxed text-lg">
               You&apos;re tired. Tired of the hustle, finding it, using it, coming down, and doing it all over again just to feel okay. Tired of the lies, the track marks you try to cover, the look on your family&apos;s face when they figure it out. Heroin has narrowed your entire world down to one thing, and everything else has fallen away. You didn&apos;t plan for this. Nobody does.
             </p>
@@ -166,6 +168,7 @@ export default function HeroinAddictionPage() {
             <p className="text-gray-600 leading-relaxed mt-4">
               We accept most major insurance plans. Coverage varies by plan. Contact us to verify your benefits.
             </p>
+            </AnimatedSection>
           </div>
         </div>
       </section>

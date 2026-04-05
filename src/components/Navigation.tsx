@@ -11,6 +11,7 @@ const navLinks = [
     href: "/mental-health",
     image: "/images/general/DRC-MENTAL-HEALTH.jpg",
     children: [
+      { label: "Adolescent Treatment", href: "/adolescent-treatment" },
       { label: "Anxiety Disorders", href: "/mental-health/anxiety-treatment" },
       { label: "Depression", href: "/mental-health/depression-treatment" },
       { label: "PTSD & Trauma", href: "/mental-health/ptsd-treatment" },
@@ -19,7 +20,6 @@ const navLinks = [
       { label: "Personality Disorders", href: "/mental-health/personality-disorder-treatment" },
       { label: "ADHD/ADD", href: "/mental-health/adhd-add" },
       { label: "Schizophrenia", href: "/mental-health/schizophrenia-treatment" },
-      { label: "Adolescent Program (Coming Soon)", href: "/adolescent-program" },
     ],
   },
   {
@@ -43,6 +43,7 @@ const navLinks = [
     image: "/images/general/DRC-TREATMENTS.jpg",
     children: [
       { label: "PHP / IOP", href: "/locations/phoenix-php-iop" },
+      { label: "Adolescent Programs", href: "/adolescent-treatment" },
       { label: "CBT", href: "/treatments/cbt" },
       { label: "DBT", href: "/treatments/dbt" },
       { label: "EMDR", href: "/treatments/emdr" },

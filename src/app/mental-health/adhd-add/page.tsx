@@ -8,6 +8,7 @@ import { InlineFAQSchema, SpeakableSchema, MedicalConditionSchema } from "@/lib/
 import AEOBlock from "@/components/AEOBlock";
 import RelatedPages from "@/components/RelatedPages";
 import { getPageMeta } from "@/data/page-metadata";
+import AnimatedSection from "@/components/animated/AnimatedSection";
 
 const meta = getPageMeta("/mental-health/adhd-add/");
 
@@ -78,6 +79,7 @@ export default function ADHDTreatmentPage() {
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
+            <AnimatedSection>
             <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mb-6">
               When Your Brain Won&apos;t Cooperate With the Life You&apos;re Trying to Live
             </h2>
@@ -90,6 +92,7 @@ export default function ADHDTreatmentPage() {
             <p className="text-gray-600 leading-relaxed text-lg">
               There isn&apos;t. What&apos;s happening is that your brain operates differently, and when that difference goes unrecognized and untreated, it creates a cascade of challenges that affect every area of your life. At Desert Recovery Centers, we provide comprehensive ADHD assessment and treatment that addresses not just the symptoms, but the years of accumulated impact that untreated ADHD leaves behind.
             </p>
+            </AnimatedSection>
           </div>
         </div>
       </section>
@@ -155,6 +158,7 @@ export default function ADHDTreatmentPage() {
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
+            <AnimatedSection>
             <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
               Our Approach
             </span>
@@ -195,6 +199,7 @@ export default function ADHDTreatmentPage() {
                 </div>
               ))}
             </div>
+            </AnimatedSection>
           </div>
         </div>
       </section>

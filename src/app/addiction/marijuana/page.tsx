@@ -11,6 +11,7 @@ import ConditionFAQ from "@/components/ConditionFAQ";
 import YouTubeEmbed from "@/components/YouTubeEmbed";
 import Citations from "@/components/Citations";
 import { getPageMeta } from "@/data/page-metadata";
+import AnimatedSection from "@/components/animated/AnimatedSection";
 
 const meta = getPageMeta("/addiction/marijuana-addiction-treatment/");
 
@@ -69,6 +70,7 @@ export default function MarijuanaAddictionPage() {
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
+            <AnimatedSection>
             <p className="text-gray-600 leading-relaxed text-lg">
               People around you probably say it&apos;s not a big deal. &ldquo;It&apos;s just weed.&rdquo; But you know something they don&apos;t, you can&apos;t stop. You&apos;ve tried cutting back, tried taking breaks, but you keep coming back to it. You smoke before work, before social events, before bed, before everything. Without it, you&apos;re anxious, irritable, unable to sleep. Your motivation has flatlined. You know you&apos;re not living up to your potential, and the gap between where you are and where you want to be gets wider every month.
             </p>
@@ -158,6 +160,7 @@ export default function MarijuanaAddictionPage() {
             <p className="text-gray-600 leading-relaxed mt-4">
               We accept most major insurance plans. Coverage varies by plan. Contact us to verify your benefits.
             </p>
+            </AnimatedSection>
           </div>
         </div>
       </section>

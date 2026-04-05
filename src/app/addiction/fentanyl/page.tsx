@@ -17,6 +17,7 @@ import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
 import Citations from "@/components/Citations";
 import YouTubeEmbed from "@/components/YouTubeEmbed";
 import { getPageMeta } from "@/data/page-metadata";
+import AnimatedSection from "@/components/animated/AnimatedSection";
 
 const meta = getPageMeta("/addiction/fentanyl-addiction-treatment/");
 
@@ -77,6 +78,7 @@ export default function FentanylAddictionPage() {
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
+            <AnimatedSection>
             <p className="text-gray-600 leading-relaxed text-lg">
               You know how dangerous this is. Every time you use, you&apos;re gambling with your life, and you know it. Maybe you started with prescription painkillers, or maybe fentanyl found its way into something else you were using. Either way, your body now depends on one of the most potent opioids in existence, and the withdrawal is so brutal that stopping feels impossible. The fear of getting sick keeps you trapped. You&apos;re not choosing this anymore. Your brain chemistry is.
             </p>
@@ -166,6 +168,7 @@ export default function FentanylAddictionPage() {
             <p className="text-gray-600 leading-relaxed mt-4">
               We accept most major insurance plans. Coverage varies by plan. Contact us to verify your benefits.
             </p>
+            </AnimatedSection>
           </div>
         </div>
       </section>

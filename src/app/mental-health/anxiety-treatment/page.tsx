@@ -15,6 +15,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
 import Citations from "@/components/Citations";
 import { getPageMeta } from "@/data/page-metadata";
+import AnimatedSection from "@/components/animated/AnimatedSection";
 
 const meta = getPageMeta("/mental-health/anxiety-treatment/");
 
@@ -87,6 +88,7 @@ export default function AnxietyTreatmentPage() {
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
+            <AnimatedSection>
             <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mb-6">
               When Anxiety Takes Over Your Life
             </h2>
@@ -99,6 +101,7 @@ export default function AnxietyTreatmentPage() {
             <p className="text-gray-600 leading-relaxed text-lg">
               If this sounds like your life, we want you to know something: this is not your fault, and it absolutely can get better. At Desert Recovery Centers, we treat anxiety not as a character flaw, but as a treatable condition that responds powerfully to the right care.
             </p>
+            </AnimatedSection>
           </div>
         </div>
       </section>
@@ -147,6 +150,7 @@ export default function AnxietyTreatmentPage() {
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
+            <AnimatedSection>
             <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
               Our Approach
             </span>
@@ -187,6 +191,7 @@ export default function AnxietyTreatmentPage() {
                 </div>
               ))}
             </div>
+            </AnimatedSection>
           </div>
         </div>
       </section>

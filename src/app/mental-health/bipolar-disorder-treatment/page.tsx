@@ -15,6 +15,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
 import Citations from "@/components/Citations";
 import { getPageMeta } from "@/data/page-metadata";
+import AnimatedSection from "@/components/animated/AnimatedSection";
 
 const meta = getPageMeta("/mental-health/bipolar-disorder-treatment/");
 
@@ -87,6 +88,7 @@ export default function BipolarTreatmentPage() {
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
+            <AnimatedSection>
             <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mb-6">
               When Your Mood Controls Your Life Instead of the Other Way Around
             </h2>
@@ -99,6 +101,7 @@ export default function BipolarTreatmentPage() {
             <p className="text-gray-600 leading-relaxed text-lg">
               The hardest part? During manic episodes, you may not even realize anything is wrong. And during depressive episodes, it&apos;s nearly impossible to imagine feeling better. This unpredictability is what makes bipolar disorder so exhausting, and why specialized treatment is essential. At Desert Recovery Centers, our clinical team has deep experience stabilizing bipolar disorder and helping you build a life that isn&apos;t dictated by your mood.
             </p>
+            </AnimatedSection>
           </div>
         </div>
       </section>
@@ -161,6 +164,7 @@ export default function BipolarTreatmentPage() {
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
+            <AnimatedSection>
             <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
               Our Approach
             </span>
@@ -201,6 +205,7 @@ export default function BipolarTreatmentPage() {
                 </div>
               ))}
             </div>
+            </AnimatedSection>
           </div>
         </div>
       </section>

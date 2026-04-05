@@ -13,6 +13,8 @@ import Breadcrumb from "@/components/Breadcrumb";
 import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
 import { getPageMeta } from "@/data/page-metadata";
 import YouTubeEmbed from "@/components/YouTubeEmbed";
+import AnimatedSection from "@/components/animated/AnimatedSection";
+import AnimatedGrid from "@/components/animated/AnimatedGrid";
 
 const meta = getPageMeta("/addiction-treatment/");
 
@@ -45,14 +47,18 @@ export default function AddictionTreatmentPage() {
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
-            <p className="text-gray-600 leading-relaxed text-lg">
-              Addiction is a chronic medical condition that requires specialized, evidence-based treatment. At Desert Recovery Centers, we offer a full continuum of care, from medically supervised detoxification to residential treatment, partial hospitalization (PHP), intensive outpatient (IOP), and aftercare planning.
-            </p>
-            <p className="text-gray-600 leading-relaxed text-lg mt-4">
-              Our Medication-Assisted Treatment (MAT) program utilizes FDA-approved medications including Suboxone, Vivitrol, and naltrexone alongside behavioral therapies for optimal recovery outcomes.
-            </p>
-            <h2 className="font-display text-2xl text-forest font-semibold mt-10 mb-4">Levels of Care</h2>
-            <div className="grid sm:grid-cols-3 gap-6 mt-6">
+            <AnimatedSection>
+              <p className="text-gray-600 leading-relaxed text-lg">
+                Addiction is a chronic medical condition that requires specialized, evidence-based treatment. At Desert Recovery Centers, we offer a full continuum of care, from medically supervised detoxification to residential treatment, partial hospitalization (PHP), intensive outpatient (IOP), and aftercare planning.
+              </p>
+              <p className="text-gray-600 leading-relaxed text-lg mt-4">
+                Our Medication-Assisted Treatment (MAT) program utilizes FDA-approved medications including Suboxone, Vivitrol, and naltrexone alongside behavioral therapies for optimal recovery outcomes.
+              </p>
+            </AnimatedSection>
+            <AnimatedSection>
+              <h2 className="font-display text-2xl text-forest font-semibold mt-10 mb-4">Levels of Care</h2>
+            </AnimatedSection>
+            <AnimatedGrid className="grid sm:grid-cols-3 gap-6 mt-6">
               {[
                 { name: "Residential", duration: "30 days", desc: "Immersive 24/7 care in our luxury facilities with structured daily programming." },
                 { name: "PHP", duration: "4–6 weeks", desc: "5–6 hours of daily programming while living at home or in sober living." },
@@ -64,12 +70,14 @@ export default function AddictionTreatmentPage() {
                   <p className="text-gray-600 text-sm mt-3 leading-relaxed">{level.desc}</p>
                 </div>
               ))}
-            </div>
+            </AnimatedGrid>
           </div>
         </div>
       </section>
       <div className="my-10 max-w-3xl mx-auto px-6">
-        <YouTubeEmbed youtubeId="THSeLEff0I4" title="Addiction Treatment Programs at Desert Recovery Centers" />
+        <AnimatedSection animation="fadeIn" delay={0.15}>
+          <YouTubeEmbed youtubeId="THSeLEff0I4" title="Addiction Treatment Programs at Desert Recovery Centers" />
+        </AnimatedSection>
       </div>
 
       <AddictionPrograms />

@@ -8,6 +8,7 @@ import { InlineFAQSchema, SpeakableSchema, MedicalConditionSchema } from "@/lib/
 import AEOBlock from "@/components/AEOBlock";
 import RelatedPages from "@/components/RelatedPages";
 import { getPageMeta } from "@/data/page-metadata";
+import AnimatedSection from "@/components/animated/AnimatedSection";
 
 const meta = getPageMeta("/mental-health/ocd-treatment/");
 
@@ -78,6 +79,7 @@ export default function OCDTreatmentPage() {
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
+            <AnimatedSection>
             <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mb-6">
               Trapped in a Loop You Can&apos;t Break
             </h2>
@@ -90,6 +92,7 @@ export default function OCDTreatmentPage() {
             <p className="text-gray-600 leading-relaxed text-lg">
               OCD can consume hours of your day. It can make you late for work, damage your relationships, and leave you exhausted from a battle that nobody else can see. But here&apos;s what we need you to know: OCD responds remarkably well to the right treatment. At Desert Recovery Centers, we use the most effective, evidence-based approaches to help you break free from the cycle.
             </p>
+            </AnimatedSection>
           </div>
         </div>
       </section>
@@ -156,6 +159,7 @@ export default function OCDTreatmentPage() {
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
+            <AnimatedSection>
             <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
               Our Approach
             </span>
@@ -196,6 +200,7 @@ export default function OCDTreatmentPage() {
                 </div>
               ))}
             </div>
+            </AnimatedSection>
           </div>
         </div>
       </section>

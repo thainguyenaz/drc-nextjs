@@ -8,6 +8,7 @@ import AEOBlock from "@/components/AEOBlock";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import { buildMetadata, InlineFAQSchema, SpeakableSchema, MedicalTherapySchema } from "@/lib/seo";
+import AnimatedSection from "@/components/animated/AnimatedSection";
 
 export const metadata: Metadata = buildMetadata({
   title: "Alcohol Detox in Arizona | Medical Detox",
@@ -71,6 +72,7 @@ export default function AlcoholDetoxPage() {
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-container mx-auto px-6">
           <div className="max-w-3xl mx-auto" data-speakable="true">
+            <AnimatedSection>
             <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mb-6">
               You Cannot Do This Safely Alone
             </h2>
@@ -83,6 +85,7 @@ export default function AlcoholDetoxPage() {
             <p className="text-gray-600 leading-relaxed text-lg">
               If you&apos;re ready to stop drinking, we can help you do it safely. Most clients begin treatment within 48 hours of their first call.
             </p>
+            </AnimatedSection>
           </div>
         </div>
       </section>
@@ -127,6 +130,7 @@ export default function AlcoholDetoxPage() {
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
+            <AnimatedSection>
             <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">Our Protocol</span>
             <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4 mb-8">How We Manage Alcohol Detox at DRC</h2>
             <div className="space-y-6">
@@ -143,6 +147,7 @@ export default function AlcoholDetoxPage() {
                 </div>
               ))}
             </div>
+            </AnimatedSection>
           </div>
         </div>
       </section>

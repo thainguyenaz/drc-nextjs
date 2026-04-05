@@ -15,6 +15,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
 import Citations from "@/components/Citations";
 import { getPageMeta } from "@/data/page-metadata";
+import AnimatedSection from "@/components/animated/AnimatedSection";
 
 const meta = getPageMeta("/mental-health/ptsd-treatment/");
 
@@ -87,6 +88,7 @@ export default function PTSDTreatmentPage() {
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
+            <AnimatedSection>
             <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mb-6">
               Living With Trauma You Can&apos;t Outrun
             </h2>
@@ -99,6 +101,7 @@ export default function PTSDTreatmentPage() {
             <p className="text-gray-600 leading-relaxed text-lg">
               At Desert Recovery Centers, our trauma specialists use the most advanced, evidence-based therapies available to help your brain and body finally process what happened, so you can stop surviving and start living again.
             </p>
+            </AnimatedSection>
           </div>
         </div>
       </section>
@@ -194,6 +197,7 @@ export default function PTSDTreatmentPage() {
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
+            <AnimatedSection>
             <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
               Our Approach
             </span>
@@ -234,6 +238,7 @@ export default function PTSDTreatmentPage() {
                 </div>
               ))}
             </div>
+            </AnimatedSection>
           </div>
         </div>
       </section>
