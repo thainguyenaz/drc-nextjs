@@ -66,6 +66,7 @@ const navLinks = [
       { label: "Phoenix Sober Living", href: "/locations/phoenix-living" },
     ],
   },
+  { label: "Adolescent", href: "/adolescent-treatment" },
   { label: "About", href: "/about-us" },
   { label: "Contact", href: "/contact" },
   { label: "Our Team", href: "/our-team" },

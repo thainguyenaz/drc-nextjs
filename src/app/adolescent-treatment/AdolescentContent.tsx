@@ -2,7 +2,10 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import AdolescentProgramsTabs from "./AdolescentProgramsTabs";
+import AdolescentImage1 from "./AdolescentImage1";
+import AdolescentImage3 from "./AdolescentImage3";
 
 /* ── Animation variants ──────────────────────────────────── */
 
@@ -138,48 +141,57 @@ export default function AdolescentContent({ checklistSlot }: { checklistSlot?: R
       {/* ── SECTION 3: Parent Empathy Opener ──────────────── */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-container mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, amount: 0.15 }}
-            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="max-w-3xl mx-auto text-center"
-          >
-            <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium block mb-4">
-              For Parents
-            </span>
-            <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mb-8">
-              You Already Know Something Is Wrong
-            </h2>
-          </motion.div>
-          <div className="max-w-3xl mx-auto space-y-6">
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false, amount: 0.15 }}
-              transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1], delay: 0.15 }}
-              className="text-gray-600 leading-relaxed text-lg"
-            >
-              You have watched the grades slip. The friends disappear. The bedroom door stay closed for hours. Maybe you have found something you wish you had not, or maybe you just feel it, that quiet panic that something is happening to your child and you cannot reach them. You are not imagining it. And you are not alone.
-            </motion.p>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false, amount: 0.15 }}
-              transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
-              className="text-gray-600 leading-relaxed text-lg"
-            >
-              One in five adolescents in the United States has a diagnosable mental health condition. Most of them never get treatment. Not because their parents did not care, but because parents did not know where to turn, or waited hoping it would pass, or were told it was just a phase. The adolescent mental health crisis in this country is real, and it is devastating families in every zip code.
-            </motion.p>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false, amount: 0.15 }}
-              transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1], delay: 0.45 }}
-              className="text-gray-600 leading-relaxed text-lg font-medium"
-            >
-              If you are reading this, you are already doing the right thing. You are looking for real help for your child. That is what we are here for.
-            </motion.p>
+          <div className="grid md:grid-cols-2 gap-12 items-start">
+            <div>
+              <motion.span
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: false, amount: 0.15 }}
+                transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
+                className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium block mb-4"
+              >
+                For Parents
+              </motion.span>
+              <motion.h2
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: false, amount: 0.15 }}
+                transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
+                className="font-display text-2xl md:text-3xl text-forest font-semibold mb-8"
+              >
+                You Already Know Something Is Wrong
+              </motion.h2>
+              <div className="space-y-6">
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: false, amount: 0.15 }}
+                  transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1], delay: 0.15 }}
+                  className="text-gray-600 leading-relaxed text-lg"
+                >
+                  You have watched the grades slip. The friends disappear. The bedroom door stay closed for hours. Maybe you have found something you wish you had not, or maybe you just feel it, that quiet panic that something is happening to your child and you cannot reach them. You are not imagining it. And you are not alone.
+                </motion.p>
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: false, amount: 0.15 }}
+                  transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
+                  className="text-gray-600 leading-relaxed text-lg"
+                >
+                  One in five adolescents in the United States has a diagnosable mental health condition. Most of them never get treatment. Not because their parents did not care, but because parents did not know where to turn, or waited hoping it would pass, or were told it was just a phase. The adolescent mental health crisis in this country is real, and it is devastating families in every zip code.
+                </motion.p>
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: false, amount: 0.15 }}
+                  transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1], delay: 0.45 }}
+                  className="text-gray-600 leading-relaxed text-lg font-medium"
+                >
+                  If you are reading this, you are already doing the right thing. You are looking for real help for your child. That is what we are here for.
+                </motion.p>
+              </div>
+            </div>
+            <AdolescentImage1 />
           </div>
         </div>
       </section>
@@ -208,6 +220,22 @@ export default function AdolescentContent({ checklistSlot }: { checklistSlot?: R
                 Adolescent treatment is not the same as adult treatment with a younger age range. The clinical approach, the group dynamics, the family involvement, and the therapeutic methods are fundamentally different. Here is what each program looks like for a teenager.
               </p>
             </div>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false, amount: 0.15 }}
+              transition={{ duration: 0.75, ease: [0.16, 1, 0.3, 1] }}
+              whileHover={{ scale: 1.02, transition: { duration: 0.6 } }}
+              className="relative aspect-[16/9] rounded-xl overflow-hidden shadow-lg mb-12 max-w-4xl mx-auto"
+            >
+              <Image
+                src="/images/adolescent/adolescent-group-therapy-program-desert-recovery-centers.jpg"
+                alt="Adolescent group therapy session at Desert Recovery Centers Phoenix, teenagers in a circle with a licensed facilitator in a modern treatment room"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 80vw"
+              />
+            </motion.div>
             <AdolescentProgramsTabs />
           </div>
         </section>
@@ -299,8 +327,9 @@ export default function AdolescentContent({ checklistSlot }: { checklistSlot?: R
               </motion.div>
             </div>
 
-            {/* Right side: stat cards */}
+            {/* Right side: image + stat cards */}
             <div className="space-y-4">
+              <AdolescentImage3 />
               {[
                 {
                   stat: "Required",
@@ -394,6 +423,35 @@ export default function AdolescentContent({ checklistSlot }: { checklistSlot?: R
           </motion.div>
         </div>
       </section>
+
+      {/* ── SECTION 7.5: Banner Image Before Timeline ────── */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: false, amount: 0.1 }}
+        transition={{ duration: 1.0 }}
+        className="relative w-full h-[280px] md:h-[360px] overflow-hidden"
+      >
+        <Image
+          src="/images/adolescent/adolescent-outpatient-treatment-center-phoenix-arizona.jpg"
+          alt="Modern outpatient treatment center common area at Desert Recovery Centers Phoenix adolescent mental health program"
+          fill
+          className="object-cover"
+          sizes="100vw"
+        />
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.55))",
+          }}
+        />
+        <div className="absolute inset-0 flex items-center justify-center">
+          <span className="text-white/90 font-body text-sm tracking-[0.2em] uppercase font-medium">
+            The Process
+          </span>
+        </div>
+      </motion.div>
 
       {/* ── SECTION 8: Admissions Timeline ────────────────── */}
       <section className="py-16 md:py-24 bg-white">
