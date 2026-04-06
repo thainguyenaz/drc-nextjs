@@ -1,6 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import AdolescentProgramsTabs from "./AdolescentProgramsTabs";
@@ -48,38 +49,47 @@ const conditions = [
   {
     title: "Depression",
     body: "More than sadness. Adolescent depression often presents as irritability, withdrawal, and loss of motivation. It is the leading cause of disability in teenagers worldwide and it is highly treatable.",
+    href: "/adolescent/depression",
   },
   {
     title: "Anxiety Disorders",
     body: "Generalized anxiety, panic disorder, social anxiety, and school refusal. Anxiety is the most common mental health condition in adolescents and one of the most underdiagnosed.",
+    href: "/adolescent/anxiety",
   },
   {
     title: "PTSD and Trauma",
     body: "Childhood trauma, bullying, abuse, accidents, and adverse childhood experiences. Unprocessed trauma rewires the adolescent brain in ways that show up as behavior, not memory.",
+    href: "/adolescent/ptsd-trauma",
   },
   {
     title: "OCD",
     body: "Obsessive compulsive disorder in teenagers is rarely what it looks like on television. It is intrusive thoughts, rituals, and the exhausting effort of managing a brain that will not quiet down.",
+    href: "/adolescent/ocd",
   },
   {
     title: "ADHD",
     body: "Attention deficit disorder that has not been properly treated or has co-occurring anxiety and depression layered on top. ADHD rarely travels alone in adolescence.",
+    href: "/adolescent/adhd",
   },
   {
     title: "Bipolar Disorder",
     body: "Mood episodes in adolescents are often misdiagnosed as behavioral problems or normal teenage moodiness for years before a correct diagnosis is made.",
+    href: "/adolescent/bipolar",
   },
   {
     title: "Self Harm",
     body: "Cutting, burning, and other self harm behaviors are not manipulation. They are a dysregulated coping mechanism. With the right clinical support, adolescents learn healthier ways to manage the pain.",
+    href: "/adolescent/self-harm",
   },
   {
     title: "Substance Use",
     body: "Alcohol, marijuana, prescription drugs, and increasingly, fentanyl. Adolescent substance use almost always has a mental health condition underneath it. We treat both simultaneously.",
+    href: "/adolescent/substance-use",
   },
   {
     title: "Suicidal Ideation",
     body: "Passive thoughts about death and active suicidal ideation both require clinical attention. Our team is trained in adolescent suicide risk assessment and safety planning.",
+    href: "/adolescent/suicidal-ideation",
   },
 ];
 
@@ -132,6 +142,99 @@ const insuranceProviders = [
   "Magellan",
   "Beacon Health",
 ];
+
+/* ── Conditions Accordion ─────────────────────────────────── */
+
+function ConditionsAccordion() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  return (
+    <section className="py-16 md:py-24 bg-cream">
+      <div className="max-w-container mx-auto px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.15 }}
+          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+          className="text-center mb-12"
+        >
+          <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
+            Conditions We Treat
+          </span>
+          <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold mt-4 mb-3">
+            Your Teenager Does Not Have to Be in Crisis to Need Help
+          </h2>
+          <p className="text-gray-500 max-w-2xl mx-auto">
+            These are the conditions our adolescent clinical team treats every day. Many of them look like behavioral problems on the outside. They are not.
+          </p>
+        </motion.div>
+
+        <div className="max-w-3xl mx-auto space-y-3">
+          {conditions.map((item, i) => (
+            <motion.div
+              key={item.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-30px" }}
+              transition={{ duration: 0.4, delay: i * 0.05 }}
+              className="border border-gray-200 rounded-xl overflow-hidden hover:border-gold/30 transition-colors duration-300 bg-white"
+            >
+              <button
+                onClick={() => setOpenIndex(openIndex === i ? null : i)}
+                className="w-full flex items-center justify-between px-6 py-5 text-left cursor-pointer"
+              >
+                <span className="font-semibold text-forest text-sm pr-4">
+                  {item.title}
+                </span>
+                <svg
+                  className={`w-5 h-5 text-sage flex-shrink-0 transition-transform duration-300 ${
+                    openIndex === i ? "rotate-180" : ""
+                  }`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+              <AnimatePresence>
+                {openIndex === i && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="overflow-hidden"
+                  >
+                    <div className="px-6 pb-5">
+                      <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                        {item.body}
+                      </p>
+                      <Link
+                        href={item.href}
+                        className="inline-flex items-center gap-2 text-sm font-semibold text-gold hover:text-gold-dark transition-colors"
+                      >
+                        Learn More
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </Link>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
 
 /* ── Main Content ─────────────────────────────────────────── */
 
@@ -372,57 +475,8 @@ export default function AdolescentContent({ checklistSlot }: { checklistSlot?: R
         </div>
       </section>
 
-      {/* ── SECTION 7: What We Treat ──────────────────────── */}
-      <section className="py-16 md:py-24 bg-cream">
-        <div className="max-w-container mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, amount: 0.15 }}
-            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="text-center mb-12"
-          >
-            <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
-              Conditions We Treat
-            </span>
-            <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold mt-4 mb-3">
-              Your Teenager Does Not Have to Be in Crisis to Need Help
-            </h2>
-            <p className="text-gray-500 max-w-2xl mx-auto">
-              These are the conditions our adolescent clinical team treats every day. Many of them look like behavioral problems on the outside. They are not.
-            </p>
-          </motion.div>
-
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: false, amount: 0.15 }}
-            variants={containerVariants}
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto"
-          >
-            {conditions.map((item) => (
-              <motion.div
-                key={item.title}
-                variants={cardVariants}
-                whileHover={{
-                  y: -8,
-                  boxShadow: "0 20px 40px rgba(0,0,0,0.12)",
-                }}
-                transition={{ duration: 0.25, ease: "easeOut" }}
-                className="bg-white rounded-xl p-6 relative overflow-hidden group"
-              >
-                <div className="absolute left-0 top-0 h-full w-[3px] bg-gold scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-top" />
-                <h3 className="font-display text-base text-forest font-semibold mb-2">
-                  {item.title}
-                </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  {item.body}
-                </p>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
+      {/* ── SECTION 7: What We Treat (Accordion) ─────────── */}
+      <ConditionsAccordion />
 
       {/* ── SECTION 7.5: Banner Image Before Timeline ────── */}
       <motion.div
