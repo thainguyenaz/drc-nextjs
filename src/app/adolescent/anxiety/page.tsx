@@ -75,10 +75,21 @@ const faqs = [
   { q: "Will my teenager be able to keep up with school during residential treatment?", a: "We provide academic support during residential treatment to help teenagers maintain progress where clinically appropriate. Our team coordinates with families on educational planning as part of the discharge process." },
 ];
 
+const speakableSchema = {
+  "@context": "https://schema.org/",
+  "@type": "WebPage",
+  name: "Adolescent Anxiety Disorder Treatment in Arizona",
+  speakable: {
+    "@type": "SpeakableSpecification",
+    cssSelector: [".definition-block", ".faq-section", ".quick-answer"],
+  },
+  url: "https://drc-nextjs.vercel.app/adolescent/anxiety",
+};
+
 export default function AdolescentAnxietyPage() {
   return (
     <>
-      <SchemaScript schema={[breadcrumbSchema, medicalWebPageSchema, faqSchema]} />
+      <SchemaScript schema={[breadcrumbSchema, medicalWebPageSchema, faqSchema, speakableSchema]} />
       <Navigation />
       <Breadcrumb
         items={[
@@ -101,6 +112,18 @@ export default function AdolescentAnxietyPage() {
           </p>
         </div>
       </div>
+
+      {/* Definition Block */}
+      <section className="definition-block" style={{ background: "#F5EFE6", borderLeft: "4px solid #C4973A", padding: "24px" }}>
+        <div className="max-w-container mx-auto px-6">
+          <div className="max-w-3xl mx-auto">
+            <span className="font-mono text-[10px] uppercase tracking-widest" style={{ color: "#1C2B1E" }}>CLINICAL DEFINITION</span>
+            <p className="font-display text-lg md:text-xl mt-2" style={{ color: "#1C2B1E" }}>
+              Adolescent anxiety disorders are persistent, impairing patterns of fear and avoidance that interfere with school, relationships, and daily functioning in teenagers. Anxiety is the most common mental health condition in adolescents and one of the most responsive to evidence-based treatment.
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* Overview */}
       <section className="py-16 md:py-24 bg-white">
@@ -132,6 +155,12 @@ export default function AdolescentAnxietyPage() {
               <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4 mb-8">
                 How Anxiety Presents in Adolescents
               </h2>
+              <div className="quick-answer" style={{ background: "#FAF7F2", borderLeft: "3px solid #C4973A", padding: "16px 20px", marginBottom: "24px" }}>
+                <span className="font-mono text-[10px] uppercase tracking-widest text-gray-500">QUICK ANSWER</span>
+                <p className="text-gray-700 leading-relaxed mt-1">
+                  Adolescent anxiety frequently presents as physical symptoms, rigid avoidance, explosive anger at unexpected changes, and school refusal rather than visible worry. The teenager who cannot sit in a cafeteria, refuses to speak in class, or cannot leave the house on Monday mornings is often experiencing clinical anxiety, not defiance. School refusal is one of the most acute anxiety presentations seen in adolescent residential treatment.
+                </p>
+              </div>
               <p className="text-gray-600 leading-relaxed text-lg mb-4">
                 Adolescent anxiety does not always look like worry. It can present as physical symptoms including chronic headaches, nausea, and stomachaches with no medical cause. It presents as avoidance, as rigid routines, as the teenager who will not sleep away from home, who refuses to speak in class, who cannot sit in a cafeteria. It presents as explosive anger when something unexpected disrupts a carefully controlled environment. It presents as the straight-A student whose perfectionism is not ambition but terror.
               </p>
@@ -154,6 +183,12 @@ export default function AdolescentAnxietyPage() {
               <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4 mb-8">
                 Co-occurring Conditions
               </h2>
+              <div className="quick-answer" style={{ background: "#FAF7F2", borderLeft: "3px solid #C4973A", padding: "16px 20px", marginBottom: "24px" }}>
+                <span className="font-mono text-[10px] uppercase tracking-widest text-gray-500">QUICK ANSWER</span>
+                <p className="text-gray-700 leading-relaxed mt-1">
+                  Anxiety disorders in adolescents commonly co-occur with depression, ADHD, OCD, and trauma in a bidirectional relationship where each condition worsens the others. Untreated anxiety fuels depression. Undiagnosed ADHD drives anxiety. Treating anxiety without addressing co-occurring conditions produces incomplete and often temporary results.
+                </p>
+              </div>
               <p className="text-gray-600 leading-relaxed text-lg">
                 Anxiety disorders in adolescents frequently co-occur with depression, ADHD, OCD, and trauma. The relationship between anxiety and these conditions is bidirectional. Untreated anxiety fuels depression. Undiagnosed ADHD drives anxiety. Trauma creates a nervous system that cannot distinguish between real and perceived threat. Treating anxiety without addressing what sits underneath it produces incomplete results.
               </p>
@@ -173,6 +208,12 @@ export default function AdolescentAnxietyPage() {
               <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4 mb-8">
                 How We Treat Adolescent Anxiety
               </h2>
+              <div className="quick-answer" style={{ background: "#FAF7F2", borderLeft: "3px solid #C4973A", padding: "16px 20px", marginBottom: "24px" }}>
+                <span className="font-mono text-[10px] uppercase tracking-widest text-gray-500">QUICK ANSWER</span>
+                <p className="text-gray-700 leading-relaxed mt-1">
+                  Desert Recovery Centers treats adolescent anxiety using Cognitive Behavioral Therapy with structured exposure work, Acceptance and Commitment Therapy, individual and group therapy, family therapy, and medication management when clinically indicated. Exposure work is paced carefully and never rushed. Progress is built incrementally with clinical support at every step.
+                </p>
+              </div>
               <p className="text-gray-600 leading-relaxed text-lg mb-6">
                 Our clinical approach to adolescent anxiety is built on evidence-based treatment. We do not rush exposure work and we do not use aversive approaches. Progress is built incrementally with clinical support at every step.
               </p>

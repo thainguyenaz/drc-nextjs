@@ -32,15 +32,38 @@ const faqs = [
   { q: "If my teenager is in crisis right now, what should I do?", a: "Call 988, the Suicide and Crisis Lifeline, or take your teenager to the nearest emergency room. If they are in immediate danger, call 911. For non-emergency clinical consultation about next steps, contact our admissions team directly at (623) 323-1012." },
 ];
 
+const speakableSchema = {
+  "@context": "https://schema.org/",
+  "@type": "WebPage",
+  name: "Adolescent Suicidal Ideation Treatment in Arizona",
+  speakable: {
+    "@type": "SpeakableSpecification",
+    cssSelector: [".definition-block", ".faq-section", ".quick-answer"],
+  },
+  url: "https://drc-nextjs.vercel.app/adolescent/suicidal-ideation",
+};
+
 export default function AdolescentSuicidalIdeationPage() {
   return (
     <>
-      <SchemaScript schema={[breadcrumbSchema, medicalWebPageSchema, faqSchema]} />
+      <SchemaScript schema={[breadcrumbSchema, medicalWebPageSchema, faqSchema, speakableSchema]} />
       <Navigation />
       <Breadcrumb items={[{ name: "Home", url: SITE_URL }, { name: "Adolescent Treatment", url: `${SITE_URL}/adolescent-treatment` }, { name: "Suicidal Ideation", url: `${SITE_URL}${PAGE_PATH}` }]} />
       <PageHero eyebrow="Adolescent Treatment" title="Adolescent Suicidal Ideation Treatment in Arizona" description="Every point on the spectrum of suicidal ideation requires clinical attention. The distance between passive ideation and a crisis event can be shorter than parents or teenagers expect." bgImage="/images/locations/phoenix/phoenix-lobby-2.jpg" />
 
       <div className="bg-cream border-b border-gold/20"><div className="max-w-container mx-auto px-6 py-3 text-center"><p className="text-xs text-sage font-body tracking-wide">Medically reviewed by Dr. An Nguyen, Licensed Clinical Psychologist, Clinical Director, Desert Recovery Centers</p></div></div>
+
+      {/* Definition Block */}
+      <section className="definition-block" style={{ background: "#F5EFE6", borderLeft: "4px solid #C4973A", padding: "24px" }}>
+        <div className="max-w-container mx-auto px-6">
+          <div className="max-w-3xl mx-auto">
+            <span className="font-mono text-[10px] uppercase tracking-widest" style={{ color: "#1C2B1E" }}>CLINICAL DEFINITION</span>
+            <p className="font-display text-lg md:text-xl mt-2" style={{ color: "#1C2B1E" }}>
+              Adolescent suicidal ideation is the presence of thoughts about death or suicide ranging from passive wishes to not exist to active planning, and every point on that spectrum requires immediate clinical attention. With comprehensive risk assessment, safety planning, and treatment of underlying conditions, adolescents can move from crisis to stability.
+            </p>
+          </div>
+        </div>
+      </section>
 
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-container mx-auto px-6"><div className="max-w-3xl mx-auto">
@@ -57,6 +80,12 @@ export default function AdolescentSuicidalIdeationPage() {
           <AnimatedSection>
             <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">Understanding the Pain</span>
             <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4 mb-8">Understanding Adolescent Suicidal Ideation</h2>
+            <div className="quick-answer" style={{ background: "#FAF7F2", borderLeft: "3px solid #C4973A", padding: "16px 20px", marginBottom: "24px" }}>
+              <span className="font-mono text-[10px] uppercase tracking-widest text-gray-500">QUICK ANSWER</span>
+              <p className="text-gray-700 leading-relaxed mt-1">
+                Adolescent suicidal ideation almost always reflects unbearable emotional pain and the belief that the pain is permanent, not a genuine desire to die. Most adolescents experiencing suicidal ideation want relief from pain, not death. This distinction is clinically important because it points directly to what treatment must accomplish: reduce the pain, build distress tolerance, treat underlying conditions, and restore reasons and strategies for staying safe.
+              </p>
+            </div>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">Suicidal ideation in teenagers is almost always the expression of unbearable emotional pain and the belief that the pain is permanent and inescapable. It is not a statement about the value of their life. It is a statement about the limits of what they can tolerate without more support than they currently have.</p>
             <p className="text-gray-600 leading-relaxed text-lg">Most adolescents who experience suicidal ideation do not want to die. They want relief from pain they do not know how to manage any other way. This distinction matters clinically because it points directly to what treatment needs to accomplish: reduce the pain, build the capacity to tolerate distress, address the underlying conditions, and create reasons and strategies for staying safe.</p>
           </AnimatedSection>
@@ -68,6 +97,12 @@ export default function AdolescentSuicidalIdeationPage() {
           <AnimatedSection>
             <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">Clinical Assessment</span>
             <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4 mb-8">Risk Factors for Adolescent Suicidal Ideation</h2>
+            <div className="quick-answer" style={{ background: "#FAF7F2", borderLeft: "3px solid #C4973A", padding: "16px 20px", marginBottom: "24px" }}>
+              <span className="font-mono text-[10px] uppercase tracking-widest text-gray-500">QUICK ANSWER</span>
+              <p className="text-gray-700 leading-relaxed mt-1">
+                The single strongest clinical predictor of a future suicide attempt is a prior suicide attempt. Additional risk factors include depression or bipolar disorder, substance use, access to lethal means, family history of suicide, recent significant loss or humiliation, LGBTQ+ identity in an unsupportive environment, and social isolation. No single risk factor determines outcome and clinical assessment by a trained professional is the only reliable way to evaluate risk.
+              </p>
+            </div>
             <p className="text-gray-600 leading-relaxed mb-6">Clinical risk factors include:</p>
           </AnimatedSection>
           <div className="grid md:grid-cols-2 gap-4">
@@ -88,6 +123,12 @@ export default function AdolescentSuicidalIdeationPage() {
           <AnimatedSection>
             <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">Our Approach</span>
             <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4 mb-8">How We Respond to Suicidal Ideation</h2>
+            <div className="quick-answer" style={{ background: "#FAF7F2", borderLeft: "3px solid #C4973A", padding: "16px 20px", marginBottom: "24px" }}>
+              <span className="font-mono text-[10px] uppercase tracking-widest text-gray-500">QUICK ANSWER</span>
+              <p className="text-gray-700 leading-relaxed mt-1">
+                Every adolescent admitted to Desert Recovery Centers receives a comprehensive suicide risk assessment that informs individualized safety planning throughout treatment. Evidence-based safety planning is a collaboratively built living document, not a no-harm contract, identifying warning signs, coping strategies, support contacts, crisis resources, and means restriction. Treating the underlying condition driving suicidal ideation is what produces sustainable reduction in suicidal thinking.
+              </p>
+            </div>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">Every adolescent admitted to Desert Recovery Centers receives a comprehensive suicide risk assessment conducted by our clinical team. This is not a checkbox. It is a thorough clinical evaluation that informs individualized safety planning throughout the course of treatment.</p>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">Safety planning is not a contract not to harm oneself. Research on no-harm contracts does not support their effectiveness. Evidence-based safety planning is a collaboratively built, individualized plan that identifies warning signs, internal coping strategies, social contacts who can provide support, crisis resources, and means restriction strategies. Safety plans are living documents that are revisited and updated throughout treatment.</p>
             <p className="text-gray-600 leading-relaxed text-lg">Treatment addresses the underlying conditions driving suicidal ideation. Suicidal thinking does not exist in a vacuum. It is almost always connected to depression, trauma, hopelessness, or intolerable life circumstances. Treating the underlying condition is what reduces suicidal ideation sustainably.</p>
@@ -100,6 +141,12 @@ export default function AdolescentSuicidalIdeationPage() {
           <AnimatedSection>
             <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">For Parents</span>
             <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4 mb-8">What to Do Right Now</h2>
+            <div className="quick-answer" style={{ background: "#FAF7F2", borderLeft: "3px solid #C4973A", padding: "16px 20px", marginBottom: "24px" }}>
+              <span className="font-mono text-[10px] uppercase tracking-widest text-gray-500">QUICK ANSWER</span>
+              <p className="text-gray-700 leading-relaxed mt-1">
+                If your teenager has disclosed suicidal thoughts, do not leave them alone, remove access to lethal means, do not promise secrecy, and contact clinical help immediately. Call 988, go to the nearest emergency room, call 911 if there is immediate danger, or call Desert Recovery Centers admissions at (623) 323-1012 for a clinical consultation. Taking suicidal ideation seriously is not overreacting. It is the appropriate and necessary response.
+              </p>
+            </div>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">If your teenager has disclosed suicidal thoughts or you are concerned about their safety, do not leave them alone. Remove access to lethal means including firearms, medications, and other potential methods. Do not promise to keep it secret. Tell them you love them and that you are going to get them help. Contact a crisis line, take them to an emergency room, or call our admissions team for a clinical consultation.</p>
             <p className="text-gray-600 leading-relaxed text-lg">Taking suicidal ideation seriously is not overreacting. It is the appropriate response.</p>
           </AnimatedSection>

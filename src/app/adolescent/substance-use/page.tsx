@@ -30,15 +30,38 @@ const faqs = [
   { q: "Do you treat adolescents who have overdosed?", a: "Yes. A prior overdose or near-overdose is a significant indicator of the severity of the situation and often the catalyst for a family seeking residential care. Our medical team is qualified to manage medically complex admissions." },
 ];
 
+const speakableSchema = {
+  "@context": "https://schema.org/",
+  "@type": "WebPage",
+  name: "Adolescent Substance Use Treatment in Arizona",
+  speakable: {
+    "@type": "SpeakableSpecification",
+    cssSelector: [".definition-block", ".faq-section", ".quick-answer"],
+  },
+  url: "https://drc-nextjs.vercel.app/adolescent/substance-use",
+};
+
 export default function AdolescentSubstanceUsePage() {
   return (
     <>
-      <SchemaScript schema={[breadcrumbSchema, medicalWebPageSchema, faqSchema]} />
+      <SchemaScript schema={[breadcrumbSchema, medicalWebPageSchema, faqSchema, speakableSchema]} />
       <Navigation />
       <Breadcrumb items={[{ name: "Home", url: SITE_URL }, { name: "Adolescent Treatment", url: `${SITE_URL}/adolescent-treatment` }, { name: "Substance Use", url: `${SITE_URL}${PAGE_PATH}` }]} />
       <PageHero eyebrow="Adolescent Treatment" title="Adolescent Substance Use Treatment in Arizona" description="Adolescent substance use is rarely just substance use. There is almost always a mental health condition underneath it. We treat both simultaneously." bgImage="/images/locations/phoenix/phoenix-lobby-2.jpg" />
 
       <div className="bg-cream border-b border-gold/20"><div className="max-w-container mx-auto px-6 py-3 text-center"><p className="text-xs text-sage font-body tracking-wide">Medically reviewed by Dr. An Nguyen, Licensed Clinical Psychologist, Clinical Director, Desert Recovery Centers</p></div></div>
+
+      {/* Definition Block */}
+      <section className="definition-block" style={{ background: "#F5EFE6", borderLeft: "4px solid #C4973A", padding: "24px" }}>
+        <div className="max-w-container mx-auto px-6">
+          <div className="max-w-3xl mx-auto">
+            <span className="font-mono text-[10px] uppercase tracking-widest" style={{ color: "#1C2B1E" }}>CLINICAL DEFINITION</span>
+            <p className="font-display text-lg md:text-xl mt-2" style={{ color: "#1C2B1E" }}>
+              Adolescent substance use almost always has an underlying mental health condition driving it, including anxiety, depression, trauma, or ADHD that the teenager is attempting to self-medicate. Dual diagnosis residential treatment addressing both the substance use and the underlying condition simultaneously produces the most durable outcomes.
+            </p>
+          </div>
+        </div>
+      </section>
 
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-container mx-auto px-6"><div className="max-w-3xl mx-auto">
@@ -55,6 +78,12 @@ export default function AdolescentSubstanceUsePage() {
           <AnimatedSection>
             <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">Critical Context</span>
             <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4 mb-8">The Fentanyl Reality</h2>
+            <div className="quick-answer" style={{ background: "#FAF7F2", borderLeft: "3px solid #C4973A", padding: "16px 20px", marginBottom: "24px" }}>
+              <span className="font-mono text-[10px] uppercase tracking-widest text-gray-500">QUICK ANSWER</span>
+              <p className="text-gray-700 leading-relaxed mt-1">
+                The illicit drug supply is contaminated with fentanyl at levels that make any non-prescribed pill or powder potentially fatal for adolescents. Teenagers who believe they are taking Xanax, Adderall, or MDMA are frequently taking fentanyl pressed into an indistinguishable pill. There is no safe experimentation in the current adolescent substance use environment. One pill can be fatal.
+              </p>
+            </div>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">The adolescent substance use landscape has changed in ways that make the stakes categorically higher than a decade ago. The illicit drug supply is contaminated with fentanyl at levels that make any non-prescribed pill or powder potentially fatal. Teenagers who believe they are taking Xanax, Adderall, or MDMA are frequently taking fentanyl pressed into a pill that is indistinguishable from a pharmaceutical. There is no safe experimentation in this environment. One pill can be fatal.</p>
             <p className="text-gray-600 leading-relaxed text-lg">This is not hyperbole. It is the current reality of adolescent substance use in Arizona and across the United States.</p>
           </AnimatedSection>
@@ -66,6 +95,12 @@ export default function AdolescentSubstanceUsePage() {
           <AnimatedSection>
             <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">Recognizing the Signs</span>
             <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4 mb-8">How Adolescent Substance Use Presents</h2>
+            <div className="quick-answer" style={{ background: "#FAF7F2", borderLeft: "3px solid #C4973A", padding: "16px 20px", marginBottom: "24px" }}>
+              <span className="font-mono text-[10px] uppercase tracking-widest text-gray-500">QUICK ANSWER</span>
+              <p className="text-gray-700 leading-relaxed mt-1">
+                Adolescent substance use frequently goes undetected for longer than parents expect because teenagers are skilled at concealment and the early signs are easy to attribute to normal adolescent behavior. Common indicators include changes in friend groups, declining grades, withdrawal from family, unexplained money, changes in hygiene, and mood shifts that are more pronounced and less clearly connected to identifiable events. Many families reach treatment not after discovering use but after a crisis.
+              </p>
+            </div>
             <p className="text-gray-600 leading-relaxed mb-6">Substance use in teenagers often goes undetected longer than parents expect. Common signs include:</p>
           </AnimatedSection>
           <div className="grid md:grid-cols-2 gap-4">
@@ -86,6 +121,12 @@ export default function AdolescentSubstanceUsePage() {
           <AnimatedSection>
             <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">Our Approach</span>
             <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4 mb-8">How We Treat Adolescent Substance Use</h2>
+            <div className="quick-answer" style={{ background: "#FAF7F2", borderLeft: "3px solid #C4973A", padding: "16px 20px", marginBottom: "24px" }}>
+              <span className="font-mono text-[10px] uppercase tracking-widest text-gray-500">QUICK ANSWER</span>
+              <p className="text-gray-700 leading-relaxed mt-1">
+                Desert Recovery Centers treats adolescent substance use and the underlying mental health condition simultaneously from day one, not sequentially. This dual diagnosis approach is the clinical standard because substance use and mental health conditions in adolescents are inseparable. Treatment includes Motivational Interviewing, individual and group therapy, family therapy, medical management, and a structured aftercare and relapse prevention plan.
+              </p>
+            </div>
             <p className="text-gray-600 leading-relaxed text-lg mb-6">Our dual diagnosis residential program treats substance use and the underlying mental health condition simultaneously. This is not sequential. We do not stabilize the substance use and then begin mental health treatment. Both are addressed from day one because they are inseparable. We do not use punitive or confrontational approaches. The evidence does not support them and they are particularly counterproductive with adolescents.</p>
           </AnimatedSection>
           <div className="space-y-6">
