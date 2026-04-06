@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import GetHelpForm from "@/components/forms/GetHelpForm";
 
 const locations = [
   {
@@ -95,8 +96,8 @@ export default function ContactContent() {
                   <svg className="w-5 h-5 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
-                  <a href="mailto:contact@desertrecoverycenters.com" className="text-sage font-medium">
-                    contact@desertrecoverycenters.com
+                  <a href="mailto:admissions@desertrecoverycenters.com" className="text-sage font-medium">
+                    admissions@desertrecoverycenters.com
                   </a>
                 </div>
               </div>
@@ -106,57 +107,14 @@ export default function ContactContent() {
               </p>
             </motion.div>
 
-            <motion.form
+            <motion.div
               initial={{ opacity: 0, x: 80 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
-              className="bg-cream rounded-2xl p-8 shadow-sm space-y-5"
-              onSubmit={(e) => e.preventDefault()}
             >
-              <div className="grid sm:grid-cols-2 gap-4">
-                <div>
-                  <label htmlFor="contact-first" className="block text-sm font-medium text-forest mb-1.5">First Name</label>
-                  <input id="contact-first" type="text" required className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-sage/50 focus:border-sage bg-white" />
-                </div>
-                <div>
-                  <label htmlFor="contact-last" className="block text-sm font-medium text-forest mb-1.5">Last Name</label>
-                  <input id="contact-last" type="text" required className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-sage/50 focus:border-sage bg-white" />
-                </div>
-              </div>
-              <div>
-                <label htmlFor="contact-email" className="block text-sm font-medium text-forest mb-1.5">Email</label>
-                <input id="contact-email" type="email" required className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-sage/50 focus:border-sage bg-white" />
-              </div>
-              <div>
-                <label htmlFor="contact-phone" className="block text-sm font-medium text-forest mb-1.5">Phone</label>
-                <input id="contact-phone" type="tel" className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-sage/50 focus:border-sage bg-white" />
-              </div>
-              <div>
-                <label htmlFor="contact-inquiry" className="block text-sm font-medium text-forest mb-1.5">I&apos;m Reaching Out About</label>
-                <select id="contact-inquiry" className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-sage/50 focus:border-sage bg-white">
-                  <option value="">Select one</option>
-                  <option value="myself">Treatment for myself</option>
-                  <option value="loved-one">Treatment for a loved one</option>
-                  <option value="insurance">Insurance verification</option>
-                  <option value="professional">Professional referral</option>
-                  <option value="general">General information</option>
-                </select>
-              </div>
-              <div>
-                <label htmlFor="contact-message" className="block text-sm font-medium text-forest mb-1.5">How Can We Help?</label>
-                <textarea id="contact-message" rows={4} className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-sage/50 focus:border-sage resize-none bg-white" />
-              </div>
-              <button
-                type="submit"
-                className="w-full bg-gold hover:bg-gold-dark text-white font-semibold text-base py-4 rounded-xl transition-colors cursor-pointer"
-              >
-                Submit Confidential Inquiry
-              </button>
-              <p className="text-xs text-gray-400 text-center">
-                Protected by HIPAA &amp; 42 CFR Part 2. Your information is completely confidential.
-              </p>
-            </motion.form>
+              <GetHelpForm variant="contact" />
+            </motion.div>
           </div>
         </div>
       </section>

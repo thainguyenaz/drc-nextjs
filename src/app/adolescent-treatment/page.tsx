@@ -291,7 +291,19 @@ const breadcrumbSchema = {
 export default function AdolescentTreatmentPage() {
   return (
     <>
-      <SchemaScript schema={[clinicSchema, faqSchema, breadcrumbSchema]} />
+      <SchemaScript schema={[clinicSchema, faqSchema, breadcrumbSchema, {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "How to Get Admitted to Desert Recovery Centers Adolescent Program",
+        "description": "The admissions process for adolescent treatment at Desert Recovery Centers.",
+        "totalTime": "PT48H",
+        "step": [
+          { "@type": "HowToStep", "position": 1, "name": "Call Admissions", "text": "Call (623) 323-1012 any time, day or night. A real person answers 24 hours a day." },
+          { "@type": "HowToStep", "position": 2, "name": "Clinical Assessment", "text": "Complete a brief 15 to 20 minute clinical assessment by phone to determine the right level of care." },
+          { "@type": "HowToStep", "position": 3, "name": "Insurance Verification", "text": "The admissions team contacts your insurance provider directly and explains your coverage and costs before you commit." },
+          { "@type": "HowToStep", "position": 4, "name": "Begin Treatment", "text": "Most clients begin treatment within 48 hours of their first call." },
+        ],
+      }]} />
       <InlineFAQSchema items={faqs} />
       <SpeakableSchema
         url="/adolescent-treatment"

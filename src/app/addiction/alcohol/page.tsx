@@ -58,7 +58,7 @@ const faqs = [
 export default function AlcoholAddictionPage() {
   return (
     <>
-      <SchemaScript schema={[getFAQSchema(faqData["alcoholism-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/addiction/alcohol"))]} />
+      <SchemaScript schema={[getFAQSchema(faqData["alcoholism-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/addiction/alcohol")), {"@context":"https://schema.org","@type":"MedicalWebPage","@id":"https://www.desertrecoverycenters.com/addiction/alcoholism-treatment/#webpage","url":"https://www.desertrecoverycenters.com/addiction/alcoholism-treatment/","name":"Alcohol Addiction Treatment Arizona | Desert Recovery Centers","specialty":"Psychiatry","reviewedBy":{"@type":"Person","@id":"https://www.desertrecoverycenters.com/our-team#dr-an-nguyen","name":"Dr. An Nguyen","jobTitle":"Licensed Clinical Psychologist, Clinical Director","worksFor":{"@id":"https://www.desertrecoverycenters.com/#organization"}},"dateModified":"2026-04-05","publisher":{"@id":"https://www.desertrecoverycenters.com/#organization"}}]} />
       <InlineFAQSchema items={faqs} />
       <MedicalConditionSchema
         name="Alcohol Use Disorder"

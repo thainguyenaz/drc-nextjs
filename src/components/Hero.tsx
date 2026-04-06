@@ -61,8 +61,8 @@ export default function Hero() {
               className="text-white font-display font-bold leading-[1.1] mb-6"
               style={{ fontSize: "clamp(32px, 5vw, 52px)" }}
             >
-              Treatment Centers for Mental Health,
-              <br className="hidden md:inline" /> Drug, &amp; Alcohol Addiction in AZ
+              Luxury Addiction and Mental Health
+              <br className="hidden md:inline" /> Treatment in Arizona
             </h1>
           </motion.div>
 
@@ -87,8 +87,8 @@ export default function Hero() {
               <Image src="/images/branding/JointCommission_GoldSeal_National.png" alt="Joint Commission Gold Seal" width={28} height={28} className="flex-shrink-0" />
               <span className="text-white/90 text-sm font-medium">Joint Commission Accredited</span>
             </a>
-            <a href="https://www.legitscript.com/websites/?checker_keywords=desertrecoverycenters.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/15 rounded-xl px-4 py-2.5 hover:bg-white/15 transition-colors">
-              <svg className="w-6 h-6 text-green-400 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <a href="https://www.legitscript.com/websites/?checker_keywords=desertrecoverycenters.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/15 rounded-xl px-4 py-2.5 hover:bg-white/15 transition-colors" aria-label="Verify LegitScript Approval for www.desertrecoverycenters.com">
+              <Image src="/images/branding/legitscript-seal-25653576.png" alt="Verify Approval for www.desertrecoverycenters.com - LegitScript Certified" width={28} height={30} unoptimized className="flex-shrink-0" />
               <span className="text-white/90 text-sm font-medium">LegitScript Certified</span>
             </a>
           </motion.div>

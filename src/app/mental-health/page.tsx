@@ -4,7 +4,7 @@ import PageHero from "@/components/PageHero";
 import ConditionsGrid from "@/components/ConditionsGrid";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { BreadcrumbSchema, VideoSchemas } from "@/lib/seo";
+import { BreadcrumbSchema, VideoSchemas, SpeakableSchema } from "@/lib/seo";
 import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
 import { faqData } from "@/data/faq-data";
 import SchemaScript from "@/components/SchemaScript";
@@ -33,6 +33,7 @@ export default function MentalHealthPage() {
   return (
     <>
       <SchemaScript schema={[getFAQSchema(faqData["mental-health"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/mental-health"))]} />
+      <SpeakableSchema url="/mental-health" cssSelectors={["h1", "[data-speakable]"]} />
       <BreadcrumbSchema items={[{ name: "Mental Health Treatment", path: "/mental-health" }]} />
       <VideoSchemas path="/mental-health/" />
       <Navigation />

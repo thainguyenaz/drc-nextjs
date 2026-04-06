@@ -37,6 +37,30 @@ export default function OurTeamPage() {
         image="/images/team/Dr._Reyes_Topete-cropped.jpg"
         description="Medical Director at Desert Recovery Centers, overseeing psychiatric care and medication management for addiction and mental health treatment."
       />
+      <PersonSchema
+        name="Dr. Jonathan Shelton"
+        jobTitle="Licensed Clinical Psychologist"
+        image="/images/team/Jonathan-Shelton.jpg"
+        description="Licensed Clinical Psychologist at Desert Recovery Centers with over 17 years of clinical experience in addiction and trauma treatment."
+      />
+      <PersonSchema
+        name="Dr. Caitlin Ellis"
+        jobTitle="Licensed Clinical Psychologist"
+        image="/images/team/Caitlin-Ellis.jpg"
+        description="Licensed Clinical Psychologist at Desert Recovery Centers specializing in culturally sensitive and trauma-informed care."
+      />
+      <PersonSchema
+        name="Dr. Madison Day-Robinson"
+        jobTitle="Licensed Clinical Psychologist"
+        image="/images/team/dr-madison-day-robinson.jpg"
+        description="Licensed Clinical Psychologist at Desert Recovery Centers with expertise in evidence-based interventions and psychological assessment."
+      />
+      <PersonSchema
+        name="Jason Inserra"
+        jobTitle="Director of Operations"
+        image="/images/team/Jason-Inserra-3.jpg"
+        description="Director of Operations at Desert Recovery Centers, certified peer support specialist and recovery advocate."
+      />
       <Navigation />
       <PageHero
         eyebrow="Our Team"

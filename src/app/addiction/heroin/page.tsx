@@ -59,7 +59,7 @@ const faqs = [
 export default function HeroinAddictionPage() {
   return (
     <>
-      <SchemaScript schema={[getFAQSchema(faqData["heroin-addiction-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/addiction/heroin"))]} />
+      <SchemaScript schema={[getFAQSchema(faqData["heroin-addiction-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/addiction/heroin")), {"@context":"https://schema.org","@type":"MedicalWebPage","@id":"https://www.desertrecoverycenters.com/addiction/heroin-addiction-treatment/#webpage","url":"https://www.desertrecoverycenters.com/addiction/heroin-addiction-treatment/","name":"Heroin Addiction Treatment Arizona | Desert Recovery Centers","specialty":"Psychiatry","reviewedBy":{"@type":"Person","@id":"https://www.desertrecoverycenters.com/our-team#dr-an-nguyen","name":"Dr. An Nguyen","jobTitle":"Licensed Clinical Psychologist, Clinical Director","worksFor":{"@id":"https://www.desertrecoverycenters.com/#organization"}},"dateModified":"2026-04-05","publisher":{"@id":"https://www.desertrecoverycenters.com/#organization"}}]} />
       <InlineFAQSchema items={faqs} />
       <MedicalConditionSchema
         name="Opioid/Heroin Addiction"

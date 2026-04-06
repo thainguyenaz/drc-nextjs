@@ -20,19 +20,22 @@ const footerLinks = {
     { label: "Prescription Drugs", href: "/addiction/prescription-drugs" },
   ],
   Treatment: [
-    { label: "Residential", href: "/treatments" },
-    { label: "PHP Program", href: "/treatments" },
-    { label: "IOP Program", href: "/treatments" },
+    { label: "Residential Treatment", href: "/treatments/residential" },
+    { label: "TMS Therapy", href: "/treatments/tms-therapy" },
+    { label: "PHP Program", href: "/locations/phoenix-php-iop" },
+    { label: "IOP Program", href: "/locations/phoenix-php-iop" },
     { label: "PHP / IOP Phoenix", href: "/locations/phoenix-php-iop" },
     { label: "CBT Therapy", href: "/treatments/cbt" },
     { label: "DBT Therapy", href: "/treatments/dbt" },
     { label: "EMDR Therapy", href: "/treatments/emdr" },
+    { label: "12-Step Program", href: "/treatments/12-step-program" },
   ],
   Company: [
+    { label: "Recovery Blog", href: "/resources/blog" },
+    { label: "Resources", href: "/resources" },
     { label: "About Us", href: "/about-us" },
     { label: "Our Team", href: "/our-team" },
     { label: "Facilities", href: "/locations" },
-    { label: "Resources", href: "/resources" },
     { label: "Insurance", href: "/insurance" },
     { label: "Contact", href: "/contact" },
   ],
@@ -58,8 +61,8 @@ export default function Footer() {
               Luxury mental health and addiction treatment in the heart of the
               Arizona desert.
             </p>
-            <a href="tel:+14809313617" className="text-gold font-semibold text-sm">
-              (480) 931-3617
+            <a href="tel:+16233231012" className="text-gold font-semibold text-sm">
+              (623) 323-1012
             </a>
             <div className="mt-3">
               <a
@@ -108,9 +111,14 @@ export default function Footer() {
           <a href="https://www.jointcommission.org" target="_blank" rel="noopener noreferrer" className="opacity-70 hover:opacity-100 transition-opacity">
             <Image src="/JointCommission_GoldSeal.png" alt="Joint Commission Gold Seal" width={64} height={64} className="h-16 w-auto" />
           </a>
-          <a href="https://www.legitscript.com/websites/?checker_keywords=desertrecoverycenters.com" target="_blank" rel="noopener noreferrer" className="opacity-70 hover:opacity-100 transition-opacity">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="https://static.legitscript.com/seals/4374.png" alt="LegitScript Certified" width="120" height="100" style={{ height: "64px", width: "auto" }} />
+          <a href="https://www.legitscript.com/websites/?checker_keywords=desertrecoverycenters.com" target="_blank" rel="noopener noreferrer" className="opacity-70 hover:opacity-100 transition-opacity" aria-label="Verify LegitScript Approval for www.desertrecoverycenters.com">
+            <Image
+              src="/images/branding/legitscript-seal-25653576.png"
+              alt="Verify Approval for www.desertrecoverycenters.com - LegitScript Certified"
+              width={73}
+              height={79}
+              unoptimized
+            />
           </a>
         </div>
 

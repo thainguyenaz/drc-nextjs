@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: "Contact Us, Desert Recovery Centers",
   description:
     "Contact Desert Recovery Centers. Three luxury facilities in Glendale, Scottsdale, and Phoenix, Arizona. Available 24/7 for confidential consultations.",
+  openGraph: {
+    images: [{ url: "/images/glendale/Glendale-Front.jpg", width: 1200, height: 630, alt: "Desert Recovery Centers luxury treatment facility in Arizona" }],
+  },
 };
 
 export default function ContactPage() {

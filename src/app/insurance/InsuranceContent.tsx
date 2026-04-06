@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import InsuranceVerificationForm from "@/components/forms/InsuranceVerificationForm";
 
 const insurers = [
   { name: "Cigna", desc: "In-network coverage for residential, PHP, and IOP programs." },
@@ -188,64 +189,14 @@ export default function InsuranceContent() {
               </div>
             </motion.div>
 
-            <motion.form
+            <motion.div
               initial={{ opacity: 0, x: 80 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
-              className="bg-white rounded-2xl p-8 shadow-sm space-y-5"
-              onSubmit={(e) => e.preventDefault()}
             >
-              <div className="grid sm:grid-cols-2 gap-4">
-                <div>
-                  <label htmlFor="ins-first" className="block text-sm font-medium text-forest mb-1.5">First Name</label>
-                  <input id="ins-first" type="text" required className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-sage/50 focus:border-sage" />
-                </div>
-                <div>
-                  <label htmlFor="ins-last" className="block text-sm font-medium text-forest mb-1.5">Last Name</label>
-                  <input id="ins-last" type="text" required className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-sage/50 focus:border-sage" />
-                </div>
-              </div>
-              <div>
-                <label htmlFor="ins-phone" className="block text-sm font-medium text-forest mb-1.5">Phone Number</label>
-                <input id="ins-phone" type="tel" required className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-sage/50 focus:border-sage" />
-              </div>
-              <div>
-                <label htmlFor="ins-email" className="block text-sm font-medium text-forest mb-1.5">Email</label>
-                <input id="ins-email" type="email" required className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-sage/50 focus:border-sage" />
-              </div>
-              <div>
-                <label htmlFor="ins-provider" className="block text-sm font-medium text-forest mb-1.5">Insurance Provider</label>
-                <select id="ins-provider" required className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-sage/50 focus:border-sage bg-white">
-                  <option value="">Select your insurance</option>
-                  <option value="cigna">Cigna</option>
-                  <option value="aetna">Aetna</option>
-                  <option value="bcbs">Blue Cross Blue Shield</option>
-                  <option value="uhc">UnitedHealthcare</option>
-                  <option value="humana">Humana</option>
-                  <option value="tricare">Tricare</option>
-                  <option value="triwest">TriWest</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-              <div>
-                <label htmlFor="ins-member-id" className="block text-sm font-medium text-forest mb-1.5">Member ID (optional)</label>
-                <input id="ins-member-id" type="text" className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-sage/50 focus:border-sage" placeholder="Found on your insurance card" />
-              </div>
-              <div>
-                <label htmlFor="ins-group" className="block text-sm font-medium text-forest mb-1.5">Group Number (optional)</label>
-                <input id="ins-group" type="text" className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-sage/50 focus:border-sage" />
-              </div>
-              <button
-                type="submit"
-                className="w-full bg-gold hover:bg-gold-dark text-white font-semibold text-base py-4 rounded-xl transition-colors cursor-pointer"
-              >
-                Verify My Insurance
-              </button>
-              <p className="text-xs text-gray-400 text-center">
-                Protected by HIPAA &amp; 42 CFR Part 2. Your information is completely confidential.
-              </p>
-            </motion.form>
+              <InsuranceVerificationForm />
+            </motion.div>
           </div>
         </div>
       </section>

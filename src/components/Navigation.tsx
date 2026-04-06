@@ -41,15 +41,17 @@ const navLinks = [
     href: "/treatments",
     image: "/images/general/DRC-TREATMENTS.jpg",
     children: [
+      { label: "Residential Treatment", href: "/treatments/residential" },
+      { label: "TMS Therapy", href: "/treatments/tms-therapy" },
       { label: "PHP / IOP", href: "/locations/phoenix-php-iop" },
       { label: "CBT", href: "/treatments/cbt" },
       { label: "DBT", href: "/treatments/dbt" },
       { label: "EMDR", href: "/treatments/emdr" },
+      { label: "12-Step Program", href: "/treatments/12-step-program" },
       { label: "Trauma Therapy", href: "/treatments/trauma-therapy" },
       { label: "Dual Diagnosis", href: "/treatments/dual-diagnosis" },
       { label: "Holistic Therapies", href: "/treatments/holistic" },
       { label: "BridgeWork™", href: "/treatments/bridgework" },
-      { label: "TMS Therapy", href: "/treatments/tms-therapy" },
       { label: "Family Program", href: "/treatment/family-program" },
     ],
   },
@@ -68,12 +70,27 @@ const navLinks = [
   { label: "About", href: "/about-us" },
   { label: "Contact", href: "/contact" },
   { label: "Our Team", href: "/our-team" },
+  {
+    label: "Resources",
+    href: "/resources",
+    image: "/images/general/DRC-TREATMENTS.jpg",
+    children: [
+      { label: "Recovery Blog", href: "/resources/blog" },
+      { label: "Luxury vs Traditional Rehab", href: "/resources/blog/luxury-rehab-vs-standard-rehab-clinical-differences" },
+      { label: "Detox Guide", href: "/resources/blog/risks-of-drug-or-alcohol-detox-why-you-need-professional-help" },
+      { label: "Family Guide", href: "/resources/blog/how-drug-and-alcohol-addiction-impacts-families" },
+      { label: "Insurance Guide", href: "/resources/blog/how-insurance-covers-addiction-mental-health-treatment" },
+      { label: "Mental Health Assessment", href: "/resources/mental-health-assessment" },
+      { label: "Verify Insurance", href: "/insurance" },
+    ],
+  },
 ];
 
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 80);
@@ -90,7 +107,7 @@ export default function Navigation() {
     >
       <div className="max-w-container mx-auto px-6 flex items-center justify-between h-14">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3 flex-shrink-0">
+        <Link href="/" className="flex items-center gap-3 flex-shrink-0 mr-8">
           <Image
             src="/images/branding/drc-logo-black.png"
             alt="Desert Recovery Centers"
@@ -164,12 +181,12 @@ export default function Navigation() {
         </div>
 
         {/* Desktop CTA */}
-        <div className="hidden lg:flex items-center gap-4 flex-shrink-0 ml-auto">
+        <div className="hidden lg:flex items-center gap-4 flex-shrink-0 ml-8">
           <a
-            href="tel:+14809313617"
+            href="tel:+16233231012"
             className={`font-semibold text-sm transition-colors ${scrolled ? "text-gray-900" : "text-white"}`}
           >
-            (480) 931-3617
+            (623) 323-1012
           </a>
           <Link
             href="/insurance"
@@ -204,17 +221,61 @@ export default function Navigation() {
           >
             <div className="px-6 py-6 space-y-4">
               {navLinks.map((link) => (
-                <Link
-                  key={link.label}
-                  href={link.href}
-                  className="block text-white/90 hover:text-white text-base py-2"
-                  onClick={() => setMobileOpen(false)}
-                >
-                  {link.label}
-                </Link>
+                <div key={link.label}>
+                  {link.children ? (
+                    <>
+                      <button
+                        onClick={() => setMobileExpanded(mobileExpanded === link.label ? null : link.label)}
+                        className="flex items-center justify-between w-full text-white/90 hover:text-white text-base py-2"
+                      >
+                        {link.label}
+                        <svg
+                          className={`w-4 h-4 transition-transform ${mobileExpanded === link.label ? "rotate-180" : ""}`}
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          strokeWidth={2}
+                        >
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </button>
+                      <AnimatePresence>
+                        {mobileExpanded === link.label && (
+                          <motion.div
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{ opacity: 1, height: "auto" }}
+                            exit={{ opacity: 0, height: 0 }}
+                            className="overflow-hidden"
+                          >
+                            <div className="pl-4 pb-2 space-y-1">
+                              {link.children.map((child) => (
+                                <Link
+                                  key={child.label}
+                                  href={child.href}
+                                  className="block text-white/60 hover:text-white text-sm py-1.5"
+                                  onClick={() => setMobileOpen(false)}
+                                >
+                                  {child.label}
+                                </Link>
+                              ))}
+                            </div>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </>
+                  ) : (
+                    <Link
+                      href={link.href}
+                      className="block text-white/90 hover:text-white text-base py-2"
+                      onClick={() => setMobileOpen(false)}
+                    >
+                      {link.label}
+                    </Link>
+                  )}
+                </div>
               ))}
               <div className="pt-4 border-t border-white/10 space-y-3">
-                <a href="tel:+14809313617" className="block text-gold font-semibold text-lg">(480) 931-3617</a>
+                <a href="tel:+16233231012" className="block text-gold font-semibold text-lg">(623) 323-1012</a>
                 <Link
                   href="/insurance"
                   className="block bg-gold text-white text-center font-semibold px-6 py-3 rounded-xl"

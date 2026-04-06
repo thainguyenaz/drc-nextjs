@@ -4,7 +4,7 @@ import PageHero from "@/components/PageHero";
 import AddictionPrograms from "@/components/AddictionPrograms";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { BreadcrumbSchema, VideoSchemas } from "@/lib/seo";
+import { BreadcrumbSchema, VideoSchemas, SpeakableSchema } from "@/lib/seo";
 import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
 import { faqData } from "@/data/faq-data";
 import SchemaScript from "@/components/SchemaScript";
@@ -34,6 +34,7 @@ export default function AddictionTreatmentPage() {
   return (
     <>
       <SchemaScript schema={[getFAQSchema(faqData["addiction-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/addiction-treatment"))]} />
+      <SpeakableSchema url="/addiction-treatment" cssSelectors={["h1", "[data-speakable]"]} />
       <BreadcrumbSchema items={[{ name: "Addiction Treatment", path: "/addiction-treatment" }]} />
       <VideoSchemas path="/addiction-treatment/" />
       <Navigation />

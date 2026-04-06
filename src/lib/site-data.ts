@@ -1,6 +1,6 @@
 export const siteData = {
   name: "Desert Recovery Centers",
-  email: "contact@desertrecoverycenters.com",
+  email: "admissions@desertrecoverycenters.com",
   social: {
     facebook: "https://www.facebook.com/desertrecoverycenters",
     instagram: "https://www.instagram.com/desertrecoverycenter",
@@ -53,7 +53,7 @@ export const siteData = {
         "Dedicated NeuroStar TMS therapy center for depression, anxious depression, and OCD treatment.",
       programs: ["TMS Therapy"],
       amenities: ["NeuroStar TMS Suite"],
-      image: "/images/general/DRC-TREATMENTS.jpg",
+      image: "/images/locations/phoenix/phoenix-lobby-2.jpg",
       sameAs: [] as string[],
     },
     {

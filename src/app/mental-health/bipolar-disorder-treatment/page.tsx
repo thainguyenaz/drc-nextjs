@@ -16,6 +16,7 @@ import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
 import Citations from "@/components/Citations";
 import { getPageMeta } from "@/data/page-metadata";
 import AnimatedSection from "@/components/animated/AnimatedSection";
+import BipolarSymptomsSection from "./BipolarSymptomsSection";
 
 const meta = getPageMeta("/mental-health/bipolar-disorder-treatment/");
 
@@ -57,7 +58,7 @@ const faqs = [
 export default function BipolarTreatmentPage() {
   return (
     <>
-      <SchemaScript schema={[getFAQSchema(faqData["bipolar-disorder-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/mental-health/bipolar-disorder-treatment"))]} />
+      <SchemaScript schema={[getFAQSchema(faqData["bipolar-disorder-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/mental-health/bipolar-disorder-treatment")), {"@context":"https://schema.org","@type":"MedicalWebPage","@id":"https://www.desertrecoverycenters.com/mental-health/bipolar-disorder-treatment/#webpage","url":"https://www.desertrecoverycenters.com/mental-health/bipolar-disorder-treatment/","name":"Bipolar Disorder Treatment Arizona | Desert Recovery Centers","specialty":"Psychiatry","reviewedBy":{"@type":"Person","@id":"https://www.desertrecoverycenters.com/our-team#dr-an-nguyen","name":"Dr. An Nguyen","jobTitle":"Licensed Clinical Psychologist, Clinical Director","worksFor":{"@id":"https://www.desertrecoverycenters.com/#organization"}},"dateModified":"2026-04-05","publisher":{"@id":"https://www.desertrecoverycenters.com/#organization"}}]} />
       <InlineFAQSchema items={faqs} />
       <SpeakableSchema url="/mental-health/bipolar-disorder-treatment" cssSelectors={["[data-speakable]"]} />
       <MedicalConditionSchema
@@ -107,58 +108,7 @@ export default function BipolarTreatmentPage() {
       </section>
 
       {/* Symptoms Section */}
-      <section className="py-16 md:py-24 bg-cream">
-        <div className="max-w-container mx-auto px-6">
-          <div className="max-w-3xl mx-auto">
-            <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
-              Recognizing the Signs
-            </span>
-            <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4 mb-8">
-              Symptoms of Bipolar Disorder
-            </h2>
-
-            <div className="space-y-6">
-              <div>
-                <h3 className="font-display text-lg text-forest font-semibold mb-3">Manic / Hypomanic Episodes</h3>
-                <div className="grid md:grid-cols-2 gap-3">
-                  {[
-                    "Abnormally elevated or irritable mood lasting days or weeks",
-                    "Dramatically decreased need for sleep without feeling tired",
-                    "Racing thoughts, rapid speech, jumping between ideas",
-                    "Grandiosity, inflated self-esteem or unrealistic beliefs about abilities",
-                    "Impulsive, risky behavior: spending sprees, reckless driving, risky sex",
-                    "Inability to focus, starting many projects but finishing none",
-                  ].map((s, i) => (
-                    <div key={i} className="flex items-start gap-3 bg-white rounded-lg p-4 border border-gray-100">
-                      <span className="w-2 h-2 bg-gold rounded-full mt-2 flex-shrink-0" />
-                      <p className="text-gray-600 text-sm leading-relaxed">{s}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div>
-                <h3 className="font-display text-lg text-forest font-semibold mb-3">Depressive Episodes</h3>
-                <div className="grid md:grid-cols-2 gap-3">
-                  {[
-                    "Deep sadness, emptiness, or hopelessness lasting weeks or more",
-                    "Loss of interest or pleasure in all activities",
-                    "Extreme fatigue and difficulty with basic daily tasks",
-                    "Difficulty concentrating, making decisions, or remembering",
-                    "Changes in sleep, insomnia or sleeping excessively",
-                    "Thoughts of death or suicide",
-                  ].map((s, i) => (
-                    <div key={i} className="flex items-start gap-3 bg-white rounded-lg p-4 border border-gray-100">
-                      <span className="w-2 h-2 bg-gold rounded-full mt-2 flex-shrink-0" />
-                      <p className="text-gray-600 text-sm leading-relaxed">{s}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <BipolarSymptomsSection />
 
       {/* Treatment Approach */}
       <section className="py-16 md:py-24 bg-white">

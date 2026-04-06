@@ -32,7 +32,7 @@ export default function CTASection() {
             Call (623) 323-1012
           </a>
           <a
-            href="mailto:contact@desertrecoverycenters.com"
+            href="mailto:admissions@desertrecoverycenters.com"
             className="bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/30 text-white font-semibold text-base px-8 py-4 rounded-xl transition-all w-full sm:w-auto text-center cursor-pointer"
           >
             Email Us

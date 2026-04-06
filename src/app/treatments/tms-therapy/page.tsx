@@ -1,11 +1,14 @@
 "use client";
 
-import { useRef, useState, FormEvent } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { useState } from "react";
+import { motion } from "framer-motion";
+import Image from "next/image";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import { MedicalTherapySchema, InlineFAQSchema } from "@/lib/seo";
+import SchemaScript from "@/components/SchemaScript";
+import TMSVideoSection from "./TMSVideoSection";
 
 /* ─── Data ───────────────────────────────────────────────────────────── */
 
@@ -110,11 +113,11 @@ const faqs = [
   },
   {
     q: "Is TMS safe?",
-    a: "NeuroStar TMS has been delivered in over 6.9 million treatments worldwide. The most common side effect is mild scalp discomfort or headache during treatment that typically resolves quickly. Serious side effects are rare. Our clinical team will evaluate your full medical history before recommending TMS.",
+    a: "NeuroStar TMS has been delivered in over 8.2 million treatments worldwide. The most common side effect is mild scalp discomfort or headache during treatment that typically resolves quickly. Serious side effects are rare. Our clinical team will evaluate your full medical history before recommending TMS.",
   },
   {
-    q: "When will TMS be available at Desert Recovery Centers?",
-    a: "We are finalizing our NeuroStar program now. Join the waitlist above and you will be personally contacted by our clinical team as soon as we have availability.",
+    q: "Is NeuroStar TMS therapy available now at Desert Recovery Centers?",
+    a: "Yes. NeuroStar TMS therapy is now available at our Phoenix outpatient center at 4160 N. 108th Ave, Phoenix, AZ 85037. Call (623) 257-5384 to schedule your initial consultation. Most patients begin treatment within one to two weeks of their first call.",
   },
 ] as const;
 
@@ -201,39 +204,68 @@ function BrainDiagram() {
 /* ─── Page Component ─────────────────────────────────────────────────── */
 
 export default function TMSTherapyPage() {
-  const heroRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: heroRef,
-    offset: ["start end", "end start"],
-  });
-  const heroLeftX = useTransform(scrollYProgress, [0, 0.4], [-100, 0]);
-  const heroRightX = useTransform(scrollYProgress, [0, 0.4], [100, 0]);
-  const heroOpacity = useTransform(scrollYProgress, [0, 0.25], [0, 1]);
-
   const [faqOpen, setFaqOpen] = useState<number | null>(null);
-  const [formStatus, setFormStatus] = useState<"idle" | "sending" | "sent">("idle");
-
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setFormStatus("sending");
-    // Simulate form submission
-    setTimeout(() => setFormStatus("sent"), 1200);
-  };
 
   return (
     <>
       <MedicalTherapySchema
         name="NeuroStar TMS Therapy"
-        description="FDA-cleared Transcranial Magnetic Stimulation therapy for depression, anxious depression, OCD, and adolescents, coming soon to Desert Recovery Centers in Arizona."
+        description="FDA-cleared Transcranial Magnetic Stimulation therapy for depression, anxious depression, OCD, and adolescents at Desert Recovery Centers Phoenix, Arizona."
         url="/treatments/tms-therapy"
         conditions={["Major Depressive Disorder", "Anxious Depression", "OCD", "Adolescent Depression"]}
       />
       <InlineFAQSchema items={faqs} />
+      <SchemaScript schema={[
+        {
+          "@context": "https://schema.org",
+          "@type": "MedicalTherapy",
+          "@id": "https://www.desertrecoverycenters.com/treatments/tms-therapy#therapy",
+          "name": "NeuroStar TMS Therapy",
+          "alternateName": "Transcranial Magnetic Stimulation",
+          "description": "FDA-cleared non-invasive brain stimulation therapy for major depressive disorder, anxious depression, OCD, and adolescents ages 15 and older. Available at Desert Recovery Centers Phoenix.",
+          "url": "https://www.desertrecoverycenters.com/treatments/tms-therapy",
+          "recognizingAuthority": { "@type": "Organization", "name": "U.S. Food and Drug Administration", "url": "https://www.fda.gov" },
+          "legalStatus": "FDA Cleared",
+          "relevantSpecialty": "Psychiatry",
+          "study": [
+            { "@type": "MedicalStudy", "name": "NeuroStar Outcomes Registry", "description": "83% of patients experienced measurable improvement, 62% achieved full remission in real-world outcomes study of over 8.2 million treatments." },
+            { "@type": "MedicalStudy", "name": "NIMH-Funded Randomized Controlled Trial", "description": "Patients treated with NeuroStar were 4 times more likely to achieve remission compared to sham treatment." },
+          ],
+          "availableAtOrFrom": {
+            "@type": "MedicalClinic",
+            "name": "Desert Recovery Centers Phoenix PHP / IOP",
+            "address": { "@type": "PostalAddress", "streetAddress": "4160 N. 108th Ave", "addressLocality": "Phoenix", "addressRegion": "AZ", "postalCode": "85037" },
+            "telephone": "+16232575384",
+          },
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            { "@type": "Question", "name": "Is NeuroStar TMS therapy available now at Desert Recovery Centers?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. NeuroStar TMS therapy is now available at our Phoenix outpatient center at 4160 N. 108th Ave, Phoenix, AZ 85037. Call (623) 257-5384 to schedule your initial consultation. Most patients begin treatment within one to two weeks of their first call." } },
+            { "@type": "Question", "name": "What is the success rate of NeuroStar TMS therapy?", "acceptedAnswer": { "@type": "Answer", "text": "In a real-world outcomes study of over 8.2 million NeuroStar treatments, 83% of patients who completed a full treatment course experienced measurable improvement in depression symptoms, and 62% achieved full remission. In an NIMH-funded independent randomized controlled trial, patients treated with NeuroStar were 4 times more likely to achieve remission compared to patients receiving sham treatment." } },
+            { "@type": "Question", "name": "Is TMS therapy available for teenagers in Phoenix?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. NeuroStar is the only TMS system FDA-cleared specifically for adolescents ages 15 and older with major depressive disorder. Our Phoenix center integrates TMS therapy directly with our adolescent PHP, IOP, and outpatient programs. Sessions are typically 19 minutes and can be scheduled around school hours." } },
+            { "@type": "Question", "name": "Can I download a brochure about TMS therapy?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Desert Recovery Centers offers downloadable NeuroStar TMS brochures for both adults and adolescents. Visit our TMS therapy page at desertrecoverycenters.com/treatments/tms-therapy to download the brochures. You can also call (623) 257-5384 and our team will email them to you directly." } },
+          ],
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.desertrecoverycenters.com" },
+            { "@type": "ListItem", "position": 2, "name": "Treatments", "item": "https://www.desertrecoverycenters.com/treatments" },
+            { "@type": "ListItem", "position": 3, "name": "TMS Therapy", "item": "https://www.desertrecoverycenters.com/treatments/tms-therapy" },
+          ],
+        },
+      ]} />
       <Navigation />
 
       {/* ── Hero ─────────────────────────────────────────────── */}
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
-        <div
+        <motion.div
+          initial={{ opacity: 0, scale: 1.04 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.2, delay: 0 }}
           className="absolute inset-0 bg-forest"
           style={{
             backgroundImage: "url(/images/general/DRC-Treatment-Therapies-BG-Fade.jpg)",
@@ -248,53 +280,103 @@ export default function TMSTherapyPage() {
               "linear-gradient(135deg, rgba(28,43,30,0.93) 0%, rgba(28,43,30,0.8) 100%)",
           }}
         />
-        <div ref={heroRef} className="relative z-10 text-center max-w-container mx-auto px-6 py-32">
+        <div className="relative z-10 text-center max-w-container mx-auto px-6 py-32">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
           >
-            {/* Coming Soon Badge */}
+            {/* Now Available Badge */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
               className="inline-flex items-center gap-2 bg-gold/20 border border-gold/40 rounded-full px-5 py-2 mb-8"
             >
               <span className="w-2 h-2 rounded-full bg-gold animate-pulse" />
               <span className="text-gold font-body text-xs tracking-[0.25em] uppercase font-semibold">
-                Coming Soon
+                Now Available at Our Phoenix Center
               </span>
             </motion.div>
 
             <h1 className="text-white font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-              NeuroStar TMS Therapy{" "}
-              <span className="block text-gold/90 mt-2 text-3xl md:text-4xl lg:text-5xl font-semibold">
-                Coming Soon to Desert Recovery Centers
-              </span>
+              <motion.span
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.7, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+                className="flex flex-col items-center justify-center gap-4"
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/images/branding/neurostar-logo.svg"
+                  alt="NeuroStar Advanced TMS Therapy"
+                  width={400}
+                  height={104}
+                  className="object-contain h-[84px] md:h-[104px] w-auto brightness-0 invert"
+                />
+                <motion.span
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.7, delay: 0.35 }}
+                >
+                  TMS Therapy
+                </motion.span>
+              </motion.span>
+              <motion.span
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.65, delay: 0.45 }}
+                className="block text-gold/90 mt-2 text-3xl md:text-4xl lg:text-5xl font-semibold"
+              >
+                at Desert Recovery Centers
+              </motion.span>
             </h1>
-            <p className="text-white/70 font-body text-lg md:text-xl max-w-3xl mx-auto leading-relaxed mb-10">
-              A breakthrough in depression treatment is coming to Desert Recovery
-              Centers. NeuroStar TMS therapy, FDA-cleared, drug-free, and backed
-              by the largest clinical dataset of any TMS system in the world.
-            </p>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.65, delay: 0.5 }}
+              className="text-white/70 font-body text-lg md:text-xl max-w-3xl mx-auto leading-relaxed mb-4"
+            >
+              FDA-cleared, drug free, non invasive treatment for depression, anxious depression, and OCD. Now available at our Phoenix outpatient center. Most insurance accepted. Sessions as short as 19 minutes.
+            </motion.p>
+
+            {/* Certified NeuroStar Provider Badge */}
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+              className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/15 rounded-xl px-4 py-2.5 mb-10"
+            >
+              <svg className="w-5 h-5 text-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+              </svg>
+              <span className="text-white/90 text-sm font-medium">Certified NeuroStar Provider</span>
+            </motion.div>
           </motion.div>
 
-          {/* Hero collision CTAs */}
+          {/* Hero CTAs */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <motion.a
-              href="#waitlist"
-              style={{ x: heroLeftX, opacity: heroOpacity }}
-              className="bg-gold hover:bg-gold-dark text-white font-semibold text-base px-8 py-4 rounded-xl transition-colors shadow-lg shadow-gold/25 w-full sm:w-auto text-center"
+              href="tel:+16232575384"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.65 }}
+              whileHover={{ scale: 1.04, y: -2 }}
+              whileTap={{ scale: 0.97 }}
+              className="bg-gold hover:bg-gold-dark text-white font-semibold text-base px-8 py-4 rounded-xl transition-colors shadow-lg shadow-gold/25 w-full sm:w-auto text-center cursor-pointer"
             >
-              Join the Waitlist
+              Call (623) 257-5384
             </motion.a>
             <motion.a
-              href="tel:+14809313617"
-              style={{ x: heroRightX, opacity: heroOpacity }}
-              className="bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/30 text-white font-semibold text-base px-8 py-4 rounded-xl transition-all w-full sm:w-auto text-center"
+              href="/insurance"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.75 }}
+              whileHover={{ scale: 1.04, y: -2 }}
+              whileTap={{ scale: 0.97 }}
+              className="bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/30 text-white font-semibold text-base px-8 py-4 rounded-xl transition-all w-full sm:w-auto text-center cursor-pointer"
             >
-              Call (480) 931-3617
+              Verify Insurance Free
             </motion.a>
           </div>
         </div>
@@ -305,7 +387,7 @@ export default function TMSTherapyPage() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
+          viewport={{ once: false, margin: "-80px" }}
           transition={{ duration: 0.8 }}
           className="max-w-5xl mx-auto px-6 py-16 md:py-24"
         >
@@ -328,22 +410,30 @@ export default function TMSTherapyPage() {
       <section className="py-20 md:py-28 bg-white">
         <div className="max-w-container mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -40 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.6 }}
-            >
-              <div className="flex items-center gap-3 mb-4">
-                <span className="w-8 h-px bg-gold" />
-                <span className="text-sage font-body text-xs tracking-[0.2em] uppercase font-medium">
-                  The Science
-                </span>
-              </div>
-              <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold mb-6">
-                How NeuroStar TMS Works
-              </h2>
-              <p className="text-forest/70 font-body leading-relaxed mb-8">
+            <div>
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: false, amount: 0.2 }}
+                transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="w-8 h-px bg-gold" />
+                  <span className="text-sage font-body text-xs tracking-[0.2em] uppercase font-medium">
+                    The Science
+                  </span>
+                </div>
+                <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold mb-6">
+                  How NeuroStar TMS Works
+                </h2>
+              </motion.div>
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: false, amount: 0.2 }}
+                transition={{ duration: 0.65, delay: 0.15 }}
+                className="text-forest/70 font-body leading-relaxed mb-8"
+              >
                 Transcranial Magnetic Stimulation uses focused magnetic pulses,
                 similar to an MRI, to stimulate the specific area of the brain
                 responsible for mood regulation. When depression takes hold, the
@@ -351,28 +441,36 @@ export default function TMSTherapyPage() {
                 reawakens those connections, producing lasting changes in
                 neurotransmitter levels without medication and without systemic
                 side effects.
-              </p>
+              </motion.p>
 
               {/* Session Details Box */}
               <div className="bg-cream rounded-2xl p-6 border border-gold/10">
                 <ul className="space-y-3">
                   {sessionDetails.map((detail, i) => (
-                    <li key={i} className="flex items-start gap-3 text-forest font-body text-sm">
+                    <motion.li
+                      key={i}
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      viewport={{ once: false, amount: 0.1 }}
+                      transition={{ duration: 0.5, delay: i * 0.08 }}
+                      className="flex items-start gap-3 text-forest font-body text-sm"
+                    >
                       <svg className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                       </svg>
                       {detail}
-                    </li>
+                    </motion.li>
                   ))}
                 </ul>
               </div>
-            </motion.div>
+            </div>
 
             <motion.div
-              initial={{ opacity: 0, x: 40 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.6, delay: 0.15 }}
+              initial={{ opacity: 0, x: 60, scale: 0.95 }}
+              whileInView={{ opacity: 1, x: 0, scale: 1 }}
+              viewport={{ once: false, amount: 0.2 }}
+              transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+              whileHover={{ scale: 1.03 }}
               className="flex justify-center"
             >
               <BrainDiagram />
@@ -388,7 +486,7 @@ export default function TMSTherapyPage() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
+            viewport={{ once: false, margin: "-80px" }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -404,7 +502,16 @@ export default function TMSTherapyPage() {
             </h2>
           </motion.div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.15 }}
+            variants={{
+              hidden: {},
+              visible: { transition: { staggerChildren: 0.12, delayChildren: 0.1 } },
+            }}
+            className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8"
+          >
             {[
               {
                 value: 83,
@@ -425,7 +532,7 @@ export default function TMSTherapyPage() {
                   "more likely to achieve remission compared to sham treatment in NIMH-funded independent clinical trial",
               },
               {
-                value: 6.9,
+                value: 8.2,
                 suffix: "M+",
                 isDecimal: true,
                 label:
@@ -434,15 +541,16 @@ export default function TMSTherapyPage() {
             ].map((stat, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-60px" }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="text-center"
+                variants={{
+                  hidden: { opacity: 0, y: 40, scale: 0.92 },
+                  visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] } },
+                }}
+                whileHover={{ y: -8, boxShadow: "0 20px 48px rgba(0,0,0,0.15)" }}
+                className="text-center bg-white/5 rounded-xl p-6 backdrop-blur-sm"
               >
                 <div className="text-gold font-display text-5xl md:text-6xl font-bold mb-3">
                   {stat.isDecimal ? (
-                    <span>6.9<span className="text-4xl">M+</span></span>
+                    <span>8.2<span className="text-4xl">M+</span></span>
                   ) : (
                     <AnimatedCounter target={stat.value} suffix={stat.suffix} />
                   )}
@@ -452,7 +560,7 @@ export default function TMSTherapyPage() {
                 </p>
               </motion.div>
             ))}
-          </div>
+          </motion.div>
 
           <p className="text-cream/40 text-xs text-center mt-12 font-body">
             Source: NeuroStar Outcomes Registry, NIMH-funded randomized controlled
@@ -464,33 +572,42 @@ export default function TMSTherapyPage() {
       {/* ── Who Benefits ─────────────────────────────────────── */}
       <section className="py-20 md:py-28 bg-white">
         <div className="max-w-container mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.6 }}
-            className="max-w-3xl"
-          >
-            <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold mb-4">
-              Who Is a Candidate for TMS Therapy?
-            </h2>
-            <p className="text-forest/70 font-body leading-relaxed mb-8">
+          <div className="max-w-3xl">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false, amount: 0.2 }}
+              transition={{ duration: 0.7 }}
+            >
+              <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold mb-4">
+                Who Is a Candidate for TMS Therapy?
+              </h2>
+            </motion.div>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false, amount: 0.2 }}
+              transition={{ duration: 0.65, delay: 0.15 }}
+              className="text-forest/70 font-body leading-relaxed mb-8"
+            >
               If you have struggled with depression and have not found adequate
               relief from antidepressant medications, TMS therapy may be the
               breakthrough you have been waiting for. You may be a good candidate
               if:
-            </p>
+            </motion.p>
 
-            <ul className="space-y-4 mb-12">
+            <ul className="space-y-3 mb-12">
               {candidateReasons.map((reason, i) => (
                 <motion.li
                   key={i}
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: i * 0.06 }}
-                  className="flex items-start gap-3 text-forest font-body"
+                  viewport={{ once: false, amount: 0.1 }}
+                  transition={{ duration: 0.5, delay: i * 0.07 }}
+                  whileHover={{ x: 6, backgroundColor: "rgba(250,247,242,0.8)" }}
+                  className="flex items-start gap-3 text-forest font-body group relative rounded-lg px-4 py-3 -mx-4 transition-colors cursor-default"
                 >
+                  <div className="absolute left-0 top-0 h-full w-[3px] bg-gold scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-top rounded-full" />
                   <svg className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
@@ -500,7 +617,13 @@ export default function TMSTherapyPage() {
             </ul>
 
             {/* Not a candidate */}
-            <div className="bg-cream rounded-2xl p-8 border border-gold/10">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false, amount: 0.2 }}
+              transition={{ duration: 0.65, delay: 0.2 }}
+              className="bg-cream rounded-2xl p-8 border border-gold/10"
+            >
               <h3 className="font-display text-xl text-forest font-semibold mb-4">
                 TMS May Not Be Right For You If:
               </h3>
@@ -518,8 +641,8 @@ export default function TMSTherapyPage() {
                 Our clinical team will conduct a thorough medical evaluation to
                 determine if TMS is appropriate for your specific situation.
               </p>
-            </div>
-          </motion.div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
@@ -529,8 +652,8 @@ export default function TMSTherapyPage() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.6 }}
+            viewport={{ once: false, amount: 0.2 }}
+            transition={{ duration: 0.7 }}
             className="text-center mb-14"
           >
             <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold mb-4">
@@ -543,16 +666,28 @@ export default function TMSTherapyPage() {
             </p>
           </motion.div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.1 }}
+            variants={{
+              hidden: {},
+              visible: { transition: { staggerChildren: 0.1, delayChildren: 0.05 } },
+            }}
+            className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
+          >
             {differentiators.map((card, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-60px" }}
-                transition={{ duration: 0.4, delay: i * 0.08 }}
-                className="bg-white rounded-2xl p-6 border border-transparent hover:border-gold/40 transition-colors duration-300 group"
+                variants={{
+                  hidden: { opacity: 0, y: 50, scale: 0.95 },
+                  visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] } },
+                }}
+                whileHover={{ y: -8, boxShadow: "0 20px 40px rgba(0,0,0,0.12)" }}
+                transition={{ duration: 0.25 }}
+                className="bg-white rounded-2xl p-6 border border-transparent hover:border-gold/40 transition-colors duration-300 group relative overflow-hidden"
               >
+                <div className="absolute left-0 top-0 h-full w-[3px] bg-gold scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-top" />
                 <div className="w-12 h-12 rounded-xl bg-forest/5 flex items-center justify-center text-sage group-hover:text-gold transition-colors duration-300 mb-4">
                   {card.icon}
                 </div>
@@ -564,9 +699,128 @@ export default function TMSTherapyPage() {
                 </p>
               </motion.div>
             ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ── Our NeuroStar Suite ─────────────────────────────── */}
+      <section className="py-20 md:py-28 bg-white">
+        <div className="max-w-container mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: false, margin: "-80px" }}
+              transition={{ duration: 0.6 }}
+            >
+              <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
+                Our Phoenix TMS Suite
+              </span>
+              <div className="w-[60px] h-0.5 bg-gold mt-4 mb-4" />
+              <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold mb-6">
+                The Same Technology. A Familiar Setting.
+              </h2>
+              <p className="text-forest/70 font-body leading-relaxed">
+                Our Phoenix outpatient center at 4160 N. 108th Ave houses a dedicated NeuroStar treatment suite. You come in for your session, sit in the comfortable treatment chair, complete your 19 minutes, and go about your day. No waiting room full of strangers. No clinical sterility. Just a focused, quiet space designed for exactly this purpose, staffed by a team that knows your name and your treatment plan.
+              </p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: false, margin: "-80px" }}
+              transition={{ duration: 0.6, delay: 0.15 }}
+              className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-xl"
+            >
+              <Image
+                src="/images/tms/neurostar-treatment-chair.webp"
+                alt="NeuroStar Advanced TMS therapy treatment chair at Desert Recovery Centers Phoenix outpatient center"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </motion.div>
           </div>
         </div>
       </section>
+
+      {/* ── Download Brochures ────────────────────────────────── */}
+      <section className="py-16 md:py-24 bg-cream">
+        <div className="max-w-container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false, margin: "-80px" }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
+              Patient Resources
+            </span>
+            <div className="w-[60px] h-0.5 bg-gold mx-auto mt-4 mb-4" />
+            <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold mb-3">
+              Download Our TMS Brochures
+            </h2>
+            <p className="text-gray-500 max-w-2xl mx-auto">
+              Learn everything you need to know about NeuroStar TMS therapy before your first appointment.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            <motion.a
+              href="https://www.dropbox.com/scl/fi/vtiyuqb7g3x5ol2ptbkxc/NeuroStar-Brochure-for-Adults.pdf?rlkey=t0hd593i95eq28lmnoe4r8ud5&dl=1"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-brochure="adult"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false }}
+              transition={{ duration: 0.4 }}
+              whileHover={{ y: -6, boxShadow: "0 20px 40px rgba(0,0,0,0.12)" }}
+              className="bg-white rounded-xl p-6 border border-gray-100 block transition-shadow"
+            >
+              <div className="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center text-gold mb-4">
+                <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m.75 12l3 3m0 0l3-3m-3 3v-6m-1.5-9H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+                </svg>
+              </div>
+              <h3 className="font-display text-lg text-forest font-semibold mb-2">Adult TMS Brochure</h3>
+              <p className="text-gray-600 text-sm leading-relaxed mb-4">Complete guide to NeuroStar TMS therapy for adults with depression, anxious depression, and OCD.</p>
+              <span className="text-gold font-semibold text-sm flex items-center gap-2">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Download PDF
+              </span>
+            </motion.a>
+
+            <motion.a
+              href="https://www.dropbox.com/scl/fi/7mqo34090zve4u1zd582t/NeuroStar-Brochure-for-Adolescent.pdf?rlkey=sqbhteu9j3lx09b84y7ci2jak&dl=1"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-brochure="adolescent"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false }}
+              transition={{ duration: 0.4, delay: 0.1 }}
+              whileHover={{ y: -6, boxShadow: "0 20px 40px rgba(0,0,0,0.12)" }}
+              className="bg-white rounded-xl p-6 border border-gray-100 block transition-shadow"
+            >
+              <div className="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center text-gold mb-4">
+                <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m.75 12l3 3m0 0l3-3m-3 3v-6m-1.5-9H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+                </svg>
+              </div>
+              <h3 className="font-display text-lg text-forest font-semibold mb-2">Adolescent TMS Brochure</h3>
+              <p className="text-gray-600 text-sm leading-relaxed mb-4">Guide to NeuroStar TMS therapy for adolescents ages 15 and older with treatment resistant depression.</p>
+              <span className="text-gold font-semibold text-sm flex items-center gap-2">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Download PDF
+              </span>
+            </motion.a>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Patient Video Testimonials ────────────────────────── */}
+      <TMSVideoSection />
 
       {/* ── How It Complements DRC Treatment ──────────────────── */}
       <section className="py-20 md:py-28 bg-white">
@@ -574,7 +828,7 @@ export default function TMSTherapyPage() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
+            viewport={{ once: false, margin: "-80px" }}
             transition={{ duration: 0.6 }}
             className="max-w-3xl mx-auto text-center"
           >
@@ -605,131 +859,43 @@ export default function TMSTherapyPage() {
         </div>
       </section>
 
-      {/* ── Waitlist Form ────────────────────────────────────── */}
-      <section id="waitlist" className="py-20 md:py-28 bg-forest relative overflow-hidden">
+      {/* ── TMS Available Now CTA ────────────────────────────── */}
+      <section className="py-20 md:py-28 bg-forest relative overflow-hidden">
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
         <div className="max-w-container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
+            viewport={{ once: false, margin: "-80px" }}
             transition={{ duration: 0.6 }}
             className="max-w-2xl mx-auto text-center"
           >
             <h2 className="font-display text-3xl md:text-4xl text-white font-semibold mb-4">
-              Be Among the First to Access TMS at Desert Recovery Centers
+              TMS Is Available Now at Our Phoenix Center
             </h2>
             <p className="text-white/60 font-body leading-relaxed mb-10">
-              We are finalizing our NeuroStar TMS program and will be accepting
-              clients soon. Join our waitlist now and our clinical team will reach
-              out personally when TMS becomes available. Current DRC clients will
-              receive priority access.
+              Our NeuroStar TMS suite is open and accepting new patients. Call us today to schedule your initial consultation, verify your insurance, and find out if TMS is right for you. Most patients begin treatment within one to two weeks of their first call.
             </p>
-
-            {formStatus === "sent" ? (
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                className="bg-white/10 backdrop-blur-sm rounded-2xl p-10 border border-gold/20"
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a
+                href="tel:+16232575384"
+                className="bg-gold hover:bg-gold-dark text-white font-semibold text-base px-8 py-4 rounded-xl transition-colors shadow-lg shadow-gold/25 w-full sm:w-auto text-center"
               >
-                <svg className="w-16 h-16 text-gold mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-                <h3 className="font-display text-2xl text-white font-semibold mb-2">
-                  You&apos;re on the List
-                </h3>
-                <p className="text-white/60 font-body">
-                  Our clinical team will reach out personally when TMS becomes
-                  available. Thank you for your interest.
-                </p>
-              </motion.div>
-            ) : (
-              <form
-                onSubmit={handleSubmit}
-                className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 text-left"
+                Call (623) 257-5384
+              </a>
+              <a
+                href="/insurance"
+                className="bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/30 text-white font-semibold text-base px-8 py-4 rounded-xl transition-all w-full sm:w-auto text-center"
               >
-                <div className="grid sm:grid-cols-2 gap-4 mb-4">
-                  <div>
-                    <label htmlFor="firstName" className="block text-white/60 font-body text-sm mb-1.5">
-                      First Name
-                    </label>
-                    <input
-                      type="text"
-                      id="firstName"
-                      name="firstName"
-                      required
-                      className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white font-body text-sm placeholder:text-white/30 focus:outline-none focus:border-gold/60 transition-colors"
-                      placeholder="First name"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="lastName" className="block text-white/60 font-body text-sm mb-1.5">
-                      Last Name
-                    </label>
-                    <input
-                      type="text"
-                      id="lastName"
-                      name="lastName"
-                      required
-                      className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white font-body text-sm placeholder:text-white/30 focus:outline-none focus:border-gold/60 transition-colors"
-                      placeholder="Last name"
-                    />
-                  </div>
-                </div>
-                <div className="grid sm:grid-cols-2 gap-4 mb-4">
-                  <div>
-                    <label htmlFor="phone" className="block text-white/60 font-body text-sm mb-1.5">
-                      Phone
-                    </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      required
-                      className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white font-body text-sm placeholder:text-white/30 focus:outline-none focus:border-gold/60 transition-colors"
-                      placeholder="(555) 555-5555"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="email" className="block text-white/60 font-body text-sm mb-1.5">
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      required
-                      className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white font-body text-sm placeholder:text-white/30 focus:outline-none focus:border-gold/60 transition-colors"
-                      placeholder="you@email.com"
-                    />
-                  </div>
-                </div>
-                <div className="mb-6">
-                  <label htmlFor="situation" className="block text-white/60 font-body text-sm mb-1.5">
-                    Tell us about your situation{" "}
-                    <span className="text-white/30">(optional)</span>
-                  </label>
-                  <textarea
-                    id="situation"
-                    name="situation"
-                    rows={4}
-                    className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white font-body text-sm placeholder:text-white/30 focus:outline-none focus:border-gold/60 transition-colors resize-none"
-                    placeholder="How can we help you?"
-                  />
-                </div>
-                <button
-                  type="submit"
-                  disabled={formStatus === "sending"}
-                  className="w-full bg-gold hover:bg-gold-dark disabled:opacity-60 text-white font-semibold text-base px-8 py-4 rounded-xl transition-colors shadow-lg shadow-gold/25"
-                >
-                  {formStatus === "sending" ? "Submitting..." : "Join the TMS Waitlist"}
-                </button>
-                <p className="text-white/30 font-body text-xs text-center mt-4">
-                  Your information is completely confidential and protected by
-                  HIPAA. Joining the waitlist does not obligate you in any way.
-                </p>
-              </form>
-            )}
+                Verify Insurance Free
+              </a>
+              <a
+                href="/contact"
+                className="bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/30 text-white font-semibold text-base px-8 py-4 rounded-xl transition-all w-full sm:w-auto text-center"
+              >
+                Schedule a Consultation
+              </a>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -740,7 +906,7 @@ export default function TMSTherapyPage() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
+            viewport={{ once: false, margin: "-80px" }}
             transition={{ duration: 0.6 }}
             className="text-center mb-14"
           >
@@ -755,7 +921,7 @@ export default function TMSTherapyPage() {
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: false }}
                 transition={{ duration: 0.4, delay: i * 0.06 }}
                 className="bg-white rounded-xl border border-gold/10 overflow-hidden"
               >
@@ -815,7 +981,7 @@ export default function TMSTherapyPage() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
+            viewport={{ once: false, margin: "-80px" }}
             transition={{ duration: 0.6 }}
             className="max-w-3xl mx-auto text-center"
           >
@@ -845,10 +1011,10 @@ export default function TMSTherapyPage() {
               ))}
             </div>
             <a
-              href="/adolescent-program"
+              href="/adolescent-treatment"
               className="inline-block bg-gold hover:bg-gold-dark text-white font-semibold text-base px-8 py-4 rounded-xl transition-colors shadow-lg shadow-gold/25"
             >
-              Join the Adolescent Waitlist
+              Learn About Adolescent Treatment
             </a>
           </motion.div>
         </div>

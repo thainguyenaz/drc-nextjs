@@ -22,6 +22,22 @@ const nextConfig = {
       { source: "/about/luxury-vs-standard", destination: "/resources/luxury-vs-standard-rehab", permanent: true },
       { source: "/about/our-team", destination: "/our-team", permanent: true },
       { source: "/facilities", destination: "/locations", permanent: false },
+      // Phoenix TMS 404 fix
+      { source: "/locations/phoenix-tms", destination: "/treatments/tms-therapy", permanent: true },
+      { source: "/facilities/phoenix%20tms", destination: "/treatments/tms-therapy", permanent: true },
+      { source: "/facilities/phoenix-tms", destination: "/treatments/tms-therapy", permanent: true },
+      // SEO redirects — old program/treatment paths to canonical locations
+      { source: "/programs/residential", destination: "/treatments/residential", permanent: true },
+      { source: "/programs/php", destination: "/locations/phoenix-php-iop", permanent: true },
+      { source: "/programs/iop", destination: "/locations/phoenix-php-iop", permanent: true },
+      { source: "/treatment/iop", destination: "/locations/phoenix-php-iop", permanent: true },
+      { source: "/treatment/op", destination: "/locations/phoenix-php-iop", permanent: true },
+      // Resource page dead link redirects
+      { source: "/resources/podcast", destination: "https://open.spotify.com/show/5thFT5DNC1exCkhmiug1Nb", permanent: false },
+      { source: "/resources/what-to-pack", destination: "/resources/blog", permanent: false },
+      { source: "/resources/family-guide", destination: "/resources/blog/how-drug-and-alcohol-addiction-impacts-families", permanent: true },
+      { source: "/resources/signs-you-need-help", destination: "/resources/blog/gray-area-drinking-am-i-an-alcoholic", permanent: true },
+      { source: "/resources/aftercare", destination: "/treatments/residential", permanent: true },
       // SEO redirects — renamed content pages
       { source: "/addiction/understanding-gambling-addiction/", destination: "/addiction/gambling-addiction-treatment/", permanent: true },
       { source: "/addiction/understanding-sex-addiction/", destination: "/addiction/sex-addiction-treatment/", permanent: true },

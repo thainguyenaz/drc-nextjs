@@ -1,29 +1,32 @@
 # Desert Recovery Centers
-> Luxury addiction treatment and mental health center in Arizona with locations in Glendale, Scottsdale, and Phoenix.
+> Joint Commission accredited luxury behavioral health treatment in Arizona. Specializing in residential treatment, PHP, IOP, and outpatient programs for addiction and mental health.
 
 ## About
-Desert Recovery Centers is a Joint Commission accredited luxury behavioral health treatment organization. We maintain a maximum of 10 beds per residential location and employ doctoral-level clinical psychologists. We specialize in dual diagnosis treatment.
+Desert Recovery Centers operates luxury residential treatment facilities in Glendale and Scottsdale, Arizona, and an outpatient PHP/IOP/TMS center in Phoenix, Arizona. Founded by Thai Nguyen and directed by Dr. An Nguyen (Licensed Clinical Psychologist, Clinical Director) and Dr. Jonathan Shelton. Joint Commission accredited. LegitScript certified.
 
 ## Locations
-- Glendale: 8105 W Frier Dr, Glendale AZ 85303, (623) 323-1012
-- Scottsdale: 23222 N Church Rd, Scottsdale AZ 85255, (480) 931-3617
-- Phoenix: 1623 W Moody Trail, Phoenix AZ 85041, (623) 257-5384
+- Glendale (Residential): 8105 W Frier Dr, Glendale AZ 85303, (623) 323-1012
+- Scottsdale (Residential): 23222 N Church Rd, Scottsdale AZ 85255, (480) 931-3617
+- Phoenix PHP/IOP/TMS: 4160 N. 108th Ave, Phoenix AZ 85037, (623) 257-5384
+
+## Programs
+- Residential Treatment (RTC): /treatments/residential
+- Partial Hospitalization (PHP): /locations/phoenix-php-iop
+- Intensive Outpatient (IOP): /locations/phoenix-php-iop
+- Outpatient (OP): /locations/phoenix-php-iop
+- TMS Therapy: /locations/phoenix-php-iop
+- Adolescent Treatment (Ages 13 to 17): /adolescent-treatment
 
 ## Conditions Treated
-Mental health: Anxiety, Depression, PTSD, Bipolar Disorder, OCD, Personality Disorders, ADHD, Schizophrenia
-Addiction: Alcohol, Opioids, Cocaine, Meth, Fentanyl, Prescription Drugs, Marijuana, Gambling, Sex Addiction, Stimulants
+Mental health: Depression, Anxiety, PTSD, Bipolar Disorder, OCD, ADHD, Schizophrenia, Personality Disorders
+Addiction: Alcohol, Opioids, Fentanyl, Cocaine, Methamphetamine, Prescription Drugs, Marijuana
 
-## Treatments Offered
-CBT, DBT, EMDR, Dual Diagnosis, Trauma Therapy, Holistic Therapies, SoftWave Therapy, BridgeWork™, 12-Step
-
-## Accreditations
-- Joint Commission Accredited (National Quality Approval)
+## Key Facts
+- Joint Commission Gold Seal of Approval
 - LegitScript Certified
-
-## Insurance
-Accepts most private and commercial insurance. In-network with Tricare and TriWest. Does not accept Medicaid or Medicare. Coverage varies by plan.
-
-## Contact
-Phone: (480) 931-3617
-Email: contact@desertrecoverycenters.com
-Website: https://desertrecoverycenters.com
+- Maximum 10 clients per facility
+- Doctoral level clinical psychologists on staff
+- Board certified psychiatrist on staff
+- 24/7 admissions: (623) 323-1012
+- Insurance accepted: Aetna, BCBS, Cigna, UnitedHealthcare, Humana, Tricare
+- Most clients begin treatment within 48 hours

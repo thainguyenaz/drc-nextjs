@@ -1,6 +1,6 @@
 import { MetadataRoute } from "next";
 
-const SITE_URL = "https://desertrecoverycenters.com";
+const SITE_URL = "https://www.desertrecoverycenters.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
@@ -17,6 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/locations/glendale", priority: 0.9, changeFrequency: "weekly" },
     { path: "/locations/scottsdale", priority: 0.9, changeFrequency: "weekly" },
     { path: "/locations/phoenix", priority: 0.9, changeFrequency: "weekly" },
+    { path: "/locations/phoenix-php-iop", priority: 0.9, changeFrequency: "weekly" },
 
     // Hub pages
     { path: "/mental-health", priority: 0.8, changeFrequency: "weekly" },
@@ -50,6 +51,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/addiction/alcohol-detox", priority: 0.7, changeFrequency: "monthly" },
 
     // Treatment pages
+    { path: "/treatments/residential", priority: 0.95, changeFrequency: "weekly" },
     { path: "/treatments/cbt", priority: 0.7, changeFrequency: "monthly" },
     { path: "/treatments/dbt", priority: 0.7, changeFrequency: "monthly" },
     { path: "/treatments/emdr", priority: 0.7, changeFrequency: "monthly" },
@@ -95,10 +97,38 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/resources/intervention-guide", priority: 0.6, changeFrequency: "weekly" },
     { path: "/resources/mental-health-assessment", priority: 0.6, changeFrequency: "weekly" },
 
+    // Blog
+    { path: "/resources/blog", priority: 0.8, changeFrequency: "weekly" },
+    { path: "/resources/blog/how-does-alcohol-abuse-impact-mental-and-physical-health", priority: 0.7, changeFrequency: "monthly" },
+    { path: "/resources/blog/do-drug-addicts-and-alcoholics-crave-dopamine", priority: 0.7, changeFrequency: "monthly" },
+    { path: "/resources/blog/how-does-an-addicts-brain-work", priority: 0.7, changeFrequency: "monthly" },
+    { path: "/resources/blog/risks-of-drug-or-alcohol-detox-why-you-need-professional-help", priority: 0.7, changeFrequency: "monthly" },
+    { path: "/resources/blog/why-holistic-treatment-is-required-for-long-term-recovery", priority: 0.7, changeFrequency: "monthly" },
+    { path: "/resources/blog/how-drug-and-alcohol-addiction-impacts-families", priority: 0.7, changeFrequency: "monthly" },
+    { path: "/resources/blog/is-addiction-a-spiritual-disease", priority: 0.7, changeFrequency: "monthly" },
+    { path: "/resources/blog/can-quitting-weed-cause-anxiety", priority: 0.7, changeFrequency: "monthly" },
+    { path: "/resources/blog/what-is-sex-addiction", priority: 0.7, changeFrequency: "monthly" },
+    { path: "/resources/blog/what-is-partial-hospitalization-php-program", priority: 0.7, changeFrequency: "monthly" },
+    { path: "/resources/blog/what-is-intensive-outpatient-iop-program", priority: 0.7, changeFrequency: "monthly" },
+    { path: "/resources/blog/tms-therapy-for-depression-what-to-expect", priority: 0.7, changeFrequency: "monthly" },
+    { path: "/resources/blog/teen-mental-health-crisis-warning-signs-parents", priority: 0.7, changeFrequency: "monthly" },
+    { path: "/resources/blog/how-to-talk-to-someone-about-going-to-rehab", priority: 0.7, changeFrequency: "monthly" },
+    { path: "/resources/blog/dual-diagnosis-mental-health-and-addiction", priority: 0.7, changeFrequency: "monthly" },
+    { path: "/resources/blog/what-to-expect-in-residential-treatment-first-week", priority: 0.7, changeFrequency: "monthly" },
+    { path: "/resources/blog/how-insurance-covers-addiction-mental-health-treatment", priority: 0.7, changeFrequency: "monthly" },
+    { path: "/resources/blog/anxiety-vs-depression-understanding-the-difference", priority: 0.7, changeFrequency: "monthly" },
+    { path: "/resources/blog/ptsd-and-addiction-connection", priority: 0.7, changeFrequency: "monthly" },
+    { path: "/resources/blog/gray-area-drinking-am-i-an-alcoholic", priority: 0.7, changeFrequency: "monthly" },
+    { path: "/resources/blog/how-long-does-rehab-take", priority: 0.7, changeFrequency: "monthly" },
+    { path: "/resources/blog/neurostar-tms-vs-antidepressants", priority: 0.7, changeFrequency: "monthly" },
+    { path: "/resources/blog/luxury-rehab-vs-standard-rehab-clinical-differences", priority: 0.7, changeFrequency: "monthly" },
+    { path: "/resources/blog/fentanyl-addiction-crisis-arizona", priority: 0.7, changeFrequency: "monthly" },
+
     // Other pages
     { path: "/contact", priority: 0.6, changeFrequency: "monthly" },
     { path: "/addiction", priority: 0.7, changeFrequency: "monthly" },
     { path: "/rehab-near-me", priority: 0.7, changeFrequency: "monthly" },
+    { path: "/adolescent-treatment", priority: 0.9, changeFrequency: "weekly" },
     { path: "/adolescent-program", priority: 0.7, changeFrequency: "monthly" },
     { path: "/locations/phoenix-living", priority: 0.7, changeFrequency: "monthly" },
     { path: "/facilities/glendale", priority: 0.8, changeFrequency: "weekly" },

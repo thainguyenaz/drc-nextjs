@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: "Recovery Resources, Desert Recovery Centers",
   description:
     "Free resources for addiction and mental health recovery. Detox guides, mental health assessments, blog articles, podcast episodes, and treatment comparisons.",
+  openGraph: {
+    images: [{ url: "/images/glendale/Glendale-Front.jpg", width: 1200, height: 630, alt: "Desert Recovery Centers luxury treatment facility in Arizona" }],
+  },
 };
 
 export default function ResourcesPage() {

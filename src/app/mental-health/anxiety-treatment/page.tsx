@@ -57,7 +57,7 @@ const faqs = [
 export default function AnxietyTreatmentPage() {
   return (
     <>
-      <SchemaScript schema={[getFAQSchema(faqData["anxiety-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/mental-health/anxiety-treatment"))]} />
+      <SchemaScript schema={[getFAQSchema(faqData["anxiety-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/mental-health/anxiety-treatment")), {"@context":"https://schema.org","@type":"MedicalWebPage","@id":"https://www.desertrecoverycenters.com/mental-health/anxiety-treatment/#webpage","url":"https://www.desertrecoverycenters.com/mental-health/anxiety-treatment/","name":"Anxiety Treatment Center Arizona | Desert Recovery Centers","specialty":"Psychiatry","reviewedBy":{"@type":"Person","@id":"https://www.desertrecoverycenters.com/our-team#dr-an-nguyen","name":"Dr. An Nguyen","jobTitle":"Licensed Clinical Psychologist, Clinical Director","worksFor":{"@id":"https://www.desertrecoverycenters.com/#organization"}},"dateModified":"2026-04-05","publisher":{"@id":"https://www.desertrecoverycenters.com/#organization"}}]} />
       <InlineFAQSchema items={faqs} />
       <SpeakableSchema url="/mental-health/anxiety-treatment" cssSelectors={["[data-speakable]"]} />
       <MedicalConditionSchema
