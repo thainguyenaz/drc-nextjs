@@ -20,29 +20,6 @@ const DISCLAIMER = `<p><em>This article is for informational purposes only and d
 
 export const blogPosts: BlogPost[] = [
   {
-    slug: "bridgework-therapy-what-is-it",
-    title: "BridgeWork Therapy: What Is It and How Can It Help?",
-    excerpt: "BridgeWork therapy is an emerging approach that helps individuals in recovery build connections between their treatment experiences and everyday life. Learn how this integrative method supports long-term sobriety.",
-    category: "Treatment Approaches",
-    author: "DRC Clinical Team",
-    authorTitle: "Licensed Clinical Psychologist, Clinical Director",
-    datePublished: "2026-04-06",
-    dateModified: "2026-04-06",
-    readTime: 7,
-    featuredImage: "/images/glendale/Glendale-Front.jpg",
-    featuredImageAlt: "BridgeWork Therapy: What Is It and How Can It Help? - Desert Recovery Centers",
-    tags: ["bridgework therapy", "behavioral health", "treatment modalities", "recovery"],
-    metaTitle: "BridgeWork Therapy: What Is It and How Can It Help? | Desert Recovery Centers",
-    metaDescription: "BridgeWork therapy is an emerging approach that helps individuals in recovery build connections between their treatment experiences and everyday life. Learn how",
-    content: `<article>
-<h1>BridgeWork Therapy: What Is It and How Can It Help?</h1>
-<p>BridgeWork therapy is an emerging approach that helps individuals in recovery build connections between their treatment experiences and everyday life. Learn how this integrative method supports long-term sobriety.</p>
-<p><em>Full content generation pending integration with Clinical Content Authority agent.</em></p>
-</article>
-
-${DISCLAIMER}`
-  },
-  {
     slug: "how-does-alcohol-abuse-impact-mental-and-physical-health",
     title: "How Does Alcohol Abuse Impact Overall Mental and Physical Health?",
     excerpt: "Alcohol abuse damages the brain, liver, heart, and mental health simultaneously. Learn how alcohol impacts the whole person and what integrated treatment looks like at Desert Recovery Centers in Arizona.",
