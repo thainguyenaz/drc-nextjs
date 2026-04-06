@@ -50,7 +50,7 @@ export default function InsurancePage() {
       <PageHero
         eyebrow="Insurance"
         title="Insurance Verification"
-        description="Most clients pay little to nothing out of pocket. Let our admissions team verify your benefits, it takes less than five minutes."
+        description="We accept employer-based group commercial insurance plans and most major carriers out-of-network. Submit your details and we'll verify your benefits."
         bgImage="/images/general/DRC-TREATMENTS.jpg"
       />
       <InsuranceContent />

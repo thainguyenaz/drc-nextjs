@@ -44,16 +44,16 @@ export default function InsuranceContent() {
         <div className="max-w-container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
             <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mb-6">
-              Don&apos;t Let Cost Be the Reason You Don&apos;t Get Help
+              Insurance at Desert Recovery Centers
             </h2>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              The fear of what treatment will cost keeps too many people from picking up the phone. We understand. That&apos;s why our admissions team verifies your insurance benefits before you commit to anything, at no cost and with no obligation. Most of our clients discover they have significantly more coverage than they expected.
+              We accept employer-based group commercial insurance plans and most major carriers out-of-network. Once you submit your insurance details, we can verify your benefits and explain your coverage.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              Desert Recovery Centers is in-network with most major insurance providers. Our team handles the paperwork, fights for approvals, and ensures you get the maximum benefit your plan allows.
+              We do not accept Medicaid, or state-funded insurance. We can work with you on a self-pay option if you don&apos;t have health insurance.
             </p>
-            <p className="text-gold text-sm font-semibold">
-              Coverage varies by plan. Contact us to verify your benefits.
+            <p className="text-gray-600 leading-relaxed text-lg">
+              Fill out the insurance verification form and we will check what benefits you have and what they may cover at Desert Recovery Centers. Final determinations are always made by your insurance company.
             </p>
           </div>
         </div>
