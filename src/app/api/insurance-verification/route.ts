@@ -1,5 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
-import nodemailer from "nodemailer";
+
+const EMAIL_RELAY_URL =
+  process.env.EMAIL_RELAY_URL || "http://93.188.166.239:4001/api/send-email";
+const EMAIL_RELAY_SECRET =
+  process.env.EMAIL_RELAY_SECRET || "drc-email-relay-2026";
 
 export async function POST(request: NextRequest) {
   const results = { hubspot: false, email: false };
@@ -52,105 +56,55 @@ export async function POST(request: NextRequest) {
       console.error("HubSpot exception:", e);
     }
 
-    // STEP 2: Email with attachments (secondary, never blocks success)
+    // STEP 2: Email via VPS relay (secondary, never blocks success)
     try {
-      const transporter = nodemailer.createTransport({
-        host: process.env.SMTP_HOST || "smtp.office365.com",
-        port: parseInt(process.env.SMTP_PORT || "587"),
-        secure: false,
-        auth: {
-          user: process.env.SMTP_USER,
-          pass: process.env.SMTP_PASSWORD,
-        },
-        tls: { ciphers: "SSLv3", rejectUnauthorized: false },
-      });
-
-      const attachments: { filename: string; content: Buffer; contentType: string }[] = [];
+      const relayBody = new FormData();
+      relayBody.append("firstname", firstName);
+      relayBody.append("lastname", lastName);
+      relayBody.append("email", email);
+      relayBody.append("phone", phone);
+      relayBody.append("insurance_carrier", insuranceCarrier);
+      relayBody.append("member_id", memberId || "");
+      relayBody.append("date_of_birth", dateOfBirth);
+      relayBody.append("how_did_you_hear", howDidYouHear || "");
+      relayBody.append(
+        "to",
+        process.env.ADMISSIONS_EMAIL || "admissions@desertrecoverycenters.com"
+      );
+      relayBody.append(
+        "subject",
+        `Insurance Verification - ${firstName} ${lastName}`
+      );
 
       if (frontCard && frontCard.size > 0) {
-        const frontBuffer = Buffer.from(await frontCard.arrayBuffer());
-        const ext = frontCard.name.split(".").pop() || "jpg";
-        attachments.push({
-          filename: `${firstName}_${lastName}_insurance_front.${ext}`,
-          content: frontBuffer,
-          contentType: frontCard.type,
-        });
+        relayBody.append("front_card", frontCard);
       }
-
       if (backCard && backCard.size > 0) {
-        const backBuffer = Buffer.from(await backCard.arrayBuffer());
-        const ext = backCard.name.split(".").pop() || "jpg";
-        attachments.push({
-          filename: `${firstName}_${lastName}_insurance_back.${ext}`,
-          content: backBuffer,
-          contentType: backCard.type,
-        });
+        relayBody.append("back_card", backCard);
       }
 
-      await transporter.verify();
-      await transporter.sendMail({
-        from: `"Desert Recovery Centers" <${process.env.SMTP_USER}>`,
-        to: process.env.ADMISSIONS_EMAIL || "admissions@desertrecoverycenters.com",
-        replyTo: email,
-        subject: `Insurance Verification - ${firstName} ${lastName}`,
-        html: `
-          <div style="font-family:Arial,sans-serif;max-width:600px">
-            <h2 style="color:#1a1a1a">New Insurance Verification Request</h2>
-            <table style="width:100%;border-collapse:collapse">
-              <tr style="background:#f9f7f3">
-                <td style="padding:10px;border:1px solid #ddd;font-weight:bold;width:40%">Name</td>
-                <td style="padding:10px;border:1px solid #ddd">${firstName} ${lastName}</td>
-              </tr>
-              <tr>
-                <td style="padding:10px;border:1px solid #ddd;font-weight:bold">Email</td>
-                <td style="padding:10px;border:1px solid #ddd"><a href="mailto:${email}">${email}</a></td>
-              </tr>
-              <tr style="background:#f9f7f3">
-                <td style="padding:10px;border:1px solid #ddd;font-weight:bold">Phone</td>
-                <td style="padding:10px;border:1px solid #ddd"><a href="tel:${phone}">${phone}</a></td>
-              </tr>
-              <tr>
-                <td style="padding:10px;border:1px solid #ddd;font-weight:bold">Insurance Carrier</td>
-                <td style="padding:10px;border:1px solid #ddd">${insuranceCarrier}</td>
-              </tr>
-              <tr style="background:#f9f7f3">
-                <td style="padding:10px;border:1px solid #ddd;font-weight:bold">Member ID</td>
-                <td style="padding:10px;border:1px solid #ddd">${memberId || "Not provided"}</td>
-              </tr>
-              <tr>
-                <td style="padding:10px;border:1px solid #ddd;font-weight:bold">Date of Birth</td>
-                <td style="padding:10px;border:1px solid #ddd">${dateOfBirth}</td>
-              </tr>
-              <tr style="background:#f9f7f3">
-                <td style="padding:10px;border:1px solid #ddd;font-weight:bold">How Did You Hear</td>
-                <td style="padding:10px;border:1px solid #ddd">${howDidYouHear || "Not provided"}</td>
-              </tr>
-            </table>
-            <p style="margin-top:16px;padding:12px;background:#fff3cd;border-radius:4px;font-size:13px;color:#856404">
-              Insurance card images are attached to this email.
-              This submission has also been sent to HubSpot CRM.
-            </p>
-            <p style="margin-top:8px;font-size:11px;color:#999">
-              Sent from Desert Recovery Centers website.
-              Reply directly to this email to contact the applicant.
-            </p>
-          </div>
-        `,
-        attachments,
+      const relayRes = await fetch(EMAIL_RELAY_URL, {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${EMAIL_RELAY_SECRET}`,
+        },
+        body: relayBody,
       });
-      results.email = true;
-      console.log("Email sent successfully");
+
+      results.email = relayRes.ok;
+      if (!relayRes.ok) {
+        const err = await relayRes.text();
+        console.error("Email relay error:", relayRes.status, err);
+      } else {
+        console.log("Email sent via relay successfully");
+      }
     } catch (e: unknown) {
       const err = e as Error;
-      console.error("Email failed (non-blocking):", {
-        message: err.message,
-        code: (err as NodeJS.ErrnoException).code,
-      });
+      console.error("Email relay exception (non-blocking):", err.message);
     }
 
     console.log("Submission results:", results);
 
-    // Success if HubSpot worked
     if (results.hubspot) {
       return NextResponse.json({
         success: true,
@@ -158,7 +112,6 @@ export async function POST(request: NextRequest) {
       });
     }
 
-    // Both failed
     return NextResponse.json({ error: "Submission failed" }, { status: 500 });
   } catch (error) {
     console.error("Insurance verification error:", error);
