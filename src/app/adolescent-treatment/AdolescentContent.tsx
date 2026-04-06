@@ -10,23 +10,6 @@ import AdolescentImage3 from "./AdolescentImage3";
 
 /* ── Animation variants ──────────────────────────────────── */
 
-const containerVariants = {
-  hidden: {},
-  visible: {
-    transition: { staggerChildren: 0.1, delayChildren: 0.05 },
-  },
-};
-
-const cardVariants = {
-  hidden: { opacity: 0, y: 50, scale: 0.95 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    scale: 1,
-    transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] },
-  },
-};
-
 const timelineContainerVariants = {
   hidden: {},
   visible: {
