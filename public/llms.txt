@@ -21,6 +21,17 @@ Desert Recovery Centers operates luxury residential treatment facilities in Glen
 Mental health: Depression, Anxiety, PTSD, Bipolar Disorder, OCD, ADHD, Schizophrenia, Personality Disorders
 Addiction: Alcohol, Opioids, Fentanyl, Cocaine, Methamphetamine, Prescription Drugs, Marijuana
 
+## Adolescent Condition Pages
+/adolescent/depression - Residential treatment for adolescent depression in Arizona. Covers how depression presents in teenagers, co-occurring conditions, treatment approach, and what parents can expect.
+/adolescent/anxiety - Residential treatment for adolescent anxiety disorders in Arizona including generalized anxiety, panic disorder, social anxiety, and school refusal.
+/adolescent/ptsd-trauma - Trauma-informed residential treatment for adolescent PTSD in Arizona. Covers causes, presentations, ACE assessment, and phase-based trauma treatment.
+/adolescent/ocd - Specialized residential OCD treatment for adolescents in Arizona using Exposure and Response Prevention therapy. Covers all OCD subtypes including Pure-O.
+/adolescent/adhd - Residential treatment for adolescent ADHD with co-occurring conditions in Arizona. Covers dual diagnosis approach, girls with ADHD, and executive function treatment.
+/adolescent/bipolar - Residential treatment for adolescent bipolar disorder in Arizona. Covers misdiagnosis risk, hypomania and mixed episode presentations, and mood stabilization treatment.
+/adolescent/self-harm - Clinical residential treatment for adolescent self harm in Arizona using Dialectical Behavior Therapy. Covers function of self harm, suicide risk, and family involvement.
+/adolescent/substance-use - Dual diagnosis residential treatment for adolescent substance use in Arizona. Covers fentanyl risk, co-occurring mental health conditions, and simultaneous treatment approach.
+/adolescent/suicidal-ideation - Adolescent suicide risk assessment, safety planning, and residential treatment in Arizona. Covers ideation spectrum, risk factors, evidence-based safety planning, and parent crisis guidance.
+
 ## Key Facts
 - Joint Commission Gold Seal of Approval
 - LegitScript Certified

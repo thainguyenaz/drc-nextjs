@@ -28,20 +28,49 @@ const faqs = [
   { q: "How do I respond when I discover my teenager has been self harming?", a: "Stay calm. Respond with concern rather than anger or punishment. Do not demand they explain themselves immediately. Let them know you love them and that you are going to get them help. Then contact a clinical professional who specializes in adolescent mental health. The most important thing you can do in that moment is not escalate and not minimize." },
 ];
 
+const speakableSchema = {
+  "@context": "https://schema.org/",
+  "@type": "WebPage",
+  name: "Adolescent Self Harm Treatment in Arizona",
+  speakable: {
+    "@type": "SpeakableSpecification",
+    cssSelector: [".definition-block", ".faq-section", ".quick-answer"],
+  },
+  url: "https://drc-nextjs.vercel.app/adolescent/self-harm",
+};
+
 export default function AdolescentSelfHarmPage() {
   return (
     <>
-      <SchemaScript schema={[breadcrumbSchema, medicalWebPageSchema, faqSchema]} />
+      <SchemaScript schema={[breadcrumbSchema, medicalWebPageSchema, faqSchema, speakableSchema]} />
       <Navigation />
       <Breadcrumb items={[{ name: "Home", url: SITE_URL }, { name: "Adolescent Treatment", url: `${SITE_URL}/adolescent-treatment` }, { name: "Self Harm", url: `${SITE_URL}${PAGE_PATH}` }]} />
       <PageHero eyebrow="Adolescent Treatment" title="Adolescent Self Harm Treatment in Arizona" description="Self harm in adolescents is not manipulation. It is a dysregulated coping mechanism that responds to clinical treatment." bgImage="/images/locations/phoenix/phoenix-lobby-2.jpg" />
 
       <div className="bg-cream border-b border-gold/20"><div className="max-w-container mx-auto px-6 py-3 text-center"><p className="text-xs text-sage font-body tracking-wide">Medically reviewed by Dr. An Nguyen, Licensed Clinical Psychologist, Clinical Director, Desert Recovery Centers</p></div></div>
 
+      {/* Definition Block */}
+      <section className="definition-block" style={{ background: "#F5EFE6", borderLeft: "4px solid #C4973A", padding: "24px" }}>
+        <div className="max-w-container mx-auto px-6">
+          <div className="max-w-3xl mx-auto">
+            <span className="font-mono text-[10px] uppercase tracking-widest" style={{ color: "#1C2B1E" }}>CLINICAL DEFINITION</span>
+            <p className="font-display text-lg md:text-xl mt-2" style={{ color: "#1C2B1E" }}>
+              Adolescent self harm is a dysregulated coping mechanism, not manipulation, in which a teenager manages unbearable emotional pain through physical means because they have not yet developed more adaptive strategies. With Dialectical Behavior Therapy and residential support, adolescents learn to manage emotional pain without self injury.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-container mx-auto px-6"><div className="max-w-3xl mx-auto">
           <AnimatedSection>
             <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mb-6">Not Manipulation. A Coping Mechanism.</h2>
+            <div className="quick-answer" style={{ background: "#FAF7F2", borderLeft: "3px solid #C4973A", padding: "16px 20px", marginBottom: "24px" }}>
+              <span className="font-mono text-[10px] uppercase tracking-widest text-gray-500">QUICK ANSWER</span>
+              <p className="text-gray-700 leading-relaxed mt-1">
+                Adolescent self harm serves different functions for different teenagers including converting emotional pain into manageable physical pain, producing dissociative relief from overwhelming emotion, self-punishment connected to shame or depression, or stimulation when emotional numbness has become unbearable. Identifying the specific function self harm serves for a particular adolescent is the first clinical task because treatment that does not address the function will not produce durable behavior change. Self harm is a symptom, not a character problem.
+              </p>
+            </div>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">Self harm in adolescents is not manipulation. This is the most important thing to understand before anything else. Cutting, burning, scratching, and other forms of non-suicidal self injury are a dysregulated coping mechanism. The adolescent has found a way to manage emotional pain that works in the short term and causes harm in the process. The behavior makes sense within the context of a nervous system that has not yet developed more adaptive ways to tolerate intense emotion.</p>
             <p className="text-gray-600 leading-relaxed text-lg">When parents discover self harm, the instinct is often panic, anger, or both. Both reactions are understandable. Neither is helpful in that moment. What is helpful is understanding that self harm is a clinical issue that requires clinical treatment, not consequences.</p>
           </AnimatedSection>
@@ -53,6 +82,12 @@ export default function AdolescentSelfHarmPage() {
           <AnimatedSection>
             <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">Important Context</span>
             <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4 mb-8">Self Harm and Suicidal Ideation</h2>
+            <div className="quick-answer" style={{ background: "#FAF7F2", borderLeft: "3px solid #C4973A", padding: "16px 20px", marginBottom: "24px" }}>
+              <span className="font-mono text-[10px] uppercase tracking-widest text-gray-500">QUICK ANSWER</span>
+              <p className="text-gray-700 leading-relaxed mt-1">
+                Non-suicidal self injury is clinically distinct from suicidal behavior but the two frequently co-occur. Adolescents who self harm carry elevated risk for suicidal ideation and require thorough suicide risk assessment. Desert Recovery Centers conducts comprehensive risk assessment at admission and throughout treatment and maintains individualized safety plans for every adolescent in care.
+              </p>
+            </div>
             <p className="text-gray-600 leading-relaxed text-lg">Non-suicidal self injury is clinically distinct from suicidal behavior, but the two can coexist. Adolescents who self harm have elevated risk for suicidal ideation and should receive a thorough risk assessment. Our clinical team conducts comprehensive suicide risk assessment at admission and throughout treatment, maintaining individualized safety plans for every adolescent in our care.</p>
           </AnimatedSection>
         </div></div>
@@ -63,6 +98,12 @@ export default function AdolescentSelfHarmPage() {
           <AnimatedSection>
             <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">Our Approach</span>
             <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4 mb-8">How We Treat Adolescent Self Harm</h2>
+            <div className="quick-answer" style={{ background: "#FAF7F2", borderLeft: "3px solid #C4973A", padding: "16px 20px", marginBottom: "24px" }}>
+              <span className="font-mono text-[10px] uppercase tracking-widest text-gray-500">QUICK ANSWER</span>
+              <p className="text-gray-700 leading-relaxed mt-1">
+                Dialectical Behavior Therapy is the most evidence-supported treatment for adolescent self harm and was designed specifically to address the emotional dysregulation and crisis behaviors that drive self injury. Residential treatment provides the intensity and around-the-clock clinical support that adolescents with active self harm typically need because weekly outpatient sessions are insufficient when the urge to self harm occurs at 11pm. Family members learn the DBT framework and how to respond to self harm in ways that support rather than inadvertently reinforce the behavior.
+              </p>
+            </div>
             <p className="text-gray-600 leading-relaxed text-lg mb-6">Dialectical Behavior Therapy is the most evidence-supported treatment for adolescent self harm. DBT was designed specifically to address the emotional dysregulation and crisis behaviors that drive self injury. Our residential program provides the intensity and structure that adolescents with active self harm often need. Skills learned in a weekly outpatient session are not sufficient when the urge to self harm occurs at 11pm on a Tuesday. Residential treatment provides round-the-clock clinical support and the opportunity to practice skills with immediate guidance.</p>
           </AnimatedSection>
           <div className="space-y-6">

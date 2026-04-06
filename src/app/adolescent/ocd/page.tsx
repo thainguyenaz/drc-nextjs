@@ -45,15 +45,38 @@ const faqs = [
   { q: "Is OCD curable?", a: "OCD is a chronic condition for many people, but it is highly manageable with the right treatment. Most adolescents who receive evidence-based treatment experience significant reduction in symptoms and improvement in quality of life. The goal of treatment is not the elimination of all intrusive thoughts but the ability to respond to them without being controlled by them." },
 ];
 
+const speakableSchema = {
+  "@context": "https://schema.org/",
+  "@type": "WebPage",
+  name: "Adolescent OCD Treatment in Arizona",
+  speakable: {
+    "@type": "SpeakableSpecification",
+    cssSelector: [".definition-block", ".faq-section", ".quick-answer"],
+  },
+  url: "https://drc-nextjs.vercel.app/adolescent/ocd",
+};
+
 export default function AdolescentOcdPage() {
   return (
     <>
-      <SchemaScript schema={[breadcrumbSchema, medicalWebPageSchema, faqSchema]} />
+      <SchemaScript schema={[breadcrumbSchema, medicalWebPageSchema, faqSchema, speakableSchema]} />
       <Navigation />
       <Breadcrumb items={[{ name: "Home", url: SITE_URL }, { name: "Adolescent Treatment", url: `${SITE_URL}/adolescent-treatment` }, { name: "OCD", url: `${SITE_URL}${PAGE_PATH}` }]} />
       <PageHero eyebrow="Adolescent Treatment" title="Adolescent OCD Treatment in Arizona" description="OCD in teenagers is rarely what it looks like on television. It is intrusive thoughts, rituals, and the exhausting effort of managing a brain that will not quiet down." bgImage="/images/locations/phoenix/phoenix-lobby-2.jpg" />
 
       <div className="bg-cream border-b border-gold/20"><div className="max-w-container mx-auto px-6 py-3 text-center"><p className="text-xs text-sage font-body tracking-wide">Medically reviewed by Dr. An Nguyen, Licensed Clinical Psychologist, Clinical Director, Desert Recovery Centers</p></div></div>
+
+      {/* Definition Block */}
+      <section className="definition-block" style={{ background: "#F5EFE6", borderLeft: "4px solid #C4973A", padding: "24px" }}>
+        <div className="max-w-container mx-auto px-6">
+          <div className="max-w-3xl mx-auto">
+            <span className="font-mono text-[10px] uppercase tracking-widest" style={{ color: "#1C2B1E" }}>CLINICAL DEFINITION</span>
+            <p className="font-display text-lg md:text-xl mt-2" style={{ color: "#1C2B1E" }}>
+              Adolescent OCD is a neurological condition characterized by intrusive unwanted thoughts and compulsive rituals performed to reduce anxiety temporarily. It is not a personality trait or a choice, and it responds well to Exposure and Response Prevention therapy.
+            </p>
+          </div>
+        </div>
+      </section>
 
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-container mx-auto px-6"><div className="max-w-3xl mx-auto">
@@ -70,6 +93,12 @@ export default function AdolescentOcdPage() {
           <AnimatedSection>
             <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">Recognizing the Signs</span>
             <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4 mb-8">How OCD Presents in Adolescents</h2>
+              <div className="quick-answer" style={{ background: "#FAF7F2", borderLeft: "3px solid #C4973A", padding: "16px 20px", marginBottom: "24px" }}>
+                <span className="font-mono text-[10px] uppercase tracking-widest text-gray-500">QUICK ANSWER</span>
+                <p className="text-gray-700 leading-relaxed mt-1">
+                  Adolescent OCD presents across a wide range of subtypes including contamination fears, harm obsessions, symmetry compulsions, religious scrupulosity, and purely mental rituals that are invisible to everyone except the teenager performing them. Pure-O OCD, where compulsions are primarily mental rather than behavioral, is frequently missed because there is nothing observable from the outside. Intrusive thoughts in OCD are not desires or intentions. They are symptoms.
+                </p>
+              </div>
             <p className="text-gray-600 leading-relaxed mb-6">Adolescent OCD is highly variable. Common presentations include:</p>
           </AnimatedSection>
           <div className="grid md:grid-cols-2 gap-4">
@@ -90,6 +119,12 @@ export default function AdolescentOcdPage() {
           <AnimatedSection>
             <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">The Full Picture</span>
             <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4 mb-8">Co-occurring Conditions</h2>
+              <div className="quick-answer" style={{ background: "#FAF7F2", borderLeft: "3px solid #C4973A", padding: "16px 20px", marginBottom: "24px" }}>
+                <span className="font-mono text-[10px] uppercase tracking-widest text-gray-500">QUICK ANSWER</span>
+                <p className="text-gray-700 leading-relaxed mt-1">
+                  OCD commonly co-occurs with depression, anxiety disorders, ADHD, and tic disorders including Tourette syndrome. OCD severity worsens when depression or anxiety is untreated. Accurate differential diagnosis is essential because OCD requires Exposure and Response Prevention therapy, which differs from standard anxiety treatment.
+                </p>
+              </div>
             <p className="text-gray-600 leading-relaxed text-lg">OCD commonly co-occurs with depression, anxiety disorders, ADHD, and tic disorders including Tourette syndrome. The severity of OCD tends to worsen when depression or anxiety is untreated. Accurate differential diagnosis matters because OCD requires specialized treatment approaches that differ from standard anxiety treatment.</p>
           </AnimatedSection>
         </div></div>
@@ -100,6 +135,12 @@ export default function AdolescentOcdPage() {
           <AnimatedSection>
             <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">Our Approach</span>
             <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4 mb-8">How We Treat Adolescent OCD</h2>
+              <div className="quick-answer" style={{ background: "#FAF7F2", borderLeft: "3px solid #C4973A", padding: "16px 20px", marginBottom: "24px" }}>
+                <span className="font-mono text-[10px] uppercase tracking-widest text-gray-500">QUICK ANSWER</span>
+                <p className="text-gray-700 leading-relaxed mt-1">
+                  The gold standard treatment for adolescent OCD is Exposure and Response Prevention therapy, known as ERP, in which the adolescent is gradually exposed to obsession triggers while supported in resisting the compulsive response. Desert Recovery Centers clinical staff are trained in ERP delivery and pace exposure work appropriately for teenage patients. Medication management with SRIs is provided when clinically indicated, as combined ERP and medication produces better outcomes than either alone for moderate to severe OCD.
+                </p>
+              </div>
             <p className="text-gray-600 leading-relaxed text-lg mb-6">The gold standard treatment for OCD is Exposure and Response Prevention therapy, known as ERP. ERP involves gradually and systematically exposing the adolescent to situations that trigger obsessions while supporting them in resisting the compulsive response. Over time, the brain learns that the feared outcome does not occur and that anxiety can be tolerated without performing the ritual.</p>
             <p className="text-gray-600 leading-relaxed text-lg mb-6">ERP is not intuitive. It is not comfortable. It is also the most effective treatment available for OCD, with strong evidence supporting its use in adolescents. Our clinical team is trained in ERP delivery and understands how to pace exposure work appropriately for teenage patients.</p>
             <p className="text-gray-600 leading-relaxed text-lg">When clinically indicated, medication management with SRIs is provided under the supervision of Dr. Topete. Medication and ERP together produce better outcomes than either alone for moderate to severe OCD.</p>

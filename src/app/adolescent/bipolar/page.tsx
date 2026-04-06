@@ -28,15 +28,38 @@ const faqs = [
   { q: "My teenager was diagnosed with bipolar disorder but I am not sure the diagnosis is right. What should I do?", a: "A diagnostic evaluation from a qualified psychiatrist or psychologist with experience in adolescent mood disorders is appropriate. Our clinical team conducts comprehensive diagnostic assessments at admission and is experienced in differentiating bipolar disorder from other conditions with overlapping presentations." },
 ];
 
+const speakableSchema = {
+  "@context": "https://schema.org/",
+  "@type": "WebPage",
+  name: "Adolescent Bipolar Disorder Treatment in Arizona",
+  speakable: {
+    "@type": "SpeakableSpecification",
+    cssSelector: [".definition-block", ".faq-section", ".quick-answer"],
+  },
+  url: "https://drc-nextjs.vercel.app/adolescent/bipolar",
+};
+
 export default function AdolescentBipolarPage() {
   return (
     <>
-      <SchemaScript schema={[breadcrumbSchema, medicalWebPageSchema, faqSchema]} />
+      <SchemaScript schema={[breadcrumbSchema, medicalWebPageSchema, faqSchema, speakableSchema]} />
       <Navigation />
       <Breadcrumb items={[{ name: "Home", url: SITE_URL }, { name: "Adolescent Treatment", url: `${SITE_URL}/adolescent-treatment` }, { name: "Bipolar Disorder", url: `${SITE_URL}${PAGE_PATH}` }]} />
       <PageHero eyebrow="Adolescent Treatment" title="Adolescent Bipolar Disorder Treatment in Arizona" description="Bipolar disorder in adolescents is one of the most misdiagnosed conditions in teenage mental health. The average time from first symptoms to accurate diagnosis is ten years." bgImage="/images/locations/phoenix/phoenix-lobby-2.jpg" />
 
       <div className="bg-cream border-b border-gold/20"><div className="max-w-container mx-auto px-6 py-3 text-center"><p className="text-xs text-sage font-body tracking-wide">Medically reviewed by Dr. An Nguyen, Licensed Clinical Psychologist, Clinical Director, Desert Recovery Centers</p></div></div>
+
+      {/* Definition Block */}
+      <section className="definition-block" style={{ background: "#F5EFE6", borderLeft: "4px solid #C4973A", padding: "24px" }}>
+        <div className="max-w-container mx-auto px-6">
+          <div className="max-w-3xl mx-auto">
+            <span className="font-mono text-[10px] uppercase tracking-widest" style={{ color: "#1C2B1E" }}>CLINICAL DEFINITION</span>
+            <p className="font-display text-lg md:text-xl mt-2" style={{ color: "#1C2B1E" }}>
+              Adolescent bipolar disorder is a mood condition characterized by episodic shifts between depression and elevated or mixed mood states that is frequently misdiagnosed as behavioral problems for years before accurate identification. With proper diagnosis and treatment, adolescents with bipolar disorder can achieve sustained stability.
+            </p>
+          </div>
+        </div>
+      </section>
 
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-container mx-auto px-6"><div className="max-w-3xl mx-auto">
@@ -53,6 +76,12 @@ export default function AdolescentBipolarPage() {
           <AnimatedSection>
             <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">Recognizing the Signs</span>
             <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4 mb-8">How Bipolar Disorder Presents in Adolescents</h2>
+              <div className="quick-answer" style={{ background: "#FAF7F2", borderLeft: "3px solid #C4973A", padding: "16px 20px", marginBottom: "24px" }}>
+                <span className="font-mono text-[10px] uppercase tracking-widest text-gray-500">QUICK ANSWER</span>
+                <p className="text-gray-700 leading-relaxed mt-1">
+                  Adolescent bipolar disorder frequently presents as hypomania and mixed episodes rather than full mania, making it significantly harder to recognize than adult presentations. Elevated mood states are often not identified as symptoms because they feel like relief after a depressive episode. Key warning signs include depression unresponsive to antidepressants, reduced need for sleep without fatigue, grandiosity, racing thoughts, and mood shifts that are episodic rather than continuous.
+                </p>
+              </div>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">Adolescent bipolar disorder does not always present with the dramatic manic episodes depicted in popular media. Teenagers can experience hypomania, a less severe elevation in mood that does not reach full mania but still produces significant impairment and poor decision-making. Mixed episodes, where features of depression and mania occur simultaneously, are common in adolescents and particularly difficult to recognize and manage.</p>
             <p className="text-gray-600 leading-relaxed mb-6">Depressive episodes in bipolar disorder look like depression. The critical differentiator is the history of elevated mood states, which teenagers and their families often do not identify as a symptom because elevated mood can feel like finally feeling normal or finally having energy after a depressive episode.</p>
           </AnimatedSection>
@@ -71,6 +100,12 @@ export default function AdolescentBipolarPage() {
           <AnimatedSection>
             <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">Critical Distinction</span>
             <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4 mb-8">The Risk of Misdiagnosis</h2>
+              <div className="quick-answer" style={{ background: "#FAF7F2", borderLeft: "3px solid #C4973A", padding: "16px 20px", marginBottom: "24px" }}>
+                <span className="font-mono text-[10px] uppercase tracking-widest text-gray-500">QUICK ANSWER</span>
+                <p className="text-gray-700 leading-relaxed mt-1">
+                  Adolescents with bipolar disorder are frequently misdiagnosed with depression and treated with antidepressants without a mood stabilizer, which can precipitate manic episodes or accelerate cycling in some individuals. Accurate diagnosis has direct treatment implications, not just labeling implications. The average time from first bipolar symptoms to accurate diagnosis is ten years.
+                </p>
+              </div>
             <p className="text-gray-600 leading-relaxed text-lg">Adolescents with bipolar disorder are frequently misdiagnosed with depression and treated with antidepressants without a mood stabilizer. In some individuals with bipolar disorder, antidepressants without a mood stabilizer can precipitate manic episodes or accelerate cycling. Accurate diagnosis is not just a clinical nicety. It has direct treatment implications.</p>
           </AnimatedSection>
         </div></div>
@@ -81,6 +116,12 @@ export default function AdolescentBipolarPage() {
           <AnimatedSection>
             <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">Our Approach</span>
             <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4 mb-8">How We Treat Adolescent Bipolar Disorder</h2>
+              <div className="quick-answer" style={{ background: "#FAF7F2", borderLeft: "3px solid #C4973A", padding: "16px 20px", marginBottom: "24px" }}>
+                <span className="font-mono text-[10px] uppercase tracking-widest text-gray-500">QUICK ANSWER</span>
+                <p className="text-gray-700 leading-relaxed mt-1">
+                  Desert Recovery Centers treats adolescent bipolar disorder with mood stabilizer medication management under Dr. Topete&apos;s supervision, psychoeducation for the adolescent and family, Interpersonal and Social Rhythm Therapy to stabilize circadian rhythms that affect mood cycling, and Cognitive Behavioral Therapy for depression and anxiety components. Family education on recognizing early warning signs is an essential component of treatment. Stability requires both medication and psychotherapy working together.
+                </p>
+              </div>
             <p className="text-gray-600 leading-relaxed text-lg mb-6">Treatment for adolescent bipolar disorder requires a sophisticated clinical approach. Family education is essential. Families of adolescents with bipolar disorder need to understand the condition, recognize early warning signs of episodes, and know how to respond in ways that support stability rather than escalate conflict.</p>
           </AnimatedSection>
           <div className="space-y-6">

@@ -111,10 +111,21 @@ const faqs = [
   },
 ];
 
+const speakableSchema = {
+  "@context": "https://schema.org/",
+  "@type": "WebPage",
+  name: "Adolescent Depression Treatment in Arizona",
+  speakable: {
+    "@type": "SpeakableSpecification",
+    cssSelector: [".definition-block", ".faq-section", ".quick-answer"],
+  },
+  url: "https://drc-nextjs.vercel.app/adolescent/depression",
+};
+
 export default function AdolescentDepressionPage() {
   return (
     <>
-      <SchemaScript schema={[breadcrumbSchema, medicalWebPageSchema, faqSchema]} />
+      <SchemaScript schema={[breadcrumbSchema, medicalWebPageSchema, faqSchema, speakableSchema]} />
       <Navigation />
       <Breadcrumb
         items={[
@@ -138,6 +149,18 @@ export default function AdolescentDepressionPage() {
           </p>
         </div>
       </div>
+
+      {/* Definition Block */}
+      <section className="definition-block" style={{ background: "#F5EFE6", borderLeft: "4px solid #C4973A", padding: "24px" }}>
+        <div className="max-w-container mx-auto px-6">
+          <div className="max-w-3xl mx-auto">
+            <span className="font-mono text-[10px] uppercase tracking-widest" style={{ color: "#1C2B1E" }}>CLINICAL DEFINITION</span>
+            <p className="font-display text-lg md:text-xl mt-2" style={{ color: "#1C2B1E" }}>
+              Adolescent depression is a clinical mood disorder that presents primarily as irritability, withdrawal, and loss of motivation in teenagers, not simply sadness. It is the leading cause of disability in teenagers worldwide and it is highly treatable with the right level of care.
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* Condition Overview */}
       <section className="py-16 md:py-24 bg-white">
@@ -169,6 +192,12 @@ export default function AdolescentDepressionPage() {
               <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4 mb-8">
                 How Depression Presents in Adolescents
               </h2>
+              <div className="quick-answer" style={{ background: "#FAF7F2", borderLeft: "3px solid #C4973A", padding: "16px 20px", marginBottom: "24px" }}>
+                <span className="font-mono text-[10px] uppercase tracking-widest text-gray-500">QUICK ANSWER</span>
+                <p className="text-gray-700 leading-relaxed mt-1">
+                  Adolescent depression most commonly presents as irritability, withdrawal from friends and activities, declining grades, and changes in sleep, not as visible sadness. Many teenagers with depression are first misidentified as having behavioral or attitude problems before the underlying condition is recognized. A clinical evaluation is the only reliable way to distinguish adolescent depression from behavioral issues.
+                </p>
+              </div>
               <p className="text-gray-600 leading-relaxed mb-6">
                 Adolescent depression rarely announces itself clearly. Parents often describe a gradual shift over months before anything looks clinically significant. Common presentations include:
               </p>
@@ -215,6 +244,12 @@ export default function AdolescentDepressionPage() {
               <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4 mb-8">
                 Co-occurring Conditions
               </h2>
+              <div className="quick-answer" style={{ background: "#FAF7F2", borderLeft: "3px solid #C4973A", padding: "16px 20px", marginBottom: "24px" }}>
+                <span className="font-mono text-[10px] uppercase tracking-widest text-gray-500">QUICK ANSWER</span>
+                <p className="text-gray-700 leading-relaxed mt-1">
+                  The majority of adolescents with depression have at least one co-occurring condition including anxiety, ADHD, trauma, or substance use. Treating depression without identifying and addressing what is co-occurring produces incomplete results. Comprehensive dual diagnosis assessment at admission is standard practice at Desert Recovery Centers.
+                </p>
+              </div>
               <p className="text-gray-600 leading-relaxed text-lg mb-4">
                 Adolescent depression rarely travels alone. The majority of teenagers we treat for depression have at least one co-occurring condition including anxiety disorders, ADHD, PTSD from adverse childhood experiences, or substance use that began as self-medication. Our residential program conducts a comprehensive dual diagnosis assessment at admission so that every layer of what is happening gets addressed, not just the most visible symptom.
               </p>
@@ -234,6 +269,12 @@ export default function AdolescentDepressionPage() {
               <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4 mb-8">
                 How We Treat Adolescent Depression
               </h2>
+              <div className="quick-answer" style={{ background: "#FAF7F2", borderLeft: "3px solid #C4973A", padding: "16px 20px", marginBottom: "24px" }}>
+                <span className="font-mono text-[10px] uppercase tracking-widest text-gray-500">QUICK ANSWER</span>
+                <p className="text-gray-700 leading-relaxed mt-1">
+                  Desert Recovery Centers treats adolescent depression using Cognitive Behavioral Therapy, Dialectical Behavior Therapy, individual and family therapy, medication management, and NeuroStar TMS therapy for adolescents who have not responded to medication alone. Every adolescent receives an individualized treatment plan, not a standardized protocol. Treatment is led by Licensed Clinical Psychologist Dr. An Nguyen and Medical Director Dr. Reyes Topete MD.
+                </p>
+              </div>
               <p className="text-gray-600 leading-relaxed text-lg mb-6">
                 Our treatment approach integrates evidence-based therapies proven effective for adolescent depression. We do not use a one-size-fits-all protocol. Every adolescent receives an individualized treatment plan built around their specific presentation, history, and family context.
               </p>
@@ -277,6 +318,12 @@ export default function AdolescentDepressionPage() {
               <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4 mb-8">
                 What Parents Can Expect
               </h2>
+              <div className="quick-answer" style={{ background: "#FAF7F2", borderLeft: "3px solid #C4973A", padding: "16px 20px", marginBottom: "24px" }}>
+                <span className="font-mono text-[10px] uppercase tracking-widest text-gray-500">QUICK ANSWER</span>
+                <p className="text-gray-700 leading-relaxed mt-1">
+                  Residential treatment for adolescent depression provides intensive daily clinical care in a structured therapeutic environment separate from the adult program. Family involvement is built into treatment because long-term recovery depends on what happens at home after discharge. Parents receive regular updates, participate in family therapy, and help build the discharge and aftercare plan before their teenager leaves care.
+                </p>
+              </div>
               <p className="text-gray-600 leading-relaxed text-lg mb-4">
                 Residential treatment for adolescent depression is not a last resort. It is the appropriate level of care when outpatient therapy is not enough, when safety is a concern, or when the home environment needs to stabilize alongside the adolescent. Our Glendale and Scottsdale residential facilities provide a structured, therapeutic environment where teenagers receive intensive daily treatment while remaining in a safe, supportive setting.
               </p>

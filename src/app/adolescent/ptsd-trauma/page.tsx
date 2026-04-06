@@ -52,15 +52,38 @@ const faqs = [
   { q: "Can trauma treatment make things worse before they get better?", a: "Trauma treatment done correctly is paced carefully to avoid overwhelming the adolescent. We use a phase-based approach that builds safety and coping skills before any trauma processing begins. In a residential setting, we have the clinical support available around the clock to manage distress as it arises." },
 ];
 
+const speakableSchema = {
+  "@context": "https://schema.org/",
+  "@type": "WebPage",
+  name: "Adolescent PTSD and Trauma Treatment in Arizona",
+  speakable: {
+    "@type": "SpeakableSpecification",
+    cssSelector: [".definition-block", ".faq-section", ".quick-answer"],
+  },
+  url: "https://drc-nextjs.vercel.app/adolescent/ptsd-trauma",
+};
+
 export default function AdolescentPtsdTraumaPage() {
   return (
     <>
-      <SchemaScript schema={[breadcrumbSchema, medicalWebPageSchema, faqSchema]} />
+      <SchemaScript schema={[breadcrumbSchema, medicalWebPageSchema, faqSchema, speakableSchema]} />
       <Navigation />
       <Breadcrumb items={[{ name: "Home", url: SITE_URL }, { name: "Adolescent Treatment", url: `${SITE_URL}/adolescent-treatment` }, { name: "PTSD and Trauma", url: `${SITE_URL}${PAGE_PATH}` }]} />
       <PageHero eyebrow="Adolescent Treatment" title="Adolescent PTSD and Trauma Treatment in Arizona" description="Trauma in adolescents does not always look like trauma. It looks like behavior. The trauma underneath is invisible until someone looks for it." bgImage="/images/locations/phoenix/phoenix-lobby-2.jpg" />
 
       <div className="bg-cream border-b border-gold/20"><div className="max-w-container mx-auto px-6 py-3 text-center"><p className="text-xs text-sage font-body tracking-wide">Medically reviewed by Dr. An Nguyen, Licensed Clinical Psychologist, Clinical Director, Desert Recovery Centers</p></div></div>
+
+      {/* Definition Block */}
+      <section className="definition-block" style={{ background: "#F5EFE6", borderLeft: "4px solid #C4973A", padding: "24px" }}>
+        <div className="max-w-container mx-auto px-6">
+          <div className="max-w-3xl mx-auto">
+            <span className="font-mono text-[10px] uppercase tracking-widest" style={{ color: "#1C2B1E" }}>CLINICAL DEFINITION</span>
+            <p className="font-display text-lg md:text-xl mt-2" style={{ color: "#1C2B1E" }}>
+              Adolescent PTSD is a clinical response to traumatic experience that rewires the developing brain and presents as behavioral and emotional dysregulation, not simply as memory of the event. With trauma-informed residential treatment, adolescents can process trauma and restore stable functioning.
+            </p>
+          </div>
+        </div>
+      </section>
 
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-container mx-auto px-6"><div className="max-w-3xl mx-auto">
@@ -77,6 +100,12 @@ export default function AdolescentPtsdTraumaPage() {
           <AnimatedSection>
             <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">Sources of Trauma</span>
             <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4 mb-8">What Causes Adolescent PTSD</h2>
+              <div className="quick-answer" style={{ background: "#FAF7F2", borderLeft: "3px solid #C4973A", padding: "16px 20px", marginBottom: "24px" }}>
+                <span className="font-mono text-[10px] uppercase tracking-widest text-gray-500">QUICK ANSWER</span>
+                <p className="text-gray-700 leading-relaxed mt-1">
+                  Adolescent PTSD can result from abuse, neglect, bullying, accidents, loss of a caregiver, community violence, or the cumulative effect of adverse childhood experiences over time. A single event can produce PTSD and so can chronic exposure to an environment where safety was never reliable. Desert Recovery Centers assesses adverse childhood experiences at admission for every adolescent we treat.
+                </p>
+              </div>
             <p className="text-gray-600 leading-relaxed mb-6">Trauma in adolescents comes from many sources. A single event can produce PTSD. So can chronic exposure to a difficult environment where safety was never reliable.</p>
           </AnimatedSection>
           <div className="grid md:grid-cols-2 gap-4">
@@ -98,6 +127,12 @@ export default function AdolescentPtsdTraumaPage() {
           <AnimatedSection>
             <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">Recognizing the Signs</span>
             <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4 mb-8">How Trauma Presents in Adolescents</h2>
+              <div className="quick-answer" style={{ background: "#FAF7F2", borderLeft: "3px solid #C4973A", padding: "16px 20px", marginBottom: "24px" }}>
+                <span className="font-mono text-[10px] uppercase tracking-widest text-gray-500">QUICK ANSWER</span>
+                <p className="text-gray-700 leading-relaxed mt-1">
+                  PTSD in teenagers most commonly presents as hypervigilance, emotional dysregulation, avoidance, concentration problems that resemble ADHD, dissociation, and substance use, not as flashbacks and nightmares. Many adolescents with trauma histories have been evaluated for ADHD or behavioral disorders without anyone assessing what happened to them. The behavior is visible. The trauma underneath it requires someone to look for it.
+                </p>
+              </div>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">PTSD in teenagers often does not fit the textbook picture of flashbacks and nightmares, though those can be present. More commonly it presents as hypervigilance and an inability to relax or feel safe, emotional dysregulation and anger that seems disproportionate, avoidance of people, places, or situations associated with the trauma, concentration problems that look like ADHD, dissociation, self-harm as a coping mechanism, and substance use to numb symptoms.</p>
             <p className="text-gray-600 leading-relaxed text-lg">Many adolescents we treat have been evaluated for ADHD, depression, or behavioral disorders without anyone asking what happened to them.</p>
           </AnimatedSection>
@@ -109,6 +144,12 @@ export default function AdolescentPtsdTraumaPage() {
           <AnimatedSection>
             <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">Our Approach</span>
             <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4 mb-8">How We Treat Adolescent Trauma</h2>
+              <div className="quick-answer" style={{ background: "#FAF7F2", borderLeft: "3px solid #C4973A", padding: "16px 20px", marginBottom: "24px" }}>
+                <span className="font-mono text-[10px] uppercase tracking-widest text-gray-500">QUICK ANSWER</span>
+                <p className="text-gray-700 leading-relaxed mt-1">
+                  Desert Recovery Centers uses a phase-based trauma treatment approach that builds safety and coping skills before any trauma processing begins. Evidence-based modalities include Trauma-Focused Cognitive Behavioral Therapy, EMDR where clinically appropriate, and somatic approaches that address the body&apos;s stored trauma responses. Every aspect of the treatment environment is shaped by trauma-informed principles.
+                </p>
+              </div>
             <p className="text-gray-600 leading-relaxed text-lg mb-6">Trauma treatment requires safety before processing. We do not rush adolescents into trauma work before they have the skills and stability to tolerate it. Every staff interaction, every clinical decision, and every aspect of the treatment environment is shaped by trauma-informed principles.</p>
           </AnimatedSection>
           <div className="space-y-6">

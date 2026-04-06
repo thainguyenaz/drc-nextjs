@@ -28,15 +28,38 @@ const faqs = [
   { q: "Is residential treatment appropriate for ADHD?", a: "Residential treatment is appropriate when ADHD has significant co-occurring conditions that have not responded to outpatient care, when substance use has developed, when safety is a concern, or when the family system needs intensive support alongside the adolescent. ADHD alone rarely requires residential care. ADHD with depression, substance use, and a family in crisis frequently does." },
 ];
 
+const speakableSchema = {
+  "@context": "https://schema.org/",
+  "@type": "WebPage",
+  name: "Adolescent ADHD Treatment in Arizona",
+  speakable: {
+    "@type": "SpeakableSpecification",
+    cssSelector: [".definition-block", ".faq-section", ".quick-answer"],
+  },
+  url: "https://drc-nextjs.vercel.app/adolescent/adhd",
+};
+
 export default function AdolescentAdhdPage() {
   return (
     <>
-      <SchemaScript schema={[breadcrumbSchema, medicalWebPageSchema, faqSchema]} />
+      <SchemaScript schema={[breadcrumbSchema, medicalWebPageSchema, faqSchema, speakableSchema]} />
       <Navigation />
       <Breadcrumb items={[{ name: "Home", url: SITE_URL }, { name: "Adolescent Treatment", url: `${SITE_URL}/adolescent-treatment` }, { name: "ADHD", url: `${SITE_URL}${PAGE_PATH}` }]} />
       <PageHero eyebrow="Adolescent Treatment" title="Adolescent ADHD Treatment in Arizona" description="ADHD in adolescence is frequently misunderstood as a focus problem. It is more accurate to describe it as a regulation problem that rarely travels alone." bgImage="/images/locations/phoenix/phoenix-lobby-2.jpg" />
 
       <div className="bg-cream border-b border-gold/20"><div className="max-w-container mx-auto px-6 py-3 text-center"><p className="text-xs text-sage font-body tracking-wide">Medically reviewed by Dr. An Nguyen, Licensed Clinical Psychologist, Clinical Director, Desert Recovery Centers</p></div></div>
+
+      {/* Definition Block */}
+      <section className="definition-block" style={{ background: "#F5EFE6", borderLeft: "4px solid #C4973A", padding: "24px" }}>
+        <div className="max-w-container mx-auto px-6">
+          <div className="max-w-3xl mx-auto">
+            <span className="font-mono text-[10px] uppercase tracking-widest" style={{ color: "#1C2B1E" }}>CLINICAL DEFINITION</span>
+            <p className="font-display text-lg md:text-xl mt-2" style={{ color: "#1C2B1E" }}>
+              Adolescent ADHD is a regulation disorder affecting attention, emotion, impulse, and effort that is frequently accompanied by depression, anxiety, and trauma by the time a teenager reaches residential care. Comprehensive dual diagnosis treatment addressing all co-occurring conditions produces the best outcomes.
+            </p>
+          </div>
+        </div>
+      </section>
 
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-container mx-auto px-6"><div className="max-w-3xl mx-auto">
@@ -53,6 +76,12 @@ export default function AdolescentAdhdPage() {
           <AnimatedSection>
             <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">The Full Picture</span>
             <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4 mb-8">ADHD Rarely Travels Alone</h2>
+              <div className="quick-answer" style={{ background: "#FAF7F2", borderLeft: "3px solid #C4973A", padding: "16px 20px", marginBottom: "24px" }}>
+                <span className="font-mono text-[10px] uppercase tracking-widest text-gray-500">QUICK ANSWER</span>
+                <p className="text-gray-700 leading-relaxed mt-1">
+                  The majority of adolescents in residential treatment for ADHD have at least one co-occurring condition including depression from years of failure and criticism, anxiety from chronic disorganization, unaddressed trauma, or substance use that began as self-medication. Treating ADHD with medication alone without addressing what is co-occurring leaves the original pain intact. Comprehensive dual diagnosis treatment is the only approach that produces durable results.
+                </p>
+              </div>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">This is the clinical reality that residential treatment exists to address. The majority of adolescents we see with ADHD have at least one co-occurring condition. Depression develops from years of failure, criticism, and falling short of potential. Anxiety develops from the chronic experience of disorganization and unpredictability. Trauma histories are common and frequently unaddressed. Substance use often begins as self-medication, particularly with stimulants or marijuana.</p>
             <p className="text-gray-600 leading-relaxed text-lg">Treating ADHD in isolation, without addressing the depression, anxiety, or trauma that has accumulated on top of it, produces incomplete results. The ADHD medication helps with focus but does not address the shame, the learned helplessness, or the substance use that developed in the gap.</p>
           </AnimatedSection>
@@ -64,6 +93,12 @@ export default function AdolescentAdhdPage() {
           <AnimatedSection>
             <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">Often Missed</span>
             <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4 mb-8">How ADHD Presents in Adolescent Girls</h2>
+              <div className="quick-answer" style={{ background: "#FAF7F2", borderLeft: "3px solid #C4973A", padding: "16px 20px", marginBottom: "24px" }}>
+                <span className="font-mono text-[10px] uppercase tracking-widest text-gray-500">QUICK ANSWER</span>
+                <p className="text-gray-700 leading-relaxed mt-1">
+                  ADHD in adolescent girls is systematically underdiagnosed because girls more frequently present with inattentive type, which is less visible than hyperactive or impulsive presentations. Girls with ADHD develop compensatory strategies that mask symptoms for years until the cost of compensation becomes unsustainable. Many arrive at residential treatment with depression, anxiety, and a years-long belief that something is fundamentally wrong with them.
+                </p>
+              </div>
             <p className="text-gray-600 leading-relaxed text-lg">ADHD in girls is systematically underdiagnosed. Girls with ADHD more frequently present with inattentive type, which is less visible than hyperactive or impulsive presentations. They are described as spacey, scattered, or anxious. They develop compensatory strategies that mask symptoms for years. By adolescence, the compensation cost is significant. Many girls with undiagnosed ADHD reach us with depression, anxiety, and a profound sense that something is wrong with them without knowing what.</p>
           </AnimatedSection>
         </div></div>
@@ -74,6 +109,12 @@ export default function AdolescentAdhdPage() {
           <AnimatedSection>
             <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">Our Approach</span>
             <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4 mb-8">How We Treat Adolescent ADHD</h2>
+              <div className="quick-answer" style={{ background: "#FAF7F2", borderLeft: "3px solid #C4973A", padding: "16px 20px", marginBottom: "24px" }}>
+                <span className="font-mono text-[10px] uppercase tracking-widest text-gray-500">QUICK ANSWER</span>
+                <p className="text-gray-700 leading-relaxed mt-1">
+                  Desert Recovery Centers treats adolescent ADHD by addressing the full clinical picture including medication management, therapy for the emotional consequences of years with an unmanaged condition, executive function and emotional regulation skills building, and family therapy. We do not treat ADHD without assessing for and treating co-occurring conditions. That is the only approach that produces lasting improvement.
+                </p>
+              </div>
             <p className="text-gray-600 leading-relaxed text-lg mb-6">Our approach to adolescent ADHD addresses the full clinical picture. We do not treat ADHD without assessing for and treating what is co-occurring. That is the only approach that produces durable results.</p>
           </AnimatedSection>
           <div className="space-y-6">
