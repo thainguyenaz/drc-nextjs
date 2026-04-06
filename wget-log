@@ -1,0 +1,6 @@
+--2026-04-02 21:23:35--  https://desertrecoverycenters.com/wp-content/uploads/
+Resolving desertrecoverycenters.com (desertrecoverycenters.com)... 199.16.172.160, 199.16.173.205
+Connecting to desertrecoverycenters.com (desertrecoverycenters.com)|199.16.172.160|:443... connected.
+HTTP request sent, awaiting response... 403 Forbidden
+2026-04-02 21:23:36 ERROR 403: Forbidden.
+

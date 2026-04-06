@@ -1,106 +1,104 @@
-import { Metadata } from "next";
+"use client";
+
+import { motion } from "framer-motion";
+import Link from "next/link";
 import Navigation from "@/components/Navigation";
 import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import SchemaScript from "@/components/SchemaScript";
 import Breadcrumb from "@/components/Breadcrumb";
-import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
-import Link from "next/link";
+import AnimatedSection from "@/components/animated/AnimatedSection";
 
 const SITE_URL = "https://www.desertrecoverycenters.com";
 const PAGE_PATH = "/adolescent/self-harm";
+const PAGE_TITLE = "Adolescent Self Harm Treatment Arizona | Teen Cutting and Self Injury | Desert Recovery Centers";
 
-export const metadata: Metadata = {
-  title: "Adolescent Self Harm Treatment | Desert Recovery Centers Phoenix",
-  description:
-    "Self harm treatment for adolescents in Phoenix, AZ. Clinical support for cutting, burning, and other self-injurious behaviors in teens ages 13 to 17. Call (623) 257-5384.",
-  alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
-  openGraph: {
-    title: "Adolescent Self Harm Treatment | Desert Recovery Centers Phoenix",
-    description:
-      "Self harm treatment for adolescents in Phoenix, AZ. PHP, IOP, and outpatient programs for teens ages 13 to 17.",
-    url: `${SITE_URL}${PAGE_PATH}`,
-    siteName: "Desert Recovery Centers",
-    type: "website",
-  },
-};
+const breadcrumbSchema = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: SITE_URL }, { "@type": "ListItem", position: 2, name: "Adolescent Treatment", item: `${SITE_URL}/adolescent-treatment` }, { "@type": "ListItem", position: 3, name: "Self Harm" }] };
+const medicalWebPageSchema = { "@context": "https://schema.org", "@type": "MedicalWebPage", "@id": `${SITE_URL}${PAGE_PATH}/#webpage`, url: `${SITE_URL}${PAGE_PATH}`, name: PAGE_TITLE, specialty: "Adolescent Psychiatry", reviewedBy: { "@type": "Person", name: "Dr. An Nguyen", jobTitle: "Licensed Clinical Psychologist, Clinical Director", worksFor: { "@id": `${SITE_URL}/#organization` } }, publisher: { "@id": `${SITE_URL}/#organization` } };
+const faqSchema = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: [
+  { "@type": "Question", name: "My teenager says they self harm to feel better, not to die. Should I still be worried?", acceptedAnswer: { "@type": "Answer", text: "Yes, and your concern is appropriate. Non-suicidal self injury is a serious clinical issue regardless of suicidal intent. It indicates your teenager is experiencing emotional pain they do not have adequate tools to manage. It also carries physical risk and is associated with elevated risk for future suicidal ideation. It requires clinical treatment." } },
+  { "@type": "Question", name: "Will talking about self harm make it worse or give my teenager ideas?", acceptedAnswer: { "@type": "Answer", text: "No. This is a common concern and it is not supported by evidence. Clinical assessment and treatment of self harm does not increase the behavior. Avoidance of the topic, however, leaves the adolescent without support and without better alternatives. Open, non-judgmental clinical conversation is the foundation of effective treatment." } },
+  { "@type": "Question", name: "How do I respond when I discover my teenager has been self harming?", acceptedAnswer: { "@type": "Answer", text: "Stay calm. Respond with concern rather than anger or punishment. Do not demand they explain themselves immediately. Let them know you love them and that you are going to get them help. Then contact a clinical professional who specializes in adolescent mental health. The most important thing you can do in that moment is not escalate and not minimize." } },
+] };
 
-const breadcrumbSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
-    { "@type": "ListItem", position: 2, name: "Adolescent", item: `${SITE_URL}/adolescent-treatment` },
-    { "@type": "ListItem", position: 3, name: "Self Harm" },
-  ],
-};
-
-const medicalWebPageSchema = {
-  "@context": "https://schema.org",
-  "@type": "MedicalWebPage",
-  "@id": `${SITE_URL}${PAGE_PATH}/#webpage`,
-  url: `${SITE_URL}${PAGE_PATH}`,
-  name: "Adolescent Self Harm Treatment | Desert Recovery Centers",
-  specialty: "Adolescent Psychiatry",
-  publisher: { "@id": `${SITE_URL}/#organization` },
-};
+const faqs = [
+  { q: "My teenager says they self harm to feel better, not to die. Should I still be worried?", a: "Yes, and your concern is appropriate. Non-suicidal self injury is a serious clinical issue regardless of suicidal intent. It indicates your teenager is experiencing emotional pain they do not have adequate tools to manage. It also carries physical risk and is associated with elevated risk for future suicidal ideation. It requires clinical treatment." },
+  { q: "Will talking about self harm make it worse or give my teenager ideas?", a: "No. This is a common concern and it is not supported by evidence. Clinical assessment and treatment of self harm does not increase the behavior. Avoidance of the topic, however, leaves the adolescent without support and without better alternatives. Open, non-judgmental clinical conversation is the foundation of effective treatment." },
+  { q: "How do I respond when I discover my teenager has been self harming?", a: "Stay calm. Respond with concern rather than anger or punishment. Do not demand they explain themselves immediately. Let them know you love them and that you are going to get them help. Then contact a clinical professional who specializes in adolescent mental health. The most important thing you can do in that moment is not escalate and not minimize." },
+];
 
 export default function AdolescentSelfHarmPage() {
   return (
     <>
-      <SchemaScript schema={[breadcrumbSchema, medicalWebPageSchema]} />
+      <SchemaScript schema={[breadcrumbSchema, medicalWebPageSchema, faqSchema]} />
       <Navigation />
-      <Breadcrumb items={getBreadcrumbsFromPathname(PAGE_PATH)} />
-      <PageHero
-        eyebrow="Adolescent Treatment"
-        title="Self Harm in Adolescents"
-        description="Cutting, burning, and other self harm behaviors are not manipulation. They are a dysregulated coping mechanism. With the right clinical support, adolescents learn healthier ways to manage the pain."
-        bgImage="/images/locations/phoenix/phoenix-lobby-2.jpg"
-      />
+      <Breadcrumb items={[{ name: "Home", url: SITE_URL }, { name: "Adolescent Treatment", url: `${SITE_URL}/adolescent-treatment` }, { name: "Self Harm", url: `${SITE_URL}${PAGE_PATH}` }]} />
+      <PageHero eyebrow="Adolescent Treatment" title="Adolescent Self Harm Treatment in Arizona" description="Self harm in adolescents is not manipulation. It is a dysregulated coping mechanism that responds to clinical treatment." bgImage="/images/locations/phoenix/phoenix-lobby-2.jpg" />
+
+      <div className="bg-cream border-b border-gold/20"><div className="max-w-container mx-auto px-6 py-3 text-center"><p className="text-xs text-sage font-body tracking-wide">Medically reviewed by Dr. An Nguyen, Licensed Clinical Psychologist, Clinical Director, Desert Recovery Centers</p></div></div>
 
       <section className="py-16 md:py-24 bg-white">
-        <div className="max-w-container mx-auto px-6">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mb-6">
-              Self Harm Is a Coping Mechanism, Not a Character Flaw
-            </h2>
-            <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              Cutting, burning, and other self harm behaviors are not manipulation. They are a dysregulated coping mechanism. With the right clinical support, adolescents learn healthier ways to manage the pain.
-            </p>
-            <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              At Desert Recovery Centers, our adolescent clinical team uses DBT, trauma-informed care, and emotional regulation skills training to help teenagers ages 13 to 17 replace self-injurious behaviors with healthier coping strategies. Our PHP, IOP, and outpatient programs provide the safety and structure needed for this critical work.
-            </p>
-            <p className="text-gray-600 leading-relaxed text-lg">
-              Family involvement is a required component of every adolescent program. You are never a bystander in your child&apos;s treatment.
-            </p>
-          </div>
-        </div>
+        <div className="max-w-container mx-auto px-6"><div className="max-w-3xl mx-auto">
+          <AnimatedSection>
+            <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mb-6">Not Manipulation. A Coping Mechanism.</h2>
+            <p className="text-gray-600 leading-relaxed text-lg mb-4">Self harm in adolescents is not manipulation. This is the most important thing to understand before anything else. Cutting, burning, scratching, and other forms of non-suicidal self injury are a dysregulated coping mechanism. The adolescent has found a way to manage emotional pain that works in the short term and causes harm in the process. The behavior makes sense within the context of a nervous system that has not yet developed more adaptive ways to tolerate intense emotion.</p>
+            <p className="text-gray-600 leading-relaxed text-lg">When parents discover self harm, the instinct is often panic, anger, or both. Both reactions are understandable. Neither is helpful in that moment. What is helpful is understanding that self harm is a clinical issue that requires clinical treatment, not consequences.</p>
+          </AnimatedSection>
+        </div></div>
       </section>
 
       <section className="py-16 md:py-24 bg-cream">
-        <div className="max-w-container mx-auto px-6 text-center">
-          <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mb-6">
-            Get Help for Your Teenager
-          </h2>
-          <p className="text-gray-600 leading-relaxed max-w-2xl mx-auto mb-8">
-            If your teenager is engaging in self harm, our admissions team is available 24/7 to answer your questions and help you take the next step. You do not have to navigate this alone.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
-              href="tel:+16232575384"
-              className="bg-gold hover:bg-gold-dark text-white font-semibold text-base px-8 py-4 rounded-xl transition-all shadow-lg shadow-gold/25 w-full sm:w-auto text-center cursor-pointer"
-            >
-              Call (623) 257-5384
-            </a>
-            <Link
-              href="/adolescent-treatment"
-              className="bg-forest/10 hover:bg-forest/20 text-forest font-semibold text-base px-8 py-4 rounded-xl transition-all w-full sm:w-auto text-center"
-            >
-              Back to Adolescent Program
-            </Link>
+        <div className="max-w-container mx-auto px-6"><div className="max-w-3xl mx-auto">
+          <AnimatedSection>
+            <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">Important Context</span>
+            <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4 mb-8">Self Harm and Suicidal Ideation</h2>
+            <p className="text-gray-600 leading-relaxed text-lg">Non-suicidal self injury is clinically distinct from suicidal behavior, but the two can coexist. Adolescents who self harm have elevated risk for suicidal ideation and should receive a thorough risk assessment. Our clinical team conducts comprehensive suicide risk assessment at admission and throughout treatment, maintaining individualized safety plans for every adolescent in our care.</p>
+          </AnimatedSection>
+        </div></div>
+      </section>
+
+      <section className="py-16 md:py-24 bg-white">
+        <div className="max-w-container mx-auto px-6"><div className="max-w-3xl mx-auto">
+          <AnimatedSection>
+            <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">Our Approach</span>
+            <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4 mb-8">How We Treat Adolescent Self Harm</h2>
+            <p className="text-gray-600 leading-relaxed text-lg mb-6">Dialectical Behavior Therapy is the most evidence-supported treatment for adolescent self harm. DBT was designed specifically to address the emotional dysregulation and crisis behaviors that drive self injury. Our residential program provides the intensity and structure that adolescents with active self harm often need. Skills learned in a weekly outpatient session are not sufficient when the urge to self harm occurs at 11pm on a Tuesday. Residential treatment provides round-the-clock clinical support and the opportunity to practice skills with immediate guidance.</p>
+          </AnimatedSection>
+          <div className="space-y-6">
+            {[
+              { title: "Distress Tolerance", desc: "Building the capacity to survive emotional crises without resorting to self injury, using skills that can be deployed immediately in moments of acute pain." },
+              { title: "Emotional Regulation", desc: "Understanding and managing the intense emotional experiences that drive the urge to self harm." },
+              { title: "Mindfulness", desc: "Developing present-moment awareness that creates space between the urge and the action." },
+              { title: "Interpersonal Effectiveness", desc: "Building the communication and relationship skills that reduce the isolation and conflict that often trigger episodes." },
+              { title: "Family Integration", desc: "Parents learn the DBT framework, how to respond to self harm disclosures in ways that do not reinforce the behavior, and how to support their teenager's use of skills at home after discharge." },
+            ].map((item, i) => (
+              <motion.div key={i} initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.5, delay: i * 0.08 }} className="border-l-2 border-gold/40 pl-6">
+                <h3 className="font-display text-lg text-forest font-semibold mb-2">{item.title}</h3><p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
+              </motion.div>
+            ))}
           </div>
-        </div>
+        </div></div>
+      </section>
+
+      <section className="py-16 md:py-24 bg-cream">
+        <div className="max-w-container mx-auto px-6"><div className="max-w-3xl mx-auto">
+          <AnimatedSection><span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">Common Questions</span><h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4 mb-8">Frequently Asked Questions</h2></AnimatedSection>
+          <div className="space-y-6">{faqs.map((item, i) => (<motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false, amount: 0.2 }} transition={{ duration: 0.4, delay: i * 0.06 }} className="border-l-2 border-gold/40 pl-6"><h3 className="font-display text-lg text-forest font-semibold mb-2">{item.q}</h3><p className="text-gray-600 text-sm leading-relaxed">{item.a}</p></motion.div>))}</div>
+        </div></div>
+      </section>
+
+      <section className="py-20 md:py-28 bg-forest relative overflow-hidden">
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
+        <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: false }} transition={{ duration: 0.6 }} className="max-w-container mx-auto px-6 text-center">
+          <h2 className="font-display text-3xl md:text-4xl text-white font-semibold mb-6">There Are Better Ways to Manage the Pain</h2>
+          <p className="text-white/70 max-w-2xl mx-auto mb-4 leading-relaxed">Our admissions team is available 24 hours a day, 7 days a week.</p>
+          <p className="text-gold text-sm font-medium mb-10">Most adolescents begin treatment within 48 hours of the first call.</p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="tel:+16233231012" className="bg-gold hover:bg-gold-dark text-white font-semibold text-base px-8 py-4 rounded-xl transition-all shadow-lg shadow-gold/25 w-full sm:w-auto text-center cursor-pointer">Call (623) 323-1012</a>
+            <Link href="/adolescent-treatment" className="bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/30 text-white font-semibold text-base px-8 py-4 rounded-xl transition-all w-full sm:w-auto text-center">Back to Adolescent Program</Link>
+          </div>
+        </motion.div>
       </section>
 
       <CTASection />
