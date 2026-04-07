@@ -4,12 +4,12 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 const photos = [
-  { src: "/images/general/accom-bedroom.jpg", label: "Private Bedroom" },
-  { src: "/images/general/accom-massage.jpg", label: "Massage Room" },
-  { src: "/images/general/accom-recreation.jpg", label: "Recreation Room" },
-  { src: "/images/general/accom-backyard.jpg", label: "Outdoor Space" },
-  { src: "/images/general/accom-group-room.jpg", label: "Group Room" },
-  { src: "/images/general/accom-gym.jpg", label: "Fitness Center" },
+  { src: "/images/general/accom-bedroom.jpg", label: "Private Bedroom", alt: "Private bedroom at Desert Recovery Centers luxury residential rehab in Arizona" },
+  { src: "/images/general/accom-massage.jpg", label: "Massage Room", alt: "Massage therapy room at Desert Recovery Centers luxury treatment center" },
+  { src: "/images/general/accom-recreation.jpg", label: "Recreation Room", alt: "Recreation room at Desert Recovery Centers luxury rehab facility in Arizona" },
+  { src: "/images/general/accom-backyard.jpg", label: "Outdoor Space", alt: "Outdoor patio and recreation area at Desert Recovery Centers Arizona" },
+  { src: "/images/general/accom-group-room.jpg", label: "Group Room", alt: "Group therapy room at Desert Recovery Centers residential treatment center" },
+  { src: "/images/general/accom-gym.jpg", label: "Fitness Center", alt: "Fitness center and gym at Desert Recovery Centers luxury rehab in Arizona" },
 ];
 
 export default function FacilityPhotoGrid() {
@@ -60,7 +60,7 @@ export default function FacilityPhotoGrid() {
                 >
                   <Image
                     src={photo.src}
-                    alt={photo.label}
+                    alt={photo.alt}
                     fill
                     className="object-cover group-hover:scale-[1.04] transition-transform duration-[350ms] ease-out"
                     sizes="(max-width: 768px) 50vw, 20vw"

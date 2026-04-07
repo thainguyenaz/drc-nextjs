@@ -71,7 +71,7 @@ const faqs = [
   },
   {
     q: "Does Desert Recovery Centers accept insurance for residential treatment?",
-    a: "Yes. Desert Recovery Centers accepts most major commercial insurance plans for residential treatment, including Blue Cross Blue Shield, Aetna, Cigna, UnitedHealthcare, and others. Under the Mental Health Parity and Addiction Equity Act, insurance companies are required to cover residential mental health and addiction treatment at the same level as medical care. Our admissions team verifies your benefits before treatment begins at no cost to you. Call (623) 323-1012 for a free verification.",
+    a: "Yes. Desert Recovery Centers accepts most major commercial insurance plans for residential treatment, including Blue Cross Blue Shield, Aetna, Cigna, UnitedHealthcare, and others. Under the Mental Health Parity and Addiction Equity Act, insurance companies are required to cover residential mental health and addiction treatment at the same level as medical care. Our admissions team verifies your benefits before treatment begins at no cost to you. Call (480) 931-3617 for a free verification.",
   },
   {
     q: "Who is on the clinical team during residential treatment?",
@@ -91,7 +91,7 @@ const faqs = [
   },
   {
     q: "How do I get admitted to residential treatment at Desert Recovery Centers?",
-    a: "Call (623) 323-1012 any time, day or night. Our admissions team answers 24 hours a day. They conduct a brief clinical assessment by phone, verify your insurance benefits, and walk you through every step of the intake process. Most clients are admitted within 24 to 48 hours of their first call. If you are in immediate crisis, tell us. We prioritize emergency admissions and can often accommodate same-day intake.",
+    a: "Call (480) 931-3617 any time, day or night. Our admissions team answers 24 hours a day. They conduct a brief clinical assessment by phone, verify your insurance benefits, and walk you through every step of the intake process. Most clients are admitted within 24 to 48 hours of their first call. If you are in immediate crisis, tell us. We prioritize emergency admissions and can often accommodate same-day intake.",
   },
 ];
 
@@ -118,7 +118,7 @@ const clinicSchema = {
   description:
     "Joint Commission accredited luxury residential treatment for addiction and mental health at two Arizona locations. 24/7 clinical care with doctoral-level psychologists and board-certified psychiatrists.",
   url: `${SITE_URL}/treatments/residential`,
-  telephone: "+16233231012",
+  telephone: "+14809313617",
   email: "contact@desertrecoverycenters.com",
   hasCredential: {
     "@type": "EducationalOccupationalCredential",
@@ -188,7 +188,7 @@ const faqSchema = {
       name: "Does Desert Recovery Centers accept insurance for residential treatment?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Desert Recovery Centers accepts most major commercial insurance plans for residential treatment, including Blue Cross Blue Shield, Aetna, Cigna, UnitedHealthcare, and others. Under the Mental Health Parity and Addiction Equity Act, insurance companies are required to cover residential mental health and addiction treatment at the same level as medical care. Our admissions team verifies your benefits before treatment begins at no cost to you. Call (623) 323-1012 for a free verification.",
+        text: "Yes. Desert Recovery Centers accepts most major commercial insurance plans for residential treatment, including Blue Cross Blue Shield, Aetna, Cigna, UnitedHealthcare, and others. Under the Mental Health Parity and Addiction Equity Act, insurance companies are required to cover residential mental health and addiction treatment at the same level as medical care. Our admissions team verifies your benefits before treatment begins at no cost to you. Call (480) 931-3617 for a free verification.",
       },
     },
     {
@@ -228,7 +228,7 @@ const faqSchema = {
       name: "How do I get admitted to residential treatment at Desert Recovery Centers?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Call (623) 323-1012 any time, day or night. Our admissions team answers 24 hours a day. They conduct a brief clinical assessment by phone, verify your insurance benefits, and walk you through every step of the intake process. Most clients are admitted within 24 to 48 hours of their first call. If you are in immediate crisis, tell us. We prioritize emergency admissions and can often accommodate same-day intake.",
+        text: "Call (480) 931-3617 any time, day or night. Our admissions team answers 24 hours a day. They conduct a brief clinical assessment by phone, verify your insurance benefits, and walk you through every step of the intake process. Most clients are admitted within 24 to 48 hours of their first call. If you are in immediate crisis, tell us. We prioritize emergency admissions and can often accommodate same-day intake.",
       },
     },
   ],
@@ -254,7 +254,7 @@ export default function ResidentialTreatmentPage() {
         "description": "The admissions process at Desert Recovery Centers from first call to starting treatment.",
         "totalTime": "PT48H",
         "step": [
-          { "@type": "HowToStep", "position": 1, "name": "Call Admissions", "text": "Call (623) 323-1012 any time, day or night. A real person answers 24 hours a day." },
+          { "@type": "HowToStep", "position": 1, "name": "Call Admissions", "text": "Call (480) 931-3617 any time, day or night. A real person answers 24 hours a day." },
           { "@type": "HowToStep", "position": 2, "name": "Clinical Assessment", "text": "Complete a brief 15 to 20 minute clinical assessment by phone to determine the right level of care." },
           { "@type": "HowToStep", "position": 3, "name": "Insurance Verification", "text": "The admissions team contacts your insurance provider directly and explains your coverage and costs before you commit." },
           { "@type": "HowToStep", "position": 4, "name": "Begin Treatment", "text": "Most clients begin treatment within 48 hours of their first call." },
@@ -294,12 +294,12 @@ export default function ResidentialTreatmentPage() {
           {
             question: "What is residential treatment at Desert Recovery Centers?",
             answer:
-              "Residential treatment at Desert Recovery Centers is a 24/7 inpatient program for addiction and mental health delivered in luxury facilities in Glendale and Scottsdale, Arizona. Programs typically last 30 to 90 days and include individual therapy with doctoral level psychologists, daily group therapy, board certified psychiatric care, 24-hour nursing, family therapy, and holistic wellness programming. Desert Recovery Centers is Joint Commission accredited and accepts most major insurance plans. Call (623) 323-1012 for admissions.",
+              "Residential treatment at Desert Recovery Centers is a 24/7 inpatient program for addiction and mental health delivered in luxury facilities in Glendale and Scottsdale, Arizona. Programs typically last 30 to 90 days and include individual therapy with doctoral level psychologists, daily group therapy, board certified psychiatric care, 24-hour nursing, family therapy, and holistic wellness programming. Desert Recovery Centers is Joint Commission accredited and accepts most major insurance plans. Call (480) 931-3617 for admissions.",
           },
           {
             question: "How much does residential treatment cost at Desert Recovery Centers?",
             answer:
-              "Desert Recovery Centers accepts most major commercial insurance plans including Blue Cross Blue Shield, Aetna, Cigna, UnitedHealthcare, Humana, and others. Under the Mental Health Parity and Addiction Equity Act, residential mental health and addiction treatment must be covered at the same level as medical care. The admissions team verifies your benefits at no cost before treatment begins. Call (623) 323-1012 for a free insurance verification.",
+              "Desert Recovery Centers accepts most major commercial insurance plans including Blue Cross Blue Shield, Aetna, Cigna, UnitedHealthcare, Humana, and others. Under the Mental Health Parity and Addiction Equity Act, residential mental health and addiction treatment must be covered at the same level as medical care. The admissions team verifies your benefits at no cost before treatment begins. Call (480) 931-3617 for a free insurance verification.",
           },
           {
             question: "Where are the Desert Recovery Centers residential treatment facilities?",

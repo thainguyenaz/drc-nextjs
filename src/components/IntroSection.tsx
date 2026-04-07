@@ -27,7 +27,7 @@ export default function IntroSection() {
           >
             <Image
               src="/images/glendale/Glendale-Pool.jpg"
-              alt="Desert Recovery Centers Glendale pool and outdoor area"
+              alt="Outdoor pool and recreation area at Desert Recovery Centers luxury residential rehab facility in Glendale Arizona"
               fill
               className="object-cover group-hover:scale-[1.04] transition-transform duration-[350ms] ease-out"
               sizes="(max-width: 768px) 100vw, 50vw"
@@ -41,7 +41,7 @@ export default function IntroSection() {
           >
             <Image
               src="/images/scottsdale/DRC-LIVING-ROOMS-NORTH-SCOTTSDALE-08-01-2024-0553August-01-202400015-2.jpg"
-              alt="Desert Recovery Centers Scottsdale luxury living area"
+              alt="Luxury living area at Desert Recovery Centers Scottsdale addiction treatment center in Arizona"
               fill
               className="object-cover group-hover:scale-[1.04] transition-transform duration-[350ms] ease-out"
               sizes="(max-width: 768px) 100vw, 50vw"

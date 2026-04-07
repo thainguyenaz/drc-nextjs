@@ -3,9 +3,10 @@ import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 
 export const metadata: Metadata = {
-  title: "Luxury Addiction and Mental Health Treatment in Arizona | Desert Recovery Centers",
+  title: "Luxury Addiction & Mental Health Treatment in Arizona | Desert Recovery Centers",
   description:
-    "Desert Recovery Centers offers Joint Commission accredited luxury residential treatment, PHP, IOP, and TMS therapy in Glendale, Scottsdale, and Phoenix, Arizona. Doctoral level care. Insurance accepted. Call 24/7.",
+    "Luxury addiction and mental health treatment in Arizona. Joint Commission accredited, dual diagnosis care. Verify insurance today. Call (480) 931-3617.",
+  alternates: { canonical: "https://desertrecoverycenters.com/" },
 };
 import TrustBar from "@/components/TrustBar";
 import IntroSection from "@/components/IntroSection";
@@ -28,6 +29,10 @@ import Footer from "@/components/Footer";
 import { FAQPageSchema, SpeakableSchema, VideoSchemas } from "@/lib/seo";
 import AEOBlock from "@/components/AEOBlock";
 import SchemaScript from "@/components/SchemaScript";
+import ConditionFAQ from "@/components/ConditionFAQ";
+import { getFAQSchema } from "@/lib/schema";
+import { faqData } from "@/data/faq-data";
+import FAQSection from "@/components/FAQSection";
 
 const homepageOrgSchema = {
   "@context": "https://schema.org",
@@ -37,7 +42,7 @@ const homepageOrgSchema = {
   "url": "https://www.desertrecoverycenters.com",
   "logo": "https://www.desertrecoverycenters.com/images/branding/drc-logo-black.png",
   "description": "Joint Commission accredited luxury behavioral health treatment organization in Arizona specializing in residential treatment, PHP, IOP, and outpatient programs for addiction and mental health.",
-  "telephone": "+16233231012",
+  "telephone": "+14809313617",
   "email": "contact@desertrecoverycenters.com",
   "address": [
     { "@type": "PostalAddress", "streetAddress": "8105 W Frier Dr", "addressLocality": "Glendale", "addressRegion": "AZ", "postalCode": "85303" },
@@ -86,7 +91,7 @@ const homepageFaqSchema = {
     {
       "@type": "Question",
       "name": "Does Desert Recovery Centers accept insurance?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Desert Recovery Centers accepts most major private insurance plans including Aetna, Blue Cross Blue Shield, Cigna, UnitedHealthcare, Humana, Tricare, and TriWest. Our admissions team verifies your benefits at no cost before treatment begins. Call (623) 323-1012 for a free insurance verification." },
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Desert Recovery Centers accepts most major private insurance plans including Aetna, Blue Cross Blue Shield, Cigna, UnitedHealthcare, Humana, Tricare, and TriWest. Our admissions team verifies your benefits at no cost before treatment begins. Call (480) 931-3617 for a free insurance verification." },
     },
     {
       "@type": "Question",
@@ -101,7 +106,7 @@ const homepageFaqSchema = {
     {
       "@type": "Question",
       "name": "What is the admissions process at Desert Recovery Centers?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Call (623) 323-1012 any time, day or night. An admissions coordinator answers 24 hours a day, conducts a brief clinical assessment by phone, verifies your insurance benefits, and gets you scheduled. Most clients begin treatment within 48 hours of their first call." },
+      "acceptedAnswer": { "@type": "Answer", "text": "Call (480) 931-3617 any time, day or night. An admissions coordinator answers 24 hours a day, conducts a brief clinical assessment by phone, verifies your insurance benefits, and gets you scheduled. Most clients begin treatment within 48 hours of their first call." },
     },
   ],
 };
@@ -113,7 +118,7 @@ const howToSchema = {
   "description": "The admissions process at Desert Recovery Centers from first call to starting treatment.",
   "totalTime": "PT48H",
   "step": [
-    { "@type": "HowToStep", "position": 1, "name": "Call Admissions", "text": "Call (623) 323-1012 any time, day or night. A real person answers 24 hours a day." },
+    { "@type": "HowToStep", "position": 1, "name": "Call Admissions", "text": "Call (480) 931-3617 any time, day or night. A real person answers 24 hours a day." },
     { "@type": "HowToStep", "position": 2, "name": "Clinical Assessment", "text": "Complete a brief 15 to 20 minute clinical assessment by phone to determine the right level of care." },
     { "@type": "HowToStep", "position": 3, "name": "Insurance Verification", "text": "The admissions team contacts your insurance provider directly and explains your coverage and costs before you commit." },
     { "@type": "HowToStep", "position": 4, "name": "Begin Treatment", "text": "Most clients begin treatment within 48 hours of their first call." },
@@ -126,7 +131,7 @@ export default function Home() {
       <FAQPageSchema />
       <SpeakableSchema url="/" cssSelectors={["[data-speakable]"]} />
       <VideoSchemas path="/" />
-      <SchemaScript schema={[homepageOrgSchema, homepageWebSiteSchema, homepageFaqSchema, howToSchema]} />
+      <SchemaScript schema={[homepageOrgSchema, homepageWebSiteSchema, homepageFaqSchema, howToSchema, getFAQSchema(faqData["homepage"])]} />
       <Navigation />
       <Hero />
       <TrustBar />
@@ -258,6 +263,8 @@ export default function Home() {
         </div>
       </section>
 
+      <ConditionFAQ items={faqData["homepage"]} />
+      <FAQSection faqs={faqData["homepage"]} />
       <CTASection />
       <Footer />
     </>

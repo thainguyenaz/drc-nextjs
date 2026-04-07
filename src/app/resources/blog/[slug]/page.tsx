@@ -164,8 +164,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                 <div className="bg-forest rounded-xl p-6">
                   <p className="text-white font-display font-semibold mb-2">Ready to Start Treatment?</p>
                   <p className="text-white/60 text-sm mb-4">Our admissions team answers 24/7.</p>
-                  <a href="tel:+16233231012" className="block bg-gold hover:bg-gold-dark text-white text-center font-semibold text-sm px-6 py-3 rounded-xl transition-colors">
-                    Call (623) 323-1012
+                  <a href="tel:+14809313617" className="block bg-gold hover:bg-gold-dark text-white text-center font-semibold text-sm px-6 py-3 rounded-xl transition-colors">
+                    Call (480) 931-3617
                   </a>
                 </div>
 

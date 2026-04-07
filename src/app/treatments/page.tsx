@@ -8,6 +8,11 @@ import YouTubeEmbed from "@/components/YouTubeEmbed";
 import { getPageMeta } from "@/data/page-metadata";
 import AnimatedSection from "@/components/animated/AnimatedSection";
 import AnimatedGrid from "@/components/animated/AnimatedGrid";
+import ConditionFAQ from "@/components/ConditionFAQ";
+import SchemaScript from "@/components/SchemaScript";
+import { getFAQSchema } from "@/lib/schema";
+import { faqData } from "@/data/faq-data";
+import FAQSection from "@/components/FAQSection";
 
 const meta = getPageMeta("/treatments/");
 
@@ -69,6 +74,7 @@ const therapies = [
 export default function TreatmentsPage() {
   return (
     <>
+      <SchemaScript schema={[getFAQSchema(faqData["treatments"])]} />
       <BreadcrumbSchema items={[{ name: "Treatments", path: "/treatments" }]} />
       <VideoSchemas path="/treatments/" />
       <Navigation />
@@ -158,6 +164,8 @@ export default function TreatmentsPage() {
         </div>
       </section>
 
+      <ConditionFAQ items={faqData["treatments"]} />
+      <FAQSection faqs={faqData["treatments"]} />
       <CTASection />
       <Footer />
     </>

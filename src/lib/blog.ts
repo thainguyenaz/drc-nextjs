@@ -16,7 +16,7 @@ export interface BlogPost {
   metaDescription: string
 }
 
-const DISCLAIMER = `<p><em>This article is for informational purposes only and does not constitute medical advice. The content has been reviewed by Dr. An Nguyen, Licensed Clinical Psychologist and Clinical Director at Desert Recovery Centers. If you or a loved one is struggling with addiction or a mental health condition, please contact a qualified healthcare professional. Desert Recovery Centers can be reached 24 hours a day at (623) 323-1012.</em></p>`
+const DISCLAIMER = `<p><em>This article is for informational purposes only and does not constitute medical advice. The content has been reviewed by Dr. An Nguyen, Licensed Clinical Psychologist and Clinical Director at Desert Recovery Centers. If you or a loved one is struggling with addiction or a mental health condition, please contact a qualified healthcare professional. Desert Recovery Centers can be reached 24 hours a day at (480) 931-3617.</em></p>`
 
 export const blogPosts: BlogPost[] = [
   {
@@ -891,7 +891,7 @@ ${DISCLAIMER}`
 
 <h2>Insurance Verification at Desert Recovery Centers</h2>
 <p>The fastest way to understand your coverage is to contact our admissions team for a free, confidential insurance verification. Our team will contact your insurance company, review your specific benefits, determine your estimated out of pocket costs, and explain what your plan covers at each level of care. This process typically takes less than an hour and provides the clarity you need to make an informed decision.</p>
-<p>You can begin the <a href="/insurance">insurance verification process</a> by calling Desert Recovery Centers at (623) 323-1012 or by submitting a request through our website. Our team is available 24 hours a day, 7 days a week.</p>
+<p>You can begin the <a href="/insurance">insurance verification process</a> by calling Desert Recovery Centers at (480) 931-3617 or by submitting a request through our website. Our team is available 24 hours a day, 7 days a week.</p>
 
 <h2>Private Pay and Other Options</h2>
 <p>For clients who do not have insurance, who prefer not to use insurance, or whose insurance coverage is limited, Desert Recovery Centers offers private pay options and can work with clients to develop a financial plan that makes treatment accessible. We believe that financial barriers should never prevent someone from receiving the care they need, and our team is committed to finding solutions that work for each individual and family.</p>
@@ -1224,7 +1224,7 @@ ${DISCLAIMER}`
 <h2>Medication Assisted Treatment and Residential Care</h2>
 <p>Medication assisted treatment (MAT) is the evidence based standard of care for opioid use disorder, including fentanyl addiction. Medications like buprenorphine (Suboxone) and naltrexone (Vivitrol) stabilize brain chemistry, reduce cravings, and block the euphoric effects of opioids, dramatically reducing the risk of relapse and fatal overdose. MAT is not "substituting one drug for another." It is a clinically proven treatment that saves lives.</p>
 <p><a href="/treatments/residential">Residential treatment</a> provides the structured, supervised environment that is often necessary for safe fentanyl detox and the intensive therapeutic work that follows. At Desert Recovery Centers, clients with fentanyl addiction receive medically supervised withdrawal management, MAT when clinically indicated, individual and group therapy, treatment for co occurring mental health conditions, and comprehensive aftercare planning.</p>
-<p>If someone you love is struggling with fentanyl addiction, the urgency cannot be overstated. Every day of continued use carries the risk of fatal overdose. Treatment works, recovery is possible, and reaching out for help today could save their life. Contact Desert Recovery Centers 24 hours a day at (623) 323-1012.</p>
+<p>If someone you love is struggling with fentanyl addiction, the urgency cannot be overstated. Every day of continued use carries the risk of fatal overdose. Treatment works, recovery is possible, and reaching out for help today could save their life. Contact Desert Recovery Centers 24 hours a day at (480) 931-3617.</p>
 
 ${DISCLAIMER}`
   }

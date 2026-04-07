@@ -21,8 +21,8 @@ export function generateMetadata({
   const member = teamMembers.find((m) => m.slug === params.slug);
   if (!member) return {};
   return buildMetadata({
-    title: `${member.name}, ${member.jobTitle} | Desert Recovery Centers`,
-    description: member.description,
+    title: `${member.name} — ${member.jobTitle} | Desert Recovery Centers`,
+    description: `Meet ${member.name}, ${member.jobTitle.toLowerCase()} at Desert Recovery Centers. Part of Arizona's leading luxury addiction and mental health treatment team.`,
     path: `/team/${member.slug}`,
   });
 }
@@ -71,7 +71,7 @@ export default function TeamMemberPage({
               <div className="w-48 h-48 md:w-56 md:h-56 relative rounded-xl overflow-hidden flex-shrink-0">
                 <Image
                   src={member.image}
-                  alt={member.name}
+                  alt={`${member.name} ${member.jobTitle} at Desert Recovery Centers Arizona`}
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 192px, 224px"

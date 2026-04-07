@@ -124,7 +124,7 @@ export default function Navigation() {
         <Link href="/" className="flex items-center gap-3 flex-shrink-0 mr-8">
           <Image
             src="/images/branding/drc-logo-black.png"
-            alt="Desert Recovery Centers"
+            alt="Desert Recovery Centers logo — luxury addiction and mental health treatment in Arizona"
             width={320}
             height={96}
             className="h-12 w-auto"
@@ -197,10 +197,10 @@ export default function Navigation() {
         {/* Desktop CTA */}
         <div className="hidden lg:flex items-center gap-4 flex-shrink-0 ml-8">
           <a
-            href="tel:+16233231012"
+            href="tel:+14809313617"
             className={`font-semibold text-sm transition-colors ${scrolled ? "text-gray-900" : "text-white"}`}
           >
-            (623) 323-1012
+            (480) 931-3617
           </a>
           <Link
             href="/insurance"
@@ -289,7 +289,7 @@ export default function Navigation() {
                 </div>
               ))}
               <div className="pt-4 border-t border-white/10 space-y-3">
-                <a href="tel:+16233231012" className="block text-gold font-semibold text-lg">(623) 323-1012</a>
+                <a href="tel:+14809313617" className="block text-gold font-semibold text-lg">(480) 931-3617</a>
                 <Link
                   href="/insurance"
                   className="block bg-gold text-white text-center font-semibold px-6 py-3 rounded-xl"

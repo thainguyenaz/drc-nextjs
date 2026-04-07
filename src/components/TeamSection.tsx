@@ -65,7 +65,7 @@ function BioModal({ member, onClose }: { member: TeamMember; onClose: () => void
             <div className="relative w-40 h-48 sm:w-44 sm:h-56 rounded-xl overflow-hidden bg-gray-100">
               <Image
                 src={member.image}
-                alt={member.name}
+                alt={`${member.name}, ${member.title} at Desert Recovery Centers Arizona`}
                 fill
                 className="object-cover object-top"
                 sizes="176px"

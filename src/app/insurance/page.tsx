@@ -13,7 +13,7 @@ const insuranceFaqSchema = {
     {
       "@type": "Question",
       "name": "What if my insurance isn't listed?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Desert Recovery Centers works with many insurance plans beyond those listed on our website. Call (623) 323-1012 and the admissions team will check your specific plan. Private pay options and financing are also available." },
+      "acceptedAnswer": { "@type": "Answer", "text": "Desert Recovery Centers works with many insurance plans beyond those listed on our website. Call (480) 931-3617 and the admissions team will check your specific plan. Private pay options and financing are also available." },
     },
     {
       "@type": "Question",
@@ -28,17 +28,18 @@ const insuranceFaqSchema = {
     {
       "@type": "Question",
       "name": "Is there any cost for the insurance verification?",
-      "acceptedAnswer": { "@type": "Answer", "text": "None. Insurance verification at Desert Recovery Centers is completely free, completely confidential, and comes with no obligation to begin treatment. Call (623) 323-1012 to verify your benefits." },
+      "acceptedAnswer": { "@type": "Answer", "text": "None. Insurance verification at Desert Recovery Centers is completely free, completely confidential, and comes with no obligation to begin treatment. Call (480) 931-3617 to verify your benefits." },
     },
   ],
 };
 
 export const metadata: Metadata = {
-  title: "Insurance Verification, Desert Recovery Centers",
+  title: "Verify Insurance for Addiction & Mental Health Treatment | DRC",
   description:
-    "Verify your insurance coverage for addiction and mental health treatment at Desert Recovery Centers. We accept Cigna, Aetna, BCBS, UnitedHealthcare, Humana, Tricare, and TriWest.",
+    "Verify your insurance for addiction and mental health treatment at Desert Recovery Centers. We accept most private insurance. Call (480) 931-3617.",
+  alternates: { canonical: "https://desertrecoverycenters.com/insurance-verification/" },
   openGraph: {
-    images: [{ url: "/images/glendale/Glendale-Front.jpg", width: 1200, height: 630, alt: "Desert Recovery Centers luxury treatment facility in Arizona" }],
+    images: [{ url: "/images/glendale/Glendale-Front.jpg", width: 1200, height: 630, alt: "Exterior of Desert Recovery Centers luxury residential rehab facility in Glendale Arizona" }],
   },
 };
 

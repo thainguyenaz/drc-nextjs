@@ -88,7 +88,7 @@ export default function AboutContent() {
             >
               <Image
                 src="/images/glendale/Glendale-Living-Room.jpg"
-                alt="Desert Recovery Centers luxury living area"
+                alt="Luxury living area at Desert Recovery Centers Glendale residential treatment center in Arizona"
                 fill
                 className="object-cover"
               />
@@ -208,7 +208,7 @@ export default function AboutContent() {
             >
               <Image
                 src="/images/glendale/Glendale-Pool.jpg"
-                alt="Desert Recovery Centers pool and grounds"
+                alt="Outdoor pool and grounds at Desert Recovery Centers Glendale luxury rehab facility in Arizona"
                 fill
                 className="object-cover"
               />
@@ -264,7 +264,7 @@ export default function AboutContent() {
               <div className="flex items-center justify-center gap-8">
                 <Image
                   src="/JointCommission_GoldSeal.png"
-                  alt="Joint Commission Gold Seal of Approval"
+                  alt="Joint Commission Gold Seal of Approval — Desert Recovery Centers is accredited"
                   width={80}
                   height={80}
                   className="h-20 w-auto"

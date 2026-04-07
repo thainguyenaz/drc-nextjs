@@ -50,18 +50,18 @@ const amenities = [
 ];
 
 const gallery = [
-  { src: "/images/scottsdale/DRC-FRONT-ENTRANCE-NORTH-SCOTTSDALE-08-01-2024-1210August-01-202400002-2.jpg", alt: "Scottsdale facility front entrance" },
-  { src: "/images/scottsdale/DRC-LIVING-ROOMS-NORTH-SCOTTSDALE-08-01-2024-1317August-01-202400007-2.jpg", alt: "Scottsdale luxury living room" },
-  { src: "/images/scottsdale/DRC-GYM-SCOTTSDALE-08-01-2024-August-07-202400003-2.jpg", alt: "Scottsdale state-of-the-art gym" },
-  { src: "/images/scottsdale/DRC-KITCHEN-NORTH-SCOTTSDALE-08-01-2024-1292August-01-202400001-2.jpg", alt: "Scottsdale gourmet kitchen" },
-  { src: "/images/scottsdale/DRC-UPSTAIRS-MASTER-BEDROOM-NORTH-SCOTTSDALE-08-01-2024-0658August-01-202400014-2.jpg", alt: "Scottsdale master bedroom" },
-  { src: "/images/scottsdale/DRC-MASSAGE-ROOM-NORTH-SCOTTSDALE-08-01-2024-August-01-202400003-2.jpg", alt: "Scottsdale massage room" },
-  { src: "/images/scottsdale/DRC-GAME-ROOM-NORTH-SCOTTSDALE-08-01-2024-1388August-01-202400004-2.jpg", alt: "Scottsdale game room" },
-  { src: "/images/scottsdale/DRC-DRONE-SCOTTSDALE-08-01-2024-August-01-202400006-2.jpg", alt: "Scottsdale aerial view" },
-  { src: "/images/scottsdale/DRC-LDINNING-NORTH-SCOTTSDALE-08-01-2024-1185August-01-202400001-2.jpg", alt: "Scottsdale dining room" },
-  { src: "/images/scottsdale/DRC-SERANITY-NORTH-SCOTTSDALE-08-01-2024-August-01-202400001-2.jpg", alt: "Scottsdale serenity room" },
-  { src: "/images/scottsdale/DRC-OUTSIDE-NORTH-SCOTTSDALE-08-01-2024-1553August-01-202400004-2.jpg", alt: "Scottsdale outdoor area" },
-  { src: "/images/scottsdale/DRC-VHARMONY-ROOM-NORTH-SCOTTSDALE-08-01-2024-0631August-01-202400010-2.jpg", alt: "Scottsdale harmony room" },
+  { src: "/images/scottsdale/DRC-FRONT-ENTRANCE-NORTH-SCOTTSDALE-08-01-2024-1210August-01-202400002-2.jpg", alt: "Exterior of Desert Recovery Centers luxury residential rehab facility in Scottsdale Arizona" },
+  { src: "/images/scottsdale/DRC-LIVING-ROOMS-NORTH-SCOTTSDALE-08-01-2024-1317August-01-202400007-2.jpg", alt: "Luxury living room at Desert Recovery Centers Scottsdale addiction treatment center" },
+  { src: "/images/scottsdale/DRC-GYM-SCOTTSDALE-08-01-2024-August-07-202400003-2.jpg", alt: "State-of-the-art fitness gym at Desert Recovery Centers Scottsdale rehab facility" },
+  { src: "/images/scottsdale/DRC-KITCHEN-NORTH-SCOTTSDALE-08-01-2024-1292August-01-202400001-2.jpg", alt: "Gourmet kitchen at Desert Recovery Centers Scottsdale luxury treatment center" },
+  { src: "/images/scottsdale/DRC-UPSTAIRS-MASTER-BEDROOM-NORTH-SCOTTSDALE-08-01-2024-0658August-01-202400014-2.jpg", alt: "Private master bedroom at Desert Recovery Centers Scottsdale residential rehab" },
+  { src: "/images/scottsdale/DRC-MASSAGE-ROOM-NORTH-SCOTTSDALE-08-01-2024-August-01-202400003-2.jpg", alt: "Massage therapy room at Desert Recovery Centers Scottsdale treatment facility" },
+  { src: "/images/scottsdale/DRC-GAME-ROOM-NORTH-SCOTTSDALE-08-01-2024-1388August-01-202400004-2.jpg", alt: "Game and recreation room at Desert Recovery Centers Scottsdale rehab" },
+  { src: "/images/scottsdale/DRC-DRONE-SCOTTSDALE-08-01-2024-August-01-202400006-2.jpg", alt: "Aerial drone view of Desert Recovery Centers Scottsdale luxury treatment center in Arizona" },
+  { src: "/images/scottsdale/DRC-LDINNING-NORTH-SCOTTSDALE-08-01-2024-1185August-01-202400001-2.jpg", alt: "Dining room at Desert Recovery Centers Scottsdale residential treatment center" },
+  { src: "/images/scottsdale/DRC-SERANITY-NORTH-SCOTTSDALE-08-01-2024-August-01-202400001-2.jpg", alt: "Serenity therapy room at Desert Recovery Centers Scottsdale rehab facility" },
+  { src: "/images/scottsdale/DRC-OUTSIDE-NORTH-SCOTTSDALE-08-01-2024-1553August-01-202400004-2.jpg", alt: "Outdoor patio and mountain views at Desert Recovery Centers Scottsdale Arizona" },
+  { src: "/images/scottsdale/DRC-VHARMONY-ROOM-NORTH-SCOTTSDALE-08-01-2024-0631August-01-202400010-2.jpg", alt: "Harmony therapy room at Desert Recovery Centers Scottsdale treatment center" },
 ];
 
 const faqs = [
@@ -154,11 +154,11 @@ export default function ScottsdaleLocationPage() {
           <LocationCollision
             leftImage={{
               src: "/images/scottsdale/DRC-LIVING-ROOMS-NORTH-SCOTTSDALE-08-01-2024-0553August-01-202400015-2.jpg",
-              alt: "Desert Recovery Centers Scottsdale luxury living area",
+              alt: "Luxury living area at Desert Recovery Centers Scottsdale addiction treatment center",
             }}
             rightImage={{
               src: "/images/scottsdale/DRC-OUTSIDE-NORTH-SCOTTSDALE-08-02-2024-0830August-02-202400010-2.jpg",
-              alt: "Desert Recovery Centers Scottsdale mountain views",
+              alt: "Mountain views from outdoor patio at Desert Recovery Centers Scottsdale Arizona",
             }}
           />
         </div>
@@ -210,7 +210,7 @@ export default function ScottsdaleLocationPage() {
                 <div className="relative aspect-video rounded-xl overflow-hidden shadow-xl">
                   <Image
                     src="/images/scottsdale/DRC-FRONT-ENTRANCE-NORTH-SCOTTSDALE-08-01-2024-1210August-01-202400002-2.jpg"
-                    alt="Desert Recovery Centers Scottsdale virtual tour"
+                    alt="Virtual tour preview of Desert Recovery Centers luxury rehab facility in Scottsdale Arizona"
                     fill
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, 50vw"

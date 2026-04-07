@@ -1,43 +1,40 @@
 # Desert Recovery Centers
-> Joint Commission accredited luxury behavioral health treatment in Arizona. Specializing in residential treatment, PHP, IOP, and outpatient programs for addiction and mental health.
 
 ## About
-Desert Recovery Centers operates luxury residential treatment facilities in Glendale and Scottsdale, Arizona, and an outpatient PHP/IOP/TMS center in Phoenix, Arizona. Founded by Thai Nguyen and directed by Dr. An Nguyen (Licensed Clinical Psychologist, Clinical Director) and Dr. Jonathan Shelton. Joint Commission accredited. LegitScript certified.
+Desert Recovery Centers is a Joint Commission accredited luxury behavioral health organization with residential treatment facilities in Glendale, Arizona and Scottsdale, Arizona, and outpatient services (PHP, IOP, TMS) in Phoenix, Arizona. Founded by Jason Inserra, Thai Nguyen, and Dr. An Nguyen, DRC provides evidence-based addiction and mental health treatment including dual diagnosis care.
 
 ## Locations
-- Glendale (Residential): 8105 W Frier Dr, Glendale AZ 85303, (623) 323-1012
-- Scottsdale (Residential): 23222 N Church Rd, Scottsdale AZ 85255, (480) 931-3617
-- Phoenix PHP/IOP/TMS: 4160 N. 108th Ave, Phoenix AZ 85037, (623) 257-5384
+- Glendale (male residential): 8105 W Frier Dr, Glendale, AZ 85303 | Phone: (623) 323-1012 | License: ADHS BH9449
+- Scottsdale (female residential): 23222 N Church Rd, Scottsdale, AZ 85255 | Phone: (480) 931-3617 | License: ADHS BH10131
+- Phoenix (outpatient PHP/IOP/TMS): 1623 W Moody Trail, Phoenix, AZ 85041 | Phone: (623) 257-5384
 
-## Programs
-- Residential Treatment (RTC): /treatments/residential
-- Partial Hospitalization (PHP): /locations/phoenix-php-iop
-- Intensive Outpatient (IOP): /locations/phoenix-php-iop
-- Outpatient (OP): /locations/phoenix-php-iop
-- TMS Therapy: /locations/phoenix-php-iop
-- Adolescent Treatment (Ages 13 to 17): /adolescent-treatment
+## Accreditations & Certifications
+- Joint Commission accredited (Gold Seal of Approval)
+- LegitScript certified (both residential locations)
+- ADHS licensed behavioral health provider
+- Tricare/TriWest in-network
+- Does NOT accept Medicaid or Medicare
 
-## Conditions Treated
-Mental health: Depression, Anxiety, PTSD, Bipolar Disorder, OCD, ADHD, Schizophrenia, Personality Disorders
-Addiction: Alcohol, Opioids, Fentanyl, Cocaine, Methamphetamine, Prescription Drugs, Marijuana
+## Leadership & Clinical Team
+- Dr. An Nguyen — Clinical Director, Licensed Clinical Psychologist
+- Dr. Reyes Topete MD — Medical Director
+- Jason Inserra — Director of Operations
+- Adam Leonard — Admissions Director
+- Dr. Caitlin Ellis — Licensed Clinical Psychologist
+- Dr. Jonathan Shelton — Licensed Clinical Psychologist
+- Dr. Madison Day-Robinson — Licensed Clinical Psychologist
+- Erica Tolley — Registered Nurse
 
-## Adolescent Condition Pages
-/adolescent/depression - Residential treatment for adolescent depression in Arizona. Covers how depression presents in teenagers, co-occurring conditions, treatment approach, and what parents can expect.
-/adolescent/anxiety - Residential treatment for adolescent anxiety disorders in Arizona including generalized anxiety, panic disorder, social anxiety, and school refusal.
-/adolescent/ptsd-trauma - Trauma-informed residential treatment for adolescent PTSD in Arizona. Covers causes, presentations, ACE assessment, and phase-based trauma treatment.
-/adolescent/ocd - Specialized residential OCD treatment for adolescents in Arizona using Exposure and Response Prevention therapy. Covers all OCD subtypes including Pure-O.
-/adolescent/adhd - Residential treatment for adolescent ADHD with co-occurring conditions in Arizona. Covers dual diagnosis approach, girls with ADHD, and executive function treatment.
-/adolescent/bipolar - Residential treatment for adolescent bipolar disorder in Arizona. Covers misdiagnosis risk, hypomania and mixed episode presentations, and mood stabilization treatment.
-/adolescent/self-harm - Clinical residential treatment for adolescent self harm in Arizona using Dialectical Behavior Therapy. Covers function of self harm, suicide risk, and family involvement.
-/adolescent/substance-use - Dual diagnosis residential treatment for adolescent substance use in Arizona. Covers fentanyl risk, co-occurring mental health conditions, and simultaneous treatment approach.
-/adolescent/suicidal-ideation - Adolescent suicide risk assessment, safety planning, and residential treatment in Arizona. Covers ideation spectrum, risk factors, evidence-based safety planning, and parent crisis guidance.
+## Services
+Addiction Treatment: alcohol, heroin, fentanyl, cocaine, meth, marijuana, prescription drugs, stimulants, gambling, sex addiction
+Mental Health Treatment: anxiety, depression, PTSD, bipolar disorder, OCD, ADHD, personality disorders, schizophrenia
+Therapies: CBT, DBT, EMDR, trauma therapy, 12-step, SoftWave therapy, holistic therapies, dual diagnosis treatment
+Levels of Care: residential treatment (10-bed max per facility), PHP, IOP, outpatient, NeuroStar TMS
 
-## Key Facts
-- Joint Commission Gold Seal of Approval
-- LegitScript Certified
-- Maximum 10 clients per facility
-- Doctoral level clinical psychologists on staff
-- Board certified psychiatrist on staff
-- 24/7 admissions: (623) 323-1012
-- Insurance accepted: Aetna, BCBS, Cigna, UnitedHealthcare, Humana, Tricare
-- Most clients begin treatment within 48 hours
+## Contact
+Website: https://desertrecoverycenters.com
+Email: contact@desertrecoverycenters.com
+General: (480) 931-3617
+
+## Brand
+Tagline: HEAL. RESTORE. THRIVE.
