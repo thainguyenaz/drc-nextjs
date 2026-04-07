@@ -109,7 +109,7 @@ export default function AdolescentSubstanceUsePage() {
                 whileHover={{ scale: 1.02 }}
                 className="relative rounded-2xl overflow-hidden h-[400px]"
               >
-                <Image src="/images/adolescent/adolescent-group-therapy-program-desert-recovery-centers.jpg" alt="Adolescent group therapy for substance use treatment at Desert Recovery Centers Arizona" fill className="object-cover w-full h-full" />
+                <Image src="/images/locations/phoenix/phoenix-group-room-2.jpg" alt="Group therapy room at Desert Recovery Centers Phoenix" fill className="object-cover w-full h-full" />
               </motion.div>
               <div>
                 <p className="text-gray-600 leading-relaxed text-sm">The stakes of adolescent substance use have never been higher. Our residential program provides the intensive care teenagers need in this environment.</p>
@@ -153,7 +153,7 @@ export default function AdolescentSubstanceUsePage() {
                 whileHover={{ scale: 1.02 }}
                 className="relative rounded-2xl overflow-hidden h-[400px]"
               >
-                <Image src="/images/adolescent/parent-teen-family-therapy-session-behavioral-health.jpg" alt="Family support during adolescent substance use treatment at Desert Recovery Centers" fill className="object-cover w-full h-full" />
+                <Image src="/images/locations/phoenix/phoenix-therapy-room.jpg" alt="Therapy room at Desert Recovery Centers Phoenix" fill className="object-cover w-full h-full" />
               </motion.div>
             </div>
         </div></div>
@@ -169,7 +169,7 @@ export default function AdolescentSubstanceUsePage() {
           whileHover={{ scale: 1.02 }}
           className="relative w-full h-96 rounded-2xl overflow-hidden my-16"
         >
-          <Image src="/images/adolescent/adolescent-outpatient-treatment-center-phoenix-arizona.jpg" alt="Desert Recovery Centers adolescent substance use treatment facility Arizona" fill className="object-cover" />
+          <Image src="/images/locations/phoenix/phoenix-lobby-lounge.jpg" alt="Desert Recovery Centers Phoenix outpatient facility" fill className="object-cover" />
         </motion.div>
       </div>
 
