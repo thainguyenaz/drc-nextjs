@@ -1035,10 +1035,10 @@ export default function RTCContent() {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="tel:+16233231012"
+              href="tel:+14809313617"
               className="bg-gold hover:bg-gold-dark text-white font-semibold text-base px-8 py-4 rounded-xl transition-all shadow-lg shadow-gold/25 w-full sm:w-auto text-center cursor-pointer"
             >
-              Call (623) 323-1012
+              Call (480) 931-3617
             </a>
             <Link
               href="/insurance"
@@ -1074,8 +1074,8 @@ export default function RTCContent() {
           </div>
           <p className="text-gray-500 text-xs">
             Coverage varies by plan. Call{" "}
-            <a href="tel:+16233231012" className="text-gold font-medium hover:underline">
-              (623) 323-1012
+            <a href="tel:+14809313617" className="text-gold font-medium hover:underline">
+              (480) 931-3617
             </a>{" "}
             for a free benefits check before you commit to anything.
           </p>

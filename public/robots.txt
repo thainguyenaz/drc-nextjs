@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
-Disallow: /api/
-Disallow: /_next/
-Sitemap: https://www.desertrecoverycenters.com/sitemap.xml
+Disallow: /wp-admin/
+Disallow: /wp-login.php/
+Sitemap: https://desertrecoverycenters.com/sitemap.xml

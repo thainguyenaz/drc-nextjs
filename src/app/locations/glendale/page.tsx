@@ -50,18 +50,18 @@ const amenities = [
 ];
 
 const gallery = [
-  { src: "/images/glendale/Glendale-Front.jpg", alt: "Glendale facility front entrance" },
-  { src: "/images/glendale/Glendale-Living-Room.jpg", alt: "Glendale luxury living room" },
-  { src: "/images/glendale/Glendale-Pool.jpg", alt: "Glendale pool area" },
-  { src: "/images/glendale/Glendale-Gym.jpg", alt: "Glendale state-of-the-art gym" },
-  { src: "/images/glendale/Glendale-Kitchen.jpg", alt: "Glendale gourmet kitchen" },
-  { src: "/images/glendale/Glendale-Room-1.jpg", alt: "Glendale private bedroom" },
-  { src: "/images/glendale/Glendale-Massage.jpg", alt: "Glendale massage room" },
-  { src: "/images/glendale/Glendale-Basketball.jpg", alt: "Glendale basketball court" },
-  { src: "/images/glendale/Glendale-Dining-Room.jpg", alt: "Glendale dining room" },
-  { src: "/images/glendale/Glendale-Tennis.jpg", alt: "Glendale tennis court" },
-  { src: "/images/glendale/Glendale-Game-Room.jpg", alt: "Glendale game room" },
-  { src: "/images/glendale/Glendale-Group-Room.jpg", alt: "Glendale group therapy room" },
+  { src: "/images/glendale/Glendale-Front.jpg", alt: "Exterior of Desert Recovery Centers luxury residential rehab facility in Glendale Arizona" },
+  { src: "/images/glendale/Glendale-Living-Room.jpg", alt: "Luxury living room at Desert Recovery Centers Glendale residential treatment center" },
+  { src: "/images/glendale/Glendale-Pool.jpg", alt: "Outdoor pool at Desert Recovery Centers Glendale luxury addiction treatment center" },
+  { src: "/images/glendale/Glendale-Gym.jpg", alt: "State-of-the-art fitness gym at Desert Recovery Centers Glendale rehab facility" },
+  { src: "/images/glendale/Glendale-Kitchen.jpg", alt: "Gourmet kitchen at Desert Recovery Centers Glendale luxury treatment center" },
+  { src: "/images/glendale/Glendale-Room-1.jpg", alt: "Private bedroom at Desert Recovery Centers Glendale residential rehab in Arizona" },
+  { src: "/images/glendale/Glendale-Massage.jpg", alt: "Massage therapy room at Desert Recovery Centers Glendale treatment facility" },
+  { src: "/images/glendale/Glendale-Basketball.jpg", alt: "Basketball court at Desert Recovery Centers Glendale luxury rehab in Arizona" },
+  { src: "/images/glendale/Glendale-Dining-Room.jpg", alt: "Dining room at Desert Recovery Centers Glendale residential treatment center" },
+  { src: "/images/glendale/Glendale-Tennis.jpg", alt: "Tennis court at Desert Recovery Centers Glendale luxury rehab facility" },
+  { src: "/images/glendale/Glendale-Game-Room.jpg", alt: "Game and recreation room at Desert Recovery Centers Glendale treatment center" },
+  { src: "/images/glendale/Glendale-Group-Room.jpg", alt: "Group therapy room at Desert Recovery Centers Glendale rehab in Arizona" },
 ];
 
 const faqs = [
@@ -155,11 +155,11 @@ export default function GlendaleLocationPage() {
           <LocationCollision
             leftImage={{
               src: "/images/glendale/Glendale-Pool.jpg",
-              alt: "Desert Recovery Centers Glendale pool and outdoor area",
+              alt: "Outdoor pool and recreation area at Desert Recovery Centers Glendale luxury rehab facility",
             }}
             rightImage={{
               src: "/images/glendale/Glendale-Room-1.jpg",
-              alt: "Desert Recovery Centers Glendale private bedroom",
+              alt: "Private bedroom at Desert Recovery Centers Glendale residential treatment center",
             }}
           />
         </div>
@@ -211,7 +211,7 @@ export default function GlendaleLocationPage() {
                 <div className="relative aspect-video rounded-xl overflow-hidden shadow-xl">
                   <Image
                     src="/images/glendale/Glendale-Front.jpg"
-                    alt="Desert Recovery Centers Glendale virtual tour"
+                    alt="Virtual tour preview of Desert Recovery Centers luxury rehab facility in Glendale Arizona"
                     fill
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, 50vw"

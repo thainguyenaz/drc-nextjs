@@ -10,6 +10,11 @@ import YouTubeEmbed from "@/components/YouTubeEmbed";
 import { getPageMeta } from "@/data/page-metadata";
 import AnimatedSection from "@/components/animated/AnimatedSection";
 import AnimatedGrid from "@/components/animated/AnimatedGrid";
+import ConditionFAQ from "@/components/ConditionFAQ";
+import SchemaScript from "@/components/SchemaScript";
+import { getFAQSchema } from "@/lib/schema";
+import { faqData } from "@/data/faq-data";
+import FAQSection from "@/components/FAQSection";
 
 const meta = getPageMeta("/about-us/");
 
@@ -28,6 +33,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
+      <SchemaScript schema={[getFAQSchema(faqData["about-us"])]} />
       <BreadcrumbSchema items={[{ name: "About Us", path: "/about-us" }]} />
       <VideoSchemas path="/about-us/" />
       <Navigation />
@@ -89,6 +95,8 @@ export default function AboutPage() {
 
       <WhyChooseUs />
       <Testimonials />
+      <ConditionFAQ items={faqData["about-us"]} />
+      <FAQSection faqs={faqData["about-us"]} />
       <CTASection />
       <Footer />
     </>

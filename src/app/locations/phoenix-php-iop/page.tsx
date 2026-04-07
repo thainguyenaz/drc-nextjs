@@ -10,24 +10,27 @@ import PhotoGallery from "@/components/PhotoGallery";
 import SchemaScript from "@/components/SchemaScript";
 import Breadcrumb from "@/components/Breadcrumb";
 import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
+import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
+import { faqData } from "@/data/faq-data";
+import FAQSection from "@/components/FAQSection";
 import PhoenixPHPContent from "./PhoenixPHPContent";
 
-const SITE_URL = "https://www.desertrecoverycenters.com";
+const SITE_URL = "https://desertrecoverycenters.com";
 
 export const metadata: Metadata = {
-  title: "Phoenix PHP / IOP Treatment Center | Desert Recovery Centers",
+  title: "PHP & IOP Mental Health and Addiction Treatment in Phoenix, AZ | DRC",
   description:
-    "Desert Recovery Centers Phoenix offers Partial Hospitalization (PHP), Intensive Outpatient (IOP), Outpatient (OP), and TMS therapy at 4160 N. 108th Ave, Phoenix, AZ 85037. Joint Commission accredited. Insurance accepted. Call 24/7.",
-  alternates: { canonical: `${SITE_URL}/locations/phoenix-php-iop` },
+    "Partial hospitalization and intensive outpatient addiction and mental health treatment in Phoenix, AZ. Call (623) 257-5384 to verify insurance.",
+  alternates: { canonical: `${SITE_URL}/locations/phoenix/` },
   openGraph: {
-    title: "Phoenix PHP / IOP Treatment Center | Desert Recovery Centers",
+    title: "PHP & IOP Mental Health and Addiction Treatment in Phoenix, AZ | DRC",
     description:
-      "Desert Recovery Centers Phoenix offers Partial Hospitalization (PHP), Intensive Outpatient (IOP), Outpatient (OP), and TMS therapy at 4160 N. 108th Ave, Phoenix, AZ 85037. Joint Commission accredited. Insurance accepted. Call 24/7.",
-    url: `${SITE_URL}/locations/phoenix-php-iop`,
+      "Partial hospitalization and intensive outpatient addiction and mental health treatment in Phoenix, AZ. Call (623) 257-5384 to verify insurance.",
+    url: `${SITE_URL}/locations/phoenix/`,
     images: [
       {
         url: `${SITE_URL}/images/locations/phoenix/phoenix-lobby-2.jpg`,
-        alt: "Desert Recovery Centers Phoenix PHP IOP treatment center lobby",
+        alt: "Desert Recovery Centers Phoenix PHP and IOP treatment center lobby in Phoenix Arizona",
       },
     ],
     siteName: "Desert Recovery Centers",
@@ -36,9 +39,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Phoenix PHP / IOP Treatment Center | Desert Recovery Centers",
+    title: "PHP & IOP Mental Health and Addiction Treatment in Phoenix, AZ | DRC",
     description:
-      "Desert Recovery Centers Phoenix offers PHP, IOP, OP, and TMS therapy at 4160 N. 108th Ave, Phoenix, AZ 85037. Joint Commission accredited.",
+      "Partial hospitalization and intensive outpatient addiction and mental health treatment in Phoenix, AZ. Call (623) 257-5384 to verify insurance.",
     images: [`${SITE_URL}/images/locations/phoenix/phoenix-lobby-2.jpg`],
   },
   keywords: [
@@ -273,7 +276,7 @@ const breadcrumbSchema = {
 export default function PhoenixPhpIopPage() {
   return (
     <>
-      <SchemaScript schema={[clinicSchema, faqSchema, breadcrumbSchema, {
+      <SchemaScript schema={[clinicSchema, faqSchema, breadcrumbSchema, getFAQSchema(faqData["locations/phoenix"]), {
         "@context": "https://schema.org",
         "@type": "HowTo",
         "name": "How to Get Admitted to Desert Recovery Centers Phoenix",
@@ -327,6 +330,7 @@ export default function PhoenixPhpIopPage() {
         ]}
       />
 
+      <FAQSection faqs={faqData["locations/phoenix"]} />
       <CTASection />
       <Footer />
     </>

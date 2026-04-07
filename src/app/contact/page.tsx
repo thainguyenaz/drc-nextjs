@@ -6,11 +6,12 @@ import Footer from "@/components/Footer";
 import ContactContent from "./ContactContent";
 
 export const metadata: Metadata = {
-  title: "Contact Us, Desert Recovery Centers",
+  title: "Get Help for Addiction & Mental Health Today | Desert Recovery Centers",
   description:
-    "Contact Desert Recovery Centers. Three luxury facilities in Glendale, Scottsdale, and Phoenix, Arizona. Available 24/7 for confidential consultations.",
+    "Ready to start your recovery? Contact Desert Recovery Centers today. Luxury addiction and mental health treatment in Arizona. Call (480) 931-3617.",
+  alternates: { canonical: "https://desertrecoverycenters.com/get-help/" },
   openGraph: {
-    images: [{ url: "/images/glendale/Glendale-Front.jpg", width: 1200, height: 630, alt: "Desert Recovery Centers luxury treatment facility in Arizona" }],
+    images: [{ url: "/images/glendale/Glendale-Front.jpg", width: 1200, height: 630, alt: "Exterior of Desert Recovery Centers luxury residential rehab facility in Glendale Arizona" }],
   },
 };
 

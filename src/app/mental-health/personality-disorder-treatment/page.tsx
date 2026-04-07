@@ -10,6 +10,9 @@ import RelatedPages from "@/components/RelatedPages";
 import { getPageMeta } from "@/data/page-metadata";
 import AnimatedSection from "@/components/animated/AnimatedSection";
 import SchemaScript from "@/components/SchemaScript";
+import { getFAQSchema } from "@/lib/schema";
+import { faqData } from "@/data/faq-data";
+import FAQSection from "@/components/FAQSection";
 
 const meta = getPageMeta("/mental-health/personality-disorder-treatment/");
 
@@ -51,7 +54,7 @@ const faqs = [
 export default function PersonalityDisorderTreatmentPage() {
   return (
     <>
-      <SchemaScript schema={{"@context":"https://schema.org","@type":"MedicalWebPage","@id":"https://www.desertrecoverycenters.com/mental-health/personality-disorder-treatment/#webpage","url":"https://www.desertrecoverycenters.com/mental-health/personality-disorder-treatment/","name":"Personality Disorder Treatment Arizona | Desert Recovery Centers","specialty":"Psychiatry","reviewedBy":{"@type":"Person","@id":"https://www.desertrecoverycenters.com/our-team#dr-an-nguyen","name":"Dr. An Nguyen","jobTitle":"Licensed Clinical Psychologist, Clinical Director","worksFor":{"@id":"https://www.desertrecoverycenters.com/#organization"}},"dateModified":"2026-04-05","publisher":{"@id":"https://www.desertrecoverycenters.com/#organization"}}} />
+      <SchemaScript schema={[getFAQSchema(faqData["personality-disorder-treatment"]), {"@context":"https://schema.org","@type":"MedicalWebPage","@id":"https://www.desertrecoverycenters.com/mental-health/personality-disorder-treatment/#webpage","url":"https://www.desertrecoverycenters.com/mental-health/personality-disorder-treatment/","name":"Personality Disorder Treatment Arizona | Desert Recovery Centers","specialty":"Psychiatry","reviewedBy":{"@type":"Person","@id":"https://www.desertrecoverycenters.com/our-team#dr-an-nguyen","name":"Dr. An Nguyen","jobTitle":"Licensed Clinical Psychologist, Clinical Director","worksFor":{"@id":"https://www.desertrecoverycenters.com/#organization"}},"dateModified":"2026-04-05","publisher":{"@id":"https://www.desertrecoverycenters.com/#organization"}}]} />
       <InlineFAQSchema items={faqs} />
       <SpeakableSchema url="/mental-health/personality-disorder-treatment" cssSelectors={["[data-speakable]"]} />
       <MedicalConditionSchema
@@ -245,6 +248,7 @@ export default function PersonalityDisorderTreatmentPage() {
         ]}
       />
       <RelatedPages currentPath="/mental-health/personality-disorder-treatment" />
+      <FAQSection faqs={faqData["personality-disorder-treatment"]} />
       <CTASection />
       <Footer />
     </>

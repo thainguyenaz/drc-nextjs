@@ -19,16 +19,16 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.desertrecoverycenters.com"),
+  metadataBase: new URL("https://desertrecoverycenters.com"),
   title: {
-    default: "Desert Recovery Centers, Luxury Behavioral Health Treatment in Arizona",
-    template: "%s, Desert Recovery Centers",
+    default: "Luxury Addiction & Mental Health Treatment in Arizona | Desert Recovery Centers",
+    template: "%s | Desert Recovery Centers",
   },
   description:
-    "Desert Recovery Centers offers luxury mental health and addiction treatment in Glendale, Scottsdale, and Phoenix, Arizona. Evidence-based care in a serene desert setting.",
+    "Luxury addiction and mental health treatment in Arizona. Joint Commission accredited, dual diagnosis care. Verify insurance today. Call (480) 931-3617.",
   alternates: {
-    canonical: "https://www.desertrecoverycenters.com",
-    languages: { "en-US": "https://www.desertrecoverycenters.com" },
+    canonical: "https://desertrecoverycenters.com",
+    languages: { "en-US": "https://desertrecoverycenters.com" },
   },
   openGraph: {
     type: "website",

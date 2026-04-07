@@ -13,6 +13,9 @@ import Citations from "@/components/Citations";
 import { getPageMeta } from "@/data/page-metadata";
 import AnimatedSection from "@/components/animated/AnimatedSection";
 import SchemaScript from "@/components/SchemaScript";
+import { getFAQSchema } from "@/lib/schema";
+import { faqData } from "@/data/faq-data";
+import FAQSection from "@/components/FAQSection";
 
 const meta = getPageMeta("/addiction/marijuana-addiction-treatment/");
 
@@ -54,7 +57,7 @@ const faqs = [
 export default function MarijuanaAddictionPage() {
   return (
     <>
-      <SchemaScript schema={{"@context":"https://schema.org","@type":"MedicalWebPage","@id":"https://www.desertrecoverycenters.com/addiction/marijuana-addiction-treatment/#webpage","url":"https://www.desertrecoverycenters.com/addiction/marijuana-addiction-treatment/","name":"Marijuana Addiction Treatment Arizona | Desert Recovery Centers","specialty":"Psychiatry","reviewedBy":{"@type":"Person","@id":"https://www.desertrecoverycenters.com/our-team#dr-an-nguyen","name":"Dr. An Nguyen","jobTitle":"Licensed Clinical Psychologist, Clinical Director","worksFor":{"@id":"https://www.desertrecoverycenters.com/#organization"}},"dateModified":"2026-04-05","publisher":{"@id":"https://www.desertrecoverycenters.com/#organization"}}} />
+      <SchemaScript schema={[{"@context":"https://schema.org","@type":"MedicalWebPage","@id":"https://www.desertrecoverycenters.com/addiction/marijuana-addiction-treatment/#webpage","url":"https://www.desertrecoverycenters.com/addiction/marijuana-addiction-treatment/","name":"Marijuana Addiction Treatment Arizona | Desert Recovery Centers","specialty":"Psychiatry","reviewedBy":{"@type":"Person","@id":"https://www.desertrecoverycenters.com/our-team#dr-an-nguyen","name":"Dr. An Nguyen","jobTitle":"Licensed Clinical Psychologist, Clinical Director","worksFor":{"@id":"https://www.desertrecoverycenters.com/#organization"}},"dateModified":"2026-04-05","publisher":{"@id":"https://www.desertrecoverycenters.com/#organization"}}, getFAQSchema(faqData["marijuana-addiction-treatment"])]} />
       <InlineFAQSchema items={faqs} />
       <MedicalConditionSchema
         name="Cannabis Use Disorder"
@@ -198,6 +201,7 @@ export default function MarijuanaAddictionPage() {
         ]}
       />
       <RelatedPages currentPath="/addiction/marijuana" />
+      <FAQSection faqs={faqData["marijuana-addiction-treatment"]} />
       <CTASection />
       <Footer />
       <Citations />

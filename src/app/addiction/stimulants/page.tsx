@@ -10,6 +10,10 @@ import RelatedPages from "@/components/RelatedPages";
 import ConditionFAQ from "@/components/ConditionFAQ";
 import { getPageMeta } from "@/data/page-metadata";
 import AnimatedSection from "@/components/animated/AnimatedSection";
+import SchemaScript from "@/components/SchemaScript";
+import { getFAQSchema } from "@/lib/schema";
+import { faqData } from "@/data/faq-data";
+import FAQSection from "@/components/FAQSection";
 
 const meta = getPageMeta("/addiction/stimulant-addiction-treatment/");
 
@@ -51,6 +55,7 @@ const faqs = [
 export default function StimulantAddictionPage() {
   return (
     <>
+      <SchemaScript schema={getFAQSchema(faqData["stimulant-addiction-treatment"])} />
       <InlineFAQSchema items={faqs} />
       <MedicalConditionSchema
         name="Stimulant Addiction"
@@ -184,6 +189,7 @@ export default function StimulantAddictionPage() {
         ]}
       />
       <RelatedPages currentPath="/addiction/stimulants" />
+      <FAQSection faqs={faqData["stimulant-addiction-treatment"]} />
       <CTASection />
       <Footer />
     </>
