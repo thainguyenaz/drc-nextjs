@@ -144,7 +144,7 @@ export default function AdolescentPtsdTraumaPage() {
                 whileHover={{ scale: 1.02 }}
                 className="relative rounded-2xl overflow-hidden h-[400px]"
               >
-                <Image src="/images/adolescent/adolescent-group-therapy-program-desert-recovery-centers.jpg" alt="Group therapy for adolescent trauma treatment at Desert Recovery Centers Arizona" fill className="object-cover w-full h-full" />
+                <Image src="/images/locations/phoenix/phoenix-group-room-2.jpg" alt="Group therapy room at Desert Recovery Centers Phoenix" fill className="object-cover w-full h-full" />
               </motion.div>
             </div>
         </div></div>
@@ -173,7 +173,7 @@ export default function AdolescentPtsdTraumaPage() {
                 whileHover={{ scale: 1.02 }}
                 className="relative rounded-2xl overflow-hidden h-[400px]"
               >
-                <Image src="/images/adolescent/teen-individual-therapy-session-phoenix-az.jpg" alt="Individual trauma therapy for teenagers at Desert Recovery Centers" fill className="object-cover w-full h-full" />
+                <Image src="/images/locations/phoenix/phoenix-therapy-office-2.jpg" alt="Individual therapy office at Desert Recovery Centers Phoenix" fill className="object-cover w-full h-full" />
               </motion.div>
               <div>
                 <p className="text-gray-600 leading-relaxed text-sm">Many adolescents we treat have been evaluated for ADHD, depression, or behavioral disorders without anyone asking what happened to them.</p>
@@ -192,7 +192,7 @@ export default function AdolescentPtsdTraumaPage() {
           whileHover={{ scale: 1.02 }}
           className="relative w-full h-96 rounded-2xl overflow-hidden my-16"
         >
-          <Image src="/images/adolescent/adolescent-outpatient-treatment-center-phoenix-arizona.jpg" alt="Desert Recovery Centers trauma treatment facility Arizona" fill className="object-cover" />
+          <Image src="/images/locations/phoenix/phoenix-lobby-lounge.jpg" alt="Desert Recovery Centers Phoenix outpatient facility" fill className="object-cover" />
         </motion.div>
       </div>
 
