@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 import SchemaScript from "@/components/SchemaScript";
 import Breadcrumb from "@/components/Breadcrumb";
 import AnimatedSection from "@/components/animated/AnimatedSection";
+import Image from "next/image";
 
 const SITE_URL = "https://www.desertrecoverycenters.com";
 const PAGE_PATH = "/adolescent/depression";
@@ -162,6 +163,18 @@ export default function AdolescentDepressionPage() {
         </div>
       </section>
 
+      {/* Abstract Divider */}
+      <motion.div
+        initial={{ opacity: 0, y: 60 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: false, amount: 0.3 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="relative w-full h-[300px] overflow-hidden"
+      >
+        <Image src="/images/adolescent/abstract/abstract-depression.jpg" alt="Adolescent depression treatment Arizona" fill className="object-cover" />
+        <div className="absolute inset-0" style={{ backgroundColor: "rgba(28, 43, 30, 0.2)" }} />
+      </motion.div>
+
       {/* Condition Overview */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-container mx-auto px-6">
@@ -229,6 +242,21 @@ export default function AdolescentDepressionPage() {
                 Many adolescents with depression are first identified as having behavioral problems or attitude issues. They are disciplined rather than evaluated. By the time a family reaches us, they have often spent months or years trying consequences, restrictions, and conversations that did not work because the underlying condition was never treated.
               </p>
             </AnimatedSection>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center my-16">
+              <motion.div
+                initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: false, amount: 0.3 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                whileHover={{ scale: 1.02 }}
+                className="relative rounded-2xl overflow-hidden h-[400px]"
+              >
+                <Image src="/images/adolescent/parent-teen-family-therapy-session-behavioral-health.jpg" alt="Parent and teenager sitting together during adolescent depression treatment at Desert Recovery Centers" fill className="object-cover w-full h-full" />
+              </motion.div>
+              <div>
+                <p className="text-gray-600 leading-relaxed text-sm">Our clinicians understand how depression in adolescents differs from adult presentations and tailor treatment to address the unique developmental needs of teenagers.</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -254,6 +282,21 @@ export default function AdolescentDepressionPage() {
                 Adolescent depression rarely travels alone. The majority of teenagers we treat for depression have at least one co-occurring condition including anxiety disorders, ADHD, PTSD from adverse childhood experiences, or substance use that began as self-medication. Our residential program conducts a comprehensive dual diagnosis assessment at admission so that every layer of what is happening gets addressed, not just the most visible symptom.
               </p>
             </AnimatedSection>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center my-16">
+              <div>
+                <p className="text-gray-600 leading-relaxed text-sm">Our residential program conducts comprehensive dual diagnosis assessment so every condition present is identified and treated simultaneously.</p>
+              </div>
+              <motion.div
+                initial={{ opacity: 0, x: 60 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: false, amount: 0.3 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                whileHover={{ scale: 1.02 }}
+                className="relative rounded-2xl overflow-hidden h-[400px]"
+              >
+                <Image src="/images/adolescent/adolescent-group-therapy-program-desert-recovery-centers.jpg" alt="Adolescent group therapy session at Desert Recovery Centers Arizona" fill className="object-cover w-full h-full" />
+              </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -303,9 +346,38 @@ export default function AdolescentDepressionPage() {
                 </motion.div>
               ))}
             </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center my-16">
+              <motion.div
+                initial={{ opacity: 0, x: -60 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: false, amount: 0.3 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                whileHover={{ scale: 1.02 }}
+                className="relative rounded-2xl overflow-hidden h-[400px]"
+              >
+                <Image src="/images/adolescent/teen-individual-therapy-session-phoenix-az.jpg" alt="Individual therapy session for adolescent depression at Desert Recovery Centers" fill className="object-cover w-full h-full" />
+              </motion.div>
+              <div>
+                <p className="text-gray-600 leading-relaxed text-sm">Every adolescent receives an individualized treatment plan built around their specific presentation, history, and family context.</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
+
+      {/* Facility Banner */}
+      <div className="max-w-container mx-auto px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 60 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.3 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          whileHover={{ scale: 1.02 }}
+          className="relative w-full h-96 rounded-2xl overflow-hidden my-16"
+        >
+          <Image src="/images/adolescent/adolescent-outpatient-treatment-center-phoenix-arizona.jpg" alt="Desert Recovery Centers adolescent treatment facility" fill className="object-cover" />
+        </motion.div>
+      </div>
 
       {/* What Parents Can Expect */}
       <section className="py-16 md:py-24 bg-white">

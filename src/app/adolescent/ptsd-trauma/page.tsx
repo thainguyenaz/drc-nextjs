@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 import SchemaScript from "@/components/SchemaScript";
 import Breadcrumb from "@/components/Breadcrumb";
 import AnimatedSection from "@/components/animated/AnimatedSection";
+import Image from "next/image";
 
 const SITE_URL = "https://www.desertrecoverycenters.com";
 const PAGE_PATH = "/adolescent/ptsd-trauma";
@@ -85,6 +86,18 @@ export default function AdolescentPtsdTraumaPage() {
         </div>
       </section>
 
+      {/* Abstract Divider */}
+      <motion.div
+        initial={{ opacity: 0, y: 60 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: false, amount: 0.3 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="relative w-full h-[300px] overflow-hidden"
+      >
+        <Image src="/images/adolescent/abstract/abstract-ptsd.jpg" alt="Adolescent PTSD treatment Arizona" fill className="object-cover" />
+        <div className="absolute inset-0" style={{ backgroundColor: "rgba(28, 43, 30, 0.2)" }} />
+      </motion.div>
+
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-container mx-auto px-6"><div className="max-w-3xl mx-auto">
           <AnimatedSection>
@@ -119,6 +132,21 @@ export default function AdolescentPtsdTraumaPage() {
           <AnimatedSection delay={0.2}>
             <p className="text-gray-600 leading-relaxed mt-6 text-sm">Adverse childhood experiences, known as ACEs, have been extensively studied. The research is clear: the higher the ACE score, the greater the risk for mental health conditions, substance use, and physical health problems in adolescence and adulthood. We assess ACEs at admission for every adolescent we treat.</p>
           </AnimatedSection>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center my-16">
+              <div>
+                <p className="text-gray-600 leading-relaxed text-sm">Desert Recovery Centers assesses adverse childhood experiences at admission for every adolescent, ensuring comprehensive trauma-informed care from day one.</p>
+              </div>
+              <motion.div
+                initial={{ opacity: 0, x: 60 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: false, amount: 0.3 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                whileHover={{ scale: 1.02 }}
+                className="relative rounded-2xl overflow-hidden h-[400px]"
+              >
+                <Image src="/images/adolescent/adolescent-group-therapy-program-desert-recovery-centers.jpg" alt="Group therapy for adolescent trauma treatment at Desert Recovery Centers Arizona" fill className="object-cover w-full h-full" />
+              </motion.div>
+            </div>
         </div></div>
       </section>
 
@@ -136,8 +164,37 @@ export default function AdolescentPtsdTraumaPage() {
             <p className="text-gray-600 leading-relaxed text-lg mb-4">PTSD in teenagers often does not fit the textbook picture of flashbacks and nightmares, though those can be present. More commonly it presents as hypervigilance and an inability to relax or feel safe, emotional dysregulation and anger that seems disproportionate, avoidance of people, places, or situations associated with the trauma, concentration problems that look like ADHD, dissociation, self-harm as a coping mechanism, and substance use to numb symptoms.</p>
             <p className="text-gray-600 leading-relaxed text-lg">Many adolescents we treat have been evaluated for ADHD, depression, or behavioral disorders without anyone asking what happened to them.</p>
           </AnimatedSection>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center my-16">
+              <motion.div
+                initial={{ opacity: 0, x: -60 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: false, amount: 0.3 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                whileHover={{ scale: 1.02 }}
+                className="relative rounded-2xl overflow-hidden h-[400px]"
+              >
+                <Image src="/images/adolescent/teen-individual-therapy-session-phoenix-az.jpg" alt="Individual trauma therapy for teenagers at Desert Recovery Centers" fill className="object-cover w-full h-full" />
+              </motion.div>
+              <div>
+                <p className="text-gray-600 leading-relaxed text-sm">Many adolescents we treat have been evaluated for ADHD, depression, or behavioral disorders without anyone asking what happened to them.</p>
+              </div>
+            </div>
         </div></div>
       </section>
+
+      {/* Facility Banner */}
+      <div className="max-w-container mx-auto px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 60 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.3 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          whileHover={{ scale: 1.02 }}
+          className="relative w-full h-96 rounded-2xl overflow-hidden my-16"
+        >
+          <Image src="/images/adolescent/adolescent-outpatient-treatment-center-phoenix-arizona.jpg" alt="Desert Recovery Centers trauma treatment facility Arizona" fill className="object-cover" />
+        </motion.div>
+      </div>
 
       <section className="py-16 md:py-24 bg-cream">
         <div className="max-w-container mx-auto px-6"><div className="max-w-3xl mx-auto">

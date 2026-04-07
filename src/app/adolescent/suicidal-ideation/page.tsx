@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 import SchemaScript from "@/components/SchemaScript";
 import Breadcrumb from "@/components/Breadcrumb";
 import AnimatedSection from "@/components/animated/AnimatedSection";
+import Image from "next/image";
 
 const SITE_URL = "https://www.desertrecoverycenters.com";
 const PAGE_PATH = "/adolescent/suicidal-ideation";
@@ -65,6 +66,18 @@ export default function AdolescentSuicidalIdeationPage() {
         </div>
       </section>
 
+      {/* Abstract Divider */}
+      <motion.div
+        initial={{ opacity: 0, y: 60 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: false, amount: 0.3 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="relative w-full h-[300px] overflow-hidden"
+      >
+        <Image src="/images/adolescent/abstract/abstract-suicidal-ideation.jpg" alt="Adolescent suicidal ideation treatment Arizona" fill className="object-cover" />
+        <div className="absolute inset-0" style={{ backgroundColor: "rgba(28, 43, 30, 0.2)" }} />
+      </motion.div>
+
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-container mx-auto px-6"><div className="max-w-3xl mx-auto">
           <AnimatedSection>
@@ -89,6 +102,21 @@ export default function AdolescentSuicidalIdeationPage() {
             <p className="text-gray-600 leading-relaxed text-lg mb-4">Suicidal ideation in teenagers is almost always the expression of unbearable emotional pain and the belief that the pain is permanent and inescapable. It is not a statement about the value of their life. It is a statement about the limits of what they can tolerate without more support than they currently have.</p>
             <p className="text-gray-600 leading-relaxed text-lg">Most adolescents who experience suicidal ideation do not want to die. They want relief from pain they do not know how to manage any other way. This distinction matters clinically because it points directly to what treatment needs to accomplish: reduce the pain, build the capacity to tolerate distress, address the underlying conditions, and create reasons and strategies for staying safe.</p>
           </AnimatedSection>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center my-16">
+              <div>
+                <p className="text-gray-600 leading-relaxed text-sm">Most adolescents experiencing suicidal ideation want relief from pain, not death. Treatment focuses on reducing the pain and building distress tolerance.</p>
+              </div>
+              <motion.div
+                initial={{ opacity: 0, x: 60 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: false, amount: 0.3 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                whileHover={{ scale: 1.02 }}
+                className="relative rounded-2xl overflow-hidden h-[400px]"
+              >
+                <Image src="/images/adolescent/teen-individual-therapy-session-phoenix-az.jpg" alt="Individual therapy for adolescent suicidal ideation at Desert Recovery Centers Arizona" fill className="object-cover w-full h-full" />
+              </motion.div>
+            </div>
         </div></div>
       </section>
 
@@ -115,8 +143,37 @@ export default function AdolescentSuicidalIdeationPage() {
           <AnimatedSection delay={0.2}>
             <p className="text-gray-600 leading-relaxed mt-6 text-sm">No single risk factor determines outcome, and the absence of risk factors does not guarantee safety. Clinical assessment by a trained professional is the only reliable way to evaluate risk.</p>
           </AnimatedSection>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center my-16">
+              <motion.div
+                initial={{ opacity: 0, x: -60 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: false, amount: 0.3 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                whileHover={{ scale: 1.02 }}
+                className="relative rounded-2xl overflow-hidden h-[400px]"
+              >
+                <Image src="/images/adolescent/adolescent-group-therapy-program-desert-recovery-centers.jpg" alt="Adolescent group therapy at Desert Recovery Centers Arizona" fill className="object-cover w-full h-full" />
+              </motion.div>
+              <div>
+                <p className="text-gray-600 leading-relaxed text-sm">Clinical assessment by a trained professional is the only reliable way to evaluate risk. Our team conducts comprehensive evaluations at admission.</p>
+              </div>
+            </div>
         </div></div>
       </section>
+
+      {/* Facility Banner */}
+      <div className="max-w-container mx-auto px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 60 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.3 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          whileHover={{ scale: 1.02 }}
+          className="relative w-full h-96 rounded-2xl overflow-hidden my-16"
+        >
+          <Image src="/images/adolescent/adolescent-outpatient-treatment-center-phoenix-arizona.jpg" alt="Desert Recovery Centers adolescent treatment facility Arizona" fill className="object-cover" />
+        </motion.div>
+      </div>
 
       <section className="py-16 md:py-24 bg-cream">
         <div className="max-w-container mx-auto px-6"><div className="max-w-3xl mx-auto">

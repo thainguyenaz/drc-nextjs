@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 import SchemaScript from "@/components/SchemaScript";
 import Breadcrumb from "@/components/Breadcrumb";
 import AnimatedSection from "@/components/animated/AnimatedSection";
+import Image from "next/image";
 
 const SITE_URL = "https://www.desertrecoverycenters.com";
 const PAGE_PATH = "/adolescent/ocd";
@@ -78,6 +79,18 @@ export default function AdolescentOcdPage() {
         </div>
       </section>
 
+      {/* Abstract Divider */}
+      <motion.div
+        initial={{ opacity: 0, y: 60 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: false, amount: 0.3 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="relative w-full h-[300px] overflow-hidden"
+      >
+        <Image src="/images/adolescent/abstract/abstract-ocd.jpg" alt="Adolescent OCD treatment Arizona" fill className="object-cover" />
+        <div className="absolute inset-0" style={{ backgroundColor: "rgba(28, 43, 30, 0.2)" }} />
+      </motion.div>
+
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-container mx-auto px-6"><div className="max-w-3xl mx-auto">
           <AnimatedSection>
@@ -111,6 +124,21 @@ export default function AdolescentOcdPage() {
           <AnimatedSection delay={0.2}>
             <p className="text-gray-600 leading-relaxed mt-6 text-sm">Pure-O OCD, where the compulsions are primarily mental rather than behavioral, is frequently missed because there is nothing observable. The teenager appears fine. Inside, they are exhausted. Adolescents with OCD often have significant insight into how irrational their obsessions are, which adds shame to an already exhausting condition. Many go years without disclosing because they fear what their thoughts mean about them. Intrusive thoughts in OCD are not desires or intentions. They are symptoms.</p>
           </AnimatedSection>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center my-16">
+              <motion.div
+                initial={{ opacity: 0, x: -60 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: false, amount: 0.3 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                whileHover={{ scale: 1.02 }}
+                className="relative rounded-2xl overflow-hidden h-[400px]"
+              >
+                <Image src="/images/adolescent/adolescent-group-therapy-program-desert-recovery-centers.jpg" alt="Group therapy for adolescent OCD treatment at Desert Recovery Centers Arizona" fill className="object-cover w-full h-full" />
+              </motion.div>
+              <div>
+                <p className="text-gray-600 leading-relaxed text-sm">Our clinical team understands the many subtypes of OCD and provides specialized treatment for each presentation.</p>
+              </div>
+            </div>
         </div></div>
       </section>
 
@@ -127,8 +155,37 @@ export default function AdolescentOcdPage() {
               </div>
             <p className="text-gray-600 leading-relaxed text-lg">OCD commonly co-occurs with depression, anxiety disorders, ADHD, and tic disorders including Tourette syndrome. The severity of OCD tends to worsen when depression or anxiety is untreated. Accurate differential diagnosis matters because OCD requires specialized treatment approaches that differ from standard anxiety treatment.</p>
           </AnimatedSection>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center my-16">
+              <div>
+                <p className="text-gray-600 leading-relaxed text-sm">Accurate differential diagnosis ensures OCD receives the specialized ERP treatment it requires rather than standard anxiety protocols.</p>
+              </div>
+              <motion.div
+                initial={{ opacity: 0, x: 60 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: false, amount: 0.3 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                whileHover={{ scale: 1.02 }}
+                className="relative rounded-2xl overflow-hidden h-[400px]"
+              >
+                <Image src="/images/adolescent/teen-individual-therapy-session-phoenix-az.jpg" alt="Individual OCD therapy for teenagers at Desert Recovery Centers" fill className="object-cover w-full h-full" />
+              </motion.div>
+            </div>
         </div></div>
       </section>
+
+      {/* Facility Banner */}
+      <div className="max-w-container mx-auto px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 60 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.3 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          whileHover={{ scale: 1.02 }}
+          className="relative w-full h-96 rounded-2xl overflow-hidden my-16"
+        >
+          <Image src="/images/adolescent/adolescent-outpatient-treatment-center-phoenix-arizona.jpg" alt="Desert Recovery Centers OCD treatment facility Arizona" fill className="object-cover" />
+        </motion.div>
+      </div>
 
       <section className="py-16 md:py-24 bg-cream">
         <div className="max-w-container mx-auto px-6"><div className="max-w-3xl mx-auto">

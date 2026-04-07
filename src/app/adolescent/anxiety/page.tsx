@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 import SchemaScript from "@/components/SchemaScript";
 import Breadcrumb from "@/components/Breadcrumb";
 import AnimatedSection from "@/components/animated/AnimatedSection";
+import Image from "next/image";
 
 const SITE_URL = "https://www.desertrecoverycenters.com";
 const PAGE_PATH = "/adolescent/anxiety";
@@ -125,6 +126,18 @@ export default function AdolescentAnxietyPage() {
         </div>
       </section>
 
+      {/* Abstract Divider */}
+      <motion.div
+        initial={{ opacity: 0, y: 60 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: false, amount: 0.3 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="relative w-full h-[300px] overflow-hidden"
+      >
+        <Image src="/images/adolescent/abstract/abstract-anxiety.jpg" alt="Adolescent anxiety treatment Arizona" fill className="object-cover" />
+        <div className="absolute inset-0" style={{ backgroundColor: "rgba(28, 43, 30, 0.2)" }} />
+      </motion.div>
+
       {/* Overview */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-container mx-auto px-6">
@@ -168,6 +181,21 @@ export default function AdolescentAnxietyPage() {
                 School refusal is one of the most acute presentations we see. What begins as Monday morning stomachaches becomes months of missed school, failed grades, and a teenager who cannot leave the house. School refusal is not laziness. It is anxiety that has escalated beyond what the adolescent can manage.
               </p>
             </AnimatedSection>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center my-16">
+              <div>
+                <p className="text-gray-600 leading-relaxed text-sm">Our clinical team understands how anxiety manifests differently in teenagers and provides evidence-based treatment tailored to adolescent presentations.</p>
+              </div>
+              <motion.div
+                initial={{ opacity: 0, x: 60 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: false, amount: 0.3 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                whileHover={{ scale: 1.02 }}
+                className="relative rounded-2xl overflow-hidden h-[400px]"
+              >
+                <Image src="/images/adolescent/teen-individual-therapy-session-phoenix-az.jpg" alt="Individual therapy for adolescent anxiety at Desert Recovery Centers Arizona" fill className="object-cover w-full h-full" />
+              </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -193,9 +221,38 @@ export default function AdolescentAnxietyPage() {
                 Anxiety disorders in adolescents frequently co-occur with depression, ADHD, OCD, and trauma. The relationship between anxiety and these conditions is bidirectional. Untreated anxiety fuels depression. Undiagnosed ADHD drives anxiety. Trauma creates a nervous system that cannot distinguish between real and perceived threat. Treating anxiety without addressing what sits underneath it produces incomplete results.
               </p>
             </AnimatedSection>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center my-16">
+              <motion.div
+                initial={{ opacity: 0, x: -60 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: false, amount: 0.3 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                whileHover={{ scale: 1.02 }}
+                className="relative rounded-2xl overflow-hidden h-[400px]"
+              >
+                <Image src="/images/adolescent/parent-teen-family-therapy-session-behavioral-health.jpg" alt="Parent support during adolescent anxiety treatment at Desert Recovery Centers" fill className="object-cover w-full h-full" />
+              </motion.div>
+              <div>
+                <p className="text-gray-600 leading-relaxed text-sm">Treating anxiety without addressing co-occurring conditions produces incomplete and often temporary results.</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
+
+      {/* Facility Banner */}
+      <div className="max-w-container mx-auto px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 60 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.3 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          whileHover={{ scale: 1.02 }}
+          className="relative w-full h-96 rounded-2xl overflow-hidden my-16"
+        >
+          <Image src="/images/adolescent/adolescent-outpatient-treatment-center-phoenix-arizona.jpg" alt="Desert Recovery Centers adolescent anxiety treatment facility Arizona" fill className="object-cover" />
+        </motion.div>
+      </div>
 
       {/* Treatment */}
       <section className="py-16 md:py-24 bg-cream">

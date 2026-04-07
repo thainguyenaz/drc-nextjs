@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 import SchemaScript from "@/components/SchemaScript";
 import Breadcrumb from "@/components/Breadcrumb";
 import AnimatedSection from "@/components/animated/AnimatedSection";
+import Image from "next/image";
 
 const SITE_URL = "https://www.desertrecoverycenters.com";
 const PAGE_PATH = "/adolescent/substance-use";
@@ -63,6 +64,18 @@ export default function AdolescentSubstanceUsePage() {
         </div>
       </section>
 
+      {/* Abstract Divider */}
+      <motion.div
+        initial={{ opacity: 0, y: 60 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: false, amount: 0.3 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="relative w-full h-[300px] overflow-hidden"
+      >
+        <Image src="/images/adolescent/abstract/abstract-substance-use.jpg" alt="Adolescent substance use treatment Arizona" fill className="object-cover" />
+        <div className="absolute inset-0" style={{ backgroundColor: "rgba(28, 43, 30, 0.2)" }} />
+      </motion.div>
+
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-container mx-auto px-6"><div className="max-w-3xl mx-auto">
           <AnimatedSection>
@@ -87,6 +100,21 @@ export default function AdolescentSubstanceUsePage() {
             <p className="text-gray-600 leading-relaxed text-lg mb-4">The adolescent substance use landscape has changed in ways that make the stakes categorically higher than a decade ago. The illicit drug supply is contaminated with fentanyl at levels that make any non-prescribed pill or powder potentially fatal. Teenagers who believe they are taking Xanax, Adderall, or MDMA are frequently taking fentanyl pressed into a pill that is indistinguishable from a pharmaceutical. There is no safe experimentation in this environment. One pill can be fatal.</p>
             <p className="text-gray-600 leading-relaxed text-lg">This is not hyperbole. It is the current reality of adolescent substance use in Arizona and across the United States.</p>
           </AnimatedSection>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center my-16">
+              <motion.div
+                initial={{ opacity: 0, x: -60 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: false, amount: 0.3 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                whileHover={{ scale: 1.02 }}
+                className="relative rounded-2xl overflow-hidden h-[400px]"
+              >
+                <Image src="/images/adolescent/adolescent-group-therapy-program-desert-recovery-centers.jpg" alt="Adolescent group therapy for substance use treatment at Desert Recovery Centers Arizona" fill className="object-cover w-full h-full" />
+              </motion.div>
+              <div>
+                <p className="text-gray-600 leading-relaxed text-sm">The stakes of adolescent substance use have never been higher. Our residential program provides the intensive care teenagers need in this environment.</p>
+              </div>
+            </div>
         </div></div>
       </section>
 
@@ -113,8 +141,37 @@ export default function AdolescentSubstanceUsePage() {
           <AnimatedSection delay={0.2}>
             <p className="text-gray-600 leading-relaxed mt-6 text-sm">Many families arrive at treatment not because they discovered substance use but because of a crisis, an arrest, an overdose, or a mental health hospitalization where substance use was identified as part of the picture.</p>
           </AnimatedSection>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center my-16">
+              <div>
+                <p className="text-gray-600 leading-relaxed text-sm">Early identification and intervention make a significant difference in adolescent substance use outcomes. Our admissions team can help assess the right level of care.</p>
+              </div>
+              <motion.div
+                initial={{ opacity: 0, x: 60 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: false, amount: 0.3 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                whileHover={{ scale: 1.02 }}
+                className="relative rounded-2xl overflow-hidden h-[400px]"
+              >
+                <Image src="/images/adolescent/parent-teen-family-therapy-session-behavioral-health.jpg" alt="Family support during adolescent substance use treatment at Desert Recovery Centers" fill className="object-cover w-full h-full" />
+              </motion.div>
+            </div>
         </div></div>
       </section>
+
+      {/* Facility Banner */}
+      <div className="max-w-container mx-auto px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 60 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.3 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          whileHover={{ scale: 1.02 }}
+          className="relative w-full h-96 rounded-2xl overflow-hidden my-16"
+        >
+          <Image src="/images/adolescent/adolescent-outpatient-treatment-center-phoenix-arizona.jpg" alt="Desert Recovery Centers adolescent substance use treatment facility Arizona" fill className="object-cover" />
+        </motion.div>
+      </div>
 
       <section className="py-16 md:py-24 bg-cream">
         <div className="max-w-container mx-auto px-6"><div className="max-w-3xl mx-auto">

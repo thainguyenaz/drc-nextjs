@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 import SchemaScript from "@/components/SchemaScript";
 import Breadcrumb from "@/components/Breadcrumb";
 import AnimatedSection from "@/components/animated/AnimatedSection";
+import Image from "next/image";
 
 const SITE_URL = "https://www.desertrecoverycenters.com";
 const PAGE_PATH = "/adolescent/adhd";
@@ -61,6 +62,18 @@ export default function AdolescentAdhdPage() {
         </div>
       </section>
 
+      {/* Abstract Divider */}
+      <motion.div
+        initial={{ opacity: 0, y: 60 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: false, amount: 0.3 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="relative w-full h-[300px] overflow-hidden"
+      >
+        <Image src="/images/adolescent/abstract/abstract-adhd.jpg" alt="Adolescent ADHD treatment Arizona" fill className="object-cover" />
+        <div className="absolute inset-0" style={{ backgroundColor: "rgba(28, 43, 30, 0.2)" }} />
+      </motion.div>
+
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-container mx-auto px-6"><div className="max-w-3xl mx-auto">
           <AnimatedSection>
@@ -85,6 +98,21 @@ export default function AdolescentAdhdPage() {
             <p className="text-gray-600 leading-relaxed text-lg mb-4">This is the clinical reality that residential treatment exists to address. The majority of adolescents we see with ADHD have at least one co-occurring condition. Depression develops from years of failure, criticism, and falling short of potential. Anxiety develops from the chronic experience of disorganization and unpredictability. Trauma histories are common and frequently unaddressed. Substance use often begins as self-medication, particularly with stimulants or marijuana.</p>
             <p className="text-gray-600 leading-relaxed text-lg">Treating ADHD in isolation, without addressing the depression, anxiety, or trauma that has accumulated on top of it, produces incomplete results. The ADHD medication helps with focus but does not address the shame, the learned helplessness, or the substance use that developed in the gap.</p>
           </AnimatedSection>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center my-16">
+              <div>
+                <p className="text-gray-600 leading-relaxed text-sm">Comprehensive dual diagnosis treatment addressing all co-occurring conditions produces the most durable results for adolescents with ADHD.</p>
+              </div>
+              <motion.div
+                initial={{ opacity: 0, x: 60 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: false, amount: 0.3 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                whileHover={{ scale: 1.02 }}
+                className="relative rounded-2xl overflow-hidden h-[400px]"
+              >
+                <Image src="/images/adolescent/parent-teen-family-therapy-session-behavioral-health.jpg" alt="Family support during adolescent ADHD treatment at Desert Recovery Centers Arizona" fill className="object-cover w-full h-full" />
+              </motion.div>
+            </div>
         </div></div>
       </section>
 
@@ -101,8 +129,37 @@ export default function AdolescentAdhdPage() {
               </div>
             <p className="text-gray-600 leading-relaxed text-lg">ADHD in girls is systematically underdiagnosed. Girls with ADHD more frequently present with inattentive type, which is less visible than hyperactive or impulsive presentations. They are described as spacey, scattered, or anxious. They develop compensatory strategies that mask symptoms for years. By adolescence, the compensation cost is significant. Many girls with undiagnosed ADHD reach us with depression, anxiety, and a profound sense that something is wrong with them without knowing what.</p>
           </AnimatedSection>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center my-16">
+              <motion.div
+                initial={{ opacity: 0, x: -60 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: false, amount: 0.3 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                whileHover={{ scale: 1.02 }}
+                className="relative rounded-2xl overflow-hidden h-[400px]"
+              >
+                <Image src="/images/adolescent/adolescent-group-therapy-program-desert-recovery-centers.jpg" alt="Adolescent group therapy for ADHD at Desert Recovery Centers" fill className="object-cover w-full h-full" />
+              </motion.div>
+              <div>
+                <p className="text-gray-600 leading-relaxed text-sm">ADHD in girls is systematically underdiagnosed. Our clinical team is trained to recognize inattentive presentations that are often missed.</p>
+              </div>
+            </div>
         </div></div>
       </section>
+
+      {/* Facility Banner */}
+      <div className="max-w-container mx-auto px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 60 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.3 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          whileHover={{ scale: 1.02 }}
+          className="relative w-full h-96 rounded-2xl overflow-hidden my-16"
+        >
+          <Image src="/images/adolescent/adolescent-outpatient-treatment-center-phoenix-arizona.jpg" alt="Desert Recovery Centers adolescent ADHD treatment facility Arizona" fill className="object-cover" />
+        </motion.div>
+      </div>
 
       <section className="py-16 md:py-24 bg-cream">
         <div className="max-w-container mx-auto px-6"><div className="max-w-3xl mx-auto">
