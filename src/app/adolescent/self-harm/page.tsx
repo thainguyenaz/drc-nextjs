@@ -68,10 +68,9 @@ export default function AdolescentSelfHarmPage() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: false, amount: 0.3 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="relative w-full h-[300px] overflow-hidden"
+        className="relative w-full h-[200px] md:h-[250px] overflow-hidden"
       >
         <Image src="/images/adolescent/abstract/abstract-self-harm.jpg" alt="Adolescent self harm treatment Arizona" fill className="object-cover" />
-        <div className="absolute inset-0" style={{ backgroundColor: "rgba(28, 43, 30, 0.2)" }} />
       </motion.div>
 
       <section className="py-16 md:py-24 bg-white">
@@ -97,9 +96,9 @@ export default function AdolescentSelfHarmPage() {
                 viewport={{ once: false, amount: 0.3 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 whileHover={{ scale: 1.02 }}
-                className="relative rounded-2xl overflow-hidden h-[400px]"
+                className="relative rounded-2xl overflow-hidden h-[380px]"
               >
-                <Image src="/images/locations/phoenix/phoenix-group-room-2.jpg" alt="Group therapy room at Desert Recovery Centers Phoenix" fill className="object-cover w-full h-full" />
+                <Image src="/images/locations/phoenix/phoenix-group-room-2.jpg" alt="Group therapy room at Desert Recovery Centers Phoenix" fill className="object-cover w-full h-full object-center" />
               </motion.div>
             </div>
         </div></div>
@@ -125,9 +124,9 @@ export default function AdolescentSelfHarmPage() {
                 viewport={{ once: false, amount: 0.3 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 whileHover={{ scale: 1.02 }}
-                className="relative rounded-2xl overflow-hidden h-[400px]"
+                className="relative rounded-2xl overflow-hidden h-[380px]"
               >
-                <Image src="/images/locations/phoenix/phoenix-therapy-office-2.jpg" alt="Individual therapy office at Desert Recovery Centers Phoenix" fill className="object-cover w-full h-full" />
+                <Image src="/images/locations/phoenix/phoenix-therapy-office-2.jpg" alt="Individual therapy office at Desert Recovery Centers Phoenix" fill className="object-cover w-full h-full object-center" />
               </motion.div>
               <div>
                 <p className="text-gray-600 leading-relaxed text-sm">Our clinical team conducts comprehensive suicide risk assessment at admission and throughout treatment for every adolescent in our care.</p>
@@ -146,7 +145,7 @@ export default function AdolescentSelfHarmPage() {
           whileHover={{ scale: 1.02 }}
           className="relative w-full h-96 rounded-2xl overflow-hidden my-16"
         >
-          <Image src="/images/locations/phoenix/phoenix-lobby-lounge.jpg" alt="Desert Recovery Centers Phoenix outpatient facility" fill className="object-cover" />
+          <Image src="/images/locations/phoenix/phoenix-lobby-lounge.jpg" alt="Desert Recovery Centers Phoenix outpatient facility" fill className="object-cover object-center" />
         </motion.div>
       </div>
 
@@ -176,6 +175,21 @@ export default function AdolescentSelfHarmPage() {
               </motion.div>
             ))}
           </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center my-16">
+              <div>
+                <p className="text-gray-600 leading-relaxed text-sm">DBT was designed specifically to address the emotional dysregulation and crisis behaviors that drive self injury, providing skills that can be deployed immediately in moments of acute pain.</p>
+              </div>
+              <motion.div
+                initial={{ opacity: 0, x: 60 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: false, amount: 0.3 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                whileHover={{ scale: 1.02 }}
+                className="relative rounded-2xl overflow-hidden h-[400px]"
+              >
+                <Image src="/images/adolescent/clinical/clinical-self-harm.jpg" alt="Individual therapy for adolescent self harm at Desert Recovery Centers Arizona" fill className="object-cover w-full h-full object-center" />
+              </motion.div>
+            </div>
         </div></div>
       </section>
 

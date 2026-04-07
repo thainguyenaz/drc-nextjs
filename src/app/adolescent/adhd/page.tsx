@@ -68,10 +68,9 @@ export default function AdolescentAdhdPage() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: false, amount: 0.3 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="relative w-full h-[300px] overflow-hidden"
+        className="relative w-full h-[200px] md:h-[250px] overflow-hidden"
       >
         <Image src="/images/adolescent/abstract/abstract-adhd.jpg" alt="Adolescent ADHD treatment Arizona" fill className="object-cover" />
-        <div className="absolute inset-0" style={{ backgroundColor: "rgba(28, 43, 30, 0.2)" }} />
       </motion.div>
 
       <section className="py-16 md:py-24 bg-white">
@@ -108,9 +107,9 @@ export default function AdolescentAdhdPage() {
                 viewport={{ once: false, amount: 0.3 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 whileHover={{ scale: 1.02 }}
-                className="relative rounded-2xl overflow-hidden h-[400px]"
+                className="relative rounded-2xl overflow-hidden h-[380px]"
               >
-                <Image src="/images/locations/phoenix/phoenix-therapy-room.jpg" alt="Therapy room at Desert Recovery Centers Phoenix" fill className="object-cover w-full h-full" />
+                <Image src="/images/locations/phoenix/phoenix-therapy-room.jpg" alt="Therapy room at Desert Recovery Centers Phoenix" fill className="object-cover w-full h-full object-center" />
               </motion.div>
             </div>
         </div></div>
@@ -130,15 +129,30 @@ export default function AdolescentAdhdPage() {
             <p className="text-gray-600 leading-relaxed text-lg">ADHD in girls is systematically underdiagnosed. Girls with ADHD more frequently present with inattentive type, which is less visible than hyperactive or impulsive presentations. They are described as spacey, scattered, or anxious. They develop compensatory strategies that mask symptoms for years. By adolescence, the compensation cost is significant. Many girls with undiagnosed ADHD reach us with depression, anxiety, and a profound sense that something is wrong with them without knowing what.</p>
           </AnimatedSection>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center my-16">
+              <div>
+                <p className="text-gray-600 leading-relaxed text-sm">Our clinical team is trained to recognize ADHD presentations that are often missed, especially in adolescent girls with inattentive type.</p>
+              </div>
+              <motion.div
+                initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: false, amount: 0.3 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                whileHover={{ scale: 1.02 }}
+                className="relative rounded-2xl overflow-hidden h-[400px]"
+              >
+                <Image src="/images/adolescent/clinical/clinical-adhd.jpg" alt="Family therapy for adolescent ADHD at Desert Recovery Centers Arizona" fill className="object-cover w-full h-full object-center" />
+              </motion.div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center my-16">
               <motion.div
                 initial={{ opacity: 0, x: -60 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: false, amount: 0.3 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 whileHover={{ scale: 1.02 }}
-                className="relative rounded-2xl overflow-hidden h-[400px]"
+                className="relative rounded-2xl overflow-hidden h-[380px]"
               >
-                <Image src="/images/locations/phoenix/phoenix-group-room-2.jpg" alt="Group therapy room at Desert Recovery Centers Phoenix" fill className="object-cover w-full h-full" />
+                <Image src="/images/locations/phoenix/phoenix-group-room-2.jpg" alt="Group therapy room at Desert Recovery Centers Phoenix" fill className="object-cover w-full h-full object-center" />
               </motion.div>
               <div>
                 <p className="text-gray-600 leading-relaxed text-sm">ADHD in girls is systematically underdiagnosed. Our clinical team is trained to recognize inattentive presentations that are often missed.</p>
@@ -157,7 +171,7 @@ export default function AdolescentAdhdPage() {
           whileHover={{ scale: 1.02 }}
           className="relative w-full h-96 rounded-2xl overflow-hidden my-16"
         >
-          <Image src="/images/locations/phoenix/phoenix-lobby-lounge.jpg" alt="Desert Recovery Centers Phoenix outpatient facility" fill className="object-cover" />
+          <Image src="/images/locations/phoenix/phoenix-lobby-lounge.jpg" alt="Desert Recovery Centers Phoenix outpatient facility" fill className="object-cover object-center" />
         </motion.div>
       </div>
 

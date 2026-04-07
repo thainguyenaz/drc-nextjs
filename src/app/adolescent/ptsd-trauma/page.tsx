@@ -92,10 +92,9 @@ export default function AdolescentPtsdTraumaPage() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: false, amount: 0.3 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="relative w-full h-[300px] overflow-hidden"
+        className="relative w-full h-[200px] md:h-[250px] overflow-hidden"
       >
         <Image src="/images/adolescent/abstract/abstract-ptsd.jpg" alt="Adolescent PTSD treatment Arizona" fill className="object-cover" />
-        <div className="absolute inset-0" style={{ backgroundColor: "rgba(28, 43, 30, 0.2)" }} />
       </motion.div>
 
       <section className="py-16 md:py-24 bg-white">
@@ -142,9 +141,9 @@ export default function AdolescentPtsdTraumaPage() {
                 viewport={{ once: false, amount: 0.3 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 whileHover={{ scale: 1.02 }}
-                className="relative rounded-2xl overflow-hidden h-[400px]"
+                className="relative rounded-2xl overflow-hidden h-[380px]"
               >
-                <Image src="/images/locations/phoenix/phoenix-group-room-2.jpg" alt="Group therapy room at Desert Recovery Centers Phoenix" fill className="object-cover w-full h-full" />
+                <Image src="/images/locations/phoenix/phoenix-group-room-2.jpg" alt="Group therapy room at Desert Recovery Centers Phoenix" fill className="object-cover w-full h-full object-center" />
               </motion.div>
             </div>
         </div></div>
@@ -165,6 +164,9 @@ export default function AdolescentPtsdTraumaPage() {
             <p className="text-gray-600 leading-relaxed text-lg">Many adolescents we treat have been evaluated for ADHD, depression, or behavioral disorders without anyone asking what happened to them.</p>
           </AnimatedSection>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center my-16">
+              <div>
+                <p className="text-gray-600 leading-relaxed text-sm">Our trauma-informed approach ensures that every adolescent receives care tailored to their specific experience and developmental needs.</p>
+              </div>
               <motion.div
                 initial={{ opacity: 0, x: -60 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -173,7 +175,19 @@ export default function AdolescentPtsdTraumaPage() {
                 whileHover={{ scale: 1.02 }}
                 className="relative rounded-2xl overflow-hidden h-[400px]"
               >
-                <Image src="/images/locations/phoenix/phoenix-therapy-office-2.jpg" alt="Individual therapy office at Desert Recovery Centers Phoenix" fill className="object-cover w-full h-full" />
+                <Image src="/images/adolescent/clinical/clinical-ptsd.jpg" alt="Group therapy for adolescent trauma treatment at Desert Recovery Centers Arizona" fill className="object-cover w-full h-full object-center" />
+              </motion.div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center my-16">
+              <motion.div
+                initial={{ opacity: 0, x: -60 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: false, amount: 0.3 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                whileHover={{ scale: 1.02 }}
+                className="relative rounded-2xl overflow-hidden h-[380px]"
+              >
+                <Image src="/images/locations/phoenix/phoenix-therapy-office-2.jpg" alt="Individual therapy office at Desert Recovery Centers Phoenix" fill className="object-cover w-full h-full object-center" />
               </motion.div>
               <div>
                 <p className="text-gray-600 leading-relaxed text-sm">Many adolescents we treat have been evaluated for ADHD, depression, or behavioral disorders without anyone asking what happened to them.</p>
@@ -192,7 +206,7 @@ export default function AdolescentPtsdTraumaPage() {
           whileHover={{ scale: 1.02 }}
           className="relative w-full h-96 rounded-2xl overflow-hidden my-16"
         >
-          <Image src="/images/locations/phoenix/phoenix-lobby-lounge.jpg" alt="Desert Recovery Centers Phoenix outpatient facility" fill className="object-cover" />
+          <Image src="/images/locations/phoenix/phoenix-lobby-lounge.jpg" alt="Desert Recovery Centers Phoenix outpatient facility" fill className="object-cover object-center" />
         </motion.div>
       </div>
 
