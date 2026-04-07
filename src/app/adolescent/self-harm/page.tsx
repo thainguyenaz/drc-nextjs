@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 import SchemaScript from "@/components/SchemaScript";
 import Breadcrumb from "@/components/Breadcrumb";
 import AnimatedSection from "@/components/animated/AnimatedSection";
+import Image from "next/image";
 
 const SITE_URL = "https://www.desertrecoverycenters.com";
 const PAGE_PATH = "/adolescent/self-harm";
@@ -61,6 +62,18 @@ export default function AdolescentSelfHarmPage() {
         </div>
       </section>
 
+      {/* Abstract Divider */}
+      <motion.div
+        initial={{ opacity: 0, y: 60 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: false, amount: 0.3 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="relative w-full h-[300px] overflow-hidden"
+      >
+        <Image src="/images/adolescent/abstract/abstract-self-harm.jpg" alt="Adolescent self harm treatment Arizona" fill className="object-cover" />
+        <div className="absolute inset-0" style={{ backgroundColor: "rgba(28, 43, 30, 0.2)" }} />
+      </motion.div>
+
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-container mx-auto px-6"><div className="max-w-3xl mx-auto">
           <AnimatedSection>
@@ -74,6 +87,21 @@ export default function AdolescentSelfHarmPage() {
             <p className="text-gray-600 leading-relaxed text-lg mb-4">Self harm in adolescents is not manipulation. This is the most important thing to understand before anything else. Cutting, burning, scratching, and other forms of non-suicidal self injury are a dysregulated coping mechanism. The adolescent has found a way to manage emotional pain that works in the short term and causes harm in the process. The behavior makes sense within the context of a nervous system that has not yet developed more adaptive ways to tolerate intense emotion.</p>
             <p className="text-gray-600 leading-relaxed text-lg">When parents discover self harm, the instinct is often panic, anger, or both. Both reactions are understandable. Neither is helpful in that moment. What is helpful is understanding that self harm is a clinical issue that requires clinical treatment, not consequences.</p>
           </AnimatedSection>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center my-16">
+              <div>
+                <p className="text-gray-600 leading-relaxed text-sm">Self harm is a clinical issue that requires clinical treatment, not consequences. Our team provides compassionate, evidence-based care.</p>
+              </div>
+              <motion.div
+                initial={{ opacity: 0, x: 60 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: false, amount: 0.3 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                whileHover={{ scale: 1.02 }}
+                className="relative rounded-2xl overflow-hidden h-[400px]"
+              >
+                <Image src="/images/adolescent/adolescent-group-therapy-program-desert-recovery-centers.jpg" alt="Group therapy for adolescent self harm treatment at Desert Recovery Centers Arizona" fill className="object-cover w-full h-full" />
+              </motion.div>
+            </div>
         </div></div>
       </section>
 
@@ -90,8 +118,37 @@ export default function AdolescentSelfHarmPage() {
             </div>
             <p className="text-gray-600 leading-relaxed text-lg">Non-suicidal self injury is clinically distinct from suicidal behavior, but the two can coexist. Adolescents who self harm have elevated risk for suicidal ideation and should receive a thorough risk assessment. Our clinical team conducts comprehensive suicide risk assessment at admission and throughout treatment, maintaining individualized safety plans for every adolescent in our care.</p>
           </AnimatedSection>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center my-16">
+              <motion.div
+                initial={{ opacity: 0, x: -60 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: false, amount: 0.3 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                whileHover={{ scale: 1.02 }}
+                className="relative rounded-2xl overflow-hidden h-[400px]"
+              >
+                <Image src="/images/adolescent/teen-individual-therapy-session-phoenix-az.jpg" alt="Individual therapy for adolescent self harm at Desert Recovery Centers" fill className="object-cover w-full h-full" />
+              </motion.div>
+              <div>
+                <p className="text-gray-600 leading-relaxed text-sm">Our clinical team conducts comprehensive suicide risk assessment at admission and throughout treatment for every adolescent in our care.</p>
+              </div>
+            </div>
         </div></div>
       </section>
+
+      {/* Facility Banner */}
+      <div className="max-w-container mx-auto px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 60 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.3 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          whileHover={{ scale: 1.02 }}
+          className="relative w-full h-96 rounded-2xl overflow-hidden my-16"
+        >
+          <Image src="/images/adolescent/adolescent-outpatient-treatment-center-phoenix-arizona.jpg" alt="Desert Recovery Centers self harm treatment facility Arizona" fill className="object-cover" />
+        </motion.div>
+      </div>
 
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-container mx-auto px-6"><div className="max-w-3xl mx-auto">
