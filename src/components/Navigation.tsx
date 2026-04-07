@@ -37,6 +37,18 @@ const navLinks = [
     ],
   },
   {
+    label: "Levels of Care",
+    href: "/levels-of-care",
+    image: "/images/general/DRC-TREATMENTS.jpg",
+    children: [
+      { label: "Overview", href: "/levels-of-care" },
+      { label: "Medical Detox", href: "/levels-of-care/detox" },
+      { label: "Residential Treatment", href: "/levels-of-care/residential-treatment" },
+      { label: "PHP", href: "/levels-of-care/php" },
+      { label: "IOP", href: "/levels-of-care/iop" },
+    ],
+  },
+  {
     label: "Treatments",
     href: "/treatments",
     image: "/images/general/DRC-TREATMENTS.jpg",

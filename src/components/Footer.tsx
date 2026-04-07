@@ -19,6 +19,13 @@ const footerLinks = {
     { label: "Meth", href: "/addiction/meth" },
     { label: "Prescription Drugs", href: "/addiction/prescription-drugs" },
   ],
+  "Levels of Care": [
+    { label: "Overview", href: "/levels-of-care" },
+    { label: "Medical Detox", href: "/levels-of-care/detox" },
+    { label: "Residential", href: "/levels-of-care/residential-treatment" },
+    { label: "PHP", href: "/levels-of-care/php" },
+    { label: "IOP", href: "/levels-of-care/iop" },
+  ],
   Treatment: [
     { label: "Residential Treatment", href: "/treatments/residential" },
     { label: "TMS Therapy", href: "/treatments/tms-therapy" },
@@ -45,7 +52,7 @@ export default function Footer() {
   return (
     <footer className="bg-forest text-white">
       <div className="max-w-container mx-auto px-6 py-16">
-        <div className="grid md:grid-cols-5 gap-10">
+        <div className="grid md:grid-cols-6 gap-10">
           {/* Brand */}
           <div className="md:col-span-1 min-w-0">
             <div className="mb-4">
