@@ -10,7 +10,7 @@ import PhotoGallery from "@/components/PhotoGallery";
 import SchemaScript from "@/components/SchemaScript";
 import Breadcrumb from "@/components/Breadcrumb";
 import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
-import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
+import { getFAQSchema } from "@/lib/schema";
 import { faqData } from "@/data/faq-data";
 import FAQSection from "@/components/FAQSection";
 import PhoenixPHPContent from "./PhoenixPHPContent";
