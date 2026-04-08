@@ -100,12 +100,12 @@ const programs = [
   {
     tag: "Medical Care",
     sublabel: "24/7 Staff",
-    title: "Around the Clock Medical Monitoring",
-    badge: "Registered nurses on site 24 hours a day",
-    body: "Registered nurses are present at Desert Recovery Centers around the clock. This is not a staffing upgrade. It is a clinical necessity. Addiction and mental health conditions have medical dimensions that require trained clinical observation, particularly in the early weeks of treatment when the body and brain are recalibrating from substance use or psychiatric instability.",
-    body2: "Nursing staff at DRC monitor vital signs, administer medications, assess for withdrawal symptoms, and provide the kind of continuous clinical observation that keeps residential treatment safe. They are also a consistent human presence, available in the middle of the night when the discomfort of early recovery is at its hardest. That combination of medical competence and human availability is what separates residential treatment from everything beneath it on the continuum of care.",
+    title: "Around the Clock Clinical Monitoring",
+    badge: "",
+    body: "Clinical staff are present at Desert Recovery Centers around the clock. This is not a staffing upgrade. It is a clinical necessity. Addiction and mental health conditions have medical dimensions that require trained clinical observation, particularly in the early weeks of treatment when the body and brain are recalibrating from substance use or psychiatric instability.",
+    body2: "Clinical staff at DRC monitor vital signs, administer medications, assess for withdrawal symptoms, and provide the kind of continuous clinical observation that keeps residential treatment safe. They are also a consistent human presence, available in the middle of the night when the discomfort of early recovery is at its hardest. That combination of medical competence and human availability is what separates residential treatment from everything beneath it on the continuum of care.",
     features: [
-      "Registered nurses on site 24 hours a day, 7 days a week",
+      "Clinical staff on site 24 hours a day, 7 days a week",
       "Vital sign monitoring and medical assessment throughout",
       "Withdrawal symptom assessment and management",
       "Medication administration and adherence support",
@@ -314,9 +314,11 @@ const relatedLinks = [
 function ProgramTabContent({ prog }: { prog: (typeof programs)[number] }) {
   return (
     <>
-      <span className="inline-block text-xs font-bold tracking-widest uppercase text-gold bg-gold/10 px-3 py-1 rounded-full mb-3">
-        {prog.badge}
-      </span>
+      {prog.badge && (
+        <span className="inline-block text-xs font-bold tracking-widest uppercase text-gold bg-gold/10 px-3 py-1 rounded-full mb-3">
+          {prog.badge}
+        </span>
+      )}
       <h3 className="font-display text-lg text-forest font-semibold mb-1">
         {prog.title}
       </h3>
@@ -428,9 +430,11 @@ function ProgramsTabs() {
                   className="overflow-hidden"
                 >
                   <div className="px-5 pb-5">
-                    <span className="inline-block text-xs font-bold tracking-widest uppercase text-gold bg-gold/10 px-3 py-1 rounded-full mb-3">
-                      {prog.badge}
-                    </span>
+                    {prog.badge && (
+                      <span className="inline-block text-xs font-bold tracking-widest uppercase text-gold bg-gold/10 px-3 py-1 rounded-full mb-3">
+                        {prog.badge}
+                      </span>
+                    )}
                     <p className="text-gray-600 text-sm leading-relaxed mb-4">{prog.body}</p>
                     <p className="text-gray-600 text-sm leading-relaxed mb-4">{prog.body2}</p>
                     <ul className="space-y-2">
