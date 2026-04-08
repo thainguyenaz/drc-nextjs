@@ -1,9 +1,8 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { AnimatePresence, motion } from "framer-motion";
 
 const navLinks = [
   {
@@ -100,11 +99,29 @@ const navLinks = [
   },
 ];
 
+/** Measures scrollHeight then animates via CSS max-height */
+function useCollapse(open: boolean) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [maxHeight, setMaxHeight] = useState("0px");
+
+  useEffect(() => {
+    if (open && ref.current) {
+      setMaxHeight(`${ref.current.scrollHeight}px`);
+    } else {
+      setMaxHeight("0px");
+    }
+  }, [open]);
+
+  return { ref, style: { maxHeight, overflow: "hidden" as const } };
+}
+
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
+
+  const mobileMenu = useCollapse(mobileOpen);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 80);
@@ -153,43 +170,41 @@ export default function Navigation() {
               >
                 {link.label}
               </Link>
-              <AnimatePresence>
-                {link.children && activeDropdown === link.label && (
-                  <motion.div
-                    initial={{ opacity: 0, y: -8 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -8 }}
-                    transition={{ duration: 0.3, ease: "easeOut" }}
-                    className="absolute top-full left-1/2 -translate-x-1/2 pt-1 z-50"
-                  >
-                    <div className="bg-forest border border-white/10 rounded-xl shadow-2xl p-1.5 max-w-[600px] flex">
-                      <div className="flex-1 py-1 min-w-[260px]">
-                        {link.children.map((child) => (
-                          <Link
-                            key={child.label}
-                            href={child.href}
-                            className="flex items-center px-4 py-2.5 text-sm text-white/80 hover:text-gold rounded-lg transition-all duration-200 group"
-                          >
-                            <span className="w-0 group-hover:w-3 h-px bg-gold mr-0 group-hover:mr-3 transition-all duration-200" />
-                            {child.label}
-                          </Link>
-                        ))}
-                      </div>
-                      {"image" in link && link.image && (
-                        <div className="flex-shrink-0 w-[160px] h-[120px] rounded-lg overflow-hidden m-1.5 self-center">
-                          <Image
-                            src={link.image}
-                            alt={link.label}
-                            width={160}
-                            height={120}
-                            className="w-[160px] h-[120px] object-cover object-center"
-                          />
-                        </div>
-                      )}
+              {link.children && (
+                <div
+                  className={`absolute top-full left-1/2 -translate-x-1/2 pt-1 z-50 transition-all duration-200 ease-out ${
+                    activeDropdown === link.label
+                      ? "opacity-100 translate-y-0 pointer-events-auto"
+                      : "opacity-0 -translate-y-2 pointer-events-none"
+                  }`}
+                >
+                  <div className="bg-forest border border-white/10 rounded-xl shadow-2xl p-1.5 max-w-[600px] flex">
+                    <div className="flex-1 py-1 min-w-[260px]">
+                      {link.children.map((child) => (
+                        <Link
+                          key={child.label}
+                          href={child.href}
+                          className="flex items-center px-4 py-2.5 text-sm text-white/80 hover:text-gold rounded-lg transition-all duration-200 group"
+                        >
+                          <span className="w-0 group-hover:w-3 h-px bg-gold mr-0 group-hover:mr-3 transition-all duration-200" />
+                          {child.label}
+                        </Link>
+                      ))}
                     </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
+                    {"image" in link && link.image && (
+                      <div className="flex-shrink-0 w-[160px] h-[120px] rounded-lg overflow-hidden m-1.5 self-center">
+                        <Image
+                          src={link.image}
+                          alt={link.label}
+                          width={160}
+                          height={120}
+                          className="w-[160px] h-[120px] object-cover object-center"
+                        />
+                      </div>
+                    )}
+                  </div>
+                </div>
+              )}
             </div>
           ))}
         </div>
@@ -225,83 +240,99 @@ export default function Navigation() {
       </div>
 
       {/* Mobile Menu */}
-      <AnimatePresence>
-        {mobileOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-forest border-t border-white/10 overflow-hidden"
-          >
-            <div className="px-6 py-6 space-y-4">
-              {navLinks.map((link) => (
-                <div key={link.label}>
-                  {link.children ? (
-                    <>
-                      <button
-                        onClick={() => setMobileExpanded(mobileExpanded === link.label ? null : link.label)}
-                        className="flex items-center justify-between w-full text-white/90 hover:text-white text-base py-2"
-                      >
-                        {link.label}
-                        <svg
-                          className={`w-4 h-4 transition-transform ${mobileExpanded === link.label ? "rotate-180" : ""}`}
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          strokeWidth={2}
-                        >
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-                        </svg>
-                      </button>
-                      <AnimatePresence>
-                        {mobileExpanded === link.label && (
-                          <motion.div
-                            initial={{ opacity: 0, height: 0 }}
-                            animate={{ opacity: 1, height: "auto" }}
-                            exit={{ opacity: 0, height: 0 }}
-                            className="overflow-hidden"
-                          >
-                            <div className="pl-4 pb-2 space-y-1">
-                              {link.children.map((child) => (
-                                <Link
-                                  key={child.label}
-                                  href={child.href}
-                                  className="block text-white/60 hover:text-white text-sm py-1.5"
-                                  onClick={() => setMobileOpen(false)}
-                                >
-                                  {child.label}
-                                </Link>
-                              ))}
-                            </div>
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
-                    </>
-                  ) : (
-                    <Link
-                      href={link.href}
-                      className="block text-white/90 hover:text-white text-base py-2"
-                      onClick={() => setMobileOpen(false)}
-                    >
-                      {link.label}
-                    </Link>
-                  )}
-                </div>
-              ))}
-              <div className="pt-4 border-t border-white/10 space-y-3">
-                <a href="tel:+14809313617" className="block text-gold font-semibold text-lg">(480) 931-3617</a>
-                <Link
-                  href="/insurance"
-                  className="block bg-gold text-white text-center font-semibold px-6 py-3 rounded-xl"
-                  onClick={() => setMobileOpen(false)}
-                >
-                  Verify Insurance
-                </Link>
-              </div>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      <div
+        ref={mobileMenu.ref}
+        style={mobileMenu.style}
+        className="lg:hidden bg-forest border-t border-white/10 transition-all duration-300 ease-out"
+      >
+        <div className="px-6 py-6 space-y-4">
+          {navLinks.map((link) => (
+            <MobileNavItem
+              key={link.label}
+              link={link}
+              expanded={mobileExpanded === link.label}
+              onToggle={() => setMobileExpanded(mobileExpanded === link.label ? null : link.label)}
+              onClose={() => setMobileOpen(false)}
+            />
+          ))}
+          <div className="pt-4 border-t border-white/10 space-y-3">
+            <a href="tel:+14809313617" className="block text-gold font-semibold text-lg">(480) 931-3617</a>
+            <Link
+              href="/insurance"
+              className="block bg-gold text-white text-center font-semibold px-6 py-3 rounded-xl"
+              onClick={() => setMobileOpen(false)}
+            >
+              Verify Insurance
+            </Link>
+          </div>
+        </div>
+      </div>
     </nav>
+  );
+}
+
+function MobileNavItem({
+  link,
+  expanded,
+  onToggle,
+  onClose,
+}: {
+  link: (typeof navLinks)[number];
+  expanded: boolean;
+  onToggle: () => void;
+  onClose: () => void;
+}) {
+  const submenu = useCollapse(expanded);
+
+  if (!link.children) {
+    return (
+      <div>
+        <Link
+          href={link.href}
+          className="block text-white/90 hover:text-white text-base py-2"
+          onClick={onClose}
+        >
+          {link.label}
+        </Link>
+      </div>
+    );
+  }
+
+  return (
+    <div>
+      <button
+        onClick={onToggle}
+        className="flex items-center justify-between w-full text-white/90 hover:text-white text-base py-2"
+      >
+        {link.label}
+        <svg
+          className={`w-4 h-4 transition-transform duration-200 ${expanded ? "rotate-180" : ""}`}
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          strokeWidth={2}
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+      </button>
+      <div
+        ref={submenu.ref}
+        style={submenu.style}
+        className="transition-all duration-200 ease-out"
+      >
+        <div className="pl-4 pb-2 space-y-1">
+          {link.children.map((child) => (
+            <Link
+              key={child.label}
+              href={child.href}
+              className="block text-white/60 hover:text-white text-sm py-1.5"
+              onClick={onClose}
+            >
+              {child.label}
+            </Link>
+          ))}
+        </div>
+      </div>
+    </div>
   );
 }
