@@ -8,11 +8,23 @@ export default function Hero() {
     <section className="relative h-screen min-h-[700px] flex items-end overflow-hidden">
       {/* Video Background with subtle parallax */}
       <div className="absolute inset-0 bg-forest">
+        {/* Mobile: static poster image (no video download) */}
+        <div className="absolute inset-0 md:hidden">
+          <Image
+            src="/images/scottsdale/DRC-DRONE-SCOTTSDALE-08-01-2024-August-01-202400006-2.jpg"
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover opacity-60"
+          />
+        </div>
+        {/* Desktop: animated video background */}
         <motion.div
           initial={{ scale: 1.08 }}
           animate={{ scale: 1 }}
           transition={{ duration: 20, ease: "linear", repeat: Infinity, repeatType: "reverse" }}
-          className="absolute inset-0"
+          className="absolute inset-0 hidden md:block"
         >
           <video
             autoPlay
