@@ -4,7 +4,7 @@ import PageHero from "@/components/PageHero";
 import AddictionPrograms from "@/components/AddictionPrograms";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { InlineFAQSchema, MedicalConditionSchema } from "@/lib/seo";
+import { MedicalConditionSchema } from "@/lib/seo";
 import AEOBlock from "@/components/AEOBlock";
 import RelatedPages from "@/components/RelatedPages";
 import ConditionFAQ from "@/components/ConditionFAQ";
@@ -58,7 +58,6 @@ export default function StimulantAddictionPage() {
   return (
     <>
       <SchemaScript schema={[getFAQSchema(faqData["stimulant-addiction-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/addiction/stimulants"))]} />
-      <InlineFAQSchema items={faqs} />
       <MedicalConditionSchema
         name="Stimulant Addiction"
         description="Stimulant addiction is a substance use disorder involving cocaine, methamphetamine, prescription amphetamines, or other stimulants. These substances flood the brain with dopamine and norepinephrine, creating intense dependence and making natural reward processing increasingly difficult."

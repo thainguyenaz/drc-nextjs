@@ -7,7 +7,7 @@ import ConditionFAQ from "@/components/ConditionFAQ";
 import AEOBlock from "@/components/AEOBlock";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { buildMetadata, InlineFAQSchema, SpeakableSchema, MedicalTherapySchema } from "@/lib/seo";
+import { buildMetadata, SpeakableSchema, MedicalTherapySchema } from "@/lib/seo";
 import AnimatedSection from "@/components/animated/AnimatedSection";
 import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
 import Breadcrumb from "@/components/Breadcrumb";
@@ -50,7 +50,6 @@ export default function AlcoholDetoxPage() {
   return (
     <>
       <SchemaScript schema={[getFAQSchema(faqData["alcoholism-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/addiction/alcohol-detox"))]} />
-      <InlineFAQSchema items={faqs} />
       <SpeakableSchema url="/addiction/alcohol-detox" cssSelectors={["[data-speakable]"]} />
       <MedicalTherapySchema
         name="Medically Supervised Alcohol Detoxification"

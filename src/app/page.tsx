@@ -26,7 +26,7 @@ import ContinuumOfCare from "@/components/ContinuumOfCare";
 import GetHelpForm from "@/components/forms/GetHelpForm";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { FAQPageSchema, SpeakableSchema, VideoSchemas } from "@/lib/seo";
+import { SpeakableSchema, VideoSchemas } from "@/lib/seo";
 import AEOBlock from "@/components/AEOBlock";
 import SchemaScript from "@/components/SchemaScript";
 import ConditionFAQ from "@/components/ConditionFAQ";
@@ -84,32 +84,6 @@ const homepageWebSiteSchema = {
   },
 };
 
-const homepageFaqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Does Desert Recovery Centers accept insurance?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Desert Recovery Centers accepts most major private insurance plans including Aetna, Blue Cross Blue Shield, Cigna, UnitedHealthcare, Humana, Tricare, and TriWest. Our admissions team verifies your benefits at no cost before treatment begins. Call (480) 931-3617 for a free insurance verification." },
-    },
-    {
-      "@type": "Question",
-      "name": "Where are Desert Recovery Centers locations?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Desert Recovery Centers has three Arizona locations. Our Glendale residential facility is at 8105 W Frier Dr, Glendale, AZ 85303. Our Scottsdale residential facility is at 23222 N Church Rd, Scottsdale, AZ 85255. Our Phoenix outpatient center offering PHP, IOP, and TMS therapy is at 4160 N. 108th Ave, Phoenix, AZ 85037." },
-    },
-    {
-      "@type": "Question",
-      "name": "Is Desert Recovery Centers accredited?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Desert Recovery Centers holds the Joint Commission Gold Seal of Approval, the highest standard of accreditation in behavioral health. The facility is also LegitScript certified." },
-    },
-    {
-      "@type": "Question",
-      "name": "What is the admissions process at Desert Recovery Centers?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Call (480) 931-3617 any time, day or night. An admissions coordinator answers 24 hours a day, conducts a brief clinical assessment by phone, verifies your insurance benefits, and gets you scheduled. Most clients begin treatment within 48 hours of their first call." },
-    },
-  ],
-};
 
 const howToSchema = {
   "@context": "https://schema.org",
@@ -128,10 +102,9 @@ const howToSchema = {
 export default function Home() {
   return (
     <>
-      <FAQPageSchema />
       <SpeakableSchema url="/" cssSelectors={["[data-speakable]"]} />
       <VideoSchemas path="/" />
-      <SchemaScript schema={[homepageOrgSchema, homepageWebSiteSchema, homepageFaqSchema, howToSchema, getFAQSchema(faqData["homepage"])]} />
+      <SchemaScript schema={[homepageOrgSchema, homepageWebSiteSchema, howToSchema, getFAQSchema(faqData["homepage"])]} />
       <Navigation />
       <Hero />
       <TrustBar />

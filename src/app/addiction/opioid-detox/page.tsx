@@ -7,7 +7,7 @@ import ConditionFAQ from "@/components/ConditionFAQ";
 import AEOBlock from "@/components/AEOBlock";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { buildMetadata, InlineFAQSchema, SpeakableSchema, MedicalTherapySchema } from "@/lib/seo";
+import { buildMetadata, SpeakableSchema, MedicalTherapySchema } from "@/lib/seo";
 import AnimatedSection from "@/components/animated/AnimatedSection";
 import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
 import { faqData } from "@/data/faq-data";
@@ -50,7 +50,6 @@ export default function OpioidDetoxPage() {
   return (
     <>
       <SchemaScript schema={[getFAQSchema(faqData["heroin-addiction-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/addiction/opioid-detox"))]} />
-      <InlineFAQSchema items={faqs} />
       <SpeakableSchema url="/addiction/opioid-detox" cssSelectors={["[data-speakable]"]} />
       <MedicalTherapySchema
         name="Medically Supervised Opioid Detoxification"

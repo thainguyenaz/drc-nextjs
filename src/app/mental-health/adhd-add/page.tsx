@@ -4,7 +4,7 @@ import PageHero from "@/components/PageHero";
 import ConditionFAQ from "@/components/ConditionFAQ";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { InlineFAQSchema, SpeakableSchema, MedicalConditionSchema } from "@/lib/seo";
+import { SpeakableSchema, MedicalConditionSchema } from "@/lib/seo";
 import AEOBlock from "@/components/AEOBlock";
 import RelatedPages from "@/components/RelatedPages";
 import { getPageMeta } from "@/data/page-metadata";
@@ -57,7 +57,6 @@ export default function ADHDTreatmentPage() {
   return (
     <>
       <SchemaScript schema={[getFAQSchema(faqData["adhd-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/mental-health/adhd-add")), {"@context":"https://schema.org","@type":"MedicalWebPage","@id":"https://www.desertrecoverycenters.com/mental-health/adhd-add/#webpage","url":"https://www.desertrecoverycenters.com/mental-health/adhd-add/","name":"ADHD and ADD Treatment Arizona | Desert Recovery Centers","specialty":"Psychiatry","reviewedBy":{"@type":"Person","@id":"https://www.desertrecoverycenters.com/our-team#dr-an-nguyen","name":"Dr. An Nguyen","jobTitle":"Licensed Clinical Psychologist, Clinical Director","worksFor":{"@id":"https://www.desertrecoverycenters.com/#organization"}},"dateModified":"2026-04-05","publisher":{"@id":"https://www.desertrecoverycenters.com/#organization"}}]} />
-      <InlineFAQSchema items={faqs} />
       <SpeakableSchema url="/mental-health/adhd-add" cssSelectors={["[data-speakable]"]} />
       <MedicalConditionSchema
         name="Attention-Deficit/Hyperactivity Disorder (ADHD)"

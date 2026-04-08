@@ -4,7 +4,7 @@ import PageHero from "@/components/PageHero";
 import ConditionFAQ from "@/components/ConditionFAQ";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { InlineFAQSchema, SpeakableSchema, MedicalConditionSchema } from "@/lib/seo";
+import { SpeakableSchema, MedicalConditionSchema } from "@/lib/seo";
 import AEOBlock from "@/components/AEOBlock";
 import RelatedPages from "@/components/RelatedPages";
 import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
@@ -59,7 +59,6 @@ export default function BipolarTreatmentPage() {
   return (
     <>
       <SchemaScript schema={[getFAQSchema(faqData["bipolar-disorder-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/mental-health/bipolar-disorder-treatment")), {"@context":"https://schema.org","@type":"MedicalWebPage","@id":"https://www.desertrecoverycenters.com/mental-health/bipolar-disorder-treatment/#webpage","url":"https://www.desertrecoverycenters.com/mental-health/bipolar-disorder-treatment/","name":"Bipolar Disorder Treatment Arizona | Desert Recovery Centers","specialty":"Psychiatry","reviewedBy":{"@type":"Person","@id":"https://www.desertrecoverycenters.com/our-team#dr-an-nguyen","name":"Dr. An Nguyen","jobTitle":"Licensed Clinical Psychologist, Clinical Director","worksFor":{"@id":"https://www.desertrecoverycenters.com/#organization"}},"dateModified":"2026-04-05","publisher":{"@id":"https://www.desertrecoverycenters.com/#organization"}}]} />
-      <InlineFAQSchema items={faqs} />
       <SpeakableSchema url="/mental-health/bipolar-disorder-treatment" cssSelectors={["[data-speakable]"]} />
       <MedicalConditionSchema
         name="Bipolar Disorder"
