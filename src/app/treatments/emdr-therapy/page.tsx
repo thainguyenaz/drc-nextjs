@@ -8,51 +8,35 @@ import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import { MedicalTherapySchema } from "@/lib/seo";
+import ConditionFAQ from "@/components/ConditionFAQ";
+import SchemaScript from "@/components/SchemaScript";
 import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
 import { faqData } from "@/data/faq-data";
-import SchemaScript from "@/components/SchemaScript";
 import FAQSection from "@/components/FAQSection";
 import Breadcrumb from "@/components/Breadcrumb";
 import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
-import Citations from "@/components/Citations";
 
-const approachPillars = [
-  {
-    name: "Integrated Assessment",
-    description: "Comprehensive psychiatric evaluation that identifies all co-occurring conditions from day one, no missed diagnoses, no fragmented care.",
-  },
-  {
-    name: "Unified Treatment Planning",
-    description: "A single, cohesive treatment plan that addresses both mental health and addiction simultaneously, managed by the same clinical team.",
-  },
-  {
-    name: "Medication Management",
-    description: "Psychiatric oversight from our medical director ensures medication protocols support both mental health stability and recovery from substance use.",
-  },
-  {
-    name: "Evidence-Based Therapies",
-    description: "CBT, DBT, EMDR, and trauma-focused modalities delivered by doctoral-level clinicians trained in dual diagnosis treatment.",
-  },
-  {
-    name: "Holistic Support",
-    description: "Yoga, mindfulness, nutrition counseling, and somatic therapies address the physical and spiritual dimensions of co-occurring disorders.",
-  },
-  {
-    name: "Aftercare Continuity",
-    description: "Discharge planning that maintains integrated care, connecting clients with dual diagnosis-competent providers and support systems.",
-  },
+const phases = [
+  { name: "History & Preparation", description: "Building therapeutic rapport and identifying target memories for reprocessing." },
+  { name: "Assessment", description: "Activating the target memory and establishing baseline measurements of disturbance." },
+  { name: "Desensitization", description: "Bilateral stimulation (eye movements, tapping, or auditory tones) while the client focuses on the traumatic memory." },
+  { name: "Installation", description: "Strengthening positive beliefs and adaptive cognitions to replace the negative self-beliefs tied to the trauma." },
+  { name: "Body Scan", description: "Identifying and processing any residual physical tension or discomfort associated with the memory." },
+  { name: "Closure & Reevaluation", description: "Ensuring emotional stability and assessing the effectiveness of reprocessing in subsequent sessions." },
 ];
 
-const commonPairings = [
-  "Depression + Alcohol Use Disorder",
-  "Anxiety + Benzodiazepine Dependence",
-  "PTSD + Opioid Addiction",
-  "Bipolar Disorder + Stimulant Abuse",
-  "BPD + Polysubstance Use",
-  "ADHD + Cannabis or Stimulant Misuse",
+const treatsConditions = [
+  "PTSD & Complex PTSD",
+  "Childhood Trauma & Abuse",
+  "Sexual Assault & Domestic Violence",
+  "Combat & First Responder Trauma",
+  "Grief & Loss",
+  "Phobias & Panic Disorders",
+  "Addiction & Relapse Triggers",
+  "Performance Anxiety",
 ];
 
-export default function DualDiagnosisPage() {
+export default function EMDRPage() {
   const collisionRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: collisionRef,
@@ -64,19 +48,19 @@ export default function DualDiagnosisPage() {
 
   return (
     <>
-      <SchemaScript schema={[getFAQSchema(faqData["dual-diagnosis-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/treatments/dual-diagnosis"))]} />
+      <SchemaScript schema={[getFAQSchema(faqData["emdr"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/treatments/emdr-therapy"))]} />
       <MedicalTherapySchema
-        name="Dual Diagnosis Treatment"
-        description="Integrated treatment for co-occurring mental health conditions and substance use disorders, addressing both simultaneously for lasting recovery."
-        url="/treatments/dual-diagnosis"
-        conditions={["Depression", "Anxiety", "PTSD", "Bipolar Disorder", "Borderline Personality Disorder", "ADHD", "Alcohol Use Disorder", "Opioid Addiction"]}
+        name="EMDR Therapy"
+        description="Eye Movement Desensitization and Reprocessing therapy that unlocks the brain's natural ability to heal from trauma and disturbing life experiences."
+        url="/treatments/emdr-therapy"
+        conditions={["PTSD", "Complex PTSD", "Childhood Trauma", "Grief", "Phobias", "Panic Disorders", "Addiction", "Performance Anxiety"]}
       />
       <Navigation />
-      <Breadcrumb items={getBreadcrumbsFromPathname("/treatments/dual-diagnosis")} />
+      <Breadcrumb items={getBreadcrumbsFromPathname("/treatments/emdr-therapy")} />
       <PageHero
-        eyebrow="Treatment Approach"
-        title="Dual Diagnosis Treatment"
-        description="When mental health and addiction collide, treating one without the other is a recipe for relapse. We treat both, together."
+        eyebrow="Treatment Modality"
+        title="EMDR Therapy"
+        description="Eye Movement Desensitization and Reprocessing, unlocking the brain's natural ability to heal from trauma."
         bgImage="/images/general/DRC-Treatment-Therapies-BG-Fade.jpg"
       />
 
@@ -89,8 +73,8 @@ export default function DualDiagnosisPage() {
               className="relative h-[320px] md:h-[400px] rounded-2xl overflow-hidden shadow-xl group"
             >
               <Image
-                src="/images/glendale/Glendale-Living-Room.jpg"
-                alt="Comfortable living space at Desert Recovery Centers"
+                src="/images/glendale/Glendale-Therapy-Room.jpg"
+                alt="Private therapy room for EMDR sessions"
                 fill
                 className="object-cover group-hover:scale-[1.04] transition-transform duration-[350ms] ease-out"
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -101,8 +85,8 @@ export default function DualDiagnosisPage() {
               className="relative h-[320px] md:h-[400px] rounded-2xl overflow-hidden shadow-xl group"
             >
               <Image
-                src="/images/scottsdale/DRC-LIVING-ROOMS-NORTH-SCOTTSDALE-08-01-2024-1317August-01-202400007-2.jpg"
-                alt="Scottsdale treatment facility living area"
+                src="/images/scottsdale/DRC-SERANITY-NORTH-SCOTTSDALE-08-01-2024-August-01-202400001-2.jpg"
+                alt="Serenity space at Desert Recovery Centers"
                 fill
                 className="object-cover group-hover:scale-[1.04] transition-transform duration-[350ms] ease-out"
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -118,26 +102,26 @@ export default function DualDiagnosisPage() {
             className="max-w-3xl mx-auto"
           >
             <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
-              Understanding Dual Diagnosis
+              Understanding EMDR
             </span>
             <div className="w-[60px] h-0.5 bg-gold mt-4 mb-4" />
             <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold mb-6 leading-tight">
-              Two Conditions. One Integrated Treatment.
+              Healing Trauma at Its Root
             </h2>
             <p className="text-gray-600 leading-relaxed mb-4">
-              Nearly half of all individuals with a substance use disorder also have a co-occurring mental health condition. Depression fuels drinking. Trauma drives opioid use. Anxiety triggers benzodiazepine dependence. These conditions don&apos;t exist in isolation, and they can&apos;t be treated that way.
+              EMDR is a powerful, extensively researched psychotherapy that enables people to heal from the symptoms and emotional distress resulting from disturbing life experiences. Recognized by the World Health Organization, the American Psychological Association, and the Department of Veterans Affairs as a frontline trauma treatment, EMDR has helped millions recover from events that once felt impossible to move past.
             </p>
             <p className="text-gray-600 leading-relaxed mb-4">
-              Dual diagnosis treatment at Desert Recovery Centers is not an add-on. It is our foundation. Every client receives a comprehensive psychiatric evaluation within the first 72 hours, and every treatment plan is designed to address the full clinical picture from day one.
+              Unlike traditional talk therapy, EMDR does not require you to talk in detail about the traumatic event. Instead, it uses bilateral stimulation, typically guided eye movements, to activate the brain&apos;s natural information processing system, allowing traumatic memories to be reprocessed and stored in a way that no longer triggers overwhelming emotional responses.
             </p>
             <p className="text-gray-600 leading-relaxed">
-              Our clinical psychologists, psychiatrist, and medical team collaborate daily to ensure that medication management, therapy protocols, and holistic programming work in concert, not at cross-purposes.
+              At Desert Recovery Centers, EMDR is delivered exclusively by licensed clinical psychologists with specialized EMDR training, ensuring the highest standard of care for our clients.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Approach pillars */}
+      {/* Eight phases */}
       <section className="py-20 md:py-28 bg-cream">
         <div className="max-w-container mx-auto px-6">
           <motion.div
@@ -148,32 +132,33 @@ export default function DualDiagnosisPage() {
             className="text-center mb-14"
           >
             <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
-              Our Approach
+              The EMDR Protocol
             </span>
             <div className="w-[60px] h-0.5 bg-gold mx-auto mt-4 mb-4" />
             <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold">
-              The DRC Dual Diagnosis Model
+              How EMDR Works
             </h2>
           </motion.div>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {approachPillars.map((pillar, i) => (
+            {phases.map((phase, i) => (
               <motion.div
-                key={pillar.name}
+                key={phase.name}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.08 }}
                 className="bg-white rounded-xl p-6 border-t-2 border-t-transparent hover:border-t-gold hover:shadow-lg transition-all"
               >
-                <h3 className="font-display text-lg text-forest font-semibold mb-2">{pillar.name}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{pillar.description}</p>
+                <span className="text-gold text-xs font-semibold tracking-widest uppercase">Phase {i + 1}</span>
+                <h3 className="font-display text-lg text-forest font-semibold mt-2 mb-2">{phase.name}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">{phase.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Common pairings collision */}
+      {/* Collision: conditions treated */}
       <section className="bg-forest py-20 md:py-28 overflow-hidden">
         <div className="max-w-container mx-auto px-6">
           <div className="flex flex-col md:flex-row gap-12 lg:gap-20 items-center">
@@ -185,25 +170,25 @@ export default function DualDiagnosisPage() {
               className="md:w-[55%]"
             >
               <span className="text-gold font-body text-sm tracking-[0.2em] uppercase font-medium">
-                Common Co-Occurring Conditions
+                Conditions Treated
               </span>
               <div className="w-[60px] h-0.5 bg-gold mt-4 mb-4" />
               <h2 className="font-display text-3xl md:text-4xl text-white font-semibold mb-6 leading-tight">
-                Conditions That Often Travel Together
+                EMDR Treats More Than PTSD
               </h2>
               <p className="text-white/70 text-sm leading-relaxed mb-8">
-                These are among the most common dual diagnosis presentations we treat. Each pairing requires specialized clinical expertise to ensure one condition&apos;s treatment doesn&apos;t inadvertently worsen the other.
+                While EMDR is best known for trauma and PTSD, research supports its effectiveness for a wide range of conditions rooted in disturbing life experiences. Many clients who have struggled with addiction, anxiety, or depression find that EMDR resolves the underlying trauma driving their symptoms.
               </p>
-              <ul className="space-y-4">
-                {commonPairings.map((item) => (
-                  <li key={item} className="flex items-start gap-3">
+              <div className="grid grid-cols-2 gap-3">
+                {treatsConditions.map((item) => (
+                  <div key={item} className="flex items-start gap-3">
                     <svg className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                     <span className="text-white/80 text-sm leading-relaxed">{item}</span>
-                  </li>
+                  </div>
                 ))}
-              </ul>
+              </div>
             </motion.div>
 
             <motion.div
@@ -215,8 +200,8 @@ export default function DualDiagnosisPage() {
             >
               <div className="relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-xl group">
                 <Image
-                  src="/images/glendale/Glendale-Therapy-Room.jpg"
-                  alt="Therapy room at Desert Recovery Centers"
+                  src="/images/scottsdale/DRC-VHARMONY-ROOM-NORTH-SCOTTSDALE-08-01-2024-0631August-01-202400010-2.jpg"
+                  alt="Harmony therapy room at Desert Recovery Centers"
                   fill
                   className="object-cover group-hover:scale-[1.04] transition-transform duration-[350ms] ease-out"
                   sizes="(max-width: 768px) 100vw, 45vw"
@@ -227,7 +212,7 @@ export default function DualDiagnosisPage() {
         </div>
       </section>
 
-      {/* Final CTA */}
+      {/* CTA */}
       <section className="py-20 md:py-28 bg-white">
         <div className="max-w-container mx-auto px-6">
           <motion.div
@@ -238,14 +223,14 @@ export default function DualDiagnosisPage() {
             className="max-w-3xl mx-auto text-center"
           >
             <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
-              Start Your Recovery
+              Begin Healing
             </span>
             <div className="w-[60px] h-0.5 bg-gold mx-auto mt-4 mb-4" />
             <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold mb-6 leading-tight">
-              One Call. Both Conditions. Real Answers.
+              You Don&apos;t Have to Live With the Weight of Trauma
             </h2>
             <p className="text-gray-600 leading-relaxed mb-8">
-              Our admissions team conducts a free, confidential clinical pre-assessment that evaluates both mental health and substance use concerns. You&apos;ll know within one call whether dual diagnosis treatment is right for you, and what your insurance will cover.
+              EMDR has helped combat veterans, survivors of abuse, first responders, and individuals struggling with addiction find relief from memories that once controlled their lives. Our clinical team is here to guide you through every step of the process.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <a href="tel:+14809313617" className="bg-gold hover:bg-gold-dark text-white font-semibold text-sm px-6 py-3 rounded-xl transition-colors cursor-pointer">
@@ -265,11 +250,11 @@ export default function DualDiagnosisPage() {
           <div className="max-w-3xl mx-auto">
             <h3 className="text-forest font-display text-lg font-semibold mb-4">Related Treatment Programs</h3>
             <div className="flex flex-wrap gap-3">
-              <a href="/treatments/cbt" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">CBT Therapy</a>
-              <a href="/mental-health/depression-treatment" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">Depression Treatment</a>
-              <a href="/addiction/alcoholism-treatment" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">Alcohol Addiction</a>
+              <a href="/treatments/trauma-therapy" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">Trauma Therapy</a>
+              <a href="/treatments/cbt-cognitive-behavioral-therapy" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">CBT Therapy</a>
+              <a href="/mental-health/ptsd-treatment" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">PTSD Treatment</a>
               <a href="/mental-health/anxiety-treatment" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">Anxiety Treatment</a>
-              <a href="/our-team" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">Our Team</a>
+              <a href="/treatments/holistic-therapies" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">Holistic Therapies</a>
             </div>
           </div>
         </div>
@@ -280,25 +265,25 @@ export default function DualDiagnosisPage() {
         <div className="max-w-container mx-auto px-6">
           <div className="max-w-3xl mx-auto space-y-8">
             <article className="border-l-2 border-gold/30 pl-5">
-              <h3 className="text-forest font-semibold text-sm mb-1">What is dual diagnosis treatment at Desert Recovery Centers?</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">Dual diagnosis treatment at Desert Recovery Centers is an integrated approach that treats co-occurring mental health conditions and substance use disorders simultaneously. Desert Recovery Centers is a Joint Commission accredited luxury treatment center in Arizona where every client receives a comprehensive psychiatric evaluation within the first 72 hours, and every treatment plan addresses the full clinical picture from day one.</p>
+              <h3 className="text-forest font-semibold text-sm mb-1">What is EMDR therapy at Desert Recovery Centers?</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">EMDR (Eye Movement Desensitization and Reprocessing) at Desert Recovery Centers is an evidence-based psychotherapy that uses bilateral stimulation to help the brain reprocess traumatic memories. Desert Recovery Centers is a Joint Commission accredited luxury treatment center in Arizona where EMDR is delivered exclusively by licensed clinical psychologists with specialized EMDR training.</p>
             </article>
             <article className="border-l-2 border-gold/30 pl-5">
-              <h3 className="text-forest font-semibold text-sm mb-1">How does dual diagnosis treatment work for addiction and mental health?</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">Dual diagnosis treatment works by addressing both conditions as interconnected rather than separate problems. A unified treatment plan combines psychiatric medication management, evidence-based therapies like CBT, DBT, and EMDR, and holistic support, all coordinated by the same clinical team to ensure treatments work in concert rather than at cross-purposes.</p>
+              <h3 className="text-forest font-semibold text-sm mb-1">How does EMDR work for addiction and mental health treatment?</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">EMDR activates the brain&apos;s natural information processing system through guided eye movements, tapping, or auditory tones while the client focuses on a traumatic memory. This allows disturbing memories to be reprocessed and stored in a way that no longer triggers overwhelming emotional responses, without requiring detailed verbal recounting of the trauma.</p>
             </article>
             <article className="border-l-2 border-gold/30 pl-5">
-              <h3 className="text-forest font-semibold text-sm mb-1">Who delivers dual diagnosis treatment at Desert Recovery Centers?</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">Dual diagnosis treatment at Desert Recovery Centers is delivered by a multidisciplinary team of doctoral-level clinicians including licensed clinical psychologists, a board-certified psychiatrist, and registered nurses. With small client-to-clinician ratios, the team collaborates daily to ensure medication management, therapy protocols, and holistic programming are aligned for each client.</p>
+              <h3 className="text-forest font-semibold text-sm mb-1">Who delivers EMDR at Desert Recovery Centers?</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">EMDR at Desert Recovery Centers is delivered exclusively by licensed clinical psychologists with doctoral-level training and specialized EMDR certification. Small client-to-clinician ratios ensure each client receives the focused, individualized attention that effective trauma reprocessing requires.</p>
             </article>
           </div>
         </div>
       </section>
 
-      <FAQSection faqs={faqData["dual-diagnosis-treatment"]} />
+      <ConditionFAQ items={faqData["emdr"]} />
+      <FAQSection faqs={faqData["emdr"]} />
       <CTASection />
       <Footer />
-      <Citations />
     </>
   );
 }

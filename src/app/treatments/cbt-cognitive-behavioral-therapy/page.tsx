@@ -47,15 +47,15 @@ export default function CBTPage() {
 
   return (
     <>
-      <SchemaScript schema={[getFAQSchema(faqData["cbt-therapy"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/treatments/cbt"))]} />
+      <SchemaScript schema={[getFAQSchema(faqData["cbt-therapy"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/treatments/cbt-cognitive-behavioral-therapy"))]} />
       <MedicalTherapySchema
         name="Cognitive Behavioral Therapy (CBT)"
         description="Evidence-based psychotherapy that restructures thought patterns to create lasting behavioral change for addiction and mental health recovery."
-        url="/treatments/cbt"
+        url="/treatments/cbt-cognitive-behavioral-therapy"
         conditions={["Depression", "Anxiety", "PTSD", "Substance Use Disorders", "OCD", "Panic Disorder", "Insomnia", "Eating Disorders"]}
       />
       <Navigation />
-      <Breadcrumb items={getBreadcrumbsFromPathname("/treatments/cbt")} />
+      <Breadcrumb items={getBreadcrumbsFromPathname("/treatments/cbt-cognitive-behavioral-therapy")} />
       <PageHero
         eyebrow="Treatment Modality"
         title="Cognitive Behavioral Therapy (CBT)"
@@ -247,11 +247,11 @@ export default function CBTPage() {
           <div className="max-w-3xl mx-auto">
             <h3 className="text-forest font-display text-lg font-semibold mb-4">Related Treatment Programs</h3>
             <div className="flex flex-wrap gap-3">
-              <a href="/treatments/dbt" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">DBT Therapy</a>
-              <a href="/treatments/emdr" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">EMDR Therapy</a>
+              <a href="/treatments/dbt-dialectical-behavior-therapy" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">DBT Therapy</a>
+              <a href="/treatments/emdr-therapy" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">EMDR Therapy</a>
               <a href="/mental-health/anxiety-treatment" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">Anxiety Treatment</a>
               <a href="/mental-health/depression-treatment" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">Depression Treatment</a>
-              <a href="/treatments/dual-diagnosis" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">Dual Diagnosis</a>
+              <a href="/treatments/dual-diagnosis-treatment" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">Dual Diagnosis</a>
             </div>
           </div>
         </div>

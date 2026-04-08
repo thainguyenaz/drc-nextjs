@@ -243,7 +243,7 @@ export default function DualDiagnosisExplainedPage() {
               <a href="tel:+14809313617" className="bg-gold hover:bg-gold-dark text-white font-semibold text-sm px-6 py-3 rounded-xl transition-colors cursor-pointer">
                 Call (480) 931-3617
               </a>
-              <a href="/treatments/dual-diagnosis" className="border border-sage text-sage hover:bg-sage hover:text-white font-semibold text-sm px-6 py-3 rounded-xl transition-colors cursor-pointer">
+              <a href="/treatments/dual-diagnosis-treatment" className="border border-sage text-sage hover:bg-sage hover:text-white font-semibold text-sm px-6 py-3 rounded-xl transition-colors cursor-pointer">
                 Dual Diagnosis Treatment
               </a>
             </div>
@@ -252,7 +252,7 @@ export default function DualDiagnosisExplainedPage() {
               <h3 className="font-display text-lg text-forest font-semibold mb-4">Related Resources</h3>
               <div className="flex flex-wrap gap-3">
                 {[
-                  { label: "Dual Diagnosis Treatment", href: "/treatments/dual-diagnosis" },
+                  { label: "Dual Diagnosis Treatment", href: "/treatments/dual-diagnosis-treatment" },
                   { label: "Signs of Addiction", href: "/blog/signs-of-addiction" },
                   { label: "Depression Treatment", href: "/mental-health/depression-treatment" },
                   { label: "PTSD Treatment", href: "/mental-health/ptsd-treatment" },

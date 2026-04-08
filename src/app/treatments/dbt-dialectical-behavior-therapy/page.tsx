@@ -57,15 +57,15 @@ export default function DBTPage() {
 
   return (
     <>
-      <SchemaScript schema={[getFAQSchema(faqData["dbt-therapy"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/treatments/dbt"))]} />
+      <SchemaScript schema={[getFAQSchema(faqData["dbt-therapy"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/treatments/dbt-dialectical-behavior-therapy"))]} />
       <MedicalTherapySchema
         name="Dialectical Behavior Therapy (DBT)"
         description="Skills-based psychotherapy that balances acceptance and change, helping clients navigate intense emotions without self-destruction."
-        url="/treatments/dbt"
+        url="/treatments/dbt-dialectical-behavior-therapy"
         conditions={["Borderline Personality Disorder", "Emotional Dysregulation", "Substance Use Disorders", "Self-Harm", "PTSD", "Bipolar Disorder", "Eating Disorders", "Chronic Suicidal Ideation"]}
       />
       <Navigation />
-      <Breadcrumb items={getBreadcrumbsFromPathname("/treatments/dbt")} />
+      <Breadcrumb items={getBreadcrumbsFromPathname("/treatments/dbt-dialectical-behavior-therapy")} />
       <PageHero
         eyebrow="Treatment Modality"
         title="Dialectical Behavior Therapy (DBT)"
@@ -261,11 +261,11 @@ export default function DBTPage() {
           <div className="max-w-3xl mx-auto">
             <h3 className="text-forest font-display text-lg font-semibold mb-4">Related Treatment Programs</h3>
             <div className="flex flex-wrap gap-3">
-              <a href="/treatments/cbt" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">CBT Therapy</a>
+              <a href="/treatments/cbt-cognitive-behavioral-therapy" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">CBT Therapy</a>
               <a href="/treatments/trauma-therapy" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">Trauma Therapy</a>
               <a href="/mental-health/personality-disorder-treatment" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">Personality Disorders</a>
               <a href="/mental-health/bipolar-disorder-treatment" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">Bipolar Disorder</a>
-              <a href="/treatments/dual-diagnosis" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">Dual Diagnosis</a>
+              <a href="/treatments/dual-diagnosis-treatment" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">Dual Diagnosis</a>
             </div>
           </div>
         </div>

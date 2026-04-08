@@ -15,45 +15,42 @@ import { faqData } from "@/data/faq-data";
 import SchemaScript from "@/components/SchemaScript";
 import FAQSection from "@/components/FAQSection";
 
-const benefits = [
+const therapies = [
   {
-    name: "Pain Reduction",
-    description: "Unfocused shockwaves stimulate the body's natural pain relief mechanisms, reducing chronic and acute pain without medication.",
+    name: "Yoga & Movement",
+    description: "Trauma-informed yoga classes that restore the connection between mind and body, improve flexibility, and reduce cortisol levels.",
   },
   {
-    name: "Decreased Inflammation",
-    description: "Activates anti-inflammatory pathways at the cellular level, addressing the root cause of many pain conditions.",
+    name: "Mindfulness Meditation",
+    description: "Guided meditation practices that build present-moment awareness, reduce rumination, and strengthen emotional resilience.",
   },
   {
-    name: "Accelerated Tissue Repair",
-    description: "Stimulates stem cell activation and increases blood flow to damaged tissues, promoting faster natural healing.",
+    name: "Art Therapy",
+    description: "Facilitated creative expression that allows clients to process emotions non-verbally, especially valuable for trauma survivors.",
   },
   {
-    name: "Improved Mobility",
-    description: "Reduces stiffness and scar tissue, restoring range of motion and physical function.",
+    name: "Music Therapy",
+    description: "Structured musical experiences that regulate mood, reduce anxiety, and provide a powerful outlet for emotional expression.",
   },
   {
-    name: "Non-Invasive Treatment",
-    description: "No surgery, no needles, no medication, each session takes 10-15 minutes with zero downtime.",
+    name: "Breathwork",
+    description: "Controlled breathing techniques that activate the parasympathetic nervous system, reducing panic, anxiety, and physiological stress responses.",
   },
   {
-    name: "Supports Recovery",
-    description: "Physical pain is a major relapse trigger. By addressing pain without opioids, SoftWave supports sustainable recovery.",
+    name: "Massage Therapy",
+    description: "Licensed therapeutic massage in our dedicated massage rooms, releasing tension stored in the body and promoting deep relaxation.",
+  },
+  {
+    name: "Nutrition Counseling",
+    description: "Personalized nutritional guidance that supports brain chemistry balance, physical recovery, and sustainable energy throughout treatment.",
+  },
+  {
+    name: "Biofeedback & Neurofeedback",
+    description: "Technology-assisted therapy that trains the brain and nervous system to self-regulate, improving sleep, focus, and emotional stability.",
   },
 ];
 
-const treatsConditions = [
-  "Chronic Back & Neck Pain",
-  "Joint Pain & Arthritis",
-  "Plantar Fasciitis",
-  "Tendinitis & Tendinopathy",
-  "Sports Injuries",
-  "Post-Surgical Pain",
-  "Neuropathy",
-  "Musculoskeletal Pain",
-];
-
-export default function SoftWavePage() {
+export default function HolisticPage() {
   const collisionRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: collisionRef,
@@ -65,19 +62,19 @@ export default function SoftWavePage() {
 
   return (
     <>
-      <SchemaScript schema={[getFAQSchema(faqData["softwave-therapy"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/treatments/softwave"))]} />
+      <SchemaScript schema={[getFAQSchema(faqData["holistic-therapy"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/treatments/holistic-therapies"))]} />
       <MedicalTherapySchema
-        name="SoftWave Therapy"
-        description="FDA-cleared tissue regeneration technology that reduces pain and inflammation without medication, supporting addiction recovery by breaking the pain-opioid cycle."
-        url="/treatments/softwave"
-        conditions={["Chronic Pain", "Joint Pain", "Neuropathy", "Tendinitis", "Musculoskeletal Pain", "Post-Surgical Pain", "Plantar Fasciitis"]}
+        name="Holistic Therapies"
+        description="Evidence-informed complementary therapies including yoga, mindfulness, art therapy, and nutrition counseling that enhance clinical treatment for whole-person recovery."
+        url="/treatments/holistic-therapies"
+        conditions={["Substance Use Disorders", "Anxiety", "Depression", "PTSD", "Chronic Stress", "Insomnia", "Chronic Pain"]}
       />
       <Navigation />
-      <Breadcrumb items={getBreadcrumbsFromPathname("/treatments/softwave")} />
+      <Breadcrumb items={getBreadcrumbsFromPathname("/treatments/holistic-therapies")} />
       <PageHero
-        eyebrow="Advanced Therapy"
-        title="SoftWave Therapy"
-        description="FDA-cleared tissue regeneration technology, reducing pain and inflammation without medication, supporting recovery from the inside out."
+        eyebrow="Whole-Person Care"
+        title="Holistic Therapies"
+        description="Healing the whole person, mind, body, and spirit, through evidence-informed complementary therapies that enhance clinical treatment."
         bgImage="/images/general/DRC-Treatment-Therapies-BG-Fade.jpg"
       />
 
@@ -90,8 +87,8 @@ export default function SoftWavePage() {
               className="relative h-[320px] md:h-[400px] rounded-2xl overflow-hidden shadow-xl group"
             >
               <Image
-                src="/images/glendale/Glendale-Gym.jpg"
-                alt="Wellness and fitness area at Desert Recovery Centers"
+                src="/images/glendale/Glendale-Pool.jpg"
+                alt="Pool and outdoor wellness area at Desert Recovery Centers"
                 fill
                 className="object-cover group-hover:scale-[1.04] transition-transform duration-[350ms] ease-out"
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -102,8 +99,8 @@ export default function SoftWavePage() {
               className="relative h-[320px] md:h-[400px] rounded-2xl overflow-hidden shadow-xl group"
             >
               <Image
-                src="/images/general/accom-massage.jpg"
-                alt="Treatment room at Desert Recovery Centers"
+                src="/images/glendale/Glendale-Massage.jpg"
+                alt="Massage therapy room at Desert Recovery Centers"
                 fill
                 className="object-cover group-hover:scale-[1.04] transition-transform duration-[350ms] ease-out"
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -119,26 +116,26 @@ export default function SoftWavePage() {
             className="max-w-3xl mx-auto"
           >
             <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
-              Understanding SoftWave
+              Beyond Traditional Therapy
             </span>
             <div className="w-[60px] h-0.5 bg-gold mt-4 mb-4" />
             <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold mb-6 leading-tight">
-              Pain Management Without Opioids
+              Recovery Is More Than Talk Therapy
             </h2>
             <p className="text-gray-600 leading-relaxed mb-4">
-              SoftWave Tissue Regeneration Technology uses patented unfocused shockwave therapy to stimulate the body&apos;s natural healing processes at the cellular level. Unlike traditional shockwave devices, SoftWave&apos;s proprietary electrohydraulic technology produces a broad, unfocused wave that treats a larger area more safely and effectively.
+              Mental health conditions and addiction don&apos;t just live in the mind, they manifest in the body, disrupt sleep, alter nutrition, and erode spiritual well-being. True recovery requires addressing all of these dimensions simultaneously.
             </p>
             <p className="text-gray-600 leading-relaxed mb-4">
-              For individuals in recovery, chronic pain is one of the most dangerous relapse triggers. Many people initially turned to opioids to manage legitimate pain conditions. SoftWave provides a powerful alternative, addressing pain at its source without the risks of medication dependence.
+              At Desert Recovery Centers, holistic therapies are not alternatives to evidence-based clinical treatment, they are complements that amplify outcomes. Yoga reduces cortisol. Breathwork calms the nervous system. Nutrition counseling restores the biochemical foundation that medication and therapy depend on.
             </p>
             <p className="text-gray-600 leading-relaxed">
-              Desert Recovery Centers is one of the only residential treatment programs in Arizona to offer SoftWave therapy as part of an integrated treatment plan. Sessions are quick, painless, and require no recovery time.
+              Every holistic offering is integrated into the clinical treatment plan and overseen by our clinical team, ensuring alignment with each client&apos;s therapeutic goals.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Benefits grid */}
+      {/* Therapies grid */}
       <section className="py-20 md:py-28 bg-cream">
         <div className="max-w-container mx-auto px-6">
           <motion.div
@@ -149,32 +146,32 @@ export default function SoftWavePage() {
             className="text-center mb-14"
           >
             <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
-              Clinical Benefits
+              Our Holistic Offerings
             </span>
             <div className="w-[60px] h-0.5 bg-gold mx-auto mt-4 mb-4" />
             <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold">
-              How SoftWave Supports Recovery
+              Complementary Therapies at DRC
             </h2>
           </motion.div>
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {benefits.map((b, i) => (
+          <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-5 max-w-5xl mx-auto">
+            {therapies.map((t, i) => (
               <motion.div
-                key={b.name}
+                key={t.name}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: i * 0.08 }}
+                transition={{ duration: 0.4, delay: i * 0.06 }}
                 className="bg-white rounded-xl p-6 border-t-2 border-t-transparent hover:border-t-gold hover:shadow-lg transition-all"
               >
-                <h3 className="font-display text-lg text-forest font-semibold mb-2">{b.name}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{b.description}</p>
+                <h3 className="font-display text-base text-forest font-semibold mb-2">{t.name}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">{t.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Conditions, collision */}
+      {/* Collision: facilities */}
       <section className="bg-forest py-20 md:py-28 overflow-hidden">
         <div className="max-w-container mx-auto px-6">
           <div className="flex flex-col md:flex-row gap-12 lg:gap-20 items-center">
@@ -186,24 +183,28 @@ export default function SoftWavePage() {
               className="md:w-[55%]"
             >
               <span className="text-gold font-body text-sm tracking-[0.2em] uppercase font-medium">
-                Conditions Treated
+                Our Facilities
               </span>
               <div className="w-[60px] h-0.5 bg-gold mt-4 mb-4" />
               <h2 className="font-display text-3xl md:text-4xl text-white font-semibold mb-6 leading-tight">
-                Pain Conditions That Respond to SoftWave
+                Environments Designed for Holistic Healing
               </h2>
-              <p className="text-white/70 text-sm leading-relaxed mb-8">
-                SoftWave has demonstrated clinical effectiveness for a wide range of musculoskeletal and pain conditions. Many clients report significant improvement after just 1-3 sessions.
+              <p className="text-white/70 text-sm leading-relaxed mb-6">
+                Our luxury facilities are purpose-built for whole-person recovery. Each location features dedicated wellness spaces, massage rooms, yoga areas, meditation gardens, and state-of-the-art fitness centers, alongside the natural beauty of the Arizona desert.
               </p>
-              <div className="grid grid-cols-2 gap-3">
-                {treatsConditions.map((item) => (
-                  <div key={item} className="flex items-start gap-3">
-                    <svg className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-white/80 text-sm leading-relaxed">{item}</span>
-                  </div>
-                ))}
+              <p className="text-white/70 text-sm leading-relaxed mb-8">
+                Gourmet, nutritionist-designed meals fuel the body. Resort-style amenities, pools, tennis courts, basketball courts, encourage physical activity and healthy recreation. The environment itself becomes part of the healing process.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <a href="/facilities/glendale" className="text-center bg-gold hover:bg-gold-dark text-white font-semibold text-sm px-6 py-3 rounded-xl transition-colors cursor-pointer">
+                  Glendale
+                </a>
+                <a href="/facilities/scottsdale" className="text-center bg-gold hover:bg-gold-dark text-white font-semibold text-sm px-6 py-3 rounded-xl transition-colors cursor-pointer">
+                  Scottsdale
+                </a>
+                <a href="/facilities/phoenix" className="text-center bg-gold hover:bg-gold-dark text-white font-semibold text-sm px-6 py-3 rounded-xl transition-colors cursor-pointer">
+                  Phoenix
+                </a>
               </div>
             </motion.div>
 
@@ -216,8 +217,8 @@ export default function SoftWavePage() {
             >
               <div className="relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-xl group">
                 <Image
-                  src="/images/scottsdale/DRC-GYM-SCOTTSDALE-08-01-2024-August-07-202400003-2.jpg"
-                  alt="Fitness and wellness center at Desert Recovery Centers Scottsdale"
+                  src="/images/glendale/Glendale-Gym.jpg"
+                  alt="State-of-the-art fitness center at Desert Recovery Centers"
                   fill
                   className="object-cover group-hover:scale-[1.04] transition-transform duration-[350ms] ease-out"
                   sizes="(max-width: 768px) 100vw, 45vw"
@@ -239,14 +240,14 @@ export default function SoftWavePage() {
             className="max-w-3xl mx-auto text-center"
           >
             <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
-              Advanced Pain Relief
+              Heal the Whole Person
             </span>
             <div className="w-[60px] h-0.5 bg-gold mx-auto mt-4 mb-4" />
             <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold mb-6 leading-tight">
-              Break the Pain-Addiction Cycle
+              Your Recovery Deserves More Than a Clinical Approach
             </h2>
             <p className="text-gray-600 leading-relaxed mb-8">
-              Chronic pain doesn&apos;t have to be managed with addictive substances. SoftWave therapy at Desert Recovery Centers offers a safe, effective, medication-free path to pain relief, supporting your recovery from every angle.
+              When clinical excellence meets holistic care in a luxury environment, transformation happens. Call our admissions team to learn how our integrated approach can support your recovery.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <a href="tel:+14809313617" className="bg-gold hover:bg-gold-dark text-white font-semibold text-sm px-6 py-3 rounded-xl transition-colors cursor-pointer">
@@ -266,11 +267,11 @@ export default function SoftWavePage() {
           <div className="max-w-3xl mx-auto">
             <h3 className="text-forest font-display text-lg font-semibold mb-4">Related Treatment Programs</h3>
             <div className="flex flex-wrap gap-3">
-              <a href="/treatments/holistic" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">Holistic Therapies</a>
               <a href="/treatments/bridgework" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">BridgeWork&trade;</a>
+              <a href="/treatments/softwave-therapy" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">SoftWave Therapy</a>
               <a href="/treatments/trauma-therapy" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">Trauma Therapy</a>
-              <a href="/mental-health/ptsd-treatment" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">PTSD Treatment</a>
-              <a href="/facilities/glendale" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">Glendale Facility</a>
+              <a href="/treatments/dbt-dialectical-behavior-therapy" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">DBT Therapy</a>
+              <a href="/resources/luxury-vs-standard-rehab" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">Luxury vs Standard Rehab</a>
             </div>
           </div>
         </div>
@@ -281,23 +282,23 @@ export default function SoftWavePage() {
         <div className="max-w-container mx-auto px-6">
           <div className="max-w-3xl mx-auto space-y-8">
             <article className="border-l-2 border-gold/30 pl-5">
-              <h3 className="text-forest font-semibold text-sm mb-1">What is SoftWave therapy at Desert Recovery Centers?</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">SoftWave therapy at Desert Recovery Centers is an FDA-cleared tissue regeneration technology that uses unfocused shockwaves to reduce pain and inflammation without medication. Desert Recovery Centers is a Joint Commission accredited luxury treatment center in Arizona and one of the only residential programs in the state to offer SoftWave as part of an integrated treatment plan.</p>
+              <h3 className="text-forest font-semibold text-sm mb-1">What are holistic therapies at Desert Recovery Centers?</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">Holistic therapies at Desert Recovery Centers include yoga, mindfulness meditation, art therapy, music therapy, breathwork, massage therapy, nutrition counseling, and biofeedback. Desert Recovery Centers is a Joint Commission accredited luxury treatment center in Arizona where holistic offerings are integrated into the clinical treatment plan and overseen by the clinical team to ensure alignment with therapeutic goals.</p>
             </article>
             <article className="border-l-2 border-gold/30 pl-5">
-              <h3 className="text-forest font-semibold text-sm mb-1">How does SoftWave therapy work for addiction treatment?</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">SoftWave therapy supports addiction recovery by addressing chronic pain, one of the most dangerous relapse triggers, without opioids or other addictive medications. The patented electrohydraulic technology stimulates stem cell activation, increases blood flow to damaged tissues, and activates anti-inflammatory pathways at the cellular level. Sessions take 10 to 15 minutes with zero downtime.</p>
+              <h3 className="text-forest font-semibold text-sm mb-1">How do holistic therapies work for addiction and mental health treatment?</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">Holistic therapies complement evidence-based clinical treatment by addressing the physical, emotional, and spiritual dimensions of recovery. Yoga reduces cortisol levels, breathwork calms the nervous system, nutrition counseling restores biochemical balance, and creative therapies provide non-verbal outlets for processing difficult emotions. These modalities amplify clinical outcomes when integrated with therapies like CBT, DBT, and EMDR.</p>
             </article>
             <article className="border-l-2 border-gold/30 pl-5">
-              <h3 className="text-forest font-semibold text-sm mb-1">Who delivers SoftWave therapy at Desert Recovery Centers?</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">SoftWave therapy at Desert Recovery Centers is administered by trained clinical staff under the oversight of our doctoral-level clinical team. Small client-to-clinician ratios ensure each client&apos;s pain management needs are assessed individually and integrated with their broader treatment plan for addiction and mental health recovery.</p>
+              <h3 className="text-forest font-semibold text-sm mb-1">Who delivers holistic therapies at Desert Recovery Centers?</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">Holistic therapies at Desert Recovery Centers are delivered by certified practitioners in each modality, licensed massage therapists, certified yoga instructors, registered dietitians, and trained art therapists, all under the clinical oversight of our doctoral-level psychologists. Small client-to-clinician ratios ensure each client receives personalized holistic care integrated with their overall treatment plan.</p>
             </article>
           </div>
         </div>
       </section>
 
       <section className="max-w-4xl mx-auto px-6 py-16">
-        <FAQSection faqs={faqData["softwave-therapy"]} />
+        <FAQSection faqs={faqData["holistic-therapy"]} />
       </section>
       <CTASection />
       <Footer />

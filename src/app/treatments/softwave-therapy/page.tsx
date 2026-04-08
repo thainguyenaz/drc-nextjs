@@ -8,35 +8,52 @@ import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import { MedicalTherapySchema } from "@/lib/seo";
-import ConditionFAQ from "@/components/ConditionFAQ";
-import SchemaScript from "@/components/SchemaScript";
 import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
-import { faqData } from "@/data/faq-data";
-import FAQSection from "@/components/FAQSection";
 import Breadcrumb from "@/components/Breadcrumb";
 import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
+import { faqData } from "@/data/faq-data";
+import SchemaScript from "@/components/SchemaScript";
+import FAQSection from "@/components/FAQSection";
 
-const phases = [
-  { name: "History & Preparation", description: "Building therapeutic rapport and identifying target memories for reprocessing." },
-  { name: "Assessment", description: "Activating the target memory and establishing baseline measurements of disturbance." },
-  { name: "Desensitization", description: "Bilateral stimulation (eye movements, tapping, or auditory tones) while the client focuses on the traumatic memory." },
-  { name: "Installation", description: "Strengthening positive beliefs and adaptive cognitions to replace the negative self-beliefs tied to the trauma." },
-  { name: "Body Scan", description: "Identifying and processing any residual physical tension or discomfort associated with the memory." },
-  { name: "Closure & Reevaluation", description: "Ensuring emotional stability and assessing the effectiveness of reprocessing in subsequent sessions." },
+const benefits = [
+  {
+    name: "Pain Reduction",
+    description: "Unfocused shockwaves stimulate the body's natural pain relief mechanisms, reducing chronic and acute pain without medication.",
+  },
+  {
+    name: "Decreased Inflammation",
+    description: "Activates anti-inflammatory pathways at the cellular level, addressing the root cause of many pain conditions.",
+  },
+  {
+    name: "Accelerated Tissue Repair",
+    description: "Stimulates stem cell activation and increases blood flow to damaged tissues, promoting faster natural healing.",
+  },
+  {
+    name: "Improved Mobility",
+    description: "Reduces stiffness and scar tissue, restoring range of motion and physical function.",
+  },
+  {
+    name: "Non-Invasive Treatment",
+    description: "No surgery, no needles, no medication, each session takes 10-15 minutes with zero downtime.",
+  },
+  {
+    name: "Supports Recovery",
+    description: "Physical pain is a major relapse trigger. By addressing pain without opioids, SoftWave supports sustainable recovery.",
+  },
 ];
 
 const treatsConditions = [
-  "PTSD & Complex PTSD",
-  "Childhood Trauma & Abuse",
-  "Sexual Assault & Domestic Violence",
-  "Combat & First Responder Trauma",
-  "Grief & Loss",
-  "Phobias & Panic Disorders",
-  "Addiction & Relapse Triggers",
-  "Performance Anxiety",
+  "Chronic Back & Neck Pain",
+  "Joint Pain & Arthritis",
+  "Plantar Fasciitis",
+  "Tendinitis & Tendinopathy",
+  "Sports Injuries",
+  "Post-Surgical Pain",
+  "Neuropathy",
+  "Musculoskeletal Pain",
 ];
 
-export default function EMDRPage() {
+export default function SoftWavePage() {
   const collisionRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: collisionRef,
@@ -48,19 +65,19 @@ export default function EMDRPage() {
 
   return (
     <>
-      <SchemaScript schema={[getFAQSchema(faqData["emdr"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/treatments/emdr"))]} />
+      <SchemaScript schema={[getFAQSchema(faqData["softwave-therapy"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/treatments/softwave-therapy"))]} />
       <MedicalTherapySchema
-        name="EMDR Therapy"
-        description="Eye Movement Desensitization and Reprocessing therapy that unlocks the brain's natural ability to heal from trauma and disturbing life experiences."
-        url="/treatments/emdr"
-        conditions={["PTSD", "Complex PTSD", "Childhood Trauma", "Grief", "Phobias", "Panic Disorders", "Addiction", "Performance Anxiety"]}
+        name="SoftWave Therapy"
+        description="FDA-cleared tissue regeneration technology that reduces pain and inflammation without medication, supporting addiction recovery by breaking the pain-opioid cycle."
+        url="/treatments/softwave-therapy"
+        conditions={["Chronic Pain", "Joint Pain", "Neuropathy", "Tendinitis", "Musculoskeletal Pain", "Post-Surgical Pain", "Plantar Fasciitis"]}
       />
       <Navigation />
-      <Breadcrumb items={getBreadcrumbsFromPathname("/treatments/emdr")} />
+      <Breadcrumb items={getBreadcrumbsFromPathname("/treatments/softwave-therapy")} />
       <PageHero
-        eyebrow="Treatment Modality"
-        title="EMDR Therapy"
-        description="Eye Movement Desensitization and Reprocessing, unlocking the brain's natural ability to heal from trauma."
+        eyebrow="Advanced Therapy"
+        title="SoftWave Therapy"
+        description="FDA-cleared tissue regeneration technology, reducing pain and inflammation without medication, supporting recovery from the inside out."
         bgImage="/images/general/DRC-Treatment-Therapies-BG-Fade.jpg"
       />
 
@@ -73,8 +90,8 @@ export default function EMDRPage() {
               className="relative h-[320px] md:h-[400px] rounded-2xl overflow-hidden shadow-xl group"
             >
               <Image
-                src="/images/glendale/Glendale-Therapy-Room.jpg"
-                alt="Private therapy room for EMDR sessions"
+                src="/images/glendale/Glendale-Gym.jpg"
+                alt="Wellness and fitness area at Desert Recovery Centers"
                 fill
                 className="object-cover group-hover:scale-[1.04] transition-transform duration-[350ms] ease-out"
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -85,8 +102,8 @@ export default function EMDRPage() {
               className="relative h-[320px] md:h-[400px] rounded-2xl overflow-hidden shadow-xl group"
             >
               <Image
-                src="/images/scottsdale/DRC-SERANITY-NORTH-SCOTTSDALE-08-01-2024-August-01-202400001-2.jpg"
-                alt="Serenity space at Desert Recovery Centers"
+                src="/images/general/accom-massage.jpg"
+                alt="Treatment room at Desert Recovery Centers"
                 fill
                 className="object-cover group-hover:scale-[1.04] transition-transform duration-[350ms] ease-out"
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -102,26 +119,26 @@ export default function EMDRPage() {
             className="max-w-3xl mx-auto"
           >
             <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
-              Understanding EMDR
+              Understanding SoftWave
             </span>
             <div className="w-[60px] h-0.5 bg-gold mt-4 mb-4" />
             <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold mb-6 leading-tight">
-              Healing Trauma at Its Root
+              Pain Management Without Opioids
             </h2>
             <p className="text-gray-600 leading-relaxed mb-4">
-              EMDR is a powerful, extensively researched psychotherapy that enables people to heal from the symptoms and emotional distress resulting from disturbing life experiences. Recognized by the World Health Organization, the American Psychological Association, and the Department of Veterans Affairs as a frontline trauma treatment, EMDR has helped millions recover from events that once felt impossible to move past.
+              SoftWave Tissue Regeneration Technology uses patented unfocused shockwave therapy to stimulate the body&apos;s natural healing processes at the cellular level. Unlike traditional shockwave devices, SoftWave&apos;s proprietary electrohydraulic technology produces a broad, unfocused wave that treats a larger area more safely and effectively.
             </p>
             <p className="text-gray-600 leading-relaxed mb-4">
-              Unlike traditional talk therapy, EMDR does not require you to talk in detail about the traumatic event. Instead, it uses bilateral stimulation, typically guided eye movements, to activate the brain&apos;s natural information processing system, allowing traumatic memories to be reprocessed and stored in a way that no longer triggers overwhelming emotional responses.
+              For individuals in recovery, chronic pain is one of the most dangerous relapse triggers. Many people initially turned to opioids to manage legitimate pain conditions. SoftWave provides a powerful alternative, addressing pain at its source without the risks of medication dependence.
             </p>
             <p className="text-gray-600 leading-relaxed">
-              At Desert Recovery Centers, EMDR is delivered exclusively by licensed clinical psychologists with specialized EMDR training, ensuring the highest standard of care for our clients.
+              Desert Recovery Centers is one of the only residential treatment programs in Arizona to offer SoftWave therapy as part of an integrated treatment plan. Sessions are quick, painless, and require no recovery time.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Eight phases */}
+      {/* Benefits grid */}
       <section className="py-20 md:py-28 bg-cream">
         <div className="max-w-container mx-auto px-6">
           <motion.div
@@ -132,33 +149,32 @@ export default function EMDRPage() {
             className="text-center mb-14"
           >
             <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
-              The EMDR Protocol
+              Clinical Benefits
             </span>
             <div className="w-[60px] h-0.5 bg-gold mx-auto mt-4 mb-4" />
             <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold">
-              How EMDR Works
+              How SoftWave Supports Recovery
             </h2>
           </motion.div>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {phases.map((phase, i) => (
+            {benefits.map((b, i) => (
               <motion.div
-                key={phase.name}
+                key={b.name}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.08 }}
                 className="bg-white rounded-xl p-6 border-t-2 border-t-transparent hover:border-t-gold hover:shadow-lg transition-all"
               >
-                <span className="text-gold text-xs font-semibold tracking-widest uppercase">Phase {i + 1}</span>
-                <h3 className="font-display text-lg text-forest font-semibold mt-2 mb-2">{phase.name}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{phase.description}</p>
+                <h3 className="font-display text-lg text-forest font-semibold mb-2">{b.name}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">{b.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Collision: conditions treated */}
+      {/* Conditions, collision */}
       <section className="bg-forest py-20 md:py-28 overflow-hidden">
         <div className="max-w-container mx-auto px-6">
           <div className="flex flex-col md:flex-row gap-12 lg:gap-20 items-center">
@@ -174,10 +190,10 @@ export default function EMDRPage() {
               </span>
               <div className="w-[60px] h-0.5 bg-gold mt-4 mb-4" />
               <h2 className="font-display text-3xl md:text-4xl text-white font-semibold mb-6 leading-tight">
-                EMDR Treats More Than PTSD
+                Pain Conditions That Respond to SoftWave
               </h2>
               <p className="text-white/70 text-sm leading-relaxed mb-8">
-                While EMDR is best known for trauma and PTSD, research supports its effectiveness for a wide range of conditions rooted in disturbing life experiences. Many clients who have struggled with addiction, anxiety, or depression find that EMDR resolves the underlying trauma driving their symptoms.
+                SoftWave has demonstrated clinical effectiveness for a wide range of musculoskeletal and pain conditions. Many clients report significant improvement after just 1-3 sessions.
               </p>
               <div className="grid grid-cols-2 gap-3">
                 {treatsConditions.map((item) => (
@@ -200,8 +216,8 @@ export default function EMDRPage() {
             >
               <div className="relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-xl group">
                 <Image
-                  src="/images/scottsdale/DRC-VHARMONY-ROOM-NORTH-SCOTTSDALE-08-01-2024-0631August-01-202400010-2.jpg"
-                  alt="Harmony therapy room at Desert Recovery Centers"
+                  src="/images/scottsdale/DRC-GYM-SCOTTSDALE-08-01-2024-August-07-202400003-2.jpg"
+                  alt="Fitness and wellness center at Desert Recovery Centers Scottsdale"
                   fill
                   className="object-cover group-hover:scale-[1.04] transition-transform duration-[350ms] ease-out"
                   sizes="(max-width: 768px) 100vw, 45vw"
@@ -212,7 +228,7 @@ export default function EMDRPage() {
         </div>
       </section>
 
-      {/* CTA */}
+      {/* Final CTA */}
       <section className="py-20 md:py-28 bg-white">
         <div className="max-w-container mx-auto px-6">
           <motion.div
@@ -223,14 +239,14 @@ export default function EMDRPage() {
             className="max-w-3xl mx-auto text-center"
           >
             <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
-              Begin Healing
+              Advanced Pain Relief
             </span>
             <div className="w-[60px] h-0.5 bg-gold mx-auto mt-4 mb-4" />
             <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold mb-6 leading-tight">
-              You Don&apos;t Have to Live With the Weight of Trauma
+              Break the Pain-Addiction Cycle
             </h2>
             <p className="text-gray-600 leading-relaxed mb-8">
-              EMDR has helped combat veterans, survivors of abuse, first responders, and individuals struggling with addiction find relief from memories that once controlled their lives. Our clinical team is here to guide you through every step of the process.
+              Chronic pain doesn&apos;t have to be managed with addictive substances. SoftWave therapy at Desert Recovery Centers offers a safe, effective, medication-free path to pain relief, supporting your recovery from every angle.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <a href="tel:+14809313617" className="bg-gold hover:bg-gold-dark text-white font-semibold text-sm px-6 py-3 rounded-xl transition-colors cursor-pointer">
@@ -250,11 +266,11 @@ export default function EMDRPage() {
           <div className="max-w-3xl mx-auto">
             <h3 className="text-forest font-display text-lg font-semibold mb-4">Related Treatment Programs</h3>
             <div className="flex flex-wrap gap-3">
+              <a href="/treatments/holistic-therapies" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">Holistic Therapies</a>
+              <a href="/treatments/bridgework" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">BridgeWork&trade;</a>
               <a href="/treatments/trauma-therapy" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">Trauma Therapy</a>
-              <a href="/treatments/cbt" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">CBT Therapy</a>
               <a href="/mental-health/ptsd-treatment" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">PTSD Treatment</a>
-              <a href="/mental-health/anxiety-treatment" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">Anxiety Treatment</a>
-              <a href="/treatments/holistic" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">Holistic Therapies</a>
+              <a href="/facilities/glendale" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">Glendale Facility</a>
             </div>
           </div>
         </div>
@@ -265,23 +281,24 @@ export default function EMDRPage() {
         <div className="max-w-container mx-auto px-6">
           <div className="max-w-3xl mx-auto space-y-8">
             <article className="border-l-2 border-gold/30 pl-5">
-              <h3 className="text-forest font-semibold text-sm mb-1">What is EMDR therapy at Desert Recovery Centers?</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">EMDR (Eye Movement Desensitization and Reprocessing) at Desert Recovery Centers is an evidence-based psychotherapy that uses bilateral stimulation to help the brain reprocess traumatic memories. Desert Recovery Centers is a Joint Commission accredited luxury treatment center in Arizona where EMDR is delivered exclusively by licensed clinical psychologists with specialized EMDR training.</p>
+              <h3 className="text-forest font-semibold text-sm mb-1">What is SoftWave therapy at Desert Recovery Centers?</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">SoftWave therapy at Desert Recovery Centers is an FDA-cleared tissue regeneration technology that uses unfocused shockwaves to reduce pain and inflammation without medication. Desert Recovery Centers is a Joint Commission accredited luxury treatment center in Arizona and one of the only residential programs in the state to offer SoftWave as part of an integrated treatment plan.</p>
             </article>
             <article className="border-l-2 border-gold/30 pl-5">
-              <h3 className="text-forest font-semibold text-sm mb-1">How does EMDR work for addiction and mental health treatment?</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">EMDR activates the brain&apos;s natural information processing system through guided eye movements, tapping, or auditory tones while the client focuses on a traumatic memory. This allows disturbing memories to be reprocessed and stored in a way that no longer triggers overwhelming emotional responses, without requiring detailed verbal recounting of the trauma.</p>
+              <h3 className="text-forest font-semibold text-sm mb-1">How does SoftWave therapy work for addiction treatment?</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">SoftWave therapy supports addiction recovery by addressing chronic pain, one of the most dangerous relapse triggers, without opioids or other addictive medications. The patented electrohydraulic technology stimulates stem cell activation, increases blood flow to damaged tissues, and activates anti-inflammatory pathways at the cellular level. Sessions take 10 to 15 minutes with zero downtime.</p>
             </article>
             <article className="border-l-2 border-gold/30 pl-5">
-              <h3 className="text-forest font-semibold text-sm mb-1">Who delivers EMDR at Desert Recovery Centers?</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">EMDR at Desert Recovery Centers is delivered exclusively by licensed clinical psychologists with doctoral-level training and specialized EMDR certification. Small client-to-clinician ratios ensure each client receives the focused, individualized attention that effective trauma reprocessing requires.</p>
+              <h3 className="text-forest font-semibold text-sm mb-1">Who delivers SoftWave therapy at Desert Recovery Centers?</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">SoftWave therapy at Desert Recovery Centers is administered by trained clinical staff under the oversight of our doctoral-level clinical team. Small client-to-clinician ratios ensure each client&apos;s pain management needs are assessed individually and integrated with their broader treatment plan for addiction and mental health recovery.</p>
             </article>
           </div>
         </div>
       </section>
 
-      <ConditionFAQ items={faqData["emdr"]} />
-      <FAQSection faqs={faqData["emdr"]} />
+      <section className="max-w-4xl mx-auto px-6 py-16">
+        <FAQSection faqs={faqData["softwave-therapy"]} />
+      </section>
       <CTASection />
       <Footer />
     </>

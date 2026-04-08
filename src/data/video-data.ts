@@ -109,28 +109,28 @@ export const videoData: Record<string, VideoEntry[]> = {
   ],
 
   // ── TREATMENT MODALITY PAGES — 1 video each ──
-  "/treatments/cbt/": [
+  "/treatments/cbt-cognitive-behavioral-therapy/": [
     { youtubeId: "xHVfalKfRp0", title: "What Is Cognitive Behavioral Therapy and How Does It Improve Mental Health?", description: "How CBT works to change negative thought patterns in addiction and mental health treatment.", uploadDate: "2024-10-01T00:00:00+00:00" },
   ],
-  "/treatments/dbt/": [
+  "/treatments/dbt-dialectical-behavior-therapy/": [
     { youtubeId: "1llruRMnal8", title: "How Meditation Can Help With Addictive Cravings and Behaviors", description: "Mindfulness and DBT-based approaches to managing cravings and emotional regulation.", uploadDate: "2024-10-01T00:00:00+00:00" },
   ],
-  "/treatments/emdr/": [
+  "/treatments/emdr-therapy/": [
     { youtubeId: "DhLGvWwqGX4", title: "What Is EMDR Therapy for PTSD?", description: "How EMDR therapy helps process traumatic memories and supports addiction recovery.", uploadDate: "2024-10-01T00:00:00+00:00" },
   ],
   "/treatments/trauma-therapy/": [
     { youtubeId: "dF2l-9ohRZs", title: "What Is Trauma-Focused Cognitive Behavioral Therapy and How Does It Help?", description: "How trauma-focused CBT addresses PTSD and trauma in addiction recovery settings.", uploadDate: "2024-10-01T00:00:00+00:00" },
   ],
-  "/treatments/holistic/": [
+  "/treatments/holistic-therapies/": [
     { youtubeId: "t8ocXO9s9lw", title: "Why Holistic Treatment Is Required for Long-Term Success", description: "The role of holistic therapies in sustainable addiction and mental health recovery.", uploadDate: "2024-10-01T00:00:00+00:00" },
   ],
-  "/treatments/dual-diagnosis/": [
+  "/treatments/dual-diagnosis-treatment/": [
     { youtubeId: "Il5BV-EYP3E", title: "How Do Outcomes Improve When Clients Follow a Full Continuum of Care?", description: "Why dual diagnosis treatment across a full continuum of care leads to better recovery outcomes.", uploadDate: "2025-03-01T00:00:00+00:00" },
   ],
   "/treatments/tms-therapy/": [
     { youtubeId: "OssO8dpYk2E", title: "How Does SoftWave Therapy Work for Addiction?", description: "Innovative therapy approaches including TMS and SoftWave for addiction and mental health.", uploadDate: "2024-10-01T00:00:00+00:00" },
   ],
-  "/treatments/softwave/": [
+  "/treatments/softwave-therapy/": [
     { youtubeId: "PkH82oa6HkA", title: "How Does SoftWave Therapy Work for Addiction?", description: "SoftWave tissue regeneration therapy for addiction recovery support.", uploadDate: "2024-10-01T00:00:00+00:00" },
   ],
   "/treatments/bridgework/": [

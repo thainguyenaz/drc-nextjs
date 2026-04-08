@@ -64,7 +64,7 @@ const quickLinks = [
   {
     title: "Understanding Dual Diagnosis",
     desc: "Why mental health and addiction must be treated together.",
-    href: "/treatments/dual-diagnosis",
+    href: "/treatments/dual-diagnosis-treatment",
   },
   {
     title: "What to Pack for Rehab",

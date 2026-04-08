@@ -373,7 +373,7 @@ export default function InterventionGuidePage() {
               <h3 className="font-display text-lg text-forest font-semibold mb-4">Related Resources</h3>
               <div className="flex flex-wrap gap-3">
                 {[
-                  { label: "Dual Diagnosis Treatment", href: "/treatments/dual-diagnosis" },
+                  { label: "Dual Diagnosis Treatment", href: "/treatments/dual-diagnosis-treatment" },
                   { label: "Medical Detox Guide", href: "/resources/detox-guide" },
                   { label: "Rehab FAQ", href: "/resources/faq" },
                   { label: "Our Facilities", href: "/facilities/glendale" },
