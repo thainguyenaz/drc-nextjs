@@ -57,15 +57,15 @@ const faqs = [
 export default function SexAddictionPage() {
   return (
     <>
-      <SchemaScript schema={[getFAQSchema(faqData["sex-addiction-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/addiction/sex-addiction"))]} />
+      <SchemaScript schema={[getFAQSchema(faqData["sex-addiction-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/addiction/sex-addiction-treatment"))]} />
       <MedicalConditionSchema
         name="Compulsive Sexual Behavior Disorder"
         description="Compulsive sexual behavior disorder is recognized by the WHO as an impulse control disorder. It involves a cycle of escalating behavior driven by the brain's reward system, with temporary relief followed by guilt, shame, and intensified urges."
-        url="/addiction/sex-addiction"
+        url="/addiction/sex-addiction-treatment"
         possibleTreatments={["CBT", "Psychodynamic Therapy", "Group Process Therapy", "Trauma-Informed Care", "Dual Diagnosis Treatment"]}
       />
       <Navigation />
-      <Breadcrumb items={getBreadcrumbsFromPathname("/addiction/sex-addiction")} />
+      <Breadcrumb items={getBreadcrumbsFromPathname("/addiction/sex-addiction-treatment")} />
       <PageHero
         eyebrow="Addiction Treatment"
         title="Sex Addiction Treatment"
@@ -190,7 +190,7 @@ export default function SexAddictionPage() {
           },
         ]}
       />
-      <RelatedPages currentPath="/addiction/sex-addiction" />
+      <RelatedPages currentPath="/addiction/sex-addiction-treatment" />
       <section className="max-w-4xl mx-auto px-6 py-16">
         <FAQSection faqs={faqData["sex-addiction-treatment"]} />
       </section>

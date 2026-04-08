@@ -57,15 +57,15 @@ const faqs = [
 export default function StimulantAddictionPage() {
   return (
     <>
-      <SchemaScript schema={[getFAQSchema(faqData["stimulant-addiction-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/addiction/stimulants"))]} />
+      <SchemaScript schema={[getFAQSchema(faqData["stimulant-addiction-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/addiction/stimulant-addiction-treatment"))]} />
       <MedicalConditionSchema
         name="Stimulant Addiction"
         description="Stimulant addiction is a substance use disorder involving cocaine, methamphetamine, prescription amphetamines, or other stimulants. These substances flood the brain with dopamine and norepinephrine, creating intense dependence and making natural reward processing increasingly difficult."
-        url="/addiction/stimulants"
+        url="/addiction/stimulant-addiction-treatment"
         possibleTreatments={["CBT", "Matrix Model", "Contingency Management", "Psychiatric Support", "Dual Diagnosis Treatment"]}
       />
       <Navigation />
-      <Breadcrumb items={getBreadcrumbsFromPathname("/addiction/stimulants")} />
+      <Breadcrumb items={getBreadcrumbsFromPathname("/addiction/stimulant-addiction-treatment")} />
       <PageHero
         eyebrow="Addiction Treatment"
         title="Stimulant Addiction Treatment"
@@ -190,7 +190,7 @@ export default function StimulantAddictionPage() {
           },
         ]}
       />
-      <RelatedPages currentPath="/addiction/stimulants" />
+      <RelatedPages currentPath="/addiction/stimulant-addiction-treatment" />
       <FAQSection faqs={faqData["stimulant-addiction-treatment"]} />
       <CTASection />
       <Footer />

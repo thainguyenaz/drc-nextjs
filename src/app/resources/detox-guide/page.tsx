@@ -331,8 +331,8 @@ export default function DetoxGuidePage() {
                 {[
                   { label: "Intervention Guide", href: "/resources/intervention-guide" },
                   { label: "Dual Diagnosis Treatment", href: "/treatments/dual-diagnosis" },
-                  { label: "Opioid Addiction Treatment", href: "/addiction/heroin" },
-                  { label: "Alcohol Treatment", href: "/addiction/alcohol" },
+                  { label: "Opioid Addiction Treatment", href: "/addiction/heroin-addiction-treatment" },
+                  { label: "Alcohol Treatment", href: "/addiction/alcoholism-treatment" },
                   { label: "Our Facilities", href: "/facilities/scottsdale" },
                 ].map((link) => (
                   <a

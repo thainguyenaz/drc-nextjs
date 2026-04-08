@@ -200,8 +200,8 @@ export default function SignsOfAddictionPage() {
                 {[
                   { label: "Intervention Guide", href: "/resources/intervention-guide" },
                   { label: "Dual Diagnosis Explained", href: "/blog/dual-diagnosis-explained" },
-                  { label: "Alcohol Addiction", href: "/addiction/alcohol" },
-                  { label: "Opioid Addiction", href: "/addiction/heroin" },
+                  { label: "Alcohol Addiction", href: "/addiction/alcoholism-treatment" },
+                  { label: "Opioid Addiction", href: "/addiction/heroin-addiction-treatment" },
                   { label: "Medical Detox Guide", href: "/resources/detox-guide" },
                 ].map((link) => (
                   <a

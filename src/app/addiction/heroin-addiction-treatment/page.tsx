@@ -59,15 +59,15 @@ const faqs = [
 export default function HeroinAddictionPage() {
   return (
     <>
-      <SchemaScript schema={[getFAQSchema(faqData["heroin-addiction-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/addiction/heroin")), {"@context":"https://schema.org","@type":"MedicalWebPage","@id":"https://www.desertrecoverycenters.com/addiction/heroin-addiction-treatment/#webpage","url":"https://www.desertrecoverycenters.com/addiction/heroin-addiction-treatment/","name":"Heroin Addiction Treatment Arizona | Desert Recovery Centers","specialty":"Psychiatry","reviewedBy":{"@type":"Person","@id":"https://www.desertrecoverycenters.com/our-team#dr-an-nguyen","name":"Dr. An Nguyen","jobTitle":"Licensed Clinical Psychologist, Clinical Director","worksFor":{"@id":"https://www.desertrecoverycenters.com/#organization"}},"dateModified":"2026-04-05","publisher":{"@id":"https://www.desertrecoverycenters.com/#organization"}}]} />
+      <SchemaScript schema={[getFAQSchema(faqData["heroin-addiction-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/addiction/heroin-addiction-treatment")), {"@context":"https://schema.org","@type":"MedicalWebPage","@id":"https://www.desertrecoverycenters.com/addiction/heroin-addiction-treatment/#webpage","url":"https://www.desertrecoverycenters.com/addiction/heroin-addiction-treatment/","name":"Heroin Addiction Treatment Arizona | Desert Recovery Centers","specialty":"Psychiatry","reviewedBy":{"@type":"Person","@id":"https://www.desertrecoverycenters.com/our-team#dr-an-nguyen","name":"Dr. An Nguyen","jobTitle":"Licensed Clinical Psychologist, Clinical Director","worksFor":{"@id":"https://www.desertrecoverycenters.com/#organization"}},"dateModified":"2026-04-05","publisher":{"@id":"https://www.desertrecoverycenters.com/#organization"}}]} />
       <MedicalConditionSchema
         name="Opioid/Heroin Addiction"
         description="Heroin addiction is a severe opioid use disorder characterized by rapid physical dependence and intense withdrawal. Heroin binds to opioid receptors, flooding the system with dopamine and creating dependence often within days of regular use."
-        url="/addiction/heroin"
+        url="/addiction/heroin-addiction-treatment"
         possibleTreatments={["MAT (Suboxone, Vivitrol)", "CBT", "EMDR", "Dual Diagnosis Treatment"]}
       />
       <Navigation />
-      <Breadcrumb items={getBreadcrumbsFromPathname("/addiction/heroin")} />
+      <Breadcrumb items={getBreadcrumbsFromPathname("/addiction/heroin-addiction-treatment")} />
       <PageHero
         eyebrow="Addiction Treatment"
         title="Heroin Addiction Treatment"
@@ -202,7 +202,7 @@ export default function HeroinAddictionPage() {
           },
         ]}
       />
-      <RelatedPages currentPath="/addiction/heroin" />
+      <RelatedPages currentPath="/addiction/heroin-addiction-treatment" />
       <FAQSection faqs={faqData["heroin-addiction-treatment"]} />
       <CTASection />
       <Footer />

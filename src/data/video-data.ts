@@ -80,38 +80,32 @@ export const videoData: Record<string, VideoEntry[]> = {
   ],
 
   // ── ADDICTION CONDITION PAGES — 1 video each ──
-  "/addiction/alcohol/": [
+  "/addiction/alcoholism-treatment/": [
     { youtubeId: "-IAFRFF8DCQ", title: "How Does Alcohol Affect Mental Health?", description: "The impact of alcohol on mental health and why integrated dual diagnosis treatment is critical.", uploadDate: "2025-02-01T00:00:00+00:00" },
   ],
-  "/addiction/heroin/": [
+  "/addiction/heroin-addiction-treatment/": [
     { youtubeId: "iUtvJ-oRT_s", title: "How Do Benzodiazepine and Opioid Co-Dependence Create a More Dangerous Withdrawal?", description: "Understanding the dangers of opioid co-dependence and why medical detox is essential.", uploadDate: "2025-03-01T00:00:00+00:00" },
   ],
-  "/addiction/fentanyl/": [
+  "/addiction/fentanyl-addiction-treatment/": [
     { youtubeId: "TlAJvaoXrlw", title: "What Makes Fentanyl Withdrawal Uniquely Dangerous Compared to Other Opioids?", description: "Why fentanyl withdrawal requires specialized medical detox and treatment.", uploadDate: "2025-03-01T00:00:00+00:00" },
   ],
-  "/addiction/cocaine/": [
+  "/addiction/cocaine-addiction-treatment/": [
     { youtubeId: "FObOcPKSfH8", title: "Do Drug Addicts and Alcoholics Crave Dopamine?", description: "Understanding dopamine and reward pathways in cocaine and stimulant addiction.", uploadDate: "2024-10-01T00:00:00+00:00" },
   ],
-  "/addiction/meth/": [
+  "/addiction/meth-addiction-treatment/": [
     { youtubeId: "TE0bw1_Pwqo", title: "How Does Prescription Stimulant Abuse Differ From Street Meth in Treatment Needs?", description: "Comparing meth and prescription stimulant addiction and their treatment approaches.", uploadDate: "2025-03-01T00:00:00+00:00" },
   ],
-  "/addiction/marijuana/": [
+  "/addiction/marijuana-addiction-treatment/": [
     { youtubeId: "-kdPgVZItgY", title: "Why Do Many Marijuana Addicts Underestimate Their Dependence?", description: "Understanding marijuana addiction and why dependence is often underestimated.", uploadDate: "2025-03-01T00:00:00+00:00" },
   ],
-  "/addiction/prescription-drugs/": [
+  "/addiction/prescription-drug-addiction-treatment/": [
     { youtubeId: "asfcDVPgO1Y", title: "How Do Prescription Drugs Affect Your Brain?", description: "The neurological effects of prescription drug abuse and paths to recovery.", uploadDate: "2024-10-01T00:00:00+00:00" },
   ],
-  "/addiction/gambling/": [
+  "/addiction/gambling-addiction-treatment/": [
     { youtubeId: "Vgb-tnoS8R0", title: "What Are the Warning Signs That Gambling Has Crossed From Recreation to Addiction?", description: "Recognizing gambling addiction warning signs and when to seek treatment.", uploadDate: "2025-03-01T00:00:00+00:00" },
   ],
-  "/addiction/stimulants/": [
+  "/addiction/stimulant-addiction-treatment/": [
     { youtubeId: "TE0bw1_Pwqo", title: "How Does Prescription Stimulant Abuse Differ From Street Meth?", description: "Understanding stimulant addiction including Adderall, meth, and cocaine treatment needs.", uploadDate: "2025-03-01T00:00:00+00:00" },
-  ],
-  "/addiction/opioid-detox/": [
-    { youtubeId: "XuG7u_0ZIAE", title: "What Are the Risks or Dangers of Detoxing From Opioids or Alcohol?", description: "Understanding the medical risks of opioid detox and why supervised detox is critical.", uploadDate: "2025-03-01T00:00:00+00:00" },
-  ],
-  "/addiction/alcohol-detox/": [
-    { youtubeId: "wPKEDrffJj4", title: "What Are the Symptoms of Alcohol Withdrawal During Detox?", description: "Alcohol withdrawal symptoms and why medical detox supervision is essential.", uploadDate: "2025-03-01T00:00:00+00:00" },
   ],
 
   // ── TREATMENT MODALITY PAGES — 1 video each ──
