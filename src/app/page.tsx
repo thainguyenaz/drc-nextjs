@@ -1,6 +1,13 @@
 import { Metadata } from "next";
+import dynamic from "next/dynamic";
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
+import TrustBar from "@/components/TrustBar";
+import IntroSection from "@/components/IntroSection";
+import { SpeakableSchema, VideoSchemas } from "@/lib/seo";
+import SchemaScript from "@/components/SchemaScript";
+import { getFAQSchema } from "@/lib/schema";
+import { faqData } from "@/data/faq-data";
 
 export const metadata: Metadata = {
   title: "Luxury Addiction & Mental Health Treatment in Arizona | Desert Recovery Centers",
@@ -8,31 +15,26 @@ export const metadata: Metadata = {
     "Luxury addiction and mental health treatment in Arizona. Joint Commission accredited, dual diagnosis care. Verify insurance today. Call (480) 931-3617.",
   alternates: { canonical: "https://desertrecoverycenters.com/" },
 };
-import TrustBar from "@/components/TrustBar";
-import IntroSection from "@/components/IntroSection";
-import HomepageVideo from "@/components/HomepageVideo";
-import ConditionsGrid from "@/components/ConditionsGrid";
-import AddictionPrograms from "@/components/AddictionPrograms";
-import StatsSection from "@/components/StatsSection";
-import LocationsSection from "@/components/LocationsSection";
-import FacilityPhotoGrid from "@/components/FacilityPhotoGrid";
-import WhyChooseUs from "@/components/WhyChooseUs";
-import BridgeWork from "@/components/BridgeWork";
-import TeamSection from "@/components/TeamSection";
-import Testimonials from "@/components/Testimonials";
-import GoogleReviews from "@/components/GoogleReviews";
-import FAQ from "@/components/FAQ";
-import ContinuumOfCare from "@/components/ContinuumOfCare";
-import GetHelpForm from "@/components/forms/GetHelpForm";
-import CTASection from "@/components/CTASection";
-import Footer from "@/components/Footer";
-import { SpeakableSchema, VideoSchemas } from "@/lib/seo";
-import AEOBlock from "@/components/AEOBlock";
-import SchemaScript from "@/components/SchemaScript";
-import ConditionFAQ from "@/components/ConditionFAQ";
-import { getFAQSchema } from "@/lib/schema";
-import { faqData } from "@/data/faq-data";
-import FAQSection from "@/components/FAQSection";
+
+const HomepageVideo = dynamic(() => import("@/components/HomepageVideo"));
+const ConditionsGrid = dynamic(() => import("@/components/ConditionsGrid"));
+const AddictionPrograms = dynamic(() => import("@/components/AddictionPrograms"));
+const StatsSection = dynamic(() => import("@/components/StatsSection"));
+const LocationsSection = dynamic(() => import("@/components/LocationsSection"));
+const FacilityPhotoGrid = dynamic(() => import("@/components/FacilityPhotoGrid"));
+const WhyChooseUs = dynamic(() => import("@/components/WhyChooseUs"));
+const BridgeWork = dynamic(() => import("@/components/BridgeWork"));
+const TeamSection = dynamic(() => import("@/components/TeamSection"));
+const Testimonials = dynamic(() => import("@/components/Testimonials"));
+const GoogleReviews = dynamic(() => import("@/components/GoogleReviews"));
+const FAQ = dynamic(() => import("@/components/FAQ"));
+const ContinuumOfCare = dynamic(() => import("@/components/ContinuumOfCare"));
+const GetHelpForm = dynamic(() => import("@/components/forms/GetHelpForm"));
+const CTASection = dynamic(() => import("@/components/CTASection"));
+const Footer = dynamic(() => import("@/components/Footer"));
+const AEOBlock = dynamic(() => import("@/components/AEOBlock"));
+const ConditionFAQ = dynamic(() => import("@/components/ConditionFAQ"));
+const FAQSection = dynamic(() => import("@/components/FAQSection"));
 
 const homepageOrgSchema = {
   "@context": "https://schema.org",

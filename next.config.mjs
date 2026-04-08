@@ -1,6 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  compress: true,
+  poweredByHeader: false,
   images: {
+    formats: ["image/avif", "image/webp"],
+    minimumCacheTTL: 60,
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     remotePatterns: [
       { protocol: "https", hostname: "i.ytimg.com", pathname: "/vi/**" },
       { protocol: "https", hostname: "img.youtube.com", pathname: "/vi/**" },
@@ -21,7 +27,7 @@ const nextConfig = {
       // Old broken paths fixed in href audit
       { source: "/about/luxury-vs-standard", destination: "/resources/luxury-vs-standard-rehab", permanent: true },
       { source: "/about/our-team", destination: "/our-team", permanent: true },
-      { source: "/facilities", destination: "/locations", permanent: false },
+      // /facilities now has its own page.tsx — redirect removed
       // Phoenix TMS 404 fix
       { source: "/locations/phoenix-tms", destination: "/treatments/tms-therapy", permanent: true },
       { source: "/facilities/phoenix%20tms", destination: "/treatments/tms-therapy", permanent: true },

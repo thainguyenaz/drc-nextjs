@@ -49,6 +49,12 @@ export default function RootLayout({
   return (
     <html lang="en-US" className={`${inter.variable} ${playfair.variable}`}>
       <head>
+        <link
+          rel="preload"
+          href="/images/scottsdale/DRC-DRONE-SCOTTSDALE-08-01-2024-August-01-202400006-2.jpg"
+          as="image"
+          fetchPriority="high"
+        />
         <SchemaScript schema={[getMedicalOrganizationSchema(), getWebSiteSchema(), getMedicalBusinessSchema()]} />
       </head>
       <body className="font-body antialiased bg-white">
@@ -57,7 +63,7 @@ export default function RootLayout({
         {children}
         <Script
           id="livechat-widget"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `
               window.__lc = window.__lc || {};
