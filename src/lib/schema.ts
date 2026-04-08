@@ -11,11 +11,17 @@ export function getMedicalOrganizationSchema() {
     name: SITE_NAME,
     url: SITE_URL,
     logo: `${SITE_URL}/wp-content/uploads/2024/10/desert-recovery-centers-logo-black-2x.png`,
+    image: `${SITE_URL}/images/branding/drlogo-black.png`,
     telephone: "(480) 931-3617",
     email: "contact@desertrecoverycenters.com",
     hasCredential: "Joint Commission Gold Seal Accreditation",
     medicalSpecialty: ["Addiction Medicine", "Psychiatry", "Mental Health"],
     areaServed: "Arizona",
+    address: [
+      { "@type": "PostalAddress", streetAddress: "8105 W Frier Dr", addressLocality: "Glendale", addressRegion: "AZ", postalCode: "85303", addressCountry: "US" },
+      { "@type": "PostalAddress", streetAddress: "23222 N Church Rd", addressLocality: "Scottsdale", addressRegion: "AZ", postalCode: "85255", addressCountry: "US" },
+      { "@type": "PostalAddress", streetAddress: "4160 N 108th Ave", addressLocality: "Phoenix", addressRegion: "AZ", postalCode: "85037", addressCountry: "US" },
+    ],
     sameAs: [
       "https://www.facebook.com/desertrecoverycenters/",
       "https://www.instagram.com/desertrecoverycenter/",
@@ -220,11 +226,18 @@ export function getMedicalBusinessSchema() {
     url: SITE_URL,
     telephone: "+14809313617",
     email: "contact@desertrecoverycenters.com",
+    image: `${SITE_URL}/images/branding/drlogo-black.png`,
+    priceRange: "$$$$",
     medicalSpecialty: ["Addiction Medicine", "Psychiatry", "Clinical Psychology"],
     hasCredential: {
       "@type": "EducationalOccupationalCredential",
       credentialCategory: "Joint Commission Accreditation",
     },
+    address: [
+      { "@type": "PostalAddress", streetAddress: "8105 W Frier Dr", addressLocality: "Glendale", addressRegion: "AZ", postalCode: "85303", addressCountry: "US" },
+      { "@type": "PostalAddress", streetAddress: "23222 N Church Rd", addressLocality: "Scottsdale", addressRegion: "AZ", postalCode: "85255", addressCountry: "US" },
+      { "@type": "PostalAddress", streetAddress: "4160 N 108th Ave", addressLocality: "Phoenix", addressRegion: "AZ", postalCode: "85037", addressCountry: "US" },
+    ],
     sameAs: [
       "https://www.facebook.com/desertrecoverycenters/",
       "https://www.instagram.com/desertrecoverycenter/",
