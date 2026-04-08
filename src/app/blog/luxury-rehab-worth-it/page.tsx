@@ -326,7 +326,7 @@ export default function LuxuryRehabWorthItPage() {
                 {[
                   { label: "Our Facilities", href: "/facilities/glendale" },
                   { label: "Treatment Therapies", href: "/treatments" },
-                  { label: "Dual Diagnosis Treatment", href: "/treatments/dual-diagnosis" },
+                  { label: "Dual Diagnosis Treatment", href: "/treatments/dual-diagnosis-treatment" },
                   { label: "Rehab FAQ", href: "/resources/faq" },
                   { label: "Signs of Addiction", href: "/blog/signs-of-addiction" },
                 ].map((link) => (

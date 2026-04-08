@@ -27,14 +27,14 @@ const footerLinks = {
     { label: "IOP", href: "/levels-of-care/iop" },
   ],
   Treatment: [
-    { label: "Residential Treatment", href: "/treatments/residential" },
+    { label: "Residential Treatment", href: "/levels-of-care/residential-treatment" },
     { label: "TMS Therapy", href: "/treatments/tms-therapy" },
     { label: "PHP Program", href: "/locations/phoenix-php-iop" },
     { label: "IOP Program", href: "/locations/phoenix-php-iop" },
     { label: "PHP / IOP Phoenix", href: "/locations/phoenix-php-iop" },
-    { label: "CBT Therapy", href: "/treatments/cbt" },
-    { label: "DBT Therapy", href: "/treatments/dbt" },
-    { label: "EMDR Therapy", href: "/treatments/emdr" },
+    { label: "CBT Therapy", href: "/treatments/cbt-cognitive-behavioral-therapy" },
+    { label: "DBT Therapy", href: "/treatments/dbt-dialectical-behavior-therapy" },
+    { label: "EMDR Therapy", href: "/treatments/emdr-therapy" },
     { label: "12-Step Program", href: "/treatments/12-step-program" },
   ],
   Company: [

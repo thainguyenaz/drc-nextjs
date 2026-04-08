@@ -83,7 +83,7 @@ export default function MentalHealthAssessmentPage() {
               {[
                 { label: "Anxiety Treatment", href: "/mental-health/anxiety-treatment" },
                 { label: "Depression Treatment", href: "/mental-health/depression-treatment" },
-                { label: "Dual Diagnosis", href: "/treatments/dual-diagnosis" },
+                { label: "Dual Diagnosis", href: "/treatments/dual-diagnosis-treatment" },
                 { label: "Our Treatment Approach", href: "/treatments" },
                 { label: "Rehab FAQ", href: "/resources/faq" },
               ].map((link) => (

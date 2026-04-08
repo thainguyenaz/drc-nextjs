@@ -33,17 +33,17 @@ export const metadata: Metadata = {
 const therapies = [
   {
     name: "Cognitive Behavioral Therapy (CBT)",
-    href: "/treatments/cbt",
+    href: "/treatments/cbt-cognitive-behavioral-therapy",
     description: "Identifies and changes negative thought patterns and behaviors. CBT is one of the most extensively researched therapies for both mental health and addiction.",
   },
   {
     name: "Dialectical Behavior Therapy (DBT)",
-    href: "/treatments/dbt",
+    href: "/treatments/dbt-dialectical-behavior-therapy",
     description: "Teaches mindfulness, distress tolerance, emotion regulation, and interpersonal effectiveness. Particularly effective for borderline personality disorder and emotional dysregulation.",
   },
   {
     name: "EMDR",
-    href: "/treatments/emdr",
+    href: "/treatments/emdr-therapy",
     description: "Eye Movement Desensitization and Reprocessing helps process traumatic memories and reduce their emotional impact. Highly effective for PTSD and trauma.",
   },
   {
@@ -53,17 +53,17 @@ const therapies = [
   },
   {
     name: "Dual Diagnosis Treatment",
-    href: "/treatments/dual-diagnosis",
+    href: "/treatments/dual-diagnosis-treatment",
     description: "Integrated treatment for co-occurring mental health and substance use disorders. Treating both conditions simultaneously leads to significantly better outcomes.",
   },
   {
     name: "Holistic Therapies",
-    href: "/treatments/holistic",
+    href: "/treatments/holistic-therapies",
     description: "Yoga, mindfulness meditation, art therapy, music therapy, breathwork, massage, nutrition counseling, and biofeedback/neurofeedback.",
   },
   {
     name: "SoftWave Therapy",
-    href: "/treatments/softwave",
+    href: "/treatments/softwave-therapy",
     description: "Advanced tissue regeneration technology using unfocused shockwave therapy to reduce pain, decrease inflammation, and accelerate the body's natural healing process.",
   },
   {

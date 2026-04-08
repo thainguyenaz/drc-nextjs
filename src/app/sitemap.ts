@@ -56,15 +56,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/addiction/stimulant-addiction-treatment", priority: 0.7, changeFrequency: "weekly" },
 
     // Treatment modality pages
-    { path: "/treatments/residential", priority: 0.7, changeFrequency: "weekly" },
-    { path: "/treatments/cbt", priority: 0.7, changeFrequency: "weekly" },
-    { path: "/treatments/dbt", priority: 0.7, changeFrequency: "weekly" },
-    { path: "/treatments/emdr", priority: 0.7, changeFrequency: "weekly" },
+    { path: "/levels-of-care/residential-treatment", priority: 0.7, changeFrequency: "weekly" },
+    { path: "/treatments/cbt-cognitive-behavioral-therapy", priority: 0.7, changeFrequency: "weekly" },
+    { path: "/treatments/dbt-dialectical-behavior-therapy", priority: 0.7, changeFrequency: "weekly" },
+    { path: "/treatments/emdr-therapy", priority: 0.7, changeFrequency: "weekly" },
     { path: "/treatments/trauma-therapy", priority: 0.7, changeFrequency: "weekly" },
-    { path: "/treatments/holistic", priority: 0.7, changeFrequency: "weekly" },
-    { path: "/treatments/dual-diagnosis", priority: 0.7, changeFrequency: "weekly" },
+    { path: "/treatments/holistic-therapies", priority: 0.7, changeFrequency: "weekly" },
+    { path: "/treatments/dual-diagnosis-treatment", priority: 0.7, changeFrequency: "weekly" },
     { path: "/treatments/tms-therapy", priority: 0.7, changeFrequency: "weekly" },
-    { path: "/treatments/softwave", priority: 0.7, changeFrequency: "weekly" },
+    { path: "/treatments/softwave-therapy", priority: 0.7, changeFrequency: "weekly" },
     { path: "/treatments/bridgework", priority: 0.7, changeFrequency: "weekly" },
     { path: "/treatments/12-step-program", priority: 0.7, changeFrequency: "weekly" },
 

@@ -330,7 +330,7 @@ export default function DetoxGuidePage() {
               <div className="flex flex-wrap gap-3">
                 {[
                   { label: "Intervention Guide", href: "/resources/intervention-guide" },
-                  { label: "Dual Diagnosis Treatment", href: "/treatments/dual-diagnosis" },
+                  { label: "Dual Diagnosis Treatment", href: "/treatments/dual-diagnosis-treatment" },
                   { label: "Opioid Addiction Treatment", href: "/addiction/heroin-addiction-treatment" },
                   { label: "Alcohol Treatment", href: "/addiction/alcoholism-treatment" },
                   { label: "Our Facilities", href: "/facilities/scottsdale" },

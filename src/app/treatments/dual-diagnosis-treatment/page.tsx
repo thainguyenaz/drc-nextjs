@@ -16,47 +16,43 @@ import Breadcrumb from "@/components/Breadcrumb";
 import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
 import Citations from "@/components/Citations";
 
-const modalities = [
+const approachPillars = [
   {
-    name: "EMDR",
-    description: "Bilateral stimulation that helps the brain reprocess traumatic memories, reducing their emotional charge without requiring detailed verbal recounting.",
+    name: "Integrated Assessment",
+    description: "Comprehensive psychiatric evaluation that identifies all co-occurring conditions from day one, no missed diagnoses, no fragmented care.",
   },
   {
-    name: "Trauma-Focused CBT",
-    description: "Structured cognitive-behavioral approach specifically adapted for trauma, helping clients challenge trauma-related beliefs and develop healthier coping patterns.",
+    name: "Unified Treatment Planning",
+    description: "A single, cohesive treatment plan that addresses both mental health and addiction simultaneously, managed by the same clinical team.",
   },
   {
-    name: "Somatic Experiencing",
-    description: "Body-based therapy that addresses trauma stored in the nervous system, releasing physical tension, chronic pain, and hypervigilance.",
+    name: "Medication Management",
+    description: "Psychiatric oversight from our medical director ensures medication protocols support both mental health stability and recovery from substance use.",
   },
   {
-    name: "Narrative Therapy",
-    description: "Helps clients externalize their trauma, reauthoring their life story from a position of strength rather than victimhood.",
+    name: "Evidence-Based Therapies",
+    description: "CBT, DBT, EMDR, and trauma-focused modalities delivered by doctoral-level clinicians trained in dual diagnosis treatment.",
   },
   {
-    name: "Art & Expressive Therapies",
-    description: "Creative modalities that allow trauma processing through non-verbal channels, particularly valuable when words feel inadequate.",
+    name: "Holistic Support",
+    description: "Yoga, mindfulness, nutrition counseling, and somatic therapies address the physical and spiritual dimensions of co-occurring disorders.",
   },
   {
-    name: "Mindfulness & Grounding",
-    description: "Techniques for managing flashbacks, dissociation, and hyperarousal in real time, building a foundation of present-moment safety.",
+    name: "Aftercare Continuity",
+    description: "Discharge planning that maintains integrated care, connecting clients with dual diagnosis-competent providers and support systems.",
   },
 ];
 
-const traumaTypes = [
-  "Childhood Abuse & Neglect",
-  "Sexual Assault",
-  "Domestic Violence",
-  "Combat & Military Trauma",
-  "First Responder PTSD",
-  "Accidents & Natural Disasters",
-  "Medical Trauma",
-  "Complex / Developmental Trauma",
-  "Grief & Traumatic Loss",
-  "Intergenerational Trauma",
+const commonPairings = [
+  "Depression + Alcohol Use Disorder",
+  "Anxiety + Benzodiazepine Dependence",
+  "PTSD + Opioid Addiction",
+  "Bipolar Disorder + Stimulant Abuse",
+  "BPD + Polysubstance Use",
+  "ADHD + Cannabis or Stimulant Misuse",
 ];
 
-export default function TraumaTherapyPage() {
+export default function DualDiagnosisPage() {
   const collisionRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: collisionRef,
@@ -68,19 +64,19 @@ export default function TraumaTherapyPage() {
 
   return (
     <>
-      <SchemaScript schema={[getFAQSchema(faqData["trauma-therapy"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/treatments/trauma-therapy"))]} />
+      <SchemaScript schema={[getFAQSchema(faqData["dual-diagnosis-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/treatments/dual-diagnosis-treatment"))]} />
       <MedicalTherapySchema
-        name="Trauma Therapy"
-        description="Comprehensive multi-modal trauma treatment combining EMDR, somatic experiencing, and trauma-focused CBT to help clients heal from disturbing life experiences."
-        url="/treatments/trauma-therapy"
-        conditions={["PTSD", "Complex PTSD", "Childhood Abuse", "Sexual Assault", "Domestic Violence", "Combat Trauma", "Grief", "Intergenerational Trauma"]}
+        name="Dual Diagnosis Treatment"
+        description="Integrated treatment for co-occurring mental health conditions and substance use disorders, addressing both simultaneously for lasting recovery."
+        url="/treatments/dual-diagnosis-treatment"
+        conditions={["Depression", "Anxiety", "PTSD", "Bipolar Disorder", "Borderline Personality Disorder", "ADHD", "Alcohol Use Disorder", "Opioid Addiction"]}
       />
       <Navigation />
-      <Breadcrumb items={getBreadcrumbsFromPathname("/treatments/trauma-therapy")} />
+      <Breadcrumb items={getBreadcrumbsFromPathname("/treatments/dual-diagnosis-treatment")} />
       <PageHero
-        eyebrow="Treatment Specialization"
-        title="Trauma Therapy"
-        description="Trauma doesn't disappear on its own. Our specialized trauma program helps you process what happened, so it stops controlling what happens next."
+        eyebrow="Treatment Approach"
+        title="Dual Diagnosis Treatment"
+        description="When mental health and addiction collide, treating one without the other is a recipe for relapse. We treat both, together."
         bgImage="/images/general/DRC-Treatment-Therapies-BG-Fade.jpg"
       />
 
@@ -93,8 +89,8 @@ export default function TraumaTherapyPage() {
               className="relative h-[320px] md:h-[400px] rounded-2xl overflow-hidden shadow-xl group"
             >
               <Image
-                src="/images/scottsdale/DRC-OUTSIDE-NORTH-SCOTTSDALE-08-01-2024-1553August-01-202400004-2.jpg"
-                alt="Peaceful outdoor space at Desert Recovery Centers Scottsdale"
+                src="/images/glendale/Glendale-Living-Room.jpg"
+                alt="Comfortable living space at Desert Recovery Centers"
                 fill
                 className="object-cover group-hover:scale-[1.04] transition-transform duration-[350ms] ease-out"
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -105,8 +101,8 @@ export default function TraumaTherapyPage() {
               className="relative h-[320px] md:h-[400px] rounded-2xl overflow-hidden shadow-xl group"
             >
               <Image
-                src="/images/glendale/Glendale-Massage.jpg"
-                alt="Massage therapy room for somatic healing"
+                src="/images/scottsdale/DRC-LIVING-ROOMS-NORTH-SCOTTSDALE-08-01-2024-1317August-01-202400007-2.jpg"
+                alt="Scottsdale treatment facility living area"
                 fill
                 className="object-cover group-hover:scale-[1.04] transition-transform duration-[350ms] ease-out"
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -122,26 +118,26 @@ export default function TraumaTherapyPage() {
             className="max-w-3xl mx-auto"
           >
             <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
-              Understanding Trauma
+              Understanding Dual Diagnosis
             </span>
             <div className="w-[60px] h-0.5 bg-gold mt-4 mb-4" />
             <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold mb-6 leading-tight">
-              Trauma Is Not What Happened to You, It&apos;s What Lives Inside You
+              Two Conditions. One Integrated Treatment.
             </h2>
             <p className="text-gray-600 leading-relaxed mb-4">
-              Trauma rewires the brain and nervous system. It changes how you perceive danger, how you relate to others, and how you cope with stress. For many, substance use becomes the only way to manage the flashbacks, hypervigilance, numbness, and emotional pain that trauma leaves behind.
+              Nearly half of all individuals with a substance use disorder also have a co-occurring mental health condition. Depression fuels drinking. Trauma drives opioid use. Anxiety triggers benzodiazepine dependence. These conditions don&apos;t exist in isolation, and they can&apos;t be treated that way.
             </p>
             <p className="text-gray-600 leading-relaxed mb-4">
-              At Desert Recovery Centers, trauma therapy is not a single modality, it is a comprehensive, multi-modal approach designed by our clinical psychologists to meet each client exactly where they are. Some clients need the structured reprocessing of EMDR. Others benefit from the body-based release of somatic experiencing. Many need both.
+              Dual diagnosis treatment at Desert Recovery Centers is not an add-on. It is our foundation. Every client receives a comprehensive psychiatric evaluation within the first 72 hours, and every treatment plan is designed to address the full clinical picture from day one.
             </p>
             <p className="text-gray-600 leading-relaxed">
-              Our trauma program is delivered in individual and group formats, with gender-specific groups that create the safety necessary for deep healing work. Every session is led or directly supervised by a licensed clinical psychologist.
+              Our clinical psychologists, psychiatrist, and medical team collaborate daily to ensure that medication management, therapy protocols, and holistic programming work in concert, not at cross-purposes.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Modalities */}
+      {/* Approach pillars */}
       <section className="py-20 md:py-28 bg-cream">
         <div className="max-w-container mx-auto px-6">
           <motion.div
@@ -152,32 +148,32 @@ export default function TraumaTherapyPage() {
             className="text-center mb-14"
           >
             <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
-              Our Modalities
+              Our Approach
             </span>
             <div className="w-[60px] h-0.5 bg-gold mx-auto mt-4 mb-4" />
             <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold">
-              Trauma-Specific Therapeutic Approaches
+              The DRC Dual Diagnosis Model
             </h2>
           </motion.div>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {modalities.map((mod, i) => (
+            {approachPillars.map((pillar, i) => (
               <motion.div
-                key={mod.name}
+                key={pillar.name}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.08 }}
                 className="bg-white rounded-xl p-6 border-t-2 border-t-transparent hover:border-t-gold hover:shadow-lg transition-all"
               >
-                <h3 className="font-display text-lg text-forest font-semibold mb-2">{mod.name}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{mod.description}</p>
+                <h3 className="font-display text-lg text-forest font-semibold mb-2">{pillar.name}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">{pillar.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Trauma types, collision */}
+      {/* Common pairings collision */}
       <section className="bg-forest py-20 md:py-28 overflow-hidden">
         <div className="max-w-container mx-auto px-6">
           <div className="flex flex-col md:flex-row gap-12 lg:gap-20 items-center">
@@ -189,25 +185,25 @@ export default function TraumaTherapyPage() {
               className="md:w-[55%]"
             >
               <span className="text-gold font-body text-sm tracking-[0.2em] uppercase font-medium">
-                Types of Trauma We Treat
+                Common Co-Occurring Conditions
               </span>
               <div className="w-[60px] h-0.5 bg-gold mt-4 mb-4" />
               <h2 className="font-display text-3xl md:text-4xl text-white font-semibold mb-6 leading-tight">
-                Every Trauma Story Is Different
+                Conditions That Often Travel Together
               </h2>
               <p className="text-white/70 text-sm leading-relaxed mb-8">
-                Whether your trauma is a single catastrophic event or years of chronic stress, our clinicians have the training and experience to help. There is no trauma too complex, too old, or too painful to address with the right therapeutic support.
+                These are among the most common dual diagnosis presentations we treat. Each pairing requires specialized clinical expertise to ensure one condition&apos;s treatment doesn&apos;t inadvertently worsen the other.
               </p>
-              <div className="grid grid-cols-2 gap-3">
-                {traumaTypes.map((item) => (
-                  <div key={item} className="flex items-start gap-3">
+              <ul className="space-y-4">
+                {commonPairings.map((item) => (
+                  <li key={item} className="flex items-start gap-3">
                     <svg className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                     <span className="text-white/80 text-sm leading-relaxed">{item}</span>
-                  </div>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </motion.div>
 
             <motion.div
@@ -219,8 +215,8 @@ export default function TraumaTherapyPage() {
             >
               <div className="relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-xl group">
                 <Image
-                  src="/images/scottsdale/DRC-SERANITY-NORTH-SCOTTSDALE-08-01-2024-August-01-202400001-2.jpg"
-                  alt="Peaceful therapy environment at Desert Recovery Centers"
+                  src="/images/glendale/Glendale-Therapy-Room.jpg"
+                  alt="Therapy room at Desert Recovery Centers"
                   fill
                   className="object-cover group-hover:scale-[1.04] transition-transform duration-[350ms] ease-out"
                   sizes="(max-width: 768px) 100vw, 45vw"
@@ -242,14 +238,14 @@ export default function TraumaTherapyPage() {
             className="max-w-3xl mx-auto text-center"
           >
             <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
-              You Deserve to Heal
+              Start Your Recovery
             </span>
             <div className="w-[60px] h-0.5 bg-gold mx-auto mt-4 mb-4" />
             <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold mb-6 leading-tight">
-              Recovery From Trauma Is Possible
+              One Call. Both Conditions. Real Answers.
             </h2>
             <p className="text-gray-600 leading-relaxed mb-8">
-              You don&apos;t have to keep surviving on autopilot. Our clinical team specializes in helping people who have been through the worst experiences imaginable find a way back to themselves. The first step is a confidential conversation.
+              Our admissions team conducts a free, confidential clinical pre-assessment that evaluates both mental health and substance use concerns. You&apos;ll know within one call whether dual diagnosis treatment is right for you, and what your insurance will cover.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <a href="tel:+14809313617" className="bg-gold hover:bg-gold-dark text-white font-semibold text-sm px-6 py-3 rounded-xl transition-colors cursor-pointer">
@@ -269,11 +265,11 @@ export default function TraumaTherapyPage() {
           <div className="max-w-3xl mx-auto">
             <h3 className="text-forest font-display text-lg font-semibold mb-4">Related Treatment Programs</h3>
             <div className="flex flex-wrap gap-3">
-              <a href="/treatments/emdr-therapy" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">EMDR Therapy</a>
-              <a href="/mental-health/ptsd-treatment" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">PTSD Treatment</a>
-              <a href="/treatments/dbt-dialectical-behavior-therapy" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">DBT Therapy</a>
-              <a href="/treatments/holistic-therapies" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">Holistic Therapies</a>
-              <a href="/treatments/dual-diagnosis-treatment" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">Dual Diagnosis</a>
+              <a href="/treatments/cbt-cognitive-behavioral-therapy" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">CBT Therapy</a>
+              <a href="/mental-health/depression-treatment" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">Depression Treatment</a>
+              <a href="/addiction/alcoholism-treatment" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">Alcohol Addiction</a>
+              <a href="/mental-health/anxiety-treatment" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">Anxiety Treatment</a>
+              <a href="/our-team" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">Our Team</a>
             </div>
           </div>
         </div>
@@ -284,22 +280,22 @@ export default function TraumaTherapyPage() {
         <div className="max-w-container mx-auto px-6">
           <div className="max-w-3xl mx-auto space-y-8">
             <article className="border-l-2 border-gold/30 pl-5">
-              <h3 className="text-forest font-semibold text-sm mb-1">What is trauma therapy at Desert Recovery Centers?</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">Trauma therapy at Desert Recovery Centers is a comprehensive, multi-modal treatment program that combines EMDR, trauma-focused CBT, somatic experiencing, narrative therapy, and expressive arts therapies. Desert Recovery Centers is a Joint Commission accredited luxury treatment center in Arizona where trauma treatment is individualized to meet each client&apos;s specific needs and trauma history.</p>
+              <h3 className="text-forest font-semibold text-sm mb-1">What is dual diagnosis treatment at Desert Recovery Centers?</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">Dual diagnosis treatment at Desert Recovery Centers is an integrated approach that treats co-occurring mental health conditions and substance use disorders simultaneously. Desert Recovery Centers is a Joint Commission accredited luxury treatment center in Arizona where every client receives a comprehensive psychiatric evaluation within the first 72 hours, and every treatment plan addresses the full clinical picture from day one.</p>
             </article>
             <article className="border-l-2 border-gold/30 pl-5">
-              <h3 className="text-forest font-semibold text-sm mb-1">How does trauma therapy work for addiction and mental health treatment?</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">Trauma therapy addresses the root causes underlying addiction and mental health symptoms. By reprocessing traumatic memories, releasing trauma stored in the nervous system, and rebuilding a sense of safety, clients can break the cycle of substance use that often serves as self-medication for unresolved trauma. Gender-specific groups create the safety necessary for deep healing work.</p>
+              <h3 className="text-forest font-semibold text-sm mb-1">How does dual diagnosis treatment work for addiction and mental health?</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">Dual diagnosis treatment works by addressing both conditions as interconnected rather than separate problems. A unified treatment plan combines psychiatric medication management, evidence-based therapies like CBT, DBT, and EMDR, and holistic support, all coordinated by the same clinical team to ensure treatments work in concert rather than at cross-purposes.</p>
             </article>
             <article className="border-l-2 border-gold/30 pl-5">
-              <h3 className="text-forest font-semibold text-sm mb-1">Who delivers trauma therapy at Desert Recovery Centers?</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">Every trauma therapy session at Desert Recovery Centers is led or directly supervised by a licensed clinical psychologist with specialized training in trauma treatment modalities. With small client-to-clinician ratios and gender-specific group therapy, clients receive the focused clinical attention that effective trauma processing demands.</p>
+              <h3 className="text-forest font-semibold text-sm mb-1">Who delivers dual diagnosis treatment at Desert Recovery Centers?</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">Dual diagnosis treatment at Desert Recovery Centers is delivered by a multidisciplinary team of doctoral-level clinicians including licensed clinical psychologists, a board-certified psychiatrist, and registered nurses. With small client-to-clinician ratios, the team collaborates daily to ensure medication management, therapy protocols, and holistic programming are aligned for each client.</p>
             </article>
           </div>
         </div>
       </section>
 
-      <FAQSection faqs={faqData["trauma-therapy"]} />
+      <FAQSection faqs={faqData["dual-diagnosis-treatment"]} />
       <CTASection />
       <Footer />
       <Citations />

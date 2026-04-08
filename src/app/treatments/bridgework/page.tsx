@@ -273,10 +273,10 @@ export default function BridgeWorkPage() {
           <div className="max-w-3xl mx-auto">
             <h3 className="text-forest font-display text-lg font-semibold mb-4">Related Treatment Programs</h3>
             <div className="flex flex-wrap gap-3">
-              <a href="/treatments/holistic" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">Holistic Therapies</a>
-              <a href="/treatments/softwave" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">SoftWave Therapy</a>
-              <a href="/treatments/cbt" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">CBT Therapy</a>
-              <a href="/treatments/dual-diagnosis" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">Dual Diagnosis</a>
+              <a href="/treatments/holistic-therapies" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">Holistic Therapies</a>
+              <a href="/treatments/softwave-therapy" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">SoftWave Therapy</a>
+              <a href="/treatments/cbt-cognitive-behavioral-therapy" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">CBT Therapy</a>
+              <a href="/treatments/dual-diagnosis-treatment" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">Dual Diagnosis</a>
               <a href="/our-team" className="text-sm bg-white text-sage font-medium px-4 py-2 rounded-full border border-sage/20 hover:border-gold hover:text-gold transition-colors">Our Team</a>
             </div>
           </div>
