@@ -68,73 +68,73 @@ const linkMap: Record<string, RelatedLink[]> = {
   ],
 
   // ─── Addiction pages ───────────────────────────────────
-  "/addiction/alcohol": [
-    { label: "Opioid Addiction Treatment", href: "/addiction/heroin" },
-    { label: "Prescription Drug Addiction", href: "/addiction/prescription-drugs" },
+  "/addiction/alcoholism-treatment": [
+    { label: "Opioid Addiction Treatment", href: "/addiction/heroin-addiction-treatment" },
+    { label: "Prescription Drug Addiction", href: "/addiction/prescription-drug-addiction-treatment" },
     { label: "Dual Diagnosis Treatment", href: "/treatments/dual-diagnosis" },
     { label: "Depression Treatment", href: "/mental-health/depression-treatment" },
     { label: "Cost of Rehab in Arizona", href: "/resources/cost-of-rehab" },
   ],
-  "/addiction/heroin": [
-    { label: "Fentanyl Addiction Treatment", href: "/addiction/fentanyl" },
-    { label: "Prescription Drug Addiction", href: "/addiction/prescription-drugs" },
-    { label: "Alcohol Addiction Treatment", href: "/addiction/alcohol" },
+  "/addiction/heroin-addiction-treatment": [
+    { label: "Fentanyl Addiction Treatment", href: "/addiction/fentanyl-addiction-treatment" },
+    { label: "Prescription Drug Addiction", href: "/addiction/prescription-drug-addiction-treatment" },
+    { label: "Alcohol Addiction Treatment", href: "/addiction/alcoholism-treatment" },
     { label: "EMDR Therapy", href: "/treatments/emdr" },
     { label: "Dual Diagnosis Treatment", href: "/treatments/dual-diagnosis" },
   ],
-  "/addiction/cocaine": [
-    { label: "Stimulant Addiction Treatment", href: "/addiction/stimulants" },
-    { label: "Meth Addiction Treatment", href: "/addiction/meth" },
-    { label: "Alcohol Addiction Treatment", href: "/addiction/alcohol" },
+  "/addiction/cocaine-addiction-treatment": [
+    { label: "Stimulant Addiction Treatment", href: "/addiction/stimulant-addiction-treatment" },
+    { label: "Meth Addiction Treatment", href: "/addiction/meth-addiction-treatment" },
+    { label: "Alcohol Addiction Treatment", href: "/addiction/alcoholism-treatment" },
     { label: "CBT Therapy", href: "/treatments/cbt" },
     { label: "Dual Diagnosis Treatment", href: "/treatments/dual-diagnosis" },
   ],
-  "/addiction/meth": [
-    { label: "Stimulant Addiction Treatment", href: "/addiction/stimulants" },
-    { label: "Cocaine Addiction Treatment", href: "/addiction/cocaine" },
-    { label: "Fentanyl Addiction Treatment", href: "/addiction/fentanyl" },
+  "/addiction/meth-addiction-treatment": [
+    { label: "Stimulant Addiction Treatment", href: "/addiction/stimulant-addiction-treatment" },
+    { label: "Cocaine Addiction Treatment", href: "/addiction/cocaine-addiction-treatment" },
+    { label: "Fentanyl Addiction Treatment", href: "/addiction/fentanyl-addiction-treatment" },
     { label: "CBT Therapy", href: "/treatments/cbt" },
     { label: "Dual Diagnosis Treatment", href: "/treatments/dual-diagnosis" },
   ],
-  "/addiction/fentanyl": [
-    { label: "Opioid Addiction Treatment", href: "/addiction/heroin" },
-    { label: "Prescription Drug Addiction", href: "/addiction/prescription-drugs" },
-    { label: "Alcohol Addiction Treatment", href: "/addiction/alcohol" },
+  "/addiction/fentanyl-addiction-treatment": [
+    { label: "Opioid Addiction Treatment", href: "/addiction/heroin-addiction-treatment" },
+    { label: "Prescription Drug Addiction", href: "/addiction/prescription-drug-addiction-treatment" },
+    { label: "Alcohol Addiction Treatment", href: "/addiction/alcoholism-treatment" },
     { label: "Trauma Therapy", href: "/treatments/trauma-therapy" },
     { label: "Insurance Coverage", href: "/insurance/cigna" },
   ],
-  "/addiction/prescription-drugs": [
-    { label: "Opioid Addiction Treatment", href: "/addiction/heroin" },
-    { label: "Fentanyl Addiction Treatment", href: "/addiction/fentanyl" },
-    { label: "Alcohol Addiction Treatment", href: "/addiction/alcohol" },
+  "/addiction/prescription-drug-addiction-treatment": [
+    { label: "Opioid Addiction Treatment", href: "/addiction/heroin-addiction-treatment" },
+    { label: "Fentanyl Addiction Treatment", href: "/addiction/fentanyl-addiction-treatment" },
+    { label: "Alcohol Addiction Treatment", href: "/addiction/alcoholism-treatment" },
     { label: "Dual Diagnosis Treatment", href: "/treatments/dual-diagnosis" },
     { label: "What to Bring to Rehab", href: "/resources/what-to-bring" },
   ],
-  "/addiction/marijuana": [
-    { label: "Stimulant Addiction Treatment", href: "/addiction/stimulants" },
-    { label: "Alcohol Addiction Treatment", href: "/addiction/alcohol" },
+  "/addiction/marijuana-addiction-treatment": [
+    { label: "Stimulant Addiction Treatment", href: "/addiction/stimulant-addiction-treatment" },
+    { label: "Alcohol Addiction Treatment", href: "/addiction/alcoholism-treatment" },
     { label: "Anxiety Treatment", href: "/mental-health/anxiety-treatment" },
     { label: "CBT Therapy", href: "/treatments/cbt" },
     { label: "Dual Diagnosis Treatment", href: "/treatments/dual-diagnosis" },
   ],
-  "/addiction/gambling": [
-    { label: "Sex Addiction Treatment", href: "/addiction/sex-addiction" },
-    { label: "Alcohol Addiction Treatment", href: "/addiction/alcohol" },
+  "/addiction/gambling-addiction-treatment": [
+    { label: "Sex Addiction Treatment", href: "/addiction/sex-addiction-treatment" },
+    { label: "Alcohol Addiction Treatment", href: "/addiction/alcoholism-treatment" },
     { label: "Depression Treatment", href: "/mental-health/depression-treatment" },
     { label: "CBT Therapy", href: "/treatments/cbt" },
     { label: "Dual Diagnosis Treatment", href: "/treatments/dual-diagnosis" },
   ],
-  "/addiction/sex-addiction": [
-    { label: "Gambling Addiction Treatment", href: "/addiction/gambling" },
-    { label: "Alcohol Addiction Treatment", href: "/addiction/alcohol" },
+  "/addiction/sex-addiction-treatment": [
+    { label: "Gambling Addiction Treatment", href: "/addiction/gambling-addiction-treatment" },
+    { label: "Alcohol Addiction Treatment", href: "/addiction/alcoholism-treatment" },
     { label: "Trauma Therapy", href: "/treatments/trauma-therapy" },
     { label: "DBT Therapy", href: "/treatments/dbt" },
     { label: "Dual Diagnosis Treatment", href: "/treatments/dual-diagnosis" },
   ],
-  "/addiction/stimulants": [
-    { label: "Cocaine Addiction Treatment", href: "/addiction/cocaine" },
-    { label: "Meth Addiction Treatment", href: "/addiction/meth" },
-    { label: "Alcohol Addiction Treatment", href: "/addiction/alcohol" },
+  "/addiction/stimulant-addiction-treatment": [
+    { label: "Cocaine Addiction Treatment", href: "/addiction/cocaine-addiction-treatment" },
+    { label: "Meth Addiction Treatment", href: "/addiction/meth-addiction-treatment" },
+    { label: "Alcohol Addiction Treatment", href: "/addiction/alcoholism-treatment" },
     { label: "ADHD Treatment", href: "/mental-health/adhd-add" },
     { label: "Dual Diagnosis Treatment", href: "/treatments/dual-diagnosis" },
   ],
@@ -171,7 +171,7 @@ const linkMap: Record<string, RelatedLink[]> = {
   "/treatments/dual-diagnosis": [
     { label: "CBT Therapy", href: "/treatments/cbt" },
     { label: "Depression Treatment", href: "/mental-health/depression-treatment" },
-    { label: "Alcohol Addiction Treatment", href: "/addiction/alcohol" },
+    { label: "Alcohol Addiction Treatment", href: "/addiction/alcoholism-treatment" },
     { label: "Anxiety Treatment", href: "/mental-health/anxiety-treatment" },
     { label: "Our Clinical Team", href: "/our-team" },
   ],

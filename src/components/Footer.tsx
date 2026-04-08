@@ -12,12 +12,12 @@ const footerLinks = {
     { label: "Schizophrenia", href: "/mental-health/schizophrenia-treatment" },
   ],
   Addiction: [
-    { label: "Alcohol", href: "/addiction/alcohol" },
-    { label: "Opioids", href: "/addiction/heroin" },
-    { label: "Fentanyl", href: "/addiction/fentanyl" },
-    { label: "Cocaine", href: "/addiction/cocaine" },
-    { label: "Meth", href: "/addiction/meth" },
-    { label: "Prescription Drugs", href: "/addiction/prescription-drugs" },
+    { label: "Alcohol", href: "/addiction/alcoholism-treatment" },
+    { label: "Opioids", href: "/addiction/heroin-addiction-treatment" },
+    { label: "Fentanyl", href: "/addiction/fentanyl-addiction-treatment" },
+    { label: "Cocaine", href: "/addiction/cocaine-addiction-treatment" },
+    { label: "Meth", href: "/addiction/meth-addiction-treatment" },
+    { label: "Prescription Drugs", href: "/addiction/prescription-drug-addiction-treatment" },
   ],
   "Levels of Care": [
     { label: "Overview", href: "/levels-of-care" },

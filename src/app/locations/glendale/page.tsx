@@ -240,12 +240,12 @@ export default function GlendaleLocationPage() {
             </p>
             <div className="grid md:grid-cols-2 gap-4 mb-6">
               {[
-                { label: "Alcohol Addiction", href: "/addiction/alcohol" },
-                { label: "Opioid & Heroin Addiction", href: "/addiction/heroin" },
-                { label: "Fentanyl Addiction", href: "/addiction/fentanyl" },
-                { label: "Cocaine Addiction", href: "/addiction/cocaine" },
-                { label: "Meth Addiction", href: "/addiction/meth" },
-                { label: "Prescription Drug Addiction", href: "/addiction/prescription-drugs" },
+                { label: "Alcohol Addiction", href: "/addiction/alcoholism-treatment" },
+                { label: "Opioid & Heroin Addiction", href: "/addiction/heroin-addiction-treatment" },
+                { label: "Fentanyl Addiction", href: "/addiction/fentanyl-addiction-treatment" },
+                { label: "Cocaine Addiction", href: "/addiction/cocaine-addiction-treatment" },
+                { label: "Meth Addiction", href: "/addiction/meth-addiction-treatment" },
+                { label: "Prescription Drug Addiction", href: "/addiction/prescription-drug-addiction-treatment" },
                 { label: "Anxiety Disorders", href: "/mental-health/anxiety-treatment" },
                 { label: "Depression", href: "/mental-health/depression-treatment" },
                 { label: "PTSD & Trauma", href: "/mental-health/ptsd-treatment" },

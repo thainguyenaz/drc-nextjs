@@ -59,15 +59,15 @@ const faqs = [
 export default function MarijuanaAddictionPage() {
   return (
     <>
-      <SchemaScript schema={[{"@context":"https://schema.org","@type":"MedicalWebPage","@id":"https://www.desertrecoverycenters.com/addiction/marijuana-addiction-treatment/#webpage","url":"https://www.desertrecoverycenters.com/addiction/marijuana-addiction-treatment/","name":"Marijuana Addiction Treatment Arizona | Desert Recovery Centers","specialty":"Psychiatry","reviewedBy":{"@type":"Person","@id":"https://www.desertrecoverycenters.com/our-team#dr-an-nguyen","name":"Dr. An Nguyen","jobTitle":"Licensed Clinical Psychologist, Clinical Director","worksFor":{"@id":"https://www.desertrecoverycenters.com/#organization"}},"dateModified":"2026-04-05","publisher":{"@id":"https://www.desertrecoverycenters.com/#organization"}}, getFAQSchema(faqData["marijuana-addiction-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/addiction/marijuana"))]} />
+      <SchemaScript schema={[{"@context":"https://schema.org","@type":"MedicalWebPage","@id":"https://www.desertrecoverycenters.com/addiction/marijuana-addiction-treatment/#webpage","url":"https://www.desertrecoverycenters.com/addiction/marijuana-addiction-treatment/","name":"Marijuana Addiction Treatment Arizona | Desert Recovery Centers","specialty":"Psychiatry","reviewedBy":{"@type":"Person","@id":"https://www.desertrecoverycenters.com/our-team#dr-an-nguyen","name":"Dr. An Nguyen","jobTitle":"Licensed Clinical Psychologist, Clinical Director","worksFor":{"@id":"https://www.desertrecoverycenters.com/#organization"}},"dateModified":"2026-04-05","publisher":{"@id":"https://www.desertrecoverycenters.com/#organization"}}, getFAQSchema(faqData["marijuana-addiction-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/addiction/marijuana-addiction-treatment"))]} />
       <MedicalConditionSchema
         name="Cannabis Use Disorder"
         description="Cannabis use disorder is a DSM-5 recognized condition characterized by psychological dependence on marijuana. Today's high-potency THC products accelerate tolerance and dependence development."
-        url="/addiction/marijuana"
+        url="/addiction/marijuana-addiction-treatment"
         possibleTreatments={["CBT", "Motivational Enhancement Therapy", "Dual Diagnosis Treatment", "Life Skills & Wellness Programming"]}
       />
       <Navigation />
-      <Breadcrumb items={getBreadcrumbsFromPathname("/addiction/marijuana")} />
+      <Breadcrumb items={getBreadcrumbsFromPathname("/addiction/marijuana-addiction-treatment")} />
       <PageHero
         eyebrow="Addiction Treatment"
         title="Marijuana Addiction Treatment"
@@ -202,7 +202,7 @@ export default function MarijuanaAddictionPage() {
           },
         ]}
       />
-      <RelatedPages currentPath="/addiction/marijuana" />
+      <RelatedPages currentPath="/addiction/marijuana-addiction-treatment" />
       <FAQSection faqs={faqData["marijuana-addiction-treatment"]} />
       <CTASection />
       <Footer />

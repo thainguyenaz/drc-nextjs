@@ -59,15 +59,15 @@ const faqs = [
 export default function FentanylAddictionPage() {
   return (
     <>
-      <SchemaScript schema={[getFAQSchema(faqData["fentanyl-addiction-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/addiction/fentanyl")), {"@context":"https://schema.org","@type":"MedicalWebPage","@id":"https://www.desertrecoverycenters.com/addiction/fentanyl-addiction-treatment/#webpage","url":"https://www.desertrecoverycenters.com/addiction/fentanyl-addiction-treatment/","name":"Fentanyl Addiction Treatment Arizona | Desert Recovery Centers","specialty":"Psychiatry","reviewedBy":{"@type":"Person","@id":"https://www.desertrecoverycenters.com/our-team#dr-an-nguyen","name":"Dr. An Nguyen","jobTitle":"Licensed Clinical Psychologist, Clinical Director","worksFor":{"@id":"https://www.desertrecoverycenters.com/#organization"}},"dateModified":"2026-04-05","publisher":{"@id":"https://www.desertrecoverycenters.com/#organization"}}]} />
+      <SchemaScript schema={[getFAQSchema(faqData["fentanyl-addiction-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/addiction/fentanyl-addiction-treatment")), {"@context":"https://schema.org","@type":"MedicalWebPage","@id":"https://www.desertrecoverycenters.com/addiction/fentanyl-addiction-treatment/#webpage","url":"https://www.desertrecoverycenters.com/addiction/fentanyl-addiction-treatment/","name":"Fentanyl Addiction Treatment Arizona | Desert Recovery Centers","specialty":"Psychiatry","reviewedBy":{"@type":"Person","@id":"https://www.desertrecoverycenters.com/our-team#dr-an-nguyen","name":"Dr. An Nguyen","jobTitle":"Licensed Clinical Psychologist, Clinical Director","worksFor":{"@id":"https://www.desertrecoverycenters.com/#organization"}},"dateModified":"2026-04-05","publisher":{"@id":"https://www.desertrecoverycenters.com/#organization"}}]} />
       <MedicalConditionSchema
         name="Fentanyl Addiction"
         description="Fentanyl addiction is a severe opioid use disorder involving one of the most potent synthetic opioids in existence. Fentanyl is 50 to 100 times more potent than morphine and creates rapid, severe physical dependence."
-        url="/addiction/fentanyl"
+        url="/addiction/fentanyl-addiction-treatment"
         possibleTreatments={["Medically Supervised Detox", "MAT (Suboxone, Vivitrol)", "Trauma-Informed Therapy (EMDR)", "Dual Diagnosis Treatment"]}
       />
       <Navigation />
-      <Breadcrumb items={getBreadcrumbsFromPathname("/addiction/fentanyl")} />
+      <Breadcrumb items={getBreadcrumbsFromPathname("/addiction/fentanyl-addiction-treatment")} />
       <PageHero
         eyebrow="Addiction Treatment"
         title="Fentanyl Addiction Treatment"
@@ -202,7 +202,7 @@ export default function FentanylAddictionPage() {
           },
         ]}
       />
-      <RelatedPages currentPath="/addiction/fentanyl" />
+      <RelatedPages currentPath="/addiction/fentanyl-addiction-treatment" />
       <FAQSection faqs={faqData["fentanyl-addiction-treatment"]} />
       <CTASection />
       <Footer />

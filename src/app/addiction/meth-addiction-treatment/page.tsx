@@ -59,15 +59,15 @@ const faqs = [
 export default function MethAddictionPage() {
   return (
     <>
-      <SchemaScript schema={[getFAQSchema(faqData["meth-addiction-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/addiction/meth")), {"@context":"https://schema.org","@type":"MedicalWebPage","@id":"https://www.desertrecoverycenters.com/addiction/meth-addiction-treatment/#webpage","url":"https://www.desertrecoverycenters.com/addiction/meth-addiction-treatment/","name":"Meth Addiction Treatment Arizona | Desert Recovery Centers","specialty":"Psychiatry","reviewedBy":{"@type":"Person","@id":"https://www.desertrecoverycenters.com/our-team#dr-an-nguyen","name":"Dr. An Nguyen","jobTitle":"Licensed Clinical Psychologist, Clinical Director","worksFor":{"@id":"https://www.desertrecoverycenters.com/#organization"}},"dateModified":"2026-04-05","publisher":{"@id":"https://www.desertrecoverycenters.com/#organization"}}]} />
+      <SchemaScript schema={[getFAQSchema(faqData["meth-addiction-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/addiction/meth-addiction-treatment")), {"@context":"https://schema.org","@type":"MedicalWebPage","@id":"https://www.desertrecoverycenters.com/addiction/meth-addiction-treatment/#webpage","url":"https://www.desertrecoverycenters.com/addiction/meth-addiction-treatment/","name":"Meth Addiction Treatment Arizona | Desert Recovery Centers","specialty":"Psychiatry","reviewedBy":{"@type":"Person","@id":"https://www.desertrecoverycenters.com/our-team#dr-an-nguyen","name":"Dr. An Nguyen","jobTitle":"Licensed Clinical Psychologist, Clinical Director","worksFor":{"@id":"https://www.desertrecoverycenters.com/#organization"}},"dateModified":"2026-04-05","publisher":{"@id":"https://www.desertrecoverycenters.com/#organization"}}]} />
       <MedicalConditionSchema
         name="Methamphetamine Addiction"
         description="Methamphetamine addiction is a severe stimulant use disorder. Meth releases massive amounts of dopamine, damaging receptors over time and making it increasingly difficult to experience pleasure or basic functioning without the drug."
-        url="/addiction/meth"
+        url="/addiction/meth-addiction-treatment"
         possibleTreatments={["Matrix Model", "CBT", "Contingency Management", "Psychiatric Stabilization", "Dual Diagnosis Treatment"]}
       />
       <Navigation />
-      <Breadcrumb items={getBreadcrumbsFromPathname("/addiction/meth")} />
+      <Breadcrumb items={getBreadcrumbsFromPathname("/addiction/meth-addiction-treatment")} />
       <PageHero
         eyebrow="Addiction Treatment"
         title="Meth Addiction Treatment"
@@ -202,7 +202,7 @@ export default function MethAddictionPage() {
           },
         ]}
       />
-      <RelatedPages currentPath="/addiction/meth" />
+      <RelatedPages currentPath="/addiction/meth-addiction-treatment" />
       <FAQSection faqs={faqData["meth-addiction-treatment"]} />
       <CTASection />
       <Footer />

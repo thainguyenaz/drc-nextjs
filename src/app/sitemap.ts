@@ -44,18 +44,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/mental-health/trauma-treatment", priority: 0.7, changeFrequency: "weekly" },
 
     // Addiction condition pages
-    { path: "/addiction/alcohol", priority: 0.7, changeFrequency: "weekly" },
-    { path: "/addiction/heroin", priority: 0.7, changeFrequency: "weekly" },
-    { path: "/addiction/fentanyl", priority: 0.7, changeFrequency: "weekly" },
-    { path: "/addiction/cocaine", priority: 0.7, changeFrequency: "weekly" },
-    { path: "/addiction/meth", priority: 0.7, changeFrequency: "weekly" },
-    { path: "/addiction/prescription-drugs", priority: 0.7, changeFrequency: "weekly" },
-    { path: "/addiction/marijuana", priority: 0.7, changeFrequency: "weekly" },
-    { path: "/addiction/gambling", priority: 0.7, changeFrequency: "weekly" },
-    { path: "/addiction/sex-addiction", priority: 0.7, changeFrequency: "weekly" },
-    { path: "/addiction/stimulants", priority: 0.7, changeFrequency: "weekly" },
-    { path: "/addiction/opioid-detox", priority: 0.7, changeFrequency: "weekly" },
-    { path: "/addiction/alcohol-detox", priority: 0.7, changeFrequency: "weekly" },
+    { path: "/addiction/alcoholism-treatment", priority: 0.7, changeFrequency: "weekly" },
+    { path: "/addiction/heroin-addiction-treatment", priority: 0.7, changeFrequency: "weekly" },
+    { path: "/addiction/fentanyl-addiction-treatment", priority: 0.7, changeFrequency: "weekly" },
+    { path: "/addiction/cocaine-addiction-treatment", priority: 0.7, changeFrequency: "weekly" },
+    { path: "/addiction/meth-addiction-treatment", priority: 0.7, changeFrequency: "weekly" },
+    { path: "/addiction/prescription-drug-addiction-treatment", priority: 0.7, changeFrequency: "weekly" },
+    { path: "/addiction/marijuana-addiction-treatment", priority: 0.7, changeFrequency: "weekly" },
+    { path: "/addiction/gambling-addiction-treatment", priority: 0.7, changeFrequency: "weekly" },
+    { path: "/addiction/sex-addiction-treatment", priority: 0.7, changeFrequency: "weekly" },
+    { path: "/addiction/stimulant-addiction-treatment", priority: 0.7, changeFrequency: "weekly" },
 
     // Treatment modality pages
     { path: "/treatments/residential", priority: 0.7, changeFrequency: "weekly" },

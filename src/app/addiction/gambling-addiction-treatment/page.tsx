@@ -57,15 +57,15 @@ const faqs = [
 export default function GamblingAddictionPage() {
   return (
     <>
-      <SchemaScript schema={[getFAQSchema(faqData["gambling-addiction-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/addiction/gambling"))]} />
+      <SchemaScript schema={[getFAQSchema(faqData["gambling-addiction-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/addiction/gambling-addiction-treatment"))]} />
       <MedicalConditionSchema
         name="Gambling Addiction"
         description="Gambling disorder is a behavioral addiction classified in the DSM-5. Like substance addictions, compulsive gambling hijacks the brain's reward system, with the anticipation of winning triggering dopamine surges that mirror the effects of drugs."
-        url="/addiction/gambling"
+        url="/addiction/gambling-addiction-treatment"
         possibleTreatments={["CBT", "Dual Diagnosis Treatment", "Financial Recovery Support", "Group Therapy & 12-Step Facilitation"]}
       />
       <Navigation />
-      <Breadcrumb items={getBreadcrumbsFromPathname("/addiction/gambling")} />
+      <Breadcrumb items={getBreadcrumbsFromPathname("/addiction/gambling-addiction-treatment")} />
       <PageHero
         eyebrow="Addiction Treatment"
         title="Gambling Addiction Treatment"
@@ -208,7 +208,7 @@ export default function GamblingAddictionPage() {
           },
         ]}
       />
-      <RelatedPages currentPath="/addiction/gambling" />
+      <RelatedPages currentPath="/addiction/gambling-addiction-treatment" />
       <section className="max-w-4xl mx-auto px-6 py-16">
         <FAQSection faqs={faqData["gambling-addiction-treatment"]} />
       </section>

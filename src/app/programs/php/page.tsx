@@ -177,7 +177,7 @@ export default function PHPPage() {
               {[
                 { label: "Residential Treatment", href: "/programs/residential" },
                 { label: "Intensive Outpatient (IOP)", href: "/programs/iop" },
-                { label: "Alcohol Addiction", href: "/addiction/alcohol" },
+                { label: "Alcohol Addiction", href: "/addiction/alcoholism-treatment" },
                 { label: "Depression Treatment", href: "/mental-health/depression-treatment" },
                 { label: "Anxiety Treatment", href: "/mental-health/anxiety-treatment" },
                 { label: "DRC Glendale", href: "/locations/glendale" },

@@ -57,15 +57,15 @@ const faqs = [
 export default function PrescriptionDrugAddictionPage() {
   return (
     <>
-      <SchemaScript schema={[{"@context":"https://schema.org","@type":"MedicalWebPage","@id":"https://www.desertrecoverycenters.com/addiction/prescription-drug-addiction-treatment/#webpage","url":"https://www.desertrecoverycenters.com/addiction/prescription-drug-addiction-treatment/","name":"Prescription Drug Addiction Treatment Arizona | Desert Recovery Centers","specialty":"Psychiatry","reviewedBy":{"@type":"Person","@id":"https://www.desertrecoverycenters.com/our-team#dr-an-nguyen","name":"Dr. An Nguyen","jobTitle":"Licensed Clinical Psychologist, Clinical Director","worksFor":{"@id":"https://www.desertrecoverycenters.com/#organization"}},"dateModified":"2026-04-05","publisher":{"@id":"https://www.desertrecoverycenters.com/#organization"}}, getFAQSchema(faqData["prescription-drug-addiction-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/addiction/prescription-drugs"))]} />
+      <SchemaScript schema={[{"@context":"https://schema.org","@type":"MedicalWebPage","@id":"https://www.desertrecoverycenters.com/addiction/prescription-drug-addiction-treatment/#webpage","url":"https://www.desertrecoverycenters.com/addiction/prescription-drug-addiction-treatment/","name":"Prescription Drug Addiction Treatment Arizona | Desert Recovery Centers","specialty":"Psychiatry","reviewedBy":{"@type":"Person","@id":"https://www.desertrecoverycenters.com/our-team#dr-an-nguyen","name":"Dr. An Nguyen","jobTitle":"Licensed Clinical Psychologist, Clinical Director","worksFor":{"@id":"https://www.desertrecoverycenters.com/#organization"}},"dateModified":"2026-04-05","publisher":{"@id":"https://www.desertrecoverycenters.com/#organization"}}, getFAQSchema(faqData["prescription-drug-addiction-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/addiction/prescription-drug-addiction-treatment"))]} />
       <MedicalConditionSchema
         name="Prescription Drug Addiction"
         description="Prescription drug addiction involves dependence on opioid painkillers, benzodiazepines, or stimulant medications. Dependence often develops gradually from legitimate medical use, making it difficult to recognize until it has significantly impacted your life."
-        url="/addiction/prescription-drugs"
+        url="/addiction/prescription-drug-addiction-treatment"
         possibleTreatments={["Medically Supervised Detox & Tapering", "Medication-Assisted Treatment", "CBT", "DBT", "Pain Management Alternatives"]}
       />
       <Navigation />
-      <Breadcrumb items={getBreadcrumbsFromPathname("/addiction/prescription-drugs")} />
+      <Breadcrumb items={getBreadcrumbsFromPathname("/addiction/prescription-drug-addiction-treatment")} />
       <PageHero
         eyebrow="Addiction Treatment"
         title="Prescription Drug Addiction Treatment"
@@ -208,7 +208,7 @@ export default function PrescriptionDrugAddictionPage() {
           },
         ]}
       />
-      <RelatedPages currentPath="/addiction/prescription-drugs" />
+      <RelatedPages currentPath="/addiction/prescription-drug-addiction-treatment" />
       <FAQSection faqs={faqData["prescription-drug-addiction-treatment"]} />
       <CTASection />
       <Footer />
