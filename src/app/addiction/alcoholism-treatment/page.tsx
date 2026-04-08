@@ -182,6 +182,7 @@ export default function AlcoholAddictionPage() {
               title="How Does Alcohol Affect Mental Health?"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
+              loading="lazy"
               className="absolute inset-0 w-full h-full border-0"
             />
           </div>
@@ -192,6 +193,7 @@ export default function AlcoholAddictionPage() {
               title="Is There a Link Between Alcohol Use and Suicide Risk"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
+              loading="lazy"
               className="absolute inset-0 w-full h-full border-0"
             />
           </div>
@@ -202,6 +204,7 @@ export default function AlcoholAddictionPage() {
               title="What Are the Long-Term Mental Health Effects of Chronic Alcohol Use"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
+              loading="lazy"
               className="absolute inset-0 w-full h-full border-0"
             />
           </div>
@@ -212,6 +215,7 @@ export default function AlcoholAddictionPage() {
               title="What Is Gray-Area Drinking, and Why Is It Dangerous"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
+              loading="lazy"
               className="absolute inset-0 w-full h-full border-0"
             />
           </div>

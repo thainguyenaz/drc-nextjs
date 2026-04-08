@@ -151,6 +151,7 @@ export default function IOPPage() {
               title="What Does a Weekly IOP Schedule Typically Look Like"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
+              loading="lazy"
               className="absolute inset-0 w-full h-full border-0"
             />
           </div>
@@ -161,6 +162,7 @@ export default function IOPPage() {
               title="Why Is Stepping Down Gradually So Important In Recovery"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
+              loading="lazy"
               className="absolute inset-0 w-full h-full border-0"
             />
           </div>

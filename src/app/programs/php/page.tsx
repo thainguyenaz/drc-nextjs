@@ -152,6 +152,7 @@ export default function PHPPage() {
               title="How Do Outcomes Improve When Clients Follow a Full Continuum of Care"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
+              loading="lazy"
               className="absolute inset-0 w-full h-full border-0"
             />
           </div>
@@ -162,6 +163,7 @@ export default function PHPPage() {
               title="What Happens If Someone Needs to Step Back Up to a Higher Level of Care"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
+              loading="lazy"
               className="absolute inset-0 w-full h-full border-0"
             />
           </div>

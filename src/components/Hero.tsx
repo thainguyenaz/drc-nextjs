@@ -52,24 +52,15 @@ export default function Hero() {
       <div className="relative z-10 max-w-container mx-auto px-6 pb-24 w-full">
         <div className="max-w-3xl">
           {/* Eyebrow */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
-            className="flex items-center gap-3 mb-6"
-          >
+          <div className="flex items-center gap-3 mb-6">
             <span className="text-gold font-body uppercase font-semibold" style={{ fontSize: 13, letterSpacing: 6 }}>
               Heal. Restore. Thrive.
             </span>
             <span className="flex-1 h-px bg-gold/30 max-w-[80px]" />
-          </motion.div>
+          </div>
 
-          {/* Headline, collision slide-up animation */}
-          <motion.div
-            initial={{ opacity: 0, y: 60 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94], delay: 0.25 }}
-          >
+          {/* Headline */}
+          <div>
             <h1
               className="text-white font-display font-bold leading-[1.1] mb-6"
               style={{ fontSize: "clamp(32px, 5vw, 52px)" }}
@@ -77,23 +68,18 @@ export default function Hero() {
               Luxury Addiction and Mental Health
               <br className="hidden md:inline" /> Treatment in Arizona
             </h1>
-          </motion.div>
+          </div>
 
-          {/* Subhead, sales copy */}
-          <motion.p
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: "easeOut", delay: 0.5 }}
-            className="text-white/75 font-body text-lg md:text-xl max-w-2xl mb-10 leading-relaxed"
-          >
+          {/* Subhead, sales copy — LCP element */}
+          <p className="text-white/75 font-body text-lg md:text-xl max-w-2xl mb-10 leading-relaxed">
             When you are ready to reclaim your life, we are ready to help. Arizona&apos;s most intimate luxury recovery program, 10 beds, doctoral-level care, and a team that understands recovery personally.
-          </motion.p>
+          </p>
 
           {/* Trust Badges with real images */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: "easeOut", delay: 0.7 }}
+            transition={{ duration: 0.5, ease: "easeOut", delay: 0.3 }}
             className="flex flex-wrap items-center gap-4 mb-10"
           >
             <a href="https://www.jointcommission.org" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/15 rounded-xl px-4 py-2.5 hover:bg-white/15 transition-colors">

@@ -44,6 +44,7 @@ function VideoCard({ video, index }: { video: (typeof videos)[number]; index: nu
             title={video.title}
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
+            loading="lazy"
             className="absolute inset-0 w-full h-full"
           />
         ) : (

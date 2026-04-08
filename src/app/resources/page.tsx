@@ -36,6 +36,7 @@ export default function ResourcesPage() {
               title="What Are the Warning Signs You're Headed Toward Relapse"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
+              loading="lazy"
               className="absolute inset-0 w-full h-full border-0"
             />
           </div>
@@ -46,6 +47,7 @@ export default function ResourcesPage() {
               title="What Are the Best Ways to Rebuild Trust with Family After Multiple Relapses"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
+              loading="lazy"
               className="absolute inset-0 w-full h-full border-0"
             />
           </div>
@@ -56,6 +58,7 @@ export default function ResourcesPage() {
               title="What Is a Relapse Prevention Plan, and What Should Be In It"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
+              loading="lazy"
               className="absolute inset-0 w-full h-full border-0"
             />
           </div>
@@ -66,6 +69,7 @@ export default function ResourcesPage() {
               title="What Is an Intervention, and When Is It Actually Helpful vs. Harmful"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
+              loading="lazy"
               className="absolute inset-0 w-full h-full border-0"
             />
           </div>

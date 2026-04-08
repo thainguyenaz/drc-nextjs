@@ -112,6 +112,7 @@ export default function AddictionPage() {
                 title="Addiction Treatment at Desert Recovery Centers"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
+                loading="lazy"
                 className="absolute inset-0 w-full h-full border-0"
               />
             </div>
@@ -134,6 +135,7 @@ export default function AddictionPage() {
                 title="What Is High-Functioning Addiction, and Why Is It So Hard to Recognize"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
+                loading="lazy"
                 className="absolute inset-0 w-full h-full border-0"
               />
             </div>
