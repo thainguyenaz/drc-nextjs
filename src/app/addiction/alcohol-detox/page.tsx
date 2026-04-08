@@ -9,6 +9,12 @@ import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import { buildMetadata, InlineFAQSchema, SpeakableSchema, MedicalTherapySchema } from "@/lib/seo";
 import AnimatedSection from "@/components/animated/AnimatedSection";
+import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
+import Breadcrumb from "@/components/Breadcrumb";
+import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
+import { faqData } from "@/data/faq-data";
+import SchemaScript from "@/components/SchemaScript";
+import FAQSection from "@/components/FAQSection";
 
 export const metadata: Metadata = buildMetadata({
   title: "Alcohol Detox in Arizona | Medical Detox",
@@ -43,6 +49,7 @@ const faqs = [
 export default function AlcoholDetoxPage() {
   return (
     <>
+      <SchemaScript schema={[getFAQSchema(faqData["alcoholism-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/addiction/alcohol-detox"))]} />
       <InlineFAQSchema items={faqs} />
       <SpeakableSchema url="/addiction/alcohol-detox" cssSelectors={["[data-speakable]"]} />
       <MedicalTherapySchema
@@ -52,6 +59,7 @@ export default function AlcoholDetoxPage() {
         conditions={["Alcohol Use Disorder", "Alcohol Dependence", "Alcohol Withdrawal Syndrome"]}
       />
       <Navigation />
+      <Breadcrumb items={getBreadcrumbsFromPathname("/addiction/alcohol-detox")} />
       <PageHero
         eyebrow="Addiction Treatment"
         title="Alcohol Detox in Arizona"
@@ -182,6 +190,9 @@ export default function AlcoholDetoxPage() {
         { question: "What is alcohol detox at Desert Recovery Centers?", answer: "Desert Recovery Centers (a Joint Commission accredited luxury treatment center in Arizona) provides medically supervised alcohol detoxification with 24/7 nursing care and physician oversight. Detox typically lasts 5 to 10 days, followed by seamless transition into residential treatment. All three facilities (Glendale, Scottsdale, Phoenix) offer detox services with a maximum of 10 beds per location." },
         { question: "Is alcohol detox dangerous without medical supervision?", answer: "Yes. Alcohol withdrawal can cause seizures, delirium tremens, and in severe cases can be life-threatening. Medically supervised detox at Desert Recovery Centers ensures safe withdrawal management with individualized medication protocols, 24/7 vital sign monitoring, and immediate medical intervention when needed." },
       ]} />
+      <section className="max-w-4xl mx-auto px-6 py-16">
+        <FAQSection faqs={faqData["alcoholism-treatment"]} />
+      </section>
       <CTASection />
       <Footer />
     </>

@@ -9,6 +9,12 @@ import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import { buildMetadata, InlineFAQSchema, SpeakableSchema, MedicalTherapySchema } from "@/lib/seo";
 import AnimatedSection from "@/components/animated/AnimatedSection";
+import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
+import { faqData } from "@/data/faq-data";
+import SchemaScript from "@/components/SchemaScript";
+import FAQSection from "@/components/FAQSection";
+import Breadcrumb from "@/components/Breadcrumb";
+import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
 
 export const metadata: Metadata = buildMetadata({
   title: "Trauma Treatment Center in Arizona",
@@ -43,6 +49,7 @@ const faqs = [
 export default function TraumaTreatmentPage() {
   return (
     <>
+      <SchemaScript schema={[getFAQSchema(faqData["trauma-therapy"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/mental-health/trauma-treatment"))]} />
       <InlineFAQSchema items={faqs} />
       <SpeakableSchema url="/mental-health/trauma-treatment" cssSelectors={["[data-speakable]"]} />
       <MedicalTherapySchema
@@ -52,6 +59,7 @@ export default function TraumaTreatmentPage() {
         conditions={["PTSD", "Complex Trauma", "Acute Stress Disorder", "Adjustment Disorder"]}
       />
       <Navigation />
+      <Breadcrumb items={getBreadcrumbsFromPathname("/mental-health/trauma-treatment")} />
       <PageHero
         eyebrow="Mental Health Treatment"
         title="Trauma Treatment Center in Arizona"
@@ -206,6 +214,9 @@ export default function TraumaTreatmentPage() {
         { question: "What is trauma treatment at Desert Recovery Centers?", answer: "Desert Recovery Centers (a Joint Commission accredited luxury treatment center in Arizona) provides specialized trauma treatment using EMDR, somatic experiencing, and trauma-focused CBT. With clinicians who have advanced training in trauma modalities, a maximum of 10 beds per facility, and 24/7 clinical support, clients can safely process trauma in a structured luxury residential environment." },
         { question: "How does Desert Recovery Centers treat trauma?", answer: "DRC treats trauma using EMDR, trauma-focused Cognitive Behavioral Therapy, somatic experiencing, and experiential therapies including art therapy and yoga. Each treatment plan is individualized by licensed clinical psychologists who specialize in trauma recovery. Dual diagnosis treatment addresses co-occurring substance use simultaneously." },
       ]} />
+      <section className="max-w-4xl mx-auto px-6 py-16">
+        <FAQSection faqs={faqData["trauma-therapy"]} />
+      </section>
       <CTASection />
       <Footer />
     </>

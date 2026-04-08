@@ -13,9 +13,11 @@ import Citations from "@/components/Citations";
 import { getPageMeta } from "@/data/page-metadata";
 import AnimatedSection from "@/components/animated/AnimatedSection";
 import SchemaScript from "@/components/SchemaScript";
-import { getFAQSchema } from "@/lib/schema";
+import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
 import { faqData } from "@/data/faq-data";
 import FAQSection from "@/components/FAQSection";
+import Breadcrumb from "@/components/Breadcrumb";
+import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
 
 const meta = getPageMeta("/addiction/marijuana-addiction-treatment/");
 
@@ -57,7 +59,7 @@ const faqs = [
 export default function MarijuanaAddictionPage() {
   return (
     <>
-      <SchemaScript schema={[{"@context":"https://schema.org","@type":"MedicalWebPage","@id":"https://www.desertrecoverycenters.com/addiction/marijuana-addiction-treatment/#webpage","url":"https://www.desertrecoverycenters.com/addiction/marijuana-addiction-treatment/","name":"Marijuana Addiction Treatment Arizona | Desert Recovery Centers","specialty":"Psychiatry","reviewedBy":{"@type":"Person","@id":"https://www.desertrecoverycenters.com/our-team#dr-an-nguyen","name":"Dr. An Nguyen","jobTitle":"Licensed Clinical Psychologist, Clinical Director","worksFor":{"@id":"https://www.desertrecoverycenters.com/#organization"}},"dateModified":"2026-04-05","publisher":{"@id":"https://www.desertrecoverycenters.com/#organization"}}, getFAQSchema(faqData["marijuana-addiction-treatment"])]} />
+      <SchemaScript schema={[{"@context":"https://schema.org","@type":"MedicalWebPage","@id":"https://www.desertrecoverycenters.com/addiction/marijuana-addiction-treatment/#webpage","url":"https://www.desertrecoverycenters.com/addiction/marijuana-addiction-treatment/","name":"Marijuana Addiction Treatment Arizona | Desert Recovery Centers","specialty":"Psychiatry","reviewedBy":{"@type":"Person","@id":"https://www.desertrecoverycenters.com/our-team#dr-an-nguyen","name":"Dr. An Nguyen","jobTitle":"Licensed Clinical Psychologist, Clinical Director","worksFor":{"@id":"https://www.desertrecoverycenters.com/#organization"}},"dateModified":"2026-04-05","publisher":{"@id":"https://www.desertrecoverycenters.com/#organization"}}, getFAQSchema(faqData["marijuana-addiction-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/addiction/marijuana"))]} />
       <InlineFAQSchema items={faqs} />
       <MedicalConditionSchema
         name="Cannabis Use Disorder"
@@ -66,6 +68,7 @@ export default function MarijuanaAddictionPage() {
         possibleTreatments={["CBT", "Motivational Enhancement Therapy", "Dual Diagnosis Treatment", "Life Skills & Wellness Programming"]}
       />
       <Navigation />
+      <Breadcrumb items={getBreadcrumbsFromPathname("/addiction/marijuana")} />
       <PageHero
         eyebrow="Addiction Treatment"
         title="Marijuana Addiction Treatment"

@@ -8,6 +8,12 @@ import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import { MedicalTherapySchema } from "@/lib/seo";
+import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
+import { faqData } from "@/data/faq-data";
+import SchemaScript from "@/components/SchemaScript";
+import FAQSection from "@/components/FAQSection";
+import Breadcrumb from "@/components/Breadcrumb";
+import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
 
 const techniques = [
   "Cognitive restructuring, identifying and challenging distorted thought patterns",
@@ -41,6 +47,7 @@ export default function CBTPage() {
 
   return (
     <>
+      <SchemaScript schema={[getFAQSchema(faqData["cbt-therapy"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/treatments/cbt"))]} />
       <MedicalTherapySchema
         name="Cognitive Behavioral Therapy (CBT)"
         description="Evidence-based psychotherapy that restructures thought patterns to create lasting behavioral change for addiction and mental health recovery."
@@ -48,6 +55,7 @@ export default function CBTPage() {
         conditions={["Depression", "Anxiety", "PTSD", "Substance Use Disorders", "OCD", "Panic Disorder", "Insomnia", "Eating Disorders"]}
       />
       <Navigation />
+      <Breadcrumb items={getBreadcrumbsFromPathname("/treatments/cbt")} />
       <PageHero
         eyebrow="Treatment Modality"
         title="Cognitive Behavioral Therapy (CBT)"
@@ -269,6 +277,9 @@ export default function CBTPage() {
         </div>
       </section>
 
+      <section className="max-w-4xl mx-auto px-6 py-16">
+        <FAQSection faqs={faqData["cbt-therapy"]} />
+      </section>
       <CTASection />
       <Footer />
     </>

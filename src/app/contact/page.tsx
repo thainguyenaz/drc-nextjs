@@ -4,6 +4,12 @@ import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import ContactContent from "./ContactContent";
+import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
+import { faqData } from "@/data/faq-data";
+import SchemaScript from "@/components/SchemaScript";
+import FAQSection from "@/components/FAQSection";
+import Breadcrumb from "@/components/Breadcrumb";
+import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Get Help for Addiction & Mental Health Today | Desert Recovery Centers",
@@ -18,7 +24,9 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
+      <SchemaScript schema={[getFAQSchema(faqData["contact"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/contact"))]} />
       <Navigation />
+      <Breadcrumb items={getBreadcrumbsFromPathname("/contact")} />
       <PageHero
         eyebrow="Contact Us"
         title="We're Here When You're Ready"
@@ -26,6 +34,9 @@ export default function ContactPage() {
         bgImage="/images/scottsdale/DRC-OUTSIDE-NORTH-SCOTTSDALE-08-02-2024-0830August-02-202400010-2.jpg"
       />
       <ContactContent />
+      <section className="max-w-4xl mx-auto px-6 py-16">
+        <FAQSection faqs={faqData["contact"]} />
+      </section>
       <CTASection />
       <Footer />
     </>

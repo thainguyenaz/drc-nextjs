@@ -10,9 +10,11 @@ import RelatedPages from "@/components/RelatedPages";
 import { getPageMeta } from "@/data/page-metadata";
 import AnimatedSection from "@/components/animated/AnimatedSection";
 import SchemaScript from "@/components/SchemaScript";
-import { getFAQSchema } from "@/lib/schema";
+import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
 import { faqData } from "@/data/faq-data";
 import FAQSection from "@/components/FAQSection";
+import Breadcrumb from "@/components/Breadcrumb";
+import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
 
 const meta = getPageMeta("/mental-health/adhd-add/");
 
@@ -54,7 +56,7 @@ const faqs = [
 export default function ADHDTreatmentPage() {
   return (
     <>
-      <SchemaScript schema={[getFAQSchema(faqData["adhd-treatment"]), {"@context":"https://schema.org","@type":"MedicalWebPage","@id":"https://www.desertrecoverycenters.com/mental-health/adhd-add/#webpage","url":"https://www.desertrecoverycenters.com/mental-health/adhd-add/","name":"ADHD and ADD Treatment Arizona | Desert Recovery Centers","specialty":"Psychiatry","reviewedBy":{"@type":"Person","@id":"https://www.desertrecoverycenters.com/our-team#dr-an-nguyen","name":"Dr. An Nguyen","jobTitle":"Licensed Clinical Psychologist, Clinical Director","worksFor":{"@id":"https://www.desertrecoverycenters.com/#organization"}},"dateModified":"2026-04-05","publisher":{"@id":"https://www.desertrecoverycenters.com/#organization"}}]} />
+      <SchemaScript schema={[getFAQSchema(faqData["adhd-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/mental-health/adhd-add")), {"@context":"https://schema.org","@type":"MedicalWebPage","@id":"https://www.desertrecoverycenters.com/mental-health/adhd-add/#webpage","url":"https://www.desertrecoverycenters.com/mental-health/adhd-add/","name":"ADHD and ADD Treatment Arizona | Desert Recovery Centers","specialty":"Psychiatry","reviewedBy":{"@type":"Person","@id":"https://www.desertrecoverycenters.com/our-team#dr-an-nguyen","name":"Dr. An Nguyen","jobTitle":"Licensed Clinical Psychologist, Clinical Director","worksFor":{"@id":"https://www.desertrecoverycenters.com/#organization"}},"dateModified":"2026-04-05","publisher":{"@id":"https://www.desertrecoverycenters.com/#organization"}}]} />
       <InlineFAQSchema items={faqs} />
       <SpeakableSchema url="/mental-health/adhd-add" cssSelectors={["[data-speakable]"]} />
       <MedicalConditionSchema
@@ -64,6 +66,7 @@ export default function ADHDTreatmentPage() {
         possibleTreatments={["Medication Management", "Cognitive Behavioral Therapy", "Executive Function Skills Training", "Behavioral Coaching", "Psychoeducation"]}
       />
       <Navigation />
+      <Breadcrumb items={getBreadcrumbsFromPathname("/mental-health/adhd-add")} />
       <PageHero
         eyebrow="Mental Health Treatment"
         title="ADHD Treatment"

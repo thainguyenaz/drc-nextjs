@@ -8,6 +8,12 @@ import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import { MedicalTherapySchema } from "@/lib/seo";
+import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
+import { faqData } from "@/data/faq-data";
+import SchemaScript from "@/components/SchemaScript";
+import FAQSection from "@/components/FAQSection";
+import Breadcrumb from "@/components/Breadcrumb";
+import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
 
 const modules = [
   {
@@ -51,6 +57,7 @@ export default function DBTPage() {
 
   return (
     <>
+      <SchemaScript schema={[getFAQSchema(faqData["dbt-therapy"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/treatments/dbt"))]} />
       <MedicalTherapySchema
         name="Dialectical Behavior Therapy (DBT)"
         description="Skills-based psychotherapy that balances acceptance and change, helping clients navigate intense emotions without self-destruction."
@@ -58,6 +65,7 @@ export default function DBTPage() {
         conditions={["Borderline Personality Disorder", "Emotional Dysregulation", "Substance Use Disorders", "Self-Harm", "PTSD", "Bipolar Disorder", "Eating Disorders", "Chronic Suicidal Ideation"]}
       />
       <Navigation />
+      <Breadcrumb items={getBreadcrumbsFromPathname("/treatments/dbt")} />
       <PageHero
         eyebrow="Treatment Modality"
         title="Dialectical Behavior Therapy (DBT)"
@@ -283,6 +291,9 @@ export default function DBTPage() {
         </div>
       </section>
 
+      <section className="max-w-4xl mx-auto px-6 py-16">
+        <FAQSection faqs={faqData["dbt-therapy"]} />
+      </section>
       <CTASection />
       <Footer />
     </>

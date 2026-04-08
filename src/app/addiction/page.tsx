@@ -6,6 +6,12 @@ import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import AnimatedSection from "@/components/animated/AnimatedSection";
 import AnimatedGrid from "@/components/animated/AnimatedGrid";
+import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
+import { faqData } from "@/data/faq-data";
+import SchemaScript from "@/components/SchemaScript";
+import FAQSection from "@/components/FAQSection";
+import Breadcrumb from "@/components/Breadcrumb";
+import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Addiction Treatment Programs, Desert Recovery Centers",
@@ -16,7 +22,9 @@ export const metadata: Metadata = {
 export default function AddictionPage() {
   return (
     <>
+      <SchemaScript schema={[getFAQSchema(faqData["addiction-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/addiction"))]} />
       <Navigation />
+      <Breadcrumb items={getBreadcrumbsFromPathname("/addiction")} />
       <PageHero
         eyebrow="Addiction Treatment"
         title="Addiction Treatment Programs"
@@ -134,6 +142,9 @@ export default function AddictionPage() {
       </section>
 
       <AddictionPrograms />
+      <section className="max-w-4xl mx-auto px-6 py-16">
+        <FAQSection faqs={faqData["addiction-treatment"]} />
+      </section>
       <CTASection />
       <Footer />
     </>

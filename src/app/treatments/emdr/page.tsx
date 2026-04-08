@@ -10,9 +10,11 @@ import Footer from "@/components/Footer";
 import { MedicalTherapySchema } from "@/lib/seo";
 import ConditionFAQ from "@/components/ConditionFAQ";
 import SchemaScript from "@/components/SchemaScript";
-import { getFAQSchema } from "@/lib/schema";
+import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
 import { faqData } from "@/data/faq-data";
 import FAQSection from "@/components/FAQSection";
+import Breadcrumb from "@/components/Breadcrumb";
+import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
 
 const phases = [
   { name: "History & Preparation", description: "Building therapeutic rapport and identifying target memories for reprocessing." },
@@ -46,7 +48,7 @@ export default function EMDRPage() {
 
   return (
     <>
-      <SchemaScript schema={[getFAQSchema(faqData["emdr"])]} />
+      <SchemaScript schema={[getFAQSchema(faqData["emdr"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/treatments/emdr"))]} />
       <MedicalTherapySchema
         name="EMDR Therapy"
         description="Eye Movement Desensitization and Reprocessing therapy that unlocks the brain's natural ability to heal from trauma and disturbing life experiences."
@@ -54,6 +56,7 @@ export default function EMDRPage() {
         conditions={["PTSD", "Complex PTSD", "Childhood Trauma", "Grief", "Phobias", "Panic Disorders", "Addiction", "Performance Anxiety"]}
       />
       <Navigation />
+      <Breadcrumb items={getBreadcrumbsFromPathname("/treatments/emdr")} />
       <PageHero
         eyebrow="Treatment Modality"
         title="EMDR Therapy"

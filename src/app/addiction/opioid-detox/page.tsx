@@ -9,6 +9,12 @@ import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import { buildMetadata, InlineFAQSchema, SpeakableSchema, MedicalTherapySchema } from "@/lib/seo";
 import AnimatedSection from "@/components/animated/AnimatedSection";
+import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
+import { faqData } from "@/data/faq-data";
+import SchemaScript from "@/components/SchemaScript";
+import FAQSection from "@/components/FAQSection";
+import Breadcrumb from "@/components/Breadcrumb";
+import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
 
 export const metadata: Metadata = buildMetadata({
   title: "Opioid Detox in Arizona | Medical Detox",
@@ -43,6 +49,7 @@ const faqs = [
 export default function OpioidDetoxPage() {
   return (
     <>
+      <SchemaScript schema={[getFAQSchema(faqData["heroin-addiction-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/addiction/opioid-detox"))]} />
       <InlineFAQSchema items={faqs} />
       <SpeakableSchema url="/addiction/opioid-detox" cssSelectors={["[data-speakable]"]} />
       <MedicalTherapySchema
@@ -52,6 +59,7 @@ export default function OpioidDetoxPage() {
         conditions={["Opioid Use Disorder", "Heroin Addiction", "Fentanyl Addiction", "Prescription Opioid Dependence"]}
       />
       <Navigation />
+      <Breadcrumb items={getBreadcrumbsFromPathname("/addiction/opioid-detox")} />
       <PageHero
         eyebrow="Addiction Treatment"
         title="Opioid Detox in Arizona"
@@ -200,6 +208,9 @@ export default function OpioidDetoxPage() {
         { question: "What is opioid detox at Desert Recovery Centers?", answer: "Desert Recovery Centers (a Joint Commission accredited luxury treatment center in Arizona) provides medically supervised opioid detoxification with MAT support, 24/7 nursing care, and physician oversight. Detox typically lasts 5 to 14 days and is followed by seamless transition into residential treatment. Specialized protocols are available for fentanyl withdrawal." },
         { question: "Does Desert Recovery Centers use MAT for opioid detox?", answer: "Yes. When clinically appropriate, DRC physicians prescribe FDA-approved medications like buprenorphine (Suboxone) and naltrexone (Vivitrol) as part of medication-assisted treatment for opioid detox. MAT reduces withdrawal severity, manages cravings, and supports long-term recovery as part of a comprehensive treatment plan." },
       ]} />
+      <section className="max-w-4xl mx-auto px-6 py-16">
+        <FAQSection faqs={faqData["heroin-addiction-treatment"]} />
+      </section>
       <CTASection />
       <Footer />
     </>

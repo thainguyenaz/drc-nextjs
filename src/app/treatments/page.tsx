@@ -10,9 +10,11 @@ import AnimatedSection from "@/components/animated/AnimatedSection";
 import AnimatedGrid from "@/components/animated/AnimatedGrid";
 import ConditionFAQ from "@/components/ConditionFAQ";
 import SchemaScript from "@/components/SchemaScript";
-import { getFAQSchema } from "@/lib/schema";
+import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
 import { faqData } from "@/data/faq-data";
 import FAQSection from "@/components/FAQSection";
+import Breadcrumb from "@/components/Breadcrumb";
+import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
 
 const meta = getPageMeta("/treatments/");
 
@@ -74,10 +76,11 @@ const therapies = [
 export default function TreatmentsPage() {
   return (
     <>
-      <SchemaScript schema={[getFAQSchema(faqData["treatments"])]} />
+      <SchemaScript schema={[getFAQSchema(faqData["treatments"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/treatments"))]} />
       <BreadcrumbSchema items={[{ name: "Treatments", path: "/treatments" }]} />
       <VideoSchemas path="/treatments/" />
       <Navigation />
+      <Breadcrumb items={getBreadcrumbsFromPathname("/treatments")} />
       <PageHero
         eyebrow="Our Treatments"
         title="Evidence-Based Treatment Therapies"

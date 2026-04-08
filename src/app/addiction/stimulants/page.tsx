@@ -11,9 +11,11 @@ import ConditionFAQ from "@/components/ConditionFAQ";
 import { getPageMeta } from "@/data/page-metadata";
 import AnimatedSection from "@/components/animated/AnimatedSection";
 import SchemaScript from "@/components/SchemaScript";
-import { getFAQSchema } from "@/lib/schema";
+import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
 import { faqData } from "@/data/faq-data";
 import FAQSection from "@/components/FAQSection";
+import Breadcrumb from "@/components/Breadcrumb";
+import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
 
 const meta = getPageMeta("/addiction/stimulant-addiction-treatment/");
 
@@ -55,7 +57,7 @@ const faqs = [
 export default function StimulantAddictionPage() {
   return (
     <>
-      <SchemaScript schema={getFAQSchema(faqData["stimulant-addiction-treatment"])} />
+      <SchemaScript schema={[getFAQSchema(faqData["stimulant-addiction-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/addiction/stimulants"))]} />
       <InlineFAQSchema items={faqs} />
       <MedicalConditionSchema
         name="Stimulant Addiction"
@@ -64,6 +66,7 @@ export default function StimulantAddictionPage() {
         possibleTreatments={["CBT", "Matrix Model", "Contingency Management", "Psychiatric Support", "Dual Diagnosis Treatment"]}
       />
       <Navigation />
+      <Breadcrumb items={getBreadcrumbsFromPathname("/addiction/stimulants")} />
       <PageHero
         eyebrow="Addiction Treatment"
         title="Stimulant Addiction Treatment"
