@@ -99,7 +99,7 @@ const programs = [
   },
   {
     tag: "Medical Care",
-    sublabel: "24/7 Nursing Staff",
+    sublabel: "24/7 Staff",
     title: "Around the Clock Medical Monitoring",
     badge: "Registered nurses on site 24 hours a day",
     body: "Registered nurses are present at Desert Recovery Centers around the clock. This is not a staffing upgrade. It is a clinical necessity. Addiction and mental health conditions have medical dimensions that require trained clinical observation, particularly in the early weeks of treatment when the body and brain are recalibrating from substance use or psychiatric instability.",
