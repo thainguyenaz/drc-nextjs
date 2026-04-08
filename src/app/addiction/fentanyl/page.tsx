@@ -4,7 +4,7 @@ import PageHero from "@/components/PageHero";
 import AddictionPrograms from "@/components/AddictionPrograms";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { InlineFAQSchema, MedicalConditionSchema } from "@/lib/seo";
+import { MedicalConditionSchema } from "@/lib/seo";
 import AEOBlock from "@/components/AEOBlock";
 import RelatedPages from "@/components/RelatedPages";
 import ConditionFAQ from "@/components/ConditionFAQ";
@@ -60,7 +60,6 @@ export default function FentanylAddictionPage() {
   return (
     <>
       <SchemaScript schema={[getFAQSchema(faqData["fentanyl-addiction-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/addiction/fentanyl")), {"@context":"https://schema.org","@type":"MedicalWebPage","@id":"https://www.desertrecoverycenters.com/addiction/fentanyl-addiction-treatment/#webpage","url":"https://www.desertrecoverycenters.com/addiction/fentanyl-addiction-treatment/","name":"Fentanyl Addiction Treatment Arizona | Desert Recovery Centers","specialty":"Psychiatry","reviewedBy":{"@type":"Person","@id":"https://www.desertrecoverycenters.com/our-team#dr-an-nguyen","name":"Dr. An Nguyen","jobTitle":"Licensed Clinical Psychologist, Clinical Director","worksFor":{"@id":"https://www.desertrecoverycenters.com/#organization"}},"dateModified":"2026-04-05","publisher":{"@id":"https://www.desertrecoverycenters.com/#organization"}}]} />
-      <InlineFAQSchema items={faqs} />
       <MedicalConditionSchema
         name="Fentanyl Addiction"
         description="Fentanyl addiction is a severe opioid use disorder involving one of the most potent synthetic opioids in existence. Fentanyl is 50 to 100 times more potent than morphine and creates rapid, severe physical dependence."

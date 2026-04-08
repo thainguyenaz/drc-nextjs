@@ -4,7 +4,7 @@ import PageHero from "@/components/PageHero";
 import AddictionPrograms from "@/components/AddictionPrograms";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { InlineFAQSchema, MedicalConditionSchema } from "@/lib/seo";
+import { MedicalConditionSchema } from "@/lib/seo";
 import AEOBlock from "@/components/AEOBlock";
 import RelatedPages from "@/components/RelatedPages";
 import ConditionFAQ from "@/components/ConditionFAQ";
@@ -60,7 +60,6 @@ export default function HeroinAddictionPage() {
   return (
     <>
       <SchemaScript schema={[getFAQSchema(faqData["heroin-addiction-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/addiction/heroin")), {"@context":"https://schema.org","@type":"MedicalWebPage","@id":"https://www.desertrecoverycenters.com/addiction/heroin-addiction-treatment/#webpage","url":"https://www.desertrecoverycenters.com/addiction/heroin-addiction-treatment/","name":"Heroin Addiction Treatment Arizona | Desert Recovery Centers","specialty":"Psychiatry","reviewedBy":{"@type":"Person","@id":"https://www.desertrecoverycenters.com/our-team#dr-an-nguyen","name":"Dr. An Nguyen","jobTitle":"Licensed Clinical Psychologist, Clinical Director","worksFor":{"@id":"https://www.desertrecoverycenters.com/#organization"}},"dateModified":"2026-04-05","publisher":{"@id":"https://www.desertrecoverycenters.com/#organization"}}]} />
-      <InlineFAQSchema items={faqs} />
       <MedicalConditionSchema
         name="Opioid/Heroin Addiction"
         description="Heroin addiction is a severe opioid use disorder characterized by rapid physical dependence and intense withdrawal. Heroin binds to opioid receptors, flooding the system with dopamine and creating dependence often within days of regular use."

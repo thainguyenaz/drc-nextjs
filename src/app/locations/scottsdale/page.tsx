@@ -8,7 +8,7 @@ import VideoLightbox from "@/components/VideoLightbox";
 import ConditionFAQ from "@/components/ConditionFAQ";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { LocalBusinessSchema, BreadcrumbSchema, InlineFAQSchema, SpeakableSchema, VideoSchemas } from "@/lib/seo";
+import { LocalBusinessSchema, BreadcrumbSchema, SpeakableSchema, VideoSchemas } from "@/lib/seo";
 import AEOBlock from "@/components/AEOBlock";
 import PhotoGallery from "@/components/PhotoGallery";
 import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
@@ -103,7 +103,6 @@ export default function ScottsdaleLocationPage() {
   return (
     <>
       <SchemaScript schema={[getFAQSchema(faqData["locations/scottsdale"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/locations/scottsdale"))]} />
-      <InlineFAQSchema items={faqs} />
       <SpeakableSchema url="/locations/scottsdale" cssSelectors={["[data-speakable]"]} />
       <LocalBusinessSchema index={1} />
       <BreadcrumbSchema items={[{ name: "Facilities", path: "/locations" }, { name: "Scottsdale", path: "/locations/scottsdale" }]} />

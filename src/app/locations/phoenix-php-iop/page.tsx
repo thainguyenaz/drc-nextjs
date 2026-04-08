@@ -4,7 +4,7 @@ import PageHero from "@/components/PageHero";
 import ConditionFAQ from "@/components/ConditionFAQ";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { InlineFAQSchema, SpeakableSchema } from "@/lib/seo";
+import { SpeakableSchema } from "@/lib/seo";
 import AEOBlock from "@/components/AEOBlock";
 import PhotoGallery from "@/components/PhotoGallery";
 import SchemaScript from "@/components/SchemaScript";
@@ -289,7 +289,6 @@ export default function PhoenixPhpIopPage() {
           { "@type": "HowToStep", "position": 4, "name": "Begin Treatment", "text": "Most clients begin treatment within 48 hours of their first call." },
         ],
       }]} />
-      <InlineFAQSchema items={faqs} />
       <SpeakableSchema url="/locations/phoenix-php-iop" cssSelectors={["[data-speakable]"]} />
       <Navigation />
       <Breadcrumb items={getBreadcrumbsFromPathname("/locations/phoenix-php-iop")} />
