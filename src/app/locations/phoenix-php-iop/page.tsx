@@ -10,7 +10,6 @@ import PhotoGallery from "@/components/PhotoGallery";
 import SchemaScript from "@/components/SchemaScript";
 import Breadcrumb from "@/components/Breadcrumb";
 import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
-import { getFAQSchema } from "@/lib/schema";
 import { faqData } from "@/data/faq-data";
 import FAQSection from "@/components/FAQSection";
 import PhoenixPHPContent from "./PhoenixPHPContent";
@@ -276,7 +275,7 @@ const breadcrumbSchema = {
 export default function PhoenixPhpIopPage() {
   return (
     <>
-      <SchemaScript schema={[clinicSchema, faqSchema, breadcrumbSchema, getFAQSchema(faqData["locations/phoenix"]), {
+      <SchemaScript schema={[clinicSchema, faqSchema, breadcrumbSchema, {
         "@context": "https://schema.org",
         "@type": "HowTo",
         "name": "How to Get Admitted to Desert Recovery Centers Phoenix",
