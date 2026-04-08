@@ -19,6 +19,7 @@ export default function Hero() {
             muted
             loop
             playsInline
+            preload="auto"
             poster="/images/scottsdale/DRC-DRONE-SCOTTSDALE-08-01-2024-August-01-202400006-2.jpg"
             className="absolute inset-0 w-full h-full object-cover opacity-60"
           >

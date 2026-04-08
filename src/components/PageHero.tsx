@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 interface PageHeroProps {
   eyebrow: string;
@@ -12,10 +13,18 @@ interface PageHeroProps {
 export default function PageHero({ eyebrow, title, description, bgImage }: PageHeroProps) {
   return (
     <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden">
-      <div
-        className="absolute inset-0 bg-forest"
-        style={bgImage ? { backgroundImage: `url(${bgImage})`, backgroundSize: "cover", backgroundPosition: "center" } : {}}
-      />
+      <div className="absolute inset-0 bg-forest">
+        {bgImage && (
+          <Image
+            src={bgImage}
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+          />
+        )}
+      </div>
       <div
         className="absolute inset-0"
         style={{
