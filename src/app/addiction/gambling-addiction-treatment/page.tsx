@@ -181,6 +181,7 @@ export default function GamblingAddictionPage() {
               title="What Are the Warning Signs That Gambling Has Crossed From Recreation to Addiction"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
+              loading="lazy"
               className="absolute inset-0 w-full h-full border-0"
             />
           </div>

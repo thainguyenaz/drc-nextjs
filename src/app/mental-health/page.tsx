@@ -83,6 +83,7 @@ export default function MentalHealthPage() {
                 title="Mental Health Treatment at Desert Recovery Centers"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
+                loading="lazy"
                 className="absolute inset-0 w-full h-full border-0"
               />
             </div>
@@ -107,6 +108,7 @@ export default function MentalHealthPage() {
                 title="Your Path to Mental Wellness"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
+                loading="lazy"
                 className="absolute inset-0 w-full h-full border-0"
               />
             </div>
@@ -121,6 +123,7 @@ export default function MentalHealthPage() {
                 title="What Is Executive Burnout, and How Does It Correlate to High Achievers"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
+                loading="lazy"
                 className="absolute inset-0 w-full h-full border-0"
               />
             </div>

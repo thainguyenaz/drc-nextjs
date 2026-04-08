@@ -124,6 +124,7 @@ export default function TreatmentsPage() {
                 title="Overview of the New DRC Levels of Care and What That Looks Like"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
+                loading="lazy"
                 className="absolute inset-0 w-full h-full border-0"
               />
             </div>
@@ -146,6 +147,7 @@ export default function TreatmentsPage() {
                 title="How Is Treatment Individualized Rather Than One Size Fits All"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
+                loading="lazy"
                 className="absolute inset-0 w-full h-full border-0"
               />
             </div>
@@ -160,6 +162,7 @@ export default function TreatmentsPage() {
                 title="What Are the 12 Steps and How Do They Help Addicts and Alcoholics Recover"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
+                loading="lazy"
                 className="absolute inset-0 w-full h-full border-0"
               />
             </div>

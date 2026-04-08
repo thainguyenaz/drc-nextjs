@@ -181,6 +181,7 @@ export default function PrescriptionDrugAddictionPage() {
               title="How Does Prescription Stimulant Abuse Differ From Street Meth in Treatment Needs"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
+              loading="lazy"
               className="absolute inset-0 w-full h-full border-0"
             />
           </div>

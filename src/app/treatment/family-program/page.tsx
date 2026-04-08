@@ -83,6 +83,7 @@ export default function FamilyProgramPage() {
               title="What Is Structural Family Therapy, and Why Is It Helpful for Families of Addicts"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
+              loading="lazy"
               className="absolute inset-0 w-full h-full border-0"
             />
           </div>
@@ -93,6 +94,7 @@ export default function FamilyProgramPage() {
               title="What Are the Stages of Family Recovery, Even When the Addict is Still Active"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
+              loading="lazy"
               className="absolute inset-0 w-full h-full border-0"
             />
           </div>
@@ -103,6 +105,7 @@ export default function FamilyProgramPage() {
               title="What Is CRAFT, and How Does It Work Better Than Confrontation"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
+              loading="lazy"
               className="absolute inset-0 w-full h-full border-0"
             />
           </div>

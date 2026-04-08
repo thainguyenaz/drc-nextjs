@@ -33,6 +33,7 @@ export default function AboutPage() {
               title="About Desert Recovery Centers"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
+              loading="lazy"
               className="absolute inset-0 w-full h-full border-0"
             />
           </div>
@@ -43,6 +44,7 @@ export default function AboutPage() {
               title="Why Does a Smaller, Boutique Program Often Lead to Better Outcomes Than Large Corporate Rehabs"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
+              loading="lazy"
               className="absolute inset-0 w-full h-full border-0"
             />
           </div>
@@ -53,6 +55,7 @@ export default function AboutPage() {
               title="Why Do Professionals (Doctors, Lawyers, Pilots) Often Need Specialized Treatment Programs"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
+              loading="lazy"
               className="absolute inset-0 w-full h-full border-0"
             />
           </div>

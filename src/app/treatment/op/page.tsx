@@ -152,6 +152,7 @@ export default function TreatmentOPPage() {
               title="Aftercare in Recovery"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
+              loading="lazy"
               className="absolute inset-0 w-full h-full border-0"
             />
           </div>
@@ -162,6 +163,7 @@ export default function TreatmentOPPage() {
               title="How Do You Help Clients Reintegrate Into Real Life Successfully After Treatment"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
+              loading="lazy"
               className="absolute inset-0 w-full h-full border-0"
             />
           </div>

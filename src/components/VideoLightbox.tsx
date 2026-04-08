@@ -56,6 +56,7 @@ export default function VideoLightbox({ videoId, children }: VideoLightboxProps)
                 className="w-full h-full rounded-xl"
                 allow="autoplay; encrypted-media"
                 allowFullScreen
+                loading="lazy"
               />
             </motion.div>
           </motion.div>
