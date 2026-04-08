@@ -6,6 +6,12 @@ import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import { BreadcrumbSchema, PersonSchema } from "@/lib/seo";
 import { getPageMeta } from "@/data/page-metadata";
+import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
+import { faqData } from "@/data/faq-data";
+import SchemaScript from "@/components/SchemaScript";
+import FAQSection from "@/components/FAQSection";
+import Breadcrumb from "@/components/Breadcrumb";
+import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
 
 const meta = getPageMeta("/our-team/");
 
@@ -24,6 +30,7 @@ export const metadata: Metadata = {
 export default function OurTeamPage() {
   return (
     <>
+      <SchemaScript schema={[getFAQSchema(faqData["our-team"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/our-team"))]} />
       <BreadcrumbSchema items={[{ name: "Our Team", path: "/our-team" }]} />
       <PersonSchema
         name="Dr. An Nguyen"
@@ -62,6 +69,7 @@ export default function OurTeamPage() {
         description="Director of Operations at Desert Recovery Centers, certified peer support specialist and recovery advocate."
       />
       <Navigation />
+      <Breadcrumb items={getBreadcrumbsFromPathname("/our-team")} />
       <PageHero
         eyebrow="Our Team"
         title="The People Behind Your Recovery"
@@ -125,6 +133,9 @@ export default function OurTeamPage() {
       </section>
 
       <TeamSection />
+      <section className="max-w-4xl mx-auto px-6 py-16">
+        <FAQSection faqs={faqData["our-team"]} />
+      </section>
       <CTASection />
       <Footer />
     </>

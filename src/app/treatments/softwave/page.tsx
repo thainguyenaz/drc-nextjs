@@ -8,6 +8,12 @@ import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import { MedicalTherapySchema } from "@/lib/seo";
+import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
+import Breadcrumb from "@/components/Breadcrumb";
+import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
+import { faqData } from "@/data/faq-data";
+import SchemaScript from "@/components/SchemaScript";
+import FAQSection from "@/components/FAQSection";
 
 const benefits = [
   {
@@ -59,6 +65,7 @@ export default function SoftWavePage() {
 
   return (
     <>
+      <SchemaScript schema={[getFAQSchema(faqData["softwave-therapy"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/treatments/softwave"))]} />
       <MedicalTherapySchema
         name="SoftWave Therapy"
         description="FDA-cleared tissue regeneration technology that reduces pain and inflammation without medication, supporting addiction recovery by breaking the pain-opioid cycle."
@@ -66,6 +73,7 @@ export default function SoftWavePage() {
         conditions={["Chronic Pain", "Joint Pain", "Neuropathy", "Tendinitis", "Musculoskeletal Pain", "Post-Surgical Pain", "Plantar Fasciitis"]}
       />
       <Navigation />
+      <Breadcrumb items={getBreadcrumbsFromPathname("/treatments/softwave")} />
       <PageHero
         eyebrow="Advanced Therapy"
         title="SoftWave Therapy"
@@ -288,6 +296,9 @@ export default function SoftWavePage() {
         </div>
       </section>
 
+      <section className="max-w-4xl mx-auto px-6 py-16">
+        <FAQSection faqs={faqData["softwave-therapy"]} />
+      </section>
       <CTASection />
       <Footer />
     </>

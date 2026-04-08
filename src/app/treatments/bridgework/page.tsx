@@ -8,6 +8,12 @@ import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import { MedicalTherapySchema } from "@/lib/seo";
+import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
+import { faqData } from "@/data/faq-data";
+import SchemaScript from "@/components/SchemaScript";
+import FAQSection from "@/components/FAQSection";
+import Breadcrumb from "@/components/Breadcrumb";
+import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
 
 const includes = [
   "1-2 additional focused sessions per week with a therapist under the direction of our clinical psychologists",
@@ -44,6 +50,7 @@ export default function BridgeWorkPage() {
 
   return (
     <>
+      <SchemaScript schema={[getFAQSchema(faqData["bridgework"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/treatments/bridgework"))]} />
       <MedicalTherapySchema
         name="BridgeWork&trade;"
         description="Proprietary clinical psychologist-led skill integration program that bridges the gap between therapeutic insight and real-world behavioral change."
@@ -51,6 +58,7 @@ export default function BridgeWorkPage() {
         conditions={["Substance Use Disorders", "Emotional Dysregulation", "Trauma", "ADHD", "Relapse Vulnerability", "Impulse Control Disorders"]}
       />
       <Navigation />
+      <Breadcrumb items={getBreadcrumbsFromPathname("/treatments/bridgework")} />
       <PageHero
         eyebrow="Proprietary Program"
         title={`BridgeWork™`}
@@ -295,6 +303,9 @@ export default function BridgeWorkPage() {
         </div>
       </section>
 
+      <section className="max-w-4xl mx-auto px-6 py-16">
+        <FAQSection faqs={faqData["bridgework"]} />
+      </section>
       <CTASection />
       <Footer />
     </>

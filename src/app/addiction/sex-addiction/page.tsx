@@ -10,6 +10,12 @@ import RelatedPages from "@/components/RelatedPages";
 import ConditionFAQ from "@/components/ConditionFAQ";
 import { getPageMeta } from "@/data/page-metadata";
 import AnimatedSection from "@/components/animated/AnimatedSection";
+import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
+import { faqData } from "@/data/faq-data";
+import SchemaScript from "@/components/SchemaScript";
+import FAQSection from "@/components/FAQSection";
+import Breadcrumb from "@/components/Breadcrumb";
+import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
 
 const meta = getPageMeta("/addiction/sex-addiction-treatment/");
 
@@ -51,6 +57,7 @@ const faqs = [
 export default function SexAddictionPage() {
   return (
     <>
+      <SchemaScript schema={[getFAQSchema(faqData["sex-addiction-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/addiction/sex-addiction"))]} />
       <InlineFAQSchema items={faqs} />
       <MedicalConditionSchema
         name="Compulsive Sexual Behavior Disorder"
@@ -59,6 +66,7 @@ export default function SexAddictionPage() {
         possibleTreatments={["CBT", "Psychodynamic Therapy", "Group Process Therapy", "Trauma-Informed Care", "Dual Diagnosis Treatment"]}
       />
       <Navigation />
+      <Breadcrumb items={getBreadcrumbsFromPathname("/addiction/sex-addiction")} />
       <PageHero
         eyebrow="Addiction Treatment"
         title="Sex Addiction Treatment"
@@ -184,6 +192,9 @@ export default function SexAddictionPage() {
         ]}
       />
       <RelatedPages currentPath="/addiction/sex-addiction" />
+      <section className="max-w-4xl mx-auto px-6 py-16">
+        <FAQSection faqs={faqData["sex-addiction-treatment"]} />
+      </section>
       <CTASection />
       <Footer />
     </>

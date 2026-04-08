@@ -12,9 +12,11 @@ import AnimatedSection from "@/components/animated/AnimatedSection";
 import AnimatedGrid from "@/components/animated/AnimatedGrid";
 import ConditionFAQ from "@/components/ConditionFAQ";
 import SchemaScript from "@/components/SchemaScript";
-import { getFAQSchema } from "@/lib/schema";
+import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
 import { faqData } from "@/data/faq-data";
 import FAQSection from "@/components/FAQSection";
+import Breadcrumb from "@/components/Breadcrumb";
+import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
 
 const meta = getPageMeta("/about-us/");
 
@@ -33,10 +35,11 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <SchemaScript schema={[getFAQSchema(faqData["about-us"])]} />
+      <SchemaScript schema={[getFAQSchema(faqData["about-us"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/about-us"))]} />
       <BreadcrumbSchema items={[{ name: "About Us", path: "/about-us" }]} />
       <VideoSchemas path="/about-us/" />
       <Navigation />
+      <Breadcrumb items={getBreadcrumbsFromPathname("/about-us")} />
       <PageHero
         eyebrow="About Us"
         title="About Desert Recovery Centers"

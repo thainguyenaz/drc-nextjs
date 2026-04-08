@@ -8,6 +8,12 @@ import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import { MedicalTherapySchema } from "@/lib/seo";
+import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
+import Breadcrumb from "@/components/Breadcrumb";
+import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
+import { faqData } from "@/data/faq-data";
+import SchemaScript from "@/components/SchemaScript";
+import FAQSection from "@/components/FAQSection";
 
 const therapies = [
   {
@@ -56,6 +62,7 @@ export default function HolisticPage() {
 
   return (
     <>
+      <SchemaScript schema={[getFAQSchema(faqData["holistic-therapy"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/treatments/holistic"))]} />
       <MedicalTherapySchema
         name="Holistic Therapies"
         description="Evidence-informed complementary therapies including yoga, mindfulness, art therapy, and nutrition counseling that enhance clinical treatment for whole-person recovery."
@@ -63,6 +70,7 @@ export default function HolisticPage() {
         conditions={["Substance Use Disorders", "Anxiety", "Depression", "PTSD", "Chronic Stress", "Insomnia", "Chronic Pain"]}
       />
       <Navigation />
+      <Breadcrumb items={getBreadcrumbsFromPathname("/treatments/holistic")} />
       <PageHero
         eyebrow="Whole-Person Care"
         title="Holistic Therapies"
@@ -289,6 +297,9 @@ export default function HolisticPage() {
         </div>
       </section>
 
+      <section className="max-w-4xl mx-auto px-6 py-16">
+        <FAQSection faqs={faqData["holistic-therapy"]} />
+      </section>
       <CTASection />
       <Footer />
     </>

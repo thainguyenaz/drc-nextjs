@@ -211,3 +211,26 @@ export function getWebSiteSchema() {
     },
   };
 }
+
+export function getMedicalBusinessSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    name: SITE_NAME,
+    url: SITE_URL,
+    telephone: "+14809313617",
+    email: "contact@desertrecoverycenters.com",
+    medicalSpecialty: ["Addiction Medicine", "Psychiatry", "Clinical Psychology"],
+    hasCredential: {
+      "@type": "EducationalOccupationalCredential",
+      credentialCategory: "Joint Commission Accreditation",
+    },
+    sameAs: [
+      "https://www.facebook.com/desertrecoverycenters/",
+      "https://www.instagram.com/desertrecoverycenter/",
+      "https://www.youtube.com/channel/UCiXgogSH5-yTjshI9FJuxLg",
+      "https://open.spotify.com/show/5thFT5DNC1exCkhmiug1Nb",
+      "https://www.yelp.com/biz/desert-recovery-centers-glendale",
+    ],
+  };
+}

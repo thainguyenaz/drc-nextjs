@@ -10,6 +10,12 @@ import RelatedPages from "@/components/RelatedPages";
 import ConditionFAQ from "@/components/ConditionFAQ";
 import { getPageMeta } from "@/data/page-metadata";
 import AnimatedSection from "@/components/animated/AnimatedSection";
+import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
+import { faqData } from "@/data/faq-data";
+import SchemaScript from "@/components/SchemaScript";
+import FAQSection from "@/components/FAQSection";
+import Breadcrumb from "@/components/Breadcrumb";
+import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
 
 const meta = getPageMeta("/addiction/gambling-addiction-treatment/");
 
@@ -51,6 +57,7 @@ const faqs = [
 export default function GamblingAddictionPage() {
   return (
     <>
+      <SchemaScript schema={[getFAQSchema(faqData["gambling-addiction-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/addiction/gambling"))]} />
       <InlineFAQSchema items={faqs} />
       <MedicalConditionSchema
         name="Gambling Addiction"
@@ -59,6 +66,7 @@ export default function GamblingAddictionPage() {
         possibleTreatments={["CBT", "Dual Diagnosis Treatment", "Financial Recovery Support", "Group Therapy & 12-Step Facilitation"]}
       />
       <Navigation />
+      <Breadcrumb items={getBreadcrumbsFromPathname("/addiction/gambling")} />
       <PageHero
         eyebrow="Addiction Treatment"
         title="Gambling Addiction Treatment"
@@ -202,6 +210,9 @@ export default function GamblingAddictionPage() {
         ]}
       />
       <RelatedPages currentPath="/addiction/gambling" />
+      <section className="max-w-4xl mx-auto px-6 py-16">
+        <FAQSection faqs={faqData["gambling-addiction-treatment"]} />
+      </section>
       <CTASection />
       <Footer />
     </>

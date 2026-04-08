@@ -5,6 +5,9 @@ import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import SchemaScript from "@/components/SchemaScript";
 import InsuranceContent from "./InsuranceContent";
+import { getBreadcrumbSchema } from "@/lib/schema";
+import Breadcrumb from "@/components/Breadcrumb";
+import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
 
 const insuranceFaqSchema = {
   "@context": "https://schema.org",
@@ -46,8 +49,9 @@ export const metadata: Metadata = {
 export default function InsurancePage() {
   return (
     <>
-      <SchemaScript schema={[insuranceFaqSchema]} />
+      <SchemaScript schema={[insuranceFaqSchema, getBreadcrumbSchema(getBreadcrumbsFromPathname("/insurance"))]} />
       <Navigation />
+      <Breadcrumb items={getBreadcrumbsFromPathname("/insurance")} />
       <PageHero
         eyebrow="Insurance"
         title="Insurance Verification"
