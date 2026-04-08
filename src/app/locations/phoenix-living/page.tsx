@@ -5,7 +5,8 @@ import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import { buildMetadata, BreadcrumbSchema } from "@/lib/seo";
-import PhotoGallery from "@/components/PhotoGallery";
+import dynamic from "next/dynamic";
+const PhotoGallery = dynamic(() => import("@/components/PhotoGallery"), { ssr: false, loading: () => null });
 
 export const metadata: Metadata = buildMetadata({
   title: "Phoenix PHP Sober Living, Desert Recovery Centers",

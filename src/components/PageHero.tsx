@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
 import Image from "next/image";
 
 interface PageHeroProps {
@@ -32,11 +29,7 @@ export default function PageHero({ eyebrow, title, description, bgImage }: PageH
         }}
       />
       <div className="relative z-10 text-center max-w-container mx-auto px-6 pt-28 md:pt-36 pb-16 md:pb-24">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
+        <div>
           <div className="flex items-center justify-center gap-4 mb-6">
             <span className="w-10 h-px bg-gold" />
             <span className="text-gold font-body text-xs tracking-[0.3em] uppercase font-medium">
@@ -50,7 +43,7 @@ export default function PageHero({ eyebrow, title, description, bgImage }: PageH
           <p className="text-white/70 font-body text-lg max-w-2xl mx-auto leading-relaxed">
             {description}
           </p>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
