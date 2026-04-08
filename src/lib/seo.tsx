@@ -64,7 +64,23 @@ export function OrganizationSchema() {
     name: SITE_NAME,
     url: SITE_URL,
     logo: `${SITE_URL}/logo.png`,
+    image: `${SITE_URL}/images/branding/drlogo-black.png`,
     email: siteData.email,
+    address: siteData.locations.slice(0, 3).map((loc) => {
+      const parts = loc.address.split(", ");
+      const street = parts[0];
+      const city = parts[1];
+      const stateZip = parts[2] ?? "AZ";
+      const [state, zip] = stateZip.split(" ");
+      return {
+        "@type": "PostalAddress" as const,
+        streetAddress: street,
+        addressLocality: city,
+        addressRegion: state,
+        postalCode: zip,
+        addressCountry: "US",
+      };
+    }),
     sameAs: [
       siteData.social.facebook,
       siteData.social.instagram,
