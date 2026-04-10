@@ -5,6 +5,7 @@ import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import ContactContent from "./ContactContent";
+import ContactCTA from "./ContactCTA";
 
 const GoogleReviews = dynamic(() => import("@/components/GoogleReviews"), { ssr: false });
 import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
@@ -41,6 +42,7 @@ export default function ContactPage() {
         <FAQSection faqs={faqData["contact"]} />
       </section>
       <GoogleReviews />
+      <ContactCTA />
       <CTASection />
       <Footer />
     </>
