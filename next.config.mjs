@@ -11,6 +11,7 @@ const nextConfig = {
       { protocol: "https", hostname: "i.ytimg.com", pathname: "/vi/**" },
       { protocol: "https", hostname: "img.youtube.com", pathname: "/vi/**" },
       { protocol: "https", hostname: "desertrecoverycenters.com", pathname: "/wp-content/**" },
+      { protocol: "https", hostname: "cdn.sanity.io" },
     ],
   },
   async redirects() {
