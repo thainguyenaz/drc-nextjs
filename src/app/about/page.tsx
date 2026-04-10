@@ -1,9 +1,12 @@
 import { Metadata } from "next";
+import dynamic from "next/dynamic";
 import Navigation from "@/components/Navigation";
 import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import AboutContent from "./AboutContent";
+
+const GoogleReviews = dynamic(() => import("@/components/GoogleReviews"), { ssr: false });
 
 export const metadata: Metadata = {
   title: "About Us, Desert Recovery Centers",
@@ -63,6 +66,7 @@ export default function AboutPage() {
       </section>
 
       <AboutContent />
+      <GoogleReviews />
       <CTASection />
       <Footer />
     </>
