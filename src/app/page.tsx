@@ -130,6 +130,7 @@ export default function Home() {
       <LocationsSection />
       <FacilityPhotoGrid />
       <WhyChooseUs />
+      <GoogleReviews />
       <BridgeWork />
       <TeamSection />
       <Testimonials />
@@ -153,7 +154,6 @@ export default function Home() {
         </div>
       </section>
 
-      <GoogleReviews />
       <FAQ />
       {/* ── Get Help Form ─────────────────────────────── */}
       <section id="contact" className="py-20 md:py-28 bg-cream overflow-hidden">

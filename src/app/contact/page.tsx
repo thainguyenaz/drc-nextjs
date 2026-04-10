@@ -1,9 +1,12 @@
 import { Metadata } from "next";
+import dynamic from "next/dynamic";
 import Navigation from "@/components/Navigation";
 import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import ContactContent from "./ContactContent";
+
+const GoogleReviews = dynamic(() => import("@/components/GoogleReviews"), { ssr: false });
 import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
 import { faqData } from "@/data/faq-data";
 import SchemaScript from "@/components/SchemaScript";
@@ -37,6 +40,7 @@ export default function ContactPage() {
       <section className="max-w-4xl mx-auto px-6 py-16">
         <FAQSection faqs={faqData["contact"]} />
       </section>
+      <GoogleReviews />
       <CTASection />
       <Footer />
     </>
