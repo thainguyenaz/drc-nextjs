@@ -89,7 +89,7 @@ const navLinks = [
     image: "/images/general/DRC-TREATMENTS.jpg",
     children: [
       { label: "Recovery Blog", href: "/resources/blog" },
-      { label: "Luxury vs Traditional Rehab", href: "/resources/blog/luxury-rehab-vs-standard-rehab-clinical-differences" },
+      { label: "Luxury vs Traditional Rehab", href: "/resources/luxury-vs-traditional-rehab" },
       { label: "Detox Guide", href: "/resources/blog/risks-of-drug-or-alcohol-detox-why-you-need-professional-help" },
       { label: "Family Guide", href: "/resources/blog/how-drug-and-alcohol-addiction-impacts-families" },
       { label: "Insurance Guide", href: "/resources/blog/how-insurance-covers-addiction-mental-health-treatment" },
