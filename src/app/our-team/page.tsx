@@ -31,6 +31,43 @@ export default function OurTeamPage() {
   return (
     <>
       <SchemaScript schema={[getFAQSchema(faqData["our-team"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/our-team"))]} />
+      <SchemaScript schema={[
+        {
+          "@context": "https://schema.org",
+          "@type": ["Person", "Physician"],
+          name: "Dr. An Nguyen",
+          jobTitle: "Clinical Director, Licensed Clinical Psychologist",
+          worksFor: { "@type": "MedicalOrganization", name: "Desert Recovery Centers" },
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": ["Person", "Physician"],
+          name: "Dr. Reyes Topete MD",
+          jobTitle: "Medical Director, Psychiatrist",
+          worksFor: { "@type": "MedicalOrganization", name: "Desert Recovery Centers" },
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          name: "Thai Nguyen",
+          jobTitle: "CEO and Co-Founder",
+          worksFor: { "@type": "MedicalOrganization", name: "Desert Recovery Centers" },
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          name: "Jason Inserra",
+          jobTitle: "Director of Operations, Co-Founder",
+          worksFor: { "@type": "MedicalOrganization", name: "Desert Recovery Centers" },
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          name: "Adam Leonard",
+          jobTitle: "Admissions Director",
+          worksFor: { "@type": "MedicalOrganization", name: "Desert Recovery Centers" },
+        },
+      ]} />
       <BreadcrumbSchema items={[{ name: "Our Team", path: "/our-team" }]} />
       <PersonSchema
         name="Dr. An Nguyen"
