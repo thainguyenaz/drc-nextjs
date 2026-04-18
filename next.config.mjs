@@ -60,11 +60,9 @@ const nextConfig = {
       { source: "/treatments/understanding-dbt-dialectic-behavior-therapy/", destination: "/treatments/dialectical-behavior-therapy-dbt/", permanent: true },
       { source: "/treatments/emdr-eye-movement-desensitization-and-reprocessing", destination: "/treatments/emdr-therapy", permanent: true },
       { source: "/treatments/emdr-eye-movement-desensitization-and-reprocessing/", destination: "/treatments/emdr-therapy", permanent: true },
-      // Insurance / get-help consolidation
+      // Insurance-verification consolidation (/get-help kept as standalone admissions page)
       { source: "/insurance-verification", destination: "/insurance", permanent: true },
       { source: "/insurance-verification/", destination: "/insurance", permanent: true },
-      { source: "/get-help", destination: "/insurance", permanent: true },
-      { source: "/get-help/", destination: "/insurance", permanent: true },
       // Resource sub-pages removed in WP → Next migration
       { source: "/resources/access-webinars", destination: "/resources", permanent: true },
       { source: "/resources/access-webinars/", destination: "/resources", permanent: true },
