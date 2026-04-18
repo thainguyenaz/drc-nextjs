@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 
 interface FormData {
@@ -39,6 +39,13 @@ export default function GetHelpForm({ variant = "lp" }: GetHelpFormProps) {
   const [formData, setFormData] = useState<FormData>(initialFormData);
   const [submitting, setSubmitting] = useState(false);
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
+  const thankYouRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (status === "success") {
+      thankYouRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }, [status]);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
@@ -107,7 +114,7 @@ export default function GetHelpForm({ variant = "lp" }: GetHelpFormProps) {
 
   if (status === "success") {
     return (
-      <div className="bg-white rounded-2xl p-8 shadow-sm text-center">
+      <div ref={thankYouRef} className="bg-white rounded-2xl p-8 shadow-sm text-center">
         <div className="w-16 h-16 bg-sage/10 rounded-full flex items-center justify-center mx-auto mb-4">
           <svg className="w-8 h-8 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
