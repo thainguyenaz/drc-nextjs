@@ -32,7 +32,7 @@ const phases = [
     step: "05",
     title: "Alumni Program",
     desc: "Lifetime access to our recovery community, peer events, check-ins, and ongoing support from the team that knows your journey.",
-    href: "/about-us",
+    href: "/about",
   },
   {
     step: "06",

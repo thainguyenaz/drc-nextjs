@@ -80,7 +80,7 @@ const navLinks = [
       { label: "Suicidal Ideation", href: "/adolescent/suicidal-ideation" },
     ],
   },
-  { label: "About", href: "/about-us" },
+  { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
   { label: "Our Team", href: "/our-team" },
   {
