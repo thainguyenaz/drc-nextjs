@@ -58,6 +58,18 @@ const nextConfig = {
       { source: "/treatments/alternative-therapy/", destination: "/treatments/softwave-therapy/", permanent: true },
       { source: "/treatments/understanding-cbt-cognitive-behavioral-therapy/", destination: "/treatments/cognitive-behavioral-therapy-cbt/", permanent: true },
       { source: "/treatments/understanding-dbt-dialectic-behavior-therapy/", destination: "/treatments/dialectical-behavior-therapy-dbt/", permanent: true },
+      { source: "/treatments/emdr-eye-movement-desensitization-and-reprocessing", destination: "/treatments/emdr-therapy", permanent: true },
+      { source: "/treatments/emdr-eye-movement-desensitization-and-reprocessing/", destination: "/treatments/emdr-therapy", permanent: true },
+      // Insurance / get-help consolidation
+      { source: "/insurance-verification", destination: "/insurance", permanent: true },
+      { source: "/insurance-verification/", destination: "/insurance", permanent: true },
+      { source: "/get-help", destination: "/insurance", permanent: true },
+      { source: "/get-help/", destination: "/insurance", permanent: true },
+      // Resource sub-pages removed in WP → Next migration
+      { source: "/resources/access-webinars", destination: "/resources", permanent: true },
+      { source: "/resources/access-webinars/", destination: "/resources", permanent: true },
+      { source: "/resources/our-podcast", destination: "/resources", permanent: true },
+      { source: "/resources/our-podcast/", destination: "/resources", permanent: true },
       // Google Ads landing page redirects
       { source: "/drug-alcohol-detox-lp", destination: "/levels-of-care/detox", permanent: true },
       { source: "/drug-alcohol-detox-lp/", destination: "/levels-of-care/detox", permanent: true },
