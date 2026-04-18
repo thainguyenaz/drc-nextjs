@@ -120,7 +120,7 @@ const speakableSchema = {
     "@type": "SpeakableSpecification",
     cssSelector: [".definition-block", ".faq-section", ".quick-answer"],
   },
-  url: "https://drc-nextjs.vercel.app/adolescent/depression",
+  url: "https://desertrecoverycenters.com/adolescent/depression",
 };
 
 export default function AdolescentDepressionPage() {

@@ -84,7 +84,7 @@ const speakableSchema = {
     "@type": "SpeakableSpecification",
     cssSelector: [".definition-block", ".faq-section", ".quick-answer"],
   },
-  url: "https://drc-nextjs.vercel.app/adolescent/anxiety",
+  url: "https://desertrecoverycenters.com/adolescent/anxiety",
 };
 
 export default function AdolescentAnxietyPage() {

@@ -31,6 +31,15 @@ Mental Health Treatment: anxiety, depression, PTSD, bipolar disorder, OCD, ADHD,
 Therapies: CBT, DBT, EMDR, trauma therapy, 12-step, SoftWave therapy, holistic therapies, dual diagnosis treatment
 Levels of Care: residential treatment (10-bed max per facility), PHP, IOP, outpatient, NeuroStar TMS
 
+## Key Pages
+- [Homepage](https://desertrecoverycenters.com/): Luxury addiction and mental health treatment in Arizona
+- [Addiction Treatment](https://desertrecoverycenters.com/addiction-treatment): Evidence-based treatment for alcohol, opioid, stimulant, and behavioral addictions
+- [Mental Health Treatment](https://desertrecoverycenters.com/mental-health): Residential and outpatient care for anxiety, depression, PTSD, bipolar, OCD, and more
+- [Adolescent Treatment](https://desertrecoverycenters.com/adolescent-treatment): Specialized behavioral health treatment for teens and adolescents
+- [Locations](https://desertrecoverycenters.com/locations): Glendale, Scottsdale, and Phoenix facility pages
+- [Insurance](https://desertrecoverycenters.com/insurance): Verify insurance coverage for treatment (Aetna, BCBS, Cigna, United, Humana, Tricare)
+- [About Us](https://desertrecoverycenters.com/about-us): Joint Commission accredited behavioral health organization founded 2019
+
 ## Contact
 Website: https://desertrecoverycenters.com
 Email: contact@desertrecoverycenters.com

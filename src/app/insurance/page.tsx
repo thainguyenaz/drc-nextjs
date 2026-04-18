@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   title: "Verify Insurance for Addiction & Mental Health Treatment | DRC",
   description:
     "Verify your insurance for addiction and mental health treatment at Desert Recovery Centers. We accept most private insurance. Call (480) 931-3617.",
-  alternates: { canonical: "https://desertrecoverycenters.com/insurance-verification/" },
+  alternates: { canonical: "https://desertrecoverycenters.com/insurance" },
   openGraph: {
     images: [{ url: "/images/glendale/Glendale-Front.jpg", width: 1200, height: 630, alt: "Exterior of Desert Recovery Centers luxury residential rehab facility in Glendale Arizona" }],
   },

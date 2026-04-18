@@ -31,7 +31,7 @@ export default function DualDiagnosisExplainedPage() {
     authorUrl: `${SITE_URL}${defaultAuthor.url}`,
     datePublished: DATE_PUBLISHED,
     dateModified: DATE_MODIFIED,
-    image: "https://desertrecoverycenters.com/wp-content/uploads/2024/12/DRC-BALCONY-SCOTTSDALE-08-01-2024-Optimized.jpg",
+    image: "https://desertrecoverycenters.com/images/scottsdale/DRC-DRONE-SCOTTSDALE-08-01-2024-August-01-202400006-2.jpg",
     description: POST_DESCRIPTION,
   });
 
