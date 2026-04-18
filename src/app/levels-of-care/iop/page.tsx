@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     url: "https://desertrecoverycenters.com/levels-of-care/iop/",
     images: [
       {
-        url: "https://desertrecoverycenters.com/wp-content/uploads/2024/10/DRC-DRONE-SCOTTSDALE-08-01-2024-August-01-202400020-2.jpg",
+        url: "https://desertrecoverycenters.com/images/scottsdale/DRC-DRONE-SCOTTSDALE-08-01-2024-August-01-202400006-2.jpg",
         alt: "Intensive Outpatient Program (IOP) in Arizona | Desert Recovery Centers",
       },
     ],

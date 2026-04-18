@@ -61,7 +61,7 @@ const speakableSchema = {
     "@type": "SpeakableSpecification",
     cssSelector: [".definition-block", ".faq-section", ".quick-answer"],
   },
-  url: "https://drc-nextjs.vercel.app/adolescent/ptsd-trauma",
+  url: "https://desertrecoverycenters.com/adolescent/ptsd-trauma",
 };
 
 export default function AdolescentPtsdTraumaPage() {

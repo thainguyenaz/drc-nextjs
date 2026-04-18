@@ -37,7 +37,7 @@ const speakableSchema = {
     "@type": "SpeakableSpecification",
     cssSelector: [".definition-block", ".faq-section", ".quick-answer"],
   },
-  url: "https://drc-nextjs.vercel.app/adolescent/self-harm",
+  url: "https://desertrecoverycenters.com/adolescent/self-harm",
 };
 
 export default function AdolescentSelfHarmPage() {
