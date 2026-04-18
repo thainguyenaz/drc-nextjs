@@ -79,7 +79,7 @@ export default function IntroSection() {
             is uniquely yours.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <a href="/about-us" className="bg-sage hover:bg-forest text-white font-semibold text-sm px-6 py-3 rounded-xl transition-colors cursor-pointer">
+            <a href="/about" className="bg-sage hover:bg-forest text-white font-semibold text-sm px-6 py-3 rounded-xl transition-colors cursor-pointer">
               Learn Our Approach
             </a>
             <a href="#team" className="border border-sage text-sage hover:bg-sage hover:text-white font-semibold text-sm px-6 py-3 rounded-xl transition-colors cursor-pointer">

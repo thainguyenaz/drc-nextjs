@@ -40,7 +40,7 @@ const footerLinks = {
   Company: [
     { label: "Recovery Blog", href: "/resources/blog" },
     { label: "Resources", href: "/resources" },
-    { label: "About Us", href: "/about-us" },
+    { label: "About Us", href: "/about" },
     { label: "Our Team", href: "/our-team" },
     { label: "Facilities", href: "/locations" },
     { label: "Insurance", href: "/insurance" },

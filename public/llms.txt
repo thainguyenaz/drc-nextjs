@@ -38,7 +38,7 @@ Levels of Care: residential treatment (10-bed max per facility), PHP, IOP, outpa
 - [Adolescent Treatment](https://desertrecoverycenters.com/adolescent-treatment): Specialized behavioral health treatment for teens and adolescents
 - [Locations](https://desertrecoverycenters.com/locations): Glendale, Scottsdale, and Phoenix facility pages
 - [Insurance](https://desertrecoverycenters.com/insurance): Verify insurance coverage for treatment (Aetna, BCBS, Cigna, United, Humana, Tricare)
-- [About Us](https://desertrecoverycenters.com/about-us): Joint Commission accredited behavioral health organization founded 2019
+- [About Us](https://desertrecoverycenters.com/about): Joint Commission accredited behavioral health organization founded 2019
 
 ## Contact
 Website: https://desertrecoverycenters.com
