@@ -93,13 +93,7 @@ export default function AdsLandingPage() {
                 </h1>
                 <p className="text-lg sm:text-xl text-gray-700 leading-relaxed mb-8 max-w-2xl">
                   Same-day admissions available. Insurance accepted.{" "}
-                  <a
-                    href={PHONE_HREF}
-                    className="text-sage font-semibold underline underline-offset-2"
-                  >
-                    Call now
-                  </a>
-                  .
+                  <span className="text-gold font-semibold">Call now.</span>
                 </p>
 
                 <ul className="space-y-4 mb-10 max-w-xl">
@@ -189,6 +183,22 @@ export default function AdsLandingPage() {
                     </p>
                   </div>
                   <GetHelpForm variant="lp" />
+                  <div className="flex items-center justify-center gap-6 px-6 pt-4 pb-6">
+                    <Image
+                      src="/images/branding/joint-commission-seal.png"
+                      alt="Joint Commission Gold Seal of Approval"
+                      width={72}
+                      height={72}
+                      className="h-16 w-auto object-contain"
+                    />
+                    <Image
+                      src="/images/branding/legitscript-seal-25653576.png"
+                      alt="LegitScript Certified"
+                      width={72}
+                      height={72}
+                      className="h-16 w-auto object-contain"
+                    />
+                  </div>
                 </div>
               </div>
             </div>

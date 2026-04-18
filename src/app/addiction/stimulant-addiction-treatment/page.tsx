@@ -2,7 +2,6 @@ import { Metadata } from "next";
 import Navigation from "@/components/Navigation";
 import PageHero from "@/components/PageHero";
 import AddictionPrograms from "@/components/AddictionPrograms";
-import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import { MedicalConditionSchema } from "@/lib/seo";
 import AEOBlock from "@/components/AEOBlock";
@@ -16,6 +15,7 @@ import { faqData } from "@/data/faq-data";
 import FAQSection from "@/components/FAQSection";
 import Breadcrumb from "@/components/Breadcrumb";
 import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
+import GetHelpForm from "@/components/forms/GetHelpForm";
 
 const meta = getPageMeta("/addiction/stimulant-addiction-treatment/");
 
@@ -27,37 +27,37 @@ export const metadata: Metadata = {
     title: meta.title,
     description: meta.description,
     url: meta.canonical,
-    images: [{ url: meta.ogImage ?? "https://desertrecoverycenters.com/wp-content/uploads/2024/10/DRC-DRONE-SCOTTSDALE-08-01-2024-August-01-202400020-2.jpg", alt: meta.title }],
+    images: [{ url: meta.ogImage ?? "https://desertrecoverycenters.com/images/scottsdale/DRC-DRONE-SCOTTSDALE-08-01-2024-August-01-202400006-2.jpg", alt: meta.title }],
   },
 };
 
 const faqs = [
   {
-    question: "Can stimulant addiction be treated?",
+    question: "What is stimulant addiction?",
     answer:
-      "Yes. While there are currently no FDA-approved medications specifically for stimulant addiction, evidence-based behavioral therapies are highly effective. At Desert Recovery Centers, our doctoral-level clinicians use CBT, the Matrix Model, and contingency management in our Arizona facilities with just 10 beds per location for intensive, personalized care.",
+      "Stimulant addiction is a substance use disorder involving compulsive use of cocaine, methamphetamine, prescription amphetamines such as Adderall and Ritalin, or MDMA. These substances flood the brain with dopamine and norepinephrine, and over time the natural reward system downregulates so you need stimulants just to feel normal, making it very difficult to stop without clinical support.",
   },
   {
-    question: "How long does stimulant rehab take?",
+    question: "How long does stimulant addiction treatment take?",
     answer:
-      "Stimulant recovery requires time for neurological healing. Residential treatment typically lasts 30 days, with natural dopamine function improving steadily over weeks to months. Step-down care through PHP and IOP continues the recovery process. Desert Recovery Centers customizes every timeline to your needs.",
+      "Most clients begin with 30 days of residential treatment, followed by partial hospitalization (PHP) for 4 to 6 weeks and intensive outpatient (IOP) for 8 to 12 weeks. Because stimulants cause significant neurological changes, longer treatment produces better outcomes. Desert Recovery Centers customizes every timeline to individual clinical needs and progress.",
   },
   {
     question: "Does insurance cover stimulant addiction treatment?",
     answer:
-      "Yes, most major insurance plans cover stimulant addiction treatment at Desert Recovery Centers. Coverage varies by plan and provider. Our admissions team will verify your benefits and explain your out-of-pocket costs before treatment begins.",
+      "Yes. Most major private insurance plans cover stimulant addiction treatment at Desert Recovery Centers. Coverage varies by plan and provider. Our admissions team verifies benefits for free and explains out-of-pocket costs before treatment begins. Call (480) 931-3617 for a confidential verification.",
   },
   {
-    question: "What therapies are used for stimulant withdrawal?",
+    question: "What makes Desert Recovery Centers' stimulant treatment different?",
     answer:
-      "Behavioral therapies are the cornerstone of stimulant addiction treatment. CBT, the Matrix Model, and contingency management address cognitive patterns and triggers. Our psychiatrists provide medication support for co-occurring depression, anxiety, and cognitive impairment that commonly follow stimulant withdrawal. Dual diagnosis care treats the full picture.",
+      "Desert Recovery Centers is a Joint Commission accredited luxury treatment program with just 10 beds per residential facility, ensuring individualized attention from doctoral-level clinicians. We specialize in dual diagnosis care for co-occurring depression, anxiety, and ADHD, and use evidence-based therapies including CBT, the Matrix Model, and contingency management that are specifically effective for stimulant addiction.",
   },
 ];
 
 export default function StimulantAddictionPage() {
   return (
     <>
-      <SchemaScript schema={[getFAQSchema(faqData["stimulant-addiction-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/addiction/stimulant-addiction-treatment"))]} />
+      <SchemaScript schema={[{"@context":"https://schema.org","@type":"MedicalWebPage","@id":"https://www.desertrecoverycenters.com/addiction/stimulant-addiction-treatment/#webpage","url":"https://www.desertrecoverycenters.com/addiction/stimulant-addiction-treatment/","name":"Stimulant Addiction Treatment in Arizona | Desert Recovery Centers","specialty":"Psychiatry","reviewedBy":{"@type":"Person","@id":"https://www.desertrecoverycenters.com/our-team#dr-an-nguyen","name":"Dr. An Nguyen","jobTitle":"Licensed Clinical Psychologist, Clinical Director","worksFor":{"@id":"https://www.desertrecoverycenters.com/#organization"}},"dateModified":"2026-04-18","publisher":{"@id":"https://www.desertrecoverycenters.com/#organization"}}, getFAQSchema(faqData["stimulant-addiction-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/addiction/stimulant-addiction-treatment"))]} />
       <MedicalConditionSchema
         name="Stimulant Addiction"
         description="Stimulant addiction is a substance use disorder involving cocaine, methamphetamine, prescription amphetamines, or other stimulants. These substances flood the brain with dopamine and norepinephrine, creating intense dependence and making natural reward processing increasingly difficult."
@@ -72,6 +72,23 @@ export default function StimulantAddictionPage() {
         description="Stimulants promise energy, focus, and control. The addiction delivers the opposite. We help you find your way back."
         bgImage="/images/general/DRC-ADDICTION.jpg"
       />
+      <section className="bg-forest py-8">
+        <div className="max-w-container mx-auto px-6 flex flex-col sm:flex-row items-center justify-center gap-4 text-center">
+          <p className="text-white/80 font-body text-sm sm:text-base">
+            Confidential admissions, 24/7. Most major insurance accepted.
+          </p>
+          <a
+            href="tel:+14809313617"
+            className="inline-flex items-center gap-2 bg-gold hover:bg-gold-dark text-white font-semibold text-base px-6 py-3 rounded-xl transition-colors"
+            aria-label="Call Desert Recovery Centers at (480) 931-3617"
+          >
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.95.68l1.5 4.5a1 1 0 01-.27 1.06l-2.1 2.1a12 12 0 005.3 5.3l2.1-2.1a1 1 0 011.06-.27l4.5 1.5a1 1 0 01.68.95V19a2 2 0 01-2 2h-1C9.72 21 3 14.28 3 6V5z" />
+            </svg>
+            Call (480) 931-3617
+          </a>
+        </div>
+      </section>
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
@@ -87,7 +104,7 @@ export default function StimulantAddictionPage() {
               Understanding Stimulant Addiction
             </h2>
             <p className="text-gray-600 leading-relaxed">
-              Stimulants, including cocaine, methamphetamine, prescription amphetamines (Adderall, Vyvanse), and MDMA, work by flooding the brain with dopamine and norepinephrine. This creates intense feelings of euphoria, energy, and focus. Over time, the brain&apos;s natural reward system downregulates, meaning you need stimulants just to feel normal. The crash following stimulant use brings severe depression, fatigue, and cravings that make stopping incredibly difficult. Unlike opioids, there are currently no FDA-approved medications for stimulant addiction, making behavioral therapies the cornerstone of treatment.
+              Stimulants, including cocaine, methamphetamine, prescription amphetamines (Adderall, Ritalin, Vyvanse), and MDMA, work by flooding the brain with dopamine and norepinephrine. This creates intense feelings of euphoria, energy, and focus. Over time, the brain&apos;s natural reward system downregulates, meaning you need stimulants just to feel normal. The crash following stimulant use brings severe depression, fatigue, and cravings that make stopping incredibly difficult. Unlike opioids, there are currently no FDA-approved medications for stimulant addiction, making behavioral therapies the cornerstone of treatment.
             </p>
 
             <h2 className="font-display text-2xl text-forest font-semibold mt-10 mb-4">
@@ -192,7 +209,39 @@ export default function StimulantAddictionPage() {
       />
       <RelatedPages currentPath="/addiction/stimulant-addiction-treatment" />
       <FAQSection faqs={faqData["stimulant-addiction-treatment"]} />
-      <CTASection />
+      <section className="py-16 md:py-24 bg-cream">
+        <div className="max-w-container mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-12 items-start max-w-5xl mx-auto">
+            <AnimatedSection>
+              <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
+                Get Help Today
+              </span>
+              <div className="w-[60px] h-0.5 bg-gold mt-4 mb-6" />
+              <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold mb-5">
+                Start Recovery Today
+              </h2>
+              <p className="text-gray-600 leading-relaxed text-lg mb-6">
+                Our admissions team is available 24/7 for a confidential conversation. We&apos;ll verify your insurance, conduct a brief clinical assessment, and help you begin treatment, often within 24 hours.
+              </p>
+              <a
+                href="tel:+14809313617"
+                className="inline-flex items-center gap-2 bg-forest hover:bg-forest/90 text-white font-semibold text-base px-7 py-4 rounded-xl transition-colors"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.95.68l1.5 4.5a1 1 0 01-.27 1.06l-2.1 2.1a12 12 0 005.3 5.3l2.1-2.1a1 1 0 011.06-.27l4.5 1.5a1 1 0 01.68.95V19a2 2 0 01-2 2h-1C9.72 21 3 14.28 3 6V5z" />
+                </svg>
+                Call (480) 931-3617
+              </a>
+              <p className="text-sm text-gray-500 mt-4">
+                Confidential · HIPAA protected · 24/7 admissions
+              </p>
+            </AnimatedSection>
+            <AnimatedSection animation="fadeIn" delay={0.15}>
+              <GetHelpForm variant="contact" />
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
       <Footer />
     </>
   );
