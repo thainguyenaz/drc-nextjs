@@ -103,7 +103,26 @@ const faqs = [
 export default function ScottsdaleLocationPage() {
   return (
     <>
-      <SchemaScript schema={[getFAQSchema(faqData["locations/scottsdale"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/locations/scottsdale"))]} />
+      <SchemaScript schema={[
+        getFAQSchema(faqData["locations/scottsdale"]),
+        getBreadcrumbSchema(getBreadcrumbsFromPathname("/locations/scottsdale")),
+        {
+          "@context": "https://schema.org",
+          "@type": ["LocalBusiness", "MedicalClinic"],
+          name: "Desert Recovery Centers — Scottsdale",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "23222 N Church Rd",
+            addressLocality: "Scottsdale",
+            addressRegion: "AZ",
+            postalCode: "85255",
+          },
+          telephone: "+14809313617",
+          url: "https://desertrecoverycenters.com/locations/scottsdale",
+          licenseNumber: "BH10131",
+          priceRange: "$$$",
+        },
+      ]} />
       <SpeakableSchema url="/locations/scottsdale" cssSelectors={["[data-speakable]"]} />
       <LocalBusinessSchema index={1} />
       <BreadcrumbSchema items={[{ name: "Facilities", path: "/locations" }, { name: "Scottsdale", path: "/locations/scottsdale" }]} />

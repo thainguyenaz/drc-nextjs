@@ -103,7 +103,26 @@ const faqs = [
 export default function GlendaleLocationPage() {
   return (
     <>
-      <SchemaScript schema={[getFAQSchema(faqData["locations/glendale"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/locations/glendale"))]} />
+      <SchemaScript schema={[
+        getFAQSchema(faqData["locations/glendale"]),
+        getBreadcrumbSchema(getBreadcrumbsFromPathname("/locations/glendale")),
+        {
+          "@context": "https://schema.org",
+          "@type": ["LocalBusiness", "MedicalClinic"],
+          name: "Desert Recovery Centers — Glendale",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "8105 W. Frier Dr.",
+            addressLocality: "Glendale",
+            addressRegion: "AZ",
+            postalCode: "85303",
+          },
+          telephone: "+14809313617",
+          url: "https://desertrecoverycenters.com/locations/glendale",
+          licenseNumber: "BH9449",
+          priceRange: "$$$",
+        },
+      ]} />
       <SpeakableSchema url="/locations/glendale" cssSelectors={["[data-speakable]"]} />
       <LocalBusinessSchema index={0} />
       <BreadcrumbSchema items={[{ name: "Facilities", path: "/locations" }, { name: "Glendale", path: "/locations/glendale" }]} />

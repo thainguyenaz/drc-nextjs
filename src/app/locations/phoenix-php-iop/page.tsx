@@ -278,6 +278,21 @@ export default function PhoenixPhpIopPage() {
     <>
       <SchemaScript schema={[clinicSchema, faqSchema, breadcrumbSchema, {
         "@context": "https://schema.org",
+        "@type": ["LocalBusiness", "MedicalClinic"],
+        "name": "Desert Recovery Centers — Phoenix PHP/IOP",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "4160 N. 108th Ave",
+          "addressLocality": "Phoenix",
+          "addressRegion": "AZ",
+          "postalCode": "85037",
+        },
+        "telephone": "+14809313617",
+        "url": "https://desertrecoverycenters.com/locations/phoenix-php-iop",
+        "licenseNumber": "TC20452",
+        "priceRange": "$$$",
+      }, {
+        "@context": "https://schema.org",
         "@type": "HowTo",
         "name": "How to Get Admitted to Desert Recovery Centers Phoenix",
         "description": "The admissions process at Desert Recovery Centers Phoenix PHP and IOP program.",
