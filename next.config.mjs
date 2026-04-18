@@ -59,8 +59,6 @@ const nextConfig = {
       { source: "/treatments/understanding-cbt-cognitive-behavioral-therapy/", destination: "/treatments/cognitive-behavioral-therapy-cbt/", permanent: true },
       { source: "/treatments/understanding-dbt-dialectic-behavior-therapy/", destination: "/treatments/dialectical-behavior-therapy-dbt/", permanent: true },
       // Google Ads landing page redirects
-      { source: "/addiction-mental-health-treatment-facilities-lp", destination: "/addiction-treatment", permanent: true },
-      { source: "/addiction-mental-health-treatment-facilities-lp/", destination: "/addiction-treatment", permanent: true },
       { source: "/drug-alcohol-detox-lp", destination: "/levels-of-care/detox", permanent: true },
       { source: "/drug-alcohol-detox-lp/", destination: "/levels-of-care/detox", permanent: true },
       // Duplicate page cleanup
