@@ -1,5 +1,5 @@
 const DEFAULT_OG_IMAGE =
-  "https://desertrecoverycenters.com/wp-content/uploads/2024/10/DRC-DRONE-SCOTTSDALE-08-01-2024-August-01-202400020-2.jpg";
+  "https://desertrecoverycenters.com/images/scottsdale/DRC-DRONE-SCOTTSDALE-08-01-2024-August-01-202400006-2.jpg";
 
 export interface PageMeta {
   title: string;
@@ -55,19 +55,19 @@ export const pageMetadata: Record<string, PageMeta> = {
     title: "Luxury Rehab & Mental Health Treatment in Glendale, AZ | DRC",
     description: "Residential addiction and mental health treatment in Glendale, AZ. 10-bed luxury facility, Joint Commission accredited. Call (623) 323-1012.",
     canonical: "https://desertrecoverycenters.com/locations/glendale/",
-    ogImage: "https://desertrecoverycenters.com/wp-content/uploads/2024/02/Glendale-Front.jpg",
+    ogImage: "https://desertrecoverycenters.com/images/glendale/Glendale-Front.jpg",
   },
   "/locations/scottsdale/": {
     title: "Luxury Rehab & Mental Health Treatment in Scottsdale, AZ | DRC",
     description: "Residential addiction and mental health treatment in Scottsdale, AZ. Luxury mountain-view facility, Joint Commission accredited. Call (480) 931-3617.",
     canonical: "https://desertrecoverycenters.com/locations/scottsdale/",
-    ogImage: "https://desertrecoverycenters.com/wp-content/uploads/2024/10/DRC-DRONE-SCOTTSDALE-08-01-2024-August-01-202400020-2.jpg",
+    ogImage: "https://desertrecoverycenters.com/images/scottsdale/DRC-DRONE-SCOTTSDALE-08-01-2024-August-01-202400006-2.jpg",
   },
   "/locations/phoenix/": {
     title: "PHP & IOP Mental Health and Addiction Treatment in Phoenix, AZ | DRC",
     description: "Partial hospitalization and intensive outpatient addiction and mental health treatment in Phoenix, AZ. Call (623) 257-5384 to verify insurance.",
     canonical: "https://desertrecoverycenters.com/locations/phoenix/",
-    ogImage: "https://desertrecoverycenters.com/wp-content/uploads/2024/02/Phoenix-Front.jpg",
+    ogImage: "https://desertrecoverycenters.com/images/locations/phoenix/phoenix-entry.jpg",
   },
   "/mental-health/anxiety-treatment/": {
     title: "Anxiety Treatment Center in Arizona | Desert Recovery Centers",

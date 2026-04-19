@@ -51,7 +51,7 @@ const nextConfig = {
       { source: "/resources/what-to-pack", destination: "/resources/blog", permanent: false },
       { source: "/resources/family-guide", destination: "/resources/blog/how-drug-and-alcohol-addiction-impacts-families", permanent: true },
       { source: "/resources/signs-you-need-help", destination: "/resources/blog/gray-area-drinking-am-i-an-alcoholic", permanent: true },
-      { source: "/resources/aftercare", destination: "/treatments/residential", permanent: true },
+      { source: "/resources/aftercare", destination: "/levels-of-care/residential-treatment", permanent: true },
       // SEO redirects — renamed content pages
       { source: "/addiction/understanding-gambling-addiction/", destination: "/addiction/gambling-addiction-treatment/", permanent: true },
       { source: "/addiction/understanding-sex-addiction/", destination: "/addiction/sex-addiction-treatment/", permanent: true },

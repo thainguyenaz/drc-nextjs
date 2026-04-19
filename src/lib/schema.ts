@@ -10,7 +10,7 @@ export function getMedicalOrganizationSchema() {
     "@type": "MedicalOrganization",
     name: SITE_NAME,
     url: SITE_URL,
-    logo: `${SITE_URL}/wp-content/uploads/2024/10/desert-recovery-centers-logo-black-2x.png`,
+    logo: `${SITE_URL}/images/branding/desert-recovery-centers-logo-black-2x.png`,
     image: `${SITE_URL}/images/branding/drlogo-black.png`,
     telephone: "(480) 931-3617",
     email: "contact@desertrecoverycenters.com",
@@ -195,7 +195,7 @@ export function getArticleSchema(article: {
       url: SITE_URL,
       logo: {
         "@type": "ImageObject",
-        url: `${SITE_URL}/wp-content/uploads/2024/10/desert-recovery-centers-logo-black-2x.png`,
+        url: `${SITE_URL}/images/branding/desert-recovery-centers-logo-black-2x.png`,
       },
     },
   };

@@ -21,14 +21,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/locations/phoenix-php-iop", priority: 0.9, changeFrequency: "weekly" },
     { path: "/locations/phoenix-living", priority: 0.7, changeFrequency: "monthly" },
 
-    // Facility pages
-    { path: "/facilities/glendale", priority: 0.8, changeFrequency: "weekly" },
-    { path: "/facilities/scottsdale", priority: 0.8, changeFrequency: "weekly" },
-    { path: "/facilities/phoenix", priority: 0.8, changeFrequency: "weekly" },
+    // Facilities hub
+    { path: "/facilities", priority: 0.7, changeFrequency: "monthly" },
 
     // Service hub pages
     { path: "/mental-health", priority: 0.8, changeFrequency: "weekly" },
-    { path: "/addiction", priority: 0.8, changeFrequency: "weekly" },
     { path: "/addiction-treatment", priority: 0.8, changeFrequency: "weekly" },
     { path: "/treatments", priority: 0.8, changeFrequency: "weekly" },
 
@@ -55,8 +52,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/addiction/sex-addiction-treatment", priority: 0.7, changeFrequency: "weekly" },
     { path: "/addiction/stimulant-addiction-treatment", priority: 0.7, changeFrequency: "weekly" },
 
-    // Treatment modality pages
+    // Levels of care
+    { path: "/levels-of-care", priority: 0.8, changeFrequency: "weekly" },
+    { path: "/levels-of-care/detox", priority: 0.7, changeFrequency: "weekly" },
     { path: "/levels-of-care/residential-treatment", priority: 0.7, changeFrequency: "weekly" },
+    { path: "/levels-of-care/php", priority: 0.7, changeFrequency: "weekly" },
+    { path: "/levels-of-care/iop", priority: 0.7, changeFrequency: "weekly" },
+
+    // Treatment modality pages
     { path: "/treatments/cbt-cognitive-behavioral-therapy", priority: 0.7, changeFrequency: "weekly" },
     { path: "/treatments/dbt-dialectical-behavior-therapy", priority: 0.7, changeFrequency: "weekly" },
     { path: "/treatments/emdr-therapy", priority: 0.7, changeFrequency: "weekly" },
@@ -68,17 +71,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/treatments/bridgework", priority: 0.7, changeFrequency: "weekly" },
     { path: "/treatments/12-step-program", priority: 0.7, changeFrequency: "weekly" },
 
-    // Program / level-of-care pages
-    { path: "/programs/residential", priority: 0.7, changeFrequency: "weekly" },
-    { path: "/programs/php", priority: 0.7, changeFrequency: "weekly" },
-    { path: "/programs/iop", priority: 0.7, changeFrequency: "weekly" },
-    { path: "/treatment/iop", priority: 0.7, changeFrequency: "weekly" },
-    { path: "/treatment/op", priority: 0.7, changeFrequency: "weekly" },
-    { path: "/treatment/family-program", priority: 0.7, changeFrequency: "weekly" },
-
     // Adolescent program pages
     { path: "/adolescent-treatment", priority: 0.9, changeFrequency: "weekly" },
-    { path: "/adolescent-program", priority: 0.7, changeFrequency: "weekly" },
     { path: "/adolescent/depression", priority: 0.7, changeFrequency: "weekly" },
     { path: "/adolescent/anxiety", priority: 0.7, changeFrequency: "weekly" },
     { path: "/adolescent/substance-use", priority: 0.7, changeFrequency: "weekly" },
@@ -98,7 +92,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/insurance/humana", priority: 0.7, changeFrequency: "weekly" },
 
     // Team & About pages
-    { path: "/about-us", priority: 0.5, changeFrequency: "monthly" },
     { path: "/about", priority: 0.5, changeFrequency: "monthly" },
     { path: "/our-team", priority: 0.5, changeFrequency: "monthly" },
 
@@ -109,11 +102,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Utility pages
     { path: "/contact", priority: 0.6, changeFrequency: "monthly" },
     { path: "/rehab-near-me", priority: 0.7, changeFrequency: "weekly" },
-    { path: "/insurance-verification", priority: 0.7, changeFrequency: "monthly" },
     { path: "/get-help", priority: 0.7, changeFrequency: "monthly" },
 
-    // Blog hub
-    { path: "/blog", priority: 0.6, changeFrequency: "daily" },
+    // Standalone blog hub articles
     { path: "/blog/luxury-rehab-worth-it", priority: 0.6, changeFrequency: "weekly" },
     { path: "/blog/signs-of-addiction", priority: 0.6, changeFrequency: "weekly" },
     { path: "/blog/dual-diagnosis-explained", priority: 0.6, changeFrequency: "weekly" },
@@ -124,7 +115,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/resources/what-to-bring", priority: 0.6, changeFrequency: "weekly" },
     { path: "/resources/detox-guide", priority: 0.6, changeFrequency: "weekly" },
     { path: "/resources/cost-of-rehab", priority: 0.6, changeFrequency: "weekly" },
-    { path: "/resources/luxury-vs-standard-rehab", priority: 0.6, changeFrequency: "weekly" },
+    { path: "/resources/luxury-vs-traditional-rehab", priority: 0.6, changeFrequency: "weekly" },
     { path: "/resources/intervention-guide", priority: 0.6, changeFrequency: "weekly" },
     { path: "/resources/mental-health-assessment", priority: 0.6, changeFrequency: "weekly" },
 

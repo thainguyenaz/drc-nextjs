@@ -9,7 +9,7 @@ import SchemaScript from "@/components/SchemaScript";
 import { getPostBySlug, getAllSlugs, getPostsByCategory } from "@/lib/blog";
 import BlogPostBody from "./BlogPostBody";
 
-const SITE_URL = "https://www.desertrecoverycenters.com";
+const SITE_URL = "https://desertrecoverycenters.com";
 
 export async function generateStaticParams() {
   return getAllSlugs().map((slug) => ({ slug }));
