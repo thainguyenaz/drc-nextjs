@@ -20,10 +20,7 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://desertrecoverycenters.com"),
-  title: {
-    default: "Luxury Addiction & Mental Health Treatment in Arizona | Desert Recovery Centers",
-    template: "%s | Desert Recovery Centers",
-  },
+  title: "Luxury Addiction & Mental Health Treatment in Arizona | Desert Recovery Centers",
   description:
     "Luxury addiction and mental health treatment in Arizona. Joint Commission accredited, dual diagnosis care. Verify insurance today. Call (480) 931-3617.",
   alternates: {
