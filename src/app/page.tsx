@@ -25,7 +25,6 @@ const FacilityPhotoGrid = dynamic(() => import("@/components/FacilityPhotoGrid")
 const WhyChooseUs = dynamic(() => import("@/components/WhyChooseUs"));
 const BridgeWork = dynamic(() => import("@/components/BridgeWork"));
 const TeamSection = dynamic(() => import("@/components/TeamSection"));
-const Testimonials = dynamic(() => import("@/components/Testimonials"));
 const GoogleReviews = dynamic(() => import("@/components/GoogleReviews"));
 const FAQ = dynamic(() => import("@/components/FAQ"));
 const ContinuumOfCare = dynamic(() => import("@/components/ContinuumOfCare"));
@@ -133,7 +132,6 @@ export default function Home() {
       <GoogleReviews />
       <BridgeWork />
       <TeamSection />
-      <Testimonials />
 
       {/* ── Brand / Testimonial Video ──────────────────────────── */}
       <section className="py-16 md:py-24 bg-cream">

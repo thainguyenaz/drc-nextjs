@@ -109,20 +109,6 @@ export const siteData = {
     { name: "Sex Addiction", href: "/addiction/sex-addiction-treatment", description: "Compassionate treatment for compulsive sexual behavior." },
     { name: "Stimulants", href: "/addiction/stimulant-addiction-treatment", description: "Treatment for cocaine, meth, and other stimulant addictions." },
   ],
-  testimonials: [
-    {
-      name: "Leo",
-      text: "Desert Recovery Centers changed my life. The clinical staff is 100% caring and helpful. With this care and therapy I am able to go on with life in sobriety and feel confident about my recovery and who I am as a person.",
-    },
-    {
-      name: "Samantha",
-      text: "I've been to many treatment centers, yet I've never experienced a place like DRC. Doctors run morning groups and this place truly focuses on dual diagnosis. I've never felt stronger in my recovery. DRC saved my life.",
-    },
-    {
-      name: "Eddy",
-      text: "The facilities are like none other, from the wonderful food to all the activities. All the staff were truly caring individuals. If you are struggling with addiction, this would be the rehab I would recommend to anyone.",
-    },
-  ],
   faqs: [
     {
       q: "What types of insurance do you accept?",
