@@ -7,21 +7,21 @@ import Image from "next/image";
 const videos = [
   {
     videoId: "CrJz9g0ssZQ",
-    title: "Patient TMS Therapy Experience, Desert Recovery Centers",
-    label: "Patient Story",
-    description: "A patient shares their experience with NeuroStar TMS therapy and how it changed their life.",
+    title: "NeuroStar TMS Therapy Patient Experience",
+    label: "NeuroStar Patient Story",
+    description: "A NeuroStar TMS patient shares their experience with the therapy and how it changed their life.",
   },
   {
     videoId: "rcj4Tzbc34g",
-    title: "TMS Therapy Results, Patient Testimonial",
-    label: "Patient Story",
-    description: "Hear how NeuroStar TMS therapy helped when medication alone was not enough.",
+    title: "NeuroStar TMS Therapy Results, Patient Testimonial",
+    label: "NeuroStar Patient Story",
+    description: "Hear how NeuroStar TMS therapy helped a patient when medication alone was not enough.",
   },
   {
     videoId: "1Bed8b5DQBQ",
-    title: "Life After TMS Therapy, Patient Experience",
-    label: "Patient Story",
-    description: "A patient describes their journey through TMS treatment and the impact on their daily life.",
+    title: "Life After NeuroStar TMS Therapy, Patient Experience",
+    label: "NeuroStar Patient Story",
+    description: "A NeuroStar TMS patient describes their journey through treatment and the impact on their daily life.",
   },
 ];
 
@@ -90,14 +90,14 @@ export default function TMSVideoSection() {
           className="text-center mb-12"
         >
           <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
-            Patient Stories
+            NeuroStar Patient Stories
           </span>
           <div className="w-[60px] h-0.5 bg-gold mx-auto mt-4 mb-4" />
           <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold mb-3">
-            Hear From People Who Have Been Through It
+            NeuroStar TMS Patient Experiences
           </h2>
           <p className="text-gray-500 max-w-2xl mx-auto">
-            These are real patients sharing their NeuroStar TMS experiences. Results vary from person to person. These stories are shared with permission.
+            These videos are provided by NeuroStar and feature patients who have undergone TMS therapy using the NeuroStar Advanced Therapy system. They are shared to help you understand what TMS treatment is like. Results vary from person to person.
           </p>
         </motion.div>
 
@@ -107,8 +107,11 @@ export default function TMSVideoSection() {
           ))}
         </div>
 
-        <p className="text-gray-400 text-xs text-center mt-8 max-w-2xl mx-auto">
-          Individual results may vary. Patient testimonials reflect personal experiences with NeuroStar TMS therapy and are not a guarantee of outcome.
+        <p className="text-gray-500 text-sm text-center mt-8 max-w-2xl mx-auto italic">
+          Videos courtesy of NeuroStar.
+        </p>
+        <p className="text-gray-400 text-xs text-center mt-3 max-w-2xl mx-auto">
+          Individual results may vary. Patient testimonials reflect personal experiences with NeuroStar TMS therapy and are not a guarantee of outcome. Patients featured in these videos are not necessarily patients of Desert Recovery Centers.
         </p>
       </div>
     </section>
