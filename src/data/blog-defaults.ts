@@ -11,5 +11,5 @@ export const defaultReviewer = {
 
 export const publisher = {
   name: "Desert Recovery Centers",
-  logo: "https://desertrecoverycenters.com/wp-content/uploads/2024/10/desert-recovery-centers-logo-black-2x.png",
+  logo: "https://desertrecoverycenters.com/images/branding/desert-recovery-centers-logo-black-2x.png",
 };

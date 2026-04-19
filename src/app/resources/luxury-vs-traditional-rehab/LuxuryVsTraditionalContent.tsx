@@ -66,7 +66,7 @@ export default function LuxuryVsTraditionalContent({ faqs }: { faqs: readonly FA
         <div className="absolute inset-0 bg-forest">
           <Image
             src="/images/general/DRC-TREATMENTS.jpg"
-            alt=""
+            alt="Luxury vs traditional rehab comparison — Desert Recovery Centers"
             fill
             priority
             sizes="100vw"
