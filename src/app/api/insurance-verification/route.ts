@@ -1,13 +1,16 @@
 import { NextRequest, NextResponse } from "next/server";
 
-const EMAIL_RELAY_URL = process.env.EMAIL_RELAY_URL;
-const EMAIL_RELAY_SECRET = process.env.EMAIL_RELAY_SECRET;
-
-if (!EMAIL_RELAY_URL || !EMAIL_RELAY_SECRET) {
-  throw new Error("EMAIL_RELAY_URL and EMAIL_RELAY_SECRET must be set");
-}
-
 export async function POST(request: NextRequest) {
+  // Fail closed: no hardcoded fallbacks. Both must be set in the runtime env
+  // (Vercel project env vars). Checked per-request so the build can run
+  // without secrets.
+  const EMAIL_RELAY_URL = process.env.EMAIL_RELAY_URL;
+  const EMAIL_RELAY_SECRET = process.env.EMAIL_RELAY_SECRET;
+  if (!EMAIL_RELAY_URL || !EMAIL_RELAY_SECRET) {
+    console.error("EMAIL_RELAY_URL and EMAIL_RELAY_SECRET must be set");
+    return NextResponse.json({ error: "Email relay not configured" }, { status: 500 });
+  }
+
   const results = { hubspot: false, email: false };
 
   try {
@@ -85,10 +88,10 @@ export async function POST(request: NextRequest) {
         relayBody.append("back_card", backCard);
       }
 
-      const relayRes = await fetch(EMAIL_RELAY_URL!, {
+      const relayRes = await fetch(EMAIL_RELAY_URL, {
         method: "POST",
         headers: {
-          Authorization: `Bearer ${EMAIL_RELAY_SECRET!}`,
+          Authorization: `Bearer ${EMAIL_RELAY_SECRET}`,
         },
         body: relayBody,
       });
