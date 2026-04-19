@@ -6,10 +6,9 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <section className="relative h-screen min-h-[700px] flex items-end overflow-hidden">
-      {/* Video Background with subtle parallax */}
+      {/* Hero background — static poster (desktop + mobile) */}
       <div className="absolute inset-0 bg-forest">
-        {/* Mobile: static poster image (no video download) */}
-        <div className="absolute inset-0 md:hidden">
+        <div className="absolute inset-0">
           <Image
             src="/images/scottsdale/DRC-DRONE-SCOTTSDALE-08-01-2024-August-01-202400006-2.jpg"
             alt=""
@@ -19,7 +18,8 @@ export default function Hero() {
             className="object-cover opacity-60"
           />
         </div>
-        {/* Desktop: animated video background */}
+        {/* Desktop hero video disabled for performance (4.8MB autoplay MP4 + infinite scale loop).
+            To restore: add `md:hidden` to the <Image> wrapper above and uncomment below.
         <motion.div
           initial={{ scale: 1.08 }}
           animate={{ scale: 1 }}
@@ -38,6 +38,7 @@ export default function Hero() {
             <source src="/images/general/desert-recovery-center-hero-video.mp4" type="video/mp4" />
           </video>
         </motion.div>
+        */}
       </div>
 
       {/* Overlay */}
