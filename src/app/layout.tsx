@@ -40,8 +40,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
   },
   robots: {
-    index: false,
-    follow: false,
+    index: true,
+    follow: true,
   },
 };
 
