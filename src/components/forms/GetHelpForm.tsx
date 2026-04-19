@@ -101,6 +101,22 @@ export default function GetHelpForm({ variant = "lp" }: GetHelpFormProps) {
 
       if (response.ok) {
         setStatus("success");
+        fetch("/api/lead-notify", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            type: "get_help_form",
+            firstName: formData.firstName,
+            lastName: formData.lastName,
+            phone: formData.phone,
+            email: formData.email,
+            insurance: formData.insuranceProvider,
+            seekingFor: formData.seekingFor,
+            message: formData.situation,
+            source: "website_get_help_form",
+          }),
+          keepalive: true,
+        }).catch(() => {});
         setFormData(initialFormData);
       } else {
         setStatus("error");
