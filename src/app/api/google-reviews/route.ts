@@ -4,6 +4,9 @@
 
 import { NextResponse } from "next/server";
 
+export const dynamic = "force-dynamic";
+export const runtime = "nodejs";
+
 const LOCATIONS = [
   { name: "Scottsdale", placeId: "ChIJIY0JCJR3K4cR2AsN2S1SMsw" },
   { name: "Glendale", placeId: "ChIJhwUwqWFrK4cRcJizcuP0hCI" },
