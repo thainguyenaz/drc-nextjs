@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from 'next/server';
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const response = await fetch('http://93.188.166.239:3002/api/notifications/lead', {
+    const response = await fetch('https://api.desertrecoverycenters.com/api/notifications/lead', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(body),
