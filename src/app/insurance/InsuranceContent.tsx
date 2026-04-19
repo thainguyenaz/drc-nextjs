@@ -39,22 +39,55 @@ const steps = [
 export default function InsuranceContent() {
   return (
     <>
-      {/* Intro */}
-      <section className="py-16 md:py-24 bg-white">
+      {/* Intro + Form (above the fold) */}
+      <section className="py-12 md:py-16 bg-white">
         <div className="max-w-container mx-auto px-6">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mb-6">
-              Insurance at Desert Recovery Centers
-            </h2>
-            <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              We accept employer-based group commercial insurance plans and most major carriers out-of-network. Once you submit your insurance details, we can verify your benefits and explain your coverage.
-            </p>
-            <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              We do not accept Medicaid, or state-funded insurance. We can work with you on a self-pay option if you don&apos;t have health insurance.
-            </p>
-            <p className="text-gray-600 leading-relaxed text-lg">
-              Fill out the insurance verification form and we will check what benefits you have and what they may cover at Desert Recovery Centers. Final determinations are always made by your insurance company.
-            </p>
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
+            <motion.div
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+            >
+              <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mb-6">
+                Insurance at Desert Recovery Centers
+              </h2>
+              <p className="text-gray-600 leading-relaxed text-lg mb-4">
+                We accept employer-based group commercial insurance plans and most major carriers out-of-network. Once you submit your insurance details, we can verify your benefits and explain your coverage.
+              </p>
+              <p className="text-gray-600 leading-relaxed text-lg mb-4">
+                We do not accept Medicaid, or state-funded insurance. We can work with you on a self-pay option if you don&apos;t have health insurance.
+              </p>
+              <p className="text-gray-600 leading-relaxed text-lg mb-6">
+                Fill out the insurance verification form and we will check what benefits you have and what they may cover at Desert Recovery Centers. Final determinations are always made by your insurance company.
+              </p>
+              <div className="space-y-3 text-sm text-gray-600">
+                <div className="flex items-center gap-3">
+                  <svg className="w-5 h-5 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                  <span>Prefer to call? <a href="tel:+14809313617" className="text-sage font-medium">(480) 931-3617</a></span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <svg className="w-5 h-5 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span>Available 24/7, call anytime, day or night</span>
+                </div>
+              </div>
+              <p className="text-gray-500 text-xs mt-4">
+                All information is protected by HIPAA and 42 CFR Part 2 federal confidentiality regulations.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
+            >
+              <InsuranceVerificationForm />
+            </motion.div>
           </div>
         </div>
       </section>
@@ -143,60 +176,6 @@ export default function InsuranceContent() {
                 </motion.div>
               ))}
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Insurance Verification Form */}
-      <section className="py-16 md:py-24 bg-cream">
-        <div className="max-w-container mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-start">
-            <motion.div
-              initial={{ opacity: 0, x: -80 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.7, ease: "easeOut" }}
-            >
-              <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
-                Verify Your Benefits
-              </span>
-              <div className="w-[60px] h-0.5 bg-gold mt-4 mb-4" />
-              <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold mb-6">
-                Free, Confidential Insurance Check
-              </h2>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                Submit your information below and our admissions team will verify your benefits within hours. There is absolutely no cost, no obligation, and no pressure.
-              </p>
-              <p className="text-gray-600 leading-relaxed mb-6">
-                All information is protected by HIPAA and 42 CFR Part 2 federal confidentiality regulations.
-              </p>
-              <p className="text-gold text-sm font-semibold mb-4">
-                Coverage varies by plan. Contact us to verify your benefits.
-              </p>
-              <div className="space-y-3 text-sm text-gray-600">
-                <div className="flex items-center gap-3">
-                  <svg className="w-5 h-5 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                  </svg>
-                  <span>Prefer to call? <a href="tel:+14809313617" className="text-sage font-medium">(480) 931-3617</a></span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <svg className="w-5 h-5 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  <span>Available 24/7, call anytime, day or night</span>
-                </div>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 80 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
-            >
-              <InsuranceVerificationForm />
-            </motion.div>
           </div>
         </div>
       </section>
