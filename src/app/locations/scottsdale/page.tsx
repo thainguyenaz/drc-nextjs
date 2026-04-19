@@ -1,25 +1,25 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import dynamic from "next/dynamic";
 import Navigation from "@/components/Navigation";
 import PageHero from "@/components/PageHero";
-import LocationCollision from "@/components/LocationCollision";
 import VideoLightbox from "@/components/VideoLightbox";
-import ConditionFAQ from "@/components/ConditionFAQ";
-import CTASection from "@/components/CTASection";
-import Footer from "@/components/Footer";
 import { LocalBusinessSchema, BreadcrumbSchema, SpeakableSchema, VideoSchemas } from "@/lib/seo";
-import AEOBlock from "@/components/AEOBlock";
-import dynamic from "next/dynamic";
-const PhotoGallery = dynamic(() => import("@/components/PhotoGallery"), { ssr: false, loading: () => null });
 import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
 import { faqData } from "@/data/faq-data";
 import SchemaScript from "@/components/SchemaScript";
-import FAQSection from "@/components/FAQSection";
 import Breadcrumb from "@/components/Breadcrumb";
 import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
 import { getPageMeta } from "@/data/page-metadata";
-import FacilityVideoSection from "@/components/FacilityVideoSection";
+
+const PhotoGallery = dynamic(() => import("@/components/PhotoGallery"), { ssr: false, loading: () => null });
+const FacilityVideoSection = dynamic(() => import("@/components/FacilityVideoSection"));
+const ConditionFAQ = dynamic(() => import("@/components/ConditionFAQ"));
+const FAQSection = dynamic(() => import("@/components/FAQSection"));
+const AEOBlock = dynamic(() => import("@/components/AEOBlock"));
+const CTASection = dynamic(() => import("@/components/CTASection"));
+const Footer = dynamic(() => import("@/components/Footer"));
 
 const meta = getPageMeta("/locations/scottsdale/");
 
@@ -167,19 +167,29 @@ export default function ScottsdaleLocationPage() {
         ctaPhone="4809313617"
       />
 
-      {/* Collision Animation */}
+      {/* Static photo pair (replaces LocationCollision scroll-listener for perf) */}
       <section className="py-16 md:py-24 bg-cream overflow-hidden">
         <div className="max-w-container mx-auto px-6">
-          <LocationCollision
-            leftImage={{
-              src: "/images/scottsdale/DRC-LIVING-ROOMS-NORTH-SCOTTSDALE-08-01-2024-0553August-01-202400015-2.jpg",
-              alt: "Luxury living area at Desert Recovery Centers Scottsdale addiction treatment center",
-            }}
-            rightImage={{
-              src: "/images/scottsdale/DRC-OUTSIDE-NORTH-SCOTTSDALE-08-02-2024-0830August-02-202400010-2.jpg",
-              alt: "Mountain views from outdoor patio at Desert Recovery Centers Scottsdale Arizona",
-            }}
-          />
+          <div className="grid md:grid-cols-2 gap-8 mb-16">
+            <div className="relative h-[320px] md:h-[400px] rounded-2xl overflow-hidden shadow-xl group">
+              <Image
+                src="/images/scottsdale/DRC-LIVING-ROOMS-NORTH-SCOTTSDALE-08-01-2024-0553August-01-202400015-2.jpg"
+                alt="Luxury living area at Desert Recovery Centers Scottsdale addiction treatment center"
+                fill
+                className="object-cover group-hover:scale-[1.04] transition-transform duration-[350ms] ease-out"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </div>
+            <div className="relative h-[320px] md:h-[400px] rounded-2xl overflow-hidden shadow-xl group">
+              <Image
+                src="/images/scottsdale/DRC-OUTSIDE-NORTH-SCOTTSDALE-08-02-2024-0830August-02-202400010-2.jpg"
+                alt="Mountain views from outdoor patio at Desert Recovery Centers Scottsdale Arizona"
+                fill
+                className="object-cover group-hover:scale-[1.04] transition-transform duration-[350ms] ease-out"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </div>
+          </div>
         </div>
       </section>
 

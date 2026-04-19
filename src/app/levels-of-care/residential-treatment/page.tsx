@@ -1,17 +1,18 @@
 import { Metadata } from "next";
+import dynamic from "next/dynamic";
 import Navigation from "@/components/Navigation";
 import PageHero from "@/components/PageHero";
-import ConditionFAQ from "@/components/ConditionFAQ";
-import CTASection from "@/components/CTASection";
-import Footer from "@/components/Footer";
-import AEOBlock from "@/components/AEOBlock";
-import RelatedPages from "@/components/RelatedPages";
 import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
 import SchemaScript from "@/components/SchemaScript";
 import Breadcrumb from "@/components/Breadcrumb";
 import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
-import AnimatedSection from "@/components/animated/AnimatedSection";
 import Link from "next/link";
+
+const ConditionFAQ = dynamic(() => import("@/components/ConditionFAQ"));
+const AEOBlock = dynamic(() => import("@/components/AEOBlock"));
+const RelatedPages = dynamic(() => import("@/components/RelatedPages"));
+const CTASection = dynamic(() => import("@/components/CTASection"));
+const Footer = dynamic(() => import("@/components/Footer"));
 
 export const metadata: Metadata = {
   title:
@@ -137,43 +138,41 @@ export default function ResidentialTreatmentPage() {
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
-            <AnimatedSection>
-              <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mb-6">
-                What Is Residential Treatment?
-              </h2>
-              <p className="text-gray-600 leading-relaxed text-lg mb-4">
-                Residential treatment is the most immersive level of
-                addiction and mental health care available outside of a
-                hospital setting. You live at the facility full-time,
-                participating in a structured daily schedule of therapy,
-                groups, wellness activities, and clinical programming. The
-                24-hour environment removes you from the people, places, and
-                patterns that fuel substance use, giving you the space and
-                support to focus entirely on your recovery.
-              </p>
-              <p className="text-gray-600 leading-relaxed text-lg mb-4">
-                At Desert Recovery Centers, residential treatment is not
-                a one-size-fits-all program. We limit each of our Arizona
-                facilities to a maximum of 10 clients at any given time.
-                This intentionally small census means your clinical team
-                knows you — your history, your triggers, your goals, and
-                the specific conditions that brought you into treatment.
-                Every therapy session, group, and wellness activity is
-                designed to meet you where you are.
-              </p>
-              <p className="text-gray-600 leading-relaxed text-lg">
-                Whether you are stepping down from{" "}
-                <Link
-                  href="/levels-of-care/detox/"
-                  className="text-gold hover:text-gold-dark font-semibold"
-                >
-                  medical detox
-                </Link>{" "}
-                or entering treatment for the first time, our residential
-                program provides the structure, clinical depth, and personal
-                attention that early recovery demands.
-              </p>
-            </AnimatedSection>
+            <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mb-6">
+              What Is Residential Treatment?
+            </h2>
+            <p className="text-gray-600 leading-relaxed text-lg mb-4">
+              Residential treatment is the most immersive level of
+              addiction and mental health care available outside of a
+              hospital setting. You live at the facility full-time,
+              participating in a structured daily schedule of therapy,
+              groups, wellness activities, and clinical programming. The
+              24-hour environment removes you from the people, places, and
+              patterns that fuel substance use, giving you the space and
+              support to focus entirely on your recovery.
+            </p>
+            <p className="text-gray-600 leading-relaxed text-lg mb-4">
+              At Desert Recovery Centers, residential treatment is not
+              a one-size-fits-all program. We limit each of our Arizona
+              facilities to a maximum of 10 clients at any given time.
+              This intentionally small census means your clinical team
+              knows you — your history, your triggers, your goals, and
+              the specific conditions that brought you into treatment.
+              Every therapy session, group, and wellness activity is
+              designed to meet you where you are.
+            </p>
+            <p className="text-gray-600 leading-relaxed text-lg">
+              Whether you are stepping down from{" "}
+              <Link
+                href="/levels-of-care/detox/"
+                className="text-gold hover:text-gold-dark font-semibold"
+              >
+                medical detox
+              </Link>{" "}
+              or entering treatment for the first time, our residential
+              program provides the structure, clinical depth, and personal
+              attention that early recovery demands.
+            </p>
           </div>
         </div>
       </section>
@@ -182,53 +181,51 @@ export default function ResidentialTreatmentPage() {
       <section className="py-16 md:py-24 bg-cream">
         <div className="max-w-container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
-            <AnimatedSection>
-              <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
-                Our Model
-              </span>
-              <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4 mb-8">
-                The 10-Bed Maximum Advantage
-              </h2>
-              <p className="text-gray-600 leading-relaxed text-lg mb-4">
-                Most residential treatment centers house 30, 50, or even 100
-                clients at a time. At that scale, individualized care
-                becomes a marketing claim rather than a clinical reality.
-                Desert Recovery Centers operates differently. By capping
-                each facility at 10 beds, we create an environment where
-                personalized attention is not just possible — it is
-                unavoidable.
-              </p>
-              <p className="text-gray-600 leading-relaxed text-lg mb-4">
-                The practical impact of our small-group model is significant.
-                Your therapist carries a smaller caseload, which means more
-                time in session and more thoughtful treatment planning. Your
-                psychiatrist sees you regularly, not just once at intake.
-                Group sessions are intimate enough for real vulnerability and
-                connection. And our clinical team can identify changes in
-                your mood, behavior, or engagement quickly — adjusting your
-                treatment in real time rather than waiting for a scheduled
-                review.
-              </p>
-              <p className="text-gray-600 leading-relaxed text-lg">
-                We operate luxury facilities in both{" "}
-                <Link
-                  href="/locations/glendale/"
-                  className="text-gold hover:text-gold-dark font-semibold"
-                >
-                  Glendale
-                </Link>{" "}
-                and{" "}
-                <Link
-                  href="/locations/scottsdale/"
-                  className="text-gold hover:text-gold-dark font-semibold"
-                >
-                  Scottsdale
-                </Link>
-                , each maintaining this 10-bed standard. The location that
-                is right for you depends on your clinical needs and the
-                availability at the time of your admission.
-              </p>
-            </AnimatedSection>
+            <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
+              Our Model
+            </span>
+            <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4 mb-8">
+              The 10-Bed Maximum Advantage
+            </h2>
+            <p className="text-gray-600 leading-relaxed text-lg mb-4">
+              Most residential treatment centers house 30, 50, or even 100
+              clients at a time. At that scale, individualized care
+              becomes a marketing claim rather than a clinical reality.
+              Desert Recovery Centers operates differently. By capping
+              each facility at 10 beds, we create an environment where
+              personalized attention is not just possible — it is
+              unavoidable.
+            </p>
+            <p className="text-gray-600 leading-relaxed text-lg mb-4">
+              The practical impact of our small-group model is significant.
+              Your therapist carries a smaller caseload, which means more
+              time in session and more thoughtful treatment planning. Your
+              psychiatrist sees you regularly, not just once at intake.
+              Group sessions are intimate enough for real vulnerability and
+              connection. And our clinical team can identify changes in
+              your mood, behavior, or engagement quickly — adjusting your
+              treatment in real time rather than waiting for a scheduled
+              review.
+            </p>
+            <p className="text-gray-600 leading-relaxed text-lg">
+              We operate luxury facilities in both{" "}
+              <Link
+                href="/locations/glendale/"
+                className="text-gold hover:text-gold-dark font-semibold"
+              >
+                Glendale
+              </Link>{" "}
+              and{" "}
+              <Link
+                href="/locations/scottsdale/"
+                className="text-gold hover:text-gold-dark font-semibold"
+              >
+                Scottsdale
+              </Link>
+              , each maintaining this 10-bed standard. The location that
+              is right for you depends on your clinical needs and the
+              availability at the time of your admission.
+            </p>
           </div>
         </div>
       </section>
@@ -286,53 +283,51 @@ export default function ResidentialTreatmentPage() {
       <section className="py-16 md:py-24 bg-cream">
         <div className="max-w-container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
-            <AnimatedSection>
-              <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
-                Evidence-Based Modalities
-              </span>
-              <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4 mb-8">
-                Therapies Offered in Residential Treatment
-              </h2>
-              <p className="text-gray-600 leading-relaxed text-lg mb-6">
-                Our clinical team draws from a broad range of evidence-based
-                and experiential modalities, selecting the therapies that
-                match your specific diagnosis, history, and treatment goals.
-              </p>
-              <div className="space-y-6">
-                {[
-                  {
-                    title: "Cognitive Behavioral Therapy (CBT)",
-                    desc: "CBT helps you identify and change the thought patterns and beliefs that drive addictive behavior. You learn to recognize triggers, challenge distorted thinking, and develop healthier responses to stress, cravings, and difficult emotions.",
-                  },
-                  {
-                    title: "Dialectical Behavior Therapy (DBT)",
-                    desc: "DBT teaches skills in four key areas: mindfulness, distress tolerance, emotional regulation, and interpersonal effectiveness. It is particularly effective for clients who struggle with intense emotions, self-destructive behavior, or co-occurring personality disorders.",
-                  },
-                  {
-                    title:
-                      "Eye Movement Desensitization and Reprocessing (EMDR)",
-                    desc: "EMDR is a trauma-focused therapy that helps the brain reprocess traumatic memories, reducing their emotional charge and the hold they have on present behavior. Many of our clients have experienced trauma that is intertwined with their substance use.",
-                  },
-                  {
-                    title: "Motivational Interviewing",
-                    desc: "This collaborative therapeutic approach strengthens your own motivation and commitment to change. Rather than telling you what to do, your therapist helps you articulate your reasons for recovery and resolve any ambivalence you feel.",
-                  },
-                  {
-                    title: "Experiential and Holistic Therapies",
-                    desc: "Art therapy, equine-assisted therapy, yoga, fitness programming, mindfulness meditation, and nature-based activities complement clinical work by engaging the body, reducing stress, and building coping skills that extend beyond the therapy room.",
-                  },
-                ].map((item, i) => (
-                  <div key={i} className="border-l-2 border-gold/40 pl-6">
-                    <h3 className="font-display text-lg text-forest font-semibold mb-2">
-                      {item.title}
-                    </h3>
-                    <p className="text-gray-600 text-sm leading-relaxed">
-                      {item.desc}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </AnimatedSection>
+            <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
+              Evidence-Based Modalities
+            </span>
+            <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4 mb-8">
+              Therapies Offered in Residential Treatment
+            </h2>
+            <p className="text-gray-600 leading-relaxed text-lg mb-6">
+              Our clinical team draws from a broad range of evidence-based
+              and experiential modalities, selecting the therapies that
+              match your specific diagnosis, history, and treatment goals.
+            </p>
+            <div className="space-y-6">
+              {[
+                {
+                  title: "Cognitive Behavioral Therapy (CBT)",
+                  desc: "CBT helps you identify and change the thought patterns and beliefs that drive addictive behavior. You learn to recognize triggers, challenge distorted thinking, and develop healthier responses to stress, cravings, and difficult emotions.",
+                },
+                {
+                  title: "Dialectical Behavior Therapy (DBT)",
+                  desc: "DBT teaches skills in four key areas: mindfulness, distress tolerance, emotional regulation, and interpersonal effectiveness. It is particularly effective for clients who struggle with intense emotions, self-destructive behavior, or co-occurring personality disorders.",
+                },
+                {
+                  title:
+                    "Eye Movement Desensitization and Reprocessing (EMDR)",
+                  desc: "EMDR is a trauma-focused therapy that helps the brain reprocess traumatic memories, reducing their emotional charge and the hold they have on present behavior. Many of our clients have experienced trauma that is intertwined with their substance use.",
+                },
+                {
+                  title: "Motivational Interviewing",
+                  desc: "This collaborative therapeutic approach strengthens your own motivation and commitment to change. Rather than telling you what to do, your therapist helps you articulate your reasons for recovery and resolve any ambivalence you feel.",
+                },
+                {
+                  title: "Experiential and Holistic Therapies",
+                  desc: "Art therapy, equine-assisted therapy, yoga, fitness programming, mindfulness meditation, and nature-based activities complement clinical work by engaging the body, reducing stress, and building coping skills that extend beyond the therapy room.",
+                },
+              ].map((item, i) => (
+                <div key={i} className="border-l-2 border-gold/40 pl-6">
+                  <h3 className="font-display text-lg text-forest font-semibold mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -341,44 +336,42 @@ export default function ResidentialTreatmentPage() {
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
-            <AnimatedSection>
-              <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mb-6">
-                Who Is a Good Candidate for Residential Treatment?
-              </h2>
-              <p className="text-gray-600 leading-relaxed text-lg mb-4">
-                Residential treatment is appropriate for individuals who need
-                a higher level of structure and clinical support than
-                outpatient programs can provide. You may be a good candidate
-                for residential treatment if you have a moderate to severe
-                substance use disorder, have attempted outpatient treatment
-                without lasting success, are dealing with co-occurring mental
-                health conditions, have an unstable or unsupportive home
-                environment, or are stepping down from medical detox and need
-                continued intensive care.
-              </p>
-              <p className="text-gray-600 leading-relaxed text-lg mb-4">
-                Residential treatment is also valuable for individuals who
-                simply need time away from their daily environment to break
-                deeply entrenched patterns. The immersive nature of the
-                program creates space for the kind of deep self-examination
-                and skill-building that is difficult to achieve while
-                managing work, family, and social obligations
-                simultaneously.
-              </p>
-              <p className="text-gray-600 leading-relaxed text-lg">
-                If you are not sure whether residential is the right level of
-                care, our admissions team can help. An initial clinical
-                assessment over the phone can clarify which level of care
-                matches your situation. Call{" "}
-                <a
-                  href="tel:+14809313617"
-                  className="text-gold hover:text-gold-dark font-semibold"
-                >
-                  (480) 931-3617
-                </a>{" "}
-                to speak with someone today.
-              </p>
-            </AnimatedSection>
+            <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mb-6">
+              Who Is a Good Candidate for Residential Treatment?
+            </h2>
+            <p className="text-gray-600 leading-relaxed text-lg mb-4">
+              Residential treatment is appropriate for individuals who need
+              a higher level of structure and clinical support than
+              outpatient programs can provide. You may be a good candidate
+              for residential treatment if you have a moderate to severe
+              substance use disorder, have attempted outpatient treatment
+              without lasting success, are dealing with co-occurring mental
+              health conditions, have an unstable or unsupportive home
+              environment, or are stepping down from medical detox and need
+              continued intensive care.
+            </p>
+            <p className="text-gray-600 leading-relaxed text-lg mb-4">
+              Residential treatment is also valuable for individuals who
+              simply need time away from their daily environment to break
+              deeply entrenched patterns. The immersive nature of the
+              program creates space for the kind of deep self-examination
+              and skill-building that is difficult to achieve while
+              managing work, family, and social obligations
+              simultaneously.
+            </p>
+            <p className="text-gray-600 leading-relaxed text-lg">
+              If you are not sure whether residential is the right level of
+              care, our admissions team can help. An initial clinical
+              assessment over the phone can clarify which level of care
+              matches your situation. Call{" "}
+              <a
+                href="tel:+14809313617"
+                className="text-gold hover:text-gold-dark font-semibold"
+              >
+                (480) 931-3617
+              </a>{" "}
+              to speak with someone today.
+            </p>
           </div>
         </div>
       </section>
@@ -492,33 +485,31 @@ export default function ResidentialTreatmentPage() {
       <section className="py-16 md:py-24 bg-cream">
         <div className="max-w-container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
-            <AnimatedSection>
-              <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mb-6">
-                What Comes After Residential Treatment?
-              </h2>
-              <p className="text-gray-600 leading-relaxed text-lg mb-4">
-                Residential treatment builds a strong foundation for
-                recovery, but that foundation needs continued support. When
-                you complete residential at DRC, your clinical team will
-                recommend the next appropriate level of care based on your
-                progress. For many clients, this means stepping down to our{" "}
-                <Link
-                  href="/levels-of-care/php/"
-                  className="text-gold hover:text-gold-dark font-semibold"
-                >
-                  Partial Hospitalization Program (PHP)
-                </Link>
-                , which provides intensive daily programming while
-                reintroducing greater independence.
-              </p>
-              <p className="text-gray-600 leading-relaxed text-lg">
-                This graduated approach — moving through levels of care at a
-                pace that matches your readiness — is one of the most
-                effective ways to protect the progress you make in
-                residential treatment and build the skills you need for
-                long-term recovery.
-              </p>
-            </AnimatedSection>
+            <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mb-6">
+              What Comes After Residential Treatment?
+            </h2>
+            <p className="text-gray-600 leading-relaxed text-lg mb-4">
+              Residential treatment builds a strong foundation for
+              recovery, but that foundation needs continued support. When
+              you complete residential at DRC, your clinical team will
+              recommend the next appropriate level of care based on your
+              progress. For many clients, this means stepping down to our{" "}
+              <Link
+                href="/levels-of-care/php/"
+                className="text-gold hover:text-gold-dark font-semibold"
+              >
+                Partial Hospitalization Program (PHP)
+              </Link>
+              , which provides intensive daily programming while
+              reintroducing greater independence.
+            </p>
+            <p className="text-gray-600 leading-relaxed text-lg">
+              This graduated approach — moving through levels of care at a
+              pace that matches your readiness — is one of the most
+              effective ways to protect the progress you make in
+              residential treatment and build the skills you need for
+              long-term recovery.
+            </p>
           </div>
         </div>
       </section>
