@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 
 interface Review {
@@ -76,6 +76,10 @@ function ReviewCard({ review }: { review: Review }) {
           <img
             src={review.profilePhoto}
             alt={review.author}
+            width={40}
+            height={40}
+            loading="lazy"
+            decoding="async"
             className="w-10 h-10 rounded-full object-cover flex-shrink-0"
             referrerPolicy="no-referrer"
           />
@@ -112,8 +116,31 @@ export default function GoogleReviews() {
   const [activeTab, setActiveTab] = useState(0);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
+  const [shouldFetch, setShouldFetch] = useState(false);
+  const sectionRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
+    const el = sectionRef.current;
+    if (!el) return;
+    if (typeof IntersectionObserver === "undefined") {
+      setShouldFetch(true);
+      return;
+    }
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((e) => e.isIntersecting)) {
+          setShouldFetch(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "400px 0px" },
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!shouldFetch) return;
     fetch("/api/google-reviews")
       .then((res) => {
         if (!res.ok) throw new Error("Failed to fetch");
@@ -127,14 +154,14 @@ export default function GoogleReviews() {
         setError(true);
         setLoading(false);
       });
-  }, []);
+  }, [shouldFetch]);
 
-  if (error || (!loading && locations.length === 0)) return null;
+  if (error || (shouldFetch && !loading && locations.length === 0)) return null;
 
   const active = locations[activeTab];
 
   return (
-    <section className="py-16 md:py-20 bg-forest relative overflow-hidden">
+    <section ref={sectionRef} className="py-16 md:py-20 bg-forest relative overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
       <motion.div
         initial={{ opacity: 0, y: 24 }}
