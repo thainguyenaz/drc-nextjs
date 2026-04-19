@@ -1,9 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
 
-const EMAIL_RELAY_URL =
-  process.env.EMAIL_RELAY_URL || "http://93.188.166.239:4001/api/send-email";
-const EMAIL_RELAY_SECRET =
-  process.env.EMAIL_RELAY_SECRET || "drc-email-relay-2026";
+const EMAIL_RELAY_URL = process.env.EMAIL_RELAY_URL;
+const EMAIL_RELAY_SECRET = process.env.EMAIL_RELAY_SECRET;
+
+if (!EMAIL_RELAY_URL || !EMAIL_RELAY_SECRET) {
+  throw new Error("EMAIL_RELAY_URL and EMAIL_RELAY_SECRET must be set");
+}
 
 export async function POST(request: NextRequest) {
   const results = { hubspot: false, email: false };
@@ -83,10 +85,10 @@ export async function POST(request: NextRequest) {
         relayBody.append("back_card", backCard);
       }
 
-      const relayRes = await fetch(EMAIL_RELAY_URL, {
+      const relayRes = await fetch(EMAIL_RELAY_URL!, {
         method: "POST",
         headers: {
-          Authorization: `Bearer ${EMAIL_RELAY_SECRET}`,
+          Authorization: `Bearer ${EMAIL_RELAY_SECRET!}`,
         },
         body: relayBody,
       });
