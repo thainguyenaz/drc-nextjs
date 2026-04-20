@@ -121,20 +121,13 @@ export default function Navigation() {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
 
+  const mobileMenu = useCollapse(mobileOpen);
+
   useEffect(() => {
-    let ticking = false;
-    const handleScroll = () => {
-      if (!ticking) {
-        requestAnimationFrame(() => {
-          setScrolled(window.scrollY > 80);
-          ticking = false;
-        });
-        ticking = true;
-      }
-    };
-    handleScroll(); // set correct initial state on mount
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+    const onScroll = () => setScrolled(window.scrollY > 80);
+    onScroll(); // set correct initial state on mount
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   return (
@@ -246,32 +239,34 @@ export default function Navigation() {
         </button>
       </div>
 
-      {/* Mobile Menu — only mount when open to keep 50+ Link nodes out of every page's initial DOM */}
-      {mobileOpen && (
-        <div className="lg:hidden bg-forest border-t border-white/10">
-          <div className="px-6 py-6 space-y-4">
-            {navLinks.map((link) => (
-              <MobileNavItem
-                key={link.label}
-                link={link}
-                expanded={mobileExpanded === link.label}
-                onToggle={() => setMobileExpanded(mobileExpanded === link.label ? null : link.label)}
-                onClose={() => setMobileOpen(false)}
-              />
-            ))}
-            <div className="pt-4 border-t border-white/10 space-y-3">
-              <a href="tel:+14809313617" className="block text-gold font-semibold text-lg">(480) 931-3617</a>
-              <Link
-                href="/insurance"
-                className="block bg-gold text-white text-center font-semibold px-6 py-3 rounded-xl"
-                onClick={() => setMobileOpen(false)}
-              >
-                Verify Insurance
-              </Link>
-            </div>
+      {/* Mobile Menu */}
+      <div
+        ref={mobileMenu.ref}
+        style={mobileMenu.style}
+        className="lg:hidden bg-forest border-t border-white/10 transition-all duration-300 ease-out"
+      >
+        <div className="px-6 py-6 space-y-4">
+          {navLinks.map((link) => (
+            <MobileNavItem
+              key={link.label}
+              link={link}
+              expanded={mobileExpanded === link.label}
+              onToggle={() => setMobileExpanded(mobileExpanded === link.label ? null : link.label)}
+              onClose={() => setMobileOpen(false)}
+            />
+          ))}
+          <div className="pt-4 border-t border-white/10 space-y-3">
+            <a href="tel:+14809313617" className="block text-gold font-semibold text-lg">(480) 931-3617</a>
+            <Link
+              href="/insurance"
+              className="block bg-gold text-white text-center font-semibold px-6 py-3 rounded-xl"
+              onClick={() => setMobileOpen(false)}
+            >
+              Verify Insurance
+            </Link>
           </div>
         </div>
-      )}
+      </div>
     </nav>
   );
 }

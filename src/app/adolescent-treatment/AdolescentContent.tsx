@@ -137,7 +137,7 @@ function ConditionsAccordion() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.15 }}
+          viewport={{ once: false, amount: 0.15 }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
           className="text-center mb-12"
         >
@@ -232,7 +232,7 @@ export default function AdolescentContent({ checklistSlot }: { checklistSlot?: R
               <motion.span
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.15 }}
+                viewport={{ once: false, amount: 0.15 }}
                 transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
                 className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium block mb-4"
               >
@@ -241,7 +241,7 @@ export default function AdolescentContent({ checklistSlot }: { checklistSlot?: R
               <motion.h2
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.15 }}
+                viewport={{ once: false, amount: 0.15 }}
                 transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
                 className="font-display text-2xl md:text-3xl text-forest font-semibold mb-8"
               >
@@ -251,7 +251,7 @@ export default function AdolescentContent({ checklistSlot }: { checklistSlot?: R
                 <motion.p
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.15 }}
+                  viewport={{ once: false, amount: 0.15 }}
                   transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1], delay: 0.15 }}
                   className="text-gray-600 leading-relaxed text-lg"
                 >
@@ -260,7 +260,7 @@ export default function AdolescentContent({ checklistSlot }: { checklistSlot?: R
                 <motion.p
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.15 }}
+                  viewport={{ once: false, amount: 0.15 }}
                   transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
                   className="text-gray-600 leading-relaxed text-lg"
                 >
@@ -269,7 +269,7 @@ export default function AdolescentContent({ checklistSlot }: { checklistSlot?: R
                 <motion.p
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.15 }}
+                  viewport={{ once: false, amount: 0.15 }}
                   transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1], delay: 0.45 }}
                   className="text-gray-600 leading-relaxed text-lg font-medium"
                 >
@@ -290,7 +290,7 @@ export default function AdolescentContent({ checklistSlot }: { checklistSlot?: R
         id="programs"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.15 }}
+        viewport={{ once: false, amount: 0.15 }}
         transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
       >
         <section className="py-16 md:py-24 bg-cream scroll-mt-20">
@@ -309,7 +309,7 @@ export default function AdolescentContent({ checklistSlot }: { checklistSlot?: R
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.15 }}
+              viewport={{ once: false, amount: 0.15 }}
               transition={{ duration: 0.75, ease: [0.16, 1, 0.3, 1] }}
               whileHover={{ scale: 1.02, transition: { duration: 0.6 } }}
               className="relative aspect-[16/9] rounded-xl overflow-hidden shadow-lg mb-12 max-w-4xl mx-auto"
@@ -335,7 +335,7 @@ export default function AdolescentContent({ checklistSlot }: { checklistSlot?: R
               <motion.span
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.15 }}
+                viewport={{ once: false, amount: 0.15 }}
                 transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
                 className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium block"
               >
@@ -344,7 +344,7 @@ export default function AdolescentContent({ checklistSlot }: { checklistSlot?: R
               <motion.h2
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.15 }}
+                viewport={{ once: false, amount: 0.15 }}
                 transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
                 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4 mb-6"
               >
@@ -353,7 +353,7 @@ export default function AdolescentContent({ checklistSlot }: { checklistSlot?: R
               <motion.p
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.15 }}
+                viewport={{ once: false, amount: 0.15 }}
                 transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
                 className="text-gray-600 leading-relaxed text-lg mb-4"
               >
@@ -362,7 +362,7 @@ export default function AdolescentContent({ checklistSlot }: { checklistSlot?: R
               <motion.p
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.15 }}
+                viewport={{ once: false, amount: 0.15 }}
                 transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
                 className="text-gray-600 leading-relaxed text-lg mb-4"
               >
@@ -371,7 +371,7 @@ export default function AdolescentContent({ checklistSlot }: { checklistSlot?: R
               <motion.p
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.15 }}
+                viewport={{ once: false, amount: 0.15 }}
                 transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1], delay: 0.4 }}
                 className="text-gray-600 leading-relaxed text-lg mb-6"
               >
@@ -382,7 +382,7 @@ export default function AdolescentContent({ checklistSlot }: { checklistSlot?: R
               <motion.div
                 initial={{ opacity: 0, x: -60 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, amount: 0.15 }}
+                viewport={{ once: false, amount: 0.15 }}
                 transition={{ type: "spring", stiffness: 70, damping: 16, delay: 0.3 }}
                 className="bg-cream border border-gold/30 rounded-xl p-6"
               >
@@ -437,7 +437,7 @@ export default function AdolescentContent({ checklistSlot }: { checklistSlot?: R
                   key={item.stat}
                   initial={{ opacity: 0, x: 60 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true, amount: 0.15 }}
+                  viewport={{ once: false, amount: 0.15 }}
                   transition={{
                     duration: 0.6,
                     ease: [0.16, 1, 0.3, 1],
@@ -465,7 +465,7 @@ export default function AdolescentContent({ checklistSlot }: { checklistSlot?: R
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        viewport={{ once: true, amount: 0.1 }}
+        viewport={{ once: false, amount: 0.1 }}
         transition={{ duration: 1.0 }}
         className="relative w-full h-[280px] md:h-[360px] overflow-hidden"
       >
@@ -496,7 +496,7 @@ export default function AdolescentContent({ checklistSlot }: { checklistSlot?: R
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.15 }}
+            viewport={{ once: false, amount: 0.15 }}
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
             className="text-center mb-12"
           >
@@ -514,14 +514,14 @@ export default function AdolescentContent({ checklistSlot }: { checklistSlot?: R
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.15 }}
+            viewport={{ once: false, amount: 0.15 }}
             variants={timelineContainerVariants}
             className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto relative"
           >
             <motion.div
               initial={{ scaleX: 0 }}
               whileInView={{ scaleX: 1 }}
-              viewport={{ once: true, amount: 0.15 }}
+              viewport={{ once: false, amount: 0.15 }}
               transition={{
                 duration: 1.2,
                 ease: [0.16, 1, 0.3, 1],
@@ -562,7 +562,7 @@ export default function AdolescentContent({ checklistSlot }: { checklistSlot?: R
                 key={item}
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
-                viewport={{ once: true, amount: 0.15 }}
+                viewport={{ once: false, amount: 0.15 }}
                 transition={{ duration: 0.4, delay: i * 0.08 }}
                 className="text-sm text-forest/70 font-medium whitespace-nowrap"
               >
@@ -579,7 +579,7 @@ export default function AdolescentContent({ checklistSlot }: { checklistSlot?: R
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.15 }}
+          viewport={{ once: false, amount: 0.15 }}
           transition={{ duration: 0.6 }}
           className="max-w-container mx-auto px-6 text-center"
         >

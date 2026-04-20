@@ -35,7 +35,7 @@ export default function AdolescentChecklist() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.15 }}
+          viewport={{ once: false, amount: 0.15 }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
           className="text-center mb-12"
         >
@@ -59,7 +59,7 @@ export default function AdolescentChecklist() {
               key={i}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.15 }}
+              viewport={{ once: false, amount: 0.15 }}
               transition={{ duration: 0.4, delay: i * 0.05 }}
               onClick={() => toggle(i)}
               className={`flex items-start gap-3 text-left px-4 py-3.5 rounded-xl border transition-all duration-200 cursor-pointer ${

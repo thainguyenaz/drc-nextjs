@@ -9,7 +9,7 @@ type FAQ = { q: string; a: string };
 const fadeUp = {
   initial: { opacity: 0, y: 30 },
   whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true, margin: "-80px" },
+  viewport: { once: false, margin: "-80px" },
   transition: { duration: 0.6 },
 };
 
@@ -241,7 +241,7 @@ export default function LuxuryVsTraditionalContent({ faqs }: { faqs: readonly FA
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-30px" }}
+                viewport={{ once: false, margin: "-30px" }}
                 transition={{ duration: 0.4, delay: i * 0.05 }}
                 className="border border-gray-200 rounded-xl overflow-hidden bg-white hover:border-gold/30 transition-colors duration-300"
               >

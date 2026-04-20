@@ -8,7 +8,7 @@ export default function AdolescentImage3() {
     <motion.div
       initial={{ opacity: 0, x: 60 }}
       whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: true, amount: 0.2 }}
+      viewport={{ once: false, amount: 0.2 }}
       transition={{ duration: 0.85, ease: [0.16, 1, 0.3, 1] }}
       whileHover={{ scale: 1.03, transition: { duration: 0.6 } }}
       className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-xl"
