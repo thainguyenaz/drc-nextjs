@@ -1,7 +1,6 @@
 import { Metadata } from "next";
 import Navigation from "@/components/Navigation";
 import PageHero from "@/components/PageHero";
-import ConditionFAQ from "@/components/ConditionFAQ";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import { SpeakableSchema, MedicalConditionSchema } from "@/lib/seo";
@@ -30,28 +29,6 @@ export const metadata: Metadata = {
   },
 };
 
-const faqs = [
-  {
-    q: "What is Exposure and Response Prevention (ERP)?",
-    a: "ERP is the most effective therapy for OCD. It involves gradually and systematically exposing you to the thoughts, images, or situations that trigger your obsessions, while helping you resist the urge to perform compulsions. Over time, your brain learns that the feared consequences don't happen, and the anxiety naturally decreases. Our therapists are specifically trained in ERP and guide you through each step at a pace that feels manageable.",
-  },
-  {
-    q: "Is residential treatment necessary for OCD?",
-    a: "For moderate to severe OCD, especially when symptoms significantly impair daily functioning, when outpatient therapy hasn't produced sufficient improvement, or when co-occurring conditions complicate treatment, residential care provides the intensive, structured support that accelerates progress. Our residential program offers multiple ERP sessions per week plus daily therapeutic support that simply isn't possible in weekly outpatient treatment.",
-  },
-  {
-    q: "Can OCD be cured?",
-    a: "While OCD is typically considered a chronic condition, it can be managed extremely well with proper treatment. Most people who complete evidence-based treatment experience significant reduction in symptoms, many by 50-80%. The goal isn't perfection; it's freedom. We help you reach a place where OCD no longer controls your life.",
-  },
-  {
-    q: "What if my OCD themes are embarrassing or disturbing?",
-    a: "Many forms of OCD involve intrusive thoughts that feel deeply shameful, thoughts about harm, violence, inappropriate sexual content, or religious blasphemy. These are among the most common forms of OCD, and our clinicians have treated them extensively. You will never be judged for your thoughts. OCD thoughts are not reflections of who you are, they are symptoms of a treatable condition.",
-  },
-  {
-    q: "Do you treat OCD alongside other conditions?",
-    a: "Yes. OCD frequently co-occurs with anxiety disorders, depression, PTSD, eating disorders, and substance use. Our dual diagnosis approach addresses all co-occurring conditions simultaneously, which is critical because untreated co-occurring conditions undermine OCD recovery.",
-  },
-];
 
 export default function OCDTreatmentPage() {
   return (
@@ -259,8 +236,6 @@ export default function OCDTreatmentPage() {
           </div>
         </div>
       </section>
-
-      <ConditionFAQ items={faqs} />
       <AEOBlock
         entries={[
           { question: "What is OCD treatment at Desert Recovery Centers?", answer: "Desert Recovery Centers (a Joint Commission accredited luxury treatment center in Arizona) provides specialized OCD treatment anchored in Exposure and Response Prevention (ERP), the gold-standard therapy for OCD. With ERP-trained clinicians, a maximum of 10 beds per facility, and doctoral-level clinical leadership, clients receive intensive, evidence-based care in a supportive residential environment." },
