@@ -1,7 +1,6 @@
 import { Metadata } from "next";
 import Navigation from "@/components/Navigation";
 import PageHero from "@/components/PageHero";
-import ConditionFAQ from "@/components/ConditionFAQ";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import { SpeakableSchema, MedicalConditionSchema } from "@/lib/seo";
@@ -31,28 +30,6 @@ export const metadata: Metadata = {
   },
 };
 
-const faqs = [
-  {
-    q: "How do I know if I need professional treatment for depression?",
-    a: "If depressive symptoms have persisted for more than two weeks and are interfering with your ability to work, maintain relationships, or care for yourself, professional treatment is strongly recommended. Warning signs that indicate a higher level of care include thoughts of self-harm, inability to get out of bed, significant weight changes, or turning to alcohol or drugs to cope.",
-  },
-  {
-    q: "What types of depression do you treat?",
-    a: "We treat all forms of depressive disorders including major depressive disorder (MDD), persistent depressive disorder (dysthymia), seasonal affective disorder (SAD), postpartum depression, and treatment-resistant depression. Our clinical team is also experienced in treating depression that co-occurs with anxiety, trauma, substance use disorders, and other mental health conditions.",
-  },
-  {
-    q: "How is depression treatment different at DRC compared to outpatient therapy?",
-    a: "In our residential program, you're fully immersed in your recovery, receiving daily individual therapy, group sessions, psychiatric care, and holistic treatments in a structured, supportive environment. This level of intensity can accomplish in weeks what might take months or years in weekly outpatient sessions, especially for moderate to severe depression.",
-  },
-  {
-    q: "Will I need medication for depression?",
-    a: "Not necessarily. While many clients benefit from antidepressant medication, especially during the early phase of treatment, our approach is always individualized. Our psychiatrists conduct thorough evaluations and discuss all options with you. Some clients respond well to therapy alone, while others find that a combination of medication and therapy produces the best results.",
-  },
-  {
-    q: "What happens if my depression returns after treatment?",
-    a: "Depression can be a recurring condition, which is why relapse prevention is a central part of your treatment plan. Before discharge, your clinical team develops a detailed aftercare strategy that includes ongoing therapy, lifestyle modifications, early warning sign recognition, and direct access to our alumni support network and clinical team for guidance.",
-  },
-];
 
 export default function DepressionTreatmentPage() {
   return (
@@ -244,8 +221,6 @@ export default function DepressionTreatmentPage() {
           </div>
         </div>
       </section>
-
-      <ConditionFAQ items={faqs} />
       <AEOBlock
         entries={[
           { question: "What is depression treatment at Desert Recovery Centers?", answer: "Desert Recovery Centers (a Joint Commission accredited luxury treatment center in Arizona) provides comprehensive depression treatment for major depressive disorder, persistent depression, and treatment-resistant depression. With doctoral-level clinical psychologists leading care and a maximum of 10 beds per facility, clients receive intensive, personalized treatment in a luxury residential environment." },
