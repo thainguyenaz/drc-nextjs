@@ -1,7 +1,6 @@
 import { Metadata } from "next";
 import Navigation from "@/components/Navigation";
 import PageHero from "@/components/PageHero";
-import ConditionFAQ from "@/components/ConditionFAQ";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import { SpeakableSchema, MedicalConditionSchema } from "@/lib/seo";
@@ -30,28 +29,6 @@ export const metadata: Metadata = {
   },
 };
 
-const faqs = [
-  {
-    q: "What personality disorders do you treat?",
-    a: "We treat the full range of personality disorders, with particular expertise in borderline personality disorder (BPD), which is the most common personality disorder seen in treatment settings. We also treat narcissistic personality disorder, avoidant personality disorder, dependent personality disorder, and other Cluster A, B, and C personality conditions. Treatment is always individualized based on your specific diagnosis and symptoms.",
-  },
-  {
-    q: "What is DBT and why is it used for personality disorders?",
-    a: "Dialectical Behavior Therapy (DBT) was originally developed specifically for borderline personality disorder and is considered the gold-standard treatment. It teaches four core skill sets: mindfulness, distress tolerance, emotion regulation, and interpersonal effectiveness. These skills directly address the emotional intensity, relationship difficulties, and behavioral patterns that characterize personality disorders. At DRC, DBT is delivered through individual therapy, skills groups, and real-time coaching.",
-  },
-  {
-    q: "Can personality disorders actually be treated?",
-    a: "Yes, and this is one of the most important things to know. Despite outdated beliefs that personality disorders are 'untreatable,' modern research consistently shows that with evidence-based treatment like DBT, most people with personality disorders experience significant improvement. Many clients no longer meet diagnostic criteria after completing treatment. Recovery is not only possible, it's the expected outcome with proper care.",
-  },
-  {
-    q: "How long does treatment for personality disorders take?",
-    a: "Residential treatment typically lasts 45 to 90 days for personality disorders, as these conditions require more time to develop and practice new skills. Some clients benefit from stepping down to our PHP or IOP programs for continued structure after residential treatment. Your clinical team will work with you to determine the timeline that gives you the best foundation for lasting change.",
-  },
-  {
-    q: "Do you work with family members during treatment?",
-    a: "Absolutely. Personality disorders significantly impact family relationships, and family involvement is an important part of recovery. Our family programming includes education about the condition, communication skills training, boundary-setting guidance, and joint therapy sessions, helping your loved ones understand your experience and learn how to support your recovery effectively.",
-  },
-];
 
 export default function PersonalityDisorderTreatmentPage() {
   return (
@@ -240,8 +217,6 @@ export default function PersonalityDisorderTreatmentPage() {
           </div>
         </div>
       </section>
-
-      <ConditionFAQ items={faqs} />
       <AEOBlock
         entries={[
           { question: "What is personality disorder treatment at Desert Recovery Centers?", answer: "Desert Recovery Centers (a Joint Commission accredited luxury treatment center in Arizona) provides specialized personality disorder treatment anchored in Dialectical Behavior Therapy (DBT). With DBT-trained clinicians, doctoral-level clinical psychologists, and a maximum of 10 beds per facility, clients receive intensive, compassionate care in a therapeutic residential community." },
