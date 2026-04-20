@@ -7,7 +7,6 @@ import Footer from "@/components/Footer";
 import { MedicalConditionSchema } from "@/lib/seo";
 import AEOBlock from "@/components/AEOBlock";
 import RelatedPages from "@/components/RelatedPages";
-import ConditionFAQ from "@/components/ConditionFAQ";
 import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
 import { faqData } from "@/data/faq-data";
 import SchemaScript from "@/components/SchemaScript";
@@ -33,28 +32,6 @@ export const metadata: Metadata = {
   },
 };
 
-const faqs = [
-  {
-    question: "Can meth addiction be treated?",
-    answer:
-      "Yes. While methamphetamine addiction is one of the most challenging substance use disorders, it responds to evidence-based behavioral therapies. At Desert Recovery Centers, our doctoral-level clinicians use the Matrix Model, CBT, and contingency management in our Arizona facilities with just 10 beds per location for intensive, personalized care.",
-  },
-  {
-    question: "How long does meth rehab take?",
-    answer:
-      "Meth recovery often benefits from extended treatment. Residential care typically lasts 60 to 90 days or longer, followed by PHP and IOP. The brain needs significant time to restore natural dopamine function after chronic meth use. Desert Recovery Centers tailors every treatment timeline to your needs.",
-  },
-  {
-    question: "Does insurance cover meth addiction treatment?",
-    answer:
-      "Yes, most major insurance plans cover methamphetamine addiction treatment at Desert Recovery Centers. Coverage varies by plan and provider. Our admissions team will verify your benefits and explain any out-of-pocket costs before you begin treatment.",
-  },
-  {
-    question: "What therapies are used for meth withdrawal?",
-    answer:
-      "While there are no FDA-approved medications specifically for meth withdrawal, our psychiatrists provide medication support for depression, anxiety, and psychotic symptoms that commonly occur. Behavioral therapies including the Matrix Model and CBT are the most effective treatments. Our dual diagnosis approach addresses co-occurring mental health conditions.",
-  },
-];
 
 export default function MethAddictionPage() {
   return (
@@ -182,7 +159,6 @@ export default function MethAddictionPage() {
       </section>
 
       <AddictionPrograms />
-      <ConditionFAQ items={faqs} />
       <AEOBlock
         entries={[
           {
