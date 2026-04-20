@@ -110,15 +110,15 @@ export default function AdolescentChecklist() {
                 benefit from a clinical evaluation. This does not mean something
                 is permanently wrong. It means your child needs more support than
                 they are currently getting, and that support is available. Call us
-                at (623) 257-5384. Our team can help you understand what you are
+                at (602) 905-8070. Our team can help you understand what you are
                 seeing.
               </p>
               <div className="flex flex-wrap gap-3">
                 <a
-                  href="tel:+16232575384"
+                  href="tel:+16029058070"
                   className="bg-gold hover:bg-gold-dark text-white font-semibold text-sm px-6 py-3 rounded-xl transition-colors"
                 >
-                  Call (623) 257-5384
+                  Call (602) 905-8070
                 </a>
                 <a
                   href="#programs"

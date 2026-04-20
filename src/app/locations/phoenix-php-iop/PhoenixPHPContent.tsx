@@ -632,8 +632,8 @@ export default function PhoenixPHPContent() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-forest text-sm mb-1">Phone</h3>
-                  <a href="tel:+16232575384" className="text-gold font-semibold text-xl block">
-                    (623) 257-5384
+                  <a href="tel:+16029058070" className="text-gold font-semibold text-xl block">
+                    (602) 905-8070
                   </a>
                 </div>
                 <div>
@@ -660,7 +660,7 @@ export default function PhoenixPHPContent() {
 
               <div className="flex flex-wrap gap-3">
                 <a
-                  href="tel:+16232575384"
+                  href="tel:+16029058070"
                   className="bg-gold hover:bg-gold-dark text-white font-semibold text-sm px-6 py-3 rounded-xl transition-colors"
                 >
                   Call Now
@@ -730,10 +730,10 @@ export default function PhoenixPHPContent() {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
             <a
-              href="tel:+16232575384"
+              href="tel:+16029058070"
               className="bg-gold hover:bg-gold-dark text-white font-semibold text-base px-8 py-4 rounded-xl transition-all shadow-lg shadow-gold/25 w-full sm:w-auto text-center"
             >
-              Call (623) 257-5384
+              Call (602) 905-8070
             </a>
             <a
               href="mailto:contact@desertrecoverycenters.com"
@@ -778,8 +778,8 @@ export default function PhoenixPHPContent() {
             </div>
             <p className="text-gray-400 text-xs">
               Coverage varies by plan. Call{" "}
-              <a href="tel:+16232575384" className="text-gold hover:underline">
-                (623) 257-5384
+              <a href="tel:+16029058070" className="text-gold hover:underline">
+                (602) 905-8070
               </a>{" "}
               for a free benefits check.
             </p>

@@ -78,7 +78,7 @@ const faqs = [
   },
   {
     q: "Does insurance cover adolescent mental health treatment?",
-    a: "Yes. Under the Mental Health Parity and Addiction Equity Act, insurance companies are legally required to cover mental health treatment at the same level as physical health treatment. Most major commercial plans cover adolescent PHP and IOP. Our team verifies your teenager's specific benefits before treatment begins, at no cost to you. Call (623) 257-5384 to start.",
+    a: "Yes. Under the Mental Health Parity and Addiction Equity Act, insurance companies are legally required to cover mental health treatment at the same level as physical health treatment. Most major commercial plans cover adolescent PHP and IOP. Our team verifies your teenager's specific benefits before treatment begins, at no cost to you. Call (602) 905-8070 to start.",
   },
   {
     q: "Is TMS therapy safe for teenagers?",
@@ -106,7 +106,7 @@ const clinicSchema = {
   description:
     "Joint Commission accredited adolescent mental health and addiction treatment in Phoenix, AZ. PHP, IOP, and outpatient programs for teens ages 13 to 17. Parent involvement required. TMS therapy FDA cleared for ages 15 and older.",
   url: `${SITE_URL}/adolescent-treatment`,
-  telephone: "+16232575384",
+  telephone: "+16029058070",
   email: "contact@desertrecoverycenters.com",
   address: {
     "@type": "PostalAddress",
@@ -260,7 +260,7 @@ const faqSchema = {
       name: "Does insurance cover adolescent mental health treatment?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Most major commercial insurance plans cover adolescent mental health and addiction treatment, including PHP and IOP levels of care. Under the Mental Health Parity and Addiction Equity Act, insurance companies are required to cover mental health treatment at the same level as medical treatment. Our admissions team verifies your teen's benefits at no cost before treatment begins. Call (623) 257-5384 for a free verification.",
+        text: "Yes. Most major commercial insurance plans cover adolescent mental health and addiction treatment, including PHP and IOP levels of care. Under the Mental Health Parity and Addiction Equity Act, insurance companies are required to cover mental health treatment at the same level as medical treatment. Our admissions team verifies your teen's benefits at no cost before treatment begins. Call (602) 905-8070 for a free verification.",
       },
     },
     {
@@ -268,7 +268,7 @@ const faqSchema = {
       name: "How do I get my teenager into treatment?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Call (623) 257-5384 any time, day or night. Our admissions team conducts a brief clinical assessment by phone to understand your teenager's history, symptoms, and what has been tried before. We verify insurance, answer all your questions, and get your teen scheduled. Most adolescents begin treatment within 48 hours of the first call.",
+        text: "Call (602) 905-8070 any time, day or night. Our admissions team conducts a brief clinical assessment by phone to understand your teenager's history, symptoms, and what has been tried before. We verify insurance, answer all your questions, and get your teen scheduled. Most adolescents begin treatment within 48 hours of the first call.",
       },
     },
   ],
@@ -298,7 +298,7 @@ export default function AdolescentTreatmentPage() {
         "description": "The admissions process for adolescent treatment at Desert Recovery Centers.",
         "totalTime": "PT48H",
         "step": [
-          { "@type": "HowToStep", "position": 1, "name": "Call Admissions", "text": "Call (623) 257-5384 any time, day or night. A real person answers 24 hours a day." },
+          { "@type": "HowToStep", "position": 1, "name": "Call Admissions", "text": "Call (602) 905-8070 any time, day or night. A real person answers 24 hours a day." },
           { "@type": "HowToStep", "position": 2, "name": "Clinical Assessment", "text": "Complete a brief 15 to 20 minute clinical assessment by phone to determine the right level of care." },
           { "@type": "HowToStep", "position": 3, "name": "Insurance Verification", "text": "The admissions team contacts your insurance provider directly and explains your coverage and costs before you commit." },
           { "@type": "HowToStep", "position": 4, "name": "Begin Treatment", "text": "Most clients begin treatment within 48 hours of their first call." },
@@ -333,7 +333,7 @@ export default function AdolescentTreatmentPage() {
             question:
               "Does Desert Recovery Centers offer adolescent mental health treatment?",
             answer:
-              "Yes. Desert Recovery Centers offers PHP, IOP, and outpatient treatment programs for adolescents ages 13 to 17 at our Phoenix location at 4160 N. 108th Ave, Phoenix, AZ 85037. Programs are clinically supervised by licensed adolescent clinicians, require active parent involvement, and are designed to be compatible with school schedules. TMS therapy is available for teens ages 15 and older. The facility is Joint Commission accredited. Call (623) 257-5384 for admissions 24 hours a day.",
+              "Yes. Desert Recovery Centers offers PHP, IOP, and outpatient treatment programs for adolescents ages 13 to 17 at our Phoenix location at 4160 N. 108th Ave, Phoenix, AZ 85037. Programs are clinically supervised by licensed adolescent clinicians, require active parent involvement, and are designed to be compatible with school schedules. TMS therapy is available for teens ages 15 and older. The facility is Joint Commission accredited. Call (602) 905-8070 for admissions 24 hours a day.",
           },
           {
             question:
@@ -345,7 +345,7 @@ export default function AdolescentTreatmentPage() {
             question:
               "Does insurance cover teen mental health treatment in Arizona?",
             answer:
-              "Yes. Under the Mental Health Parity and Addiction Equity Act, insurance companies are required to cover mental health treatment at the same level as physical health treatment. Most major commercial plans cover adolescent PHP and IOP. Desert Recovery Centers verifies your teenager's benefits at no cost before treatment begins. Call (623) 257-5384 for a free insurance verification.",
+              "Yes. Under the Mental Health Parity and Addiction Equity Act, insurance companies are required to cover mental health treatment at the same level as physical health treatment. Most major commercial plans cover adolescent PHP and IOP. Desert Recovery Centers verifies your teenager's benefits at no cost before treatment begins. Call (602) 905-8070 for a free insurance verification.",
           },
         ]}
       />

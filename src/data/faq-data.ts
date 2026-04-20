@@ -112,11 +112,11 @@ export const faqData: Record<string, Array<{ question: string; answer: string }>
   ],
 
   "locations/phoenix": [
-    { question: "Where is the Desert Recovery Centers Phoenix location?", answer: "Our Phoenix location is at 4160 N. 108th Ave, Phoenix, AZ 85037. Contact us at (623) 257-5384." },
+    { question: "Where is the Desert Recovery Centers Phoenix location?", answer: "Our Phoenix location is at 4160 N. 108th Ave, Phoenix, AZ 85037. Contact us at (602) 905-8070." },
     { question: "What is treated at the Phoenix location?", answer: "The Phoenix facility provides Partial Hospitalization (PHP), Intensive Outpatient (IOP), Outpatient (OP), and TMS therapy for addiction and mental health conditions." },
-    { question: "Does the Phoenix location accept insurance?", answer: "Yes. Most major private insurance plans are accepted at our Phoenix facility. Call (623) 257-5384 for a free verification." },
+    { question: "Does the Phoenix location accept insurance?", answer: "Yes. Most major private insurance plans are accepted at our Phoenix facility. Call (602) 905-8070 for a free verification." },
     { question: "What is the difference between PHP and IOP at the Phoenix location?", answer: "Partial Hospitalization (PHP) provides 5 to 6 hours of structured programming per day, 5 days per week. Intensive Outpatient (IOP) is 3 to 4 hours per day, 3 to 4 days per week. Both allow clients to live at home while receiving clinical treatment. Your clinical team determines the appropriate level of care." },
-    { question: "How long is the IOP program at the Phoenix facility?", answer: "The IOP program at the Phoenix location typically runs 8 to 12 weeks, with sessions 3 to 4 days per week. Treatment length is adjusted based on individual clinical progress and needs. Call (623) 257-5384 for more information." },
+    { question: "How long is the IOP program at the Phoenix facility?", answer: "The IOP program at the Phoenix location typically runs 8 to 12 weeks, with sessions 3 to 4 days per week. Treatment length is adjusted based on individual clinical progress and needs. Call (602) 905-8070 for more information." },
   ],
 
   "ocd-treatment": [
@@ -273,14 +273,14 @@ export const faqData: Record<string, Array<{ question: string; answer: string }>
   "contact": [
     { question: "How do I get started with treatment at Desert Recovery Centers?", answer: "Call (480) 931-3617 for a free, confidential assessment. Our admissions team is available 24/7 to answer questions, verify insurance, and help coordinate your admission. Most clients are admitted within 48 hours of their first call." },
     { question: "Does Desert Recovery Centers verify insurance before admission?", answer: "Yes. Our admissions team provides free insurance verification with no obligation. We will confirm your coverage, explain your benefits, and outline any out-of-pocket costs before treatment begins." },
-    { question: "Where are Desert Recovery Centers locations?", answer: "Desert Recovery Centers has three facilities in Arizona: Glendale at 8105 W Frier Dr (call 623-323-1012), Scottsdale at 23222 N Church Rd (call 480-931-3617), and Phoenix at 4160 N. 108th Ave (call 623-257-5384)." },
+    { question: "Where are Desert Recovery Centers locations?", answer: "Desert Recovery Centers has three facilities in Arizona: Glendale at 8105 W Frier Dr (call 623-323-1012), Scottsdale at 23222 N Church Rd (call 480-931-3617), and Phoenix at 4160 N. 108th Ave (call 602-905-8070)." },
     { question: "Is my inquiry confidential?", answer: "Yes. All communications with Desert Recovery Centers are fully confidential. Your inquiry, assessment, and treatment information are protected under federal HIPAA privacy regulations. Our admissions team treats every conversation with complete discretion." },
     { question: "What information should I have ready when I call?", answer: "It helps to have your insurance card available for benefits verification. However, you can call without any information, our admissions team will guide you through everything. There is no obligation and no pressure, just a confidential conversation about your options." },
   ],
 
   "homepage": [
     { question: "What is Desert Recovery Centers?", answer: "Desert Recovery Centers is a Joint Commission accredited behavioral health treatment organization in Arizona offering luxury residential treatment, partial hospitalization (PHP), intensive outpatient (IOP), and outpatient programs for addiction and mental health conditions." },
-    { question: "Where are Desert Recovery Centers locations?", answer: "Desert Recovery Centers has three facilities in Arizona: Glendale (residential), Scottsdale (residential), and Phoenix (PHP/IOP/OP/TMS). Call (623) 323-1012 for Glendale, (480) 931-3617 for Scottsdale, or (623) 257-5384 for Phoenix." },
+    { question: "Where are Desert Recovery Centers locations?", answer: "Desert Recovery Centers has three facilities in Arizona: Glendale (residential), Scottsdale (residential), and Phoenix (PHP/IOP/OP/TMS). Call (623) 323-1012 for Glendale, (480) 931-3617 for Scottsdale, or (602) 905-8070 for Phoenix." },
     { question: "Does Desert Recovery Centers accept insurance?", answer: "Yes. We accept most major private insurance plans including Aetna, Blue Cross Blue Shield, Cigna, UnitedHealthcare, and many others. Call (623) 323-1012 for a free, confidential insurance verification." },
     { question: "What is Joint Commission accreditation?", answer: "Joint Commission accreditation is the gold standard in behavioral health care, awarded after rigorous evaluation of clinical quality, patient safety, and organizational performance. Desert Recovery Centers holds the Joint Commission Gold Seal of Approval." },
     { question: "What is dual diagnosis treatment?", answer: "Dual diagnosis treatment simultaneously addresses both addiction and co-occurring mental health conditions such as depression, anxiety, PTSD, or bipolar disorder. Research shows integrated treatment produces significantly better long-term outcomes." },

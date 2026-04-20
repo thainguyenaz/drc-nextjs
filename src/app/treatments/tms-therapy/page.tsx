@@ -117,7 +117,7 @@ const faqs = [
   },
   {
     q: "Is NeuroStar TMS therapy available now at Desert Recovery Centers?",
-    a: "Yes. NeuroStar TMS therapy is now available at our Phoenix outpatient center at 4160 N. 108th Ave, Phoenix, AZ 85037. Call (623) 257-5384 to schedule your initial consultation. Most patients begin treatment within one to two weeks of their first call.",
+    a: "Yes. NeuroStar TMS therapy is now available at our Phoenix outpatient center at 4160 N. 108th Ave, Phoenix, AZ 85037. Call (602) 905-8070 to schedule your initial consultation. Most patients begin treatment within one to two weeks of their first call.",
   },
 ] as const;
 
@@ -235,17 +235,17 @@ export default function TMSTherapyPage() {
             "@type": "MedicalClinic",
             "name": "Desert Recovery Centers Phoenix PHP / IOP",
             "address": { "@type": "PostalAddress", "streetAddress": "4160 N. 108th Ave", "addressLocality": "Phoenix", "addressRegion": "AZ", "postalCode": "85037" },
-            "telephone": "+16232575384",
+            "telephone": "+16029058070",
           },
         },
         {
           "@context": "https://schema.org",
           "@type": "FAQPage",
           "mainEntity": [
-            { "@type": "Question", "name": "Is NeuroStar TMS therapy available now at Desert Recovery Centers?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. NeuroStar TMS therapy is now available at our Phoenix outpatient center at 4160 N. 108th Ave, Phoenix, AZ 85037. Call (623) 257-5384 to schedule your initial consultation. Most patients begin treatment within one to two weeks of their first call." } },
+            { "@type": "Question", "name": "Is NeuroStar TMS therapy available now at Desert Recovery Centers?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. NeuroStar TMS therapy is now available at our Phoenix outpatient center at 4160 N. 108th Ave, Phoenix, AZ 85037. Call (602) 905-8070 to schedule your initial consultation. Most patients begin treatment within one to two weeks of their first call." } },
             { "@type": "Question", "name": "What is the success rate of NeuroStar TMS therapy?", "acceptedAnswer": { "@type": "Answer", "text": "In a real-world outcomes study of over 8.2 million NeuroStar treatments, 83% of patients who completed a full treatment course experienced measurable improvement in depression symptoms, and 62% achieved full remission. In an NIMH-funded independent randomized controlled trial, patients treated with NeuroStar were 4 times more likely to achieve remission compared to patients receiving sham treatment." } },
             { "@type": "Question", "name": "Is TMS therapy available for teenagers in Phoenix?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. NeuroStar is the only TMS system FDA-cleared specifically for adolescents ages 15 and older with major depressive disorder. Our Phoenix center integrates TMS therapy directly with our adolescent PHP, IOP, and outpatient programs. Sessions are typically 19 minutes and can be scheduled around school hours." } },
-            { "@type": "Question", "name": "Can I download a brochure about TMS therapy?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Desert Recovery Centers offers downloadable NeuroStar TMS brochures for both adults and adolescents. Visit our TMS therapy page at desertrecoverycenters.com/treatments/tms-therapy to download the brochures. You can also call (623) 257-5384 and our team will email them to you directly." } },
+            { "@type": "Question", "name": "Can I download a brochure about TMS therapy?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Desert Recovery Centers offers downloadable NeuroStar TMS brochures for both adults and adolescents. Visit our TMS therapy page at desertrecoverycenters.com/treatments/tms-therapy to download the brochures. You can also call (602) 905-8070 and our team will email them to you directly." } },
           ],
         },
         {
@@ -357,7 +357,7 @@ export default function TMSTherapyPage() {
           {/* Hero CTAs */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <motion.a
-              href="tel:+16232575384"
+              href="tel:+16029058070"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.65 }}
@@ -365,7 +365,7 @@ export default function TMSTherapyPage() {
               whileTap={{ scale: 0.97 }}
               className="bg-gold hover:bg-gold-dark text-white font-semibold text-base px-8 py-4 rounded-xl transition-colors shadow-lg shadow-gold/25 w-full sm:w-auto text-center cursor-pointer"
             >
-              Call (623) 257-5384
+              Call (602) 905-8070
             </motion.a>
             <motion.a
               href="/insurance"
@@ -879,10 +879,10 @@ export default function TMSTherapyPage() {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
-                href="tel:+16232575384"
+                href="tel:+16029058070"
                 className="bg-gold hover:bg-gold-dark text-white font-semibold text-base px-8 py-4 rounded-xl transition-colors shadow-lg shadow-gold/25 w-full sm:w-auto text-center"
               >
-                Call (623) 257-5384
+                Call (602) 905-8070
               </a>
               <a
                 href="/insurance"

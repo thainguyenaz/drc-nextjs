@@ -22,7 +22,7 @@ const faqSchema = { "@context": "https://schema.org", "@type": "FAQPage", mainEn
   { "@type": "Question", name: "Will taking my teenager to treatment make them angry with me?", acceptedAnswer: { "@type": "Answer", text: "Possibly, in the short term. Most adolescents who receive effective treatment and stabilize recognize that their parents' decision to seek help was the right one. Your teenager's immediate anger is a manageable clinical situation. A preventable suicide is not." } },
   { "@type": "Question", name: "Does talking about suicide with my teenager give them ideas?", acceptedAnswer: { "@type": "Answer", text: "No. This is a persistent myth that is not supported by evidence. Direct, clinical conversation about suicidal ideation does not increase risk. Avoiding the conversation leaves the adolescent without support and without a pathway to help." } },
   { "@type": "Question", name: "What is the difference between suicidal ideation and a suicide attempt?", acceptedAnswer: { "@type": "Answer", text: "Suicidal ideation is thinking about suicide. A suicide attempt is a self-directed behavior intended to end one's life. Both are serious. Ideation without a prior attempt still carries meaningful risk, and ideation with a prior attempt carries significantly elevated risk. Both warrant clinical evaluation and appropriate treatment." } },
-  { "@type": "Question", name: "If my teenager is in crisis right now, what should I do?", acceptedAnswer: { "@type": "Answer", text: "Call 988, the Suicide and Crisis Lifeline, or take your teenager to the nearest emergency room. If they are in immediate danger, call 911. For non-emergency clinical consultation about next steps, contact our admissions team directly at (623) 257-5384." } },
+  { "@type": "Question", name: "If my teenager is in crisis right now, what should I do?", acceptedAnswer: { "@type": "Answer", text: "Call 988, the Suicide and Crisis Lifeline, or take your teenager to the nearest emergency room. If they are in immediate danger, call 911. For non-emergency clinical consultation about next steps, contact our admissions team directly at (602) 905-8070." } },
 ] };
 
 const faqs = [
@@ -30,7 +30,7 @@ const faqs = [
   { q: "Will taking my teenager to treatment make them angry with me?", a: "Possibly, in the short term. Most adolescents who receive effective treatment and stabilize recognize that their parents' decision to seek help was the right one. Your teenager's immediate anger is a manageable clinical situation. A preventable suicide is not." },
   { q: "Does talking about suicide with my teenager give them ideas?", a: "No. This is a persistent myth that is not supported by evidence. Direct, clinical conversation about suicidal ideation does not increase risk. Avoiding the conversation leaves the adolescent without support and without a pathway to help." },
   { q: "What is the difference between suicidal ideation and a suicide attempt?", a: "Suicidal ideation is thinking about suicide. A suicide attempt is a self-directed behavior intended to end one's life. Both are serious. Ideation without a prior attempt still carries meaningful risk, and ideation with a prior attempt carries significantly elevated risk. Both warrant clinical evaluation and appropriate treatment." },
-  { q: "If my teenager is in crisis right now, what should I do?", a: "Call 988, the Suicide and Crisis Lifeline, or take your teenager to the nearest emergency room. If they are in immediate danger, call 911. For non-emergency clinical consultation about next steps, contact our admissions team directly at (623) 257-5384." },
+  { q: "If my teenager is in crisis right now, what should I do?", a: "Call 988, the Suicide and Crisis Lifeline, or take your teenager to the nearest emergency room. If they are in immediate danger, call 911. For non-emergency clinical consultation about next steps, contact our admissions team directly at (602) 905-8070." },
 ];
 
 const speakableSchema = {
@@ -215,7 +215,7 @@ export default function AdolescentSuicidalIdeationPage() {
             <div className="quick-answer" style={{ background: "#FAF7F2", borderLeft: "3px solid #C4973A", padding: "16px 20px", marginBottom: "24px" }}>
               <span className="font-mono text-[10px] uppercase tracking-widest text-gray-500">QUICK ANSWER</span>
               <p className="text-gray-700 leading-relaxed mt-1">
-                If your teenager has disclosed suicidal thoughts, do not leave them alone, remove access to lethal means, do not promise secrecy, and contact clinical help immediately. Call 988, go to the nearest emergency room, call 911 if there is immediate danger, or call Desert Recovery Centers admissions at (623) 257-5384 for a clinical consultation. Taking suicidal ideation seriously is not overreacting. It is the appropriate and necessary response.
+                If your teenager has disclosed suicidal thoughts, do not leave them alone, remove access to lethal means, do not promise secrecy, and contact clinical help immediately. Call 988, go to the nearest emergency room, call 911 if there is immediate danger, or call Desert Recovery Centers admissions at (602) 905-8070 for a clinical consultation. Taking suicidal ideation seriously is not overreacting. It is the appropriate and necessary response.
               </p>
             </div>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">If your teenager has disclosed suicidal thoughts or you are concerned about their safety, do not leave them alone. Remove access to lethal means including firearms, medications, and other potential methods. Do not promise to keep it secret. Tell them you love them and that you are going to get them help. Contact a crisis line, take them to an emergency room, or call our admissions team for a clinical consultation.</p>
@@ -239,9 +239,9 @@ export default function AdolescentSuicidalIdeationPage() {
         <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="max-w-container mx-auto px-6 text-center">
           <h2 className="font-display text-3xl md:text-4xl text-white font-semibold mb-6">Your Teenager&apos;s Pain Is Not Permanent. Help Exists Right Now.</h2>
           <p className="text-white/70 max-w-2xl mx-auto mb-4 leading-relaxed">Our admissions team is available 24 hours a day, 7 days a week. If your teenager is expressing suicidal thoughts, do not wait.</p>
-          <p className="text-gold text-sm font-medium mb-10">988 Suicide &amp; Crisis Lifeline available 24/7. Desert Recovery Centers admissions: (623) 257-5384.</p>
+          <p className="text-gold text-sm font-medium mb-10">988 Suicide &amp; Crisis Lifeline available 24/7. Desert Recovery Centers admissions: (602) 905-8070.</p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="tel:+16232575384" className="bg-gold hover:bg-gold-dark text-white font-semibold text-base px-8 py-4 rounded-xl transition-all shadow-lg shadow-gold/25 w-full sm:w-auto text-center cursor-pointer">Call (623) 257-5384</a>
+            <a href="tel:+16029058070" className="bg-gold hover:bg-gold-dark text-white font-semibold text-base px-8 py-4 rounded-xl transition-all shadow-lg shadow-gold/25 w-full sm:w-auto text-center cursor-pointer">Call (602) 905-8070</a>
             <Link href="/adolescent-treatment" className="bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/30 text-white font-semibold text-base px-8 py-4 rounded-xl transition-all w-full sm:w-auto text-center">Back to Adolescent Program</Link>
           </div>
         </motion.div>

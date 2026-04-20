@@ -35,8 +35,8 @@ export const siteData = {
     {
       name: "Phoenix PHP/IOP",
       address: "4160 N. 108th Ave, Phoenix, AZ 85037",
-      phone: "(623) 257-5384",
-      phoneTel: "+16232575384",
+      phone: "(602) 905-8070",
+      phoneTel: "+16029058070",
       description:
         "Outpatient treatment center offering PHP, IOP, OP, and NeuroStar TMS therapy in Phoenix.",
       programs: ["PHP", "IOP", "OP", "TMS"],
@@ -47,8 +47,8 @@ export const siteData = {
     {
       name: "Phoenix TMS",
       address: "4160 N. 108th Ave, Phoenix, AZ 85037",
-      phone: "(623) 257-5384",
-      phoneTel: "+16232575384",
+      phone: "(602) 905-8070",
+      phoneTel: "+16029058070",
       description:
         "Dedicated NeuroStar TMS therapy center for depression, anxious depression, and OCD treatment.",
       programs: ["TMS Therapy"],
@@ -59,8 +59,8 @@ export const siteData = {
     {
       name: "Phoenix PHP Living",
       address: "1623 W Moody Trail, Phoenix, AZ 85085",
-      phone: "(623) 257-5384",
-      phoneTel: "+16232575384",
+      phone: "(602) 905-8070",
+      phoneTel: "+16029058070",
       description:
         "Supportive PHP living and sober living housing for clients enrolled in DRC outpatient programs.",
       programs: ["PHP Living", "Sober Living"],

@@ -20,12 +20,12 @@ const SITE_URL = "https://desertrecoverycenters.com";
 export const metadata: Metadata = {
   title: "PHP & IOP Mental Health and Addiction Treatment in Phoenix, AZ | DRC",
   description:
-    "Partial hospitalization and intensive outpatient addiction and mental health treatment in Phoenix, AZ. Call (623) 257-5384 to verify insurance.",
+    "Partial hospitalization and intensive outpatient addiction and mental health treatment in Phoenix, AZ. Call (602) 905-8070 to verify insurance.",
   alternates: { canonical: `${SITE_URL}/locations/phoenix/` },
   openGraph: {
     title: "PHP & IOP Mental Health and Addiction Treatment in Phoenix, AZ | DRC",
     description:
-      "Partial hospitalization and intensive outpatient addiction and mental health treatment in Phoenix, AZ. Call (623) 257-5384 to verify insurance.",
+      "Partial hospitalization and intensive outpatient addiction and mental health treatment in Phoenix, AZ. Call (602) 905-8070 to verify insurance.",
     url: `${SITE_URL}/locations/phoenix/`,
     images: [
       {
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "PHP & IOP Mental Health and Addiction Treatment in Phoenix, AZ | DRC",
     description:
-      "Partial hospitalization and intensive outpatient addiction and mental health treatment in Phoenix, AZ. Call (623) 257-5384 to verify insurance.",
+      "Partial hospitalization and intensive outpatient addiction and mental health treatment in Phoenix, AZ. Call (602) 905-8070 to verify insurance.",
     images: [`${SITE_URL}/images/locations/phoenix/phoenix-lobby-2.jpg`],
   },
   keywords: [
@@ -73,7 +73,7 @@ const faqs = [
   },
   {
     q: "Does Desert Recovery Centers accept insurance?",
-    a: "Yes. We accept most major commercial insurance plans including Blue Cross Blue Shield, Aetna, Cigna, UnitedHealthcare, and many others. Our team verifies your benefits before you start, at no cost to you, and walks you through exactly what is covered. Call (623) 257-5384 or use our online verification tool to get started.",
+    a: "Yes. We accept most major commercial insurance plans including Blue Cross Blue Shield, Aetna, Cigna, UnitedHealthcare, and many others. Our team verifies your benefits before you start, at no cost to you, and walks you through exactly what is covered. Call (602) 905-8070 or use our online verification tool to get started.",
   },
   {
     q: "What is TMS therapy and is it available at the Phoenix location?",
@@ -89,7 +89,7 @@ const faqs = [
   },
   {
     q: "How do I get started?",
-    a: "Call (623) 257-5384 any time. Our admissions team picks up 24 hours a day, conducts a brief phone assessment, verifies your insurance, and gets you scheduled. Most clients start within 48 hours. If you are not ready to call, you can also request a callback or start your insurance verification online.",
+    a: "Call (602) 905-8070 any time. Our admissions team picks up 24 hours a day, conducts a brief phone assessment, verifies your insurance, and gets you scheduled. Most clients start within 48 hours. If you are not ready to call, you can also request a callback or start your insurance verification online.",
   },
   {
     q: "Does the Phoenix location offer residential treatment?",
@@ -126,7 +126,7 @@ const clinicSchema = {
   description:
     "Joint Commission accredited behavioral health treatment center offering PHP, IOP, OP, and TMS therapy in Phoenix, AZ.",
   url: `${SITE_URL}/locations/phoenix-php-iop`,
-  telephone: "+16232575384",
+  telephone: "+16029058070",
   email: "contact@desertrecoverycenters.com",
   address: {
     "@type": "PostalAddress",
@@ -209,7 +209,7 @@ const faqSchema = {
       name: "What is the address of the Desert Recovery Centers Phoenix PHP / IOP location?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The Desert Recovery Centers Phoenix PHP / IOP center is located at 4160 N. 108th Ave, Phoenix, AZ 85037. You can reach the facility at (623) 257-5384. Admissions support is available 24 hours a day, 7 days a week.",
+        text: "The Desert Recovery Centers Phoenix PHP / IOP center is located at 4160 N. 108th Ave, Phoenix, AZ 85037. You can reach the facility at (602) 905-8070. Admissions support is available 24 hours a day, 7 days a week.",
       },
     },
     {
@@ -217,7 +217,7 @@ const faqSchema = {
       name: "Does Desert Recovery Centers Phoenix accept insurance?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Desert Recovery Centers accepts most major commercial insurance plans including Blue Cross Blue Shield, Aetna, Cigna, UnitedHealthcare, and others. Our admissions team verifies your benefits at no cost before treatment begins. Call (623) 257-5384 or visit our website to start a free insurance verification.",
+        text: "Yes. Desert Recovery Centers accepts most major commercial insurance plans including Blue Cross Blue Shield, Aetna, Cigna, UnitedHealthcare, and others. Our admissions team verifies your benefits at no cost before treatment begins. Call (602) 905-8070 or visit our website to start a free insurance verification.",
       },
     },
     {
@@ -249,7 +249,7 @@ const faqSchema = {
       name: "How do I get admitted to the Phoenix PHP or IOP program?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Call (623) 257-5384 any time, day or night. Our admissions team conducts a brief clinical assessment by phone, verifies your insurance, and answers all your questions. Most clients are able to begin treatment within 48 hours of their first call.",
+        text: "Call (602) 905-8070 any time, day or night. Our admissions team conducts a brief clinical assessment by phone, verifies your insurance, and answers all your questions. Most clients are able to begin treatment within 48 hours of their first call.",
       },
     },
     {
@@ -298,7 +298,7 @@ export default function PhoenixPhpIopPage() {
         "description": "The admissions process at Desert Recovery Centers Phoenix PHP and IOP program.",
         "totalTime": "PT48H",
         "step": [
-          { "@type": "HowToStep", "position": 1, "name": "Call Admissions", "text": "Call (623) 257-5384 any time, day or night. A real person answers 24 hours a day." },
+          { "@type": "HowToStep", "position": 1, "name": "Call Admissions", "text": "Call (602) 905-8070 any time, day or night. A real person answers 24 hours a day." },
           { "@type": "HowToStep", "position": 2, "name": "Clinical Assessment", "text": "Complete a brief 15 to 20 minute clinical assessment by phone to determine the right level of care." },
           { "@type": "HowToStep", "position": 3, "name": "Insurance Verification", "text": "The admissions team contacts your insurance provider directly and explains your coverage and costs before you commit." },
           { "@type": "HowToStep", "position": 4, "name": "Begin Treatment", "text": "Most clients begin treatment within 48 hours of their first call." },
@@ -329,7 +329,7 @@ export default function PhoenixPhpIopPage() {
           {
             question: "Is there a Desert Recovery Centers PHP / IOP center in Phoenix?",
             answer:
-              "Yes. Desert Recovery Centers operates a dedicated outpatient treatment center at 4160 N. 108th Ave, Phoenix, AZ 85037. This location offers Partial Hospitalization (PHP), Intensive Outpatient (IOP), Outpatient (OP), and NeuroStar TMS therapy. It is Joint Commission accredited and accepts most major insurance plans. Call (623) 257-5384 for admissions.",
+              "Yes. Desert Recovery Centers operates a dedicated outpatient treatment center at 4160 N. 108th Ave, Phoenix, AZ 85037. This location offers Partial Hospitalization (PHP), Intensive Outpatient (IOP), Outpatient (OP), and NeuroStar TMS therapy. It is Joint Commission accredited and accepts most major insurance plans. Call (602) 905-8070 for admissions.",
           },
           {
             question: "What outpatient mental health treatment is available in Phoenix, Arizona?",
@@ -339,7 +339,7 @@ export default function PhoenixPhpIopPage() {
           {
             question: "Does Desert Recovery Centers Phoenix accept insurance?",
             answer:
-              "Yes. Desert Recovery Centers accepts most major commercial insurance plans including Blue Cross Blue Shield, Aetna, Cigna, UnitedHealthcare, and others. Benefits are verified at no cost before treatment begins. Call (623) 257-5384 for a free insurance check.",
+              "Yes. Desert Recovery Centers accepts most major commercial insurance plans including Blue Cross Blue Shield, Aetna, Cigna, UnitedHealthcare, and others. Benefits are verified at no cost before treatment begins. Call (602) 905-8070 for a free insurance check.",
           },
         ]}
       />
