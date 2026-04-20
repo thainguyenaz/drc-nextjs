@@ -5,7 +5,6 @@ import Navigation from "@/components/Navigation";
 import PageHero from "@/components/PageHero";
 import LocationCollision from "@/components/LocationCollision";
 import VideoLightbox from "@/components/VideoLightbox";
-import ConditionFAQ from "@/components/ConditionFAQ";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import { LocalBusinessSchema, BreadcrumbSchema, SpeakableSchema, VideoSchemas } from "@/lib/seo";
@@ -65,40 +64,6 @@ const gallery = [
   { src: "/images/scottsdale/DRC-VHARMONY-ROOM-NORTH-SCOTTSDALE-08-01-2024-0631August-01-202400010-2.jpg", alt: "Harmony therapy room at Desert Recovery Centers Scottsdale treatment center" },
 ];
 
-const faqs = [
-  {
-    q: "Where exactly is the Scottsdale facility?",
-    a: "Our Scottsdale center is located at 23222 N Church Rd, Scottsdale, AZ 85255, in the north Scottsdale area surrounded by stunning mountain views and serene desert landscape. It's easily accessible from the Loop 101, Scottsdale Road, and the Pima Freeway.",
-  },
-  {
-    q: "What programs are available at the Scottsdale location?",
-    a: "Our Scottsdale facility offers three levels of care: Residential Treatment (24/7 live-in program), Partial Hospitalization Program (PHP) with 5-6 hours of daily programming, and Intensive Outpatient Program (IOP) meeting 3-4 times per week. Your clinical team recommends the right level based on your evaluation.",
-  },
-  {
-    q: "What conditions do you treat at the Scottsdale center?",
-    a: "We treat the full spectrum of mental health conditions and substance use disorders, including anxiety, depression, PTSD, bipolar disorder, OCD, alcohol addiction, opioid dependence, stimulant addiction, and more. Our dual diagnosis approach treats co-occurring conditions simultaneously for stronger outcomes.",
-  },
-  {
-    q: "Do you accept insurance at the Scottsdale location?",
-    a: "Yes, we are in-network with most major insurance providers including Aetna, Blue Cross Blue Shield, Cigna, and UnitedHealthcare. Coverage varies by plan. Contact us to verify your benefits, our admissions team handles verification at no cost before you begin treatment.",
-  },
-  {
-    q: "What is the clinical team like at Scottsdale?",
-    a: "Your care team includes licensed clinical psychologists, a board-certified psychiatrist, registered nurses, and licensed therapists. Our clinical director, Dr. An Nguyen, is a Licensed Clinical Psychologist who oversees treatment quality across all locations. This is doctoral-level care, not a counselor-driven program.",
-  },
-  {
-    q: "How long does residential treatment typically last?",
-    a: "Residential stays typically range from 30 days, depending on the severity and complexity of your condition. Your clinical team continuously evaluates your progress and adjusts the timeline to ensure you have the strongest possible foundation before stepping down to a lower level of care.",
-  },
-  {
-    q: "Can family members visit the Scottsdale facility?",
-    a: "Absolutely. We encourage family involvement as a core part of recovery. Family members can visit during designated hours and participate in our family therapy program, including education sessions, joint therapy, and family support groups. The north Scottsdale location is convenient for families throughout the metro area.",
-  },
-  {
-    q: "What makes the Scottsdale location different from other DRC facilities?",
-    a: "Our Scottsdale center is nestled in north Scottsdale with panoramic mountain views and a serene desert setting. It features gender-specific group therapy, a pool, tennis and basketball courts, a state-of-the-art gym, massage room, and a peaceful outdoor environment that supports contemplative healing. It's our most scenically stunning location.",
-  },
-];
 
 export default function ScottsdaleLocationPage() {
   return (
@@ -331,8 +296,6 @@ export default function ScottsdaleLocationPage() {
       </section>
 
       <PhotoGallery photos={gallery} title="Scottsdale Facility Gallery" />
-
-      <ConditionFAQ items={faqs} />
       <AEOBlock entries={[
         {
           question: "Is there a Desert Recovery Centers in Scottsdale?",
