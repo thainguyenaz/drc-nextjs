@@ -7,7 +7,6 @@ import Footer from "@/components/Footer";
 import { MedicalConditionSchema } from "@/lib/seo";
 import AEOBlock from "@/components/AEOBlock";
 import RelatedPages from "@/components/RelatedPages";
-import ConditionFAQ from "@/components/ConditionFAQ";
 import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
 import { faqData } from "@/data/faq-data";
 import SchemaScript from "@/components/SchemaScript";
@@ -33,28 +32,6 @@ export const metadata: Metadata = {
   },
 };
 
-const faqs = [
-  {
-    question: "Can fentanyl addiction be treated?",
-    answer:
-      "Yes. Fentanyl addiction is treatable with medically supervised detox and medication-assisted treatment. At Desert Recovery Centers, our doctoral-level clinicians use specialized synthetic opioid detox protocols in our Arizona facilities with just 10 beds per location for safe, individualized care.",
-  },
-  {
-    question: "How long does fentanyl rehab take?",
-    answer:
-      "Fentanyl detox typically lasts 7 to 14 days due to the severity of withdrawal. Residential treatment usually follows for 30 days, with many clients continuing MAT and step-down care through PHP and IOP. Desert Recovery Centers builds your treatment timeline around your specific needs.",
-  },
-  {
-    question: "Does insurance cover fentanyl addiction treatment?",
-    answer:
-      "Yes, most major insurance plans cover fentanyl addiction treatment at Desert Recovery Centers. Coverage varies by plan and provider. Our admissions team will verify your benefits and explain your out-of-pocket costs before treatment begins.",
-  },
-  {
-    question: "What medications are used for fentanyl withdrawal?",
-    answer:
-      "Medically supervised fentanyl detox uses buprenorphine (Suboxone), naltrexone (Vivitrol), and comfort medications to manage withdrawal safely. Because fentanyl is 50 to 100 times more potent than morphine, our protocols are specifically designed for synthetic opioid detoxification. Our dual diagnosis approach also addresses underlying trauma and co-occurring conditions.",
-  },
-];
 
 export default function FentanylAddictionPage() {
   return (
@@ -182,7 +159,6 @@ export default function FentanylAddictionPage() {
       </section>
 
       <AddictionPrograms />
-      <ConditionFAQ items={faqs} />
       <AEOBlock
         entries={[
           {
