@@ -65,7 +65,7 @@ export const pageMetadata: Record<string, PageMeta> = {
   },
   "/locations/phoenix/": {
     title: "PHP & IOP Mental Health and Addiction Treatment in Phoenix, AZ | DRC",
-    description: "Partial hospitalization and intensive outpatient addiction and mental health treatment in Phoenix, AZ. Call (623) 257-5384 to verify insurance.",
+    description: "Partial hospitalization and intensive outpatient addiction and mental health treatment in Phoenix, AZ. Call (602) 905-8070 to verify insurance.",
     canonical: "https://desertrecoverycenters.com/locations/phoenix/",
     ogImage: "https://desertrecoverycenters.com/images/locations/phoenix/phoenix-entry.jpg",
   },

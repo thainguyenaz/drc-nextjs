@@ -27,7 +27,7 @@ const locations = [
     sqft: "7,500 sq ft",
     description:
       "Our flagship residential treatment center — where evidence-based clinical care meets resort-level comfort.",
-    services: ["Residential", "PHP", "IOP", "OP", "Detox"],
+    services: ["Residential", "PHP", "IOP", "OP"],
     amenities: ["Basketball Court", "Tennis Court", "Pool", "Gym", "Massage Room", "Gourmet Kitchen"],
     image: "/images/glendale/Glendale-Front.jpg",
     href: "/locations/glendale",
@@ -51,8 +51,8 @@ const locations = [
     name: "Phoenix PHP / IOP",
     label: "PHOENIX, ARIZONA",
     address: "4160 N. 108th Ave, Phoenix, AZ 85037",
-    phone: "(623) 257-5384",
-    phoneTel: "+16232575384",
+    phone: "(602) 905-8070",
+    phoneTel: "+16029058070",
     description:
       "Outpatient addiction and mental health treatment, PHP, IOP, OP, and NeuroStar TMS therapy. The only integrated TMS program in west Phoenix.",
     services: ["PHP", "IOP", "OP", "TMS Therapy"],
@@ -68,7 +68,7 @@ const programMatrix = [
   { program: "PHP", glendale: true, scottsdale: true, phoenix: true },
   { program: "IOP", glendale: true, scottsdale: true, phoenix: true },
   { program: "OP", glendale: true, scottsdale: true, phoenix: true },
-  { program: "Detox", glendale: true, scottsdale: false, phoenix: false },
+  { program: "Detox", glendale: false, scottsdale: false, phoenix: false },
   { program: "TMS Therapy", glendale: false, scottsdale: false, phoenix: true },
 ];
 

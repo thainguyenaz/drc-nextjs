@@ -54,8 +54,8 @@ const locations = [
     name: "DRC Phoenix",
     tagline: "Holistic Focus, Central Phoenix",
     address: "1623 W Moody Trail, Phoenix, AZ 85041",
-    phone: "(623) 257-5384",
-    phoneTel: "+16232575384",
+    phone: "(602) 905-8070",
+    phoneTel: "+16029058070",
     sqft: "5,500",
     programs: ["Residential", "Outpatient"],
     amenities: ["Movie Theater", "Pool with Waterfall", "Gym", "Massage Room"],
@@ -234,7 +234,7 @@ export default function RehabNearMePage() {
       <AEOBlock
         entries={[
           { question: "Where are Desert Recovery Centers locations in Arizona?", answer: "Desert Recovery Centers operates three luxury treatment facilities in Arizona: Glendale (8105 W Frier Dr, 85303), Scottsdale (23222 N Church Rd, 85255), and Phoenix (1623 W Moody Trail, 85041). All locations are Joint Commission accredited with a maximum of 10 beds and doctoral-level clinical leadership." },
-          { question: "Which Desert Recovery Centers location is closest to me?", answer: "West Valley residents (Peoria, Surprise, Avondale) are closest to DRC Glendale at (623) 323-1012. North Scottsdale, Paradise Valley, and Cave Creek residents are closest to DRC Scottsdale at (480) 931-3617. Tempe, Mesa, Chandler, and Gilbert residents are closest to DRC Phoenix at (623) 257-5384." },
+          { question: "Which Desert Recovery Centers location is closest to me?", answer: "West Valley residents (Peoria, Surprise, Avondale) are closest to DRC Glendale at (623) 323-1012. North Scottsdale, Paradise Valley, and Cave Creek residents are closest to DRC Scottsdale at (480) 931-3617. Tempe, Mesa, Chandler, and Gilbert residents are closest to DRC Phoenix at (602) 905-8070." },
         ]}
       />
       <CTASection />
