@@ -11,7 +11,7 @@ export default function AdolescentImage1() {
     <motion.div
       initial={{ opacity: 0, x: 60, scale: 0.97 }}
       whileInView={{ opacity: 1, x: 0, scale: 1 }}
-      viewport={{ once: false, amount: 0.2 }}
+      viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.85, ease: [0.16, 1, 0.3, 1] }}
       onViewportEnter={() => setEntered(true)}
       className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-xl"

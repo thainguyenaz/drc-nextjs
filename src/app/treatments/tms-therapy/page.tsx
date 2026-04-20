@@ -387,7 +387,7 @@ export default function TMSTherapyPage() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, margin: "-80px" }}
+          viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.8 }}
           className="max-w-5xl mx-auto px-6 py-16 md:py-24"
         >
@@ -415,7 +415,7 @@ export default function TMSTherapyPage() {
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: false, amount: 0.2 }}
+                viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
               >
                 <div className="flex items-center gap-3 mb-4">
@@ -431,7 +431,7 @@ export default function TMSTherapyPage() {
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: false, amount: 0.2 }}
+                viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.65, delay: 0.15 }}
                 className="text-forest/70 font-body leading-relaxed mb-8"
               >
@@ -452,7 +452,7 @@ export default function TMSTherapyPage() {
                       key={i}
                       initial={{ opacity: 0, x: -20 }}
                       whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: false, amount: 0.1 }}
+                      viewport={{ once: true, amount: 0.1 }}
                       transition={{ duration: 0.5, delay: i * 0.08 }}
                       className="flex items-start gap-3 text-forest font-body text-sm"
                     >
@@ -469,7 +469,7 @@ export default function TMSTherapyPage() {
             <motion.div
               initial={{ opacity: 0, x: 60, scale: 0.95 }}
               whileInView={{ opacity: 1, x: 0, scale: 1 }}
-              viewport={{ once: false, amount: 0.2 }}
+              viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
               whileHover={{ scale: 1.03 }}
               className="flex justify-center"
@@ -487,7 +487,7 @@ export default function TMSTherapyPage() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, margin: "-80px" }}
+            viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
@@ -506,7 +506,7 @@ export default function TMSTherapyPage() {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.15 }}
+            viewport={{ once: true, amount: 0.15 }}
             variants={{
               hidden: {},
               visible: { transition: { staggerChildren: 0.12, delayChildren: 0.1 } },
@@ -577,7 +577,7 @@ export default function TMSTherapyPage() {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false, amount: 0.2 }}
+              viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.7 }}
             >
               <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold mb-4">
@@ -587,7 +587,7 @@ export default function TMSTherapyPage() {
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false, amount: 0.2 }}
+              viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.65, delay: 0.15 }}
               className="text-forest/70 font-body leading-relaxed mb-8"
             >
@@ -603,7 +603,7 @@ export default function TMSTherapyPage() {
                   key={i}
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: false, amount: 0.1 }}
+                  viewport={{ once: true, amount: 0.1 }}
                   transition={{ duration: 0.5, delay: i * 0.07 }}
                   whileHover={{ x: 6, backgroundColor: "rgba(250,247,242,0.8)" }}
                   className="flex items-start gap-3 text-forest font-body group relative rounded-lg px-4 py-3 -mx-4 transition-colors cursor-default"
@@ -621,7 +621,7 @@ export default function TMSTherapyPage() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false, amount: 0.2 }}
+              viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.65, delay: 0.2 }}
               className="bg-cream rounded-2xl p-8 border border-gold/10"
             >
@@ -653,7 +653,7 @@ export default function TMSTherapyPage() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.7 }}
             className="text-center mb-14"
           >
@@ -670,7 +670,7 @@ export default function TMSTherapyPage() {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.1 }}
+            viewport={{ once: true, amount: 0.1 }}
             variants={{
               hidden: {},
               visible: { transition: { staggerChildren: 0.1, delayChildren: 0.05 } },
@@ -711,7 +711,7 @@ export default function TMSTherapyPage() {
             <motion.div
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: false, margin: "-80px" }}
+              viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.6 }}
             >
               <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
@@ -728,7 +728,7 @@ export default function TMSTherapyPage() {
             <motion.div
               initial={{ opacity: 0, x: 40 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: false, margin: "-80px" }}
+              viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.6, delay: 0.15 }}
               className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-xl"
             >
@@ -750,7 +750,7 @@ export default function TMSTherapyPage() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, margin: "-80px" }}
+            viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
@@ -774,7 +774,7 @@ export default function TMSTherapyPage() {
               data-brochure="adult"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false }}
+              viewport={{ once: true }}
               transition={{ duration: 0.4 }}
               whileHover={{ y: -6, boxShadow: "0 20px 40px rgba(0,0,0,0.12)" }}
               className="bg-white rounded-xl p-6 border border-gray-100 block transition-shadow"
@@ -799,7 +799,7 @@ export default function TMSTherapyPage() {
               data-brochure="adolescent"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false }}
+              viewport={{ once: true }}
               transition={{ duration: 0.4, delay: 0.1 }}
               whileHover={{ y: -6, boxShadow: "0 20px 40px rgba(0,0,0,0.12)" }}
               className="bg-white rounded-xl p-6 border border-gray-100 block transition-shadow"
@@ -829,7 +829,7 @@ export default function TMSTherapyPage() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, margin: "-80px" }}
+            viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.6 }}
             className="max-w-3xl mx-auto text-center"
           >
@@ -867,7 +867,7 @@ export default function TMSTherapyPage() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, margin: "-80px" }}
+            viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.6 }}
             className="max-w-2xl mx-auto text-center"
           >
@@ -907,7 +907,7 @@ export default function TMSTherapyPage() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, margin: "-80px" }}
+            viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.6 }}
             className="text-center mb-14"
           >
@@ -922,7 +922,7 @@ export default function TMSTherapyPage() {
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: false }}
+                viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.06 }}
                 className="bg-white rounded-xl border border-gold/10 overflow-hidden"
               >
@@ -982,7 +982,7 @@ export default function TMSTherapyPage() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, margin: "-80px" }}
+            viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.6 }}
             className="max-w-3xl mx-auto text-center"
           >
