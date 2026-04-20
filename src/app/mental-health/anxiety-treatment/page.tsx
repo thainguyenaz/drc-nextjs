@@ -1,7 +1,6 @@
 import { Metadata } from "next";
 import Navigation from "@/components/Navigation";
 import PageHero from "@/components/PageHero";
-import ConditionFAQ from "@/components/ConditionFAQ";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import { SpeakableSchema, MedicalConditionSchema } from "@/lib/seo";
@@ -31,28 +30,6 @@ export const metadata: Metadata = {
   },
 };
 
-const faqs = [
-  {
-    q: "What types of anxiety disorders do you treat?",
-    a: "We treat the full spectrum of anxiety disorders including generalized anxiety disorder (GAD), panic disorder, social anxiety disorder, specific phobias, agoraphobia, and separation anxiety disorder. Many of our clients also experience anxiety alongside depression or substance use, and our dual diagnosis approach addresses all conditions simultaneously.",
-  },
-  {
-    q: "What does anxiety treatment at DRC look like?",
-    a: "Your treatment begins with a comprehensive psychiatric evaluation to understand the nature and severity of your anxiety. From there, your clinical team designs an individualized plan that may include CBT, exposure therapy, mindfulness-based stress reduction, medication management, and somatic therapies. You'll also have access to yoga, breathwork, and other holistic modalities that directly target anxiety symptoms.",
-  },
-  {
-    q: "How long does anxiety treatment typically take?",
-    a: "Residential anxiety treatment typically ranges from 30 to 60 days, though some clients benefit from extended stays of up to 90 days. Outpatient programs (PHP and IOP) generally run 6 to 12 weeks. Your clinical team will continuously reassess your progress and adjust the timeline to ensure lasting results.",
-  },
-  {
-    q: "Can anxiety be treated without medication?",
-    a: "Yes, many clients achieve significant relief through therapy alone, particularly CBT and exposure-based therapies, which have strong research support. However, some individuals benefit from medication as part of a comprehensive plan. Our psychiatrists work closely with you to determine the best approach, and medication is never prescribed without your full understanding and consent.",
-  },
-  {
-    q: "Will I be able to manage anxiety after treatment ends?",
-    a: "Absolutely. A core goal of our program is equipping you with practical tools and coping strategies you can use for life. Before discharge, your clinical team develops a detailed aftercare plan that includes ongoing therapy referrals, relapse prevention strategies, and connection to our alumni support network.",
-  },
-];
 
 export default function AnxietyTreatmentPage() {
   return (
@@ -242,8 +219,6 @@ export default function AnxietyTreatmentPage() {
           </div>
         </div>
       </section>
-
-      <ConditionFAQ items={faqs} />
       <AEOBlock
         entries={[
           { question: "What is anxiety treatment at Desert Recovery Centers?", answer: "Desert Recovery Centers (a Joint Commission accredited luxury treatment center in Arizona) offers specialized anxiety treatment programs that address generalized anxiety disorder, panic disorder, social anxiety, and phobias. With a maximum of 10 beds per facility and doctoral-level clinicians on staff, clients receive deeply individualized care in a luxury residential setting." },
