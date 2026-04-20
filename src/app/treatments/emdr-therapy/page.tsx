@@ -8,7 +8,6 @@ import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import { MedicalTherapySchema } from "@/lib/seo";
-import ConditionFAQ from "@/components/ConditionFAQ";
 import SchemaScript from "@/components/SchemaScript";
 import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
 import { faqData } from "@/data/faq-data";
@@ -279,8 +278,6 @@ export default function EMDRPage() {
           </div>
         </div>
       </section>
-
-      <ConditionFAQ items={faqData["emdr"]} />
       <FAQSection faqs={faqData["emdr"]} />
       <CTASection />
       <Footer />
