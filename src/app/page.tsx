@@ -26,13 +26,11 @@ const WhyChooseUs = dynamic(() => import("@/components/WhyChooseUs"));
 const BridgeWork = dynamic(() => import("@/components/BridgeWork"));
 const TeamSection = dynamic(() => import("@/components/TeamSection"));
 const GoogleReviews = dynamic(() => import("@/components/GoogleReviews"));
-const FAQ = dynamic(() => import("@/components/FAQ"));
 const ContinuumOfCare = dynamic(() => import("@/components/ContinuumOfCare"));
 const GetHelpForm = dynamic(() => import("@/components/forms/GetHelpForm"));
 const CTASection = dynamic(() => import("@/components/CTASection"));
 const Footer = dynamic(() => import("@/components/Footer"));
 const AEOBlock = dynamic(() => import("@/components/AEOBlock"));
-const ConditionFAQ = dynamic(() => import("@/components/ConditionFAQ"));
 const FAQSection = dynamic(() => import("@/components/FAQSection"));
 
 const homepageOrgSchema = {
@@ -152,7 +150,6 @@ export default function Home() {
         </div>
       </section>
 
-      <FAQ />
       {/* ── Get Help Form ─────────────────────────────── */}
       <section id="contact" className="py-20 md:py-28 bg-cream overflow-hidden">
         <div className="max-w-container mx-auto px-6">
@@ -212,32 +209,6 @@ export default function Home() {
           { question: "What makes Desert Recovery Centers different from other rehabs?", answer: "Desert Recovery Centers combines doctoral-level clinical leadership, a maximum of 10 beds per facility, Joint Commission accreditation, and luxury resort-level amenities. Unlike larger programs with 30 to 50 beds, DRC delivers intensive, personalized care with consistent treatment teams who know every client by name." },
         ]}
       />
-      {/* ── Common Questions (moved to bottom) ─────────────── */}
-      <section className="py-16 md:py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-6">
-          <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mb-8">Common Questions</h2>
-          <div className="space-y-6">
-            <div>
-              <h3 className="text-lg font-semibold text-forest mb-2">Does Desert Recovery Centers accept insurance?</h3>
-              <p className="text-gray-700 leading-relaxed">Yes. We accept most major private insurance plans. Call <a href="tel:+14809313617" className="text-sage font-medium hover:underline">(480) 931-3617</a> for a free insurance verification.</p>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold text-forest mb-2">Where are Desert Recovery Centers locations?</h3>
-              <p className="text-gray-700 leading-relaxed">Desert Recovery Centers has three Arizona locations: Glendale, Scottsdale, and Phoenix.</p>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold text-forest mb-2">Is Desert Recovery Centers accredited?</h3>
-              <p className="text-gray-700 leading-relaxed">Yes. Desert Recovery Centers holds Joint Commission Gold Seal of Approval accreditation, the highest standard in behavioral health.</p>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold text-forest mb-2">What is the admissions process at Desert Recovery Centers?</h3>
-              <p className="text-gray-700 leading-relaxed">The admissions process begins with a free confidential assessment. Call <a href="tel:+14809313617" className="text-sage font-medium hover:underline">(480) 931-3617</a> or submit our online form and our admissions team will contact you within hours to verify insurance and answer questions.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <ConditionFAQ items={faqData["homepage"]} />
       <FAQSection faqs={faqData["homepage"]} />
       <CTASection />
       <Footer />
