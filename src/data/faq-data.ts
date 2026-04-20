@@ -177,6 +177,8 @@ export const faqData: Record<string, Array<{ question: string; answer: string }>
     { question: "How long does marijuana rehab take?", answer: "Residential marijuana treatment typically ranges from 30 to 60 days. Many clients with cannabis use disorder also have co-occurring mental health conditions that benefit from extended treatment." },
     { question: "What are marijuana withdrawal symptoms?", answer: "Marijuana withdrawal symptoms may include irritability, anxiety, difficulty sleeping, decreased appetite, restlessness, and cravings. Symptoms typically peak within the first week and resolve within 2 to 4 weeks." },
     { question: "Does insurance cover marijuana addiction treatment?", answer: "Yes. Most major private insurance plans cover treatment for cannabis use disorder. Call (480) 931-3617 for a free insurance verification." },
+    { question: "Can marijuana addiction be treated?", answer: "Yes. Cannabis use disorder is a recognized condition in the DSM-5 that responds to evidence-based behavioral therapies. At Desert Recovery Centers, our doctoral-level clinicians use CBT, motivational enhancement, and dual diagnosis treatment in our Arizona facilities with just 10 beds per location for individualized care." },
+    { question: "Is marijuana really addictive?", answer: "Yes. Cannabis use disorder affects roughly 10% of regular users, according to research. Today's marijuana is significantly more potent than previous decades, with THC concentrations often exceeding 20-30%. Withdrawal symptoms, insomnia, irritability, anxiety, and cravings, are real and keep many people stuck in a cycle of use." },
   ],
 
   "prescription-drug-addiction-treatment": [
