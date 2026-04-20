@@ -32,7 +32,7 @@ function VideoCard({ video, index }: { video: (typeof videos)[number]; index: nu
     <motion.div
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: false, amount: 0.15 }}
+      viewport={{ once: true, amount: 0.15 }}
       transition={{ duration: 0.6, delay: index * 0.1, ease: [0.16, 1, 0.3, 1] }}
       whileHover={{ y: -6, boxShadow: "0 20px 40px rgba(0,0,0,0.12)" }}
       className="bg-white rounded-xl overflow-hidden shadow-md transition-shadow"
@@ -85,7 +85,7 @@ export default function TMSVideoSection() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
           className="text-center mb-12"
         >

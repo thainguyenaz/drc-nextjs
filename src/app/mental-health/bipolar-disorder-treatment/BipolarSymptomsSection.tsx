@@ -28,7 +28,7 @@ export default function BipolarSymptomsSection() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
           className="text-center mb-12"
         >
@@ -46,7 +46,7 @@ export default function BipolarSymptomsSection() {
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: false, amount: 0.15 }}
+            viewport={{ once: true, amount: 0.15 }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
             className="rounded-xl overflow-hidden"
             style={{ backgroundColor: "#2D1F00" }}
@@ -55,7 +55,7 @@ export default function BipolarSymptomsSection() {
             <motion.div
               initial={{ scaleX: 0 }}
               whileInView={{ scaleX: 1 }}
-              viewport={{ once: false, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
               className="h-1 bg-amber-400 origin-left"
             />
@@ -69,7 +69,7 @@ export default function BipolarSymptomsSection() {
                     key={i}
                     initial={{ opacity: 0, x: -12 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: false, amount: 0.1 }}
+                    viewport={{ once: true, amount: 0.1 }}
                     transition={{
                       duration: 0.4,
                       ease: [0.16, 1, 0.3, 1],
@@ -96,7 +96,7 @@ export default function BipolarSymptomsSection() {
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: false, amount: 0.15 }}
+            viewport={{ once: true, amount: 0.15 }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
             className="rounded-xl overflow-hidden"
             style={{ backgroundColor: "#0F1A2E" }}
@@ -105,7 +105,7 @@ export default function BipolarSymptomsSection() {
             <motion.div
               initial={{ scaleX: 0 }}
               whileInView={{ scaleX: 1 }}
-              viewport={{ once: false, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
               className="h-1 bg-blue-400 origin-left"
             />
@@ -119,7 +119,7 @@ export default function BipolarSymptomsSection() {
                     key={i}
                     initial={{ opacity: 0, x: -12 }}
                     whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: false, amount: 0.1 }}
+                    viewport={{ once: true, amount: 0.1 }}
                     transition={{
                       duration: 0.4,
                       ease: [0.16, 1, 0.3, 1],

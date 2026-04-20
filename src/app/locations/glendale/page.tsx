@@ -3,7 +3,6 @@ import Link from "next/link";
 import Image from "next/image";
 import Navigation from "@/components/Navigation";
 import PageHero from "@/components/PageHero";
-import LocationCollision from "@/components/LocationCollision";
 import VideoLightbox from "@/components/VideoLightbox";
 import ConditionFAQ from "@/components/ConditionFAQ";
 import CTASection from "@/components/CTASection";
@@ -12,6 +11,10 @@ import { LocalBusinessSchema, BreadcrumbSchema, SpeakableSchema, VideoSchemas } 
 import AEOBlock from "@/components/AEOBlock";
 import dynamic from "next/dynamic";
 const PhotoGallery = dynamic(() => import("@/components/PhotoGallery"), { ssr: false, loading: () => null });
+const LocationCollision = dynamic(() => import("@/components/LocationCollision"), {
+  ssr: false,
+  loading: () => <div style={{ minHeight: "400px" }} />,
+});
 import { getPageMeta } from "@/data/page-metadata";
 import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
 import { faqData } from "@/data/faq-data";
