@@ -1,7 +1,6 @@
 import { Metadata } from "next";
 import Navigation from "@/components/Navigation";
 import PageHero from "@/components/PageHero";
-import ConditionFAQ from "@/components/ConditionFAQ";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import { SpeakableSchema, MedicalConditionSchema } from "@/lib/seo";
@@ -30,28 +29,6 @@ export const metadata: Metadata = {
   },
 };
 
-const faqs = [
-  {
-    q: "What is schizophrenia, exactly?",
-    a: "Schizophrenia is a chronic brain disorder that affects how a person thinks, feels, and perceives reality. It can cause hallucinations (seeing or hearing things others don't), delusions (strongly held false beliefs), disorganized thinking, and difficulties with motivation and emotional expression. It affects about 1% of the population and typically emerges in late adolescence to early adulthood. With proper treatment, many people with schizophrenia lead meaningful, stable lives.",
-  },
-  {
-    q: "Is schizophrenia dangerous?",
-    a: "This is one of the most harmful myths about schizophrenia. People with schizophrenia are far more likely to be victims of violence than perpetrators. The condition is a medical disorder, not a personality trait or moral failing. The vast majority of people with schizophrenia are not violent. With proper treatment and support, people with schizophrenia live safely and productively in their communities.",
-  },
-  {
-    q: "How important is medication in schizophrenia treatment?",
-    a: "Antipsychotic medication is the cornerstone of schizophrenia treatment and is essential for most individuals. These medications help manage positive symptoms (hallucinations, delusions) and reduce the risk of relapse. Our psychiatrists work carefully to find the most effective medication with the fewest side effects, and we monitor your response closely throughout treatment.",
-  },
-  {
-    q: "Can someone with schizophrenia live independently?",
-    a: "Many people with well-managed schizophrenia live independently, hold jobs, maintain relationships, and pursue their goals. The key is consistent treatment, particularly medication adherence, combined with ongoing support. Our program prepares you with the skills, medication stability, and support connections needed for the most independent life possible.",
-  },
-  {
-    q: "Do you treat schizoaffective disorder as well?",
-    a: "Yes. Schizoaffective disorder, which combines symptoms of schizophrenia with a mood disorder (depression or bipolar disorder), is within our clinical expertise. Treatment follows a similar integrated approach, with particular attention to managing both the psychotic and mood components of the condition.",
-  },
-];
 
 export default function SchizophreniaTreatmentPage() {
   return (
@@ -271,8 +248,6 @@ export default function SchizophreniaTreatmentPage() {
           </div>
         </div>
       </section>
-
-      <ConditionFAQ items={faqs} />
       <AEOBlock
         entries={[
           { question: "What is schizophrenia treatment at Desert Recovery Centers?", answer: "Desert Recovery Centers (a Joint Commission accredited luxury treatment center in Arizona) provides integrated psychiatric care for schizophrenia and schizoaffective disorder. With board-certified psychiatrists experienced in schizophrenia spectrum disorders, a maximum of 10 beds per facility, and 24/7 clinical support, clients receive expert medication management and therapeutic support in a structured, dignified residential environment." },
