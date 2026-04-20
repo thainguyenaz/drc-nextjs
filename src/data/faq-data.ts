@@ -161,6 +161,7 @@ export const faqData: Record<string, Array<{ question: string; answer: string }>
     { question: "What are cocaine withdrawal symptoms?", answer: "Cocaine withdrawal symptoms may include fatigue, depression, increased appetite, vivid dreams, irritability, and strong cravings. While not typically medically dangerous, withdrawal is uncomfortable and benefits from professional clinical support." },
     { question: "What therapies are used for cocaine addiction?", answer: "Evidence-based therapies include cognitive behavioral therapy (CBT), contingency management, motivational interviewing, group therapy, and holistic approaches such as yoga and mindfulness. Treatment plans are individualized." },
     { question: "Does insurance cover cocaine addiction treatment?", answer: "Yes. Most major private insurance plans cover cocaine addiction treatment. Call (480) 931-3617 for a free insurance verification." },
+    { question: "Can cocaine addiction be treated?", answer: "Yes. Cocaine addiction responds well to evidence-based behavioral therapies. At Desert Recovery Centers, our doctoral-level clinicians use CBT, contingency management, and dual diagnosis treatment in our Arizona facilities with just 10 beds per location for highly personalized care." },
   ],
 
   "marijuana-addiction-treatment": [

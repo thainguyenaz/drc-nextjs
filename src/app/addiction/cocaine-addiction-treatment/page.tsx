@@ -7,7 +7,6 @@ import Footer from "@/components/Footer";
 import { MedicalConditionSchema } from "@/lib/seo";
 import AEOBlock from "@/components/AEOBlock";
 import RelatedPages from "@/components/RelatedPages";
-import ConditionFAQ from "@/components/ConditionFAQ";
 import YouTubeEmbed from "@/components/YouTubeEmbed";
 import Citations from "@/components/Citations";
 import { getPageMeta } from "@/data/page-metadata";
@@ -33,28 +32,6 @@ export const metadata: Metadata = {
   },
 };
 
-const faqs = [
-  {
-    question: "Can cocaine addiction be treated?",
-    answer:
-      "Yes. Cocaine addiction responds well to evidence-based behavioral therapies. At Desert Recovery Centers, our doctoral-level clinicians use CBT, contingency management, and dual diagnosis treatment in our Arizona facilities with just 10 beds per location for highly personalized care.",
-  },
-  {
-    question: "How long does cocaine rehab take?",
-    answer:
-      "Cocaine rehab typically involves 30 days of residential treatment, followed by PHP and IOP for continued support. Because cocaine addiction is primarily psychological, treatment focuses on rebuilding your brain's natural reward system over time. Desert Recovery Centers customizes every treatment plan.",
-  },
-  {
-    question: "Does insurance cover cocaine addiction treatment?",
-    answer:
-      "Yes, most major insurance plans cover cocaine addiction treatment at Desert Recovery Centers. Coverage varies by plan and provider. Our admissions team will verify your benefits and explain your out-of-pocket costs before treatment begins.",
-  },
-  {
-    question: "What therapies are used for cocaine addiction?",
-    answer:
-      "Because there are no FDA-approved medications specifically for cocaine addiction, behavioral therapies are the cornerstone of treatment. CBT and contingency management are the gold standard. Our dual diagnosis approach also addresses co-occurring depression, anxiety, or bipolar disorder.",
-  },
-];
 
 export default function CocaineAddictionPage() {
   return (
@@ -182,7 +159,6 @@ export default function CocaineAddictionPage() {
       </section>
 
       <AddictionPrograms />
-      <ConditionFAQ items={faqs} />
       <AEOBlock
         entries={[
           {
