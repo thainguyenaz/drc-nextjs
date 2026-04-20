@@ -7,7 +7,6 @@ import Footer from "@/components/Footer";
 import { MedicalConditionSchema } from "@/lib/seo";
 import AEOBlock from "@/components/AEOBlock";
 import RelatedPages from "@/components/RelatedPages";
-import ConditionFAQ from "@/components/ConditionFAQ";
 import { getPageMeta } from "@/data/page-metadata";
 import AnimatedSection from "@/components/animated/AnimatedSection";
 import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
@@ -31,28 +30,6 @@ export const metadata: Metadata = {
   },
 };
 
-const faqs = [
-  {
-    question: "Can sex addiction be treated?",
-    answer:
-      "Yes. Compulsive sexual behavior disorder is a recognized impulse control disorder that responds to evidence-based therapy. At Desert Recovery Centers, our doctoral-level clinicians provide confidential, judgment-free treatment in our Arizona facilities with just 10 beds per location for highly personalized care.",
-  },
-  {
-    question: "How long does sex addiction treatment take?",
-    answer:
-      "Sex addiction treatment typically involves 30 days of residential or outpatient care, depending on severity and co-occurring conditions. Many clients benefit from ongoing therapy after primary treatment. Desert Recovery Centers customizes every plan to your unique needs and recovery goals.",
-  },
-  {
-    question: "Does insurance cover sex addiction treatment?",
-    answer:
-      "Yes, most major insurance plans cover treatment for compulsive sexual behavior at Desert Recovery Centers. Coverage varies by plan and provider. Our admissions team will verify your benefits and explain your out-of-pocket costs before treatment begins.",
-  },
-  {
-    question: "What therapies are used for sex addiction?",
-    answer:
-      "Treatment includes CBT and psychodynamic therapy to address emotional triggers, group process therapy to break isolation, trauma-focused approaches for underlying attachment issues, and dual diagnosis care for co-occurring depression, anxiety, or substance use disorders.",
-  },
-];
 
 export default function SexAddictionPage() {
   return (
@@ -170,7 +147,6 @@ export default function SexAddictionPage() {
         </div>
       </section>
       <AddictionPrograms />
-      <ConditionFAQ items={faqs} />
       <AEOBlock
         entries={[
           {
