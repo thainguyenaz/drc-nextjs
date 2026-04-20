@@ -167,7 +167,7 @@ export default function AdolescentDepressionPage() {
       <motion.div
         initial={{ opacity: 0, y: 60 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: false, amount: 0.3 }}
+        viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="relative w-full h-[200px] md:h-[250px] overflow-hidden"
       >
@@ -227,7 +227,7 @@ export default function AdolescentDepressionPage() {
                   key={i}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: false, amount: 0.2 }}
+                  viewport={{ once: true, amount: 0.2 }}
                   transition={{ duration: 0.4, delay: i * 0.06 }}
                   className="flex items-start gap-3 bg-white rounded-lg p-4 border border-gray-100"
                 >
@@ -245,7 +245,7 @@ export default function AdolescentDepressionPage() {
               <motion.div
                 initial={{ opacity: 0, y: 60 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: false, amount: 0.3 }}
+                viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 whileHover={{ scale: 1.02 }}
                 className="relative rounded-2xl overflow-hidden h-[380px]"
@@ -288,7 +288,7 @@ export default function AdolescentDepressionPage() {
               <motion.div
                 initial={{ opacity: 0, x: 60 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: false, amount: 0.3 }}
+                viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 whileHover={{ scale: 1.02 }}
                 className="relative rounded-2xl overflow-hidden h-[380px]"
@@ -334,7 +334,7 @@ export default function AdolescentDepressionPage() {
                   key={i}
                   initial={{ opacity: 0, x: -40 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: false, amount: 0.2 }}
+                  viewport={{ once: true, amount: 0.2 }}
                   transition={{ duration: 0.5, delay: i * 0.08 }}
                   className="border-l-2 border-gold/40 pl-6"
                 >
@@ -352,7 +352,7 @@ export default function AdolescentDepressionPage() {
               <motion.div
                 initial={{ opacity: 0, y: 60 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: false, amount: 0.3 }}
+                viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 whileHover={{ scale: 1.02 }}
                 className="relative rounded-2xl overflow-hidden h-[400px]"
@@ -364,7 +364,7 @@ export default function AdolescentDepressionPage() {
               <motion.div
                 initial={{ opacity: 0, x: -60 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: false, amount: 0.3 }}
+                viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 whileHover={{ scale: 1.02 }}
                 className="relative rounded-2xl overflow-hidden h-[380px]"
@@ -384,7 +384,7 @@ export default function AdolescentDepressionPage() {
         <motion.div
           initial={{ opacity: 0, y: 60 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           whileHover={{ scale: 1.02 }}
           className="relative w-full h-96 rounded-2xl overflow-hidden my-16"
@@ -439,7 +439,7 @@ export default function AdolescentDepressionPage() {
                   key={i}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: false, amount: 0.2 }}
+                  viewport={{ once: true, amount: 0.2 }}
                   transition={{ duration: 0.4, delay: i * 0.06 }}
                   className="border-l-2 border-gold/40 pl-6"
                 >
@@ -460,7 +460,7 @@ export default function AdolescentDepressionPage() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false }}
+          viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           className="max-w-container mx-auto px-6 text-center"
         >
