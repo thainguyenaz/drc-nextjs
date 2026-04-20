@@ -5,7 +5,6 @@ import Navigation from "@/components/Navigation";
 import PageHero from "@/components/PageHero";
 import LocationCollision from "@/components/LocationCollision";
 import VideoLightbox from "@/components/VideoLightbox";
-import ConditionFAQ from "@/components/ConditionFAQ";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import { LocalBusinessSchema, BreadcrumbSchema, SpeakableSchema, VideoSchemas } from "@/lib/seo";
@@ -65,40 +64,6 @@ const gallery = [
   { src: "/images/glendale/Glendale-Group-Room.jpg", alt: "Group therapy room at Desert Recovery Centers Glendale rehab in Arizona" },
 ];
 
-const faqs = [
-  {
-    q: "Where is the Glendale facility located?",
-    a: "Our flagship Glendale center is located at 8105 W Frier Dr, Glendale, AZ 85303. It's easily accessible from the I-17, Loop 101, and US-60, serving the entire West Valley including Peoria, Surprise, Avondale, Goodyear, and Buckeye.",
-  },
-  {
-    q: "Why is Glendale considered your flagship facility?",
-    a: "Our Glendale location was our first center and remains our largest at 7,500 square feet. It offers the widest range of amenities, basketball court, tennis court, pool, gym, billiards, and massage room, and the full continuum of care: residential treatment, PHP, and IOP.",
-  },
-  {
-    q: "What programs are available at the Glendale location?",
-    a: "We offer three levels of care: Residential Treatment (24/7 immersive program), Partial Hospitalization Program (PHP) with 5-6 hours of daily programming, and Intensive Outpatient Program (IOP) meeting 3-4 times per week. Your clinical team recommends the right level based on your comprehensive evaluation.",
-  },
-  {
-    q: "What conditions do you treat at the Glendale center?",
-    a: "We treat the full spectrum of substance use disorders, alcohol, opioids, fentanyl, cocaine, meth, prescription drugs, and mental health conditions including anxiety, depression, PTSD, bipolar disorder, OCD, personality disorders, ADHD, and schizophrenia. Our dual diagnosis approach treats co-occurring conditions simultaneously.",
-  },
-  {
-    q: "Do you accept insurance at the Glendale location?",
-    a: "Yes, we are in-network with most major insurance providers including Aetna, Blue Cross Blue Shield, Cigna, and UnitedHealthcare. Coverage varies by plan. Contact us to verify your benefits, our admissions team handles verification at no cost before you begin treatment.",
-  },
-  {
-    q: "What is the clinical team like at Glendale?",
-    a: "Your care is led by licensed clinical psychologists and overseen by our board-certified psychiatrist, Dr. Reyes Topete, MD. Registered nurses provide 24/7 medical monitoring, and licensed therapists deliver individual and group sessions daily. Our clinical director, Dr. An Nguyen, oversees treatment quality across all locations.",
-  },
-  {
-    q: "Can my family visit the Glendale facility?",
-    a: "Yes, family involvement is encouraged. We offer designated visiting hours and a comprehensive family therapy program including education sessions, joint therapy, and family support groups. The Glendale location is centrally located in the West Valley, making visits convenient for families throughout the area.",
-  },
-  {
-    q: "How quickly can I start treatment at Glendale?",
-    a: "Most clients begin treatment within 48 hours of their first call. Our admissions team is available 24/7 at (623) 323-1012 and handles insurance verification, clinical assessment, and intake coordination rapidly so there's no unnecessary delay when you're ready.",
-  },
-];
 
 export default function GlendaleLocationPage() {
   return (
@@ -332,8 +297,6 @@ export default function GlendaleLocationPage() {
       </section>
 
       <PhotoGallery photos={gallery} title="Glendale Facility Gallery" />
-
-      <ConditionFAQ items={faqs} />
       <AEOBlock entries={[
         {
           question: "Is there a Desert Recovery Centers in Glendale?",
