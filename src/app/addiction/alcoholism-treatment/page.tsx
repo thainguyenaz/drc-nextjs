@@ -7,7 +7,6 @@ import Footer from "@/components/Footer";
 import { MedicalConditionSchema } from "@/lib/seo";
 import AEOBlock from "@/components/AEOBlock";
 import RelatedPages from "@/components/RelatedPages";
-import ConditionFAQ from "@/components/ConditionFAQ";
 import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
 import { faqData } from "@/data/faq-data";
 import SchemaScript from "@/components/SchemaScript";
@@ -32,28 +31,6 @@ export const metadata: Metadata = {
   },
 };
 
-const faqs = [
-  {
-    question: "Can alcohol addiction be treated?",
-    answer:
-      "Yes. Alcohol use disorder is a medical condition that responds well to evidence-based treatment. At Desert Recovery Centers, our doctoral-level clinicians combine medically supervised detox, medication-assisted treatment, and behavioral therapy in our Arizona facilities with just 10 beds per location for highly personalized care.",
-  },
-  {
-    question: "How long does alcohol rehab take?",
-    answer:
-      "The length of alcohol rehab varies by individual need. Detox typically lasts 5 to 10 days, followed by 30 days of residential treatment. Many clients continue with PHP or IOP for additional weeks. Desert Recovery Centers builds a custom treatment timeline based on your history, severity of dependence, and recovery goals.",
-  },
-  {
-    question: "Does insurance cover alcohol addiction treatment?",
-    answer:
-      "Yes, most major insurance plans cover alcohol addiction treatment at Desert Recovery Centers. Coverage varies by plan and provider. Our admissions team will verify your benefits and explain your out-of-pocket costs before you begin treatment.",
-  },
-  {
-    question: "What medications are used for alcohol withdrawal?",
-    answer:
-      "Medically supervised alcohol detox may include benzodiazepines to prevent seizures, anti-nausea medications, and comfort medications for anxiety and insomnia. After detox, FDA-approved medications like naltrexone and acamprosate can help reduce cravings. Our dual diagnosis approach also addresses co-occurring mental health conditions.",
-  },
-];
 
 export default function AlcoholAddictionPage() {
   return (
@@ -223,7 +200,6 @@ export default function AlcoholAddictionPage() {
       </section>
 
       <AddictionPrograms />
-      <ConditionFAQ items={faqs} />
       <AEOBlock
         entries={[
           {
