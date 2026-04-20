@@ -139,7 +139,7 @@ export default function AdolescentProgramsTabs() {
               key={program.id}
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, amount: 0.15 }}
+              viewport={{ once: false, amount: 0.15 }}
               transition={{ duration: 0.4, delay: i * 0.08 }}
               onClick={() => setActiveId(program.id)}
               className={`w-full text-left px-4 py-4 rounded-lg border-l-[3px] transition-all duration-200 cursor-pointer ${

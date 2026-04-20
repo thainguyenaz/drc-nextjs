@@ -166,7 +166,7 @@ export default function GoogleReviews() {
       <motion.div
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
+        viewport={{ once: false }}
         transition={{ duration: 0.6 }}
         className="max-w-container mx-auto px-6"
       >
