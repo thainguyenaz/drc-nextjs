@@ -8,7 +8,6 @@ import YouTubeEmbed from "@/components/YouTubeEmbed";
 import { getPageMeta } from "@/data/page-metadata";
 import AnimatedSection from "@/components/animated/AnimatedSection";
 import AnimatedGrid from "@/components/animated/AnimatedGrid";
-import ConditionFAQ from "@/components/ConditionFAQ";
 import SchemaScript from "@/components/SchemaScript";
 import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
 import { faqData } from "@/data/faq-data";
@@ -169,8 +168,6 @@ export default function TreatmentsPage() {
           </AnimatedSection>
         </div>
       </section>
-
-      <ConditionFAQ items={faqData["treatments"]} />
       <FAQSection faqs={faqData["treatments"]} />
       <CTASection />
       <Footer />
