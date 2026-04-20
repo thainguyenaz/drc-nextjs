@@ -7,7 +7,6 @@ import Footer from "@/components/Footer";
 import { MedicalConditionSchema } from "@/lib/seo";
 import AEOBlock from "@/components/AEOBlock";
 import RelatedPages from "@/components/RelatedPages";
-import ConditionFAQ from "@/components/ConditionFAQ";
 import { getPageMeta } from "@/data/page-metadata";
 import AnimatedSection from "@/components/animated/AnimatedSection";
 import SchemaScript from "@/components/SchemaScript";
@@ -31,28 +30,6 @@ export const metadata: Metadata = {
   },
 };
 
-const faqs = [
-  {
-    question: "Can prescription drug addiction be treated?",
-    answer:
-      "Yes. Prescription drug addiction, whether involving opioid painkillers, benzodiazepines, or stimulants, is a treatable medical condition. At Desert Recovery Centers, our doctoral-level clinicians use medically supervised tapering, MAT, and behavioral therapy in our Arizona facilities with just 10 beds per location for safe, individualized care.",
-  },
-  {
-    question: "How long does prescription drug rehab take?",
-    answer:
-      "Treatment length depends on the medication class involved. Benzodiazepine tapering can take weeks to months. Opioid detox typically lasts 7 to 14 days, followed by 30 days of residential care. Desert Recovery Centers creates a custom timeline based on your specific substance, dosage history, and recovery goals.",
-  },
-  {
-    question: "Does insurance cover prescription drug addiction treatment?",
-    answer:
-      "Yes, most major insurance plans cover prescription drug addiction treatment at Desert Recovery Centers. Coverage varies by plan and provider. Our admissions team will verify your benefits and explain your out-of-pocket costs before you begin treatment.",
-  },
-  {
-    question: "What medications are used for prescription drug withdrawal?",
-    answer:
-      "Withdrawal management depends on the medication class. Opioid painkiller withdrawal may use buprenorphine or naltrexone. Benzodiazepine withdrawal requires careful medical tapering. Our dual diagnosis approach addresses the underlying conditions, chronic pain, anxiety, or ADHD, that drove prescription use in the first place.",
-  },
-];
 
 export default function PrescriptionDrugAddictionPage() {
   return (
@@ -189,7 +166,6 @@ export default function PrescriptionDrugAddictionPage() {
       </section>
 
       <AddictionPrograms />
-      <ConditionFAQ items={faqs} />
       <AEOBlock
         entries={[
           {
