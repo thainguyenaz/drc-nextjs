@@ -3,7 +3,6 @@ import Link from "next/link";
 import Navigation from "@/components/Navigation";
 import PageHero from "@/components/PageHero";
 import LocationCollision from "@/components/LocationCollision";
-import ConditionFAQ from "@/components/ConditionFAQ";
 import AEOBlock from "@/components/AEOBlock";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
@@ -23,28 +22,6 @@ export const metadata: Metadata = buildMetadata({
   path: "/mental-health/trauma-treatment",
 });
 
-const faqs = [
-  {
-    q: "What types of trauma do you treat?",
-    a: "We treat all forms of trauma including childhood abuse and neglect, sexual assault, domestic violence, combat and military trauma, first responder trauma, serious accidents, witnessing violence, medical trauma, and complex trauma from prolonged adverse experiences. Our clinicians are experienced with both single-incident and complex, developmental trauma.",
-  },
-  {
-    q: "What is the difference between trauma treatment and PTSD treatment?",
-    a: "Trauma treatment addresses the broader impact of traumatic experiences on your life, whether or not you meet the full clinical criteria for PTSD. Many people carry significant trauma responses without a formal PTSD diagnosis. Our trauma program helps anyone whose life has been shaped by adverse experiences, regardless of diagnostic label.",
-  },
-  {
-    q: "How does EMDR work for trauma?",
-    a: "EMDR (Eye Movement Desensitization and Reprocessing) helps your brain reprocess traumatic memories so they no longer trigger intense emotional and physical reactions. During sessions, your therapist guides you through bilateral stimulation while you recall distressing memories, allowing your brain to integrate them in a way that reduces their emotional charge. It's one of the most researched and effective trauma treatments available.",
-  },
-  {
-    q: "Is residential treatment necessary for trauma?",
-    a: "For moderate to severe trauma, especially when symptoms significantly impair daily functioning or when outpatient therapy hasn't produced sufficient improvement, residential care provides intensive, structured support. You have 24/7 clinical availability, no external stressors, and the ability to go deeper and faster than weekly outpatient sessions allow.",
-  },
-  {
-    q: "Do you treat trauma alongside substance use disorders?",
-    a: "Yes, this is one of our core specializations. Trauma and addiction are deeply intertwined. Many people use substances to cope with unresolved trauma, and substance use can create additional traumatic experiences. Our dual diagnosis approach treats both simultaneously, which research shows produces significantly better outcomes than treating them separately.",
-  },
-];
 
 export default function TraumaTreatmentPage() {
   return (
@@ -207,8 +184,6 @@ export default function TraumaTreatmentPage() {
           </div>
         </div>
       </section>
-
-      <ConditionFAQ items={faqs} />
       <AEOBlock entries={[
         { question: "What is trauma treatment at Desert Recovery Centers?", answer: "Desert Recovery Centers (a Joint Commission accredited luxury treatment center in Arizona) provides specialized trauma treatment using EMDR, somatic experiencing, and trauma-focused CBT. With clinicians who have advanced training in trauma modalities, a maximum of 10 beds per facility, and 24/7 clinical support, clients can safely process trauma in a structured luxury residential environment." },
         { question: "How does Desert Recovery Centers treat trauma?", answer: "DRC treats trauma using EMDR, trauma-focused Cognitive Behavioral Therapy, somatic experiencing, and experiential therapies including art therapy and yoga. Each treatment plan is individualized by licensed clinical psychologists who specialize in trauma recovery. Dual diagnosis treatment addresses co-occurring substance use simultaneously." },
