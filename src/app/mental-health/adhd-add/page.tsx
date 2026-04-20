@@ -1,7 +1,6 @@
 import { Metadata } from "next";
 import Navigation from "@/components/Navigation";
 import PageHero from "@/components/PageHero";
-import ConditionFAQ from "@/components/ConditionFAQ";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import { SpeakableSchema, MedicalConditionSchema } from "@/lib/seo";
@@ -30,28 +29,6 @@ export const metadata: Metadata = {
   },
 };
 
-const faqs = [
-  {
-    q: "Can adults really have ADHD?",
-    a: "Absolutely. ADHD is not a childhood condition that people 'grow out of.' Research shows that approximately 60% of children with ADHD continue to experience significant symptoms into adulthood. Many adults are diagnosed for the first time in their 30s, 40s, or even later, often after years of struggling with focus, organization, and emotional regulation without understanding why.",
-  },
-  {
-    q: "Why would someone with ADHD need residential treatment?",
-    a: "Residential treatment is particularly valuable when ADHD co-occurs with substance use disorders, depression, anxiety, or other conditions that complicate outpatient management. It's also beneficial when years of untreated ADHD have led to significant life disruption. The structured environment allows for comprehensive assessment, careful medication optimization, and intensive skills training, all happening simultaneously.",
-  },
-  {
-    q: "Do you prescribe stimulant medications for ADHD?",
-    a: "When clinically appropriate, yes. Our psychiatrists are experienced in prescribing both stimulant and non-stimulant ADHD medications. For clients with co-occurring substance use disorders, we take extra care in medication selection, sometimes using non-stimulant options or closely monitored stimulant protocols. Every medication decision is individualized and discussed thoroughly with you.",
-  },
-  {
-    q: "What's the connection between ADHD and substance use?",
-    a: "Research shows that adults with untreated ADHD are significantly more likely to develop substance use disorders. Many people with ADHD unknowingly 'self-medicate' with alcohol, marijuana, cocaine, or other substances to manage symptoms like restlessness, racing thoughts, or emotional overwhelm. Treating the ADHD directly often dramatically reduces the drive to self-medicate.",
-  },
-  {
-    q: "How is ADHD different from just being distracted or lazy?",
-    a: "ADHD is a neurodevelopmental disorder, it involves measurable differences in brain structure and chemistry, particularly in areas that regulate attention, impulse control, and executive function. It's not a character flaw, lack of discipline, or intelligence issue. People with ADHD often work harder than their peers just to accomplish basic tasks. Proper treatment can be genuinely life-changing.",
-  },
-];
 
 export default function ADHDTreatmentPage() {
   return (
@@ -258,8 +235,6 @@ export default function ADHDTreatmentPage() {
           </div>
         </div>
       </section>
-
-      <ConditionFAQ items={faqs} />
       <AEOBlock
         entries={[
           { question: "What is ADHD treatment at Desert Recovery Centers?", answer: "Desert Recovery Centers (a Joint Commission accredited luxury treatment center in Arizona) provides comprehensive ADHD assessment and treatment for adults. With doctoral-level clinical psychologists conducting thorough diagnostic evaluations, a maximum of 10 beds per facility, and expert psychiatric care, clients receive accurate diagnosis and individualized treatment in a structured residential setting." },
