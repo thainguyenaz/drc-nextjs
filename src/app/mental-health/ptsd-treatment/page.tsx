@@ -1,7 +1,6 @@
 import { Metadata } from "next";
 import Navigation from "@/components/Navigation";
 import PageHero from "@/components/PageHero";
-import ConditionFAQ from "@/components/ConditionFAQ";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import { SpeakableSchema, MedicalConditionSchema } from "@/lib/seo";
@@ -31,28 +30,6 @@ export const metadata: Metadata = {
   },
 };
 
-const faqs = [
-  {
-    q: "Do I need a formal PTSD diagnosis to get treatment?",
-    a: "No. You don't need a diagnosis to reach out. Many people experience significant trauma-related symptoms without meeting the full clinical criteria for PTSD. Our clinical team conducts a thorough evaluation during the admissions process and designs a treatment plan based on your specific symptoms and experiences, whether you have a formal diagnosis or not.",
-  },
-  {
-    q: "What is EMDR and how does it work?",
-    a: "EMDR (Eye Movement Desensitization and Reprocessing) is an evidence-based therapy that helps your brain reprocess traumatic memories so they no longer trigger intense emotional and physical reactions. During sessions, your therapist guides you through bilateral stimulation (typically eye movements) while you recall distressing memories, allowing your brain to integrate them in a way that reduces their emotional charge.",
-  },
-  {
-    q: "Is it safe to process trauma in a residential setting?",
-    a: "Yes, in many ways, residential treatment is the safest place to do deep trauma work. You have 24/7 clinical support, a structured daily routine, and no external stressors. If a therapy session brings up intense emotions, your clinical team is immediately available to help you process and stabilize. Many clients find they can go deeper faster in residential treatment than they ever could in weekly outpatient sessions.",
-  },
-  {
-    q: "What types of trauma do you treat?",
-    a: "We treat all forms of trauma including childhood abuse and neglect, sexual assault, combat and military trauma, domestic violence, first responder trauma, serious accidents, witnessing violence, and complex trauma from prolonged adverse experiences. Our clinicians are experienced with both single-incident trauma and complex, developmental trauma.",
-  },
-  {
-    q: "How long does PTSD treatment take?",
-    a: "Residential PTSD treatment typically lasts 30 days, depending on the severity and complexity of your trauma. Some clients with complex or developmental trauma benefit from longer stays. Our outpatient PHP and IOP programs provide 6 to 12 weeks of continued support. Your clinical team adjusts the timeline based on your progress and needs.",
-  },
-];
 
 export default function PTSDTreatmentPage() {
   return (
@@ -289,8 +266,6 @@ export default function PTSDTreatmentPage() {
           </div>
         </div>
       </section>
-
-      <ConditionFAQ items={faqs} />
       <AEOBlock
         entries={[
           { question: "What is PTSD treatment at Desert Recovery Centers?", answer: "Desert Recovery Centers (a Joint Commission accredited luxury treatment center in Arizona) provides specialized PTSD and trauma treatment led by clinicians with advanced training in trauma-focused modalities. With a maximum of 10 beds per facility and 24/7 clinical support, clients can safely process trauma in a structured, luxury residential environment." },
