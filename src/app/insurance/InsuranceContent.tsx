@@ -43,12 +43,7 @@ export default function InsuranceContent() {
       <section className="py-12 md:py-16 bg-white">
         <div className="max-w-container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-start">
-            <motion.div
-              initial={{ opacity: 0, x: -40 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
-            >
+            <div>
               <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mb-6">
                 Insurance at Desert Recovery Centers
               </h2>
@@ -78,16 +73,11 @@ export default function InsuranceContent() {
               <p className="text-gray-500 text-xs mt-4">
                 All information is protected by HIPAA and 42 CFR Part 2 federal confidentiality regulations.
               </p>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 40 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
-            >
+            <div>
               <InsuranceVerificationForm />
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>

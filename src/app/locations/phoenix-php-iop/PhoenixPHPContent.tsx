@@ -330,23 +330,15 @@ function ProgramsTabs() {
 }
 
 function OverviewImage() {
-  const [entered, setEntered] = useState(false);
-
   return (
     <motion.div
       initial={{ opacity: 0, x: 80, scale: 0.96 }}
       whileInView={{ opacity: 1, x: 0, scale: 1 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
-      onViewportEnter={() => setEntered(true)}
       className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-xl"
     >
-      <motion.div
-        animate={entered ? { scale: [1, 1.012, 1] } : {}}
-        transition={entered ? { duration: 9, repeat: Infinity, ease: "easeInOut", repeatType: "loop" as const } : {}}
-        whileHover={{ scale: 1.04, transition: { duration: 0.7 } }}
-        className="relative w-full h-full overflow-hidden rounded-[inherit]"
-      >
+      <div className="relative w-full h-full overflow-hidden rounded-[inherit]">
         <Image
           src="/images/locations/phoenix/phoenix-lobby-2.jpg"
           alt="Lobby at Desert Recovery Centers Phoenix PHP IOP treatment center"
@@ -354,7 +346,7 @@ function OverviewImage() {
           className="object-cover"
           sizes="(max-width: 768px) 100vw, 50vw"
         />
-      </motion.div>
+      </div>
     </motion.div>
   );
 }
