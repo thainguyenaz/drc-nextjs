@@ -248,7 +248,7 @@ ${DISCLAIMER}`
     dateModified: "2026-03-10",
     readTime: 8,
     featuredImage: "/images/glendale/Glendale-Front.jpg",
-    featuredImageAlt: "Desert Recovery Centers Glendale location for medical detox",
+    featuredImageAlt: "Desert Recovery Centers Glendale residential facility where clients transition to after medical detox",
     tags: ["detox", "withdrawal", "medical detox", "alcohol withdrawal", "opioid withdrawal", "safety"],
     metaTitle: "Why Medical Detox Is Necessary for Drug and Alcohol Withdrawal | DRC Arizona",
     metaDescription: "Detoxing from alcohol or opioids without medical supervision can be life-threatening. Learn what medically supervised detox involves and why it is essential for safe recovery.",
@@ -276,7 +276,7 @@ ${DISCLAIMER}`
 
 <h2>Detox Is the Beginning, Not the End</h2>
 <p>One of the most important things to understand about detox is that it is not treatment. Detox manages the acute physical symptoms of withdrawal, but it does not address the psychological, emotional, and behavioral dimensions of addiction. Research consistently shows that detox alone, without follow up treatment, has very high relapse rates.</p>
-<p><a href="/levels-of-care/residential-treatment">Residential treatment</a> following detox provides the therapeutic environment necessary for real recovery work to begin. At <a href="/locations/glendale">Desert Recovery Centers in Glendale</a>, clients who complete detox transition seamlessly into residential programming that includes individual therapy, group therapy, holistic wellness, and aftercare planning. This continuum of care is what transforms detox from a temporary pause in substance use into the beginning of lasting recovery.</p>
+<p><a href="/levels-of-care/residential-treatment">Residential treatment</a> following detox provides the therapeutic environment necessary for real recovery work to begin. Because medical detox requires medically supervised care, DRC clients complete detox with one of our trusted medical detox partners before transitioning into residential care at <a href="/locations/glendale">Desert Recovery Centers in Glendale</a>, where programming includes individual therapy, group therapy, holistic wellness, and aftercare planning. This continuum of care is what transforms detox from a temporary pause in substance use into the beginning of lasting recovery.</p>
 
 ${DISCLAIMER}`
   },
