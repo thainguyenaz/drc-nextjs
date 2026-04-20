@@ -1,7 +1,6 @@
 import { Metadata } from "next";
 import Navigation from "@/components/Navigation";
 import PageHero from "@/components/PageHero";
-import ConditionFAQ from "@/components/ConditionFAQ";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import { SpeakableSchema, MedicalConditionSchema } from "@/lib/seo";
@@ -32,28 +31,6 @@ export const metadata: Metadata = {
   },
 };
 
-const faqs = [
-  {
-    q: "What is the difference between bipolar I and bipolar II?",
-    a: "Bipolar I involves full manic episodes, periods of extremely elevated mood, energy, and sometimes psychotic symptoms, that last at least seven days or require hospitalization. Bipolar II involves hypomanic episodes (less severe than full mania) alternating with major depressive episodes. Both are serious conditions, and both respond to proper treatment. Our clinical team determines the specific diagnosis during your evaluation.",
-  },
-  {
-    q: "How important is medication in bipolar treatment?",
-    a: "Medication is a cornerstone of bipolar disorder treatment. Mood stabilizers and sometimes atypical antipsychotics help prevent the extreme highs and lows that characterize the condition. At DRC, our psychiatrists work closely with you to find the right medication at the right dose, monitoring your response carefully and adjusting as needed. Medication is always combined with therapy for the best outcomes.",
-  },
-  {
-    q: "Can bipolar disorder be managed long-term?",
-    a: "Absolutely. While bipolar disorder is a lifelong condition, it can be effectively managed with the right combination of medication, therapy, lifestyle modifications, and support. Many people with bipolar disorder lead full, productive, and satisfying lives. Our program is designed to give you every tool you need for long-term stability.",
-  },
-  {
-    q: "What if I've been misdiagnosed with depression instead of bipolar disorder?",
-    a: "Misdiagnosis is extremely common with bipolar disorder, studies suggest up to 40% of people with bipolar are initially diagnosed with major depression alone. This matters because antidepressants without a mood stabilizer can actually trigger manic episodes. Our comprehensive psychiatric evaluation includes a detailed personal and family history specifically designed to catch bipolar disorder that may have been missed.",
-  },
-  {
-    q: "Do you treat bipolar disorder with co-occurring substance use?",
-    a: "Yes, this is one of our specialties. Research shows that nearly half of people with bipolar disorder also struggle with substance use. Our dual diagnosis approach treats both conditions simultaneously, which is essential because untreated substance use destabilizes mood, and untreated bipolar disorder drives continued substance use.",
-  },
-];
 
 export default function BipolarTreatmentPage() {
   return (
@@ -206,8 +183,6 @@ export default function BipolarTreatmentPage() {
           </div>
         </div>
       </section>
-
-      <ConditionFAQ items={faqs} />
       <AEOBlock
         entries={[
           { question: "What is bipolar disorder treatment at Desert Recovery Centers?", answer: "Desert Recovery Centers (a Joint Commission accredited luxury treatment center in Arizona) offers specialized bipolar disorder treatment for both bipolar I and bipolar II. With board-certified psychiatrists, doctoral-level psychologists, and a maximum of 10 beds per facility, clients receive expert mood stabilization and intensive psychotherapy in a structured residential setting." },
