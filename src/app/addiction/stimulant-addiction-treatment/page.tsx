@@ -6,7 +6,6 @@ import Footer from "@/components/Footer";
 import { MedicalConditionSchema } from "@/lib/seo";
 import AEOBlock from "@/components/AEOBlock";
 import RelatedPages from "@/components/RelatedPages";
-import ConditionFAQ from "@/components/ConditionFAQ";
 import { getPageMeta } from "@/data/page-metadata";
 import AnimatedSection from "@/components/animated/AnimatedSection";
 import SchemaScript from "@/components/SchemaScript";
@@ -31,28 +30,6 @@ export const metadata: Metadata = {
   },
 };
 
-const faqs = [
-  {
-    question: "What is stimulant addiction?",
-    answer:
-      "Stimulant addiction is a substance use disorder involving compulsive use of cocaine, methamphetamine, prescription amphetamines such as Adderall and Ritalin, or MDMA. These substances flood the brain with dopamine and norepinephrine, and over time the natural reward system downregulates so you need stimulants just to feel normal, making it very difficult to stop without clinical support.",
-  },
-  {
-    question: "How long does stimulant addiction treatment take?",
-    answer:
-      "Most clients begin with 30 days of residential treatment, followed by partial hospitalization (PHP) for 4 to 6 weeks and intensive outpatient (IOP) for 8 to 12 weeks. Because stimulants cause significant neurological changes, longer treatment produces better outcomes. Desert Recovery Centers customizes every timeline to individual clinical needs and progress.",
-  },
-  {
-    question: "Does insurance cover stimulant addiction treatment?",
-    answer:
-      "Yes. Most major private insurance plans cover stimulant addiction treatment at Desert Recovery Centers. Coverage varies by plan and provider. Our admissions team verifies benefits for free and explains out-of-pocket costs before treatment begins. Call (480) 931-3617 for a confidential verification.",
-  },
-  {
-    question: "What makes Desert Recovery Centers' stimulant treatment different?",
-    answer:
-      "Desert Recovery Centers is a Joint Commission accredited luxury treatment program with just 10 beds per residential facility, ensuring individualized attention from doctoral-level clinicians. We specialize in dual diagnosis care for co-occurring depression, anxiety, and ADHD, and use evidence-based therapies including CBT, the Matrix Model, and contingency management that are specifically effective for stimulant addiction.",
-  },
-];
 
 export default function StimulantAddictionPage() {
   return (
@@ -187,7 +164,6 @@ export default function StimulantAddictionPage() {
         </div>
       </section>
       <AddictionPrograms />
-      <ConditionFAQ items={faqs} />
       <AEOBlock
         entries={[
           {
