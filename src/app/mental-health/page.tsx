@@ -77,16 +77,7 @@ export default function MentalHealthPage() {
             <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold mb-10">Mental Health Recovery at DRC</h2>
           </AnimatedSection>
           <AnimatedSection animation="fadeIn" delay={0.15}>
-            <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-xl">
-              <iframe
-                src="https://www.youtube.com/embed/NEGnf9I1K2E?rel=0"
-                title="Mental Health Treatment at Desert Recovery Centers"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                loading="lazy"
-                className="absolute inset-0 w-full h-full border-0"
-              />
-            </div>
+            <YouTubeEmbed youtubeId="NEGnf9I1K2E" title="Mental Health Treatment at Desert Recovery Centers" />
           </AnimatedSection>
         </div>
       </section>
@@ -102,31 +93,18 @@ export default function MentalHealthPage() {
             <h2 className="font-display text-3xl md:text-4xl text-white font-semibold mb-10">Your Path to Wellness</h2>
           </AnimatedSection>
           <AnimatedSection animation="fadeIn" delay={0.15}>
-            <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-xl ring-1 ring-white/10 mb-16">
-              <iframe
-                src="https://www.youtube.com/embed/Q7hykWDiBSk?rel=0"
-                title="Your Path to Mental Wellness"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                loading="lazy"
-                className="absolute inset-0 w-full h-full border-0"
-              />
+            <div className="mb-16">
+              <YouTubeEmbed youtubeId="Q7hykWDiBSk" title="Your Path to Mental Wellness" />
             </div>
           </AnimatedSection>
           <AnimatedSection>
             <h2 className="font-display text-3xl md:text-4xl text-white font-semibold mb-10">What Is Executive Burnout?</h2>
           </AnimatedSection>
           <AnimatedSection animation="fadeIn" delay={0.15}>
-            <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-xl ring-1 ring-white/10">
-              <iframe
-                src="https://www.youtube.com/embed/nOBR_oQGTZU?rel=0"
-                title="What Is Executive Burnout, and How Does It Correlate to High Achievers"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                loading="lazy"
-                className="absolute inset-0 w-full h-full border-0"
-              />
-            </div>
+            <YouTubeEmbed
+              youtubeId="nOBR_oQGTZU"
+              title="What Is Executive Burnout, and How Does It Correlate to High Achievers"
+            />
           </AnimatedSection>
         </div>
       </section>
