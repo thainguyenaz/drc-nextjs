@@ -7,7 +7,6 @@ import Footer from "@/components/Footer";
 import { MedicalConditionSchema } from "@/lib/seo";
 import AEOBlock from "@/components/AEOBlock";
 import RelatedPages from "@/components/RelatedPages";
-import ConditionFAQ from "@/components/ConditionFAQ";
 import YouTubeEmbed from "@/components/YouTubeEmbed";
 import Citations from "@/components/Citations";
 import { getPageMeta } from "@/data/page-metadata";
@@ -33,28 +32,6 @@ export const metadata: Metadata = {
   },
 };
 
-const faqs = [
-  {
-    question: "Can marijuana addiction be treated?",
-    answer:
-      "Yes. Cannabis use disorder is a recognized condition in the DSM-5 that responds to evidence-based behavioral therapies. At Desert Recovery Centers, our doctoral-level clinicians use CBT, motivational enhancement, and dual diagnosis treatment in our Arizona facilities with just 10 beds per location for individualized care.",
-  },
-  {
-    question: "How long does marijuana rehab take?",
-    answer:
-      "Marijuana rehab varies by severity. Some clients benefit from 30 days of residential care for a full reset, while others start with PHP or IOP. Withdrawal symptoms like insomnia and irritability typically resolve within 2 to 4 weeks. Desert Recovery Centers tailors every treatment plan to your situation.",
-  },
-  {
-    question: "Does insurance cover marijuana addiction treatment?",
-    answer:
-      "Yes, most major insurance plans cover cannabis use disorder treatment at Desert Recovery Centers. Coverage varies by plan and provider. Our admissions team will verify your benefits and explain your out-of-pocket costs before treatment begins.",
-  },
-  {
-    question: "Is marijuana really addictive?",
-    answer:
-      "Yes. Cannabis use disorder affects roughly 10% of regular users, according to research. Today's marijuana is significantly more potent than previous decades, with THC concentrations often exceeding 20-30%. Withdrawal symptoms, insomnia, irritability, anxiety, and cravings, are real and keep many people stuck in a cycle of use.",
-  },
-];
 
 export default function MarijuanaAddictionPage() {
   return (
@@ -182,7 +159,6 @@ export default function MarijuanaAddictionPage() {
       </section>
 
       <AddictionPrograms />
-      <ConditionFAQ items={faqs} />
       <AEOBlock
         entries={[
           {
