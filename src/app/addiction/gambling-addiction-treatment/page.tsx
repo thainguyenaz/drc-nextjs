@@ -7,7 +7,6 @@ import Footer from "@/components/Footer";
 import { MedicalConditionSchema } from "@/lib/seo";
 import AEOBlock from "@/components/AEOBlock";
 import RelatedPages from "@/components/RelatedPages";
-import ConditionFAQ from "@/components/ConditionFAQ";
 import { getPageMeta } from "@/data/page-metadata";
 import AnimatedSection from "@/components/animated/AnimatedSection";
 import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
@@ -31,28 +30,6 @@ export const metadata: Metadata = {
   },
 };
 
-const faqs = [
-  {
-    question: "Can gambling addiction be treated?",
-    answer:
-      "Yes. Gambling disorder is a DSM-5 recognized behavioral addiction that responds well to evidence-based treatment. At Desert Recovery Centers, our doctoral-level clinicians use CBT, dual diagnosis care, and financial recovery support in our Arizona facilities with just 10 beds per location for individualized attention.",
-  },
-  {
-    question: "How long does gambling addiction rehab take?",
-    answer:
-      "Gambling addiction treatment typically involves 30 days of residential or outpatient care, depending on severity. Many clients benefit from ongoing therapy and support groups after primary treatment. Desert Recovery Centers tailors every plan to your unique situation and recovery goals.",
-  },
-  {
-    question: "Does insurance cover gambling addiction treatment?",
-    answer:
-      "Yes, most major insurance plans cover gambling addiction treatment at Desert Recovery Centers. Coverage varies by plan and provider. Our admissions team will verify your benefits and explain your out-of-pocket costs before treatment begins.",
-  },
-  {
-    question: "What therapies are used for gambling addiction?",
-    answer:
-      "CBT is the gold standard for gambling addiction, addressing distorted beliefs about luck and probability. Our dual diagnosis approach also treats co-occurring depression, anxiety, or substance use disorders. Financial recovery support and group therapy help rebuild stability and break isolation.",
-  },
-];
 
 export default function GamblingAddictionPage() {
   return (
@@ -189,7 +166,6 @@ export default function GamblingAddictionPage() {
       </section>
 
       <AddictionPrograms />
-      <ConditionFAQ items={faqs} />
       <AEOBlock
         entries={[
           {
