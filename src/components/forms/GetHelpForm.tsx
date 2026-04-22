@@ -66,7 +66,7 @@ export default function GetHelpForm({ variant = "lp" }: GetHelpFormProps) {
     );
     const turnstileToken = tokenInput?.value || "";
     const honeypotInput = form?.querySelector<HTMLInputElement>(
-      'input[name="company_website"]'
+      'input[name="hp_check"]'
     );
     const honeypot = honeypotInput?.value || "";
 
@@ -85,7 +85,7 @@ export default function GetHelpForm({ variant = "lp" }: GetHelpFormProps) {
           variant,
           pageUri: typeof window !== "undefined" ? window.location.href : "",
           pageName: typeof window !== "undefined" ? document.title : "Get Help Today",
-          company_website: honeypot,
+          hp_check: honeypot,
           turnstileToken,
         }),
       });
@@ -275,15 +275,20 @@ export default function GetHelpForm({ variant = "lp" }: GetHelpFormProps) {
           />
         </div>
 
-        {/* Honeypot — must stay empty. Hidden from humans + screen readers. */}
+        {/* Honeypot — must stay empty. Hidden from humans + screen readers.
+            Name avoids common autofill taxonomies (company, website, address)
+            so password managers and browser autofill leave it alone. */}
         <div aria-hidden="true" className="absolute left-[-10000px] w-px h-px overflow-hidden">
-          <label htmlFor="gh-company-website">Company website</label>
+          <label htmlFor="gh-hp-check">Leave this field empty</label>
           <input
-            id="gh-company-website"
-            name="company_website"
+            id="gh-hp-check"
+            name="hp_check"
             type="text"
             tabIndex={-1}
             autoComplete="off"
+            autoCorrect="off"
+            autoCapitalize="off"
+            spellCheck={false}
             defaultValue=""
           />
         </div>
