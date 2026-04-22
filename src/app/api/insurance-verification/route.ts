@@ -1,6 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
 import { rateLimit, getClientIp } from "@/lib/rate-limit";
 import { verifyTurnstile } from "@/lib/turnstile";
+import { uploadFormConversion } from "@/lib/tracking/google-ads";
+import { fireGa4Lead } from "@/lib/tracking/ga4-mp";
+
+export const runtime = "nodejs";
 
 const INSURANCE_NOTIFY_URL =
   "https://api.desertrecoverycenters.com/api/notifications/insurance";
@@ -131,6 +135,35 @@ export async function POST(request: NextRequest) {
     console.log("Submission results:", results);
 
     if (results.hubspot) {
+      const gclid = request.cookies.get("_dr_gclid")?.value ?? null;
+      const gaCookie = request.cookies.get("_ga")?.value ?? null;
+      const [adsResult, ga4Result] = await Promise.allSettled([
+        uploadFormConversion({
+          formType: "insurance_verification",
+          email,
+          phone,
+          gclid,
+        }),
+        fireGa4Lead({
+          formType: "insurance_verification",
+          gaCookie,
+          landingPage: "https://www.desertrecoverycenters.com/insurance",
+        }),
+      ]);
+      console.log(
+        "[insurance-verification] conversion-fire:",
+        JSON.stringify({
+          ads:
+            adsResult.status === "fulfilled"
+              ? adsResult.value
+              : { error: String(adsResult.reason).slice(0, 200) },
+          ga4:
+            ga4Result.status === "fulfilled"
+              ? ga4Result.value
+              : { error: String(ga4Result.reason).slice(0, 200) },
+        })
+      );
+
       return NextResponse.json({
         success: true,
         emailSent: results.email,
