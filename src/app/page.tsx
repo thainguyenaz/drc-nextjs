@@ -28,7 +28,7 @@ const TeamSection = dynamic(() => import("@/components/TeamSection"));
 const GoogleReviews = dynamic(() => import("@/components/GoogleReviews"));
 const FAQ = dynamic(() => import("@/components/FAQ"));
 const ContinuumOfCare = dynamic(() => import("@/components/ContinuumOfCare"));
-const GetHelpForm = dynamic(() => import("@/components/forms/GetHelpForm"));
+const InsuranceVerificationForm = dynamic(() => import("@/components/forms/InsuranceVerificationForm"));
 const CTASection = dynamic(() => import("@/components/CTASection"));
 const Footer = dynamic(() => import("@/components/Footer"));
 const AEOBlock = dynamic(() => import("@/components/AEOBlock"));
@@ -197,7 +197,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <GetHelpForm />
+            <InsuranceVerificationForm />
           </div>
         </div>
       </section>
