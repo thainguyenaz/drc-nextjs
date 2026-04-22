@@ -107,14 +107,9 @@ export default function ContactContent() {
               </p>
             </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 80 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
-            >
+            <div>
               <GetHelpForm variant="contact" />
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>

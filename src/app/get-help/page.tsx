@@ -178,9 +178,9 @@ export default function GetHelpPage() {
               </div>
             </AnimatedSection>
 
-            <AnimatedSection animation="fadeIn" delay={0.15}>
+            <div>
               <InsuranceVerificationForm />
-            </AnimatedSection>
+            </div>
           </div>
         </div>
       </section>
