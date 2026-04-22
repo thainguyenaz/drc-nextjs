@@ -28,7 +28,7 @@ export async function POST(request: NextRequest) {
     const formData = await request.formData();
 
     // Honeypot: silently "succeed" so bots don't learn to adapt.
-    const honeypot = (formData.get("company_website") as string | null) ?? "";
+    const honeypot = (formData.get("hp_check") as string | null) ?? "";
     if (honeypot.trim() !== "") {
       console.warn("Honeypot triggered on /api/insurance-verification from ip=" + ip);
       return NextResponse.json({ success: true, emailSent: false });

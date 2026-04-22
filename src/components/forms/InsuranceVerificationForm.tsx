@@ -86,7 +86,7 @@ export default function InsuranceVerificationForm() {
     );
     const turnstileToken = tokenInput?.value || "";
     const honeypotInput = form?.querySelector<HTMLInputElement>(
-      'input[name="company_website"]'
+      'input[name="hp_check"]'
     );
     const honeypot = honeypotInput?.value || "";
 
@@ -100,7 +100,7 @@ export default function InsuranceVerificationForm() {
       body.append("member_id", formData.memberId);
       body.append("date_of_birth", formData.dateOfBirth);
       body.append("how_did_you_hear", formData.howDidYouHear);
-      body.append("company_website", honeypot);
+      body.append("hp_check", honeypot);
       body.append("turnstileToken", turnstileToken);
       if (formData.frontCard) body.append("front_card", formData.frontCard);
       if (formData.backCard) body.append("back_card", formData.backCard);
@@ -361,15 +361,20 @@ export default function InsuranceVerificationForm() {
         </label>
       </div>
 
-      {/* Honeypot — must stay empty. Hidden from humans + screen readers. */}
+      {/* Honeypot — must stay empty. Hidden from humans + screen readers.
+          Name avoids common autofill taxonomies (company, website, address)
+          so password managers and browser autofill leave it alone. */}
       <div aria-hidden="true" className="absolute left-[-10000px] w-px h-px overflow-hidden">
-        <label htmlFor="iv-company-website">Company website</label>
+        <label htmlFor="iv-hp-check">Leave this field empty</label>
         <input
-          id="iv-company-website"
-          name="company_website"
+          id="iv-hp-check"
+          name="hp_check"
           type="text"
           tabIndex={-1}
           autoComplete="off"
+          autoCorrect="off"
+          autoCapitalize="off"
+          spellCheck={false}
           defaultValue=""
         />
       </div>

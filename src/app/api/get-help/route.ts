@@ -24,7 +24,7 @@ interface Payload {
   variant?: string;
   pageUri?: string;
   pageName?: string;
-  company_website?: string; // honeypot
+  hp_check?: string; // honeypot
   turnstileToken?: string;
 }
 
@@ -55,7 +55,7 @@ export async function POST(request: NextRequest) {
 
   // Honeypot: bot filled a hidden field. Silently "succeed" so the bot
   // doesn't learn to adapt; drop the record on our side.
-  if (str(body.company_website).trim() !== "") {
+  if (str(body.hp_check).trim() !== "") {
     console.warn("Honeypot triggered on /api/get-help from ip=" + ip);
     return NextResponse.json({ success: true });
   }
