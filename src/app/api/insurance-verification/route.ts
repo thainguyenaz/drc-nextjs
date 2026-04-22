@@ -2,17 +2,10 @@ import { NextRequest, NextResponse } from "next/server";
 import { rateLimit, getClientIp } from "@/lib/rate-limit";
 import { verifyTurnstile } from "@/lib/turnstile";
 
-export async function POST(request: NextRequest) {
-  // Fail closed: no hardcoded fallbacks. Both must be set in the runtime env
-  // (Vercel project env vars). Checked per-request so the build can run
-  // without secrets.
-  const EMAIL_RELAY_URL = process.env.EMAIL_RELAY_URL;
-  const EMAIL_RELAY_SECRET = process.env.EMAIL_RELAY_SECRET;
-  if (!EMAIL_RELAY_URL || !EMAIL_RELAY_SECRET) {
-    console.error("EMAIL_RELAY_URL and EMAIL_RELAY_SECRET must be set");
-    return NextResponse.json({ error: "Email relay not configured" }, { status: 500 });
-  }
+const INSURANCE_NOTIFY_URL =
+  "https://api.desertrecoverycenters.com/api/notifications/insurance";
 
+export async function POST(request: NextRequest) {
   const ip = getClientIp(request);
   const rl = rateLimit(`insurance:${ip}`, 5, 60_000);
   if (!rl.allowed) {
@@ -98,7 +91,7 @@ export async function POST(request: NextRequest) {
       console.error("HubSpot exception:", e);
     }
 
-    // STEP 2: Email via VPS relay (secondary, never blocks success)
+    // STEP 2: Email + Telegram via jarvis-api notifications (secondary, never blocks)
     try {
       const relayBody = new FormData();
       relayBody.append("firstname", firstName);
@@ -109,14 +102,7 @@ export async function POST(request: NextRequest) {
       relayBody.append("member_id", memberId || "");
       relayBody.append("date_of_birth", dateOfBirth);
       relayBody.append("how_did_you_hear", howDidYouHear || "");
-      relayBody.append(
-        "to",
-        process.env.ADMISSIONS_EMAIL || "admissions@desertrecoverycenters.com"
-      );
-      relayBody.append(
-        "subject",
-        `Insurance Verification - ${firstName} ${lastName}`
-      );
+      relayBody.append("source", "website_insurance_verification");
 
       if (frontCard && frontCard.size > 0) {
         relayBody.append("front_card", frontCard);
@@ -125,24 +111,21 @@ export async function POST(request: NextRequest) {
         relayBody.append("back_card", backCard);
       }
 
-      const relayRes = await fetch(EMAIL_RELAY_URL, {
+      const relayRes = await fetch(INSURANCE_NOTIFY_URL, {
         method: "POST",
-        headers: {
-          Authorization: `Bearer ${EMAIL_RELAY_SECRET}`,
-        },
         body: relayBody,
       });
 
       results.email = relayRes.ok;
       if (!relayRes.ok) {
         const err = await relayRes.text();
-        console.error("Email relay error:", relayRes.status, err);
+        console.error("Insurance notify error:", relayRes.status, err);
       } else {
-        console.log("Email sent via relay successfully");
+        console.log("Insurance notification delivered (email + telegram)");
       }
     } catch (e: unknown) {
       const err = e as Error;
-      console.error("Email relay exception (non-blocking):", err.message);
+      console.error("Insurance notify exception (non-blocking):", err.message);
     }
 
     console.log("Submission results:", results);
