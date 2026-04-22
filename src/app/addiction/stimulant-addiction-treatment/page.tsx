@@ -15,7 +15,7 @@ import { faqData } from "@/data/faq-data";
 import FAQSection from "@/components/FAQSection";
 import Breadcrumb from "@/components/Breadcrumb";
 import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
-import GetHelpForm from "@/components/forms/GetHelpForm";
+import InsuranceVerificationForm from "@/components/forms/InsuranceVerificationForm";
 
 const meta = getPageMeta("/addiction/stimulant-addiction-treatment/");
 
@@ -237,7 +237,7 @@ export default function StimulantAddictionPage() {
               </p>
             </AnimatedSection>
             <AnimatedSection animation="fadeIn" delay={0.15}>
-              <GetHelpForm variant="contact" />
+              <InsuranceVerificationForm />
             </AnimatedSection>
           </div>
         </div>

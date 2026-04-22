@@ -1,4 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
+import { rateLimit, getClientIp } from "@/lib/rate-limit";
+import { verifyTurnstile } from "@/lib/turnstile";
 
 export async function POST(request: NextRequest) {
   // Fail closed: no hardcoded fallbacks. Both must be set in the runtime env
@@ -11,10 +13,37 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: "Email relay not configured" }, { status: 500 });
   }
 
+  const ip = getClientIp(request);
+  const rl = rateLimit(`insurance:${ip}`, 5, 60_000);
+  if (!rl.allowed) {
+    return NextResponse.json(
+      { error: "Too many requests" },
+      { status: 429, headers: { "Retry-After": String(rl.retryAfterSec) } }
+    );
+  }
+
   const results = { hubspot: false, email: false };
 
   try {
     const formData = await request.formData();
+
+    // Honeypot: silently "succeed" so bots don't learn to adapt.
+    const honeypot = (formData.get("company_website") as string | null) ?? "";
+    if (honeypot.trim() !== "") {
+      console.warn("Honeypot triggered on /api/insurance-verification from ip=" + ip);
+      return NextResponse.json({ success: true, emailSent: false });
+    }
+
+    const turnstileToken =
+      (formData.get("turnstileToken") as string | null) ||
+      (formData.get("cf-turnstile-response") as string | null);
+    const turnstileOk = await verifyTurnstile(turnstileToken, ip);
+    if (!turnstileOk) {
+      return NextResponse.json(
+        { error: "Verification failed" },
+        { status: 400 }
+      );
+    }
 
     const firstName = formData.get("firstname") as string;
     const lastName = formData.get("lastname") as string;
@@ -26,6 +55,14 @@ export async function POST(request: NextRequest) {
     const howDidYouHear = formData.get("how_did_you_hear") as string;
     const frontCard = formData.get("front_card") as File | null;
     const backCard = formData.get("back_card") as File | null;
+
+    // Member ID is now required server-side (card uploads are optional).
+    if (!memberId || memberId.trim() === "") {
+      return NextResponse.json(
+        { error: "Member ID is required" },
+        { status: 400 }
+      );
+    }
 
     // STEP 1: HubSpot submission (primary)
     try {

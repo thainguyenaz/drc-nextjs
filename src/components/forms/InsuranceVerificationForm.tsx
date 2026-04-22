@@ -2,6 +2,9 @@
 
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
+import Script from "next/script";
+
+const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
 
 interface FormData {
   firstName: string;
@@ -39,6 +42,7 @@ export default function InsuranceVerificationForm() {
   const [submitting, setSubmitting] = useState(false);
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
   const [fileErrors, setFileErrors] = useState<{ front?: string; back?: string }>({});
+  const formRef = useRef<HTMLFormElement>(null);
   const thankYouRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -76,6 +80,16 @@ export default function InsuranceVerificationForm() {
     setSubmitting(true);
     setStatus("idle");
 
+    const form = formRef.current;
+    const tokenInput = form?.querySelector<HTMLInputElement>(
+      'input[name="cf-turnstile-response"]'
+    );
+    const turnstileToken = tokenInput?.value || "";
+    const honeypotInput = form?.querySelector<HTMLInputElement>(
+      'input[name="company_website"]'
+    );
+    const honeypot = honeypotInput?.value || "";
+
     try {
       const body = new FormData();
       body.append("firstname", formData.firstName);
@@ -86,6 +100,8 @@ export default function InsuranceVerificationForm() {
       body.append("member_id", formData.memberId);
       body.append("date_of_birth", formData.dateOfBirth);
       body.append("how_did_you_hear", formData.howDidYouHear);
+      body.append("company_website", honeypot);
+      body.append("turnstileToken", turnstileToken);
       if (formData.frontCard) body.append("front_card", formData.frontCard);
       if (formData.backCard) body.append("back_card", formData.backCard);
 
@@ -135,7 +151,21 @@ export default function InsuranceVerificationForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="bg-white rounded-2xl p-8 shadow-sm space-y-5">
+    <>
+      {TURNSTILE_SITE_KEY && (
+        <Script
+          id="cf-turnstile-script"
+          src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+          strategy="afterInteractive"
+          async
+          defer
+        />
+      )}
+      <form
+        ref={formRef}
+        onSubmit={handleSubmit}
+        className="bg-white rounded-2xl p-8 shadow-sm space-y-5"
+      >
       {status === "error" && (
         <div className="bg-red-50 border border-red-200 rounded-xl p-4 text-sm text-red-700">
           Something went wrong. Please call{" "}
@@ -228,12 +258,13 @@ export default function InsuranceVerificationForm() {
 
       <div>
         <label htmlFor="iv-member" className="block text-sm font-medium text-forest mb-1.5">
-          Member ID
+          Member ID <span className="text-red-500">*</span>
         </label>
         <input
           id="iv-member"
           name="memberId"
           type="text"
+          required
           value={formData.memberId}
           onChange={handleChange}
           className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-sage/50 focus:border-sage"
@@ -258,12 +289,11 @@ export default function InsuranceVerificationForm() {
 
       <div>
         <label htmlFor="iv-front" className="block text-sm font-medium text-forest mb-1.5">
-          Front of Insurance Card <span className="text-red-500">*</span>
+          Front of Insurance Card <span className="text-gray-400 text-xs font-normal">(optional)</span>
         </label>
         <input
           id="iv-front"
           type="file"
-          required
           accept={ACCEPTED_FILE_TYPES}
           onChange={(e) => handleFileChange(e, "frontCard")}
           className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-sage/50 focus:border-sage file:mr-4 file:py-1 file:px-3 file:rounded-lg file:border-0 file:text-sm file:font-medium file:bg-sage/10 file:text-sage"
@@ -278,12 +308,11 @@ export default function InsuranceVerificationForm() {
 
       <div>
         <label htmlFor="iv-back" className="block text-sm font-medium text-forest mb-1.5">
-          Back of Insurance Card <span className="text-red-500">*</span>
+          Back of Insurance Card <span className="text-gray-400 text-xs font-normal">(optional)</span>
         </label>
         <input
           id="iv-back"
           type="file"
-          required
           accept={ACCEPTED_FILE_TYPES}
           onChange={(e) => handleFileChange(e, "backCard")}
           className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-sage/50 focus:border-sage file:mr-4 file:py-1 file:px-3 file:rounded-lg file:border-0 file:text-sm file:font-medium file:bg-sage/10 file:text-sage"
@@ -332,6 +361,28 @@ export default function InsuranceVerificationForm() {
         </label>
       </div>
 
+      {/* Honeypot — must stay empty. Hidden from humans + screen readers. */}
+      <div aria-hidden="true" className="absolute left-[-10000px] w-px h-px overflow-hidden">
+        <label htmlFor="iv-company-website">Company website</label>
+        <input
+          id="iv-company-website"
+          name="company_website"
+          type="text"
+          tabIndex={-1}
+          autoComplete="off"
+          defaultValue=""
+        />
+      </div>
+
+      {TURNSTILE_SITE_KEY && (
+        <div
+          className="cf-turnstile"
+          data-sitekey={TURNSTILE_SITE_KEY}
+          data-theme="light"
+          data-size="flexible"
+        />
+      )}
+
       <button
         type="submit"
         disabled={submitting}
@@ -343,6 +394,7 @@ export default function InsuranceVerificationForm() {
       <p className="text-xs text-gray-400 text-center">
         Protected by HIPAA &amp; 42 CFR Part 2. Your information is completely confidential.
       </p>
-    </form>
+      </form>
+    </>
   );
 }

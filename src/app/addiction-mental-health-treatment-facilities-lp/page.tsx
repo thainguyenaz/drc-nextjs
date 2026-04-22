@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import GetHelpForm from "@/components/forms/GetHelpForm";
+import InsuranceVerificationForm from "@/components/forms/InsuranceVerificationForm";
 import SchemaScript from "@/components/SchemaScript";
 import { getFAQSchema } from "@/lib/schema";
 
@@ -182,7 +182,7 @@ export default function AdsLandingPage() {
                       A specialist will reach out within the hour.
                     </p>
                   </div>
-                  <GetHelpForm variant="lp" />
+                  <InsuranceVerificationForm />
                   <div className="flex items-center justify-center gap-6 px-6 pt-4 pb-6">
                     <Image
                       src="/images/branding/joint-commission-seal.png"
