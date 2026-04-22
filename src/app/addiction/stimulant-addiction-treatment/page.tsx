@@ -236,9 +236,9 @@ export default function StimulantAddictionPage() {
                 Confidential · HIPAA protected · 24/7 admissions
               </p>
             </AnimatedSection>
-            <AnimatedSection animation="fadeIn" delay={0.15}>
+            <div>
               <InsuranceVerificationForm />
-            </AnimatedSection>
+            </div>
           </div>
         </div>
       </section>
