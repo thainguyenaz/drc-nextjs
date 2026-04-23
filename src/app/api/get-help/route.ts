@@ -54,6 +54,7 @@ export async function POST(request: NextRequest) {
   try {
     body = (await request.json()) as Payload;
   } catch {
+    console.warn("[get-help] 400:", JSON.stringify({ reason: "invalid_body" }));
     return NextResponse.json({ error: "Invalid body" }, { status: 400 });
   }
 
@@ -66,6 +67,13 @@ export async function POST(request: NextRequest) {
 
   const turnstileOk = await verifyTurnstile(body.turnstileToken, ip);
   if (!turnstileOk) {
+    console.warn(
+      "[get-help] 400:",
+      JSON.stringify({
+        reason: "turnstile_failed",
+        tokenPresent: Boolean(body.turnstileToken),
+      })
+    );
     return NextResponse.json({ error: "Verification failed" }, { status: 400 });
   }
 
@@ -81,6 +89,18 @@ export async function POST(request: NextRequest) {
   const situation = str(body.situation);
 
   if (!firstName || !lastName || !email || !phone) {
+    console.warn(
+      "[get-help] 400:",
+      JSON.stringify({
+        reason: "missing_fields",
+        missing: {
+          firstName: !firstName,
+          lastName: !lastName,
+          email: !email,
+          phone: !phone,
+        },
+      })
+    );
     return NextResponse.json(
       { error: "Missing required fields" },
       { status: 400 }
