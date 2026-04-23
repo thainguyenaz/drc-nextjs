@@ -1,4 +1,5 @@
 import { GoogleAdsApi } from "google-ads-api";
+import { trackingGateCheck, logTrackingSkip } from "./env-gate";
 import { hashedEmail, hashedPhone } from "./hash";
 
 export type FormType = "get_help" | "insurance_verification";
@@ -38,6 +39,11 @@ function conversionActionIdFor(formType: FormType): string | undefined {
 export async function uploadFormConversion(
   input: UploadInput
 ): Promise<UploadResult> {
+  const gate = trackingGateCheck();
+  if (!gate.allowed) {
+    logTrackingSkip("google-ads", gate, input.formType);
+    return { attempted: false, uploaded: false, skippedReason: gate.reason };
+  }
   if (!input.gclid) {
     return { attempted: false, uploaded: false, skippedReason: "no_gclid" };
   }

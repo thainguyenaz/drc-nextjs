@@ -1,4 +1,5 @@
 import { randomUUID } from "crypto";
+import { trackingGateCheck, logTrackingSkip } from "./env-gate";
 import type { FormType } from "./google-ads";
 
 interface MpInput {
@@ -12,6 +13,7 @@ interface MpResult {
   attempted: boolean;
   delivered: boolean;
   errorMessage?: string;
+  skippedReason?: string;
 }
 
 function extractClientId(gaCookie: string | null): string {
@@ -22,6 +24,11 @@ function extractClientId(gaCookie: string | null): string {
 }
 
 export async function fireGa4Lead(input: MpInput): Promise<MpResult> {
+  const gate = trackingGateCheck();
+  if (!gate.allowed) {
+    logTrackingSkip("ga4-mp", gate, input.formType);
+    return { attempted: false, delivered: false, skippedReason: gate.reason };
+  }
   const measurementId = process.env.GA4_MEASUREMENT_ID;
   const apiSecret = process.env.GA4_API_SECRET;
   if (!measurementId || !apiSecret) {
