@@ -36,6 +36,13 @@ export async function POST(request: NextRequest) {
       (formData.get("cf-turnstile-response") as string | null);
     const turnstileOk = await verifyTurnstile(turnstileToken, ip);
     if (!turnstileOk) {
+      console.warn(
+        "[insurance-verification] 400:",
+        JSON.stringify({
+          reason: "turnstile_failed",
+          tokenPresent: Boolean(turnstileToken),
+        })
+      );
       return NextResponse.json(
         { error: "Verification failed" },
         { status: 400 }
@@ -55,6 +62,10 @@ export async function POST(request: NextRequest) {
 
     // Member ID is now required server-side (card uploads are optional).
     if (!memberId || memberId.trim() === "") {
+      console.warn(
+        "[insurance-verification] 400:",
+        JSON.stringify({ reason: "missing_member_id" })
+      );
       return NextResponse.json(
         { error: "Member ID is required" },
         { status: 400 }
