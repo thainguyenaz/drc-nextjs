@@ -35,6 +35,7 @@ const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
 export default function GetHelpForm({ variant = "lp" }: GetHelpFormProps) {
   const [formData, setFormData] = useState<FormData>(initialFormData);
   const [submitting, setSubmitting] = useState(false);
+  const [turnstileReady, setTurnstileReady] = useState(false);
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
   const formRef = useRef<HTMLFormElement>(null);
   const thankYouRef = useRef<HTMLDivElement>(null);
@@ -44,6 +45,24 @@ export default function GetHelpForm({ variant = "lp" }: GetHelpFormProps) {
       thankYouRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   }, [status]);
+
+  useEffect(() => {
+    type W = Window &
+      typeof globalThis & {
+        onGetHelpTurnstileSuccess?: () => void;
+        onGetHelpTurnstileExpired?: () => void;
+        onGetHelpTurnstileError?: () => void;
+      };
+    const w = window as W;
+    w.onGetHelpTurnstileSuccess = () => setTurnstileReady(true);
+    w.onGetHelpTurnstileExpired = () => setTurnstileReady(false);
+    w.onGetHelpTurnstileError = () => setTurnstileReady(false);
+    return () => {
+      delete w.onGetHelpTurnstileSuccess;
+      delete w.onGetHelpTurnstileExpired;
+      delete w.onGetHelpTurnstileError;
+    };
+  }, []);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
@@ -321,15 +340,22 @@ export default function GetHelpForm({ variant = "lp" }: GetHelpFormProps) {
             data-sitekey={TURNSTILE_SITE_KEY}
             data-theme="light"
             data-size="flexible"
+            data-callback="onGetHelpTurnstileSuccess"
+            data-expired-callback="onGetHelpTurnstileExpired"
+            data-error-callback="onGetHelpTurnstileError"
           />
         )}
 
         <button
           type="submit"
-          disabled={submitting}
+          disabled={submitting || (!!TURNSTILE_SITE_KEY && !turnstileReady)}
           className="w-full bg-gold hover:bg-gold-dark text-white font-semibold text-base py-4 rounded-xl transition-colors cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
         >
-          {submitting ? "Submitting..." : "Get Help Today"}
+          {submitting
+            ? "Submitting..."
+            : !TURNSTILE_SITE_KEY || turnstileReady
+              ? "Get Help Today"
+              : "Verifying..."}
         </button>
 
         <p className="text-xs text-gray-400 text-center">

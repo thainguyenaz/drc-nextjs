@@ -40,6 +40,7 @@ const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB
 export default function InsuranceVerificationForm() {
   const [formData, setFormData] = useState<FormData>(initialFormData);
   const [submitting, setSubmitting] = useState(false);
+  const [turnstileReady, setTurnstileReady] = useState(false);
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
   const [fileErrors, setFileErrors] = useState<{ front?: string; back?: string }>({});
   const formRef = useRef<HTMLFormElement>(null);
@@ -50,6 +51,24 @@ export default function InsuranceVerificationForm() {
       thankYouRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   }, [status]);
+
+  useEffect(() => {
+    type W = Window &
+      typeof globalThis & {
+        onInsuranceTurnstileSuccess?: () => void;
+        onInsuranceTurnstileExpired?: () => void;
+        onInsuranceTurnstileError?: () => void;
+      };
+    const w = window as W;
+    w.onInsuranceTurnstileSuccess = () => setTurnstileReady(true);
+    w.onInsuranceTurnstileExpired = () => setTurnstileReady(false);
+    w.onInsuranceTurnstileError = () => setTurnstileReady(false);
+    return () => {
+      delete w.onInsuranceTurnstileSuccess;
+      delete w.onInsuranceTurnstileExpired;
+      delete w.onInsuranceTurnstileError;
+    };
+  }, []);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -385,15 +404,22 @@ export default function InsuranceVerificationForm() {
           data-sitekey={TURNSTILE_SITE_KEY}
           data-theme="light"
           data-size="flexible"
+          data-callback="onInsuranceTurnstileSuccess"
+          data-expired-callback="onInsuranceTurnstileExpired"
+          data-error-callback="onInsuranceTurnstileError"
         />
       )}
 
       <button
         type="submit"
-        disabled={submitting}
+        disabled={submitting || (!!TURNSTILE_SITE_KEY && !turnstileReady)}
         className="w-full bg-gold hover:bg-gold-dark text-white font-semibold text-base py-4 rounded-xl transition-colors cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
       >
-        {submitting ? "Submitting..." : "Verify My Insurance"}
+        {submitting
+          ? "Submitting..."
+          : !TURNSTILE_SITE_KEY || turnstileReady
+            ? "Verify My Insurance"
+            : "Verifying..."}
       </button>
 
       <p className="text-xs text-gray-400 text-center">
