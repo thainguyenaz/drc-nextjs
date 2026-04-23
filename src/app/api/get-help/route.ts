@@ -159,22 +159,45 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: "Submission failed" }, { status: 500 });
   }
 
-  // Secondary: lead notify. Fire-and-forget; failures never block success.
-  fetch(LEAD_NOTIFY_URL, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      type: "get_help_form",
-      firstName,
-      lastName,
-      phone,
-      email,
-      insurance: insuranceProvider,
-      seekingFor,
-      message: situation,
-      source: "website_get_help_form",
-    }),
-  }).catch((e) => console.error("lead-notify failed (non-blocking):", e));
+  // Secondary: lead notify via jarvis-api (email + Telegram). Awaited so
+  // the serverless function stays alive long enough for the fetch to
+  // complete — previously fire-and-forget, which was killed by fast
+  // termination on preview/non-production where the tracking
+  // Promise.allSettled below resolves instantly via env-gate denial.
+  // Never blocks the user's success response beyond its own latency.
+  try {
+    const notifyRes = await fetch(LEAD_NOTIFY_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        type: "get_help_form",
+        firstName,
+        lastName,
+        phone,
+        email,
+        insurance: insuranceProvider,
+        seekingFor,
+        message: situation,
+        source: "website_get_help_form",
+      }),
+    });
+    if (!notifyRes.ok) {
+      const errText = await notifyRes.text();
+      console.error(
+        "[get-help] notification failed:",
+        notifyRes.status,
+        errText.slice(0, 200)
+      );
+    } else {
+      console.log("[get-help] notification delivered");
+    }
+  } catch (e: unknown) {
+    const err = e as Error;
+    console.error(
+      "[get-help] notification exception:",
+      err.message?.slice(0, 200)
+    );
+  }
 
   const gclid = request.cookies.get("_dr_gclid")?.value ?? null;
   const gaCookie = request.cookies.get("_ga")?.value ?? null;
