@@ -147,6 +147,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/resources/blog/neurostar-tms-vs-antidepressants", priority: 0.6, changeFrequency: "monthly" },
     { path: "/resources/blog/luxury-rehab-vs-standard-rehab-clinical-differences", priority: 0.6, changeFrequency: "monthly" },
     { path: "/resources/blog/fentanyl-addiction-crisis-arizona", priority: 0.6, changeFrequency: "monthly" },
+    { path: "/resources/blog/how-do-prescription-drugs-affect-your-brain", priority: 0.6, changeFrequency: "monthly" },
 
     // Legal pages
     { path: "/privacy-policy", priority: 0.3, changeFrequency: "yearly" },
