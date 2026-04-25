@@ -82,16 +82,18 @@ export default function TeamMemberPage({
                 <h1 className="font-display text-3xl md:text-4xl text-forest font-semibold">
                   {member.name}
                 </h1>
-                <h2 className="font-display text-xl text-sage mt-2">
-                  {member.jobTitle}
-                </h2>
+                {member.jobTitle && (
+                  <h2 className="font-display text-xl text-sage mt-2">
+                    {member.jobTitle}
+                  </h2>
+                )}
                 {member.credentials.length > 0 && (
                   <p className="text-gray-500 mt-2 text-sm">
                     {member.credentials.join(", ")}
                   </p>
                 )}
                 <p className="text-gray-600 leading-relaxed mt-6">
-                  {member.description}
+                  {member.description || "Profile coming soon."}
                 </p>
               </div>
             </div>
