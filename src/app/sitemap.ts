@@ -1,4 +1,5 @@
 import { MetadataRoute } from "next";
+import { teamMembers } from "@/data/team-data";
 
 const SITE_URL = "https://desertrecoverycenters.com";
 
@@ -152,6 +153,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/terms-of-service", priority: 0.3, changeFrequency: "yearly" },
     { path: "/hipaa-notice", priority: 0.3, changeFrequency: "yearly" },
   ];
+
+  // Team member pages — generated from teamMembers so future additions auto-appear
+  for (const member of teamMembers) {
+    routes.push({
+      path: `/team/${member.slug}`,
+      priority: 0.6,
+      changeFrequency: "monthly",
+    });
+  }
 
   return routes.map((route) => ({
     url: `${SITE_URL}${route.path}`,
