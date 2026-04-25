@@ -72,7 +72,7 @@ export default function TeamMemberPage({
         <section className="py-12 md:py-20">
           <div className="max-w-container mx-auto px-6">
             <div className="max-w-3xl mx-auto flex flex-col md:flex-row gap-8 items-start">
-              <div className="w-48 h-48 md:w-56 md:h-56 relative rounded-xl overflow-hidden flex-shrink-0">
+              <div className="w-48 md:w-56 aspect-[4/5] relative rounded-xl overflow-hidden flex-shrink-0">
                 <Image
                   src={member.image}
                   alt={
@@ -81,7 +81,7 @@ export default function TeamMemberPage({
                       : `${member.name} at Desert Recovery Centers Arizona`
                   }
                   fill
-                  className="object-cover"
+                  className="object-cover object-top"
                   sizes="(max-width: 768px) 192px, 224px"
                 />
               </div>
