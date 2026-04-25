@@ -1,4 +1,5 @@
 import { MetadataRoute } from "next";
+import { teamMembers } from "@/data/team-data";
 
 const SITE_URL = "https://desertrecoverycenters.com";
 
@@ -114,6 +115,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/resources/faq", priority: 0.6, changeFrequency: "weekly" },
     { path: "/resources/what-to-bring", priority: 0.6, changeFrequency: "weekly" },
     { path: "/resources/detox-guide", priority: 0.6, changeFrequency: "weekly" },
+    { path: "/resources/addiction-detox-guide/antidepressants", priority: 0.6, changeFrequency: "weekly" },
     { path: "/resources/cost-of-rehab", priority: 0.6, changeFrequency: "weekly" },
     { path: "/resources/luxury-vs-traditional-rehab", priority: 0.6, changeFrequency: "weekly" },
     { path: "/resources/intervention-guide", priority: 0.6, changeFrequency: "weekly" },
@@ -145,12 +147,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/resources/blog/neurostar-tms-vs-antidepressants", priority: 0.6, changeFrequency: "monthly" },
     { path: "/resources/blog/luxury-rehab-vs-standard-rehab-clinical-differences", priority: 0.6, changeFrequency: "monthly" },
     { path: "/resources/blog/fentanyl-addiction-crisis-arizona", priority: 0.6, changeFrequency: "monthly" },
+    { path: "/resources/blog/how-do-prescription-drugs-affect-your-brain", priority: 0.6, changeFrequency: "monthly" },
 
     // Legal pages
     { path: "/privacy-policy", priority: 0.3, changeFrequency: "yearly" },
     { path: "/terms-of-service", priority: 0.3, changeFrequency: "yearly" },
     { path: "/hipaa-notice", priority: 0.3, changeFrequency: "yearly" },
   ];
+
+  // Team member pages — generated from teamMembers so future additions auto-appear
+  for (const member of teamMembers) {
+    routes.push({
+      path: `/team/${member.slug}`,
+      priority: 0.6,
+      changeFrequency: "monthly",
+    });
+  }
 
   return routes.map((route) => ({
     url: `${SITE_URL}${route.path}`,
