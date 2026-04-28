@@ -4,9 +4,24 @@ import { motion } from "framer-motion";
 import AnimatedCounter from "./AnimatedCounter";
 
 const stats = [
-  { value: 970, suffix: "M+", label: "People worldwide live with a mental health condition", source: "WHO" },
-  { value: 38, suffix: "%", label: "Of adults with substance use disorders also have co-occurring mental health conditions", source: "" },
-  { value: 94, suffix: "%", label: "Of DRC clients report significant improvement in quality of life after completing treatment", source: "" },
+  {
+    value: 970,
+    suffix: "M+",
+    label: "People worldwide live with a mental health condition",
+    source: "WHO",
+  },
+  {
+    value: 21.5,
+    suffix: "M",
+    label: "U.S. adults live with co-occurring substance use disorder and mental illness",
+    source: "SAMHSA, 2023 NSDUH",
+  },
+  {
+    value: 10,
+    suffix: "",
+    label: "Beds maximum per residential facility — intentionally intimate care",
+    source: "Desert Recovery Centers",
+  },
 ];
 
 export default function StatsSection() {
@@ -20,10 +35,10 @@ export default function StatsSection() {
           </span>
           <div className="w-[60px] h-0.5 bg-gold mx-auto mt-4 mb-4" />
           <h2 className="font-display text-3xl md:text-4xl text-white font-semibold mb-4">
-            The Numbers Behind the Crisis
+            The Numbers That Define Our Approach
           </h2>
           <p className="text-white/60 max-w-2xl mx-auto">
-            Mental health and addiction affect millions. Early intervention and quality treatment save lives.
+            National data on the scale of behavioral health needs — and how Desert Recovery Centers structures care to meet them.
           </p>
         </div>
 

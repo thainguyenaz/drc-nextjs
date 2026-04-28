@@ -16,14 +16,14 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Drug & Alcohol Detox in Arizona | Desert Recovery Centers",
   description:
-    "Medically supervised drug and alcohol detox in Arizona. 24/7 nursing, physician-led protocols, and a seamless transition to residential treatment at Desert Recovery Centers.",
+    "Drug and alcohol detox in Arizona, coordinated through Desert Recovery Centers. We partner with trusted medical detox providers for safe withdrawal management before transition to our residential treatment program.",
   alternates: {
     canonical: "https://desertrecoverycenters.com/levels-of-care/detox/",
   },
   openGraph: {
     title: "Drug & Alcohol Detox in Arizona | Desert Recovery Centers",
     description:
-      "Medically supervised drug and alcohol detox in Arizona. 24/7 nursing, physician-led protocols, and a seamless transition to residential treatment at Desert Recovery Centers.",
+      "Drug and alcohol detox in Arizona, coordinated through Desert Recovery Centers. We partner with trusted medical detox providers for safe withdrawal management before transition to our residential treatment program.",
     url: "https://desertrecoverycenters.com/levels-of-care/detox/",
     images: [
       {
@@ -37,15 +37,15 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: "What is drug and alcohol detox?",
-    a: "Drug and alcohol detox, or detoxification, is the medically supervised process of safely clearing substances from the body while managing withdrawal symptoms. At Desert Recovery Centers, detox is overseen by physicians and round-the-clock nursing staff who use evidence-based protocols to keep you as safe and comfortable as possible. Detox is the essential first step in recovery, preparing your body and mind for the deeper therapeutic work that follows in residential treatment.",
+    a: "Drug and alcohol detox is the medically supervised process of safely clearing substances from the body while managing withdrawal symptoms. Desert Recovery Centers coordinates detox through trusted medical detox partners — facilities staffed with physicians, nurses, and evidence-based withdrawal protocols. Once detox is complete, you transition into residential treatment with our clinical team, where the deeper therapeutic work begins.",
   },
   {
     q: "How long does detox take?",
-    a: "The duration of detox varies depending on the substance, the severity of dependence, your overall health, and your individual physiology. Alcohol detox typically takes 5 to 7 days, while opioid detox may range from 5 to 10 days. Benzodiazepine detox can take longer due to the need for a gradual taper. Stimulant withdrawal, while generally less medically dangerous, may involve an extended period of fatigue and mood instability. Your medical team at DRC continuously monitors your progress and adjusts your care plan accordingly.",
+    a: "The duration of detox varies depending on the substance, the severity of dependence, your overall health, and your individual physiology. Alcohol detox typically takes 5 to 7 days, while opioid detox may range from 5 to 10 days. Benzodiazepine detox can take longer due to the need for a gradual taper. Stimulant withdrawal, while generally less medically dangerous, may involve an extended period of fatigue and mood instability. Your detox partner facility's clinical team continuously monitors your progress and adjusts the protocol accordingly. Once you are medically stable, you transition to Desert Recovery Centers to begin residential treatment.",
   },
   {
     q: "Is detox safe?",
-    a: "When conducted under proper medical supervision, detox is safe. Attempting to detox on your own, particularly from alcohol or benzodiazepines, can be medically dangerous and in some cases life-threatening. At Desert Recovery Centers, our medical team uses established clinical protocols, continuous vital-sign monitoring, and FDA-approved medications to manage withdrawal symptoms and reduce medical risk. You are never alone during the process — our nursing staff is available 24 hours a day, 7 days a week.",
+    a: "When conducted under proper medical supervision, detox is safe. Attempting to detox on your own, particularly from alcohol or benzodiazepines, can be medically dangerous and in some cases life-threatening. Our medical detox partners use established clinical protocols, continuous vital-sign monitoring, and FDA-approved medications to manage withdrawal symptoms and reduce medical risk. After detox, our clinical team at Desert Recovery Centers continues care through medication management and ongoing psychiatric support.",
   },
   {
     q: "Does insurance cover detox in Arizona?",
@@ -53,7 +53,7 @@ const faqs = [
   },
   {
     q: "What happens after detox?",
-    a: "Detox alone is not treatment — it is the first step. After completing detox at Desert Recovery Centers, most clients transition directly into our residential treatment program, where they receive individual therapy, group counseling, psychiatric care, and holistic wellness programming. This seamless transition eliminates the gap between detox and treatment that often leads to relapse. Your clinical team develops a personalized treatment plan during detox so you can move into the next phase of care without delay.",
+    a: "Detox alone is not treatment — it is the first step. After completing detox at a partner facility, most clients transition directly into Desert Recovery Centers for residential treatment, where they receive individual therapy, group counseling, psychiatric care, and holistic wellness programming. This seamless transition eliminates the gap between detox and treatment that often leads to relapse. Our DRC clinical team coordinates with your detox partner's care team during the detox phase so you can move into the next phase of care without delay.",
   },
 ];
 
@@ -79,12 +79,6 @@ export default function DetoxPage() {
             url: "https://desertrecoverycenters.com/levels-of-care/detox/",
             name: "Drug & Alcohol Detox in Arizona | Desert Recovery Centers",
             specialty: "Addiction Medicine",
-            about: {
-              "@type": "MedicalTherapy",
-              name: "Medical Detoxification",
-              description:
-                "Medically supervised withdrawal management for drugs and alcohol under physician oversight with 24/7 nursing care.",
-            },
             reviewedBy: {
               "@type": "Person",
               "@id":
@@ -112,7 +106,7 @@ export default function DetoxPage() {
       <PageHero
         eyebrow="Levels of Care"
         title="Drug and Alcohol Detox in Arizona"
-        description="The safest, most comfortable way to begin your recovery. Physician-led detox with 24/7 medical support in a luxury Arizona setting."
+        description="Drug and alcohol detox in Arizona, coordinated through Desert Recovery Centers. We partner with trusted medical detox providers to ensure your withdrawal is safely managed before you transition into residential treatment with our clinical team."
         bgImage="/images/general/DRC-TREATMENTS.jpg"
       />
 
@@ -135,30 +129,13 @@ export default function DetoxPage() {
                 Why Medical Detox Matters
               </h2>
               <p className="text-gray-600 leading-relaxed text-lg mb-4">
-                When you have been using drugs or alcohol for an extended
-                period, your body adapts to the presence of those substances.
-                Stopping abruptly can trigger withdrawal symptoms that range
-                from deeply uncomfortable to medically dangerous. That is why
-                medical detox exists: to provide a safe, supervised
-                environment where your body can clear substances while a
-                clinical team manages the physical and psychological effects
-                of withdrawal.
+                Medical detox is the safest path to begin recovery from alcohol, opioid, or benzodiazepine dependence. Withdrawal from these substances can produce seizures, dangerous blood-pressure changes, and life-threatening complications when attempted without supervision.
               </p>
               <p className="text-gray-600 leading-relaxed text-lg mb-4">
-                At Desert Recovery Centers, detox is not a standalone
-                service. It is the entry point into a comprehensive
-                treatment experience. Our physicians design individualized
-                detox protocols based on the substances involved, the
-                severity of your dependence, your medical history, and any
-                co-occurring mental health conditions. Every aspect of your
-                detox is monitored and adjusted in real time to keep you as
-                safe and comfortable as possible.
+                That&apos;s why Desert Recovery Centers coordinates every client&apos;s detox through trusted medical detox partners — facilities equipped with 24/7 nursing, physician oversight, and FDA-approved medications to manage withdrawal safely.
               </p>
               <p className="text-gray-600 leading-relaxed text-lg">
-                We understand that the decision to enter detox can feel
-                overwhelming. Many of our clients describe it as the hardest
-                step they have ever taken — and also the most important.
-                Our team is here to make that step as smooth as it can be.
+                Once detox is complete, you transition into residential treatment with our clinical team, where the deeper therapeutic work begins.
               </p>
             </AnimatedSection>
           </div>
@@ -173,12 +150,10 @@ export default function DetoxPage() {
               Your Detox Experience
             </span>
             <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4 mb-8">
-              What to Expect During Detox at DRC
+              What to Expect During Medical Detox
             </h2>
             <p className="text-gray-600 leading-relaxed mb-6">
-              From the moment you arrive, our clinical team works to ensure
-              you feel safe, informed, and supported. Here is what the detox
-              process looks like at Desert Recovery Centers:
+              From the moment you arrive at the partner detox facility, the medical team works to ensure you feel safe, informed, and supported. Here is what the detox process typically looks like at our medical detox partners:
             </p>
             <div className="grid md:grid-cols-2 gap-4">
               {[
@@ -186,10 +161,10 @@ export default function DetoxPage() {
                 "Individualized detox protocol designed by a physician based on your specific needs",
                 "24/7 nursing observation with regular vital-sign monitoring and symptom scoring",
                 "FDA-approved medications to manage withdrawal symptoms and reduce discomfort",
-                "Comfortable, private rooms in a luxury residential setting — not a hospital ward",
+                "Comfortable, private rooms in a residential or sub-acute medical setting",
                 "Nutritional support and hydration management to help your body recover",
                 "Psychiatric evaluation to identify co-occurring mental health conditions early",
-                "Daily check-ins with your medical team to adjust your protocol as symptoms evolve",
+                "Daily check-ins with the medical team to adjust the protocol as symptoms evolve",
               ].map((item, i) => (
                 <div
                   key={i}
@@ -203,10 +178,7 @@ export default function DetoxPage() {
               ))}
             </div>
             <p className="text-gray-600 leading-relaxed mt-6 text-sm">
-              Our goal during detox is twofold: keep you medically safe and
-              lay the groundwork for the therapeutic work ahead. By the time
-              you complete detox, you will be physically stabilized and
-              ready to engage fully in residential treatment.
+              The goal during medical detox is twofold: keep you medically safe and lay the groundwork for the therapeutic work ahead. By the time detox is complete, you will be physically stabilized and ready to transition into residential treatment with our DRC clinical team.
             </p>
           </div>
         </div>
@@ -224,31 +196,32 @@ export default function DetoxPage() {
                 Substances We Help With During Detox
               </h2>
               <p className="text-gray-600 leading-relaxed text-lg mb-6">
-                Every substance has a unique withdrawal profile. Our medical
-                team tailors your detox protocol to the specific substance
-                or combination of substances involved.
+                Every substance has a unique withdrawal profile. The medical
+                team at your detox partner facility tailors your detox
+                protocol to the specific substance or combination of
+                substances involved.
               </p>
               <div className="space-y-6">
                 {[
                   {
                     title: "Alcohol Detox",
-                    desc: "Alcohol withdrawal can produce symptoms ranging from tremors, anxiety, and insomnia to severe complications like seizures and delirium tremens. Our physicians use evidence-based protocols, including symptom-triggered benzodiazepine therapy when clinically indicated, to manage alcohol withdrawal safely. Typical alcohol detox at DRC lasts 5 to 7 days under continuous medical monitoring.",
+                    desc: "Alcohol withdrawal can produce symptoms ranging from tremors, anxiety, and insomnia to severe complications like seizures and delirium tremens. At your medical detox partner facility, the clinical team uses evidence-based protocols — including symptom-triggered benzodiazepine therapy when clinically indicated — to manage alcohol withdrawal safely. Typical alcohol detox lasts 5 to 7 days under continuous medical monitoring at the partner facility, with vital signs assessed regularly to keep you stable and comfortable.",
                   },
                   {
                     title: "Opioid Detox",
-                    desc: "Withdrawal from opioids — including prescription painkillers, heroin, and fentanyl — produces intense physical discomfort including muscle aches, nausea, sweating, and insomnia. Our medical team uses medication-assisted protocols to significantly reduce these symptoms and support a stable transition into ongoing treatment. Opioid detox typically lasts 5 to 10 days.",
+                    desc: "Withdrawal from opioids — including prescription painkillers, heroin, and fentanyl — produces intense physical discomfort including muscle aches, nausea, sweating, and insomnia. The medical team at your detox partner facility uses medication-assisted protocols, including buprenorphine or methadone where clinically indicated, to manage withdrawal symptoms and support transition into long-term treatment. Opioid detox typically lasts 5 to 10 days.",
                   },
                   {
                     title: "Benzodiazepine Detox",
-                    desc: "Benzodiazepine withdrawal requires a careful, gradual taper supervised by a physician due to the risk of seizures with abrupt discontinuation. Our team develops individualized taper schedules that prioritize safety while managing anxiety, insomnia, and other withdrawal effects. Benzo detox timelines vary considerably based on the specific medication, dosage, and duration of use.",
+                    desc: "Benzodiazepine withdrawal requires a careful, gradual taper supervised by a physician due to the risk of seizures with abrupt discontinuation. Our partner detox facilities specialize in managing these complex cases — their clinical team develops individualized taper schedules, monitors vital signs, and adjusts medication dosages over the appropriate timeframe.",
                   },
                   {
                     title: "Stimulant Detox",
-                    desc: "Withdrawal from stimulants such as cocaine and methamphetamine is characterized by fatigue, depression, increased appetite, and intense cravings rather than the acute medical risks seen with alcohol or benzodiazepines. Our team provides supportive care, psychiatric monitoring, and nutritional support to help you through this period and prepare for residential treatment.",
+                    desc: "Withdrawal from stimulants such as cocaine and methamphetamine is characterized by fatigue, depression, increased appetite, and intense cravings rather than the acute medical risks seen with alcohol or benzodiazepines. Your detox partner facility's clinical team provides supportive care, psychiatric monitoring, and nutritional support to help you through this period. Once stabilized, you transition to Desert Recovery Centers for residential treatment, where the deeper therapeutic work for stimulant addiction begins.",
                   },
                   {
                     title: "Polysubstance Detox",
-                    desc: "Many of our clients use more than one substance. Polysubstance detox requires heightened clinical oversight because withdrawal syndromes can interact and compound each other. Our physicians are experienced in managing complex detox cases and design protocols that address all substances involved simultaneously.",
+                    desc: "Polysubstance dependence requires careful coordination of withdrawal management for each substance involved. Our partner detox facilities have physicians experienced in managing complex polysubstance detox cases, with the clinical expertise to safely sequence and monitor multi-substance withdrawal.",
                   },
                 ].map((item, i) => (
                   <div key={i} className="border-l-2 border-gold/40 pl-6">
@@ -274,34 +247,32 @@ export default function DetoxPage() {
               Clinical Excellence
             </span>
             <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4 mb-8">
-              Medical Support Available During Detox
+              Medical Support During Medical Detox
             </h2>
             <p className="text-gray-600 leading-relaxed text-lg mb-6">
-              Desert Recovery Centers provides a level of medical oversight
-              during detox that reflects our commitment to client safety and
-              comfort.
+              The medical detox partners we work with provide a level of medical oversight that reflects a shared commitment to client safety and comfort.
             </p>
             <div className="space-y-4">
               {[
                 {
                   title: "Physician-Led Protocols",
-                  desc: "Every detox protocol at DRC is designed and supervised by a licensed physician with experience in addiction medicine. Your physician evaluates you upon admission, oversees your medication regimen, and makes daily adjustments based on your symptom progression.",
+                  desc: "Every detox protocol at the partner detox facility is designed and supervised by a licensed physician with experience in addiction medicine. The physician evaluates you upon admission, oversees your medication regimen, and makes daily adjustments based on your symptom progression.",
                 },
                 {
                   title: "24/7 Nursing Care",
-                  desc: "Our registered nurses are on-site around the clock during your detox. They monitor your vital signs, administer medications, assess your comfort level, and escalate any concerns to the supervising physician immediately.",
+                  desc: "Registered nurses at the partner detox facility are on-site around the clock during your detox. They monitor your vital signs, administer medications, assess your comfort level, and escalate any concerns to the supervising physician immediately.",
                 },
                 {
                   title: "Psychiatric Assessment",
-                  desc: "Many people entering detox also experience depression, anxiety, trauma, or other mental health conditions. Our psychiatric team conducts evaluations during the detox phase so that these conditions can be addressed from the very beginning of your treatment.",
+                  desc: "Many people entering detox also experience depression, anxiety, trauma, or other mental health conditions. The partner detox facility&apos;s psychiatric team conducts evaluations during the detox phase so that these conditions can be flagged for the DRC clinical team to address from the very beginning of residential treatment.",
                 },
                 {
                   title: "Comfort-Focused Environment",
-                  desc: "Detox at DRC takes place in a luxury residential setting, not a hospital. You have access to private or semi-private rooms, chef-prepared meals, and a calm environment designed to support the healing process from the first day.",
+                  desc: "Our medical detox partners offer comfortable residential or sub-acute medical settings, not chaotic hospital wards. You have access to private or semi-private rooms and a calm environment designed to support the healing process from the first day.",
                 },
                 {
                   title: "Seamless Treatment Transition",
-                  desc: "Because detox and residential treatment happen within the same program at DRC, there is no gap between completing detox and beginning therapy. Your clinical team begins developing your treatment plan during detox so you transition directly into the next phase of care.",
+                  desc: "Because DRC coordinates the entire detox-to-residential handoff, there is no gap between completing detox at the partner facility and beginning therapy at Desert Recovery Centers. Our DRC clinical team begins developing your treatment plan during the detox phase so you transition directly into the next phase of care.",
                 },
               ].map((item, i) => (
                 <div
@@ -342,16 +313,17 @@ export default function DetoxPage() {
                 withdrawal symptoms may persist for one to two weeks, though
                 the acute phase is typically shorter. Benzodiazepine detox
                 timelines are the most variable and can range from two weeks
-                to several months depending on the taper schedule your
-                physician designs.
+                to several months depending on the taper schedule designed
+                by the supervising physician at the detox facility.
               </p>
               <p className="text-gray-600 leading-relaxed text-lg mb-4">
-                At Desert Recovery Centers, your medical team assesses your
-                progress daily and adjusts your protocol to match your
-                body&apos;s response. We do not rush detox. The goal is
-                a safe, thorough withdrawal process that positions you to
-                engage meaningfully in the residential treatment that
-                follows.
+                At your medical detox partner facility, the clinical team
+                assesses your progress daily and adjusts your protocol to
+                match your body&apos;s response. Detox is not rushed — the
+                goal is a safe, thorough withdrawal process that positions
+                you to engage meaningfully in residential treatment. Once
+                your medical team determines you are stable, you transition
+                into Desert Recovery Centers for the next phase of care.
               </p>
               <p className="text-gray-600 leading-relaxed text-lg">
                 If you are unsure how long detox might take in your
@@ -399,11 +371,7 @@ export default function DetoxPage() {
                 >
                   residential treatment
                 </Link>
-                . There is no waiting period, no transfer to a different
-                facility, and no disruption in your care. Your clinical team
-                begins planning your residential treatment during the detox
-                phase, so you move from medical stabilization to active
-                therapy without missing a day.
+                . Our DRC clinical team coordinates with your detox partner&apos;s care team to plan your residential treatment so the transition into DRC is seamless. You move from medical stabilization to active therapy without missing a day.
               </p>
               <p className="text-gray-600 leading-relaxed text-lg mb-4">
                 In residential treatment, you will engage in individual
@@ -451,29 +419,33 @@ export default function DetoxPage() {
               Why Desert Recovery Centers
             </span>
             <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4 mb-8">
-              Why Choose DRC for Detox
+              Why Choose DRC for Treatment Following Detox
             </h2>
             <div className="space-y-4">
               {[
                 {
                   title: "Maximum 10 Beds Per Facility",
-                  desc: "Our intentionally small program ensures that every client receives highly individualized medical attention during detox. You are never one of dozens — our staff knows your name, your history, and your needs.",
+                  desc: "Our intentionally small residential program ensures every client receives highly individualized clinical attention. You are never one of dozens — our staff knows your name, your history, and your treatment goals.",
+                },
+                {
+                  title: "Doctoral-Level Clinical Leadership",
+                  desc: "Desert Recovery Centers is led by licensed clinical psychologists with doctoral-level training in evidence-based interventions. The depth of clinical expertise in residential treatment is one of the strongest predictors of long-term recovery outcomes.",
                 },
                 {
                   title: "Joint Commission Accreditation",
                   desc: "Desert Recovery Centers holds Joint Commission Gold Seal accreditation, the highest standard of quality and patient safety in behavioral healthcare. This accreditation reflects our commitment to clinical excellence at every level of care.",
                 },
                 {
-                  title: "Luxury Comfort During a Difficult Process",
-                  desc: "Detox is physically demanding. Our luxury residential environment — private rooms, chef-prepared nutrition, serene Arizona surroundings — is designed to make this challenging process as comfortable as possible.",
+                  title: "Integrated Dual Diagnosis Expertise",
+                  desc: "Many clients arrive with co-occurring mental health conditions that complicate recovery. Our psychiatric team and licensed clinical psychologists treat depression, anxiety, trauma, and other conditions alongside substance use disorders from the first day of residential treatment.",
                 },
                 {
-                  title: "Integrated Dual Diagnosis Care",
-                  desc: "Many clients arrive with co-occurring mental health conditions that complicate withdrawal. Our psychiatric team evaluates every client during detox so that depression, anxiety, trauma, and other conditions are identified and addressed from day one.",
+                  title: "BridgeWork™ Skill Integration Program",
+                  desc: "BridgeWork is a proprietary clinician-led program developed in-house at Desert Recovery Centers. It provides 1 to 2 additional focused sessions per week to help clients practice and internalize CBT, DBT, trauma processing, and coping skills under real-world pressure.",
                 },
                 {
-                  title: "No Gap Between Detox and Treatment",
-                  desc: "At many facilities, clients complete detox and then wait — sometimes days or weeks — for a treatment bed. At DRC, detox and residential treatment are part of the same program. The transition is immediate and seamless.",
+                  title: "Coordinated Detox-to-Residential Handoff",
+                  desc: "Our admissions team coordinates the entire process — from intake at a trusted detox partner through transition into DRC residential treatment. There is no waiting period or gap; the transition is planned during detox so you move directly into the next phase of care.",
                 },
               ].map((item, i) => (
                 <div
@@ -497,22 +469,21 @@ export default function DetoxPage() {
       <AEOBlock
         entries={[
           {
-            question:
-              "What is drug and alcohol detox at Desert Recovery Centers?",
+            question: "Does DRC offer medical detox?",
             answer:
-              "Desert Recovery Centers (a Joint Commission accredited luxury treatment center in Arizona) provides medically supervised drug and alcohol detoxification. With a maximum of 10 beds per facility, physician-designed protocols, and 24/7 nursing care, clients receive individualized medical oversight throughout the withdrawal process in a comfortable residential setting.",
+              "Desert Recovery Centers coordinates medical detox through trusted medical detox partner facilities. Detox itself is performed at a partner facility staffed with physicians and 24/7 nursing. Once detox is complete, clients transition directly into DRC's residential treatment program for the next phase of care.",
           },
           {
             question:
-              "How does Desert Recovery Centers manage withdrawal symptoms?",
+              "What detox services are provided at Desert Recovery Centers?",
             answer:
-              "DRC uses evidence-based, physician-led detox protocols including FDA-approved medications to manage withdrawal symptoms for alcohol, opioids, benzodiazepines, and stimulants. Registered nurses monitor vital signs around the clock, and protocols are adjusted daily based on each client's symptom progression and medical needs.",
+              "DRC does not perform medical detox on-site. Instead, we coordinate detox through partnered medical detox facilities equipped to safely manage withdrawal, then receive clients into our residential treatment program for therapy, medication management, and long-term recovery work.",
           },
           {
             question:
-              "What happens after detox at Desert Recovery Centers?",
+              "Will I detox at the same place I do residential treatment?",
             answer:
-              "After completing detox, clients transition directly into residential treatment at Desert Recovery Centers with no waiting period. The clinical team begins developing an individualized treatment plan during the detox phase, ensuring a seamless move into individual therapy, group counseling, psychiatric care, and holistic programming.",
+              "No — detox is performed at one of our partner medical detox facilities, then you transition to a Desert Recovery Centers residential location (Glendale or Scottsdale) for residential treatment. Our admissions team coordinates the entire process so the handoff is seamless.",
           },
         ]}
       />

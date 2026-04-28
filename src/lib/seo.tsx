@@ -149,21 +149,6 @@ export function AllLocalBusinessSchemas() {
   );
 }
 
-export function FAQPageSchema() {
-  return ld({
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: siteData.faqs.map((faq) => ({
-      "@type": "Question",
-      name: faq.q,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: faq.a,
-      },
-    })),
-  });
-}
-
 export function BreadcrumbSchema({ items }: { items: { name: string; path: string }[] }) {
   return ld({
     "@context": "https://schema.org",
