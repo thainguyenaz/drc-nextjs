@@ -115,7 +115,7 @@ export default function LocationsSection() {
                   </div>
                   <div className="flex flex-col sm:flex-row gap-3">
                     <a
-                      href={`/facilities/${location.name.toLowerCase()}`}
+                      href={location.href}
                       className="text-center bg-gold hover:bg-gold-dark text-white font-semibold text-sm px-6 py-3 rounded-xl transition-colors cursor-pointer"
                     >
                       Explore Facility

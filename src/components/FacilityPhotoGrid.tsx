@@ -39,7 +39,7 @@ export default function FacilityPhotoGrid() {
               Private rooms, resort-style amenities, and serene desert surroundings create the ideal environment for deep healing and personal transformation.
             </p>
             <a
-              href="/facilities/glendale"
+              href="/locations/glendale"
               className="bg-sage hover:bg-forest text-white font-semibold text-sm px-6 py-3 rounded-xl transition-colors cursor-pointer inline-block"
             >
               Explore Our Facilities

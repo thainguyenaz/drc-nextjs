@@ -187,7 +187,7 @@ const linkMap: Record<string, RelatedLink[]> = {
     { label: "BridgeWork Therapy", href: "/treatments/bridgework" },
     { label: "Trauma Therapy", href: "/treatments/trauma-therapy" },
     { label: "PTSD Treatment", href: "/mental-health/ptsd-treatment" },
-    { label: "Our Facilities", href: "/facilities/glendale" },
+    { label: "Our Facilities", href: "/locations/glendale" },
   ],
   "/treatments/bridgework": [
     { label: "Holistic Therapies", href: "/treatments/holistic-therapies" },

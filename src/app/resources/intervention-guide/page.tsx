@@ -376,7 +376,7 @@ export default function InterventionGuidePage() {
                   { label: "Dual Diagnosis Treatment", href: "/treatments/dual-diagnosis-treatment" },
                   { label: "Medical Detox Guide", href: "/resources/detox-guide" },
                   { label: "Rehab FAQ", href: "/resources/faq" },
-                  { label: "Our Facilities", href: "/facilities/glendale" },
+                  { label: "Our Facilities", href: "/locations/glendale" },
                   { label: "Addiction Treatment Programs", href: "/addiction-treatment" },
                 ].map((link) => (
                   <a

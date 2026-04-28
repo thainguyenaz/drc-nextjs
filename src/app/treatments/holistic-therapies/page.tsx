@@ -196,13 +196,13 @@ export default function HolisticPage() {
                 Gourmet, nutritionist-designed meals fuel the body. Resort-style amenities, pools, tennis courts, basketball courts, encourage physical activity and healthy recreation. The environment itself becomes part of the healing process.
               </p>
               <div className="flex flex-wrap gap-3">
-                <a href="/facilities/glendale" className="text-center bg-gold hover:bg-gold-dark text-white font-semibold text-sm px-6 py-3 rounded-xl transition-colors cursor-pointer">
+                <a href="/locations/glendale" className="text-center bg-gold hover:bg-gold-dark text-white font-semibold text-sm px-6 py-3 rounded-xl transition-colors cursor-pointer">
                   Glendale
                 </a>
-                <a href="/facilities/scottsdale" className="text-center bg-gold hover:bg-gold-dark text-white font-semibold text-sm px-6 py-3 rounded-xl transition-colors cursor-pointer">
+                <a href="/locations/scottsdale" className="text-center bg-gold hover:bg-gold-dark text-white font-semibold text-sm px-6 py-3 rounded-xl transition-colors cursor-pointer">
                   Scottsdale
                 </a>
-                <a href="/facilities/phoenix" className="text-center bg-gold hover:bg-gold-dark text-white font-semibold text-sm px-6 py-3 rounded-xl transition-colors cursor-pointer">
+                <a href="/locations/phoenix-php-iop" className="text-center bg-gold hover:bg-gold-dark text-white font-semibold text-sm px-6 py-3 rounded-xl transition-colors cursor-pointer">
                   Phoenix
                 </a>
               </div>

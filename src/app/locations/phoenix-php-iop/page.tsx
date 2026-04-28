@@ -21,12 +21,12 @@ export const metadata: Metadata = {
   title: "PHP & IOP Mental Health and Addiction Treatment in Phoenix, AZ | DRC",
   description:
     "Partial hospitalization and intensive outpatient addiction and mental health treatment in Phoenix, AZ. Call (602) 905-8070 to verify insurance.",
-  alternates: { canonical: `${SITE_URL}/locations/phoenix/` },
+  alternates: { canonical: `${SITE_URL}/locations/phoenix-php-iop/` },
   openGraph: {
     title: "PHP & IOP Mental Health and Addiction Treatment in Phoenix, AZ | DRC",
     description:
       "Partial hospitalization and intensive outpatient addiction and mental health treatment in Phoenix, AZ. Call (602) 905-8070 to verify insurance.",
-    url: `${SITE_URL}/locations/phoenix/`,
+    url: `${SITE_URL}/locations/phoenix-php-iop/`,
     images: [
       {
         url: `${SITE_URL}/images/locations/phoenix/phoenix-lobby-2.jpg`,

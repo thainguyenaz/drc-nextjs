@@ -315,7 +315,7 @@ export default function LuxuryRehabWorthItPage() {
               <a href="tel:+14809313617" className="bg-gold hover:bg-gold-dark text-white font-semibold text-sm px-6 py-3 rounded-xl transition-colors cursor-pointer">
                 Call (480) 931-3617
               </a>
-              <a href="/facilities/scottsdale" className="border border-sage text-sage hover:bg-sage hover:text-white font-semibold text-sm px-6 py-3 rounded-xl transition-colors cursor-pointer">
+              <a href="/locations/scottsdale" className="border border-sage text-sage hover:bg-sage hover:text-white font-semibold text-sm px-6 py-3 rounded-xl transition-colors cursor-pointer">
                 Tour Our Facilities
               </a>
             </div>
@@ -324,7 +324,7 @@ export default function LuxuryRehabWorthItPage() {
               <h3 className="font-display text-lg text-forest font-semibold mb-4">Related Resources</h3>
               <div className="flex flex-wrap gap-3">
                 {[
-                  { label: "Our Facilities", href: "/facilities/glendale" },
+                  { label: "Our Facilities", href: "/locations/glendale" },
                   { label: "Treatment Therapies", href: "/treatments" },
                   { label: "Dual Diagnosis Treatment", href: "/treatments/dual-diagnosis-treatment" },
                   { label: "Rehab FAQ", href: "/resources/faq" },

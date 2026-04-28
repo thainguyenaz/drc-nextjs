@@ -9,6 +9,7 @@ export const siteData = {
   locations: [
     {
       name: "Glendale",
+      href: "/locations/glendale",
       address: "8105 W Frier Dr, Glendale, AZ 85303",
       phone: "(623) 323-1012",
       phoneTel: "+16233231012",
@@ -22,6 +23,7 @@ export const siteData = {
     },
     {
       name: "Scottsdale",
+      href: "/locations/scottsdale",
       address: "23222 N Church Rd, Scottsdale, AZ 85255",
       phone: "(480) 931-3617",
       phoneTel: "+14809313617",
@@ -34,6 +36,7 @@ export const siteData = {
     },
     {
       name: "Phoenix PHP/IOP",
+      href: "/locations/phoenix-php-iop",
       address: "4160 N. 108th Ave, Phoenix, AZ 85037",
       phone: "(602) 905-8070",
       phoneTel: "+16029058070",
@@ -46,6 +49,7 @@ export const siteData = {
     },
     {
       name: "Phoenix TMS",
+      href: "/treatments/tms-therapy",
       address: "4160 N. 108th Ave, Phoenix, AZ 85037",
       phone: "(602) 905-8070",
       phoneTel: "+16029058070",
@@ -58,6 +62,7 @@ export const siteData = {
     },
     {
       name: "Phoenix PHP Living",
+      href: "/locations/phoenix-living",
       address: "1623 W Moody Trail, Phoenix, AZ 85085",
       phone: "(602) 905-8070",
       phoneTel: "+16029058070",
