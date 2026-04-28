@@ -36,9 +36,15 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
   },
+  // CUTOVER TODO: After DNS flip to desertrecoverycenters.com, enable
+  // Vercel Standard Deployment Protection on drc-nextjs.vercel.app to prevent
+  // duplicate-content indexing. Settings: Project Settings → Deployment
+  // Protection → Standard Protection. Production custom domain stays public;
+  // auto-generated vercel.app URL becomes auth-only.
+  // See audit doc P0 #4. Do not remove this comment until cutover is complete.
   robots: {
-    index: true,
-    follow: true,
+    index: process.env.VERCEL_ENV === "production",
+    follow: process.env.VERCEL_ENV === "production",
   },
 };
 

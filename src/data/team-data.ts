@@ -36,7 +36,7 @@ export const teamMembers: TeamMember[] = [
     jobTitle: "Medical Director",
     credentials: ["MD", "Board Certified Psychiatrist"],
     description:
-      "Dr. Reyes Topete is the Medical Director at Desert Recovery Centers. As a board-certified physician, he oversees all medical detox protocols, medication-assisted treatment, and psychiatric care across the organization.",
+      "Dr. Reyes Topete is the Medical Director at Desert Recovery Centers. As a board-certified physician, he oversees all medical care, including coordination with detox partners and post-detox medical management, medication-assisted treatment, and psychiatric care across the organization.",
     image: "/images/team/Dr._Reyes_Topete-cropped.jpg",
     url: "https://desertrecoverycenters.com/team/dr-reyes-topete-md/",
   },
@@ -76,7 +76,7 @@ export const teamMembers: TeamMember[] = [
     jobTitle: "Registered Nurse",
     credentials: ["RN"],
     description:
-      "Erica Tolley is a Registered Nurse at Desert Recovery Centers providing medical care and clinical support throughout the detox and residential treatment process.",
+      "Erica Tolley is a Registered Nurse at Desert Recovery Centers providing medical care and clinical support throughout the residential treatment process and post-detox medical management.",
     image: "/images/team/Erica-Tolley-Photo.jpg",
     url: "https://desertrecoverycenters.com/team/erica-tolley/",
   },

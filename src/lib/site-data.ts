@@ -16,7 +16,7 @@ export const siteData = {
       sqft: "7,500",
       description:
         "Our flagship residential treatment center offering comprehensive mental health and addiction programs in a luxury home-like setting.",
-      programs: ["Residential", "PHP", "IOP", "OP", "Detox"],
+      programs: ["Residential", "PHP", "IOP", "OP"],
       amenities: ["Basketball Court", "Tennis Court", "Pool", "Gym", "Billiards", "Massage Room"],
       image: "/images/glendale/Glendale-Front.jpg",
       sameAs: ["https://www.yelp.com/biz/desert-recovery-centers-glendale"],
@@ -113,39 +113,5 @@ export const siteData = {
     { name: "Gambling", href: "/addiction/gambling-addiction-treatment", description: "Behavioral addiction treatment for compulsive gambling." },
     { name: "Sex Addiction", href: "/addiction/sex-addiction-treatment", description: "Compassionate treatment for compulsive sexual behavior." },
     { name: "Stimulants", href: "/addiction/stimulant-addiction-treatment", description: "Treatment for cocaine, meth, and other stimulant addictions." },
-  ],
-  faqs: [
-    {
-      q: "What types of insurance do you accept?",
-      a: "Desert Recovery Centers is in-network with most major insurance providers, including Aetna, Blue Cross Blue Shield, Cigna, UnitedHealthcare, and many more. Our admissions team will verify your benefits at no cost and walk you through your coverage before you begin treatment.",
-    },
-    {
-      q: "How long does treatment typically last?",
-      a: "Treatment duration varies by individual need. Residential programs typically range from 30 days. PHP runs 4-6 weeks with 5-6 hours of daily programming, and IOP is usually 8-12 weeks meeting 3-4 times per week. Your clinical team will adjust the timeline as needed.",
-    },
-    {
-      q: "Do you treat both mental health and addiction?",
-      a: "Yes. Desert Recovery Centers specializes in dual diagnosis treatment, addressing mental health conditions and substance use disorders simultaneously. Research shows that treating both conditions together leads to significantly better long-term outcomes.",
-    },
-    {
-      q: "What does a typical day look like in residential treatment?",
-      a: "A typical day includes morning mindfulness or yoga, individual therapy, group therapy sessions, psychoeducation, recreational activities, and evening reflection. Clients enjoy gourmet meals, exercise, and personal downtime. Weekends include family visiting hours and experiential activities.",
-    },
-    {
-      q: "Is the admissions process confidential?",
-      a: "Absolutely. Every aspect of your treatment is completely confidential and protected by HIPAA and 42 CFR Part 2 federal regulations. We maintain strict confidentiality protocols, especially for professionals and public figures.",
-    },
-    {
-      q: "Can family members visit during treatment?",
-      a: "Yes. We encourage family involvement as part of the healing process. Family members can visit during designated hours and are invited to participate in our family therapy program, including education sessions, joint therapy, and support groups.",
-    },
-    {
-      q: "What happens after I complete treatment?",
-      a: "Your clinical team develops a comprehensive aftercare plan before discharge, including referrals for ongoing therapy, support group recommendations, and connection to our alumni network with monthly events, check-in calls, and a private community.",
-    },
-    {
-      q: "How do I know if I need residential vs. outpatient treatment?",
-      a: "The right level of care depends on the severity of your condition, your home environment, previous treatment history, and daily responsibilities. During your free clinical assessment, our admissions team will recommend the best level of care, no pressure, no obligation.",
-    },
   ],
 } as const;
