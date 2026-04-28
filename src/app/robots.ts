@@ -5,7 +5,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
-      disallow: ["/wp-admin/", "/wp-login.php/"],
+      disallow: ["/api/"],
     },
     sitemap: "https://desertrecoverycenters.com/sitemap.xml",
   };

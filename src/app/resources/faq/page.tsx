@@ -221,7 +221,7 @@ export default function FAQPage() {
                 { label: "Intervention Guide", href: "/resources/intervention-guide" },
                 { label: "Medical Detox Guide", href: "/resources/detox-guide" },
                 { label: "Mental Health Assessment", href: "/resources/mental-health-assessment" },
-                { label: "Our Facilities", href: "/facilities/glendale" },
+                { label: "Our Facilities", href: "/locations/glendale" },
                 { label: "Treatment Therapies", href: "/treatments" },
               ].map((link) => (
                 <a
