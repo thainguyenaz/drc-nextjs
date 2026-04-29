@@ -54,6 +54,67 @@ export default function PrivacyPolicyPage() {
               Our website uses cookies and similar technologies to improve functionality and analyze usage patterns. You can control cookie preferences through your browser settings.
             </p>
 
+            <h2>SMS Communications and TCPA Disclosure</h2>
+            <p>
+              Desert Recovery Centers may send SMS (text message) communications to phone numbers provided through our website forms, including the Insurance Verification form, Get Help form, and Contact form. By providing your phone number on any of our forms, you expressly consent to receive SMS messages from Desert Recovery Centers under the Telephone Consumer Protection Act (TCPA).
+            </p>
+
+            <h3>Types of Messages</h3>
+            <p>You may receive the following types of SMS communications:</p>
+            <ul>
+              <li>Admissions follow-up and appointment coordination</li>
+              <li>Insurance verification status updates</li>
+              <li>Pre-admission information requests</li>
+              <li>Treatment-related care coordination (HIPAA-protected — see HIPAA Notice)</li>
+              <li>Marketing messages about Desert Recovery Centers programs and services</li>
+            </ul>
+
+            <h3>Message Frequency</h3>
+            <p>
+              Message frequency varies based on the nature of your inquiry and the stage of admissions or treatment coordination. Marketing messages are sent no more than four times per month. Operational messages (appointment reminders, admissions coordination, treatment-related communications) are sent as needed.
+            </p>
+
+            <h3>Opt-Out</h3>
+            <p>
+              You may opt out of SMS communications at any time by replying STOP to any message you receive from us. After replying STOP, you will receive a confirmation message and will not receive further marketing or operational SMS communications from Desert Recovery Centers, except where required for active treatment care coordination as defined under HIPAA.
+            </p>
+            <p>
+              To re-subscribe after opting out, reply START or contact our admissions team at (480) 931-3617.
+            </p>
+
+            <h3>Message and Data Rates</h3>
+            <p>
+              Standard message and data rates may apply based on your wireless carrier plan. Desert Recovery Centers does not charge a fee for SMS communications, but your carrier may. Contact your wireless carrier for details on your messaging plan.
+            </p>
+
+            <h3>Carrier Liability</h3>
+            <p>
+              Wireless carriers, including but not limited to AT&amp;T, Verizon, T-Mobile, and Sprint, are not liable for delayed or undelivered messages sent or received through their networks. Desert Recovery Centers is not responsible for SMS messages that fail to deliver due to carrier issues, network outages, or device-related problems.
+            </p>
+
+            <h3>Help</h3>
+            <p>
+              For help with SMS communications, reply HELP to any message or contact our admissions team at admissions@desertrecoverycenters.com or (480) 931-3617.
+            </p>
+
+            <h3>Eligibility</h3>
+            <p>
+              SMS communications are available to U.S. mobile phone subscribers age 18 and older, or to a parent or legal guardian of a minor seeking treatment. By providing a phone number, you represent that you are authorized to consent to SMS communications on behalf of the phone number provided.
+            </p>
+
+            <h3>HIPAA Notice</h3>
+            <p>
+              SMS communications related to active treatment may include protected health information (PHI). All such communications are governed by the Desert Recovery Centers HIPAA Notice of Privacy Practices, available at /hipaa-notice. By consenting to SMS, you acknowledge that standard SMS is not an encrypted communication channel, and you accept the inherent risks of unencrypted electronic communication for routine, non-urgent care coordination.
+            </p>
+
+            <h3>Changes to This Section</h3>
+            <p>
+              Desert Recovery Centers may update this SMS Communications and TCPA Disclosure section from time to time. Material changes will be communicated through our website and, where required, through SMS notice to existing subscribers.
+            </p>
+            <p>
+              For full disclosures regarding all data we collect, including SMS metadata, see the relevant sections of this Privacy Policy.
+            </p>
+
             <h2>Contact Us</h2>
             <p>
               If you have questions about this privacy policy or how your information is handled, please contact us at <a href="tel:+14809313617" className="text-sage hover:text-gold">(480) 931-3617</a> or email us at <a href="mailto:info@desertrecoverycenters.com" className="text-sage hover:text-gold">info@desertrecoverycenters.com</a>.
