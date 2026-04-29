@@ -11,7 +11,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import AnimatedSection from "@/components/animated/AnimatedSection";
 import Image from "next/image";
 
-const SITE_URL = "https://www.desertrecoverycenters.com";
+const SITE_URL = "https://desertrecoverycenters.com";
 const PAGE_PATH = "/adolescent/bipolar";
 const PAGE_TITLE = "Adolescent Bipolar Disorder Treatment Arizona | Teen Bipolar | Desert Recovery Centers";
 

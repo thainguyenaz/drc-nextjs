@@ -11,7 +11,7 @@ import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
 import AdolescentContent from "./AdolescentContent";
 import AdolescentChecklist from "./AdolescentChecklist";
 
-const SITE_URL = "https://www.desertrecoverycenters.com";
+const SITE_URL = "https://desertrecoverycenters.com";
 
 export const metadata: Metadata = {
   title:

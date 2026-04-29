@@ -28,11 +28,11 @@ export const metadata: Metadata = {
 const blogSchema = {
   "@context": "https://schema.org",
   "@type": "Blog",
-  "@id": "https://www.desertrecoverycenters.com/resources/blog#blog",
+  "@id": "https://desertrecoverycenters.com/resources/blog#blog",
   name: "Desert Recovery Centers Recovery Blog",
   description: "Expert articles on addiction, mental health, recovery, and treatment written by licensed clinicians.",
-  url: "https://www.desertrecoverycenters.com/resources/blog",
-  publisher: { "@id": "https://www.desertrecoverycenters.com/#organization" },
+  url: "https://desertrecoverycenters.com/resources/blog",
+  publisher: { "@id": "https://desertrecoverycenters.com/#organization" },
   author: {
     "@type": "Person",
     name: "Dr. An Nguyen",
@@ -47,9 +47,9 @@ export default function BlogIndexPage() {
       <Navigation />
       <Breadcrumb
         items={[
-          { name: "Home", url: "https://www.desertrecoverycenters.com" },
-          { name: "Resources", url: "https://www.desertrecoverycenters.com/resources" },
-          { name: "Blog", url: "https://www.desertrecoverycenters.com/resources/blog" },
+          { name: "Home", url: "https://desertrecoverycenters.com" },
+          { name: "Resources", url: "https://desertrecoverycenters.com/resources" },
+          { name: "Blog", url: "https://desertrecoverycenters.com/resources/blog" },
         ]}
       />
       <PageHero

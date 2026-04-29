@@ -6,7 +6,7 @@ import LuxuryVsTraditionalContent from "./LuxuryVsTraditionalContent";
 
 const CANONICAL = "https://desertrecoverycenters.com/resources/luxury-vs-traditional-rehab";
 const SITE_NAME = "Desert Recovery Centers";
-const OG_IMAGE = "https://www.desertrecoverycenters.com/logo.png";
+const OG_IMAGE = "https://desertrecoverycenters.com/logo.png";
 const PAGE_TITLE =
   "Luxury Rehab vs Traditional Rehab: Key Differences | Desert Recovery Centers";
 const PAGE_DESCRIPTION =
