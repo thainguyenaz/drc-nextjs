@@ -6,7 +6,7 @@ import TrustBar from "@/components/TrustBar";
 import IntroSection from "@/components/IntroSection";
 import { SpeakableSchema, VideoSchemas } from "@/lib/seo";
 import SchemaScript from "@/components/SchemaScript";
-import { getFAQSchema } from "@/lib/schema";
+import { getFAQSchema, getWebSiteSchema } from "@/lib/schema";
 import { faqData } from "@/data/faq-data";
 
 export const metadata: Metadata = {
@@ -32,57 +32,6 @@ const CTASection = dynamic(() => import("@/components/CTASection"));
 const Footer = dynamic(() => import("@/components/Footer"));
 const AEOBlock = dynamic(() => import("@/components/AEOBlock"));
 
-const homepageOrgSchema = {
-  "@context": "https://schema.org",
-  "@type": ["Organization", "MedicalOrganization"],
-  "@id": "https://www.desertrecoverycenters.com/#organization",
-  "name": "Desert Recovery Centers",
-  "url": "https://www.desertrecoverycenters.com",
-  "logo": "https://www.desertrecoverycenters.com/images/branding/drc-logo-black.png",
-  "description": "Joint Commission accredited luxury behavioral health treatment organization in Arizona specializing in residential treatment, PHP, IOP, and outpatient programs for addiction and mental health.",
-  "telephone": "+14809313617",
-  "email": "contact@desertrecoverycenters.com",
-  "address": [
-    { "@type": "PostalAddress", "streetAddress": "8105 W Frier Dr", "addressLocality": "Glendale", "addressRegion": "AZ", "postalCode": "85303" },
-    { "@type": "PostalAddress", "streetAddress": "23222 N Church Rd", "addressLocality": "Scottsdale", "addressRegion": "AZ", "postalCode": "85255" },
-    { "@type": "PostalAddress", "streetAddress": "4160 N. 108th Ave", "addressLocality": "Phoenix", "addressRegion": "AZ", "postalCode": "85037" },
-  ],
-  "hasCredential": [
-    { "@type": "EducationalOccupationalCredential", "name": "Joint Commission Accreditation" },
-    { "@type": "EducationalOccupationalCredential", "name": "LegitScript Certification" },
-  ],
-  "sameAs": [
-    "https://www.facebook.com/desertrecoverycenters",
-    "https://www.instagram.com/desertrecoverycenters",
-    "https://www.youtube.com/@desertrecoverycenters",
-  ],
-  "foundingDate": "2020",
-  "areaServed": { "@type": "State", "name": "Arizona" },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "5.0",
-    "reviewCount": "47",
-    "bestRating": "5",
-    "worstRating": "1",
-  },
-};
-
-const homepageWebSiteSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "@id": "https://www.desertrecoverycenters.com/#website",
-  "url": "https://www.desertrecoverycenters.com",
-  "name": "Desert Recovery Centers",
-  "description": "Luxury addiction and mental health treatment in Arizona",
-  "publisher": { "@id": "https://www.desertrecoverycenters.com/#organization" },
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": { "@type": "EntryPoint", "urlTemplate": "https://www.desertrecoverycenters.com/search?q={search_term_string}" },
-    "query-input": "required name=search_term_string",
-  },
-};
-
-
 const howToSchema = {
   "@context": "https://schema.org",
   "@type": "HowTo",
@@ -102,7 +51,7 @@ export default function Home() {
     <>
       <SpeakableSchema url="/" cssSelectors={["[data-speakable]"]} />
       <VideoSchemas path="/" />
-      <SchemaScript schema={[homepageOrgSchema, homepageWebSiteSchema, howToSchema, getFAQSchema(faqData["homepage"])]} />
+      <SchemaScript schema={[getWebSiteSchema(), howToSchema, getFAQSchema(faqData["homepage"])]} />
       <Navigation />
       <Hero />
       <TrustBar />

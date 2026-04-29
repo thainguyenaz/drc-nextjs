@@ -172,106 +172,7 @@ const clinicSchema = {
     "Tempe",
     "Chandler",
   ],
-  parentOrganization: {
-    "@type": "Organization",
-    name: "Desert Recovery Centers",
-    url: SITE_URL,
-  },
-};
-
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "Does Desert Recovery Centers treat adolescents?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. Desert Recovery Centers offers PHP, IOP, and outpatient treatment programs for adolescents ages 13 to 17 at our Phoenix location at 4160 N. 108th Ave. Programs are clinically supervised, school compatible, and require active parent involvement throughout treatment.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What is adolescent PHP treatment?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Adolescent PHP, or Partial Hospitalization Program, is a structured outpatient level of care where teens attend treatment 5 to 6 hours per day, 5 days per week. It includes individual therapy, group therapy with age-appropriate peers, family therapy, psychiatric evaluation, and medication management. PHP is appropriate for adolescents in active crisis or stepping down from a higher level of care who do not require overnight hospitalization.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What is adolescent IOP treatment?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Adolescent IOP, or Intensive Outpatient Program, meets 3 hours per day, 3 to 5 days per week. It is designed to be compatible with school schedules, with morning or after-school options. IOP includes group therapy, individual therapy, and family sessions, and is appropriate for teens who are stabilized but still need structured clinical support.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What age range does the adolescent program serve?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Desert Recovery Centers serves adolescents ages 13 to 17 in our PHP, IOP, and outpatient programs. TMS therapy is FDA cleared for adolescents ages 15 and older and is available at our Phoenix location.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Will my teenager be in groups with adults?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "No. Adolescent group therapy at Desert Recovery Centers is age specific. Teens participate in therapeutic groups with peers their own age, not with adult clients. This is a clinical standard and an important part of why adolescent-specific programming exists separately from adult treatment.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can my teenager keep going to school during treatment?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. Our IOP and outpatient programs are designed with school schedules in mind. We offer scheduling options that allow adolescents to attend school while participating in treatment. For teens in PHP, our clinical team works with families and schools to coordinate academic accommodations and communication during the treatment period.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How are parents involved in adolescent treatment?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Parent involvement is not optional at Desert Recovery Centers. It is a required and central part of adolescent treatment. Parents participate in weekly family therapy sessions, receive regular clinical updates from the treatment team, and are educated on how to support their teenager's recovery at home. We treat the family system, not just the teenager.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What mental health conditions do you treat in teenagers?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "We treat adolescent depression, anxiety disorders, PTSD and trauma, OCD, ADHD, bipolar disorder, self-harm behaviors, suicidal ideation, and co-occurring substance use. All treatment is individualized and delivered by licensed clinicians with specific training in adolescent mental health.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Is TMS therapy available for teenagers?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. NeuroStar TMS is FDA cleared for adolescents ages 15 and older with treatment-resistant depression. Our Phoenix location has a dedicated TMS suite integrated into the outpatient program, so TMS sessions can be scheduled alongside your teenager's therapy and psychiatric appointments.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Does insurance cover adolescent mental health treatment?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. Most major commercial insurance plans cover adolescent mental health and addiction treatment, including PHP and IOP levels of care. Under the Mental Health Parity and Addiction Equity Act, insurance companies are required to cover mental health treatment at the same level as medical treatment. Our admissions team verifies your teen's benefits at no cost before treatment begins. Call (602) 905-8070 for a free verification.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How do I get my teenager into treatment?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Call (602) 905-8070 any time, day or night. Our admissions team conducts a brief clinical assessment by phone to understand your teenager's history, symptoms, and what has been tried before. We verify insurance, answer all your questions, and get your teen scheduled. Most adolescents begin treatment within 48 hours of the first call.",
-      },
-    },
-  ],
+  parentOrganization: { "@id": "https://desertrecoverycenters.com/#organization" },
 };
 
 const breadcrumbSchema = {
@@ -291,7 +192,7 @@ const breadcrumbSchema = {
 export default function AdolescentTreatmentPage() {
   return (
     <>
-      <SchemaScript schema={[clinicSchema, faqSchema, breadcrumbSchema, {
+      <SchemaScript schema={[clinicSchema, breadcrumbSchema, {
         "@context": "https://schema.org",
         "@type": "HowTo",
         "name": "How to Get Admitted to Desert Recovery Centers Adolescent Program",

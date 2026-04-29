@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
-import { OrganizationSchema, AllLocalBusinessSchemas } from "@/lib/seo";
 import SchemaScript from "@/components/SchemaScript";
-import { getMedicalOrganizationSchema, getWebSiteSchema, getMedicalBusinessSchema } from "@/lib/schema";
+import { getMedicalOrganizationSchema } from "@/lib/schema";
 import LiveChatLoader from "@/components/LiveChatLoader";
 
 const inter = Inter({
@@ -56,11 +55,9 @@ export default function RootLayout({
   return (
     <html lang="en-US" className={`${inter.variable} ${playfair.variable}`}>
       <head>
-        <SchemaScript schema={[getMedicalOrganizationSchema(), getWebSiteSchema(), getMedicalBusinessSchema()]} />
+        <SchemaScript schema={[getMedicalOrganizationSchema()]} />
       </head>
       <body className="font-body antialiased bg-white">
-        <OrganizationSchema />
-        <AllLocalBusinessSchemas />
         {children}
         <LiveChatLoader />
       </body>

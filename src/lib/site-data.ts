@@ -20,6 +20,7 @@ export const siteData = {
       amenities: ["Basketball Court", "Tennis Court", "Pool", "Gym", "Billiards", "Massage Room"],
       image: "/images/glendale/Glendale-Front.jpg",
       sameAs: ["https://www.yelp.com/biz/desert-recovery-centers-glendale"],
+      licenseNumber: "BH9449",
     },
     {
       name: "Scottsdale",
@@ -33,6 +34,7 @@ export const siteData = {
       amenities: ["Pool", "Tennis Court", "Basketball Court", "Gym", "Massage Room", "Mountain Views"],
       image: "/images/scottsdale/DRC-FRONT-ENTRANCE-NORTH-SCOTTSDALE-08-01-2024-1210August-01-202400002-2.jpg",
       sameAs: [] as string[],
+      licenseNumber: "BH10131",
     },
     {
       name: "Phoenix PHP/IOP",
@@ -46,6 +48,7 @@ export const siteData = {
       amenities: ["Treatment Rooms", "Group Therapy Space"],
       image: "/images/general/accom-group-room.jpg",
       sameAs: [] as string[],
+      licenseNumber: "TC20452",
     },
     {
       name: "Phoenix TMS",

@@ -4,7 +4,7 @@ import PageHero from "@/components/PageHero";
 import AddictionPrograms from "@/components/AddictionPrograms";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { MedicalConditionSchema } from "@/lib/seo";
+import { MedicalConditionSchema, MedicalWebPageSchema } from "@/lib/seo";
 import AEOBlock from "@/components/AEOBlock";
 import RelatedPages from "@/components/RelatedPages";
 import ConditionFAQ from "@/components/ConditionFAQ";
@@ -59,7 +59,8 @@ const faqs = [
 export default function CocaineAddictionPage() {
   return (
     <>
-      <SchemaScript schema={[{"@context":"https://schema.org","@type":"MedicalWebPage","@id":"https://www.desertrecoverycenters.com/addiction/cocaine-addiction-treatment/#webpage","url":"https://www.desertrecoverycenters.com/addiction/cocaine-addiction-treatment/","name":"Cocaine Addiction Treatment Arizona | Desert Recovery Centers","specialty":"Psychiatry","reviewedBy":{"@type":"Person","@id":"https://www.desertrecoverycenters.com/our-team#dr-an-nguyen","name":"Dr. An Nguyen","jobTitle":"Licensed Clinical Psychologist, Clinical Director","worksFor":{"@id":"https://www.desertrecoverycenters.com/#organization"}},"dateModified":"2026-04-05","publisher":{"@id":"https://www.desertrecoverycenters.com/#organization"}}, getFAQSchema(faqData["cocaine-addiction-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/addiction/cocaine-addiction-treatment"))]} />
+      <SchemaScript schema={[getFAQSchema(faqData["cocaine-addiction-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/addiction/cocaine-addiction-treatment"))]} />
+      <MedicalWebPageSchema url="/addiction/cocaine-addiction-treatment" name="Cocaine Addiction Treatment Arizona | Desert Recovery Centers" dateModified="2026-04-05" />
       <MedicalConditionSchema
         name="Cocaine Addiction"
         description="Cocaine addiction is a stimulant use disorder characterized by compulsive cocaine use despite negative consequences. Cocaine floods the brain with dopamine, hijacking the natural reward system and creating intense psychological dependence."

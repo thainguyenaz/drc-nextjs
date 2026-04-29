@@ -4,7 +4,7 @@ import PageHero from "@/components/PageHero";
 import ConditionFAQ from "@/components/ConditionFAQ";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { SpeakableSchema, MedicalConditionSchema } from "@/lib/seo";
+import { SpeakableSchema, MedicalConditionSchema, MedicalWebPageSchema } from "@/lib/seo";
 import AEOBlock from "@/components/AEOBlock";
 import RelatedPages from "@/components/RelatedPages";
 import { getPageMeta } from "@/data/page-metadata";
@@ -56,7 +56,8 @@ const faqs = [
 export default function OCDTreatmentPage() {
   return (
     <>
-      <SchemaScript schema={[getFAQSchema(faqData["ocd-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/mental-health/ocd-treatment")), {"@context":"https://schema.org","@type":"MedicalWebPage","@id":"https://www.desertrecoverycenters.com/mental-health/ocd-treatment/#webpage","url":"https://www.desertrecoverycenters.com/mental-health/ocd-treatment/","name":"OCD Treatment Center Arizona | Desert Recovery Centers","specialty":"Psychiatry","reviewedBy":{"@type":"Person","@id":"https://www.desertrecoverycenters.com/our-team#dr-an-nguyen","name":"Dr. An Nguyen","jobTitle":"Licensed Clinical Psychologist, Clinical Director","worksFor":{"@id":"https://www.desertrecoverycenters.com/#organization"}},"dateModified":"2026-04-05","publisher":{"@id":"https://www.desertrecoverycenters.com/#organization"}}]} />
+      <SchemaScript schema={[getFAQSchema(faqData["ocd-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/mental-health/ocd-treatment"))]} />
+      <MedicalWebPageSchema url="/mental-health/ocd-treatment" name="OCD Treatment Center Arizona | Desert Recovery Centers" dateModified="2026-04-05" />
       <SpeakableSchema url="/mental-health/ocd-treatment" cssSelectors={["[data-speakable]"]} />
       <MedicalConditionSchema
         name="Obsessive-Compulsive Disorder (OCD)"

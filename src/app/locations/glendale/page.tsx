@@ -8,7 +8,7 @@ import VideoLightbox from "@/components/VideoLightbox";
 import ConditionFAQ from "@/components/ConditionFAQ";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { LocalBusinessSchema, BreadcrumbSchema, SpeakableSchema, VideoSchemas } from "@/lib/seo";
+import { LocalBusinessSchema, SpeakableSchema, VideoSchemas } from "@/lib/seo";
 import AEOBlock from "@/components/AEOBlock";
 import dynamic from "next/dynamic";
 const PhotoGallery = dynamic(() => import("@/components/PhotoGallery"), { ssr: false, loading: () => null });
@@ -106,26 +106,9 @@ export default function GlendaleLocationPage() {
       <SchemaScript schema={[
         getFAQSchema(faqData["locations/glendale"]),
         getBreadcrumbSchema(getBreadcrumbsFromPathname("/locations/glendale")),
-        {
-          "@context": "https://schema.org",
-          "@type": ["LocalBusiness", "MedicalClinic"],
-          name: "Desert Recovery Centers — Glendale",
-          address: {
-            "@type": "PostalAddress",
-            streetAddress: "8105 W. Frier Dr.",
-            addressLocality: "Glendale",
-            addressRegion: "AZ",
-            postalCode: "85303",
-          },
-          telephone: "+14809313617",
-          url: "https://desertrecoverycenters.com/locations/glendale",
-          licenseNumber: "BH9449",
-          priceRange: "$$$",
-        },
       ]} />
       <SpeakableSchema url="/locations/glendale" cssSelectors={["[data-speakable]"]} />
       <LocalBusinessSchema index={0} />
-      <BreadcrumbSchema items={[{ name: "Facilities", path: "/locations" }, { name: "Glendale", path: "/locations/glendale" }]} />
       <VideoSchemas path="/locations/glendale/" />
       <Navigation />
       <Breadcrumb items={getBreadcrumbsFromPathname("/locations/glendale")} />

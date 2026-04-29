@@ -4,7 +4,7 @@ import PageHero from "@/components/PageHero";
 import AddictionPrograms from "@/components/AddictionPrograms";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { MedicalConditionSchema } from "@/lib/seo";
+import { MedicalConditionSchema, MedicalWebPageSchema } from "@/lib/seo";
 import AEOBlock from "@/components/AEOBlock";
 import RelatedPages from "@/components/RelatedPages";
 import ConditionFAQ from "@/components/ConditionFAQ";
@@ -57,7 +57,8 @@ const faqs = [
 export default function PrescriptionDrugAddictionPage() {
   return (
     <>
-      <SchemaScript schema={[{"@context":"https://schema.org","@type":"MedicalWebPage","@id":"https://www.desertrecoverycenters.com/addiction/prescription-drug-addiction-treatment/#webpage","url":"https://www.desertrecoverycenters.com/addiction/prescription-drug-addiction-treatment/","name":"Prescription Drug Addiction Treatment Arizona | Desert Recovery Centers","specialty":"Psychiatry","reviewedBy":{"@type":"Person","@id":"https://www.desertrecoverycenters.com/our-team#dr-an-nguyen","name":"Dr. An Nguyen","jobTitle":"Licensed Clinical Psychologist, Clinical Director","worksFor":{"@id":"https://www.desertrecoverycenters.com/#organization"}},"dateModified":"2026-04-05","publisher":{"@id":"https://www.desertrecoverycenters.com/#organization"}}, getFAQSchema(faqData["prescription-drug-addiction-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/addiction/prescription-drug-addiction-treatment"))]} />
+      <SchemaScript schema={[getFAQSchema(faqData["prescription-drug-addiction-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/addiction/prescription-drug-addiction-treatment"))]} />
+      <MedicalWebPageSchema url="/addiction/prescription-drug-addiction-treatment" name="Prescription Drug Addiction Treatment Arizona | Desert Recovery Centers" dateModified="2026-04-05" />
       <MedicalConditionSchema
         name="Prescription Drug Addiction"
         description="Prescription drug addiction involves dependence on opioid painkillers, benzodiazepines, or stimulant medications. Dependence often develops gradually from legitimate medical use, making it difficult to recognize until it has significantly impacted your life."
