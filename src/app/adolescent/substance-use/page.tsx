@@ -11,7 +11,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import AnimatedSection from "@/components/animated/AnimatedSection";
 import Image from "next/image";
 
-const SITE_URL = "https://www.desertrecoverycenters.com";
+const SITE_URL = "https://desertrecoverycenters.com";
 const PAGE_PATH = "/adolescent/substance-use";
 const PAGE_TITLE = "Adolescent Substance Use Treatment Arizona | Teen Drug and Alcohol Treatment | Desert Recovery Centers";
 

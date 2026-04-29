@@ -91,7 +91,7 @@ export async function POST(request: NextRequest) {
               { name: "how_did_you_hear", value: howDidYouHear || "" },
             ],
             context: {
-              pageUri: "https://www.desertrecoverycenters.com/insurance",
+              pageUri: "https://desertrecoverycenters.com/insurance",
               pageName: "Insurance Verification",
             },
           }),
@@ -158,7 +158,7 @@ export async function POST(request: NextRequest) {
         fireGa4Lead({
           formType: "insurance_verification",
           gaCookie,
-          landingPage: "https://www.desertrecoverycenters.com/insurance",
+          landingPage: "https://desertrecoverycenters.com/insurance",
         }),
       ]);
       console.log(

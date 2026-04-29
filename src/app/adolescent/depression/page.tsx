@@ -11,7 +11,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import AnimatedSection from "@/components/animated/AnimatedSection";
 import Image from "next/image";
 
-const SITE_URL = "https://www.desertrecoverycenters.com";
+const SITE_URL = "https://desertrecoverycenters.com";
 const PAGE_PATH = "/adolescent/depression";
 const PAGE_TITLE = "Adolescent Depression Treatment | Desert Recovery Centers Arizona";
 
