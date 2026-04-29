@@ -41,7 +41,7 @@ export default function BlueCrossInsurancePage() {
     <>
       <BreadcrumbSchema
         items={[
-          { name: "Insurance", path: "/insurance/blue-cross" },
+          { name: "Insurance", path: "/insurance" },
           { name: "Blue Cross Blue Shield", path: "/insurance/blue-cross" },
         ]}
       />

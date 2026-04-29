@@ -7,16 +7,23 @@ const SITE_NAME = "Desert Recovery Centers";
 export function getMedicalOrganizationSchema() {
   return {
     "@context": "https://schema.org",
-    "@type": "MedicalOrganization",
+    "@type": ["MedicalOrganization", "Organization"],
+    "@id": `${SITE_URL}/#organization`,
     name: SITE_NAME,
     url: SITE_URL,
     logo: `${SITE_URL}/images/branding/desert-recovery-centers-logo-black-2x.png`,
     image: `${SITE_URL}/images/branding/drlogo-black.png`,
+    description:
+      "Joint Commission accredited luxury behavioral health treatment organization in Arizona specializing in residential treatment, PHP, IOP, and outpatient programs for addiction and mental health.",
     telephone: "(480) 931-3617",
     email: "contact@desertrecoverycenters.com",
-    hasCredential: "Joint Commission Gold Seal Accreditation",
+    foundingDate: "2020",
+    hasCredential: [
+      { "@type": "EducationalOccupationalCredential", name: "Joint Commission Accreditation" },
+      { "@type": "EducationalOccupationalCredential", name: "LegitScript Certification" },
+    ],
     medicalSpecialty: ["Addiction Medicine", "Psychiatry", "Mental Health"],
-    areaServed: "Arizona",
+    areaServed: { "@type": "State", name: "Arizona" },
     address: [
       { "@type": "PostalAddress", streetAddress: "8105 W Frier Dr", addressLocality: "Glendale", addressRegion: "AZ", postalCode: "85303", addressCountry: "US" },
       { "@type": "PostalAddress", streetAddress: "23222 N Church Rd", addressLocality: "Scottsdale", addressRegion: "AZ", postalCode: "85255", addressCountry: "US" },
@@ -205,8 +212,11 @@ export function getWebSiteSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
+    "@id": `${SITE_URL}/#website`,
     name: SITE_NAME,
     url: SITE_URL,
+    description: "Luxury addiction and mental health treatment in Arizona",
+    publisher: { "@id": `${SITE_URL}/#organization` },
     potentialAction: {
       "@type": "SearchAction",
       target: {
@@ -215,35 +225,5 @@ export function getWebSiteSchema() {
       },
       "query-input": "required name=search_term_string",
     },
-  };
-}
-
-export function getMedicalBusinessSchema() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "MedicalBusiness",
-    name: SITE_NAME,
-    url: SITE_URL,
-    telephone: "+14809313617",
-    email: "contact@desertrecoverycenters.com",
-    image: `${SITE_URL}/images/branding/drlogo-black.png`,
-    priceRange: "$$$$",
-    medicalSpecialty: ["Addiction Medicine", "Psychiatry", "Clinical Psychology"],
-    hasCredential: {
-      "@type": "EducationalOccupationalCredential",
-      credentialCategory: "Joint Commission Accreditation",
-    },
-    address: [
-      { "@type": "PostalAddress", streetAddress: "8105 W Frier Dr", addressLocality: "Glendale", addressRegion: "AZ", postalCode: "85303", addressCountry: "US" },
-      { "@type": "PostalAddress", streetAddress: "23222 N Church Rd", addressLocality: "Scottsdale", addressRegion: "AZ", postalCode: "85255", addressCountry: "US" },
-      { "@type": "PostalAddress", streetAddress: "4160 N 108th Ave", addressLocality: "Phoenix", addressRegion: "AZ", postalCode: "85037", addressCountry: "US" },
-    ],
-    sameAs: [
-      "https://www.facebook.com/desertrecoverycenters/",
-      "https://www.instagram.com/desertrecoverycenter/",
-      "https://www.youtube.com/channel/UCiXgogSH5-yTjshI9FJuxLg",
-      "https://open.spotify.com/show/5thFT5DNC1exCkhmiug1Nb",
-      "https://www.yelp.com/biz/desert-recovery-centers-glendale",
-    ],
   };
 }

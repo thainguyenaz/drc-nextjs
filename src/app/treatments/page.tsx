@@ -3,7 +3,7 @@ import Navigation from "@/components/Navigation";
 import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { BreadcrumbSchema, VideoSchemas } from "@/lib/seo";
+import { VideoSchemas } from "@/lib/seo";
 import YouTubeEmbed from "@/components/YouTubeEmbed";
 import { getPageMeta } from "@/data/page-metadata";
 import AnimatedSection from "@/components/animated/AnimatedSection";
@@ -77,7 +77,6 @@ export default function TreatmentsPage() {
   return (
     <>
       <SchemaScript schema={[getFAQSchema(faqData["treatments"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/treatments"))]} />
-      <BreadcrumbSchema items={[{ name: "Treatments", path: "/treatments" }]} />
       <VideoSchemas path="/treatments/" />
       <Navigation />
       <Breadcrumb items={getBreadcrumbsFromPathname("/treatments")} />

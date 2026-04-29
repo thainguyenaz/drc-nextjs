@@ -3,7 +3,7 @@ import { siteData } from "./site-data";
 import { videoData } from "@/data/video-data";
 import { getYouTubeVideoSchema } from "./schema";
 
-const SITE_URL = "https://www.desertrecoverycenters.com";
+const SITE_URL = "https://desertrecoverycenters.com";
 const SITE_NAME = "Desert Recovery Centers";
 const DEFAULT_OG_IMAGE = `${SITE_URL}/logo.png`;
 
@@ -57,50 +57,6 @@ function ld(data: Record<string, unknown>) {
   );
 }
 
-export function OrganizationSchema() {
-  return ld({
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    name: SITE_NAME,
-    url: SITE_URL,
-    logo: `${SITE_URL}/logo.png`,
-    image: `${SITE_URL}/images/branding/drlogo-black.png`,
-    email: siteData.email,
-    address: siteData.locations.slice(0, 3).map((loc) => {
-      const parts = loc.address.split(", ");
-      const street = parts[0];
-      const city = parts[1];
-      const stateZip = parts[2] ?? "AZ";
-      const [state, zip] = stateZip.split(" ");
-      return {
-        "@type": "PostalAddress" as const,
-        streetAddress: street,
-        addressLocality: city,
-        addressRegion: state,
-        postalCode: zip,
-        addressCountry: "US",
-      };
-    }),
-    sameAs: [
-      siteData.social.facebook,
-      siteData.social.instagram,
-      siteData.social.twitter,
-      "https://www.google.com/maps/place/Desert+Recovery+Centers+-+Glendale",
-      "https://www.google.com/maps/place/Desert+Recovery+Centers+-+Scottsdale",
-      "https://www.google.com/maps/place/Desert+Recovery+Centers+-+Phoenix",
-      "https://www.legitscript.com/websites/?checker_keywords=desertrecoverycenters.com",
-      "https://www.jointcommission.org",
-    ],
-    contactPoint: siteData.locations.map((loc) => ({
-      "@type": "ContactPoint",
-      telephone: loc.phoneTel,
-      contactType: "admissions",
-      areaServed: "US",
-      availableLanguage: "English",
-    })),
-  });
-}
-
 export function LocalBusinessSchema({ index }: { index: number }) {
   const loc = siteData.locations[index];
   const parts = loc.address.split(", ");
@@ -130,11 +86,8 @@ export function LocalBusinessSchema({ index }: { index: number }) {
     },
     priceRange: "$$$$",
     openingHours: "Mo-Su 00:00-24:00",
-    parentOrganization: {
-      "@type": "MedicalOrganization",
-      name: SITE_NAME,
-      url: SITE_URL,
-    },
+    parentOrganization: { "@id": `${SITE_URL}/#organization` },
+    ...("licenseNumber" in loc && loc.licenseNumber ? { licenseNumber: loc.licenseNumber } : {}),
     ...(loc.sameAs?.length ? { sameAs: loc.sameAs } : {}),
   });
 }
@@ -147,6 +100,40 @@ export function AllLocalBusinessSchemas() {
       <LocalBusinessSchema index={2} />
     </>
   );
+}
+
+/**
+ * MedicalWebPage schema for YMYL medical-topic pages, asserting clinical
+ * review by a named clinician. Used on /addiction/* and /mental-health/*
+ * sub-pages. Mirrors the inline blocks previously hand-rolled per-page.
+ */
+export function MedicalWebPageSchema({
+  url,
+  name,
+  dateModified,
+}: {
+  url: string;
+  name: string;
+  dateModified: string;
+}) {
+  const fullUrl = `${SITE_URL}${url}`;
+  return ld({
+    "@context": "https://schema.org",
+    "@type": "MedicalWebPage",
+    "@id": `${fullUrl}#webpage`,
+    url: fullUrl,
+    name,
+    specialty: "Psychiatry",
+    reviewedBy: {
+      "@type": "Person",
+      "@id": `${SITE_URL}/our-team#dr-an-nguyen`,
+      name: "Dr. An Nguyen",
+      jobTitle: "Licensed Clinical Psychologist, Clinical Director",
+      worksFor: { "@id": `${SITE_URL}/#organization` },
+    },
+    dateModified,
+    publisher: { "@id": `${SITE_URL}/#organization` },
+  });
 }
 
 export function BreadcrumbSchema({ items }: { items: { name: string; path: string }[] }) {

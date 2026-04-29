@@ -6,7 +6,7 @@ import Image from "next/image";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import AnimatedCounter from "@/components/AnimatedCounter";
-import { MedicalTherapySchema, InlineFAQSchema } from "@/lib/seo";
+import { InlineFAQSchema } from "@/lib/seo";
 import SchemaScript from "@/components/SchemaScript";
 import TMSVideoSection from "./TMSVideoSection";
 
@@ -208,22 +208,16 @@ export default function TMSTherapyPage() {
 
   return (
     <>
-      <MedicalTherapySchema
-        name="NeuroStar TMS Therapy"
-        description="FDA-cleared Transcranial Magnetic Stimulation therapy for depression, anxious depression, OCD, and adolescents at Desert Recovery Centers Phoenix, Arizona."
-        url="/treatments/tms-therapy"
-        conditions={["Major Depressive Disorder", "Anxious Depression", "OCD", "Adolescent Depression"]}
-      />
       <InlineFAQSchema items={faqs} />
       <SchemaScript schema={[
         {
           "@context": "https://schema.org",
           "@type": "MedicalTherapy",
-          "@id": "https://www.desertrecoverycenters.com/treatments/tms-therapy#therapy",
+          "@id": "https://desertrecoverycenters.com/treatments/tms-therapy#therapy",
           "name": "NeuroStar TMS Therapy",
           "alternateName": "Transcranial Magnetic Stimulation",
           "description": "FDA-cleared non-invasive brain stimulation therapy for major depressive disorder, anxious depression, OCD, and adolescents ages 15 and older. Available at Desert Recovery Centers Phoenix.",
-          "url": "https://www.desertrecoverycenters.com/treatments/tms-therapy",
+          "url": "https://desertrecoverycenters.com/treatments/tms-therapy",
           "recognizingAuthority": { "@type": "Organization", "name": "U.S. Food and Drug Administration", "url": "https://www.fda.gov" },
           "legalStatus": "FDA Cleared",
           "relevantSpecialty": "Psychiatry",
@@ -240,21 +234,11 @@ export default function TMSTherapyPage() {
         },
         {
           "@context": "https://schema.org",
-          "@type": "FAQPage",
-          "mainEntity": [
-            { "@type": "Question", "name": "Is NeuroStar TMS therapy available now at Desert Recovery Centers?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. NeuroStar TMS therapy is now available at our Phoenix outpatient center at 4160 N. 108th Ave, Phoenix, AZ 85037. Call (602) 905-8070 to schedule your initial consultation. Most patients begin treatment within one to two weeks of their first call." } },
-            { "@type": "Question", "name": "What is the success rate of NeuroStar TMS therapy?", "acceptedAnswer": { "@type": "Answer", "text": "In a real-world outcomes study of over 8.2 million NeuroStar treatments, 83% of patients who completed a full treatment course experienced measurable improvement in depression symptoms, and 62% achieved full remission. In an NIMH-funded independent randomized controlled trial, patients treated with NeuroStar were 4 times more likely to achieve remission compared to patients receiving sham treatment." } },
-            { "@type": "Question", "name": "Is TMS therapy available for teenagers in Phoenix?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. NeuroStar is the only TMS system FDA-cleared specifically for adolescents ages 15 and older with major depressive disorder. Our Phoenix center integrates TMS therapy directly with our adolescent PHP, IOP, and outpatient programs. Sessions are typically 19 minutes and can be scheduled around school hours." } },
-            { "@type": "Question", "name": "Can I download a brochure about TMS therapy?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Desert Recovery Centers offers downloadable NeuroStar TMS brochures for both adults and adolescents. Visit our TMS therapy page at desertrecoverycenters.com/treatments/tms-therapy to download the brochures. You can also call (602) 905-8070 and our team will email them to you directly." } },
-          ],
-        },
-        {
-          "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.desertrecoverycenters.com" },
-            { "@type": "ListItem", "position": 2, "name": "Treatments", "item": "https://www.desertrecoverycenters.com/treatments" },
-            { "@type": "ListItem", "position": 3, "name": "TMS Therapy", "item": "https://www.desertrecoverycenters.com/treatments/tms-therapy" },
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://desertrecoverycenters.com" },
+            { "@type": "ListItem", "position": 2, "name": "Treatments", "item": "https://desertrecoverycenters.com/treatments" },
+            { "@type": "ListItem", "position": 3, "name": "TMS Therapy", "item": "https://desertrecoverycenters.com/treatments/tms-therapy" },
           ],
         },
       ]} />

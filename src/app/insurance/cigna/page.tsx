@@ -41,7 +41,7 @@ export default function CignaInsurancePage() {
     <>
       <BreadcrumbSchema
         items={[
-          { name: "Insurance", path: "/insurance/cigna" },
+          { name: "Insurance", path: "/insurance" },
           { name: "Cigna", path: "/insurance/cigna" },
         ]}
       />

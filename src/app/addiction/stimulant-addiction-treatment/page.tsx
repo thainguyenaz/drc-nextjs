@@ -3,7 +3,7 @@ import Navigation from "@/components/Navigation";
 import PageHero from "@/components/PageHero";
 import AddictionPrograms from "@/components/AddictionPrograms";
 import Footer from "@/components/Footer";
-import { MedicalConditionSchema } from "@/lib/seo";
+import { MedicalConditionSchema, MedicalWebPageSchema } from "@/lib/seo";
 import AEOBlock from "@/components/AEOBlock";
 import RelatedPages from "@/components/RelatedPages";
 import ConditionFAQ from "@/components/ConditionFAQ";
@@ -57,7 +57,8 @@ const faqs = [
 export default function StimulantAddictionPage() {
   return (
     <>
-      <SchemaScript schema={[{"@context":"https://schema.org","@type":"MedicalWebPage","@id":"https://www.desertrecoverycenters.com/addiction/stimulant-addiction-treatment/#webpage","url":"https://www.desertrecoverycenters.com/addiction/stimulant-addiction-treatment/","name":"Stimulant Addiction Treatment in Arizona | Desert Recovery Centers","specialty":"Psychiatry","reviewedBy":{"@type":"Person","@id":"https://www.desertrecoverycenters.com/our-team#dr-an-nguyen","name":"Dr. An Nguyen","jobTitle":"Licensed Clinical Psychologist, Clinical Director","worksFor":{"@id":"https://www.desertrecoverycenters.com/#organization"}},"dateModified":"2026-04-18","publisher":{"@id":"https://www.desertrecoverycenters.com/#organization"}}, getFAQSchema(faqData["stimulant-addiction-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/addiction/stimulant-addiction-treatment"))]} />
+      <SchemaScript schema={[getFAQSchema(faqData["stimulant-addiction-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/addiction/stimulant-addiction-treatment"))]} />
+      <MedicalWebPageSchema url="/addiction/stimulant-addiction-treatment" name="Stimulant Addiction Treatment in Arizona | Desert Recovery Centers" dateModified="2026-04-18" />
       <MedicalConditionSchema
         name="Stimulant Addiction"
         description="Stimulant addiction is a substance use disorder involving cocaine, methamphetamine, prescription amphetamines, or other stimulants. These substances flood the brain with dopamine and norepinephrine, creating intense dependence and making natural reward processing increasingly difficult."

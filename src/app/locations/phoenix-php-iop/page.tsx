@@ -177,11 +177,7 @@ const clinicSchema = {
     name: "Joint Commission Accreditation",
   },
   areaServed: ["Phoenix", "Glendale", "Peoria", "Goodyear", "Avondale", "Tolleson", "Surprise"],
-  parentOrganization: {
-    "@type": "Organization",
-    name: "Desert Recovery Centers",
-    url: SITE_URL,
-  },
+  parentOrganization: { "@id": `${SITE_URL}/#organization` },
 };
 
 const faqSchema = {
@@ -277,21 +273,6 @@ export default function PhoenixPhpIopPage() {
   return (
     <>
       <SchemaScript schema={[clinicSchema, faqSchema, breadcrumbSchema, {
-        "@context": "https://schema.org",
-        "@type": ["LocalBusiness", "MedicalClinic"],
-        "name": "Desert Recovery Centers — Phoenix PHP/IOP",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "4160 N. 108th Ave",
-          "addressLocality": "Phoenix",
-          "addressRegion": "AZ",
-          "postalCode": "85037",
-        },
-        "telephone": "+14809313617",
-        "url": "https://desertrecoverycenters.com/locations/phoenix-php-iop",
-        "licenseNumber": "TC20452",
-        "priceRange": "$$$",
-      }, {
         "@context": "https://schema.org",
         "@type": "HowTo",
         "name": "How to Get Admitted to Desert Recovery Centers Phoenix",

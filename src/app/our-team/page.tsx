@@ -4,7 +4,7 @@ import PageHero from "@/components/PageHero";
 import TeamSection from "@/components/TeamSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { BreadcrumbSchema, PersonSchema } from "@/lib/seo";
+import { PersonSchema } from "@/lib/seo";
 import { getPageMeta } from "@/data/page-metadata";
 import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
 import { faqData } from "@/data/faq-data";
@@ -31,44 +31,6 @@ export default function OurTeamPage() {
   return (
     <>
       <SchemaScript schema={[getFAQSchema(faqData["our-team"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/our-team"))]} />
-      <SchemaScript schema={[
-        {
-          "@context": "https://schema.org",
-          "@type": ["Person", "Physician"],
-          name: "Dr. An Nguyen",
-          jobTitle: "Clinical Director, Licensed Clinical Psychologist",
-          worksFor: { "@type": "MedicalOrganization", name: "Desert Recovery Centers" },
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": ["Person", "Physician"],
-          name: "Dr. Reyes Topete MD",
-          jobTitle: "Medical Director, Psychiatrist",
-          worksFor: { "@type": "MedicalOrganization", name: "Desert Recovery Centers" },
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "Person",
-          name: "Thai Nguyen",
-          jobTitle: "CEO and Co-Founder",
-          worksFor: { "@type": "MedicalOrganization", name: "Desert Recovery Centers" },
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "Person",
-          name: "Jason Inserra",
-          jobTitle: "Director of Operations, Co-Founder",
-          worksFor: { "@type": "MedicalOrganization", name: "Desert Recovery Centers" },
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "Person",
-          name: "Adam Leonard",
-          jobTitle: "Admissions Director",
-          worksFor: { "@type": "MedicalOrganization", name: "Desert Recovery Centers" },
-        },
-      ]} />
-      <BreadcrumbSchema items={[{ name: "Our Team", path: "/our-team" }]} />
       <PersonSchema
         name="Dr. An Nguyen"
         jobTitle="Licensed Clinical Psychologist, Clinical Director"
@@ -104,6 +66,12 @@ export default function OurTeamPage() {
         jobTitle="Director of Operations"
         image="/images/team/Jason-Inserra-3.jpg"
         description="Director of Operations at Desert Recovery Centers, certified peer support specialist and recovery advocate."
+      />
+      <PersonSchema
+        name="Adam Leonard"
+        jobTitle="Admissions Director"
+        image="/images/team/Adam-Leonard.jpg"
+        description="Admissions Director at Desert Recovery Centers, with expertise in business development and admissions across behavioral health treatment facilities."
       />
       <Navigation />
       <Breadcrumb items={getBreadcrumbsFromPathname("/our-team")} />

@@ -41,7 +41,7 @@ export default function AetnaInsurancePage() {
     <>
       <BreadcrumbSchema
         items={[
-          { name: "Insurance", path: "/insurance/aetna" },
+          { name: "Insurance", path: "/insurance" },
           { name: "Aetna", path: "/insurance/aetna" },
         ]}
       />

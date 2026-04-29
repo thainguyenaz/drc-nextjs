@@ -4,7 +4,7 @@ import PageHero from "@/components/PageHero";
 import ConditionFAQ from "@/components/ConditionFAQ";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { SpeakableSchema, MedicalConditionSchema } from "@/lib/seo";
+import { SpeakableSchema, MedicalConditionSchema, MedicalWebPageSchema } from "@/lib/seo";
 import AEOBlock from "@/components/AEOBlock";
 import RelatedPages from "@/components/RelatedPages";
 import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
@@ -57,7 +57,8 @@ const faqs = [
 export default function PTSDTreatmentPage() {
   return (
     <>
-      <SchemaScript schema={[getFAQSchema(faqData["ptsd-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/mental-health/ptsd-treatment")), {"@context":"https://schema.org","@type":"MedicalWebPage","@id":"https://www.desertrecoverycenters.com/mental-health/ptsd-treatment/#webpage","url":"https://www.desertrecoverycenters.com/mental-health/ptsd-treatment/","name":"PTSD Treatment Center Arizona | Desert Recovery Centers","specialty":"Psychiatry","reviewedBy":{"@type":"Person","@id":"https://www.desertrecoverycenters.com/our-team#dr-an-nguyen","name":"Dr. An Nguyen","jobTitle":"Licensed Clinical Psychologist, Clinical Director","worksFor":{"@id":"https://www.desertrecoverycenters.com/#organization"}},"dateModified":"2026-04-05","publisher":{"@id":"https://www.desertrecoverycenters.com/#organization"}}]} />
+      <SchemaScript schema={[getFAQSchema(faqData["ptsd-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/mental-health/ptsd-treatment"))]} />
+      <MedicalWebPageSchema url="/mental-health/ptsd-treatment" name="PTSD Treatment Center Arizona | Desert Recovery Centers" dateModified="2026-04-05" />
       <SpeakableSchema url="/mental-health/ptsd-treatment" cssSelectors={["[data-speakable]"]} />
       <MedicalConditionSchema
         name="Post-Traumatic Stress Disorder (PTSD)"

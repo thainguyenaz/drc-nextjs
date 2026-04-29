@@ -41,7 +41,7 @@ export default function HumanaInsurancePage() {
     <>
       <BreadcrumbSchema
         items={[
-          { name: "Insurance", path: "/insurance/humana" },
+          { name: "Insurance", path: "/insurance" },
           { name: "Humana", path: "/insurance/humana" },
         ]}
       />
