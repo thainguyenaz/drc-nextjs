@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import SchemaScript from "@/components/SchemaScript";
@@ -56,8 +57,45 @@ export default function RootLayout({
     <html lang="en-US" className={`${inter.variable} ${playfair.variable}`}>
       <head>
         <SchemaScript schema={[getMedicalOrganizationSchema()]} />
+        <Script id="gtm-init" strategy="afterInteractive">
+          {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-PFGJKM8F');`}
+        </Script>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-0MSPF0DPVK"
+          strategy="afterInteractive"
+        />
+        <Script id="ga4-init" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-0MSPF0DPVK');`}
+        </Script>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-16468277860"
+          strategy="afterInteractive"
+        />
+        <Script id="gads-init" strategy="afterInteractive">
+          {`gtag('config', 'AW-16468277860');`}
+        </Script>
+        <Script
+          src="//517993.tctm.co/t.js"
+          strategy="afterInteractive"
+          async
+        />
       </head>
       <body className="font-body antialiased bg-white">
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-PFGJKM8F"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
         {children}
         <LiveChatLoader />
       </body>
