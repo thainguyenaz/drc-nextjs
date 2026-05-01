@@ -47,7 +47,7 @@ const nextConfig = {
               "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
               "img-src 'self' data: https: blob:",
               "font-src 'self' https://fonts.gstatic.com data:",
-              "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.google.com https://api.desertrecoverycenters.com https://challenges.cloudflare.com https://api.livechatinc.com wss://*.livechatinc.com https://*.tctm.co",
+              "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.google.com https://api.desertrecoverycenters.com https://challenges.cloudflare.com https://api.livechatinc.com https://cdn.livechatinc.com wss://*.livechatinc.com https://*.tctm.co",
               "frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com https://challenges.cloudflare.com https://www.googletagmanager.com https://secure.livechatinc.com",
               "object-src 'none'",
               "base-uri 'self'",
