@@ -43,11 +43,11 @@ const nextConfig = {
             key: "Content-Security-Policy",
             value: [
               "default-src 'self'",
-              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://challenges.cloudflare.com https://www.youtube.com https://s.ytimg.com https://cdn.livechatinc.com https://*.tctm.co",
+              "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://challenges.cloudflare.com https://www.youtube.com https://s.ytimg.com https://cdn.livechatinc.com https://api.livechatinc.com https://*.tctm.co https://googleads.g.doubleclick.net",
               "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
               "img-src 'self' data: https: blob:",
               "font-src 'self' https://fonts.gstatic.com data:",
-              "connect-src 'self' https://www.google-analytics.com https://api.desertrecoverycenters.com https://challenges.cloudflare.com https://api.livechatinc.com wss://*.livechatinc.com https://*.tctm.co",
+              "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.google.com https://api.desertrecoverycenters.com https://challenges.cloudflare.com https://api.livechatinc.com wss://*.livechatinc.com https://*.tctm.co",
               "frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com https://challenges.cloudflare.com https://www.googletagmanager.com",
               "object-src 'none'",
               "base-uri 'self'",
