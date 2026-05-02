@@ -29,7 +29,7 @@ export default function ContactCTA() {
       <section className="py-8 bg-cream">
         <div className="max-w-container mx-auto px-6 text-center">
           <p className="text-gray-600 text-sm">
-            We accept most major insurance plans. Coverage varies by plan. Contact us to verify your benefits.
+            For commercial insurance, we work on an out-of-network basis with major plans. We are also in-network with TriCare and TriWest, and offer cash-pay options. Coverage varies by plan. Contact us to verify your benefits at no cost.
           </p>
         </div>
       </section>

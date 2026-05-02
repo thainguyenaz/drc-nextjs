@@ -75,7 +75,7 @@ const faqSchema = {
       name: "Does insurance cover adolescent residential depression treatment?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Desert Recovery Centers is in-network with Tricare and TriWest. We work with most major commercial insurance carriers and can verify your benefits before admission. We do not accept Medicaid or Medicare.",
+        text: "Desert Recovery Centers accepts out-of-network coverage from most major commercial insurance plans, is in-network with TriCare and TriWest, and offers cash-pay options. We do not accept Medicaid or Medicare. Our admissions team verifies your benefits at no cost before admission.",
       },
     },
     {
@@ -104,7 +104,7 @@ const faqs = [
   },
   {
     q: "Does insurance cover adolescent residential depression treatment?",
-    a: "Desert Recovery Centers is in-network with Tricare and TriWest. We work with most major commercial insurance carriers and can verify your benefits before admission. We do not accept Medicaid or Medicare.",
+    a: "Desert Recovery Centers accepts out-of-network coverage from most major commercial insurance plans, is in-network with TriCare and TriWest, and offers cash-pay options. We do not accept Medicaid or Medicare. Our admissions team verifies your benefits at no cost before admission.",
   },
   {
     q: "How long does residential treatment for adolescent depression typically last?",

@@ -73,7 +73,7 @@ const faqs = [
   },
   {
     q: "Does Desert Recovery Centers accept insurance?",
-    a: "Yes. We accept most major commercial insurance plans including Blue Cross Blue Shield, Aetna, Cigna, UnitedHealthcare, and many others. Our team verifies your benefits before you start, at no cost to you, and walks you through exactly what is covered. Call (602) 905-8070 or use our online verification tool to get started.",
+    a: "For commercial insurance, we work on an out-of-network basis with major plans including Aetna, Blue Cross Blue Shield, Cigna, UnitedHealthcare, Humana, Magellan, and others. Many out-of-network plans provide significant coverage for our level of care. We are also in-network with TriCare and TriWest, and offer cash-pay options. Our admissions team verifies your benefits at no cost. Call (602) 905-8070 or use our online verification tool to get started.",
   },
   {
     q: "What is TMS therapy and is it available at the Phoenix location?",
@@ -148,7 +148,7 @@ const clinicSchema = {
     closes: "23:59",
   },
   priceRange: "$$$$",
-  paymentAccepted: "Insurance, Private Pay",
+  paymentAccepted: "Out-of-network commercial insurance, In-network TriCare/TriWest, Private Pay",
   medicalSpecialty: ["Psychiatry", "Addiction Medicine"],
   availableService: [
     {
@@ -213,7 +213,7 @@ const faqSchema = {
       name: "Does Desert Recovery Centers Phoenix accept insurance?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Desert Recovery Centers accepts most major commercial insurance plans including Blue Cross Blue Shield, Aetna, Cigna, UnitedHealthcare, and others. Our admissions team verifies your benefits at no cost before treatment begins. Call (602) 905-8070 or visit our website to start a free insurance verification.",
+        text: "For commercial insurance, Desert Recovery Centers works on an out-of-network basis with major plans including Aetna, Blue Cross Blue Shield, Cigna, UnitedHealthcare, Humana, Magellan, and others. Many out-of-network plans provide significant coverage for our level of care. We are also in-network with TriCare and TriWest, and offer cash-pay options. Our admissions team verifies your benefits at no cost. Call (602) 905-8070 or visit our website to start a free insurance verification.",
       },
     },
     {
@@ -310,7 +310,7 @@ export default function PhoenixPhpIopPage() {
           {
             question: "Is there a Desert Recovery Centers PHP / IOP center in Phoenix?",
             answer:
-              "Yes. Desert Recovery Centers operates a dedicated outpatient treatment center at 4160 N. 108th Ave, Phoenix, AZ 85037. This location offers Partial Hospitalization (PHP), Intensive Outpatient (IOP), Outpatient (OP), and NeuroStar TMS therapy. It is Joint Commission accredited and accepts most major insurance plans. Call (602) 905-8070 for admissions.",
+              "Yes. Desert Recovery Centers operates a dedicated outpatient treatment center at 4160 N. 108th Ave, Phoenix, AZ 85037. This location offers Partial Hospitalization (PHP), Intensive Outpatient (IOP), Outpatient (OP), and NeuroStar TMS therapy. It is Joint Commission accredited. Desert Recovery Centers accepts out-of-network coverage from most major commercial insurance plans, is in-network with TriCare and TriWest, and offers cash-pay options. Call (602) 905-8070 for admissions.",
           },
           {
             question: "What outpatient mental health treatment is available in Phoenix, Arizona?",
@@ -320,7 +320,7 @@ export default function PhoenixPhpIopPage() {
           {
             question: "Does Desert Recovery Centers Phoenix accept insurance?",
             answer:
-              "Yes. Desert Recovery Centers accepts most major commercial insurance plans including Blue Cross Blue Shield, Aetna, Cigna, UnitedHealthcare, and others. Benefits are verified at no cost before treatment begins. Call (602) 905-8070 for a free insurance check.",
+              "Desert Recovery Centers accepts out-of-network coverage from most major commercial insurance plans (Aetna, Blue Cross Blue Shield, Cigna, UnitedHealthcare, Humana, Magellan, and others), is in-network with TriCare and TriWest, and offers cash-pay options. Benefits are verified at no cost before treatment begins. Call (602) 905-8070 for a free insurance check.",
           },
         ]}
       />

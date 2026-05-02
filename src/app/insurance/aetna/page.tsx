@@ -49,7 +49,7 @@ export default function AetnaInsurancePage() {
       <PageHero
         eyebrow="Insurance Verification"
         title="Does Aetna Cover Drug and Alcohol Rehab in Arizona?"
-        description="Aetna is one of the most widely accepted insurance providers for addiction treatment. Here is what you need to know about using your Aetna benefits for rehab in Arizona."
+        description="Aetna is one of the most widely held insurance plans in Arizona. Desert Recovery Centers works with Aetna on an out-of-network basis. Here is what you need to know about using your Aetna benefits for rehab in Arizona."
         bgImage="/images/general/DRC-ADDICTION.jpg"
       />
 

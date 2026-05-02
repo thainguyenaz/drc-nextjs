@@ -166,7 +166,7 @@ export default function HeroinAddictionPage() {
               Heroin recovery isn&apos;t about going back to who you were before, it&apos;s about building someone stronger. After detox, you&apos;ll move into a structured residential program where daily therapy, peer support, and wellness activities help you rediscover what matters. As you stabilize, you&apos;ll step down through PHP and IOP, gradually re-engaging with work, family, and community. Our aftercare team ensures you&apos;re never without support when you need it.
             </p>
             <p className="text-gray-600 leading-relaxed mt-4">
-              We accept most major insurance plans. Coverage varies by plan. Contact us to verify your benefits.
+              For commercial insurance, we work on an out-of-network basis with major plans. We are also in-network with TriCare and TriWest, and offer cash-pay options. Coverage varies by plan. Contact us to verify your benefits at no cost.
             </p>
             </AnimatedSection>
           </div>
@@ -199,7 +199,7 @@ export default function HeroinAddictionPage() {
           {
             question: "Does Desert Recovery Centers accept insurance for heroin rehab?",
             answer:
-              "Yes, Desert Recovery Centers accepts most major insurance plans for heroin addiction treatment. Coverage varies by plan and provider, so our admissions team verifies your benefits and explains costs before treatment begins.",
+              "Desert Recovery Centers accepts out-of-network coverage from most major commercial insurance plans for heroin addiction treatment, is in-network with TriCare and TriWest, and offers cash-pay options. Coverage varies by plan and provider, so our admissions team verifies your benefits and explains costs before treatment begins.",
           },
         ]}
       />

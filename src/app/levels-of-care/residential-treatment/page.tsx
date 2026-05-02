@@ -53,7 +53,7 @@ const faqs = [
   },
   {
     q: "Does insurance cover residential rehab in Arizona?",
-    a: "Most major insurance plans provide coverage for residential addiction treatment in Arizona, including Aetna, Cigna, Blue Cross Blue Shield, UnitedHealthcare, and many others. Coverage levels and out-of-pocket costs vary by plan. Our admissions team at Desert Recovery Centers will verify your specific benefits and explain your coverage before treatment begins. Call (480) 931-3617 for a free, confidential insurance verification.",
+    a: "Most major insurance plans provide coverage for residential addiction treatment in Arizona, including Aetna, Cigna, Blue Cross Blue Shield, UnitedHealthcare, and many others. Coverage levels and out-of-pocket costs vary by plan. Note: Desert Recovery Centers works with these commercial carriers on an out-of-network basis; we are in-network with TriCare and TriWest, and offer cash-pay options. Our admissions team will verify your specific benefits and explain your coverage before treatment begins. Call (480) 931-3617 for a free, confidential insurance verification.",
   },
   {
     q: "How is DRC different from other rehabs?",
@@ -403,12 +403,15 @@ export default function ResidentialTreatmentPage() {
             </p>
             <p className="text-gray-600 leading-relaxed text-lg mb-6">
               Regarding insurance coverage, most major health insurance
-              plans cover residential addiction treatment in Arizona. Our
-              admissions team handles the insurance verification process and
-              will explain your benefits, estimated costs, and any
-              out-of-pocket expenses before you commit to treatment. We work
-              with a wide range of insurers including Aetna, Cigna, Blue
-              Cross Blue Shield, UnitedHealthcare, and many others.
+              plans cover residential addiction treatment in Arizona.
+              Desert Recovery Centers works with commercial carriers
+              including Aetna, Cigna, Blue Cross Blue Shield,
+              UnitedHealthcare, Humana, Magellan, and others on an
+              out-of-network basis; we are in-network with TriCare and
+              TriWest, and offer cash-pay options. Our admissions team
+              handles the insurance verification process and will explain
+              your benefits, estimated costs, and any out-of-pocket
+              expenses before you commit to treatment.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg">
               To begin the admissions process or verify your insurance, call{" "}

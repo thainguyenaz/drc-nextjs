@@ -80,7 +80,7 @@ const faqs = [
   },
   {
     q: "Do you accept insurance at the Scottsdale location?",
-    a: "Yes, we are in-network with most major insurance providers including Aetna, Blue Cross Blue Shield, Cigna, and UnitedHealthcare. Coverage varies by plan. Contact us to verify your benefits, our admissions team handles verification at no cost before you begin treatment.",
+    a: "Desert Recovery Centers accepts out-of-network coverage from most major commercial insurance plans (Aetna, Blue Cross Blue Shield, Cigna, UnitedHealthcare, Humana, Magellan, and others), is in-network with TriCare and TriWest, and offers cash-pay options. Our admissions team verifies your benefits at no cost.",
   },
   {
     q: "What is the clinical team like at Scottsdale?",
@@ -327,7 +327,7 @@ export default function ScottsdaleLocationPage() {
         },
         {
           question: "Does Desert Recovery Centers accept insurance for Scottsdale residents?",
-          answer: "Yes, Desert Recovery Centers accepts most major insurance plans for Scottsdale residents, including Aetna, Blue Cross Blue Shield, Cigna, and UnitedHealthcare. Coverage varies by plan. Our admissions team verifies benefits at no cost before treatment begins. Call (480) 931-3617 for a free insurance check.",
+          answer: "For commercial insurance, Desert Recovery Centers works on an out-of-network basis with major plans including Aetna, Blue Cross Blue Shield, Cigna, UnitedHealthcare, Humana, Magellan, and others. Many out-of-network plans provide significant coverage for our level of care. We are also in-network with TriCare and TriWest, and offer cash-pay options. Our admissions team verifies your benefits at no cost. Call (480) 931-3617 for a free insurance check.",
         },
       ]} />
       <FAQSection faqs={faqData["locations/scottsdale"]} />

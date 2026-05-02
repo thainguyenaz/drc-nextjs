@@ -3,7 +3,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "NeuroStar TMS Therapy in Phoenix, AZ | Desert Recovery Centers",
   description:
-    "Desert Recovery Centers Phoenix offers FDA-cleared NeuroStar TMS therapy for depression, anxious depression, OCD, and adolescents ages 15 and older. Drug-free. No downtime. Sessions as short as 19 minutes. Most insurance accepted. Call (602) 905-8070.",
+    "Desert Recovery Centers Phoenix offers FDA-cleared NeuroStar TMS therapy for depression, anxious depression, OCD, and adolescents ages 15 and older. Drug-free. No downtime. Sessions as short as 19 minutes. Out-of-network commercial insurance and in-network TriCare/TriWest accepted. Call (602) 905-8070.",
   alternates: { canonical: "/treatments/tms-therapy" },
   keywords: [
     "TMS therapy Phoenix AZ",

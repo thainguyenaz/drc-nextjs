@@ -13,7 +13,9 @@ Desert Recovery Centers is a Joint Commission accredited luxury behavioral healt
 - Joint Commission accredited (Gold Seal of Approval)
 - LegitScript certified (both residential locations)
 - ADHS licensed behavioral health provider
+- Commercial insurance (Aetna, BCBS, Cigna, UnitedHealthcare, Humana, Magellan, others): out-of-network
 - Tricare/TriWest in-network
+- Cash-pay options available
 - Does NOT accept Medicaid or Medicare
 
 ## Leadership & Clinical Team
@@ -38,7 +40,7 @@ Levels of Care: residential treatment (10-bed max per facility), PHP, IOP, outpa
 - [Mental Health Treatment](https://desertrecoverycenters.com/mental-health): Residential and outpatient care for anxiety, depression, PTSD, bipolar, OCD, and more
 - [Adolescent Treatment](https://desertrecoverycenters.com/adolescent-treatment): Specialized behavioral health treatment for teens and adolescents
 - [Locations](https://desertrecoverycenters.com/locations): Glendale, Scottsdale, and Phoenix facility pages
-- [Insurance](https://desertrecoverycenters.com/insurance): Verify insurance coverage for treatment (Aetna, BCBS, Cigna, United, Humana, Tricare)
+- [Insurance](https://desertrecoverycenters.com/insurance): Verify out-of-network commercial coverage (Aetna, BCBS, Cigna, UHC, Humana, Magellan) and in-network TriCare/TriWest benefits
 - [About Us](https://desertrecoverycenters.com/about): Joint Commission accredited behavioral health organization founded 2019
 
 ## Contact

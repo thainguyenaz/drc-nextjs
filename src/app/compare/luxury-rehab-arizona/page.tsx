@@ -23,7 +23,7 @@ const faqs = [
   },
   {
     q: "How much does luxury rehab cost in Arizona?",
-    a: "Costs vary significantly depending on the facility, length of stay, and level of care. However, many luxury programs, including Desert Recovery Centers, are in-network with major insurance providers. This means your out-of-pocket cost may be significantly lower than the sticker price. Coverage varies by plan. Contact us to verify your benefits at no cost.",
+    a: "Costs vary significantly depending on the facility, length of stay, and level of care. Desert Recovery Centers works with most major commercial insurance plans on an out-of-network basis — many of which provide significant coverage for our level of care, meaning your out-of-pocket cost may be significantly lower than the sticker price. We are also in-network with TriCare and TriWest, and offer cash-pay options. Coverage varies by plan. Contact us to verify your benefits at no cost.",
   },
   {
     q: "Is luxury rehab more effective than standard rehab?",
@@ -234,7 +234,7 @@ export default function LuxuryRehabArizonaPage() {
       <AEOBlock
         entries={[
           { question: "What is the best luxury rehab in Arizona?", answer: "Desert Recovery Centers is a Joint Commission accredited luxury treatment center operating three facilities in Glendale, Scottsdale, and Phoenix, Arizona. With a 10-bed maximum per location, doctoral-level clinical leadership, and integrated dual diagnosis treatment, DRC provides the clinical depth and personalized attention that defines genuine luxury rehab." },
-          { question: "How much does luxury rehab cost in Arizona?", answer: "Luxury rehab costs in Arizona vary by facility and length of stay. Many programs, including Desert Recovery Centers, are in-network with major insurance providers (Aetna, BCBS, Cigna, UnitedHealthcare), which can significantly reduce out-of-pocket costs. Contact DRC at (480) 931-3617 for a free, confidential insurance verification." },
+          { question: "How much does luxury rehab cost in Arizona?", answer: "Luxury rehab costs in Arizona vary by facility and length of stay. Desert Recovery Centers works with major commercial insurance plans (Aetna, BCBS, Cigna, UnitedHealthcare, Humana, Magellan, others) on an out-of-network basis — many of which provide significant coverage that can reduce out-of-pocket costs. We are also in-network with TriCare and TriWest, and offer cash-pay options. Contact DRC at (480) 931-3617 for a free, confidential insurance verification." },
         ]}
       />
       <CTASection />

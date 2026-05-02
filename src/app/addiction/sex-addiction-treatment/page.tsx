@@ -163,7 +163,7 @@ export default function SexAddictionPage() {
               Recovery from compulsive sexual behavior is not about eliminating sexuality, it&apos;s about reclaiming control over it. Treatment helps you develop a healthy relationship with intimacy, understand the emotional wounds driving the compulsion, and build the self-awareness to recognize and manage urges before they escalate. Our confidential residential and outpatient programs provide a safe space to do this work at your own pace, with the clinical support you need.
             </p>
             <p className="text-gray-600 leading-relaxed mt-4">
-              We accept most major insurance plans. Coverage varies by plan. Contact us to verify your benefits.
+              For commercial insurance, we work on an out-of-network basis with major plans. We are also in-network with TriCare and TriWest, and offer cash-pay options. Coverage varies by plan. Contact us to verify your benefits at no cost.
             </p>
             </AnimatedSection>
           </div>
@@ -186,7 +186,7 @@ export default function SexAddictionPage() {
           {
             question: "Does Desert Recovery Centers accept insurance for sex addiction rehab?",
             answer:
-              "Yes, Desert Recovery Centers accepts most major insurance plans for compulsive sexual behavior treatment. Coverage varies by plan and provider, so our admissions team verifies your benefits and explains costs before treatment begins.",
+              "Desert Recovery Centers accepts out-of-network coverage from most major commercial insurance plans for compulsive sexual behavior treatment, is in-network with TriCare and TriWest, and offers cash-pay options. Coverage varies by plan and provider, so our admissions team verifies your benefits and explains costs before treatment begins.",
           },
         ]}
       />

@@ -52,7 +52,7 @@ const faqs = [
   },
   {
     q: "Does insurance cover IOP in Arizona?",
-    a: "Yes, most major insurance plans cover intensive outpatient treatment in Arizona. IOP is a recognized, medically necessary level of care under the Mental Health Parity and Addiction Equity Act. Plans from Aetna, Cigna, Blue Cross Blue Shield, UnitedHealthcare, and many other carriers typically provide benefits for IOP services. Our admissions team at Desert Recovery Centers verifies your insurance benefits and explains your coverage before treatment begins. Call (480) 931-3617 for a free, confidential insurance check.",
+    a: "Yes, most major insurance plans cover intensive outpatient treatment in Arizona. IOP is a recognized, medically necessary level of care under the Mental Health Parity and Addiction Equity Act. Plans from Aetna, Cigna, Blue Cross Blue Shield, UnitedHealthcare, and many other carriers typically provide benefits for IOP services. Note: Desert Recovery Centers works with these commercial carriers on an out-of-network basis; we are in-network with TriCare and TriWest, and offer cash-pay options. Our admissions team verifies your insurance benefits and explains your coverage before treatment begins. Call (480) 931-3617 for a free, confidential insurance check.",
   },
   {
     q: "Can I work while in IOP?",

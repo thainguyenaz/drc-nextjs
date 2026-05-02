@@ -856,7 +856,7 @@ ${DISCLAIMER}`
     dateModified: "2026-01-18",
     readTime: 7,
     featuredImage: "/images/locations/phoenix/phoenix-lobby-2.jpg",
-    featuredImageAlt: "Desert Recovery Centers Phoenix facility accepting insurance for addiction treatment",
+    featuredImageAlt: "Desert Recovery Centers Phoenix facility working with out-of-network insurance for addiction treatment",
     tags: ["insurance", "behavioral health coverage", "mental health parity", "Arizona", "treatment cost"],
     metaTitle: "How Insurance Covers Rehab and Mental Health Treatment in Arizona | DRC",
     metaDescription: "Under federal law, insurance must cover mental health and addiction treatment the same as physical health. Learn exactly how behavioral health benefits work and how to verify yours.",
@@ -884,7 +884,7 @@ ${DISCLAIMER}`
 
 <h2>In Network vs. Out of Network</h2>
 <p>Insurance plans typically offer different benefit levels for in network and out of network providers. In network providers have contracted rates with the insurance company, which generally results in lower out of pocket costs for the client. Out of network providers may still be covered, but at a higher cost to the client, with higher deductibles and coinsurance rates.</p>
-<p>Desert Recovery Centers works with a wide range of insurance providers and can help you determine whether we are in network with your specific plan. Even if we are out of network, your plan may still cover a significant portion of the cost, and our team will help you understand your specific benefits and out of pocket responsibilities before you begin treatment.</p>
+<p>Desert Recovery Centers is out-of-network with all commercial insurance carriers, and is in-network with TriCare and TriWest. Even on an out-of-network basis, your plan may still cover a significant portion of the cost, and our team will help you understand your specific benefits and out of pocket responsibilities before you begin treatment.</p>
 
 <h2>Understanding Deductibles, Copays, and Coinsurance</h2>
 <p>Your out of pocket cost for treatment will depend on your plan's specific terms. A deductible is the amount you must pay before insurance begins covering costs. A copay is a fixed amount you pay per visit or service. Coinsurance is the percentage of costs you pay after meeting your deductible. Understanding these terms and knowing your plan's specific numbers is essential for financial planning.</p>
