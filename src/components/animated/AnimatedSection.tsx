@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { ReactNode } from "react";
 
 const animations = {
@@ -24,7 +24,12 @@ export default function AnimatedSection({
   className,
   children,
 }: AnimatedSectionProps) {
+  const shouldReduceMotion = useReducedMotion();
   const variant = animations[animation];
+
+  if (shouldReduceMotion === true) {
+    return <div className={className}>{children}</div>;
+  }
 
   return (
     <motion.div

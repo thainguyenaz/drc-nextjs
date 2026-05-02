@@ -1,9 +1,11 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import Image from "next/image";
 
 export default function Hero() {
+  const shouldReduceMotion = useReducedMotion();
+
   return (
     <section className="relative h-screen min-h-[700px] flex items-end overflow-hidden">
       {/* Hero background — static poster (desktop + mobile) */}
@@ -78,9 +80,9 @@ export default function Hero() {
 
           {/* Trust Badges with real images */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={shouldReduceMotion ? false : { opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, ease: "easeOut", delay: 0.3 }}
+            transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.5, ease: "easeOut", delay: 0.3 }}
             className="flex flex-wrap items-center gap-4 mb-10"
           >
             <a href="https://www.jointcommission.org" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/15 rounded-xl px-4 py-2.5 hover:bg-white/15 transition-colors">
@@ -95,9 +97,9 @@ export default function Hero() {
 
           {/* CTAs */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={shouldReduceMotion ? false : { opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: "easeOut", delay: 0.9 }}
+            transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.6, ease: "easeOut", delay: 0.9 }}
             className="flex flex-col sm:flex-row items-start gap-4"
           >
             <a
@@ -115,9 +117,9 @@ export default function Hero() {
           </motion.div>
 
           <motion.p
-            initial={{ opacity: 0 }}
+            initial={shouldReduceMotion ? false : { opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 1.1 }}
+            transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.5, delay: 1.1 }}
             className="text-cream/50 text-sm italic mt-5"
           >
             Most clients begin treatment within 48 hours of their first call.
