@@ -55,7 +55,7 @@ export default function InsurancePage() {
       <PageHero
         eyebrow="Insurance"
         title="Insurance Verification"
-        description="We accept employer-based group commercial insurance plans and most major carriers out-of-network. Submit your details and we'll verify your benefits."
+        description="In-network with TriCare and TriWest. Out-of-network coverage available from major commercial insurance plans, plus cash-pay options. Submit your details and we'll verify your benefits at no cost."
         bgImage="/images/general/DRC-TREATMENTS.jpg"
       />
       <InsuranceContent />
