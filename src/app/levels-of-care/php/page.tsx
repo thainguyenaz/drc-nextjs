@@ -52,7 +52,7 @@ const faqs = [
   },
   {
     q: "Does insurance cover PHP in Arizona?",
-    a: "Yes, most major insurance plans cover partial hospitalization programs in Arizona. PHP is a recognized, medically necessary level of care under the Mental Health Parity and Addiction Equity Act. Plans from Aetna, Cigna, Blue Cross Blue Shield, UnitedHealthcare, and many other carriers typically provide coverage for PHP when clinically indicated. Our admissions team at Desert Recovery Centers will verify your specific insurance benefits before you begin the program. Call (480) 931-3617 for a free, confidential benefits check.",
+    a: "Yes, most major insurance plans cover partial hospitalization programs in Arizona. PHP is a recognized, medically necessary level of care under the Mental Health Parity and Addiction Equity Act. Plans from Aetna, Cigna, Blue Cross Blue Shield, UnitedHealthcare, and many other carriers typically provide coverage for PHP when clinically indicated. Note: Desert Recovery Centers works with these commercial carriers on an out-of-network basis; we are in-network with TriCare and TriWest, and offer cash-pay options. Our admissions team will verify your specific insurance benefits before you begin the program. Call (480) 931-3617 for a free, confidential benefits check.",
   },
   {
     q: "Who is PHP right for?",

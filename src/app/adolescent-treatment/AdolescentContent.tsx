@@ -111,7 +111,7 @@ const trustItems = [
   "Joint Commission Accredited",
   "LegitScript Certified",
   "TMS FDA Cleared for Ages 15 and Up",
-  "Insurance Accepted",
+  "OON Insurance + TriCare/TriWest",
   "Admissions 24 / 7",
   "Licensed Adolescent Clinicians",
 ];
@@ -622,7 +622,7 @@ export default function AdolescentContent({ checklistSlot }: { checklistSlot?: R
       <section className="py-12 md:py-16 bg-white border-t border-gray-100">
         <div className="max-w-container mx-auto px-6 text-center">
           <p className="text-gray-500 text-sm mb-6 max-w-2xl mx-auto">
-            Most major insurance plans cover adolescent PHP and IOP. Under federal law, mental health coverage must be equal to medical coverage.
+            Most major insurance plans cover adolescent PHP and IOP. Under federal law, mental health coverage must be equal to medical coverage. Desert Recovery Centers works with these commercial carriers on an out-of-network basis; we are in-network with TriCare and TriWest, and offer cash-pay options. We do not accept Medicaid or Medicare.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 mb-4">
             {insuranceProviders.map((name) => (

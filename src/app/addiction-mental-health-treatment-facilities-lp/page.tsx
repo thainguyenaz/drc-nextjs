@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title:
     "Luxury Addiction & Mental Health Treatment in Arizona | Desert Recovery Centers",
   description:
-    "Luxury addiction and mental health treatment in Arizona. Same-day admissions available. Insurance accepted. Joint Commission accredited. Call (480) 931-3617.",
+    "Luxury addiction and mental health treatment in Arizona. Same-day admissions available. Out-of-network commercial insurance and in-network TriCare/TriWest accepted. Joint Commission accredited. Call (480) 931-3617.",
   alternates: { canonical: PAGE_URL },
   robots: { index: false, follow: false },
 };
@@ -32,7 +32,7 @@ const faqs = [
   {
     question: "What insurance plans do you accept?",
     answer:
-      "Desert Recovery Centers is in-network or works with most major commercial plans, including Blue Cross Blue Shield, Aetna, Cigna, United Healthcare, Humana, and TRICARE. We offer free insurance verification and will tell you your out-of-pocket cost before you commit to anything.",
+      "For commercial insurance, Desert Recovery Centers works on an out-of-network basis with major plans including Aetna, Blue Cross Blue Shield, Cigna, UnitedHealthcare, Humana, Magellan, and others. Many out-of-network plans provide significant coverage for our level of care. We are also in-network with TriCare and TriWest, and offer cash-pay options. We offer free insurance verification and will tell you your out-of-pocket cost before you commit to anything.",
   },
 ];
 
@@ -92,7 +92,7 @@ export default function AdsLandingPage() {
                   Luxury Addiction &amp; Mental Health Treatment in Arizona
                 </h1>
                 <p className="text-lg sm:text-xl text-gray-700 leading-relaxed mb-8 max-w-2xl">
-                  Same-day admissions available. Insurance accepted.{" "}
+                  Same-day admissions available. Out-of-network commercial insurance and in-network TriCare/TriWest accepted.{" "}
                   <span className="text-gold font-semibold">Call now.</span>
                 </p>
 

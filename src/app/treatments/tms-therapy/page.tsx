@@ -90,7 +90,7 @@ const differentiators = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z" />
       </svg>
     ),
-    body: "Over 300 million people have insurance plans that cover NeuroStar therapy including Medicare and Tricare",
+    body: "TMS therapy is typically covered by most commercial insurance plans on an out-of-network basis. Our admissions team will verify your specific TMS benefits at no cost.",
   },
 ];
 
@@ -101,7 +101,7 @@ const faqs = [
   },
   {
     q: "Is TMS covered by insurance?",
-    a: "Most major insurance plans now cover TMS therapy for Major Depressive Disorder, including Medicare and Tricare. Over 300 million Americans have coverage for NeuroStar TMS. Coverage varies by plan. Contact us to verify your benefits.",
+    a: "TMS therapy is typically covered by most commercial insurance plans on an out-of-network basis. Desert Recovery Centers is in-network with TriCare and TriWest, and offers cash-pay options. Note: we do not accept Medicare or Medicaid. Coverage varies by plan. Our admissions team will verify your specific TMS benefits at no cost.",
   },
   {
     q: "How long does a TMS treatment course take?",
@@ -321,7 +321,7 @@ export default function TMSTherapyPage() {
               transition={{ duration: 0.65, delay: 0.5 }}
               className="text-white/70 font-body text-lg md:text-xl max-w-3xl mx-auto leading-relaxed mb-4"
             >
-              FDA-cleared, drug free, non invasive treatment for depression, anxious depression, and OCD. Now available at our Phoenix outpatient center. Most insurance accepted. Sessions as short as 19 minutes.
+              FDA-cleared, drug free, non invasive treatment for depression, anxious depression, and OCD. Now available at our Phoenix outpatient center. Out-of-network commercial insurance and in-network TriCare/TriWest accepted. Sessions as short as 19 minutes.
             </motion.p>
 
             {/* Certified NeuroStar Provider Badge */}

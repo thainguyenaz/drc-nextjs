@@ -233,7 +233,7 @@ export const pageMetadata: Record<string, PageMeta> = {
   },
   "/insurance-verification/": {
     title: "Verify Insurance for Addiction & Mental Health Treatment | DRC",
-    description: "Verify your insurance for addiction and mental health treatment at Desert Recovery Centers. We accept most private insurance. Call (480) 931-3617.",
+    description: "Verify your insurance for addiction and mental health treatment at Desert Recovery Centers. Out-of-network commercial coverage and in-network TriCare/TriWest. Call (480) 931-3617.",
     canonical: "https://desertrecoverycenters.com/insurance-verification/",
     ogImage: DEFAULT_OG_IMAGE,
   },

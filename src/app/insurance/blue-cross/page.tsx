@@ -111,7 +111,7 @@ export default function BlueCrossInsurancePage() {
                   HMO Plans (Health Maintenance Organization)
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  HMO plans generally require you to use in-network providers and may require a referral from your primary care physician before beginning treatment. Coverage for out-of-network facilities is typically limited. Our team can help determine if DRC is in-network with your BCBS HMO plan.
+                  HMO plans generally require you to use in-network providers and may require a referral from your primary care physician before beginning treatment. Coverage for out-of-network facilities is typically limited. DRC is out-of-network with BCBS commercial plans (we are in-network with TriCare and TriWest). For BCBS HMO members, that typically means out-of-network coverage is limited. Our team will verify your specific benefits at no cost.
                 </p>
               </div>
               <div className="bg-white rounded-xl p-6 border border-gray-100">

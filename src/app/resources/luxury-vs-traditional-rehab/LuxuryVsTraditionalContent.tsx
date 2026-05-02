@@ -46,7 +46,7 @@ const COMPARISON_ROWS: { label: string; luxury: string; traditional: string }[] 
   },
   {
     label: "Insurance",
-    luxury: "Most private insurance accepted",
+    luxury: "OON commercial + in-network TriCare/TriWest",
     traditional: "Varies widely",
   },
   {

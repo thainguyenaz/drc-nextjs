@@ -15,6 +15,10 @@ export const metadata: Metadata = buildMetadata({
 
 const faqs = [
   {
+    q: "Does Humana insurance cover treatment at Desert Recovery Centers?",
+    a: "Desert Recovery Centers is out-of-network with Humana. However, many out-of-network plans provide significant coverage for our level of care, and our admissions team will verify your specific benefits at no cost and walk you through what your coverage looks like. We are in-network with TriCare and TriWest, and offer cash-pay options. Call (480) 931-3617 for a free, confidential benefits verification.",
+  },
+  {
     q: "Does Humana cover residential rehab for substance abuse?",
     a: "Most Humana commercial and Marketplace plans include behavioral health benefits that cover residential substance abuse treatment when it is deemed medically necessary. Coverage details vary by plan type and benefit tier. Our admissions team can verify your specific Humana benefits at no cost, call (480) 931-3617 to get started.",
   },

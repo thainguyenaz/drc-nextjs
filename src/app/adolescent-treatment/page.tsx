@@ -17,13 +17,13 @@ export const metadata: Metadata = {
   title:
     "Adolescent Mental Health and Addiction Treatment | Desert Recovery Centers Phoenix",
   description:
-    "Desert Recovery Centers offers PHP, IOP, and outpatient treatment programs for adolescents ages 13 to 17 in Phoenix, AZ. Clinically supervised, parent-involved, school-compatible care. Joint Commission accredited. Insurance accepted. Call 24/7.",
+    "Desert Recovery Centers offers PHP, IOP, and outpatient treatment programs for adolescents ages 13 to 17 in Phoenix, AZ. Clinically supervised, parent-involved, school-compatible care. Joint Commission accredited. Out-of-network commercial insurance and in-network TriCare/TriWest accepted. Call 24/7.",
   alternates: { canonical: `${SITE_URL}/adolescent-treatment` },
   openGraph: {
     title:
       "Adolescent Mental Health and Addiction Treatment | Desert Recovery Centers Phoenix",
     description:
-      "Desert Recovery Centers offers PHP, IOP, and outpatient treatment programs for adolescents ages 13 to 17 in Phoenix, AZ. Clinically supervised, parent-involved, school-compatible care. Joint Commission accredited. Insurance accepted. Call 24/7.",
+      "Desert Recovery Centers offers PHP, IOP, and outpatient treatment programs for adolescents ages 13 to 17 in Phoenix, AZ. Clinically supervised, parent-involved, school-compatible care. Joint Commission accredited. Out-of-network commercial insurance and in-network TriCare/TriWest accepted. Call 24/7.",
     url: `${SITE_URL}/adolescent-treatment`,
     images: [
       {
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     title:
       "Adolescent Mental Health and Addiction Treatment | Desert Recovery Centers Phoenix",
     description:
-      "PHP, IOP, and outpatient treatment for adolescents ages 13 to 17 in Phoenix, AZ. Joint Commission accredited. Insurance accepted.",
+      "PHP, IOP, and outpatient treatment for adolescents ages 13 to 17 in Phoenix, AZ. Joint Commission accredited. Out-of-network commercial insurance and in-network TriCare/TriWest accepted.",
     images: [`${SITE_URL}/images/locations/phoenix/phoenix-lobby-2.jpg`],
   },
   keywords: [

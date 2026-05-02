@@ -166,7 +166,7 @@ export default function MethAddictionPage() {
               Meth recovery is a marathon, not a sprint. The first weeks are often the hardest as your brain adjusts to functioning without massive dopamine surges. But with consistent clinical support, your cognition, emotional regulation, and physical health improve steadily. Our team walks with you through residential care, PHP, IOP, and aftercare, providing the stability and accountability that make sustained recovery achievable.
             </p>
             <p className="text-gray-600 leading-relaxed mt-4">
-              We accept most major insurance plans. Coverage varies by plan. Contact us to verify your benefits.
+              For commercial insurance, we work on an out-of-network basis with major plans. We are also in-network with TriCare and TriWest, and offer cash-pay options. Coverage varies by plan. Contact us to verify your benefits at no cost.
             </p>
             </AnimatedSection>
           </div>
@@ -199,7 +199,7 @@ export default function MethAddictionPage() {
           {
             question: "Does Desert Recovery Centers accept insurance for meth rehab?",
             answer:
-              "Yes, Desert Recovery Centers accepts most major insurance plans for methamphetamine addiction treatment. Coverage varies by plan and provider, so our admissions team verifies your benefits and explains costs before treatment begins.",
+              "Desert Recovery Centers accepts out-of-network coverage from most major commercial insurance plans for methamphetamine addiction treatment, is in-network with TriCare and TriWest, and offers cash-pay options. Coverage varies by plan and provider, so our admissions team verifies your benefits and explains costs before treatment begins.",
           },
         ]}
       />

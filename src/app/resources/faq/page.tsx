@@ -19,7 +19,7 @@ const categories = [
     items: [
       {
         q: "What types of insurance do you accept?",
-        a: "Desert Recovery Centers is in-network with most major insurance providers, including Aetna, Blue Cross Blue Shield, Cigna, UnitedHealthcare, and many more. Our admissions team will verify your benefits at no cost and walk you through your coverage before you begin treatment.",
+        a: "For commercial insurance, we work on an out-of-network basis with major plans including Aetna, Blue Cross Blue Shield, Cigna, UnitedHealthcare, Humana, Magellan, and others. Many out-of-network plans provide significant coverage for our level of care. We are also in-network with TriCare and TriWest, and offer cash-pay options. Our admissions team will verify your specific benefits at no cost and walk you through what your coverage looks like.",
       },
       {
         q: "How do I know if I need residential vs. outpatient treatment?",

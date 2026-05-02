@@ -32,7 +32,7 @@ const faqs = [
   },
   {
     q: "Does insurance cover medical detox?",
-    a: "Yes, most major insurance plans cover medically necessary detoxification services. Desert Recovery Centers is in-network with many major insurance providers, and our admissions team will verify your benefits and explain your coverage at no cost before you begin treatment. We work to minimize out-of-pocket costs and eliminate financial barriers to care.",
+    a: "Yes, most major insurance plans cover medically necessary detoxification services. Desert Recovery Centers accepts out-of-network coverage from most major commercial insurance plans, is in-network with TriCare and TriWest, and offers cash-pay options. Our admissions team verifies your benefits and explains your coverage at no cost before you begin treatment. We work to minimize out-of-pocket costs and eliminate financial barriers to care.",
   },
   {
     q: "What medications are used during detox?",

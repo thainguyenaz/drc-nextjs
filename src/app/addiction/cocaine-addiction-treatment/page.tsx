@@ -166,7 +166,7 @@ export default function CocaineAddictionPage() {
               Cocaine recovery requires rebuilding your brain&apos;s ability to experience pleasure naturally. That takes time, clinical support, and a treatment environment that understands stimulant addiction specifically. At Desert Recovery Centers, your program moves at your pace, from intensive residential care to PHP and IOP as you regain stability. We help you develop the emotional resilience, healthy habits, and community connections that make sustained recovery possible.
             </p>
             <p className="text-gray-600 leading-relaxed mt-4">
-              We accept most major insurance plans. Coverage varies by plan. Contact us to verify your benefits.
+              For commercial insurance, we work on an out-of-network basis with major plans. We are also in-network with TriCare and TriWest, and offer cash-pay options. Coverage varies by plan. Contact us to verify your benefits at no cost.
             </p>
             </AnimatedSection>
           </div>
@@ -199,7 +199,7 @@ export default function CocaineAddictionPage() {
           {
             question: "Does Desert Recovery Centers accept insurance for cocaine rehab?",
             answer:
-              "Yes, Desert Recovery Centers accepts most major insurance plans for cocaine addiction treatment. Coverage varies by plan and provider, so our admissions team verifies your benefits and explains costs before treatment begins.",
+              "Desert Recovery Centers accepts out-of-network coverage from most major commercial insurance plans for cocaine addiction treatment, is in-network with TriCare and TriWest, and offers cash-pay options. Coverage varies by plan and provider, so our admissions team verifies your benefits and explains costs before treatment begins.",
           },
         ]}
       />

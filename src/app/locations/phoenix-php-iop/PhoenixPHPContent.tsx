@@ -756,7 +756,7 @@ export default function PhoenixPHPContent() {
             transition={{ duration: 0.6 }}
           >
             <p className="text-gray-600 text-sm mb-6">
-              We accept most major insurance plans. Your benefits are verified before you start, at no cost to you.
+              For commercial insurance, we work on an out-of-network basis with these carriers. Many out-of-network plans provide significant coverage for our level of care. We are also in-network with TriCare and TriWest, and offer cash-pay options. Your benefits are verified before you start, at no cost to you.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4 mb-4">
               {insuranceProviders.map((provider) => (

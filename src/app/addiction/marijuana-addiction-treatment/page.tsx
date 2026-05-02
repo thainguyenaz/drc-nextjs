@@ -166,7 +166,7 @@ export default function MarijuanaAddictionPage() {
               Recovery from marijuana addiction is about rediscovering clarity, motivation, and emotional regulation without relying on a substance. Your treatment plan may include residential care for a full reset, or PHP and IOP if you need flexibility while making changes. Our therapists help you uncover what was driving the use, and give you real tools to handle life without reaching for cannabis.
             </p>
             <p className="text-gray-600 leading-relaxed mt-4">
-              We accept most major insurance plans. Coverage varies by plan. Contact us to verify your benefits.
+              For commercial insurance, we work on an out-of-network basis with major plans. We are also in-network with TriCare and TriWest, and offer cash-pay options. Coverage varies by plan. Contact us to verify your benefits at no cost.
             </p>
             </AnimatedSection>
           </div>
@@ -199,7 +199,7 @@ export default function MarijuanaAddictionPage() {
           {
             question: "Does Desert Recovery Centers accept insurance for marijuana rehab?",
             answer:
-              "Yes, Desert Recovery Centers accepts most major insurance plans for cannabis use disorder treatment. Coverage varies by plan and provider, so our admissions team verifies your benefits and explains costs before treatment begins.",
+              "Desert Recovery Centers accepts out-of-network coverage from most major commercial insurance plans for cannabis use disorder treatment, is in-network with TriCare and TriWest, and offers cash-pay options. Coverage varies by plan and provider, so our admissions team verifies your benefits and explains costs before treatment begins.",
           },
         ]}
       />

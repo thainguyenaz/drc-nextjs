@@ -4,13 +4,13 @@ import { motion } from "framer-motion";
 import InsuranceVerificationForm from "@/components/forms/InsuranceVerificationForm";
 
 const insurers = [
-  { name: "Cigna", desc: "In-network coverage for residential, PHP, and IOP programs." },
-  { name: "Aetna", desc: "In-network behavioral health benefits accepted across all facilities." },
-  { name: "Blue Cross Blue Shield", desc: "BCBS plans accepted, including PPO and select HMO plans." },
-  { name: "UnitedHealthcare", desc: "UHC commercial plans accepted for all levels of care." },
-  { name: "Humana", desc: "In-network coverage for mental health and addiction treatment." },
-  { name: "Tricare", desc: "Coverage accepted for active-duty service members, veterans, and dependents." },
-  { name: "TriWest", desc: "TriWest Healthcare Alliance plans accepted for eligible veterans." },
+  { name: "Cigna", desc: "Out-of-network coverage available." },
+  { name: "Aetna", desc: "Out-of-network coverage available." },
+  { name: "Blue Cross Blue Shield", desc: "Out-of-network coverage available, including PPO and select HMO plans." },
+  { name: "UnitedHealthcare", desc: "Out-of-network coverage available for all levels of care." },
+  { name: "Humana", desc: "Out-of-network coverage available." },
+  { name: "TriCare", desc: "In-network for active-duty service members, veterans, and dependents." },
+  { name: "TriWest", desc: "In-network — TriWest Healthcare Alliance plans for eligible veterans." },
 ];
 
 const steps = [

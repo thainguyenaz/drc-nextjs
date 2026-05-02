@@ -15,6 +15,10 @@ export const metadata: Metadata = buildMetadata({
 
 const faqs = [
   {
+    q: "Does UnitedHealthcare insurance cover treatment at Desert Recovery Centers?",
+    a: "Desert Recovery Centers is out-of-network with UnitedHealthcare. However, many out-of-network plans provide significant coverage for our level of care, and our admissions team will verify your specific benefits at no cost and walk you through what your coverage looks like. We are in-network with TriCare and TriWest, and offer cash-pay options. Call (480) 931-3617 for a free, confidential benefits verification.",
+  },
+  {
     q: "Does United Healthcare cover inpatient drug rehab?",
     a: "Most United Healthcare plans include coverage for inpatient substance abuse treatment when it meets UHC\u0027s medical necessity criteria. UHC uses clinical guidelines managed through Optum to determine the appropriate level of care. Our admissions team works directly with Optum to secure authorization for treatment. Call (480) 931-3617 to verify your specific benefits.",
   },

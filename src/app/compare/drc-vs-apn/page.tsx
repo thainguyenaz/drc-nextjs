@@ -35,7 +35,7 @@ const faqs = [
   },
   {
     q: "Do both programs accept insurance?",
-    a: "Desert Recovery Centers is in-network with most major insurance providers including Aetna, Blue Cross Blue Shield, Cigna, and UnitedHealthcare. Coverage varies by plan. Contact us to verify your benefits at no cost. We recommend verifying insurance coverage with any facility you are considering.",
+    a: "Desert Recovery Centers accepts out-of-network coverage from most major commercial insurance plans (Aetna, Blue Cross Blue Shield, Cigna, UnitedHealthcare, Humana, Magellan, and others), is in-network with TriCare and TriWest, and offers cash-pay options. Our admissions team verifies your benefits at no cost. We recommend verifying insurance coverage with any facility you are considering.",
   },
 ];
 

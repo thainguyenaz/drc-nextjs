@@ -19,8 +19,8 @@ const faqs = [
     a: "Most Cigna plans include coverage for inpatient (residential) substance abuse treatment when it is deemed medically necessary. The extent of coverage depends on your specific plan, including factors like your deductible, copay, and whether the facility is in-network. Contact our admissions team at (480) 931-3617 to verify your specific Cigna benefits.",
   },
   {
-    q: "Is Desert Recovery Centers in-network with Cigna?",
-    a: "Insurance networks are updated regularly, and in-network status can vary by plan type. The best way to confirm whether Desert Recovery Centers is in-network with your specific Cigna plan is to call our admissions team at (480) 931-3617. We will verify your benefits directly and explain your coverage options in detail.",
+    q: "Does Cigna insurance cover treatment at Desert Recovery Centers?",
+    a: "Desert Recovery Centers is out-of-network with Cigna. However, many out-of-network plans provide significant coverage for our level of care, and our admissions team will verify your specific benefits at no cost and walk you through what your coverage looks like. We are in-network with TriCare and TriWest, and offer cash-pay options. Call (480) 931-3617 for a free, confidential benefits verification.",
   },
   {
     q: "How much will I pay out of pocket with Cigna insurance?",

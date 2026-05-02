@@ -166,7 +166,7 @@ export default function FentanylAddictionPage() {
               Fentanyl recovery requires patience, medical precision, and unwavering clinical support. The first days are the hardest, and our medical team is with you every step. Once stabilized, your treatment shifts to rebuilding, repairing relationships, processing trauma, developing the coping skills and emotional awareness that keep you grounded. Recovery from fentanyl is possible, and it begins with the decision to reach out.
             </p>
             <p className="text-gray-600 leading-relaxed mt-4">
-              We accept most major insurance plans. Coverage varies by plan. Contact us to verify your benefits.
+              For commercial insurance, we work on an out-of-network basis with major plans. We are also in-network with TriCare and TriWest, and offer cash-pay options. Coverage varies by plan. Contact us to verify your benefits at no cost.
             </p>
             </AnimatedSection>
           </div>
@@ -199,7 +199,7 @@ export default function FentanylAddictionPage() {
           {
             question: "Does Desert Recovery Centers accept insurance for fentanyl rehab?",
             answer:
-              "Yes, Desert Recovery Centers accepts most major insurance plans for fentanyl addiction treatment. Coverage varies by plan and provider, so our admissions team verifies your benefits and explains costs before treatment begins.",
+              "Desert Recovery Centers accepts out-of-network coverage from most major commercial insurance plans for fentanyl addiction treatment, is in-network with TriCare and TriWest, and offers cash-pay options. Coverage varies by plan and provider, so our admissions team verifies your benefits and explains costs before treatment begins.",
           },
         ]}
       />

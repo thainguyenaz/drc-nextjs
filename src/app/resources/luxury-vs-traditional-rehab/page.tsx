@@ -44,7 +44,7 @@ const FAQS = [
   },
   {
     q: "Does insurance cover luxury rehab in Arizona?",
-    a: "Many private insurance plans including Tricare and TriWest cover luxury behavioral health treatment in Arizona. Desert Recovery Centers works with most major private insurance carriers to verify benefits before admission.",
+    a: "Desert Recovery Centers accepts out-of-network coverage from most major commercial insurance plans for luxury behavioral health treatment in Arizona, is in-network with TriCare and TriWest (military health programs), and offers cash-pay options. Our admissions team will verify your specific benefits at no cost before admission.",
   },
   {
     q: "What amenities can I expect at a luxury rehab center?",
