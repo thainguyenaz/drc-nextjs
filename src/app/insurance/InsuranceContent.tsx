@@ -4,13 +4,13 @@ import { motion } from "framer-motion";
 import InsuranceVerificationForm from "@/components/forms/InsuranceVerificationForm";
 
 const insurers = [
-  { name: "Cigna", desc: "Out-of-network coverage available." },
-  { name: "Aetna", desc: "Out-of-network coverage available." },
-  { name: "Blue Cross Blue Shield", desc: "Out-of-network coverage available, including PPO and select HMO plans." },
-  { name: "UnitedHealthcare", desc: "Out-of-network coverage available for all levels of care." },
-  { name: "Humana", desc: "Out-of-network coverage available." },
-  { name: "TriCare", desc: "In-network for active-duty service members, veterans, and dependents." },
-  { name: "TriWest", desc: "In-network — TriWest Healthcare Alliance plans for eligible veterans." },
+  { name: "Cigna", slug: "cigna", desc: "Out-of-network coverage available." },
+  { name: "Aetna", slug: "aetna", desc: "Out-of-network coverage available." },
+  { name: "Blue Cross Blue Shield", slug: "bcbs", desc: "Out-of-network coverage available, including PPO and select HMO plans." },
+  { name: "UnitedHealthcare", slug: "uhc", desc: "Out-of-network coverage available for all levels of care." },
+  { name: "Humana", slug: "humana", desc: "Out-of-network coverage available." },
+  { name: "TriCare", slug: "tricare", desc: "In-network for active-duty service members, veterans, and dependents." },
+  { name: "TriWest", slug: "triwest", desc: "In-network — TriWest Healthcare Alliance plans for eligible veterans." },
 ];
 
 const steps = [
@@ -48,13 +48,13 @@ export default function InsuranceContent() {
                 Insurance at Desert Recovery Centers
               </h2>
               <p className="text-gray-600 leading-relaxed text-lg mb-4">
-                We accept employer-based group commercial insurance plans and most major carriers out-of-network. Once you submit your insurance details, we can verify your benefits and explain your coverage.
+                Desert Recovery Centers works with most major commercial insurance plans on an out-of-network basis — many of which provide significant coverage for our level of care. We are also in-network with TriCare and TriWest, and offer cash-pay options.
               </p>
               <p className="text-gray-600 leading-relaxed text-lg mb-4">
-                We do not accept Medicaid, or state-funded insurance. We can work with you on a self-pay option if you don&apos;t have health insurance.
+                We do not accept Medicare, Medicaid, or other state-funded insurance.
               </p>
               <p className="text-gray-600 leading-relaxed text-lg mb-6">
-                Fill out the insurance verification form and we will check what benefits you have and what they may cover at Desert Recovery Centers. Final determinations are always made by your insurance company.
+                Submit your insurance details and we will verify your benefits and explain your coverage. Final determinations are always made by your insurance company.
               </p>
               <div className="space-y-3 text-sm text-gray-600">
                 <div className="flex items-center gap-3">
@@ -93,7 +93,7 @@ export default function InsuranceContent() {
             className="text-center mb-14"
           >
             <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
-              Accepted Insurance
+              INSURANCE PROVIDERS
             </span>
             <div className="w-[60px] h-0.5 bg-gold mx-auto mt-4 mb-4" />
             <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold">
@@ -110,6 +110,11 @@ export default function InsuranceContent() {
                 transition={{ duration: 0.4, delay: i * 0.08 }}
                 className="bg-white rounded-xl p-6 border-t-[3px] border-t-transparent hover:border-t-gold hover:shadow-xl transition-all duration-[250ms]"
               >
+                <img
+                  src={`/images/insurance-logos/${insurer.slug}.png`}
+                  alt={insurer.name}
+                  className="h-12 w-auto mb-3"
+                />
                 <h3 className="font-display text-lg text-forest font-semibold mb-2">
                   {insurer.name}
                 </h3>
@@ -119,7 +124,10 @@ export default function InsuranceContent() {
               </motion.div>
             ))}
           </div>
-          <p className="text-center text-gray-500 text-sm mt-8">
+          <p className="text-center text-gray-400 text-xs mt-8 max-w-3xl mx-auto leading-relaxed">
+            Logos shown are trademarks of their respective owners and do not imply endorsement, partnership, or in-network status. Desert Recovery Centers is in-network with TriCare and TriWest only; commercial insurance is processed on an out-of-network basis. Our admissions team will verify your specific benefits at no cost.
+          </p>
+          <p className="text-center text-gray-500 text-sm mt-4">
             Don&apos;t see your insurance listed? Call us, we may still be able to work with your plan.
           </p>
         </div>
