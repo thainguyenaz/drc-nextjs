@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { Children, ReactNode } from "react";
 
 interface AnimatedGridProps {
@@ -24,6 +24,12 @@ export default function AnimatedGrid({
   hoverLift = true,
   children,
 }: AnimatedGridProps) {
+  const shouldReduceMotion = useReducedMotion();
+
+  if (shouldReduceMotion === true) {
+    return <div className={className}>{children}</div>;
+  }
+
   return (
     <motion.div
       className={className}
