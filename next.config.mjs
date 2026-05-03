@@ -62,11 +62,13 @@ const nextConfig = {
   },
   async redirects() {
     return [
-      // Deleted fake location pages → nearest real facility
-      { source: "/locations/chandler", destination: "/locations/phoenix", permanent: true },
-      { source: "/locations/gilbert", destination: "/locations/phoenix", permanent: true },
-      { source: "/locations/mesa", destination: "/locations/phoenix", permanent: true },
-      { source: "/locations/tempe", destination: "/locations/phoenix", permanent: true },
+      // Deleted fake location pages → nearest real facility (East Valley → Phoenix PHP/IOP, NW Valley → Glendale, Scottsdale-area → Scottsdale)
+      { source: "/locations/chandler", destination: "/locations/phoenix-php-iop", permanent: true },
+      { source: "/locations/gilbert", destination: "/locations/phoenix-php-iop", permanent: true },
+      { source: "/locations/mesa", destination: "/locations/phoenix-php-iop", permanent: true },
+      { source: "/locations/tempe", destination: "/locations/phoenix-php-iop", permanent: true },
+      // /locations/phoenix legacy URL → real outpatient facility
+      { source: "/locations/phoenix", destination: "/locations/phoenix-php-iop", permanent: true },
       { source: "/locations/surprise", destination: "/locations/glendale", permanent: true },
       { source: "/locations/peoria", destination: "/locations/glendale", permanent: true },
       { source: "/locations/north-scottsdale", destination: "/locations/scottsdale", permanent: true },
@@ -126,8 +128,8 @@ const nextConfig = {
       { source: "/adolescent-program/", destination: "/adolescent-treatment", permanent: true },
       { source: "/facilities/glendale", destination: "/locations/glendale", permanent: true },
       { source: "/facilities/glendale/", destination: "/locations/glendale", permanent: true },
-      { source: "/facilities/phoenix", destination: "/locations/phoenix", permanent: true },
-      { source: "/facilities/phoenix/", destination: "/locations/phoenix", permanent: true },
+      { source: "/facilities/phoenix", destination: "/locations/phoenix-php-iop", permanent: true },
+      { source: "/facilities/phoenix/", destination: "/locations/phoenix-php-iop", permanent: true },
       { source: "/facilities/scottsdale", destination: "/locations/scottsdale", permanent: true },
       { source: "/facilities/scottsdale/", destination: "/locations/scottsdale", permanent: true },
       { source: "/blog", destination: "/resources/blog", permanent: true },
