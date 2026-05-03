@@ -1,0 +1,8 @@
+# Intermediate / regenerable / superseded audit artifacts.
+# Kept on disk for grep-ability; not tracked in repo.
+# Per C4 Phase A investigation 2026-05-03.
+
+nextjs-urls.txt
+redirects-draft.json
+wordpress-team-data.json
+wordpress-team-slugs.txt
