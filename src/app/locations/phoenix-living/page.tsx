@@ -11,7 +11,7 @@ const PhotoGallery = dynamic(() => import("@/components/PhotoGallery"), { ssr: f
 export const metadata: Metadata = buildMetadata({
   title: "Phoenix PHP Sober Living, Desert Recovery Centers",
   description:
-    "Structured sober living housing for clients enrolled in DRC PHP programs. 1623 W Moody Trail, Phoenix, AZ 85085. Call (602) 905-8070.",
+    "Structured sober living housing for clients enrolled in DRC PHP programs. 1623 W Moody Trail, Phoenix, AZ 85041. Call (602) 905-8070.",
   path: "/locations/phoenix-living",
 });
 
@@ -71,7 +71,7 @@ export default function PhoenixLivingPage() {
             <div className="bg-cream border border-gold/30 rounded-xl p-6 mb-8">
               <p className="text-forest text-sm leading-relaxed">
                 <strong>This is a housing property, not a treatment facility.</strong> All clinical treatment is provided at our{" "}
-                <Link href="/locations/phoenix" className="text-gold font-semibold hover:underline">Phoenix PHP/IOP Center</Link> at 4160 N. 108th Ave. This sober living property provides the supportive environment between sessions.
+                <Link href="/locations/phoenix-php-iop" className="text-gold font-semibold hover:underline">Phoenix PHP/IOP Center</Link> at 4160 N. 108th Ave. This sober living property provides the supportive environment between sessions.
               </p>
             </div>
 
@@ -81,7 +81,7 @@ export default function PhoenixLivingPage() {
             <div className="space-y-3 text-gray-600 mb-8">
               <div className="flex items-start gap-3">
                 <span className="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0" />
-                <span><strong>Address:</strong>&nbsp;1623 W Moody Trail, Phoenix, AZ 85085</span>
+                <span><strong>Address:</strong>&nbsp;1623 W Moody Trail, Phoenix, AZ 85041</span>
               </div>
               <div className="flex items-start gap-3">
                 <span className="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0" />
@@ -132,7 +132,7 @@ export default function PhoenixLivingPage() {
                 Call (602) 905-8070
               </a>
               <Link
-                href="/locations/phoenix"
+                href="/locations/phoenix-php-iop"
                 className="bg-white hover:bg-cream border border-sage/30 text-forest font-semibold text-base px-8 py-4 rounded-xl transition-all w-full sm:w-auto text-center"
               >
                 View Phoenix PHP/IOP Center
