@@ -38,11 +38,11 @@ const locations = [
   },
   {
     name: "Phoenix PHP Living",
-    address: "1623 W Moody Trail, Phoenix, AZ 85085",
+    address: "1623 W Moody Trail, Phoenix, AZ 85041",
     phone: "(602) 905-8070",
     phoneTel: "+16029058070",
     programs: ["PHP Living", "Sober Living"],
-    mapQuery: "1623+W+Moody+Trail+Phoenix+AZ+85085",
+    mapQuery: "1623+W+Moody+Trail+Phoenix+AZ+85041",
   },
 ];
 
