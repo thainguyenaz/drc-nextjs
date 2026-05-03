@@ -28,7 +28,7 @@ const faqs = [
   },
   {
     q: "What is a typical taper schedule for Prozac?",
-    a: "A taper plan for fluoxetine (Prozac) is often simpler due to its 4–6 day half-life. Medical professionals typically start with a 10–20% dose reduction every 4–6 weeks. For example, a 20 mg dose might drop to 16 mg, then 12 mg, with smaller cuts using compounded products at the end. The longer half-life means Prozac naturally tapers itself in the body, minimizing withdrawal symptoms.",
+    a: "A fluoxetine (Prozac) taper should always be supervised by a licensed prescribing provider. Typical pacing is a 10–25% dose reduction every 2–4 weeks, with monitoring at each step. An illustrative taper might step from 40 mg, then 30 mg, then 20 mg, then 10 mg, then discontinue, with smaller cuts using compounded products if needed at the lower end. Prozac's unusually long half-life (4–6 days, much longer than other SSRIs) means the body clears the medication gradually, which softens withdrawal but does not eliminate it. Watch for anxiety, irritability, insomnia, dizziness, and mood relapse during the taper. If any of these emerge or intensify, the prescriber may slow the pace. Slower is safer, especially for patients who have struggled with prior taper attempts.",
   },
   {
     q: "How do I deal with brain zaps during withdrawal?",
@@ -188,8 +188,8 @@ export default function AntidepressantTaperPage() {
                 {
                   drug: "Fluoxetine (Prozac)",
                   halfLife: "4–6 days",
-                  pace: "10–20% reduction every 4–6 weeks",
-                  note: "The long half-life makes Prozac the most forgiving SSRI to discontinue. Example: 20 mg → 16 mg → 12 mg → compounded fractional doses.",
+                  pace: "10–25% reduction every 2–4 weeks",
+                  note: "Long half-life softens withdrawal but does not eliminate it. Example: 40 mg, then 30 mg, then 20 mg, then 10 mg, then discontinue, with compounded fractional doses if needed at the lower end.",
                 },
                 {
                   drug: "Sertraline (Zoloft)",
