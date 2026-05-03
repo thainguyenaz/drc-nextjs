@@ -103,7 +103,7 @@ const nextConfig = {
       // SEO redirects — renamed content pages
       { source: "/addiction/understanding-gambling-addiction/", destination: "/addiction/gambling-addiction-treatment/", permanent: true },
       { source: "/addiction/understanding-sex-addiction/", destination: "/addiction/sex-addiction-treatment/", permanent: true },
-      { source: "/treatments/alternative-therapy/", destination: "/treatments/softwave-therapy/", permanent: true },
+      { source: "/treatments/alternative-therapy", destination: "/treatments/softwave-therapy", permanent: true }, // fix: was 404 (trailing slash on source caused slash-strip → bare → 404)
       { source: "/treatments/understanding-cbt-cognitive-behavioral-therapy/", destination: "/treatments/cbt-cognitive-behavioral-therapy", permanent: true }, // fix: was 404 (cognitive-behavioral-therapy-cbt route does not exist)
       { source: "/treatments/understanding-dbt-dialectic-behavior-therapy/", destination: "/treatments/dbt-dialectical-behavior-therapy", permanent: true }, // fix: was 404 (dialectical-behavior-therapy-dbt route does not exist)
       { source: "/treatments/emdr-eye-movement-desensitization-and-reprocessing", destination: "/treatments/emdr-therapy", permanent: true },
