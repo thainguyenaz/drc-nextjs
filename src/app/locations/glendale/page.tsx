@@ -72,11 +72,11 @@ const faqs = [
   },
   {
     q: "Why is Glendale considered your flagship facility?",
-    a: "Our Glendale location was our first center and remains our largest at 7,500 square feet. It offers the widest range of amenities, basketball court, tennis court, pool, gym, billiards, and massage room, and the full continuum of care: residential treatment, PHP, and IOP.",
+    a: "Our Glendale location was our first center and remains our largest at 7,500 square feet. It offers the widest range of amenities, basketball court, tennis court, pool, gym, billiards, and massage room. Glendale is a male-only residential treatment center; clients who step down to PHP or IOP transition to our outpatient center in Phoenix.",
   },
   {
     q: "What programs are available at the Glendale location?",
-    a: "We offer three levels of care: Residential Treatment (24/7 immersive program), Partial Hospitalization Program (PHP) with 5-6 hours of daily programming, and Intensive Outpatient Program (IOP) meeting 3-4 times per week. Your clinical team recommends the right level based on your comprehensive evaluation.",
+    a: "The Glendale location offers Residential Treatment (24/7 live-in care for adult men). Clients ready for a step-down to PHP or IOP transition to our outpatient center in Phoenix at 4160 N. 108th Ave. Your clinical team recommends the right level of care based on your evaluation.",
   },
   {
     q: "What conditions do you treat at the Glendale center?",
@@ -127,7 +127,7 @@ export default function GlendaleLocationPage() {
               The Flagship Center Where It All Started
             </h2>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              Our Glendale facility is where Desert Recovery Centers began, and it remains the heart of our mission. At 7,500 square feet, it&apos;s our largest and most comprehensive treatment center, offering the full continuum of care from intensive residential treatment through outpatient programming.
+              Our Glendale facility is where Desert Recovery Centers began, and it remains the heart of our mission. At 7,500 square feet, it&apos;s our largest residential center, providing 24/7 immersive care for adult men. Clients who step down to outpatient programming transition to our Phoenix center.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
               What you&apos;ll find here is a program built on clinical depth, not marketing promises. Licensed psychologists, a board-certified psychiatrist, and registered nurses deliver evidence-based treatment around the clock, in a luxury home-like setting with amenities that rival a resort. Basketball court, tennis court, pool, massage room, gourmet meals, because we believe that healing the whole person requires treating the whole person.
@@ -188,7 +188,7 @@ export default function GlendaleLocationPage() {
               <div className="mb-6">
                 <h3 className="font-display text-xl text-forest font-semibold mb-4">Programs</h3>
                 <div className="flex flex-wrap gap-3">
-                  {["Residential Treatment", "Partial Hospitalization (PHP)", "Intensive Outpatient (IOP)"].map((p) => (
+                  {["Residential Treatment"].map((p) => (
                     <span key={p} className="text-sm bg-sage/10 text-sage font-medium px-4 py-2 rounded-full">{p}</span>
                   ))}
                 </div>
@@ -320,7 +320,7 @@ export default function GlendaleLocationPage() {
       <AEOBlock entries={[
         {
           question: "Is there a Desert Recovery Centers in Glendale?",
-          answer: "Yes, Desert Recovery Centers' flagship facility is located at 8105 W Frier Dr, Glendale, AZ 85303. Desert Recovery Centers is a Joint Commission accredited luxury treatment center in Arizona, and our Glendale location is a 7,500-square-foot residential center offering the full continuum of care including residential treatment, PHP, and IOP programs.",
+          answer: "Yes, Desert Recovery Centers' flagship facility is located at 8105 W Frier Dr, Glendale, AZ 85303. Desert Recovery Centers is a Joint Commission accredited luxury treatment provider in Arizona. The Glendale location is a 7,500-square-foot male-only residential treatment center. PHP and IOP programs are offered at our outpatient center in Phoenix at 4160 N. 108th Ave.",
         },
         {
           question: "What addiction treatment is available in Glendale, Arizona?",

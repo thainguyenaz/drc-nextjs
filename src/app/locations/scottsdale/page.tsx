@@ -72,7 +72,7 @@ const faqs = [
   },
   {
     q: "What programs are available at the Scottsdale location?",
-    a: "Our Scottsdale facility offers three levels of care: Residential Treatment (24/7 live-in program), Partial Hospitalization Program (PHP) with 5-6 hours of daily programming, and Intensive Outpatient Program (IOP) meeting 3-4 times per week. Your clinical team recommends the right level based on your evaluation.",
+    a: "The Scottsdale location offers Residential Treatment (24/7 live-in care for adult women). Clients ready for a step-down to PHP or IOP transition to our outpatient center in Phoenix at 4160 N. 108th Ave. Your clinical team recommends the right level of care based on your evaluation.",
   },
   {
     q: "What conditions do you treat at the Scottsdale center?",
@@ -187,7 +187,7 @@ export default function ScottsdaleLocationPage() {
               <div className="mb-6">
                 <h3 className="font-display text-xl text-forest font-semibold mb-4">Programs</h3>
                 <div className="flex flex-wrap gap-3">
-                  {["Residential Treatment", "Partial Hospitalization (PHP)", "Intensive Outpatient (IOP)"].map((p) => (
+                  {["Residential Treatment"].map((p) => (
                     <span key={p} className="text-sm bg-sage/10 text-sage font-medium px-4 py-2 rounded-full">{p}</span>
                   ))}
                 </div>
@@ -319,7 +319,7 @@ export default function ScottsdaleLocationPage() {
       <AEOBlock entries={[
         {
           question: "Is there a Desert Recovery Centers in Scottsdale?",
-          answer: "Yes, Desert Recovery Centers has a facility located at 23222 N Church Rd in north Scottsdale, AZ 85255. Desert Recovery Centers is a Joint Commission accredited luxury treatment center in Arizona offering residential treatment, partial hospitalization (PHP), and intensive outpatient (IOP) programs surrounded by stunning mountain views.",
+          answer: "Yes, Desert Recovery Centers has a facility located at 23222 N Church Rd in north Scottsdale, AZ 85255. Desert Recovery Centers is a Joint Commission accredited luxury treatment provider in Arizona. The Scottsdale location is a female-only residential treatment center surrounded by stunning mountain views. PHP and IOP programs are offered at our outpatient center in Phoenix at 4160 N. 108th Ave.",
         },
         {
           question: "What addiction treatment is available in Scottsdale, Arizona?",
