@@ -247,7 +247,7 @@ export default function HumanaInsurancePage() {
                 "Insurance team experienced with Humana commercial, Medicare Advantage, and TRICARE plans",
                 "Evidence-based addiction treatment including CBT, DBT, EMDR, and trauma-informed approaches",
                 "Dual diagnosis programs addressing co-occurring mental health conditions alongside addiction",
-                "Three luxury residential facilities in Scottsdale, Phoenix, and Glendale, Arizona",
+                "Two luxury residential facilities in Scottsdale and Glendale, plus an outpatient center in Phoenix, Arizona",
                 "Low client-to-clinician ratios ensuring individualized, attentive care",
                 "Robust aftercare planning and lifelong alumni support network",
               ].map((item, i) => (

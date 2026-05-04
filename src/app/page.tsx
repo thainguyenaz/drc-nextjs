@@ -61,7 +61,7 @@ export default function Home() {
         <div className="max-w-4xl mx-auto px-6">
           <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold mb-6">About Desert Recovery Centers</h2>
           <p className="text-gray-700 leading-relaxed text-lg">
-            Desert Recovery Centers is a Joint Commission-accredited luxury behavioral health treatment organization with residential inpatient facilities in Glendale, Scottsdale, and Phoenix, Arizona. Founded by Jason Inserra, Thai Nguyen, and Dr. An Nguyen, Desert Recovery Centers specializes in dual-diagnosis addiction treatment and mental health programs serving clients throughout Arizona and the Southwest United States.
+            Desert Recovery Centers is a Joint Commission-accredited luxury behavioral health treatment organization with two residential inpatient facilities in Glendale and Scottsdale, plus an outpatient center in Phoenix, Arizona. Founded by Jason Inserra, Thai Nguyen, and Dr. An Nguyen, Desert Recovery Centers specializes in dual-diagnosis addiction treatment and mental health programs serving clients throughout Arizona and the Southwest United States.
           </p>
         </div>
       </section>
