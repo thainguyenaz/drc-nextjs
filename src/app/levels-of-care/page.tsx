@@ -39,7 +39,7 @@ export const metadata: Metadata = {
 const faqs = [
   {
     q: "What are the different levels of addiction treatment?",
-    a: "Addiction treatment is organized into a continuum of care with progressively less intensive levels. The primary levels, from most to least intensive, are: medical detoxification (medically supervised withdrawal management), residential treatment (24-hour inpatient care), partial hospitalization (PHP — full-day outpatient programming), intensive outpatient (IOP — several hours per day, several days per week), standard outpatient therapy (weekly sessions), and aftercare or alumni support. At Desert Recovery Centers, we provide all of these levels and guide each client through the continuum based on their individual clinical needs.",
+    a: "Addiction treatment is organized into a continuum of care with progressively less intensive levels. The primary levels, from most to least intensive, are: medical detoxification (medically supervised withdrawal management), residential treatment (24-hour inpatient care), partial hospitalization (PHP, full-day outpatient programming), intensive outpatient (IOP, several hours per day, several days per week), standard outpatient therapy (weekly sessions), and aftercare or alumni support. Desert Recovery Centers coordinates medical detox through trusted partner facilities, then provides residential, PHP, IOP, outpatient, and aftercare programming at our Arizona locations, guiding each client through the continuum based on their individual clinical needs.",
   },
   {
     q: "What is the difference between PHP and IOP?",
@@ -136,7 +136,7 @@ export default function LevelsOfCarePage() {
               "@type": "MedicalTherapy",
               name: "Addiction Treatment Continuum of Care",
               description:
-                "A comprehensive range of addiction and mental health treatment levels including medical detox, residential treatment, partial hospitalization, intensive outpatient, outpatient therapy, and aftercare.",
+                "A full range of addiction and mental health treatment levels including coordinated medical detox at partner facilities, residential treatment, partial hospitalization, intensive outpatient, outpatient therapy, and aftercare.",
             },
             reviewedBy: {
               "@type": "Person",
@@ -165,7 +165,7 @@ export default function LevelsOfCarePage() {
       <PageHero
         eyebrow="Treatment Continuum"
         title="Levels of Care at Desert Recovery Centers"
-        description="A complete continuum of addiction and mental health treatment — from medical detox through aftercare — guided by your individual clinical needs."
+        description="A complete continuum of addiction and mental health treatment, from detox coordination through aftercare, guided by your individual clinical needs."
         bgImage="/images/general/DRC-ADDICTION.jpg"
       />
 
@@ -197,14 +197,14 @@ export default function LevelsOfCarePage() {
                 independence.
               </p>
               <p className="text-gray-600 leading-relaxed text-lg mb-4">
-                At Desert Recovery Centers, we provide every level of care
-                in this continuum — from medical detox through aftercare
-                support. This means you can move through your entire
-                recovery journey within a single treatment system, with the
-                same clinical team guiding your care at every stage. There
-                are no referrals to outside programs, no gaps between
-                levels, and no need to start over with a new treatment
-                provider.
+                Desert Recovery Centers coordinates the full continuum of
+                care. We coordinate medically supervised detox through
+                trusted partner facilities, then provide residential
+                treatment, PHP, IOP, outpatient therapy, and aftercare at
+                our Arizona locations. After detox, you move through your
+                residential and outpatient stages within a single treatment
+                system, with the same DRC clinical team guiding your care
+                across every level beyond detox.
               </p>
               <p className="text-gray-600 leading-relaxed text-lg">
                 The right level of care for you depends on your specific
@@ -335,8 +335,8 @@ export default function LevelsOfCarePage() {
             <div className="space-y-4">
               {[
                 {
-                  title: "One System, Every Level of Care",
-                  desc: "From medical detox through aftercare, your entire treatment journey takes place within the DRC system. This eliminates the transitions between providers that disrupt continuity, delay progress, and force you to rebuild therapeutic relationships.",
+                  title: "Seamless Detox-to-Residential Coordination",
+                  desc: "We coordinate your medically supervised detox at a trusted partner facility, then manage the warm handoff into our residential program. You arrive at Desert Recovery Centers with your detox already complete and your treatment plan already in motion, ready to start residential care without delays or duplicate intakes.",
                 },
                 {
                   title: "Clinical Continuity",
@@ -424,7 +424,7 @@ export default function LevelsOfCarePage() {
             question:
               "What levels of care does Desert Recovery Centers offer?",
             answer:
-              "Desert Recovery Centers (a Joint Commission accredited luxury treatment center in Arizona) offers a complete continuum of care: medical detoxification, residential treatment (10-bed max per facility), partial hospitalization (PHP), intensive outpatient (IOP), outpatient therapy, and aftercare/alumni support. Clients are guided through each level based on individual clinical progress.",
+              "Desert Recovery Centers (a Joint Commission accredited luxury treatment center in Arizona) coordinates medically supervised detox through trusted partner facilities, then provides residential treatment (10-bed max per facility), partial hospitalization (PHP), intensive outpatient (IOP), outpatient therapy, and aftercare/alumni support at our Arizona locations. Clients are guided through each level based on individual clinical progress.",
           },
           {
             question:

@@ -381,9 +381,10 @@ export default function IOPPage() {
                 At Desert Recovery Centers, IOP is not an isolated program.
                 It is one step in a coordinated continuum of care that
                 supports you from the most intensive levels of treatment
-                through to independent recovery. The typical pathway follows
-                this progression: medical detox, residential treatment, PHP,
-                IOP, and then outpatient aftercare.
+                through to independent recovery. The typical pathway begins
+                with medically supervised detox at a trusted partner
+                facility, then continues at Desert Recovery Centers with
+                residential treatment, PHP, IOP, and outpatient aftercare.
               </p>
               <p className="text-gray-600 leading-relaxed text-lg mb-4">
                 Each transition is guided by your clinical team based on
