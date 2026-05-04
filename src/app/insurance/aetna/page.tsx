@@ -227,7 +227,7 @@ export default function AetnaInsurancePage() {
                 "Dedicated insurance team experienced with Aetna prior authorization and utilization reviews",
                 "Evidence-based therapies including CBT, DBT, EMDR, and trauma-informed care",
                 "Dual diagnosis treatment for co-occurring anxiety, depression, PTSD, and other conditions",
-                "Three luxury residential locations across the Phoenix metropolitan area",
+                "Two luxury residential locations in the Phoenix metro area (Glendale and Scottsdale), plus an outpatient center in Phoenix",
                 "Individualized treatment plans with low client-to-clinician ratios",
                 "Comprehensive discharge planning and alumni support for sustained recovery",
               ].map((item, i) => (

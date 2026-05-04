@@ -240,7 +240,7 @@ export default function UnitedInsurancePage() {
                 "Clinical documentation standards that support medical necessity at every review point",
                 "Evidence-based treatment including CBT, DBT, EMDR, and medication-assisted treatment",
                 "Dual diagnosis expertise for co-occurring depression, anxiety, PTSD, and bipolar disorder",
-                "Three premium residential facilities across the Phoenix metro area",
+                "Two premium residential facilities in the Phoenix metro area (Glendale and Scottsdale), plus an outpatient center in Phoenix",
                 "Comprehensive aftercare planning and alumni support network",
               ].map((item, i) => (
                 <div

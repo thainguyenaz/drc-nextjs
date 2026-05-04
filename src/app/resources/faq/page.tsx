@@ -114,7 +114,7 @@ const categories = [
       },
       {
         q: "What are the facilities like?",
-        a: "Our three Arizona locations are luxury residential homes, not clinical institutions. Amenities vary by location but include swimming pools, basketball and tennis courts, gyms, massage rooms, gourmet kitchens, private bedrooms, game rooms, and outdoor recreation areas. Our Scottsdale facility features mountain views, and our Phoenix location includes a movie theater and pool with waterfall.",
+        a: "Our two Arizona residential locations (Glendale and Scottsdale) are luxury homes, not clinical institutions, with outpatient services available at our Phoenix center. Amenities vary by location but include swimming pools, basketball and tennis courts, gyms, massage rooms, gourmet kitchens, private bedrooms, game rooms, and outdoor recreation areas. Our Scottsdale facility features mountain views, and our Phoenix location includes a movie theater and pool with waterfall.",
       },
       {
         q: "Can I work during IOP?",

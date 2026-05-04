@@ -72,7 +72,7 @@ const locations = [
 const faqs = [
   {
     q: "How many locations does Desert Recovery Centers have?",
-    a: "DRC operates three luxury treatment facilities in Arizona: Glendale (our flagship, 7,500 sq ft), Scottsdale (mountain views in north Scottsdale), and Phoenix (expanded holistic programming). All three offer residential treatment with a maximum of 10 beds per facility.",
+    a: "DRC operates two luxury residential treatment facilities (Glendale and Scottsdale), each with 10 beds, plus an outpatient center in Phoenix at 4160 N. 108th Ave.",
   },
   {
     q: "Which DRC location is closest to me?",

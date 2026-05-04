@@ -244,7 +244,7 @@ export default function BlueCrossInsurancePage() {
                 "Full continuum of care from medical detox through IOP and aftercare",
                 "Evidence-based treatment including CBT, DBT, EMDR, and holistic therapies",
                 "Dual diagnosis programs for co-occurring mental health and substance use disorders",
-                "Luxury residential facilities in Scottsdale, Phoenix, and Glendale",
+                "Luxury residential facilities in Scottsdale and Glendale, plus an outpatient center in Phoenix",
                 "Personalized treatment with small client-to-clinician ratios and 24/7 clinical support",
               ].map((item, i) => (
                 <div

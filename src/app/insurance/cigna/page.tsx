@@ -227,7 +227,7 @@ export default function CignaInsurancePage() {
                 "Experienced admissions team that handles all Cigna verification and prior authorization",
                 "Evidence-based treatment including CBT, DBT, EMDR, and trauma-informed care",
                 "Dual diagnosis expertise for co-occurring mental health conditions",
-                "Luxury residential facilities in Scottsdale, Phoenix, and Glendale",
+                "Luxury residential facilities in Scottsdale and Glendale, plus an outpatient center in Phoenix",
                 "Small client-to-clinician ratios for personalized attention",
                 "Comprehensive aftercare planning to support long-term recovery",
               ].map((item, i) => (
