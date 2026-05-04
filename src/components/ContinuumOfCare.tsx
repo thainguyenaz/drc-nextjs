@@ -7,7 +7,7 @@ const phases = [
   {
     step: "01",
     title: "30-Day Residential Treatment (RTC)",
-    desc: "24/7 immersive care in a luxury 10-bed facility with doctoral-level clinicians, medical detox, and Bridge Work individual therapy.",
+    desc: "24/7 immersive care in a luxury 10-bed facility with doctoral-level clinicians and Bridge Work individual therapy.",
     href: "/levels-of-care/residential-treatment",
   },
   {

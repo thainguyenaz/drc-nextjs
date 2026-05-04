@@ -114,7 +114,7 @@ export default function OurTeamPage() {
                 },
                 {
                   title: "Board-Certified Medical Director",
-                  desc: "Our Medical Director oversees all psychiatric care, medication management, and medical detox protocols, ensuring your physical and mental health are addressed with equal rigor.",
+                  desc: "Our Medical Director oversees all psychiatric care and medication management, ensuring your physical and mental health are addressed with equal rigor.",
                 },
                 {
                   title: "Dedicated Treatment Teams",

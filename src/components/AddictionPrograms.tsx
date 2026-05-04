@@ -135,7 +135,7 @@ export default function AddictionPrograms() {
             Addiction Treatment Programs
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            From medically supervised detox to long-term recovery support, our
+            From detox coordination through long-term recovery support, our
             addiction programs are built on science, guided by compassion.
           </p>
         </motion.div>
