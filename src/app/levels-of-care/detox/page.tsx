@@ -483,7 +483,7 @@ export default function DetoxPage() {
             question:
               "Will I detox at the same place I do residential treatment?",
             answer:
-              "No — detox is performed at one of our partner medical detox facilities, then you transition to a Desert Recovery Centers residential location (Glendale or Scottsdale) for residential treatment. Our admissions team coordinates the entire process so the handoff is seamless.",
+              "No. Detox is performed at one of our partner medical detox facilities, then you transition to a Desert Recovery Centers residential location (Glendale or Scottsdale) for residential treatment. Our admissions team coordinates the entire process so the handoff is seamless.",
           },
         ]}
       />

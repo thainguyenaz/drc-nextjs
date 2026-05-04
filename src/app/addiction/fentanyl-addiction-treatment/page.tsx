@@ -37,7 +37,7 @@ const faqs = [
   {
     question: "Can fentanyl addiction be treated?",
     answer:
-      "Yes. Fentanyl addiction is treatable with medically supervised detox and medication-assisted treatment. At Desert Recovery Centers, our doctoral-level clinicians use specialized synthetic opioid detox protocols in our Arizona facilities with just 10 beds per location for safe, individualized care.",
+      "Yes. Fentanyl addiction is treatable with medically supervised detox and medication-assisted treatment. At Desert Recovery Centers, we coordinate specialized synthetic opioid detox protocols through partner facilities, then continue care at our Arizona residential locations with just 10 beds per location for safe, individualized care.",
   },
   {
     question: "How long does fentanyl rehab take?",
@@ -83,7 +83,7 @@ export default function FentanylAddictionPage() {
               You know how dangerous this is. Every time you use, you&apos;re gambling with your life, and you know it. Maybe you started with prescription painkillers, or maybe fentanyl found its way into something else you were using. Either way, your body now depends on one of the most potent opioids in existence, and the withdrawal is so brutal that stopping feels impossible. The fear of getting sick keeps you trapped. You&apos;re not choosing this anymore. Your brain chemistry is.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg mt-4">
-              At Desert Recovery Centers, we specialize in fentanyl addiction treatment with medically supervised detox protocols designed specifically for synthetic opioid dependence. Our medical team understands the intensity of fentanyl withdrawal and uses evidence-based interventions to keep you safe and as comfortable as possible through the process.
+              At Desert Recovery Centers, we specialize in fentanyl addiction treatment, coordinating medically supervised detox protocols through partner facilities designed specifically for synthetic opioid dependence. Our residential team understands the intensity of fentanyl withdrawal and uses evidence-based interventions to keep you safe and as comfortable as possible through the process.
             </p>
 
             <h2 className="font-display text-2xl text-forest font-semibold mt-10 mb-4">
@@ -189,12 +189,12 @@ export default function FentanylAddictionPage() {
           {
             question: "What is fentanyl addiction treatment at Desert Recovery Centers?",
             answer:
-              "Desert Recovery Centers is a Joint Commission accredited luxury treatment center in Arizona specializing in fentanyl and synthetic opioid addiction treatment. With just 10 beds per facility, clients receive medically supervised detox with protocols designed specifically for synthetic opioid dependence, alongside personalized care from doctoral-level clinicians.",
+              "Desert Recovery Centers is a Joint Commission accredited luxury treatment center in Arizona specializing in fentanyl and synthetic opioid addiction treatment. With just 10 beds per residential facility, clients receive medically supervised detox via partner facility with protocols designed specifically for synthetic opioid dependence, alongside personalized care from doctoral-level clinicians.",
           },
           {
             question: "How does Desert Recovery Centers treat fentanyl addiction?",
             answer:
-              "Treatment includes medically supervised detox with 24/7 monitoring, medication-assisted treatment with Suboxone and Vivitrol, trauma-informed therapy including EMDR and somatic experiencing, and dual diagnosis care for co-occurring mental health conditions.",
+              "Treatment includes medically supervised detox via partner facility, MAT with Suboxone and Vivitrol, trauma-informed therapy including EMDR and somatic experiencing, and dual diagnosis care for co-occurring mental health conditions.",
           },
           {
             question: "Does Desert Recovery Centers accept insurance for fentanyl rehab?",

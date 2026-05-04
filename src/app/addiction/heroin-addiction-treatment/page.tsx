@@ -37,7 +37,7 @@ const faqs = [
   {
     question: "Can heroin addiction be treated?",
     answer:
-      "Yes. Heroin addiction is a treatable medical condition. At Desert Recovery Centers, our doctoral-level clinicians use medically supervised detox combined with medication-assisted treatment (MAT) and behavioral therapy. Our Arizona facilities maintain just 10 beds per location for individualized, high-quality care.",
+      "Yes. Heroin addiction is a treatable medical condition. At Desert Recovery Centers, we coordinate medically supervised detox through partner facilities, combined with MAT and behavioral therapy at our residential locations. Our Arizona facilities maintain just 10 beds per location for individualized, high-quality care.",
   },
   {
     question: "How long does heroin rehab take?",
@@ -83,7 +83,7 @@ export default function HeroinAddictionPage() {
               You&apos;re tired. Tired of the hustle, finding it, using it, coming down, and doing it all over again just to feel okay. Tired of the lies, the track marks you try to cover, the look on your family&apos;s face when they figure it out. Heroin has narrowed your entire world down to one thing, and everything else has fallen away. You didn&apos;t plan for this. Nobody does.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg mt-4">
-              At Desert Recovery Centers, we&apos;ve worked with hundreds of people in exactly your situation. Our heroin addiction treatment program combines medically supervised detox with long-term behavioral therapy and MAT to give you the strongest possible foundation for recovery.
+              At Desert Recovery Centers, we&apos;ve worked with hundreds of people in exactly your situation. Our heroin addiction treatment program coordinates medically supervised detox through partner facilities, then continues with long-term behavioral therapy and MAT at our residential locations to give you the strongest possible foundation for recovery.
             </p>
 
             <h2 className="font-display text-2xl text-forest font-semibold mt-10 mb-4">
@@ -189,12 +189,12 @@ export default function HeroinAddictionPage() {
           {
             question: "What is heroin addiction treatment at Desert Recovery Centers?",
             answer:
-              "Desert Recovery Centers is a Joint Commission accredited luxury treatment center in Arizona providing medically supervised detox and MAT programs for heroin and opioid dependence. With only 10 beds per facility, clients receive intensive, personalized care from doctoral-level clinicians.",
+              "Desert Recovery Centers is a Joint Commission accredited luxury treatment center in Arizona coordinating medically supervised detox through partner facilities and providing MAT programs for heroin and opioid dependence at our residential locations. With only 10 beds per facility, clients receive intensive, personalized care from doctoral-level clinicians.",
           },
           {
             question: "How does Desert Recovery Centers treat heroin addiction?",
             answer:
-              "Treatment includes medically supervised detox, medication-assisted treatment with Suboxone and Vivitrol, individual and group therapy (CBT, motivational interviewing), EMDR for trauma, holistic therapies, and dual diagnosis care for co-occurring mental health conditions.",
+              "Treatment includes medically supervised detox via partner facility, MAT with Suboxone and Vivitrol, individual and group therapy (CBT, motivational interviewing), EMDR for trauma, holistic therapies, and dual diagnosis care for co-occurring mental health conditions.",
           },
           {
             question: "Does Desert Recovery Centers accept insurance for heroin rehab?",
