@@ -41,7 +41,7 @@ export default function AddictionTreatmentPage() {
       <PageHero
         eyebrow="Addiction Treatment"
         title="Addiction Treatment Programs"
-        description="From medically supervised detox to long-term recovery support, our addiction programs are built on science, guided by compassion."
+        description="From detox coordination through long-term recovery support, our addiction programs are built on science, guided by compassion."
         bgImage="/images/general/DRC-ADDICTION.jpg"
       />
       <section className="py-16 md:py-24 bg-white">
@@ -49,7 +49,7 @@ export default function AddictionTreatmentPage() {
           <div className="max-w-3xl mx-auto">
             <AnimatedSection>
               <p className="text-gray-600 leading-relaxed text-lg">
-                Addiction is a chronic medical condition that requires specialized, evidence-based treatment. At Desert Recovery Centers, we offer a full continuum of care, from medically supervised detoxification to residential treatment, partial hospitalization (PHP), intensive outpatient (IOP), and aftercare planning.
+                Addiction is a chronic medical condition that requires specialized, evidence-based treatment. Desert Recovery Centers coordinates medically supervised detox through trusted partner facilities, then provides residential treatment, partial hospitalization (PHP), intensive outpatient (IOP), and aftercare planning at our Arizona locations.
               </p>
               <p className="text-gray-600 leading-relaxed text-lg mt-4">
                 Our Medication-Assisted Treatment (MAT) program utilizes FDA-approved medications including Suboxone, Vivitrol, and naltrexone alongside behavioral therapies for optimal recovery outcomes.
