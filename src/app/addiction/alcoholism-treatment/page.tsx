@@ -36,7 +36,7 @@ const faqs = [
   {
     question: "Can alcohol addiction be treated?",
     answer:
-      "Yes. Alcohol use disorder is a medical condition that responds well to evidence-based treatment. At Desert Recovery Centers, our doctoral-level clinicians combine medically supervised detox, medication-assisted treatment, and behavioral therapy in our Arizona facilities with just 10 beds per location for highly personalized care.",
+      "Yes. Alcohol use disorder is a medical condition that responds well to evidence-based treatment. At Desert Recovery Centers, we coordinate medically supervised detox through partner facilities, then our doctoral-level clinicians provide MAT and behavioral therapy in our Arizona facilities with just 10 beds per location for highly personalized care.",
   },
   {
     question: "How long does alcohol rehab take?",
@@ -230,12 +230,12 @@ export default function AlcoholAddictionPage() {
           {
             question: "What is alcohol addiction treatment at Desert Recovery Centers?",
             answer:
-              "Desert Recovery Centers is a Joint Commission accredited luxury treatment center in Arizona offering medically supervised detox, residential care, and outpatient programs for alcohol use disorder. With just 10 beds per facility, every client receives individualized attention from doctoral-level clinicians.",
+              "Desert Recovery Centers is a Joint Commission accredited luxury treatment center in Arizona coordinating medically supervised detox through partner facilities, with residential care and outpatient programs for alcohol use disorder at our locations. With just 10 beds per facility, every client receives individualized attention from doctoral-level clinicians.",
           },
           {
             question: "How does Desert Recovery Centers treat alcohol addiction?",
             answer:
-              "Treatment includes medically supervised detox with 24/7 monitoring, medication-assisted treatment using naltrexone and acamprosate, individual and group therapy (CBT, DBT, motivational interviewing), and dual diagnosis care for co-occurring mental health conditions.",
+              "Treatment includes medically supervised detox via partner facility, MAT using naltrexone and acamprosate, individual and group therapy (CBT, DBT, motivational interviewing), and dual diagnosis care for co-occurring mental health conditions.",
           },
           {
             question: "Does Desert Recovery Centers accept insurance for alcohol rehab?",

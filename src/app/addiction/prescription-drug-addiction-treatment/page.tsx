@@ -81,7 +81,7 @@ export default function PrescriptionDrugAddictionPage() {
               A doctor prescribed it. You took it as directed, at first. But the pain didn&apos;t go away, or the anxiety kept creeping back, or the medication stopped working at the dose you were on. Now you&apos;re taking more than prescribed, refilling early, doctor shopping, or buying from someone else. You feel ashamed because this isn&apos;t who you thought you were. You never imagined yourself here. But prescription drug addiction doesn&apos;t discriminate, it happens to people from every background, every profession, every walk of life.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg mt-4">
-              At Desert Recovery Centers, we treat prescription drug dependence with the same clinical rigor and compassion we bring to every substance. Our medical team specializes in safe, medically supervised tapering and detox protocols tailored to the specific class of medication involved.
+              At Desert Recovery Centers, we treat prescription drug dependence with the same clinical rigor and compassion we bring to every substance. DRC coordinates safe, medically supervised tapering and detox protocols through partner facilities tailored to the specific class of medication involved.
             </p>
 
             <h2 className="font-display text-2xl text-forest font-semibold mt-10 mb-4">
@@ -196,12 +196,12 @@ export default function PrescriptionDrugAddictionPage() {
           {
             question: "What is prescription drug addiction treatment at Desert Recovery Centers?",
             answer:
-              "Desert Recovery Centers is a Joint Commission accredited luxury treatment center in Arizona offering medically supervised detox, safe tapering protocols, and comprehensive therapy for prescription drug addiction. With just 10 beds per facility, every client receives individualized attention from doctoral-level clinicians.",
+              "Desert Recovery Centers is a Joint Commission accredited luxury treatment center in Arizona coordinating medically supervised detox and safe tapering through partner facilities, with thorough therapy at our residential locations for prescription drug addiction. With just 10 beds per facility, every client receives individualized attention from doctoral-level clinicians.",
           },
           {
             question: "How does Desert Recovery Centers treat prescription drug addiction?",
             answer:
-              "Treatment includes medically supervised detox and tapering tailored to the specific drug class (opioids, benzodiazepines, or stimulants), medication-assisted treatment, CBT and DBT, non-addictive pain management alternatives, and dual diagnosis care for underlying conditions.",
+              "Treatment includes medically supervised detox and tapering at a partner facility tailored to the specific drug class (opioids, benzodiazepines, or stimulants), medication-assisted treatment, CBT and DBT, non-addictive pain management alternatives, and dual diagnosis care for underlying conditions.",
           },
           {
             question: "Does Desert Recovery Centers accept insurance for prescription drug rehab?",
