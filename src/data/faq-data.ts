@@ -4,7 +4,7 @@ export const faqData: Record<string, Array<{ question: string; answer: string }>
     { question: "Does Desert Recovery Centers accept insurance?", answer: "Desert Recovery Centers accepts out-of-network coverage from most major commercial insurance plans, is in-network with TriCare and TriWest, and offers cash-pay options. Our admissions team verifies your benefits at no cost. Call (480) 931-3617 or submit our online form to get started." },
     { question: "How long is the addiction treatment program?", answer: "Program length depends on individual needs and level of care. Residential inpatient programs typically range from 30 to 90 days. Our clinical team creates a personalized treatment plan during the admissions assessment." },
     { question: "What makes Desert Recovery Centers different from other rehabs in Arizona?", answer: "Desert Recovery Centers is Joint Commission accredited and offers a luxury residential treatment experience with a low staff-to-client ratio, dual-diagnosis clinical care, and facilities in Glendale and Scottsdale, plus an outpatient center in Phoenix, Arizona." },
-    { question: "Is detox available at Desert Recovery Centers?", answer: "Yes. Desert Recovery Centers provides medically supervised detox services as part of our full continuum of care addiction treatment programs." },
+    { question: "Is detox available at Desert Recovery Centers?", answer: "Desert Recovery Centers does not perform detox on-site. We coordinate medically supervised detox through trusted partner facilities, then clients transition to our residential locations in Glendale or Scottsdale to begin treatment." },
   ],
 
   "mental-health": [
@@ -48,19 +48,19 @@ export const faqData: Record<string, Array<{ question: string; answer: string }>
   ],
 
   "alcoholism-treatment": [
-    { question: "What does alcohol addiction treatment include?", answer: "Alcohol treatment at Desert Recovery Centers includes medically supervised detox, residential inpatient care, CBT, DBT, 12-step programming, holistic therapies, and aftercare planning." },
+    { question: "What does alcohol addiction treatment include?", answer: "Alcohol treatment begins with medically supervised detox at a partner facility, then continues at Desert Recovery Centers with residential inpatient care, CBT, DBT, 12-step programming, holistic therapies, and aftercare planning." },
     { question: "How long is alcohol rehab?", answer: "Alcohol rehab programs typically range from 30 to 90 days for residential treatment. Length depends on individual clinical needs and assessment." },
     { question: "Does insurance cover alcohol rehab?", answer: "Yes. Most major private insurance plans cover alcohol addiction treatment. Call (480) 931-3617 for a free benefits verification." },
-    { question: "Is medically supervised alcohol detox available?", answer: "Yes. Desert Recovery Centers offers medically supervised alcohol detox as the first phase of treatment, ensuring client safety and comfort during withdrawal." },
-    { question: "Does Desert Recovery Centers treat alcoholism?", answer: "Yes. Alcohol addiction treatment is one of our core specialties. We provide a full continuum of care from medically supervised detox through residential treatment and aftercare planning at our Joint Commission accredited Arizona facilities." },
+    { question: "Is medically supervised alcohol detox available?", answer: "Yes. Desert Recovery Centers coordinates medically supervised alcohol detox through trusted partner facilities as the first phase of treatment, ensuring client safety and comfort during withdrawal. Clients then transition to our residential locations to continue care." },
+    { question: "Does Desert Recovery Centers treat alcoholism?", answer: "Yes. Alcohol addiction treatment is one of our core specialties. We coordinate medically supervised detox through trusted partner facilities, then provide residential treatment and aftercare planning at our Joint Commission accredited Arizona facilities." },
   ],
 
   "heroin-addiction-treatment": [
-    { question: "How is heroin addiction treated?", answer: "Heroin addiction treatment includes medically supervised detox, MAT (medication-assisted treatment) when appropriate, residential inpatient care, CBT, DBT, and comprehensive aftercare planning." },
-    { question: "Is heroin detox medically supervised?", answer: "Yes. Heroin detox at Desert Recovery Centers is fully medically supervised to manage withdrawal safely and comfortably." },
+    { question: "How is heroin addiction treated?", answer: "Heroin addiction treatment begins with medically supervised detox at a partner facility, then continues at Desert Recovery Centers with MAT (medication-assisted treatment) when appropriate, residential inpatient care, CBT, DBT, and thorough aftercare planning." },
+    { question: "Is heroin detox medically supervised?", answer: "Yes. Desert Recovery Centers coordinates medically supervised heroin detox through trusted partner facilities to manage withdrawal safely and comfortably. Clients then transition to our residential locations for continued treatment." },
     { question: "What is the success rate for heroin treatment?", answer: "Success rates improve significantly with comprehensive dual-diagnosis residential treatment, strong aftercare planning, and ongoing support. Our clinical team personalizes every treatment plan for lasting recovery." },
     { question: "What is MAT for heroin addiction?", answer: "Medication-assisted treatment (MAT) uses FDA-approved medications in combination with behavioral therapy to treat opioid use disorders. When clinically appropriate, our medical team may incorporate MAT as part of a comprehensive heroin addiction treatment plan." },
-    { question: "Does insurance cover heroin addiction treatment?", answer: "Yes. Most major private insurance plans cover heroin addiction treatment including medically supervised detox and residential care. Call (480) 931-3617 for a free insurance verification." },
+    { question: "Does insurance cover heroin addiction treatment?", answer: "Yes. Most major private insurance plans cover heroin addiction treatment, including medically supervised detox at our partner facilities and residential care at Desert Recovery Centers. Call (480) 931-3617 for a free insurance verification." },
   ],
 
   "meth-addiction-treatment": [
@@ -72,11 +72,11 @@ export const faqData: Record<string, Array<{ question: string; answer: string }>
   ],
 
   "fentanyl-addiction-treatment": [
-    { question: "How dangerous is fentanyl withdrawal?", answer: "Fentanyl withdrawal can be medically serious and should never be attempted alone. Desert Recovery Centers provides medically supervised detox to ensure client safety throughout the withdrawal process." },
-    { question: "What treatment is used for fentanyl addiction?", answer: "Fentanyl addiction treatment includes medically supervised detox, MAT when clinically appropriate, residential inpatient care, CBT, DBT, and comprehensive aftercare." },
+    { question: "How dangerous is fentanyl withdrawal?", answer: "Fentanyl withdrawal can be medically serious and should never be attempted alone. Desert Recovery Centers coordinates medically supervised detox through trusted partner facilities to ensure client safety throughout the withdrawal process, then clients transition to our residential locations for continued treatment." },
+    { question: "What treatment is used for fentanyl addiction?", answer: "Fentanyl addiction treatment begins with medically supervised detox at a partner facility, then continues at Desert Recovery Centers with MAT when clinically appropriate, residential inpatient care, CBT, DBT, and thorough aftercare." },
     { question: "Does insurance cover fentanyl treatment?", answer: "Yes. Most major private insurance plans cover fentanyl addiction treatment. Call (480) 931-3617 for a free benefits check." },
     { question: "What is the fentanyl withdrawal timeline?", answer: "Fentanyl withdrawal symptoms typically begin within 8 to 24 hours after the last use, peak around 36 to 72 hours, and gradually decrease over 5 to 7 days. Some symptoms may persist longer. Medically supervised detox ensures safety and comfort throughout the process." },
-    { question: "Is medically supervised detox needed for fentanyl?", answer: "Yes. Medically supervised detox is strongly recommended for fentanyl withdrawal due to the potency of the substance and the severity of withdrawal symptoms. Our medical team monitors clients 24/7 and provides medications to manage symptoms safely." },
+    { question: "Is medically supervised detox needed for fentanyl?", answer: "Yes. Medically supervised detox is strongly recommended for fentanyl withdrawal due to the potency of the substance and the severity of withdrawal symptoms. The medical team at our partner detox facility monitors clients 24/7 and provides medications to manage symptoms safely. Clients then transition to Desert Recovery Centers for residential treatment." },
   ],
 
   "dual-diagnosis-treatment": [
@@ -168,9 +168,9 @@ export const faqData: Record<string, Array<{ question: string; answer: string }>
   ],
 
   "prescription-drug-addiction-treatment": [
-    { question: "What is prescription drug addiction treatment?", answer: "Prescription drug addiction treatment at Desert Recovery Centers addresses dependence on opioid painkillers, benzodiazepines, stimulants, and other prescribed medications through medically supervised detox, residential care, and evidence-based therapies." },
+    { question: "What is prescription drug addiction treatment?", answer: "Prescription drug addiction treatment addresses dependence on opioid painkillers, benzodiazepines, stimulants, and other prescribed medications. Desert Recovery Centers coordinates medically supervised detox through trusted partner facilities, then provides residential care and evidence-based therapies at our Arizona locations." },
     { question: "Does Desert Recovery Centers treat prescription drug addiction?", answer: "Yes. We treat addiction to prescription opioids, benzodiazepines, stimulants, sleep medications, and other commonly misused prescriptions at our Joint Commission accredited Arizona facilities." },
-    { question: "Is medically supervised detox needed for prescription drugs?", answer: "Medically supervised detox is strongly recommended, especially for opioids and benzodiazepines, where withdrawal can be medically serious. Our medical team ensures safe, comfortable detoxification." },
+    { question: "Is medically supervised detox needed for prescription drugs?", answer: "Medically supervised detox is strongly recommended, especially for opioids and benzodiazepines, where withdrawal can be medically serious. The medical team at our partner detox facility ensures safe, comfortable detoxification. Clients then transition to Desert Recovery Centers for residential treatment." },
     { question: "How long is prescription drug rehab?", answer: "Residential treatment for prescription drug addiction typically ranges from 30 to 90 days depending on the substance, severity of dependence, and co-occurring conditions." },
     { question: "Does insurance cover prescription drug rehab?", answer: "Yes. Most major private insurance plans cover prescription drug addiction treatment. Call (480) 931-3617 for a free insurance verification." },
   ],
