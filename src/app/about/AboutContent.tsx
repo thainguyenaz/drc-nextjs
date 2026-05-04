@@ -9,8 +9,8 @@ const values = [
     desc: "Mental health and addiction rarely exist in isolation. Our clinical team treats both conditions simultaneously, because addressing only one leaves the other untreated and recovery incomplete.",
   },
   {
-    title: "10-Bed Maximum Philosophy",
-    desc: "We intentionally limit each facility to 10 beds. This ensures every client receives deeply personalized attention from licensed psychologists, psychiatrists, and therapists, not assembly-line care.",
+    title: "10-Bed Residential Maximum Philosophy",
+    desc: "We intentionally limit each residential facility to 10 beds. This ensures every client receives deeply personalized attention from licensed psychologists, psychiatrists, and therapists, not assembly-line care.",
   },
   {
     title: "Joint Commission Accredited",
@@ -73,7 +73,7 @@ export default function AboutContent() {
                 Desert Recovery Centers was founded on a simple conviction: people struggling with mental health conditions and addiction deserve more than a bed and a checklist. They deserve clinical excellence delivered with genuine compassion, in an environment that supports healing at every level.
               </p>
               <p className="text-gray-600 leading-relaxed text-lg mb-4">
-                Too many treatment centers prioritize volume over outcomes. We chose a different path. By limiting each facility to just 10 beds, we ensure that every person who walks through our doors receives the individualized attention that drives real, lasting change.
+                Too many treatment centers prioritize volume over outcomes. We chose a different path. By limiting each residential facility to just 10 beds, we ensure that every person who walks through our doors receives the individualized attention that drives real, lasting change.
               </p>
               <p className="text-gray-600 leading-relaxed text-lg">
                 Our founding team saw firsthand what works in behavioral health, and what doesn&apos;t. DRC was built to be the treatment center they wished existed: clinically rigorous, deeply personal, and relentlessly focused on outcomes.

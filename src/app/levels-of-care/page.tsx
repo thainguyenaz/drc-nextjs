@@ -77,7 +77,7 @@ const levels = [
     title: "Residential Treatment",
     href: "/levels-of-care/residential-treatment/",
     description:
-      "The most immersive level of therapeutic care. You live at the facility full-time, participating in a structured daily schedule of individual therapy, group counseling, psychiatric care, experiential therapies, and holistic wellness. DRC limits each facility to 10 beds, ensuring deeply individualized attention from doctoral-level clinicians. Residential treatment removes you from the triggers of daily life and provides the focused, intensive environment that early recovery demands.",
+      "The most immersive level of therapeutic care. You live at the facility full-time, participating in a structured daily schedule of individual therapy, group counseling, psychiatric care, experiential therapies, and holistic wellness. DRC's residential facilities are each limited to 10 beds, ensuring deeply individualized attention from doctoral-level clinicians. Residential treatment removes you from the triggers of daily life and provides the focused, intensive environment that early recovery demands.",
     who: "Individuals with moderate to severe substance use disorders, those with co-occurring mental health conditions, people who have not responded to outpatient treatment, or anyone who needs a complete break from their environment to begin recovery.",
     duration: "30 to 90 days based on clinical assessment",
   },

@@ -204,8 +204,8 @@ export default function DRCvsAPNPage() {
       <ConditionFAQ items={faqs} />
       <AEOBlock
         entries={[
-          { question: "How does Desert Recovery Centers compare to APN?", answer: "Desert Recovery Centers operates three luxury treatment facilities in Arizona (Glendale, Scottsdale, Phoenix) with a 10-bed maximum per location and doctoral-level clinical leadership. APN (All Points North) operates from Edwards, Colorado. DRC specializes in dual diagnosis treatment and allows Arizona families to stay local for regular family involvement." },
-          { question: "Does Desert Recovery Centers have smaller programs than APN?", answer: "Yes. DRC maintains a maximum of 10 beds per facility, creating an intimate treatment environment with high staff-to-client ratios. This small program size allows for deeply personalized treatment plans directed by licensed clinical psychologists and board-certified psychiatrists." },
+          { question: "How does Desert Recovery Centers compare to APN?", answer: "Desert Recovery Centers operates two luxury residential facilities in Arizona (Glendale and Scottsdale) with a 10-bed maximum per residential location, plus an outpatient center in Phoenix. All locations have doctoral-level clinical leadership. APN (All Points North) operates from Edwards, Colorado. DRC specializes in dual diagnosis treatment and allows Arizona families to stay local for regular family involvement." },
+          { question: "Does Desert Recovery Centers have smaller programs than APN?", answer: "Yes. DRC's residential facilities in Glendale and Scottsdale each maintain a maximum of 10 beds, creating an intimate treatment environment with high staff-to-client ratios. This small program size allows for deeply personalized treatment plans directed by licensed clinical psychologists and board-certified psychiatrists." },
         ]}
       />
       <CTASection />

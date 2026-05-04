@@ -114,10 +114,10 @@ export default function RehabNearMePage() {
               Luxury Treatment Across the Valley
             </h2>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              Desert Recovery Centers operates three treatment facilities across the Phoenix metropolitan area, in Glendale, Scottsdale, and Phoenix. No matter where you are in Arizona, world-class addiction and mental health treatment is within driving distance.
+              Desert Recovery Centers operates two residential treatment facilities (Glendale and Scottsdale) plus an outpatient center in Phoenix. No matter where you are in Arizona, our doctoral-level addiction and mental health treatment is within driving distance.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg">
-              Every location is staffed by the same caliber of doctoral-level clinicians, accredited by the Joint Commission, and limited to a maximum of 10 beds. The difference is in the surroundings and specific amenities. Below, find the facility closest to you.
+              Every location is staffed by the same caliber of doctoral-level clinicians and accredited by the Joint Commission. Our residential facilities in Glendale and Scottsdale are each limited to a maximum of 10 beds. The difference between locations is in the surroundings and specific amenities. Below, find the facility closest to you.
             </p>
           </div>
         </div>
