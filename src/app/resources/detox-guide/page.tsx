@@ -7,16 +7,16 @@ import Footer from "@/components/Footer";
 import { buildMetadata, BreadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Medical Detox in Arizona, DRC",
+  title: "Medical Detox Guide: What to Expect at Our Partner Facilities",
   description:
-    "Learn what medical detox involves, why it matters, and what to expect. Medically supervised detox at Desert Recovery Centers in Arizona.",
+    "Learn what medical detox involves, why it matters, and what to expect. Desert Recovery Centers coordinates medically supervised detox at trusted partner facilities, then you transition to our Arizona residential locations for treatment.",
   path: "/resources/detox-guide",
 });
 
 const faqs = [
   {
     q: "Is detox painful?",
-    a: "Medical detox is designed to manage withdrawal symptoms as safely and comfortably as possible. While withdrawal can be uncomfortable, our medical team uses evidence-based medications and 24/7 monitoring to significantly reduce discomfort. The experience varies by substance and individual, but our goal is always to minimize suffering while ensuring safety. We never use the term 'painless detox' because honesty about the process is important, but medically supervised detox is vastly more comfortable and safer than attempting withdrawal alone.",
+    a: "Medical detox is designed to manage withdrawal symptoms as safely and comfortably as possible. While withdrawal can be uncomfortable, the medical team at our partner detox facility uses evidence-based medications and 24/7 monitoring to significantly reduce discomfort. The experience varies by substance and individual, but the goal is always to minimize suffering while ensuring safety. We never use the term 'painless detox' because honesty about the process is important, but medically supervised detox is vastly more comfortable and safer than attempting withdrawal alone.",
   },
   {
     q: "How long does detox take?",
@@ -28,7 +28,7 @@ const faqs = [
   },
   {
     q: "What happens after detox is complete?",
-    a: "At Desert Recovery Centers, clients transition directly from detox stabilization into our residential treatment program. This is critical because detox only addresses physical dependence, it does not treat the psychological, behavioral, and emotional dimensions of addiction. Clients who complete detox without entering treatment have extremely high relapse rates. Our integrated approach ensures a seamless transition from medical stabilization to comprehensive treatment.",
+    a: "Clients transition directly from partner-facility detox stabilization into our residential treatment program at Desert Recovery Centers. This is critical because detox only addresses physical dependence, it does not treat the psychological, behavioral, and emotional dimensions of addiction. Clients who complete detox without entering treatment have extremely high relapse rates. Our coordinated approach ensures a seamless transition from medical stabilization to thorough treatment.",
   },
   {
     q: "Does insurance cover medical detox?",
@@ -36,7 +36,7 @@ const faqs = [
   },
   {
     q: "What medications are used during detox?",
-    a: "The medications used depend on the substance being withdrawn. For opioid detox, we may use buprenorphine (Suboxone), clonidine, or other FDA-approved medications. For alcohol detox, benzodiazepines are typically used to prevent seizures, along with vitamins and supportive medications. Benzodiazepine detox involves a carefully managed tapering schedule. All medications are prescribed and monitored by our medical director and nursing staff, with the goal of ensuring safety and reducing withdrawal severity.",
+    a: "The medications used depend on the substance being withdrawn. For opioid detox, partner-facility medical teams may use buprenorphine (Suboxone), clonidine, or other FDA-approved medications. For alcohol detox, benzodiazepines are typically used to prevent seizures, along with vitamins and supportive medications. Benzodiazepine detox involves a carefully managed tapering schedule. All medications are prescribed and monitored by the partner detox facility's medical director and nursing staff, with the goal of ensuring safety and reducing withdrawal severity.",
   },
 ];
 
@@ -52,8 +52,8 @@ export default function DetoxGuidePage() {
       <Navigation />
       <PageHero
         eyebrow="Clinical Resource"
-        title="Medical Detox in Arizona"
-        description="What to expect from medically supervised detoxification, and why it is the critical first step that makes treatment possible."
+        title="Medical Detox Guide: What to Expect at Our Partner Facilities"
+        description="What to expect from medically supervised detoxification at our partner facilities, and why it is the critical first step that makes treatment possible."
         bgImage="/images/general/DRC-Treatment-Therapies-BG-Fade.jpg"
       />
 
@@ -80,7 +80,7 @@ export default function DetoxGuidePage() {
               Medically supervised detoxification provides the clinical oversight, medication management, and 24/7 monitoring needed to safely navigate the withdrawal process. It clears the body of substances so that the real work of recovery, therapy, skill-building, and behavioral change, can begin.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg">
-              At Desert Recovery Centers, detox stabilization is integrated into our treatment continuum. Clients are never discharged after detox alone, they transition directly into our residential program where the underlying causes of addiction are addressed through evidence-based clinical care.
+              Desert Recovery Centers coordinates detox stabilization through trusted partner facilities as part of our treatment continuum. Clients are never sent home after detox alone, they transition directly into our residential program where the underlying causes of addiction are addressed through evidence-based clinical care.
             </p>
           </div>
         </div>
@@ -201,25 +201,25 @@ export default function DetoxGuidePage() {
               What Medically Supervised Detox Looks Like
             </h2>
             <p className="text-gray-600 leading-relaxed mb-6">
-              Understanding what to expect reduces anxiety and helps clients and families prepare mentally for the process:
+              At Desert Recovery Centers, we coordinate medically supervised detox through trusted partner facilities. Understanding what to expect reduces anxiety and helps clients and families prepare mentally for the process:
             </p>
             <div className="space-y-6">
               {[
                 {
                   title: "Intake Assessment",
-                  desc: "Upon arrival, our medical team conducts a comprehensive evaluation, substance use history, medical history, mental health screening, vital signs, and laboratory work. This assessment determines the appropriate detox protocol and identifies any co-occurring conditions that require attention.",
+                  desc: "Upon arrival at the partner detox facility, the medical team conducts a thorough evaluation: substance use history, medical history, mental health screening, vital signs, and laboratory work. This assessment determines the appropriate detox protocol and identifies any co-occurring conditions that require attention.",
                 },
                 {
                   title: "Medical Stabilization",
-                  desc: "Our medical director prescribes an individualized medication protocol based on the substances involved and the severity of dependence. Vital signs are monitored regularly, every 2-4 hours in the acute phase. Nursing staff are available 24/7 to respond to any changes in condition.",
+                  desc: "The partner facility's medical director prescribes an individualized medication protocol based on the substances involved and the severity of dependence. Vital signs are monitored regularly, every 2-4 hours in the acute phase. Nursing staff are available 24/7 to respond to any changes in condition.",
                 },
                 {
                   title: "Comfort and Support",
-                  desc: "Clients rest in private rooms in a comfortable, quiet environment. Nutritional support, hydration, and gentle activity are encouraged as tolerated. Our staff provides emotional support and reassurance throughout the process, recognizing that this is often the most vulnerable time in a person's recovery journey.",
+                  desc: "Clients rest in private rooms in a comfortable, quiet environment at the partner detox facility. Nutritional support, hydration, and gentle activity are encouraged as tolerated. Partner-facility staff provide emotional support and reassurance throughout the process, recognizing that this is often the most vulnerable time in a person's recovery.",
                 },
                 {
                   title: "Transition to Treatment",
-                  desc: "As withdrawal symptoms stabilize, the clinical team begins introducing therapeutic elements, light psychoeducation, motivational interviewing, and treatment planning. This creates a seamless transition from medical detox into the full residential treatment program, where the deeper work of recovery begins.",
+                  desc: "As withdrawal symptoms stabilize, our DRC clinical team begins coordinating with you on therapeutic elements, light psychoeducation, motivational interviewing, and treatment planning ahead of your transition. This creates a seamless handoff from partner-facility detox into our full residential treatment program, where the deeper work of recovery begins.",
                 },
               ].map((item, i) => (
                 <div key={i} className="border-l-2 border-gold/40 pl-6">
@@ -287,29 +287,29 @@ export default function DetoxGuidePage() {
               Our Approach
             </span>
             <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4 mb-8">
-              How Desert Recovery Centers Approaches Detox
+              How DRC Coordinates Your Detox Care
             </h2>
             <div className="space-y-4">
               {[
                 {
-                  title: "Physician-Led Medical Oversight",
-                  desc: "Our medical director oversees all detox protocols, with registered nurses providing 24/7 bedside monitoring. Every medication decision is made by a physician, never delegated to unlicensed staff.",
+                  title: "Physician-Led Detox at Trusted Partners",
+                  desc: "We refer clients only to detox facilities with physician-led medical oversight: a medical director directing all detox protocols, registered nurses providing 24/7 bedside monitoring, and every medication decision made by a physician. We verify these standards before placing any DRC client.",
                 },
                 {
                   title: "Individualized Medication Protocols",
-                  desc: "There is no one-size-fits-all detox. Our medical team tailors medication protocols to each client's substance use history, medical conditions, and symptom presentation, adjusting in real time as withdrawal progresses.",
+                  desc: "There is no one-size-fits-all detox. The partner facility's medical team tailors medication protocols to each client's substance use history, medical conditions, and symptom presentation, adjusting in real time as withdrawal progresses.",
                 },
                 {
                   title: "Seamless Transition to Residential Treatment",
-                  desc: "Detox clients at DRC transition directly into our residential program without discharge or transfer. The same clinical team that supports you through detox continues to guide your care throughout treatment.",
+                  desc: "After detox stabilization at our partner facility, clients transition directly into DRC's residential program with no gaps in care. Our clinical team takes over continuity from intake forward, guiding your care throughout treatment.",
                 },
                 {
-                  title: "Comfort in a Luxury Environment",
-                  desc: "Detox at DRC takes place in private rooms within our luxury residential facilities, not a sterile hospital unit. Comfortable surroundings, nutritious meals, and compassionate staff make a difficult process significantly more bearable.",
+                  title: "Luxury Residential Comfort After Detox",
+                  desc: "After detox stabilization, you arrive at DRC's luxury residential facilities, not a sterile clinical environment. Private rooms, comfortable surroundings, nutritious meals, and compassionate staff support your continued recovery in a setting designed for healing.",
                 },
                 {
                   title: "Dual Diagnosis Awareness",
-                  desc: "Many individuals entering detox have co-occurring mental health conditions that withdrawal can exacerbate. Our team screens for psychiatric conditions from day one and integrates mental health support into the detox process.",
+                  desc: "Many individuals entering detox have co-occurring mental health conditions that withdrawal can exacerbate. Our admissions team screens for psychiatric conditions before partner-facility detox referral, and our clinical team integrates dual-diagnosis treatment from the moment you transition to DRC's residential program.",
                 },
               ].map((item, i) => (
                 <div
