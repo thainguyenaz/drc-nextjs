@@ -106,7 +106,7 @@ export default function ConditionsGrid() {
             Mental Health Treatment
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Comprehensive, evidence-based care for a wide range of mental health
+            Evidence-based care for a wide range of mental health
             conditions, delivered with compassion in a luxury setting.
           </p>
         </motion.div>

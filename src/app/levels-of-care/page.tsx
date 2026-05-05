@@ -14,7 +14,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title:
-    "Levels of Care — Addiction & Mental Health Treatment in Arizona | DRC",
+    "Levels of Care: Addiction & Mental Health Treatment in Arizona | DRC",
   description:
     "Explore every level of addiction and mental health treatment at Desert Recovery Centers: medical detox, residential, PHP, IOP, outpatient, and aftercare in Arizona.",
   alternates: {
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title:
-      "Levels of Care — Addiction & Mental Health Treatment in Arizona | DRC",
+      "Levels of Care: Addiction & Mental Health Treatment in Arizona | DRC",
     description:
       "Explore every level of addiction and mental health treatment at Desert Recovery Centers: medical detox, residential, PHP, IOP, outpatient, and aftercare in Arizona.",
     url: "https://desertrecoverycenters.com/levels-of-care/",
@@ -55,7 +55,7 @@ const faqs = [
   },
   {
     q: "Does insurance cover all levels of care?",
-    a: "Most major insurance plans in Arizona cover all medically necessary levels of addiction and mental health treatment, including detox, residential, PHP, IOP, and outpatient services. The Mental Health Parity and Addiction Equity Act requires insurers to provide equal coverage for behavioral health and medical conditions. Coverage specifics — including deductibles, copays, and length-of-stay authorizations — vary by plan. Note: Desert Recovery Centers works with commercial carriers on an out-of-network basis; we are in-network with TriCare and TriWest, and offer cash-pay options. Our admissions team verifies your insurance benefits across all levels of care and explains your coverage before treatment begins. Call (480) 931-3617 for a free benefits check.",
+    a: "Most major insurance plans in Arizona cover all medically necessary levels of addiction and mental health treatment, including detox, residential, PHP, IOP, and outpatient services. The Mental Health Parity and Addiction Equity Act requires insurers to provide equal coverage for behavioral health and medical conditions. Coverage specifics (including deductibles, copays, and length-of-stay authorizations) vary by plan. Note: Desert Recovery Centers works with commercial carriers on an out-of-network basis; we are in-network with TriCare and TriWest, and offer cash-pay options. Our admissions team verifies your insurance benefits across all levels of care and explains your coverage before treatment begins. Call (480) 931-3617 for a free benefits check.",
   },
 ];
 
@@ -69,7 +69,7 @@ const levels = [
     title: "Medical Detox",
     href: "/levels-of-care/detox/",
     description:
-      "The first step for individuals with physical dependence on drugs or alcohol. Medical detox provides 24/7 physician oversight and nursing care to manage withdrawal symptoms safely and comfortably. At DRC, detox is not a standalone service — it is the entry point into a seamless continuum of care. Our medical team designs individualized protocols for alcohol, opioid, benzodiazepine, stimulant, and polysubstance withdrawal, using FDA-approved medications and continuous monitoring to keep you safe throughout the process.",
+      "The first step for individuals with physical dependence on drugs or alcohol. Medical detox provides 24/7 physician oversight and nursing care to manage withdrawal symptoms safely and comfortably. DRC coordinates detox at trusted partner facilities. It is the entry point into a seamless continuum of care that continues at our DRC residential program. Our medical team designs individualized protocols for alcohol, opioid, benzodiazepine, stimulant, and polysubstance withdrawal, using FDA-approved medications and continuous monitoring to keep you safe throughout the process.",
     who: "Individuals with physical dependence on alcohol, opioids, benzodiazepines, or other substances who need medically supervised withdrawal management before beginning therapeutic treatment.",
     duration: "3 to 14 days depending on substance and severity",
   },
@@ -85,7 +85,7 @@ const levels = [
     title: "Partial Hospitalization Program (PHP)",
     href: "/levels-of-care/php/",
     description:
-      "PHP provides intensive, full-day clinical programming — typically 5 to 6 hours per day, five to six days per week — while allowing you to return home or to supportive housing each evening. The therapeutic content mirrors residential treatment: individual therapy, group work, psychiatric care, and experiential modalities. PHP bridges the gap between the total immersion of residential treatment and the greater independence of outpatient care.",
+      "PHP provides intensive, full-day clinical programming (typically 5 to 6 hours per day, five to six days per week) while allowing you to return home or to supportive housing each evening. The therapeutic content mirrors residential treatment: individual therapy, group work, psychiatric care, and experiential modalities. PHP bridges the gap between the total immersion of residential treatment and the greater independence of outpatient care.",
     who: "Clients stepping down from residential treatment who are not yet ready for the reduced structure of IOP, or individuals who need intensive daily programming but have a stable living environment and do not require 24-hour supervision.",
     duration: "2 to 4 weeks, adjusted based on clinical progress",
   },
@@ -93,7 +93,7 @@ const levels = [
     title: "Intensive Outpatient Program (IOP)",
     href: "/levels-of-care/iop/",
     description:
-      "IOP provides structured clinical treatment — 3 to 4 hours per day, three to five days per week — designed to fit around your work, school, and family responsibilities. Programming includes individual therapy, group counseling, psychiatric care, relapse prevention, and life skills development. IOP at DRC uses the same evidence-based modalities as our residential and PHP programs, adapted for the outpatient setting.",
+      "IOP provides structured clinical treatment (3 to 4 hours per day, three to five days per week) designed to fit around your work, school, and family responsibilities. Programming includes individual therapy, group counseling, psychiatric care, relapse prevention, and life skills development. IOP at DRC uses the same evidence-based modalities as our residential and PHP programs, adapted for the outpatient setting.",
     who: "Individuals stepping down from PHP, those with mild to moderate substance use disorders and a stable home environment, or people who need more support than weekly therapy but cannot commit to full-day programming.",
     duration: "6 to 12 weeks, with step-down frequency as clinically appropriate",
   },
@@ -111,7 +111,7 @@ const levels = [
     description:
       "Recovery does not end when formal treatment concludes. DRC provides aftercare planning, alumni programming, and ongoing connections to community recovery resources. Your aftercare plan is developed during treatment and includes therapy referrals, recovery community connections, relapse prevention strategies, and access to DRC alumni events and support networks. Aftercare is the long-term safety net that protects the progress you make in treatment.",
     who: "All DRC alumni who have completed formal treatment and are transitioning to independent recovery. Aftercare support is available to every client who completes our program.",
-    duration: "Ongoing — recovery is a lifelong journey and support is always available",
+    duration: "Ongoing aftercare support is always available",
   },
 ];
 
@@ -130,7 +130,7 @@ export default function LevelsOfCarePage() {
             "@id":
               "https://desertrecoverycenters.com/levels-of-care/#webpage",
             url: "https://desertrecoverycenters.com/levels-of-care/",
-            name: "Levels of Care — Addiction & Mental Health Treatment in Arizona | DRC",
+            name: "Levels of Care: Addiction & Mental Health Treatment in Arizona | DRC",
             specialty: "Addiction Medicine",
             about: {
               "@type": "MedicalTherapy",
@@ -236,8 +236,8 @@ export default function LevelsOfCarePage() {
                 of care that matches their clinical presentation, and every
                 transition between levels is based on documented progress
                 and clinical readiness. This is not a one-size-fits-all
-                pathway — it is a personalized journey guided by your
-                treatment team.
+                pathway. Your treatment is personalized and guided by your
+                clinical team.
               </p>
               <p className="text-gray-600 leading-relaxed text-lg mb-4">
                 When you call our admissions team at{" "}
@@ -352,7 +352,7 @@ export default function LevelsOfCarePage() {
                 },
                 {
                   title: "Integrated Dual Diagnosis Treatment",
-                  desc: "Addiction and mental health conditions are treated together by the same team at every level. We do not separate addiction treatment from psychiatric care — they are interwoven throughout your recovery journey.",
+                  desc: "Addiction and mental health conditions are treated together by the same team at every level. We do not separate addiction treatment from psychiatric care. The two are interwoven throughout your recovery.",
                 },
               ].map((item, i) => (
                 <div

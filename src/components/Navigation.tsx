@@ -141,7 +141,7 @@ export default function Navigation() {
         <Link href="/" className="flex items-center gap-3 flex-shrink-0 mr-8">
           <Image
             src="/images/branding/drc-logo-black.png"
-            alt="Desert Recovery Centers logo — luxury addiction and mental health treatment in Arizona"
+            alt="Desert Recovery Centers logo, luxury addiction and mental health treatment in Arizona"
             width={320}
             height={96}
             className="h-12 w-auto"

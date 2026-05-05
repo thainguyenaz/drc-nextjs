@@ -43,7 +43,7 @@ export const faqData: Record<string, Array<{ question: string; answer: string }>
     { question: "How is bipolar disorder treated at Desert Recovery Centers?", answer: "We treat bipolar disorder through a combination of medication management, CBT, DBT, mood stabilization programs, and individualized therapy in a structured residential setting." },
     { question: "Can bipolar disorder and addiction be treated together?", answer: "Yes. Bipolar disorder and substance use disorders frequently co-occur. Our dual-diagnosis program treats both conditions simultaneously." },
     { question: "Is bipolar disorder treatment covered by insurance?", answer: "Most private insurance plans cover residential psychiatric treatment for bipolar disorder. Call (480) 931-3617 for a free insurance check." },
-    { question: "What medications are used for bipolar disorder?", answer: "Treatment may include mood stabilizers, atypical antipsychotics, and other medications prescribed and closely monitored by our board-certified psychiatrists. Medication is always part of a comprehensive treatment plan that includes therapy and psychoeducation." },
+    { question: "What medications are used for bipolar disorder?", answer: "Treatment may include mood stabilizers, atypical antipsychotics, and other medications prescribed and closely monitored by our board-certified psychiatrists. Medication is always part of a thorough treatment plan that includes therapy and psychoeducation." },
     { question: "Does Desert Recovery Centers treat bipolar disorder?", answer: "Yes. Desert Recovery Centers provides specialized bipolar disorder treatment at our Joint Commission accredited Arizona facilities with board-certified psychiatrists, licensed clinical psychologists, and 24/7 clinical support." },
   ],
 
@@ -58,8 +58,8 @@ export const faqData: Record<string, Array<{ question: string; answer: string }>
   "heroin-addiction-treatment": [
     { question: "How is heroin addiction treated?", answer: "Heroin addiction treatment begins with medically supervised detox at a partner facility, then continues at Desert Recovery Centers with MAT (medication-assisted treatment) when appropriate, residential inpatient care, CBT, DBT, and thorough aftercare planning." },
     { question: "Is heroin detox medically supervised?", answer: "Yes. Desert Recovery Centers coordinates medically supervised heroin detox through trusted partner facilities to manage withdrawal safely and comfortably. Clients then transition to our residential locations for continued treatment." },
-    { question: "What is the success rate for heroin treatment?", answer: "Success rates improve significantly with comprehensive dual-diagnosis residential treatment, strong aftercare planning, and ongoing support. Our clinical team personalizes every treatment plan for lasting recovery." },
-    { question: "What is MAT for heroin addiction?", answer: "Medication-assisted treatment (MAT) uses FDA-approved medications in combination with behavioral therapy to treat opioid use disorders. When clinically appropriate, our medical team may incorporate MAT as part of a comprehensive heroin addiction treatment plan." },
+    { question: "What is the success rate for heroin treatment?", answer: "Success rates improve significantly with thorough dual-diagnosis residential treatment, strong aftercare planning, and ongoing support. Our clinical team personalizes every treatment plan for lasting recovery." },
+    { question: "What is MAT for heroin addiction?", answer: "Medication-assisted treatment (MAT) uses FDA-approved medications in combination with behavioral therapy to treat opioid use disorders. When clinically appropriate, our medical team may incorporate MAT as part of a thorough heroin addiction treatment plan." },
     { question: "Does insurance cover heroin addiction treatment?", answer: "Yes. Most major private insurance plans cover heroin addiction treatment, including medically supervised detox at our partner facilities and residential care at Desert Recovery Centers. Call (480) 931-3617 for a free insurance verification." },
   ],
 
@@ -128,11 +128,11 @@ export const faqData: Record<string, Array<{ question: string; answer: string }>
   ],
 
   "adhd-treatment": [
-    { question: "Does Desert Recovery Centers treat ADHD in adults?", answer: "Yes. Desert Recovery Centers treats adult ADHD through comprehensive psychiatric evaluation, medication management, behavioral therapy, and skills training in a structured residential or outpatient setting." },
+    { question: "Does Desert Recovery Centers treat ADHD in adults?", answer: "Yes. Desert Recovery Centers treats adult ADHD through thorough psychiatric evaluation, medication management, behavioral therapy, and skills training in a structured residential or outpatient setting." },
     { question: "How common is ADHD and addiction co-occurrence?", answer: "Research shows that adults with ADHD are significantly more likely to develop substance use disorders. Our dual-diagnosis approach treats both ADHD and addiction simultaneously for better long-term outcomes." },
     { question: "What therapies are used for ADHD treatment?", answer: "ADHD treatment includes cognitive behavioral therapy (CBT), executive function coaching, medication management, mindfulness training, and structured daily programming designed to build practical coping skills." },
     { question: "Does insurance cover ADHD treatment?", answer: "Most major private insurance plans cover ADHD treatment as part of a mental health or dual-diagnosis program. Call (480) 931-3617 for a free insurance verification." },
-    { question: "What does ADHD treatment look like at DRC?", answer: "Treatment begins with a comprehensive psychiatric evaluation. Your clinical team then creates an individualized plan that may include medication management, behavioral therapy, skills training, and structured daily routines. Our low client-to-clinician ratios ensure personalized attention." },
+    { question: "What does ADHD treatment look like at DRC?", answer: "Treatment begins with a thorough psychiatric evaluation. Your clinical team then creates an individualized plan that may include medication management, behavioral therapy, skills training, and structured daily routines. Our low client-to-clinician ratios ensure personalized attention." },
   ],
 
   "personality-disorder-treatment": [
@@ -146,13 +146,13 @@ export const faqData: Record<string, Array<{ question: string; answer: string }>
   "schizophrenia-treatment": [
     { question: "What is schizophrenia treatment?", answer: "Schizophrenia treatment at Desert Recovery Centers includes medication management with antipsychotic medications, cognitive behavioral therapy, social skills training, psychoeducation, and structured daily programming in a supportive residential environment." },
     { question: "Does Desert Recovery Centers treat schizophrenia?", answer: "Yes. We provide specialized treatment for schizophrenia and schizoaffective disorder with board-certified psychiatrists and licensed clinical staff at our Joint Commission accredited Arizona facilities." },
-    { question: "What medications are used for schizophrenia?", answer: "Treatment may include second-generation antipsychotic medications prescribed and monitored by our board-certified psychiatrists. Medication is always part of a comprehensive treatment plan that includes therapy, psychoeducation, and life skills training." },
+    { question: "What medications are used for schizophrenia?", answer: "Treatment may include second-generation antipsychotic medications prescribed and monitored by our board-certified psychiatrists. Medication is always part of a thorough treatment plan that includes therapy, psychoeducation, and life skills training." },
     { question: "Is inpatient treatment recommended for schizophrenia?", answer: "Residential treatment provides the structured, 24/7 clinical support environment that is often beneficial for stabilizing symptoms, adjusting medications safely, and building coping skills. Our clinical team determines the appropriate level of care during assessment." },
     { question: "Does insurance cover schizophrenia treatment?", answer: "Most major private insurance plans cover residential psychiatric treatment for schizophrenia. Call (480) 931-3617 for a free, confidential insurance verification." },
   ],
 
   "cocaine-addiction-treatment": [
-    { question: "What is cocaine addiction treatment?", answer: "Cocaine addiction treatment at Desert Recovery Centers includes residential inpatient care, cognitive behavioral therapy (CBT), contingency management, group therapy, holistic modalities, and comprehensive aftercare planning." },
+    { question: "What is cocaine addiction treatment?", answer: "Cocaine addiction treatment at Desert Recovery Centers includes residential inpatient care, cognitive behavioral therapy (CBT), contingency management, group therapy, holistic modalities, and thorough aftercare planning." },
     { question: "How long does cocaine rehab take?", answer: "Residential cocaine addiction treatment typically ranges from 30 to 90 days. Treatment length is determined by individual clinical needs, severity of addiction, and co-occurring conditions." },
     { question: "What are cocaine withdrawal symptoms?", answer: "Cocaine withdrawal symptoms may include fatigue, depression, increased appetite, vivid dreams, irritability, and strong cravings. While not typically medically dangerous, withdrawal is uncomfortable and benefits from professional clinical support." },
     { question: "What therapies are used for cocaine addiction?", answer: "Evidence-based therapies include cognitive behavioral therapy (CBT), contingency management, motivational interviewing, group therapy, and holistic approaches such as yoga and mindfulness. Treatment plans are individualized." },

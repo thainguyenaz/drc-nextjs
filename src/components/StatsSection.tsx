@@ -19,7 +19,7 @@ const stats = [
   {
     value: 10,
     suffix: "",
-    label: "Beds maximum per residential facility — intentionally intimate care",
+    label: "Beds maximum per residential facility, intentionally intimate care",
     source: "Desert Recovery Centers",
   },
 ];
@@ -38,7 +38,7 @@ export default function StatsSection() {
             The Numbers That Define Our Approach
           </h2>
           <p className="text-white/60 max-w-2xl mx-auto">
-            National data on the scale of behavioral health needs — and how Desert Recovery Centers structures care to meet them.
+            National data on the scale of behavioral health needs, and how Desert Recovery Centers structures care to meet them.
           </p>
         </div>
 
