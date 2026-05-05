@@ -32,7 +32,7 @@ const faqs = [
   },
   {
     q: "How does Humana decide what level of care to authorize?",
-    a: "Humana uses clinical review criteria to determine the appropriate level of care based on the severity of your condition, medical and psychiatric comorbidities, prior treatment history, and your current living situation. Our clinical team provides comprehensive assessments and documentation to support authorization at the level of care best suited to your needs.",
+    a: "Humana uses clinical review criteria to determine the appropriate level of care based on the severity of your condition, medical and psychiatric comorbidities, prior treatment history, and your current living situation. Our clinical team provides thorough assessments and documentation to support authorization at the level of care best suited to your needs.",
   },
   {
     q: "What should I do if Humana denies my treatment request?",
@@ -123,7 +123,7 @@ export default function HumanaInsurancePage() {
                   TRICARE (Military Health Plans)
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  Humana Military, a subsidiary of Humana, administers TRICARE benefits for active-duty service members, veterans, and their families in the eastern United States. TRICARE provides comprehensive behavioral health coverage including substance abuse treatment. If you have a Humana-managed TRICARE plan, our admissions team can help verify your specific benefits and network requirements.
+                  Humana Military, a subsidiary of Humana, administers TRICARE benefits for active-duty service members, veterans, and their families in the eastern United States. TRICARE provides broad behavioral health coverage including substance abuse treatment. If you have a Humana-managed TRICARE plan, our admissions team can help verify your specific benefits and network requirements.
                 </p>
               </div>
               <div className="bg-white rounded-xl p-6 border border-gray-100">
@@ -156,7 +156,7 @@ export default function HumanaInsurancePage() {
               {[
                 {
                   title: "Medical Detoxification",
-                  desc: "Medically supervised withdrawal management to safely stabilize your condition. Humana typically authorizes detox as a medically necessary acute service when clinical criteria are met.",
+                  desc: "Medically supervised withdrawal management to safely manage withdrawal symptoms. Humana typically authorizes detox as a medically necessary acute service when clinical criteria are met.",
                 },
                 {
                   title: "Residential Treatment",
@@ -168,7 +168,7 @@ export default function HumanaInsurancePage() {
                 },
                 {
                   title: "Intensive Outpatient Program (IOP)",
-                  desc: "Structured treatment sessions several times per week that provide comprehensive clinical care while allowing you to maintain daily responsibilities at home, work, or school.",
+                  desc: "Structured treatment sessions several times per week that provide thorough clinical care while allowing you to maintain daily responsibilities at home, work, or school.",
                 },
               ].map((item, i) => (
                 <div key={i} className="border-l-2 border-gold/40 pl-6">

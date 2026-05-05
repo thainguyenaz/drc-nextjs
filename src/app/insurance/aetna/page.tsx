@@ -20,7 +20,7 @@ const faqs = [
   },
   {
     q: "Does Aetna&apos;s Employee Assistance Program (EAP) cover rehab?",
-    a: "Aetna EAP programs typically provide a limited number of free counseling sessions and can serve as a referral pathway to more comprehensive treatment. While EAP alone usually does not cover residential rehab, it can help initiate the process. Our team can help you understand how your EAP benefits coordinate with your broader Aetna health plan for full treatment coverage.",
+    a: "Aetna EAP programs typically provide a limited number of free counseling sessions and can serve as a referral pathway to more thorough treatment. While EAP alone usually does not cover residential rehab, it can help initiate the process. Our team can help you understand how your EAP benefits coordinate with your broader Aetna health plan for full treatment coverage.",
   },
   {
     q: "How long will Aetna cover treatment at Desert Recovery Centers?",
@@ -73,7 +73,7 @@ export default function AetnaInsurancePage() {
               Aetna provides behavioral health coverage through most of its commercial, employer-sponsored, and Marketplace plans. As one of the nation&apos;s leading insurers, Aetna is required under the Mental Health Parity and Addiction Equity Act to offer addiction treatment benefits comparable to those for physical health conditions.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              Aetna has also invested significantly in behavioral health resources, including their Employee Assistance Programs (EAP), which can serve as a starting point for individuals seeking addiction treatment. Many Aetna members have access to comprehensive substance use disorder benefits that cover everything from detox through aftercare planning.
+              Aetna has also invested significantly in behavioral health resources, including their Employee Assistance Programs (EAP), which can serve as a starting point for individuals seeking addiction treatment. Many Aetna members have access to broad substance use disorder benefits that cover everything from detox through aftercare planning.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg">
               Because Aetna offers dozens of different plan types, the only way to know exactly what your plan covers is to verify your benefits directly. Call our admissions team at{" "}
@@ -111,7 +111,7 @@ export default function AetnaInsurancePage() {
                   Employee Assistance Programs (EAP)
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  Many employers offer Aetna EAP benefits that include a limited number of free counseling sessions and referral services. While EAP is not a substitute for comprehensive rehab, it can help you take the first step and may facilitate a smoother transition into a full treatment program. Our team can help you understand how your EAP and health plan benefits work together.
+                  Many employers offer Aetna EAP benefits that include a limited number of free counseling sessions and referral services. While EAP is not a substitute for full-program rehab, it can help you take the first step and may facilitate a smoother transition into a full treatment program. Our team can help you understand how your EAP and health plan benefits work together.
                 </p>
               </div>
             </div>
@@ -229,7 +229,7 @@ export default function AetnaInsurancePage() {
                 "Dual diagnosis treatment for co-occurring anxiety, depression, PTSD, and other conditions",
                 "Two luxury residential locations in the Phoenix metro area (Glendale and Scottsdale), plus an outpatient center in Phoenix",
                 "Individualized treatment plans with low client-to-clinician ratios",
-                "Comprehensive discharge planning and alumni support for sustained recovery",
+                "Thorough discharge planning and alumni support for sustained recovery",
               ].map((item, i) => (
                 <div
                   key={i}
