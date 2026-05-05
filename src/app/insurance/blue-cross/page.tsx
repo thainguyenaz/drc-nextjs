@@ -28,7 +28,7 @@ const faqs = [
   },
   {
     q: "Does my federal BCBS plan (FEP) cover rehab?",
-    a: "The Federal Employee Program (FEP) Blue Cross Blue Shield plan provides comprehensive behavioral health benefits, including substance abuse treatment. FEP plans are known for offering strong mental health and addiction coverage. Our admissions team is experienced in working with FEP plans and can verify your specific benefits quickly.",
+    a: "The Federal Employee Program (FEP) Blue Cross Blue Shield plan provides broad behavioral health benefits, including substance abuse treatment. FEP plans are known for offering strong mental health and addiction coverage. Our admissions team is experienced in working with FEP plans and can verify your specific benefits quickly.",
   },
   {
     q: "How many days of rehab will BCBS cover?",
@@ -119,7 +119,7 @@ export default function BlueCrossInsurancePage() {
                   Federal Employee Program (FEP)
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  The BCBS Federal Employee Program covers millions of federal workers and retirees. FEP plans are known for strong behavioral health benefits and typically provide comprehensive coverage for substance abuse treatment, including residential, PHP, and IOP levels of care.
+                  The BCBS Federal Employee Program covers millions of federal workers and retirees. FEP plans are known for strong behavioral health benefits and typically provide broad coverage for substance abuse treatment, including residential, PHP, and IOP levels of care.
                 </p>
               </div>
               <div className="bg-white rounded-xl p-6 border border-gray-100">
@@ -152,7 +152,7 @@ export default function BlueCrossInsurancePage() {
               {[
                 {
                   title: "Medical Detoxification",
-                  desc: "Physician-supervised withdrawal management to safely stabilize you before beginning therapeutic treatment. BCBS typically covers detox as a medically necessary acute service.",
+                  desc: "Medically supervised withdrawal management to safely manage withdrawal symptoms. BCBS typically covers detox as a medically necessary acute service.",
                 },
                 {
                   title: "Residential Treatment",
@@ -241,7 +241,7 @@ export default function BlueCrossInsurancePage() {
             <div className="grid md:grid-cols-2 gap-4">
               {[
                 "Insurance specialists experienced with BCBS affiliates nationwide and BCBS of Arizona",
-                "Full continuum of care from medical detox through IOP and aftercare",
+                "DRC residential treatment through IOP and aftercare, with detox coordinated at trusted partner facilities",
                 "Evidence-based treatment including CBT, DBT, EMDR, and holistic therapies",
                 "Dual diagnosis programs for co-occurring mental health and substance use disorders",
                 "Luxury residential facilities in Scottsdale and Glendale, plus an outpatient center in Phoenix",

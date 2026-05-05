@@ -148,7 +148,7 @@ export default function CignaInsurancePage() {
                 },
                 {
                   title: "Intensive Outpatient Program (IOP)",
-                  desc: "Structured treatment sessions several times per week, allowing you to maintain work or family obligations while receiving comprehensive care.",
+                  desc: "Structured treatment sessions several times per week, allowing you to maintain work or family obligations while receiving thorough clinical care.",
                 },
               ].map((item, i) => (
                 <div key={i} className="border-l-2 border-gold/40 pl-6">
@@ -229,7 +229,7 @@ export default function CignaInsurancePage() {
                 "Dual diagnosis expertise for co-occurring mental health conditions",
                 "Luxury residential facilities in Scottsdale and Glendale, plus an outpatient center in Phoenix",
                 "Small client-to-clinician ratios for personalized attention",
-                "Comprehensive aftercare planning to support long-term recovery",
+                "Thorough aftercare planning to support long-term recovery",
               ].map((item, i) => (
                 <div
                   key={i}

@@ -152,7 +152,7 @@ export default function UnitedInsurancePage() {
                 },
                 {
                   title: "Residential Treatment",
-                  desc: "Comprehensive inpatient care with 24/7 clinical supervision. UHC authorizes residential treatment through Optum, with concurrent reviews typically occurring every 3-7 days to assess ongoing medical necessity.",
+                  desc: "Inpatient care with 24/7 clinical supervision. UHC authorizes residential treatment through Optum, with concurrent reviews typically occurring every 3-7 days to assess ongoing medical necessity.",
                 },
                 {
                   title: "Partial Hospitalization Program (PHP)",
@@ -241,7 +241,7 @@ export default function UnitedInsurancePage() {
                 "Evidence-based treatment including CBT, DBT, EMDR, and medication-assisted treatment",
                 "Dual diagnosis expertise for co-occurring depression, anxiety, PTSD, and bipolar disorder",
                 "Two premium residential facilities in the Phoenix metro area (Glendale and Scottsdale), plus an outpatient center in Phoenix",
-                "Comprehensive aftercare planning and alumni support network",
+                "Thorough aftercare planning and alumni support network",
               ].map((item, i) => (
                 <div
                   key={i}

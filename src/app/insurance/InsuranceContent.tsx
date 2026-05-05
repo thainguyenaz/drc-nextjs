@@ -10,7 +10,7 @@ const insurers = [
   { name: "UnitedHealthcare", slug: "uhc", desc: "Out-of-network coverage available for all levels of care." },
   { name: "Humana", slug: "humana", desc: "Out-of-network coverage available." },
   { name: "TriCare", slug: "tricare", desc: "In-network for active-duty service members, veterans, and dependents." },
-  { name: "TriWest", slug: "triwest", desc: "In-network — TriWest Healthcare Alliance plans for eligible veterans." },
+  { name: "TriWest", slug: "triwest", desc: "In-network: TriWest Healthcare Alliance plans for eligible veterans." },
 ];
 
 const steps = [
@@ -48,7 +48,7 @@ export default function InsuranceContent() {
                 Insurance at Desert Recovery Centers
               </h2>
               <p className="text-gray-600 leading-relaxed text-lg mb-4">
-                Desert Recovery Centers works with most major commercial insurance plans on an out-of-network basis — many of which provide significant coverage for our level of care. We are also in-network with TriCare and TriWest, and offer cash-pay options.
+                Desert Recovery Centers works with most major commercial insurance plans on an out-of-network basis, many of which provide significant coverage for our level of care. We are also in-network with TriCare and TriWest, and offer cash-pay options.
               </p>
               <p className="text-gray-600 leading-relaxed text-lg mb-4">
                 We do not accept Medicare, Medicaid, or other state-funded insurance.
