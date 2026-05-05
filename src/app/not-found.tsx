@@ -23,7 +23,7 @@ export default function NotFound() {
             Page Not Found
           </h1>
           <p className="text-gray-600 text-lg mb-8 max-w-xl mx-auto">
-            The page you&apos;re looking for doesn&apos;t exist or has moved. We can still help — call our admissions team 24/7 or pick a destination below.
+            The page you&apos;re looking for doesn&apos;t exist or has moved. We can still help. Call our admissions team 24/7 or pick a destination below.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">

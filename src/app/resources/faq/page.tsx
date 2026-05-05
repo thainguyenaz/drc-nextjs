@@ -9,7 +9,7 @@ import { buildMetadata, BreadcrumbSchema } from "@/lib/seo";
 export const metadata: Metadata = buildMetadata({
   title: "Rehab FAQ, Desert Recovery Centers",
   description:
-    "Comprehensive answers to 30+ questions about rehab in Arizona, admissions, insurance, treatment, facilities, family involvement, and aftercare.",
+    "Answers to 30+ questions about rehab in Arizona, admissions, insurance, treatment, facilities, family involvement, and aftercare.",
   path: "/resources/faq",
 });
 
@@ -148,7 +148,7 @@ const categories = [
     items: [
       {
         q: "What happens after I complete treatment?",
-        a: "Your clinical team develops a comprehensive aftercare plan before discharge, including referrals for ongoing therapy, support group recommendations, and connection to our alumni network with monthly events, check-in calls, and a private community.",
+        a: "Your clinical team develops a thorough aftercare plan before discharge, including referrals for ongoing therapy, support group recommendations, and connection to our alumni network with monthly events, check-in calls, and a private community.",
       },
       {
         q: "Do you provide aftercare support?",
@@ -179,7 +179,7 @@ export default function FAQPage() {
       <PageHero
         eyebrow="Frequently Asked Questions"
         title="Rehab FAQ"
-        description="Honest, comprehensive answers to the questions families and individuals ask most about treatment at Desert Recovery Centers."
+        description="Honest answers to the questions families and individuals ask most about treatment at Desert Recovery Centers."
         bgImage="/images/general/DRC-Treatment-Therapies-BG-Fade.jpg"
       />
 
