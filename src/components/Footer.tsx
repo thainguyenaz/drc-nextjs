@@ -58,7 +58,7 @@ export default function Footer() {
             <div className="mb-4">
               <Image
                 src="/images/branding/drc-logo-white.png"
-                alt="Desert Recovery Centers logo — luxury addiction and mental health treatment in Arizona"
+                alt="Desert Recovery Centers logo, luxury addiction and mental health treatment in Arizona"
                 width={320}
                 height={96}
                 className="h-20 w-auto"
@@ -116,7 +116,7 @@ export default function Footer() {
         {/* Trust Badges */}
         <div className="border-t border-white/10 mt-12 pt-8 flex items-center justify-center gap-8 mb-8">
           <a href="https://www.jointcommission.org" target="_blank" rel="noopener noreferrer" className="opacity-70 hover:opacity-100 transition-opacity">
-            <Image src="/JointCommission_GoldSeal.png" alt="Joint Commission Gold Seal of Approval — Desert Recovery Centers is accredited" width={64} height={64} className="h-16 w-auto" />
+            <Image src="/JointCommission_GoldSeal.png" alt="Joint Commission Gold Seal of Approval, Desert Recovery Centers is accredited" width={64} height={64} className="h-16 w-auto" />
           </a>
           <a href="https://www.legitscript.com/websites/?checker_keywords=desertrecoverycenters.com" target="_blank" rel="noopener noreferrer" className="opacity-70 hover:opacity-100 transition-opacity" aria-label="Verify LegitScript Approval for www.desertrecoverycenters.com">
             <Image

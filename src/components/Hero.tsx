@@ -86,7 +86,7 @@ export default function Hero() {
             className="flex flex-wrap items-center gap-4 mb-10"
           >
             <a href="https://www.jointcommission.org" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/15 rounded-xl px-4 py-2.5 hover:bg-white/15 transition-colors">
-              <Image src="/images/branding/JointCommission_GoldSeal_National.png" alt="Joint Commission Gold Seal of Approval — Desert Recovery Centers is accredited" width={28} height={28} className="flex-shrink-0" />
+              <Image src="/images/branding/JointCommission_GoldSeal_National.png" alt="Joint Commission Gold Seal of Approval, Desert Recovery Centers is accredited" width={28} height={28} className="flex-shrink-0" />
               <span className="text-white/90 text-sm font-medium">Joint Commission Accredited</span>
             </a>
             <a href="https://www.legitscript.com/websites/?checker_keywords=desertrecoverycenters.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/15 rounded-xl px-4 py-2.5 hover:bg-white/15 transition-colors" aria-label="Verify LegitScript Approval for www.desertrecoverycenters.com">
