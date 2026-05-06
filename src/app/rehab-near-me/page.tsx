@@ -65,7 +65,7 @@ const locations = [
       { city: "Chandler", time: "25-35 min" },
       { city: "Gilbert", time: "30-40 min" },
     ],
-    href: "/locations/phoenix",
+    href: "/locations/phoenix-php-iop",
   },
 ];
 
