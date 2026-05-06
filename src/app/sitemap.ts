@@ -18,7 +18,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/locations", priority: 0.8, changeFrequency: "weekly" },
     { path: "/locations/glendale", priority: 0.9, changeFrequency: "weekly" },
     { path: "/locations/scottsdale", priority: 0.9, changeFrequency: "weekly" },
-    { path: "/locations/phoenix", priority: 0.9, changeFrequency: "weekly" },
     { path: "/locations/phoenix-php-iop", priority: 0.9, changeFrequency: "weekly" },
     { path: "/locations/phoenix-living", priority: 0.7, changeFrequency: "monthly" },
 

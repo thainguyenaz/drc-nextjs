@@ -214,7 +214,7 @@ export default function LuxuryRehabArizonaPage() {
               {[
                 { label: "DRC Scottsdale", href: "/locations/scottsdale" },
                 { label: "DRC Glendale", href: "/locations/glendale" },
-                { label: "DRC Phoenix", href: "/locations/phoenix" },
+                { label: "DRC Phoenix", href: "/locations/phoenix-php-iop" },
                 { label: "Anxiety Treatment", href: "/mental-health/anxiety-treatment" },
                 { label: "Alcohol Addiction", href: "/addiction/alcoholism-treatment" },
                 { label: "PTSD & Trauma", href: "/mental-health/ptsd-treatment" },
