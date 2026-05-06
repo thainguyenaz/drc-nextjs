@@ -12,7 +12,7 @@ import { buildMetadata, InlineFAQSchema, SpeakableSchema, AllLocalBusinessSchema
 export const metadata: Metadata = buildMetadata({
   title: "Rehab Centers Near Me in Arizona | DRC",
   description:
-    "Find rehab near you in Arizona. 3 luxury facilities in Glendale, Scottsdale & Phoenix. Call (480) 931-3617 for same-day help.",
+    "Find rehab near you in Arizona. Two residential facilities (Glendale, Scottsdale) plus Phoenix outpatient. Call (480) 931-3617.",
   path: "/rehab-near-me",
 });
 
@@ -52,12 +52,12 @@ const locations = [
   },
   {
     name: "DRC Phoenix",
-    tagline: "Holistic Focus, Central Phoenix",
-    address: "1623 W Moody Trail, Phoenix, AZ 85041",
+    tagline: "Outpatient & TMS, Central Phoenix",
+    address: "4160 N. 108th Ave, Phoenix, AZ 85037",
     phone: "(602) 905-8070",
     phoneTel: "+16029058070",
     sqft: "5,500",
-    programs: ["Residential", "Outpatient"],
+    programs: ["PHP", "IOP", "TMS"],
     amenities: ["Movie Theater", "Pool with Waterfall", "Gym", "Massage Room"],
     driveTimesFrom: [
       { city: "Tempe", time: "15-25 min" },
@@ -102,7 +102,7 @@ export default function RehabNearMePage() {
       <PageHero
         eyebrow="Find Treatment Near You"
         title="Rehab Centers Near Me in Arizona"
-        description="Three luxury facilities across the Phoenix metro area. Doctoral-level care is closer than you think."
+        description="Two residential facilities plus Phoenix outpatient, across the Phoenix metro area. Doctoral-level care is closer than you think."
         bgImage="/images/scottsdale/DRC-DRONE-SCOTTSDALE-08-01-2024-August-01-202400006-2.jpg"
       />
 
@@ -233,7 +233,7 @@ export default function RehabNearMePage() {
       <ConditionFAQ items={faqs} />
       <AEOBlock
         entries={[
-          { question: "Where are Desert Recovery Centers locations in Arizona?", answer: "Desert Recovery Centers operates three luxury treatment facilities in Arizona: Glendale (8105 W Frier Dr, 85303), Scottsdale (23222 N Church Rd, 85255), and Phoenix (1623 W Moody Trail, 85041). All locations are Joint Commission accredited with a maximum of 10 beds and doctoral-level clinical leadership." },
+          { question: "Where are Desert Recovery Centers locations in Arizona?", answer: "Desert Recovery Centers operates two residential treatment facilities and one outpatient center in Arizona: Glendale (8105 W Frier Dr, 85303) and Scottsdale (23222 N Church Rd, 85255) provide residential treatment with 10 beds each, and Phoenix (4160 N. 108th Ave, 85037) provides outpatient PHP, IOP, and TMS care. All locations are Joint Commission accredited with doctoral-level clinical leadership." },
           { question: "Which Desert Recovery Centers location is closest to me?", answer: "West Valley residents (Peoria, Surprise, Avondale) are closest to DRC Glendale at (623) 323-1012. North Scottsdale, Paradise Valley, and Cave Creek residents are closest to DRC Scottsdale at (480) 931-3617. Tempe, Mesa, Chandler, and Gilbert residents are closest to DRC Phoenix at (602) 905-8070." },
         ]}
       />
