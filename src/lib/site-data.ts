@@ -66,7 +66,7 @@ export const siteData = {
     {
       name: "Phoenix PHP Living",
       href: "/locations/phoenix-living",
-      address: "1623 W Moody Trail, Phoenix, AZ 85085",
+      address: "1623 W Moody Trail, Phoenix, AZ 85041",
       phone: "(602) 905-8070",
       phoneTel: "+16029058070",
       description:
