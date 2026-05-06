@@ -152,7 +152,7 @@ const categories = [
       },
       {
         q: "Do you provide aftercare support?",
-        a: "Yes. Our aftercare program includes ongoing alumni events, peer support groups, quarterly check-in calls from your former clinical team, a private alumni community, and facilitated re-engagement if additional support is needed. We view recovery as a long-term journey and remain available to our alumni indefinitely.",
+        a: "Yes. Our aftercare program includes ongoing alumni events, peer support groups, quarterly check-in calls from your former clinical team, a private alumni community, and facilitated re-engagement if additional support is needed. Alumni stay connected with DRC indefinitely.",
       },
       {
         q: "Do you help with sober living placement?",
