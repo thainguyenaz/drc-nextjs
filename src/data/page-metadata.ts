@@ -189,22 +189,22 @@ export const pageMetadata: Record<string, PageMeta> = {
     canonical: "https://desertrecoverycenters.com/treatments/trauma-therapy/",
     ogImage: DEFAULT_OG_IMAGE,
   },
-  "/treatments/emdr-eye-movement-desensitization-and-reprocessing/": {
+  "/treatments/emdr-therapy/": {
     title: "EMDR Therapy for Trauma & PTSD in Arizona | Desert Recovery Centers",
     description: "EMDR therapy in Arizona for trauma, PTSD, and addiction. Licensed psychologists, luxury residential setting. Call (480) 931-3617.",
-    canonical: "https://desertrecoverycenters.com/treatments/emdr-eye-movement-desensitization-and-reprocessing/",
+    canonical: "https://desertrecoverycenters.com/treatments/emdr-therapy/",
     ogImage: DEFAULT_OG_IMAGE,
   },
-  "/treatments/cognitive-behavioral-therapy-cbt/": {
+  "/treatments/cbt-cognitive-behavioral-therapy/": {
     title: "Cognitive Behavioral Therapy (CBT) for Addiction & Mental Health | DRC",
     description: "CBT therapy in Arizona for addiction and mental health. Evidence-based, personalized treatment plans. Luxury residential setting. Call (480) 931-3617.",
-    canonical: "https://desertrecoverycenters.com/treatments/understanding-cbt-cognitive-behavioral-therapy/",
+    canonical: "https://desertrecoverycenters.com/treatments/cbt-cognitive-behavioral-therapy/",
     ogImage: DEFAULT_OG_IMAGE,
   },
-  "/treatments/dialectical-behavior-therapy-dbt/": {
+  "/treatments/dbt-dialectical-behavior-therapy/": {
     title: "Dialectical Behavior Therapy (DBT) in Arizona | Desert Recovery Centers",
     description: "DBT therapy in Arizona for addiction, personality disorders, and mental health. Luxury residential care. Licensed psychologists. Call (480) 931-3617.",
-    canonical: "https://desertrecoverycenters.com/treatments/understanding-dbt-dialectic-behavior-therapy/",
+    canonical: "https://desertrecoverycenters.com/treatments/dbt-dialectical-behavior-therapy/",
     ogImage: DEFAULT_OG_IMAGE,
   },
   "/treatments/holistic-therapies/": {

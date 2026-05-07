@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { getPageMeta } from "@/data/page-metadata";
 
-const meta = getPageMeta("/treatments/dialectical-behavior-therapy-dbt/");
+const meta = getPageMeta("/treatments/dbt-dialectical-behavior-therapy/");
 
 export const metadata: Metadata = {
   title: meta.title,
