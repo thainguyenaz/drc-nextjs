@@ -21,8 +21,10 @@ Cutover proceeds when **all** of the following are true:
 9. **Vercel 404 monitoring set up** and 24 hours of post-fix traffic shows zero unexpected 404s.
 10. **DNS TTL set to 5 minutes for at least 7 days before cutover**, so rollback is fast if needed.
 11. **Rollback procedure documented and dry-run tested.**
+12. **HubSpot form integration verified.** Every live HubSpot form on WordPress has a matching working implementation on Next.js. Test submission for each form confirms contact creation in HubSpot. Drip workflows continue firing without disruption.
+13. **Blog content gap closed.** Every WordPress blog post with non-zero traffic exists on Next.js with the same canonical slug, OR has an explicit redirect rule in `next.config.mjs` pointing to a topical sibling. Zero hard-404 blog URLs post-cutover.
 
-When all 11 criteria are green, cutover proceeds on the next Tuesday morning Arizona time.
+When all 13 criteria are green, cutover proceeds on the next Tuesday morning Arizona time.
 
 ---
 
@@ -92,4 +94,4 @@ GSC re-submit, sitemap ping, indexation tracking, search-console rich-results re
 
 - The prior cutover target of **2026-05-23** is voided. References to that date in audit docs and tickets should read "TBD — cutover when readiness criteria met (see `cutover-readiness-criteria.md`)".
 - "Land before cutover" sequencing in tickets remains valid; the binding constraint is now criteria-met, not calendar.
-- Once criteria 1-11 are all green, cutover proceeds on the next Tuesday morning AZ time. The week-of-cutover decision is owner-discretionary.
+- Once criteria 1-13 are all green, cutover proceeds on the next Tuesday morning AZ time. The week-of-cutover decision is owner-discretionary.
