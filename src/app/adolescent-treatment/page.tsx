@@ -3,7 +3,7 @@ import Navigation from "@/components/Navigation";
 import PageHero from "@/components/PageHero";
 import ConditionFAQ from "@/components/ConditionFAQ";
 import Footer from "@/components/Footer";
-import { InlineFAQSchema, SpeakableSchema } from "@/lib/seo";
+import { InlineFAQSchema, SpeakableSchema, MedicalWebPageSchema } from "@/lib/seo";
 import AEOBlock from "@/components/AEOBlock";
 import SchemaScript from "@/components/SchemaScript";
 import Breadcrumb from "@/components/Breadcrumb";
@@ -98,37 +98,20 @@ const faqs = [
   },
 ];
 
-const clinicSchema = {
+const medicalProcedureSchema = {
   "@context": "https://schema.org",
-  "@type": ["MedicalClinic", "LocalBusiness"],
-  "@id": `${SITE_URL}/adolescent-treatment#clinic`,
+  "@type": "MedicalProcedure",
+  "@id": `${SITE_URL}/adolescent-treatment#program`,
   name: "Desert Recovery Centers Adolescent Treatment Program",
   description:
     "Joint Commission accredited adolescent mental health and addiction treatment in Phoenix, AZ. PHP, IOP, and outpatient programs for teens ages 13 to 17. Parent involvement required. TMS therapy FDA cleared for ages 15 and older.",
-  url: `${SITE_URL}/adolescent-treatment`,
-  telephone: "+16029058070",
-  email: "contact@desertrecoverycenters.com",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "4160 N. 108th Ave",
-    addressLocality: "Phoenix",
-    addressRegion: "AZ",
-    postalCode: "85037",
-    addressCountry: "US",
-  },
-  openingHoursSpecification: {
-    "@type": "OpeningHoursSpecification",
-    dayOfWeek: [
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday",
-      "Sunday",
-    ],
-    opens: "00:00",
-    closes: "23:59",
+  procedureType: "Therapeutic",
+  medicalSpecialty: "Psychiatric",
+  audience: {
+    "@type": "MedicalAudience",
+    audienceType: "Patient",
+    requiredMinAge: 13,
+    requiredMaxAge: 17,
   },
   availableService: [
     {
@@ -156,10 +139,6 @@ const clinicSchema = {
         "FDA cleared NeuroStar TMS for adolescents ages 15 and older with treatment-resistant depression.",
     },
   ],
-  hasCredential: {
-    "@type": "EducationalOccupationalCredential",
-    name: "Joint Commission Accreditation",
-  },
   areaServed: [
     "Phoenix",
     "Glendale",
@@ -172,7 +151,7 @@ const clinicSchema = {
     "Tempe",
     "Chandler",
   ],
-  parentOrganization: { "@id": "https://desertrecoverycenters.com/#organization" },
+  provider: { "@id": `${SITE_URL}/#organization` },
 };
 
 const breadcrumbSchema = {
@@ -192,7 +171,12 @@ const breadcrumbSchema = {
 export default function AdolescentTreatmentPage() {
   return (
     <>
-      <SchemaScript schema={[clinicSchema, breadcrumbSchema, {
+      <MedicalWebPageSchema
+        url="/adolescent-treatment"
+        name="Adolescent Mental Health and Addiction Treatment"
+        dateModified="2026-05-07"
+      />
+      <SchemaScript schema={[medicalProcedureSchema, breadcrumbSchema, {
         "@context": "https://schema.org",
         "@type": "HowTo",
         "name": "How to Get Admitted to Desert Recovery Centers Adolescent Program",
