@@ -4,7 +4,7 @@ import PageHero from "@/components/PageHero";
 import AddictionPrograms from "@/components/AddictionPrograms";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { MedicalConditionSchema, MedicalWebPageSchema } from "@/lib/seo";
+import { MedicalConditionSchema, MedicalWebPageSchema, VideoSchemas } from "@/lib/seo";
 import AEOBlock from "@/components/AEOBlock";
 import RelatedPages from "@/components/RelatedPages";
 import ConditionFAQ from "@/components/ConditionFAQ";
@@ -61,6 +61,7 @@ export default function CocaineAddictionPage() {
     <>
       <SchemaScript schema={[getFAQSchema(faqData["cocaine-addiction-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/addiction/cocaine-addiction-treatment"))]} />
       <MedicalWebPageSchema url="/addiction/cocaine-addiction-treatment" name="Cocaine Addiction Treatment Arizona | Desert Recovery Centers" dateModified="2026-04-05" />
+      <VideoSchemas path="/addiction/cocaine-addiction-treatment/" />
       <MedicalConditionSchema
         name="Cocaine Addiction"
         description="Cocaine addiction is a stimulant use disorder characterized by compulsive cocaine use despite negative consequences. Cocaine floods the brain with dopamine, hijacking the natural reward system and creating intense psychological dependence."

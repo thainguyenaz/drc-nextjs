@@ -4,7 +4,7 @@ import PageHero from "@/components/PageHero";
 import AddictionPrograms from "@/components/AddictionPrograms";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { MedicalConditionSchema, MedicalWebPageSchema } from "@/lib/seo";
+import { MedicalConditionSchema, MedicalWebPageSchema, VideoSchemas } from "@/lib/seo";
 import AEOBlock from "@/components/AEOBlock";
 import RelatedPages from "@/components/RelatedPages";
 import ConditionFAQ from "@/components/ConditionFAQ";
@@ -61,6 +61,7 @@ export default function MarijuanaAddictionPage() {
     <>
       <SchemaScript schema={[getFAQSchema(faqData["marijuana-addiction-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/addiction/marijuana-addiction-treatment"))]} />
       <MedicalWebPageSchema url="/addiction/marijuana-addiction-treatment" name="Marijuana Addiction Treatment Arizona | Desert Recovery Centers" dateModified="2026-04-05" />
+      <VideoSchemas path="/addiction/marijuana-addiction-treatment/" />
       <MedicalConditionSchema
         name="Cannabis Use Disorder"
         description="Cannabis use disorder is a DSM-5 recognized condition characterized by psychological dependence on marijuana. Today's high-potency THC products accelerate tolerance and dependence development."

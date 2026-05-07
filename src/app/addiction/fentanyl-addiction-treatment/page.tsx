@@ -4,7 +4,7 @@ import PageHero from "@/components/PageHero";
 import AddictionPrograms from "@/components/AddictionPrograms";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { MedicalConditionSchema, MedicalWebPageSchema } from "@/lib/seo";
+import { MedicalConditionSchema, MedicalWebPageSchema, VideoSchemas } from "@/lib/seo";
 import AEOBlock from "@/components/AEOBlock";
 import RelatedPages from "@/components/RelatedPages";
 import ConditionFAQ from "@/components/ConditionFAQ";
@@ -61,6 +61,7 @@ export default function FentanylAddictionPage() {
     <>
       <SchemaScript schema={[getFAQSchema(faqData["fentanyl-addiction-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/addiction/fentanyl-addiction-treatment"))]} />
       <MedicalWebPageSchema url="/addiction/fentanyl-addiction-treatment" name="Fentanyl Addiction Treatment Arizona | Desert Recovery Centers" dateModified="2026-04-05" />
+      <VideoSchemas path="/addiction/fentanyl-addiction-treatment/" />
       <MedicalConditionSchema
         name="Fentanyl Addiction"
         description="Fentanyl addiction is a severe opioid use disorder involving one of the most potent synthetic opioids in existence. Fentanyl is 50 to 100 times more potent than morphine and creates rapid, severe physical dependence."

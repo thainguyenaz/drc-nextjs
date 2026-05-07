@@ -4,7 +4,7 @@ import PageHero from "@/components/PageHero";
 import AddictionPrograms from "@/components/AddictionPrograms";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { MedicalConditionSchema, MedicalWebPageSchema } from "@/lib/seo";
+import { MedicalConditionSchema, MedicalWebPageSchema, VideoSchemas } from "@/lib/seo";
 import AEOBlock from "@/components/AEOBlock";
 import RelatedPages from "@/components/RelatedPages";
 import ConditionFAQ from "@/components/ConditionFAQ";
@@ -61,6 +61,7 @@ export default function MethAddictionPage() {
     <>
       <SchemaScript schema={[getFAQSchema(faqData["meth-addiction-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/addiction/meth-addiction-treatment"))]} />
       <MedicalWebPageSchema url="/addiction/meth-addiction-treatment" name="Meth Addiction Treatment Arizona | Desert Recovery Centers" dateModified="2026-04-05" />
+      <VideoSchemas path="/addiction/meth-addiction-treatment/" />
       <MedicalConditionSchema
         name="Methamphetamine Addiction"
         description="Methamphetamine addiction is a severe stimulant use disorder. Meth releases massive amounts of dopamine, damaging receptors over time and making it increasingly difficult to experience pleasure or basic functioning without the drug."

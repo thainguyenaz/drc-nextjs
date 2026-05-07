@@ -4,7 +4,7 @@ import PageHero from "@/components/PageHero";
 import AddictionPrograms from "@/components/AddictionPrograms";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { MedicalConditionSchema, MedicalWebPageSchema } from "@/lib/seo";
+import { MedicalConditionSchema, MedicalWebPageSchema, VideoSchemas } from "@/lib/seo";
 import AEOBlock from "@/components/AEOBlock";
 import RelatedPages from "@/components/RelatedPages";
 import ConditionFAQ from "@/components/ConditionFAQ";
@@ -59,6 +59,7 @@ export default function PrescriptionDrugAddictionPage() {
     <>
       <SchemaScript schema={[getFAQSchema(faqData["prescription-drug-addiction-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/addiction/prescription-drug-addiction-treatment"))]} />
       <MedicalWebPageSchema url="/addiction/prescription-drug-addiction-treatment" name="Prescription Drug Addiction Treatment Arizona | Desert Recovery Centers" dateModified="2026-04-05" />
+      <VideoSchemas path="/addiction/prescription-drug-addiction-treatment/" />
       <MedicalConditionSchema
         name="Prescription Drug Addiction"
         description="Prescription drug addiction involves dependence on opioid painkillers, benzodiazepines, or stimulant medications. Dependence often develops gradually from legitimate medical use, making it difficult to recognize until it has significantly impacted your life."

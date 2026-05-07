@@ -5,6 +5,7 @@ import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import AboutContent from "./AboutContent";
+import { VideoSchemas } from "@/lib/seo";
 
 const GoogleReviews = dynamic(() => import("@/components/GoogleReviews"), { ssr: false });
 
@@ -17,6 +18,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
+      <VideoSchemas path="/about/" />
       <Navigation />
       <PageHero
         eyebrow="About Us"

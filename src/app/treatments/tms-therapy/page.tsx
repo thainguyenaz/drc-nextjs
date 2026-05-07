@@ -6,7 +6,7 @@ import Image from "next/image";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import AnimatedCounter from "@/components/AnimatedCounter";
-import { InlineFAQSchema } from "@/lib/seo";
+import { InlineFAQSchema, VideoSchemas } from "@/lib/seo";
 import SchemaScript from "@/components/SchemaScript";
 import TMSVideoSection from "./TMSVideoSection";
 
@@ -209,6 +209,7 @@ export default function TMSTherapyPage() {
   return (
     <>
       <InlineFAQSchema items={faqs} />
+      <VideoSchemas path="/treatments/tms-therapy/" />
       <SchemaScript schema={[
         {
           "@context": "https://schema.org",
