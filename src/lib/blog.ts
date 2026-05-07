@@ -1320,7 +1320,7 @@ ${DISCLAIMER}`
 <li><a href="/treatments/dual-diagnosis-treatment">Dual-diagnosis treatment</a> for the co-occurring mental health conditions that almost always accompany prescription drug dependence</li>
 <li><a href="/treatments/emdr-therapy">EMDR</a> for the trauma history that frequently underlies the prescription that started it all</li>
 <li><a href="/treatments/holistic-therapies">Holistic therapies</a> including yoga, massage, and nutrition support that aid neuroplasticity and recovery</li>
-<li><a href="/treatments/12-step-program">12-Step program</a> integration for long-term peer support</li>
+<li>12-Step program integration for long-term peer support</li>
 </ul>
 
 <p>For patients whose dependence developed from psychiatric medication that was clinically appropriate but is no longer serving them, we work with prescribers to design a slow, monitored taper rather than an abrupt stop. For patients whose use has escalated outside the prescription, we begin with stabilization and addiction treatment first, then collaborate on a plan for whatever underlying condition needs continued management.</p>

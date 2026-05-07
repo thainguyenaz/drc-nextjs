@@ -69,7 +69,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/treatments/tms-therapy", priority: 0.7, changeFrequency: "weekly" },
     { path: "/treatments/softwave-therapy", priority: 0.7, changeFrequency: "weekly" },
     { path: "/treatments/bridgework", priority: 0.7, changeFrequency: "weekly" },
-    { path: "/treatments/12-step-program", priority: 0.7, changeFrequency: "weekly" },
 
     // Adolescent program pages
     { path: "/adolescent-treatment", priority: 0.9, changeFrequency: "weekly" },
