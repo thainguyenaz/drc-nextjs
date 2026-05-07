@@ -437,6 +437,79 @@ Section B done. **0 parse errors, 0 hard cutover blockers.** All findings are st
 
 ---
 
+## Section C — NAP Consistency Audit (Phase 3, in-site)
+
+**Status: ✅ PASS (in-site cross-ref) / ⏸ PENDING (GMB cross-ref hand-off)**
+
+### C.1 Source of truth — `siteData.locations[]` (5 entries)
+
+| # | Name | Address | Phone | Phone (E.164) |
+|---|---|---|---|---|
+| 0 | Glendale | 8105 W Frier Dr, Glendale, AZ 85303 | (623) 323-1012 | +16233231012 |
+| 1 | Scottsdale | 23222 N Church Rd, Scottsdale, AZ 85255 | (480) 931-3617 | +14809313617 |
+| 2 | Phoenix PHP/IOP | 4160 N. 108th Ave, Phoenix, AZ 85037 | (602) 905-8070 | +16029058070 |
+| 3 | Phoenix TMS | 4160 N. 108th Ave, Phoenix, AZ 85037 | (602) 905-8070 | +16029058070 |
+| 4 | Phoenix PHP Living | 1623 W Moody Trail, Phoenix, AZ 85041 | (602) 905-8070 | +16029058070 |
+
+3 distinct phone numbers, 4 distinct addresses (Phoenix PHP/IOP and Phoenix TMS share the same building at 4160 N. 108th Ave).
+
+### C.2 In-site cross-reference
+
+| Surface | Phone(s) shown | Match `siteData`? |
+|---|---|---|
+| Footer (`Footer.tsx:71`) | (480) 931-3617 | ✓ (used as general line per llms.txt convention) |
+| `public/llms.txt:7-10` | All 3 numbers + 4 addresses listed per location | ✓ |
+| `public/llms.txt:49` | (480) 931-3617 (general) | ✓ |
+| JSON-LD LocalBusiness blocks (3 location pages) | Per-location phones | ✓ (verified via Phase 2 inventory) |
+| JSON-LD MedicalOrganization (sitewide) | (480) 931-3617 | ✓ |
+
+✅ **All in-site surfaces match `siteData.locations[]`**. No phone/address typos detected.
+
+### C.3 Format normalization flags
+
+The codebase contains two phone-display formats:
+- `(623) 323-1012` (parens-and-space) — used in metadata descriptions, JSON-LD `telephone` field, footer
+- `623-323-1012` (dashes-only) — used in some marketing copy (e.g., `addiction-mental-health-treatment-facilities-lp` page)
+
+Plus the E.164 form (`+16233231012`) used in `tel:` href attributes (correct for click-to-call).
+
+⚠️ **WARN — minor format inconsistency.** Google's NAP-consistency signal expects identical formatting across surfaces. The `(623) 323-1012` form is canonical (matches GMB display convention); the dashes-only form should be normalized. Low-priority pre-cutover; bulk find-and-replace candidate.
+
+### C.4 GMB cross-reference — HAND-OFF NEEDED
+
+**Cannot complete from CLI** — requires GMB admin access to pull the NAP listed on each of the 3 verified Google Business Profile listings.
+
+**For:** GMB owner (`desertrecoverycenters@gmail.com` per memory `project_gbp_oauth_status.md`)
+
+**Action:** for each of the 3 GBP listings (Glendale, Scottsdale, Phoenix PHP/IOP), capture the displayed:
+- Business name
+- Street address
+- Phone number
+
+Drop into a JSON file at `/home/openclaw/drc-website/migration-audit/gmb-nap-snapshot.json` shape:
+```json
+[
+  { "facility": "Glendale", "gmb_name": "...", "gmb_address": "...", "gmb_phone": "..." },
+  { "facility": "Scottsdale", "gmb_name": "...", "gmb_address": "...", "gmb_phone": "..." },
+  { "facility": "Phoenix PHP/IOP", "gmb_name": "...", "gmb_address": "...", "gmb_phone": "..." }
+]
+```
+
+I'll diff against `siteData.locations[]` and surface any mismatch.
+
+### C.5 SUMMARY — Section C
+
+| | Status |
+|---|---|
+| In-site NAP consistency (footer, JSON-LD, llms.txt, page metadata) | ✅ PASS |
+| Phone format normalization | ⚠️ WARN — 2 formats coexist; low priority |
+| GMB cross-reference | ⏸ PENDING — needs GMB admin export |
+| Critical pre-cutover blockers | **0** |
+
+NAP itself is solid in-site; only the GMB external-source comparison is outstanding. Ticket-13 candidate: `gmb-nap-snapshot.json` import.
+
+---
+
 ## Phase 1 — Halt point
 
 Reporting per your instruction. Critical fixes identified before cutover:
