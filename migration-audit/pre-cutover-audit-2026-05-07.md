@@ -1,7 +1,7 @@
 # Pre-Cutover Audit — drc-nextjs vs WordPress apex
 
 **Date:** 2026-05-07
-**Cutover target:** 2026-05-23 (16 days)
+**Cutover target:** TBD — cutover when readiness criteria met (see cutover-readiness-criteria.md)
 **Auditor:** Claude (read-only audit; no code modifications)
 **Audit basis:** Vercel deployment at commit `cb0eec3` (A5 shipped 2026-05-07); apex `desertrecoverycenters.com` still WordPress / a8c-cdn
 
