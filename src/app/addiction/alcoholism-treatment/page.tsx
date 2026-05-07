@@ -4,7 +4,7 @@ import PageHero from "@/components/PageHero";
 import AddictionPrograms from "@/components/AddictionPrograms";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { MedicalConditionSchema, MedicalWebPageSchema } from "@/lib/seo";
+import { MedicalConditionSchema, MedicalWebPageSchema, VideoSchemas } from "@/lib/seo";
 import AEOBlock from "@/components/AEOBlock";
 import RelatedPages from "@/components/RelatedPages";
 import ConditionFAQ from "@/components/ConditionFAQ";
@@ -60,6 +60,7 @@ export default function AlcoholAddictionPage() {
     <>
       <SchemaScript schema={[getFAQSchema(faqData["alcoholism-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/addiction/alcoholism-treatment"))]} />
       <MedicalWebPageSchema url="/addiction/alcoholism-treatment" name="Alcohol Addiction Treatment Arizona | Desert Recovery Centers" dateModified="2026-04-05" />
+      <VideoSchemas path="/addiction/alcoholism-treatment/" />
       <MedicalConditionSchema
         name="Alcohol Use Disorder"
         description="Alcohol use disorder (AUD) is a chronic condition characterized by an inability to control drinking despite negative consequences. Prolonged alcohol use changes brain chemistry, creating physical dependence that makes quitting dangerous without medical supervision."

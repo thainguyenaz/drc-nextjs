@@ -4,7 +4,7 @@ import PageHero from "@/components/PageHero";
 import AddictionPrograms from "@/components/AddictionPrograms";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { MedicalConditionSchema, MedicalWebPageSchema } from "@/lib/seo";
+import { MedicalConditionSchema, MedicalWebPageSchema, VideoSchemas } from "@/lib/seo";
 import AEOBlock from "@/components/AEOBlock";
 import RelatedPages from "@/components/RelatedPages";
 import ConditionFAQ from "@/components/ConditionFAQ";
@@ -61,6 +61,7 @@ export default function HeroinAddictionPage() {
     <>
       <SchemaScript schema={[getFAQSchema(faqData["heroin-addiction-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/addiction/heroin-addiction-treatment"))]} />
       <MedicalWebPageSchema url="/addiction/heroin-addiction-treatment" name="Heroin Addiction Treatment Arizona | Desert Recovery Centers" dateModified="2026-04-05" />
+      <VideoSchemas path="/addiction/heroin-addiction-treatment/" />
       <MedicalConditionSchema
         name="Opioid/Heroin Addiction"
         description="Heroin addiction is a severe opioid use disorder characterized by rapid physical dependence and intense withdrawal. Heroin binds to opioid receptors, flooding the system with dopamine and creating dependence often within days of regular use."

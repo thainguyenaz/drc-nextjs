@@ -17,7 +17,7 @@ export const videoData: Record<string, VideoEntry[]> = {
   ],
 
   // ── ABOUT US — 1 video ──
-  "/about-us/": [
+  "/about/": [
     { youtubeId: "bqDzL4O3WDE", title: "About Desert Recovery Centers", description: "Learn about the mission, team, and philosophy of Desert Recovery Centers in Arizona.", uploadDate: "2024-10-01T00:00:00+00:00" },
   ],
 
