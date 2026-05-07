@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { getPageMeta } from "@/data/page-metadata";
 
-const meta = getPageMeta("/treatments/emdr-eye-movement-desensitization-and-reprocessing/");
+const meta = getPageMeta("/treatments/emdr-therapy/");
 
 export const metadata: Metadata = {
   title: meta.title,
