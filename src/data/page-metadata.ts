@@ -67,7 +67,7 @@ export const pageMetadata: Record<string, PageMeta> = {
     title: "PHP & IOP Mental Health and Addiction Treatment in Phoenix, AZ | DRC",
     description: "Partial hospitalization and intensive outpatient addiction and mental health treatment in Phoenix, AZ. Call (602) 905-8070 to verify insurance.",
     canonical: "https://desertrecoverycenters.com/locations/phoenix-php-iop/",
-    ogImage: "https://desertrecoverycenters.com/images/locations/phoenix/phoenix-entry.jpg",
+    ogImage: "https://desertrecoverycenters.com/images/locations/phoenix/phoenix-lobby-2.jpg",
   },
   "/mental-health/anxiety-treatment/": {
     title: "Anxiety Treatment Center in Arizona | Desert Recovery Centers",

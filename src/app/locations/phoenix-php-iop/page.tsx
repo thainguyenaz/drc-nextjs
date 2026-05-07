@@ -4,10 +4,11 @@ import PageHero from "@/components/PageHero";
 import ConditionFAQ from "@/components/ConditionFAQ";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { SpeakableSchema } from "@/lib/seo";
+import { SpeakableSchema, VideoSchemas } from "@/lib/seo";
 import AEOBlock from "@/components/AEOBlock";
 import dynamic from "next/dynamic";
 const PhotoGallery = dynamic(() => import("@/components/PhotoGallery"), { ssr: false, loading: () => null });
+import { getPageMeta } from "@/data/page-metadata";
 import SchemaScript from "@/components/SchemaScript";
 import Breadcrumb from "@/components/Breadcrumb";
 import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
@@ -17,45 +18,18 @@ import PhoenixPHPContent from "./PhoenixPHPContent";
 
 const SITE_URL = "https://desertrecoverycenters.com";
 
+const meta = getPageMeta("/locations/phoenix-php-iop/");
+
 export const metadata: Metadata = {
-  title: "PHP & IOP Mental Health and Addiction Treatment in Phoenix, AZ | DRC",
-  description:
-    "Partial hospitalization and intensive outpatient addiction and mental health treatment in Phoenix, AZ. Call (602) 905-8070 to verify insurance.",
-  alternates: { canonical: `${SITE_URL}/locations/phoenix-php-iop/` },
+  title: meta.title,
+  description: meta.description,
+  alternates: { canonical: meta.canonical },
   openGraph: {
-    title: "PHP & IOP Mental Health and Addiction Treatment in Phoenix, AZ | DRC",
-    description:
-      "Partial hospitalization and intensive outpatient addiction and mental health treatment in Phoenix, AZ. Call (602) 905-8070 to verify insurance.",
-    url: `${SITE_URL}/locations/phoenix-php-iop/`,
-    images: [
-      {
-        url: `${SITE_URL}/images/locations/phoenix/phoenix-lobby-2.jpg`,
-        alt: "Desert Recovery Centers Phoenix PHP and IOP treatment center lobby in Phoenix Arizona",
-      },
-    ],
-    siteName: "Desert Recovery Centers",
-    locale: "en_US",
-    type: "website",
+    title: meta.title,
+    description: meta.description,
+    url: meta.canonical,
+    images: [{ url: meta.ogImage ?? "https://desertrecoverycenters.com/images/scottsdale/DRC-DRONE-SCOTTSDALE-08-01-2024-August-01-202400006-2.jpg", alt: meta.title }],
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "PHP & IOP Mental Health and Addiction Treatment in Phoenix, AZ | DRC",
-    description:
-      "Partial hospitalization and intensive outpatient addiction and mental health treatment in Phoenix, AZ. Call (602) 905-8070 to verify insurance.",
-    images: [`${SITE_URL}/images/locations/phoenix/phoenix-lobby-2.jpg`],
-  },
-  keywords: [
-    "PHP Phoenix AZ",
-    "IOP Phoenix AZ",
-    "outpatient treatment Phoenix",
-    "TMS therapy Phoenix",
-    "mental health treatment Phoenix",
-    "addiction treatment Phoenix",
-    "Desert Recovery Centers Phoenix",
-    "partial hospitalization Phoenix",
-    "intensive outpatient Phoenix",
-    "dual diagnosis Phoenix",
-  ],
 };
 
 const faqs = [
@@ -119,8 +93,8 @@ const gallery = [
 
 const clinicSchema = {
   "@context": "https://schema.org",
-  "@type": ["MedicalClinic", "LocalBusiness"],
-  "@id": `${SITE_URL}/locations/phoenix-php-iop#clinic`,
+  "@type": ["LocalBusiness", "MedicalClinic"],
+  "@id": `${SITE_URL}/locations/phoenix-php-iop`,
   name: "Desert Recovery Centers Phoenix PHP / IOP",
   alternateName: "Desert Recovery Centers Phoenix",
   description:
@@ -286,6 +260,7 @@ export default function PhoenixPhpIopPage() {
         ],
       }]} />
       <SpeakableSchema url="/locations/phoenix-php-iop" cssSelectors={["[data-speakable]"]} />
+      <VideoSchemas path="/locations/phoenix-php-iop/" />
       <Navigation />
       <Breadcrumb items={getBreadcrumbsFromPathname("/locations/phoenix-php-iop")} />
       <PageHero
