@@ -22,7 +22,7 @@ Cutover proceeds when **all** of the following are true:
 10. **DNS TTL set to 5 minutes for at least 7 days before cutover**, so rollback is fast if needed.
 11. **Rollback procedure documented and dry-run tested.**
 12. **HubSpot form integration verified.** Every live HubSpot form on WordPress has a matching working implementation on Next.js. Test submission for each form confirms contact creation in HubSpot. Drip workflows continue firing without disruption.
-13. **Blog content gap closed.** Every WordPress blog post with non-zero traffic exists on Next.js with the same canonical slug, OR has an explicit redirect rule in `next.config.mjs` pointing to a topical sibling. Zero hard-404 blog URLs post-cutover.
+13. **Blog content gap closed.** Every WordPress blog post with non-zero traffic exists on Next.js with the same canonical slug, OR has an explicit redirect rule in `next.config.mjs` pointing to a topical sibling. Zero hard-404 blog URLs post-cutover. — **✓ GREEN 2026-05-08** (closed by A13, commit `cd362bf`; audit `46896b1` confirmed the gap was 3 posts, all Option B redirected to topical siblings; 51 of 54 WP posts handled, 6 line additions to `next.config.mjs`).
 
 When all 13 criteria are green, cutover proceeds on the next Tuesday morning Arizona time.
 
