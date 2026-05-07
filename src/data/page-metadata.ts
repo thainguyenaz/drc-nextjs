@@ -213,12 +213,6 @@ export const pageMetadata: Record<string, PageMeta> = {
     canonical: "https://desertrecoverycenters.com/treatments/holistic-therapies/",
     ogImage: DEFAULT_OG_IMAGE,
   },
-  "/treatments/12-step-program/": {
-    title: "12-Step Program for Addiction Recovery in Arizona | Desert Recovery Centers",
-    description: "12-step addiction recovery program in Arizona. Combined with evidence-based clinical care. Luxury residential setting. Call (480) 931-3617.",
-    canonical: "https://desertrecoverycenters.com/treatments/12-step-program/",
-    ogImage: DEFAULT_OG_IMAGE,
-  },
   "/treatments/softwave-therapy/": {
     title: "SoftWave Therapy Arizona | Desert Recovery Centers",
     description: "SoftWave therapy for pain management and physical wellness as part of holistic addiction recovery at Desert Recovery Centers.",

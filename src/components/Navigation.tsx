@@ -46,7 +46,6 @@ const navLinks = [
       { label: "CBT", href: "/treatments/cbt-cognitive-behavioral-therapy" },
       { label: "DBT", href: "/treatments/dbt-dialectical-behavior-therapy" },
       { label: "EMDR", href: "/treatments/emdr-therapy" },
-      { label: "12-Step Program", href: "/treatments/12-step-program" },
       { label: "Trauma Therapy", href: "/treatments/trauma-therapy" },
       { label: "Dual Diagnosis", href: "/treatments/dual-diagnosis-treatment" },
       { label: "Holistic Therapies", href: "/treatments/holistic-therapies" },

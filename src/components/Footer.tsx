@@ -35,7 +35,6 @@ const footerLinks = {
     { label: "CBT Therapy", href: "/treatments/cbt-cognitive-behavioral-therapy" },
     { label: "DBT Therapy", href: "/treatments/dbt-dialectical-behavior-therapy" },
     { label: "EMDR Therapy", href: "/treatments/emdr-therapy" },
-    { label: "12-Step Program", href: "/treatments/12-step-program" },
   ],
   Company: [
     { label: "Recovery Blog", href: "/resources/blog" },
