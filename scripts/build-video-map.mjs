@@ -42,7 +42,7 @@ const PAGE_MAP = [
   { page: '/mental-health/', keywords: ['mental health','executive burnout','behavioral health','how does alcohol affect mental health','link between alcohol use and suicide','what is gray-area'] },
   { page: '/locations/scottsdale/', keywords: ['scottsdale'] },
   { page: '/locations/glendale/', keywords: ['glendale'] },
-  { page: '/locations/phoenix/', keywords: ['phoenix'] },
+  { page: '/locations/phoenix-php-iop/', keywords: ['phoenix'] },
 ];
 
 function mapVideo(title) {
