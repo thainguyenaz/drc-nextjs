@@ -103,6 +103,79 @@ const nextConfig = {
       { source: "/treatment/op/", destination: "/treatments", permanent: true },
       { source: "/treatment/family-program", destination: "/treatments", permanent: true },
       { source: "/treatment/family-program/", destination: "/treatments", permanent: true },
+
+      // ─── WP Redirection plugin migration (pre-cutover 2026-05-07) ───
+      // Sourced from migration-audit/wp_redirects_clean.json. Hit counts
+      // reflect last 30 days on apex WP per Redirection plugin export.
+      // Last 4 source URLs (partner-referral, drug-alcohol-detox-lp clone,
+      // call-center-clone, on-demand-webinars) point at destinations that
+      // currently 404 on Next.js or use closest-sibling — pre-staged so
+      // they auto-resolve when Tickets 13/14/15 land.
+
+      // -- Active legacy URLs (CRITICAL ADDITIONS) --
+      { source: "/understanding-marijuana", destination: "/addiction/marijuana-addiction-treatment", permanent: true }, // 354 hits/30d
+      { source: "/understanding-marijuana/", destination: "/addiction/marijuana-addiction-treatment", permanent: true },
+      { source: "/understanding-depression", destination: "/mental-health/depression-treatment", permanent: true }, // 352
+      { source: "/understanding-depression/", destination: "/mental-health/depression-treatment", permanent: true },
+      { source: "/trauma", destination: "/treatments/trauma-therapy", permanent: true }, // 333
+      { source: "/trauma/", destination: "/treatments/trauma-therapy", permanent: true },
+      { source: "/ptsd", destination: "/mental-health/ptsd-treatment", permanent: true }, // 144
+      { source: "/ptsd/", destination: "/mental-health/ptsd-treatment", permanent: true },
+      { source: "/meth", destination: "/addiction/meth-addiction-treatment", permanent: true }, // 137
+      { source: "/meth/", destination: "/addiction/meth-addiction-treatment", permanent: true },
+      { source: "/alcohol", destination: "/addiction/alcoholism-treatment", permanent: true }, // 135
+      { source: "/alcohol/", destination: "/addiction/alcoholism-treatment", permanent: true },
+      { source: "/mental-health/understanding-anxiety", destination: "/mental-health/anxiety-treatment", permanent: true }, // 122
+      { source: "/mental-health/understanding-anxiety/", destination: "/mental-health/anxiety-treatment", permanent: true },
+      { source: "/bipolar-disorder", destination: "/mental-health/bipolar-disorder-treatment", permanent: true }, // 116
+      { source: "/bipolar-disorder/", destination: "/mental-health/bipolar-disorder-treatment", permanent: true },
+      { source: "/fentanyl-opioid", destination: "/addiction/fentanyl-addiction-treatment", permanent: true }, // 109
+      { source: "/fentanyl-opioid/", destination: "/addiction/fentanyl-addiction-treatment", permanent: true },
+      { source: "/ocd", destination: "/mental-health/ocd-treatment", permanent: true }, // 103
+      { source: "/ocd/", destination: "/mental-health/ocd-treatment", permanent: true },
+      { source: "/addiction-counseling", destination: "/addiction-treatment", permanent: true }, // 99
+      { source: "/addiction-counseling/", destination: "/addiction-treatment", permanent: true },
+      { source: "/heroine", destination: "/addiction/heroin-addiction-treatment", permanent: true }, // 96 (typo catcher)
+      { source: "/heroine/", destination: "/addiction/heroin-addiction-treatment", permanent: true },
+      { source: "/schizophrenia", destination: "/mental-health/schizophrenia-treatment", permanent: true }, // 93
+      { source: "/schizophrenia/", destination: "/mental-health/schizophrenia-treatment", permanent: true },
+      { source: "/cocaine", destination: "/addiction/cocaine-addiction-treatment", permanent: true }, // 84
+      { source: "/cocaine/", destination: "/addiction/cocaine-addiction-treatment", permanent: true },
+      { source: "/personality-disorder", destination: "/mental-health/personality-disorder-treatment", permanent: true }, // 75
+      { source: "/personality-disorder/", destination: "/mental-health/personality-disorder-treatment", permanent: true },
+      { source: "/prescriptions", destination: "/addiction/prescription-drug-addiction-treatment", permanent: true }, // 57
+      { source: "/prescriptions/", destination: "/addiction/prescription-drug-addiction-treatment", permanent: true },
+      { source: "/heroin", destination: "/addiction/heroin-addiction-treatment", permanent: true }, // 54
+      { source: "/heroin/", destination: "/addiction/heroin-addiction-treatment", permanent: true },
+      { source: "/methamphetamine-abuse", destination: "/addiction/meth-addiction-treatment", permanent: true }, // 38 (chain-collapsed: WP routed via /meth)
+      { source: "/methamphetamine-abuse/", destination: "/addiction/meth-addiction-treatment", permanent: true },
+
+      // -- Zero-hit legacy URLs (defensive coverage) --
+      { source: "/mental-health-2", destination: "/mental-health", permanent: true }, // 0 hits
+      { source: "/mental-health-2/", destination: "/mental-health", permanent: true },
+      { source: "/ter", destination: "/terms-of-service", permanent: true }, // 0
+      { source: "/ter/", destination: "/terms-of-service", permanent: true },
+      { source: "/about-desert-recovery-centers", destination: "/about-us", permanent: true }, // 0
+      { source: "/about-desert-recovery-centers/", destination: "/about-us", permanent: true },
+      { source: "/our-podcast", destination: "/resources", permanent: true }, // 0 (chain-collapsed: /resources/our-podcast retired → /resources)
+      { source: "/our-podcast/", destination: "/resources", permanent: true },
+      { source: "/webinars-lp", destination: "/resources", permanent: true }, // 0 (chain-collapsed: /resources/access-webinars retired → /resources)
+      { source: "/webinars-lp/", destination: "/resources", permanent: true },
+
+      // -- Pre-staging: destinations 404 today, ports in flight (Tickets 13/14) --
+      { source: "/partner-referral", destination: "/partner-referral-vrc", permanent: true }, // 106 — Ticket 13 ports /partner-referral-vrc
+      { source: "/partner-referral/", destination: "/partner-referral-vrc", permanent: true },
+      { source: "/drug-alcohol-detox-lp/drug-alcohol-detox-lp-clone", destination: "/drug-alcohol-detox-lp/thank-you", permanent: true }, // 85 — Ticket 14 ports /drug-alcohol-detox-lp/thank-you
+      { source: "/drug-alcohol-detox-lp/drug-alcohol-detox-lp-clone/", destination: "/drug-alcohol-detox-lp/thank-you", permanent: true },
+      { source: "/call-center-clone", destination: "/partner-referral-vrc", permanent: true }, // 84 — chain-collapsed; same Ticket 13 dependency
+      { source: "/call-center-clone/", destination: "/partner-referral-vrc", permanent: true },
+
+      // -- Closest-sibling redirect (no Next.js destination match) --
+      { source: "/on-demand-webinars", destination: "/resources", permanent: true }, // 0 hits (chain-collapsed: /resources/access-webinars retired → /resources) — Ticket 15 may revisit
+      { source: "/on-demand-webinars/", destination: "/resources", permanent: true },
+
+      // ─── End WP Redirection plugin migration ───
+
       // Resource page dead link redirects
       { source: "/resources/podcast", destination: "https://open.spotify.com/show/5thFT5DNC1exCkhmiug1Nb", permanent: false },
       { source: "/resources/what-to-pack", destination: "/resources/blog", permanent: false },
