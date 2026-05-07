@@ -28,7 +28,7 @@ export const videoData: Record<string, VideoEntry[]> = {
   "/locations/scottsdale/": [
     { youtubeId: "7qvyphmKNxg", title: "Desert Recovery Centers Scottsdale Facility Tour", description: "Tour the Desert Recovery Centers North Scottsdale Arizona luxury residential treatment facility.", uploadDate: "2024-10-01T00:00:00+00:00" },
   ],
-  "/locations/phoenix/": [
+  "/locations/phoenix-php-iop/": [
     { youtubeId: "rMkEYhoW-kE", title: "Desert Recovery Centers Phoenix Facility Tour", description: "Tour the Desert Recovery Centers Phoenix Arizona PHP, IOP, and outpatient treatment facility.", uploadDate: "2024-10-01T00:00:00+00:00" },
   ],
 

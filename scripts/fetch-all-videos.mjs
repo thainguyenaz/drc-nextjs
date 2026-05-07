@@ -65,7 +65,7 @@ const PAGE_MAP = {
   '/resources/addiction-detox-guide/': ['detox','withdrawal','medical detox','detoxing'],
   '/locations/glendale/': ['glendale'],
   '/locations/scottsdale/': ['scottsdale','arizona climate','arizona landscape'],
-  '/locations/phoenix/': ['phoenix'],
+  '/locations/phoenix-php-iop/': ['phoenix'],
   '/about-us/': ['about desert recovery','our story','mission','founder','boutique program','smaller program'],
   '/addiction-treatment/': ['high-functioning addiction','relapse','iop','step down','reintegrate','intervention','inpatient','rehab','treatment center','recovery','family'],
   '/mental-health/': ['mental health','executive burnout','behavioral health'],

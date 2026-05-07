@@ -149,7 +149,7 @@ export default function IOPPage() {
               <p className="text-gray-600 leading-relaxed text-lg mb-4">
                 At Desert Recovery Centers, our IOP operates from our{" "}
                 <Link
-                  href="/locations/phoenix/"
+                  href="/locations/phoenix-php-iop/"
                   className="text-gold hover:text-gold-dark font-semibold"
                 >
                   Phoenix location
