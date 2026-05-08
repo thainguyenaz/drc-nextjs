@@ -192,7 +192,7 @@ export default function AdolescentSubstanceUsePage() {
               { title: "Group Therapy", desc: "With age-appropriate peers, providing connection and reducing the isolation that fuels both substance use and mental health symptoms." },
               { title: "Motivational Interviewing", desc: "Building internal motivation for change rather than relying on external pressure, which is particularly effective with adolescents." },
               { title: "Family Therapy", desc: "Addressing family system dynamics that may be contributing to use, and building the communication patterns needed for recovery at home." },
-              { title: "Medical Management", desc: "Including medication-assisted treatment where clinically appropriate under Dr. Topete's supervision." },
+              { title: "Medical Management", desc: "Including medication-assisted treatment where clinically appropriate, prescribed by our Psychiatric Nurse Practitioner, Ian Dy, under the supervision of Medical Director Dr. Greg Carr, MD." },
             ].map((item, i) => (
               <motion.div key={i} initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.5, delay: i * 0.08 }} className="border-l-2 border-gold/40 pl-6">
                 <h3 className="font-display text-lg text-forest font-semibold mb-2">{item.title}</h3><p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>

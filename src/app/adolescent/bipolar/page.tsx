@@ -190,14 +190,14 @@ export default function AdolescentBipolarPage() {
               <div className="quick-answer" style={{ background: "#FAF7F2", borderLeft: "3px solid #C4973A", padding: "16px 20px", marginBottom: "24px" }}>
                 <span className="font-mono text-[10px] uppercase tracking-widest text-gray-500">QUICK ANSWER</span>
                 <p className="text-gray-700 leading-relaxed mt-1">
-                  Desert Recovery Centers treats adolescent bipolar disorder with mood stabilizer medication management under Dr. Topete&apos;s supervision, psychoeducation for the adolescent and family, Interpersonal and Social Rhythm Therapy to stabilize circadian rhythms that affect mood cycling, and Cognitive Behavioral Therapy for depression and anxiety components. Family education on recognizing early warning signs is an essential component of treatment. Stability requires both medication and psychotherapy working together.
+                  Desert Recovery Centers treats adolescent bipolar disorder through a comprehensive approach: mood stabilizer medication management is prescribed by our Psychiatric Nurse Practitioner, Ian Dy, under the supervision of Medical Director Dr. Greg Carr, MD. Treatment also includes psychoeducation for the adolescent and family, Interpersonal and Social Rhythm Therapy to stabilize circadian rhythms that affect mood cycling, and Cognitive Behavioral Therapy for depression and anxiety components. Family education on recognizing early warning signs is an essential component of treatment. Stability requires both medication and psychotherapy working together.
                 </p>
               </div>
             <p className="text-gray-600 leading-relaxed text-lg mb-6">Treatment for adolescent bipolar disorder requires a sophisticated clinical approach. Family education is essential. Families of adolescents with bipolar disorder need to understand the condition, recognize early warning signs of episodes, and know how to respond in ways that support stability rather than escalate conflict.</p>
           </AnimatedSection>
           <div className="space-y-6">
             {[
-              { title: "Medication Management", desc: "Under Dr. Topete's supervision, mood stabilizers and careful monitoring form the foundation of bipolar treatment in adolescents." },
+              { title: "Medication Management", desc: "Prescribed by our Psychiatric Nurse Practitioner, Ian Dy, under the supervision of Medical Director Dr. Greg Carr, MD. Mood stabilizers and careful monitoring form the foundation of bipolar treatment in adolescents." },
               { title: "Psychoeducation", desc: "For both the adolescent and the family, building understanding of the condition and what to expect over time." },
               { title: "Interpersonal and Social Rhythm Therapy", desc: "Stabilizing circadian rhythms and daily routines that directly affect mood cycling." },
               { title: "Cognitive Behavioral Therapy", desc: "Addressing the depression and anxiety components that commonly accompany bipolar disorder in adolescents." },

@@ -31,14 +31,14 @@ export const teamMembers: TeamMember[] = [
     url: "https://desertrecoverycenters.com/team/jason-inserra/",
   },
   {
-    slug: "dr-reyes-topete-md",
-    name: "Dr. Reyes Topete MD",
+    slug: "dr-greg-carr-md",
+    name: "Dr. Greg Carr, MD",
     jobTitle: "Medical Director",
     credentials: ["MD", "Board Certified Psychiatrist"],
     description:
-      "Dr. Reyes Topete is the Medical Director at Desert Recovery Centers. As a board-certified physician, he oversees all medical care, including coordination with detox partners and post-detox medical management, medication-assisted treatment, and psychiatric care across the organization.",
-    image: "/images/team/Dr._Reyes_Topete-cropped.jpg",
-    url: "https://desertrecoverycenters.com/team/dr-reyes-topete-md/",
+      "Dr. Greg Carr serves as Medical Director at Desert Recovery Centers, where he oversees medical care across all DRC programs including residential, PHP, IOP, and adolescent treatment. A psychiatrist with over 17 years of clinical experience, Dr. Carr brings deep expertise in psychiatric care for adolescents, adults, and geriatric patients, integrating current medical, therapeutic, and interpersonal practices to deliver comprehensive, individualized treatment. Dr. Carr is NeuroStar-certified for Transcranial Magnetic Stimulation (TMS) therapy, providing patients with access to FDA-cleared treatment for major depressive disorder. His clinical interests include addiction medicine, mood disorders, anxiety disorders, and dual diagnosis treatment. His commitment to evidence-based, individualized care helps establish DRC as a leading mental health and addiction treatment provider in Arizona.",
+    image: "/images/team/Dr-Greg-Carr.jpg", // TODO: replace placeholder photo
+    url: "https://desertrecoverycenters.com/team/dr-greg-carr-md/",
   },
   {
     slug: "dr-caitlin-ellis",

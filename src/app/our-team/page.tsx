@@ -38,10 +38,16 @@ export default function OurTeamPage() {
         description="Clinical Director at Desert Recovery Centers, a licensed clinical psychologist specializing in addiction and mental health treatment."
       />
       <PersonSchema
-        name="Dr. Reyes Topete, MD"
+        name="Dr. Greg Carr, MD"
         jobTitle="Medical Director"
-        image="/images/team/Dr._Reyes_Topete-cropped.jpg"
-        description="Medical Director at Desert Recovery Centers, overseeing psychiatric care and medication management for addiction and mental health treatment."
+        image="/images/team/Dr-Greg-Carr.jpg"
+        description="Medical Director at Desert Recovery Centers, a board-certified psychiatrist overseeing medical care and medication management across all DRC programs."
+      />
+      <PersonSchema
+        name="Ian Dy"
+        jobTitle="Psychiatric Nurse Practitioner"
+        image="/images/team/Ian-Dy.jpg"
+        description="Psychiatric Nurse Practitioner at Desert Recovery Centers, conducting psychiatric evaluations and providing medication management for clients across all locations."
       />
       <PersonSchema
         name="Dr. Jonathan Shelton"

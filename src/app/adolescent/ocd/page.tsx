@@ -214,7 +214,7 @@ export default function AdolescentOcdPage() {
               </div>
             <p className="text-gray-600 leading-relaxed text-lg mb-6">The gold standard treatment for OCD is Exposure and Response Prevention therapy, known as ERP. ERP involves gradually and systematically exposing the adolescent to situations that trigger obsessions while supporting them in resisting the compulsive response. Over time, the brain learns that the feared outcome does not occur and that anxiety can be tolerated without performing the ritual.</p>
             <p className="text-gray-600 leading-relaxed text-lg mb-6">ERP is not intuitive. It is not comfortable. It is also the most effective treatment available for OCD, with strong evidence supporting its use in adolescents. Our clinical team is trained in ERP delivery and understands how to pace exposure work appropriately for teenage patients.</p>
-            <p className="text-gray-600 leading-relaxed text-lg">When clinically indicated, medication management with SRIs is provided under the supervision of Dr. Topete. Medication and ERP together produce better outcomes than either alone for moderate to severe OCD.</p>
+            <p className="text-gray-600 leading-relaxed text-lg">When clinically indicated, medication management with SRIs is prescribed by our Psychiatric Nurse Practitioner, Ian Dy, under the supervision of Medical Director Dr. Greg Carr, MD. Medication and ERP together produce better outcomes than either alone for moderate to severe OCD.</p>
           </AnimatedSection>
         </div></div>
       </section>

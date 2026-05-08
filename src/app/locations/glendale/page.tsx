@@ -88,7 +88,7 @@ const faqs = [
   },
   {
     q: "What is the clinical team like at Glendale?",
-    a: "Your care is led by licensed clinical psychologists and overseen by our board-certified psychiatrist, Dr. Reyes Topete, MD. Registered nurses provide 24/7 medical monitoring, and licensed therapists deliver individual and group sessions daily. Our clinical director, Dr. An Nguyen, oversees treatment quality across all locations.",
+    a: "Your care is led by licensed clinical psychologists and overseen by our board-certified psychiatrist and Medical Director, Dr. Greg Carr, MD. Registered nurses provide 24/7 medical monitoring, and licensed therapists deliver individual and group sessions daily. Our clinical director, Dr. An Nguyen, oversees treatment quality across all locations.",
   },
   {
     q: "Can my family visit the Glendale facility?",
