@@ -5,7 +5,7 @@ import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import SchemaScript from "@/components/SchemaScript";
-import InsuranceVerificationForm from "@/components/forms/InsuranceVerificationForm";
+import GetHelpForm from "@/components/forms/GetHelpForm";
 import { getBreadcrumbSchema } from "@/lib/schema";
 import Breadcrumb from "@/components/Breadcrumb";
 import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
@@ -179,7 +179,7 @@ export default function GetHelpPage() {
             </AnimatedSection>
 
             <div>
-              <InsuranceVerificationForm />
+              <GetHelpForm variant="lp" />
             </div>
           </div>
         </div>
