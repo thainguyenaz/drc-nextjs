@@ -186,7 +186,7 @@ export default function AdolescentDepressionPage() {
                 Depression in teenagers is not the same as depression in adults. Most people picture sadness. What they miss is the irritability, the anger, the sudden withdrawal from friends and family, the grades that quietly collapse, the kid who used to love soccer and now does not get off the couch. Adolescent depression wears many masks and most of them do not look like grief.
               </p>
               <p className="text-gray-600 leading-relaxed text-lg mb-4">
-                At Desert Recovery Centers, we treat adolescent depression in a residential setting designed specifically for the complexity of teenage mental health. Our clinical team, led by Licensed Clinical Psychologist Dr. An Nguyen and Medical Director Dr. Reyes Topete MD, understands how depression in adolescents differs from adult presentations and how to treat it accordingly.
+                At Desert Recovery Centers, we treat adolescent depression in a residential setting designed specifically for the complexity of teenage mental health. Our clinical team, led by Licensed Clinical Psychologist Dr. An Nguyen and Medical Director Dr. Greg Carr, MD, understands how depression in adolescents differs from adult presentations and how to treat it accordingly.
               </p>
             </AnimatedSection>
           </div>
@@ -314,7 +314,7 @@ export default function AdolescentDepressionPage() {
               <div className="quick-answer" style={{ background: "#FAF7F2", borderLeft: "3px solid #C4973A", padding: "16px 20px", marginBottom: "24px" }}>
                 <span className="font-mono text-[10px] uppercase tracking-widest text-gray-500">QUICK ANSWER</span>
                 <p className="text-gray-700 leading-relaxed mt-1">
-                  Desert Recovery Centers treats adolescent depression using Cognitive Behavioral Therapy, Dialectical Behavior Therapy, individual and family therapy, medication management, and NeuroStar TMS therapy for adolescents who have not responded to medication alone. Every adolescent receives an individualized treatment plan, not a standardized protocol. Treatment is led by Licensed Clinical Psychologist Dr. An Nguyen and Medical Director Dr. Reyes Topete MD.
+                  Desert Recovery Centers treats adolescent depression using Cognitive Behavioral Therapy, Dialectical Behavior Therapy, individual and family therapy, medication management, and NeuroStar TMS therapy for adolescents who have not responded to medication alone. Every adolescent receives an individualized treatment plan, not a standardized protocol. Treatment is led by Licensed Clinical Psychologist Dr. An Nguyen and Medical Director Dr. Greg Carr, MD.
                 </p>
               </div>
               <p className="text-gray-600 leading-relaxed text-lg mb-6">
@@ -327,7 +327,7 @@ export default function AdolescentDepressionPage() {
                 { title: "Dialectical Behavior Therapy", desc: "For emotional regulation and distress tolerance, critical skills for teenagers who experience intense emotions without adequate coping strategies." },
                 { title: "Individual Therapy", desc: "With licensed clinicians who specialize in adolescent mental health and understand the developmental context of teenage depression." },
                 { title: "Family Therapy", desc: "To repair and strengthen the support system at home. Long-term recovery depends on what happens at home after discharge." },
-                { title: "Medication Management", desc: "When clinically indicated, under the supervision of Dr. Topete, with careful monitoring of response and side effects in the adolescent population." },
+                { title: "Medication Management", desc: "When clinically indicated, prescribed by our Psychiatric Nurse Practitioner, Ian Dy, under the supervision of Medical Director Dr. Greg Carr, MD, with careful monitoring of response and side effects in the adolescent population." },
                 { title: "NeuroStar TMS Therapy", desc: "For adolescents who have not responded adequately to medication alone. FDA cleared for treatment-resistant depression." },
               ].map((item, i) => (
                 <motion.div

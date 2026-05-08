@@ -190,7 +190,7 @@ export default function AdolescentAdhdPage() {
           </AnimatedSection>
           <div className="space-y-6">
             {[
-              { title: "Medication Management", desc: "Under Dr. Topete's supervision, addressing the core neurological component with careful monitoring of response and side effects." },
+              { title: "Medication Management", desc: "Prescribed by our Psychiatric Nurse Practitioner, Ian Dy, under the supervision of Medical Director Dr. Greg Carr, MD, addressing the core neurological component with careful monitoring of response and side effects." },
               { title: "Individual and Group Therapy", desc: "Addressing the emotional and psychological consequences of years living with an unmanaged condition, including shame, learned helplessness, and damaged self-concept." },
               { title: "Executive Function Skills Building", desc: "Practical skills in organization, time management, emotional regulation, and distress tolerance that address the functional deficits of ADHD." },
               { title: "Family Therapy", desc: "Addressing the patterns that have developed around the ADHD in the home environment, rebuilding communication and expectations." },
