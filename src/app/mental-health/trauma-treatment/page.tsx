@@ -7,7 +7,7 @@ import ConditionFAQ from "@/components/ConditionFAQ";
 import AEOBlock from "@/components/AEOBlock";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { buildMetadata, SpeakableSchema, MedicalTherapySchema } from "@/lib/seo";
+import { buildMetadata, SpeakableSchema, MedicalWebPageSchema, MedicalTherapySchema } from "@/lib/seo";
 import AnimatedSection from "@/components/animated/AnimatedSection";
 import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
 import { faqData } from "@/data/faq-data";
@@ -50,6 +50,7 @@ export default function TraumaTreatmentPage() {
   return (
     <>
       <SchemaScript schema={[getFAQSchema(faqData["trauma-therapy"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/mental-health/trauma-treatment"))]} />
+      <MedicalWebPageSchema url="/mental-health/trauma-treatment" name="Trauma Treatment Center in Arizona" dateModified="2026-04-08" />
       <SpeakableSchema url="/mental-health/trauma-treatment" cssSelectors={["[data-speakable]"]} />
       <MedicalTherapySchema
         name="Trauma Therapy"

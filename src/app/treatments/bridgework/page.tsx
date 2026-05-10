@@ -7,7 +7,7 @@ import Navigation from "@/components/Navigation";
 import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { MedicalTherapySchema } from "@/lib/seo";
+import { MedicalTherapySchema, MedicalWebPageSchema } from "@/lib/seo";
 import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
 import { faqData } from "@/data/faq-data";
 import SchemaScript from "@/components/SchemaScript";
@@ -51,6 +51,7 @@ export default function BridgeWorkPage() {
   return (
     <>
       <SchemaScript schema={[getFAQSchema(faqData["bridgework"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/treatments/bridgework"))]} />
+      <MedicalWebPageSchema url="/treatments/bridgework" name="BridgeWork™ Therapy in Arizona | Desert Recovery Centers" dateModified="2026-04-08" />
       <MedicalTherapySchema
         name="BridgeWork&trade;"
         description="Proprietary clinical psychologist-led skill integration program that bridges the gap between therapeutic insight and real-world behavioral change."
