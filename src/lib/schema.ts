@@ -1,6 +1,8 @@
 // ─── Structured Data / JSON-LD schema generators ──────────────────
 // Each function returns a plain object ready to be passed to <SchemaScript />.
 
+import { DRC_REVIEWERS, type Reviewer } from "@/lib/seo";
+
 const SITE_URL = "https://desertrecoverycenters.com";
 const SITE_NAME = "Desert Recovery Centers";
 
@@ -182,6 +184,7 @@ export function getArticleSchema(article: {
   dateModified: string;
   image: string;
   description: string;
+  reviewer?: Reviewer;
 }) {
   return {
     "@context": "https://schema.org",
@@ -196,6 +199,9 @@ export function getArticleSchema(article: {
     dateModified: article.dateModified,
     image: article.image,
     description: article.description,
+    ...(article.reviewer && article.reviewer !== "none"
+      ? { reviewedBy: DRC_REVIEWERS[article.reviewer] }
+      : {}),
     publisher: {
       "@type": "Organization",
       name: SITE_NAME,

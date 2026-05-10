@@ -9,7 +9,7 @@ const DEFAULT_OG_IMAGE = `${SITE_URL}/logo.png`;
 
 // ─── A12: Clinical reviewer roster (4-person YMYL reviewer set) ────
 
-type Reviewer = "carr" | "nguyen" | "dy" | "topete" | "none";
+export type Reviewer = "carr" | "nguyen" | "dy" | "topete" | "none";
 
 export const DRC_REVIEWERS: Record<Exclude<Reviewer, "none">, Record<string, unknown>> = {
   carr: {
