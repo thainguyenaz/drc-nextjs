@@ -151,6 +151,16 @@ export const teamMembers: TeamMember[] = [
     url: "https://desertrecoverycenters.com/team/ian-dy/",
   },
   {
+    slug: "dr-reyes-topete-md",
+    name: "Dr. Reyes Topete, MD, FASAM",
+    jobTitle: "Attending Physician",
+    credentials: ["MD", "FASAM"],
+    description:
+      "Dr. Reyes Topete, MD, FASAM, serves as Attending Physician at Desert Recovery Centers, where he conducts admission physical examinations, ongoing health assessments, and general medical care for patients across our programs. Born and raised in Phoenix, Dr. Topete obtained his B.S. in Biology from Arizona State University before earning his M.D. from the University of Arizona College of Medicine in 1992. He completed his Internal Medicine Residency at Saint Joseph Hospital and Medical Center in Phoenix in 1995. Dr. Topete has worked in addiction medicine since 1994 and is board-certified in Addiction Medicine through the American Society of Addiction Medicine. He is a DATA-waived physician (Subutex/Suboxone certified) with expertise in Medical Stabilization, Ambulatory Care, and Urgent Care. With over three decades of medical experience, Dr. Topete is committed to open communication with referring professionals and the clinical team to ensure coordinated care throughout each patient's healing process. Bilingual in English and Spanish.",
+    image: "/images/team/Dr._Reyes_Topete-cropped.jpg",
+    url: "https://desertrecoverycenters.com/team/dr-reyes-topete-md/",
+  },
+  {
     slug: "ajuni-singh",
     name: "Ajuni Singh",
     jobTitle: "",

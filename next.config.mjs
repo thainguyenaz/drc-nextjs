@@ -83,9 +83,6 @@ const nextConfig = {
       // Old broken paths fixed in href audit
       { source: "/about/luxury-vs-standard", destination: "/resources/luxury-vs-standard-rehab", permanent: true },
       { source: "/about/our-team", destination: "/our-team", permanent: true },
-      // Removed Medical Director profile (Topete left DRC; Carr is new Medical Director)
-      { source: "/team/dr-reyes-topete-md", destination: "/our-team", permanent: true },
-      { source: "/team/dr-reyes-topete-md/", destination: "/our-team", permanent: true },
       // /facilities now has its own page.tsx — redirect removed
       // Phoenix TMS 404 fix
       { source: "/locations/phoenix-tms", destination: "/treatments/tms-therapy", permanent: true },
