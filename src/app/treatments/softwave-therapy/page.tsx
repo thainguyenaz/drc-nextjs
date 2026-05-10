@@ -7,7 +7,7 @@ import Navigation from "@/components/Navigation";
 import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { MedicalTherapySchema } from "@/lib/seo";
+import { MedicalTherapySchema, MedicalWebPageSchema } from "@/lib/seo";
 import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
 import Breadcrumb from "@/components/Breadcrumb";
 import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
@@ -66,6 +66,7 @@ export default function SoftWavePage() {
   return (
     <>
       <SchemaScript schema={[getFAQSchema(faqData["softwave-therapy"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/treatments/softwave-therapy"))]} />
+      <MedicalWebPageSchema url="/treatments/softwave-therapy" name="SoftWave Therapy Arizona | Desert Recovery Centers" dateModified="2026-04-28" reviewer="topete" specialty="Musculoskeletal" />
       <MedicalTherapySchema
         name="SoftWave Therapy"
         description="FDA-cleared tissue regeneration technology that reduces pain and inflammation without medication, supporting addiction recovery by breaking the pain-opioid cycle."

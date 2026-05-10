@@ -7,7 +7,7 @@ import Navigation from "@/components/Navigation";
 import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { MedicalTherapySchema } from "@/lib/seo";
+import { MedicalTherapySchema, MedicalWebPageSchema } from "@/lib/seo";
 import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
 import { faqData } from "@/data/faq-data";
 import SchemaScript from "@/components/SchemaScript";
@@ -65,6 +65,7 @@ export default function DualDiagnosisPage() {
   return (
     <>
       <SchemaScript schema={[getFAQSchema(faqData["dual-diagnosis-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/treatments/dual-diagnosis-treatment"))]} />
+      <MedicalWebPageSchema url="/treatments/dual-diagnosis-treatment" name="Dual Diagnosis Treatment Center Arizona | Desert Recovery Centers" dateModified="2026-04-08" />
       <MedicalTherapySchema
         name="Dual Diagnosis Treatment"
         description="Integrated treatment for co-occurring mental health conditions and substance use disorders, addressing both simultaneously for lasting recovery."
