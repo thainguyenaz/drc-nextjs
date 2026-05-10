@@ -4,7 +4,7 @@ import PageHero from "@/components/PageHero";
 import ConditionFAQ from "@/components/ConditionFAQ";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { buildMetadata, BreadcrumbSchema } from "@/lib/seo";
+import { buildMetadata, BreadcrumbSchema, MedicalWebPageSchema } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
   title: "How to Safely Taper Off Antidepressants | Antidepressant Detox",
@@ -51,6 +51,7 @@ const faqs = [
 export default function AntidepressantTaperPage() {
   return (
     <>
+      <MedicalWebPageSchema url="/resources/addiction-detox-guide/antidepressants" name="How to Safely Taper Off Antidepressants | Antidepressant Detox" dateModified="2026-05-03" />
       <BreadcrumbSchema
         items={[
           { name: "Resources", path: "/resources" },

@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { BreadcrumbSchema, InlineFAQSchema } from "@/lib/seo";
+import { BreadcrumbSchema, DRC_REVIEWERS, InlineFAQSchema } from "@/lib/seo";
 import LuxuryVsTraditionalContent from "./LuxuryVsTraditionalContent";
 
 const CANONICAL = "https://desertrecoverycenters.com/resources/luxury-vs-traditional-rehab";
@@ -64,6 +64,7 @@ const medicalWebPageJson = JSON.stringify({
     description:
       "Luxury addiction treatment delivers individualized behavioral health care in a private, low-census environment with doctoral-level clinical oversight.",
   },
+  reviewedBy: DRC_REVIEWERS.nguyen,
 });
 
 export default function LuxuryVsTraditionalRehabPage() {

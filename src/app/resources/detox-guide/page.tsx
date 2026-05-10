@@ -4,7 +4,7 @@ import PageHero from "@/components/PageHero";
 import ConditionFAQ from "@/components/ConditionFAQ";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { buildMetadata, BreadcrumbSchema } from "@/lib/seo";
+import { buildMetadata, BreadcrumbSchema, MedicalWebPageSchema } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
   title: "Medical Detox Guide: What to Expect at Our Partner Facilities",
@@ -43,6 +43,7 @@ const faqs = [
 export default function DetoxGuidePage() {
   return (
     <>
+      <MedicalWebPageSchema url="/resources/detox-guide" name="Medical Detox Guide: What to Expect at Our Partner Facilities" dateModified="2026-05-05" />
       <BreadcrumbSchema
         items={[
           { name: "Resources", path: "/resources" },
