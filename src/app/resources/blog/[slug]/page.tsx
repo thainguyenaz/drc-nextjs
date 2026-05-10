@@ -6,6 +6,7 @@ import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import Breadcrumb from "@/components/Breadcrumb";
 import SchemaScript from "@/components/SchemaScript";
+import { DRC_REVIEWERS } from "@/lib/seo";
 import { getPostBySlug, getAllSlugs, getPostsByCategory } from "@/lib/blog";
 import BlogPostBody from "./BlogPostBody";
 
@@ -89,11 +90,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     },
     publisher: { "@id": `${SITE_URL}/#organization` },
     medicalAudience: { "@type": "MedicalAudience", audienceType: "Patient" },
-    reviewedBy: {
-      "@type": "Person",
-      name: "Dr. An Nguyen",
-      jobTitle: "Licensed Clinical Psychologist, Clinical Director",
-    },
+    reviewedBy: DRC_REVIEWERS.nguyen,
   };
 
   const breadcrumbSchema = {
