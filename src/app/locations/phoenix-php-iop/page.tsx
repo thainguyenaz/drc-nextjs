@@ -123,7 +123,7 @@ const clinicSchema = {
   },
   priceRange: "$$$$",
   paymentAccepted: "Out-of-network commercial insurance, In-network TriCare/TriWest, Private Pay",
-  medicalSpecialty: ["Psychiatry", "Addiction Medicine"],
+  medicalSpecialty: ["Psychiatric"],
   availableService: [
     {
       "@type": "MedicalTherapy",

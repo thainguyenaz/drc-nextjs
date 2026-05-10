@@ -49,7 +49,8 @@ export default function AdolescentBipolarPage() {
         name={PAGE_TITLE}
         dateModified="2026-05-08"
         reviewer="nguyen"
-        specialty="Adolescent Psychiatry"
+        specialty="Psychiatric"
+        audience={{ minAge: 13, maxAge: 17 }}
       />
       <Navigation />
       <Breadcrumb items={[{ name: "Home", url: SITE_URL }, { name: "Adolescent Treatment", url: `${SITE_URL}/adolescent-treatment` }, { name: "Bipolar Disorder", url: `${SITE_URL}${PAGE_PATH}` }]} />

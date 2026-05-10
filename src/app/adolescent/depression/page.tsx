@@ -117,7 +117,8 @@ export default function AdolescentDepressionPage() {
         name={PAGE_TITLE}
         dateModified="2026-05-08"
         reviewer="nguyen"
-        specialty="Adolescent Psychiatry"
+        specialty="Psychiatric"
+        audience={{ minAge: 13, maxAge: 17 }}
       />
       <Navigation />
       <Breadcrumb

@@ -63,7 +63,8 @@ export default function AdolescentPtsdTraumaPage() {
         name={PAGE_TITLE}
         dateModified="2026-04-29"
         reviewer="nguyen"
-        specialty="Adolescent Psychiatry"
+        specialty="Psychiatric"
+        audience={{ minAge: 13, maxAge: 17 }}
       />
       <Navigation />
       <Breadcrumb items={[{ name: "Home", url: SITE_URL }, { name: "Adolescent Treatment", url: `${SITE_URL}/adolescent-treatment` }, { name: "PTSD and Trauma", url: `${SITE_URL}${PAGE_PATH}` }]} />

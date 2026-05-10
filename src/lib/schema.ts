@@ -24,7 +24,7 @@ export function getMedicalOrganizationSchema() {
       { "@type": "EducationalOccupationalCredential", name: "Joint Commission Accreditation" },
       { "@type": "EducationalOccupationalCredential", name: "LegitScript Certification" },
     ],
-    medicalSpecialty: ["Addiction Medicine", "Psychiatry", "Mental Health"],
+    medicalSpecialty: ["Psychiatric", "Toxicologic"],
     areaServed: { "@type": "State", name: "Arizona" },
     address: [
       { "@type": "PostalAddress", streetAddress: "8105 W Frier Dr", addressLocality: "Glendale", addressRegion: "AZ", postalCode: "85303", addressCountry: "US" },

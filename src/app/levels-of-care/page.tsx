@@ -132,7 +132,6 @@ export default function LevelsOfCarePage() {
         name="Levels of Care: Addiction & Mental Health Treatment in Arizona | DRC"
         dateModified="2026-04-07"
         reviewer="carr"
-        specialty="Psychiatry"
         about={{
           "@type": "MedicalTherapy",
           name: "Addiction Treatment Continuum of Care",

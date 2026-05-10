@@ -165,8 +165,9 @@ export function MedicalWebPageSchema({
   name,
   dateModified,
   reviewer = "nguyen",
-  specialty = "Psychiatry",
+  specialty = "Psychiatric",
   about,
+  audience,
 }: {
   url: string;
   name: string;
@@ -174,6 +175,7 @@ export function MedicalWebPageSchema({
   reviewer?: Reviewer;
   specialty?: string;
   about?: Record<string, unknown>;
+  audience?: { minAge?: number; maxAge?: number; audienceType?: string };
 }) {
   const fullUrl = `${SITE_URL}${url}`;
   return ld({
@@ -183,6 +185,14 @@ export function MedicalWebPageSchema({
     url: fullUrl,
     name,
     specialty,
+    ...(audience ? {
+      audience: {
+        "@type": "PeopleAudience",
+        ...(audience.minAge !== undefined ? { suggestedMinAge: audience.minAge } : {}),
+        ...(audience.maxAge !== undefined ? { suggestedMaxAge: audience.maxAge } : {}),
+        ...(audience.audienceType ? { audienceType: audience.audienceType } : {}),
+      },
+    } : {}),
     ...(about ? { about } : {}),
     ...(reviewer !== "none" ? { reviewedBy: DRC_REVIEWERS[reviewer] } : {}),
     dateModified,

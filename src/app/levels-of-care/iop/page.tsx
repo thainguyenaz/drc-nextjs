@@ -82,7 +82,6 @@ export default function IOPPage() {
         name="Intensive Outpatient Program (IOP) in Arizona | Desert Recovery Centers"
         dateModified="2026-04-07"
         reviewer="carr"
-        specialty="Psychiatry"
         about={{
           "@type": "MedicalTherapy",
           name: "Intensive Outpatient Program",

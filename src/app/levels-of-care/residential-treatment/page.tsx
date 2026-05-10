@@ -85,7 +85,6 @@ export default function ResidentialTreatmentPage() {
         name="Residential Addiction Treatment in Arizona | Desert Recovery Centers"
         dateModified="2026-04-07"
         reviewer="carr"
-        specialty="Psychiatry"
         about={{
           "@type": "MedicalTherapy",
           name: "Residential Addiction Treatment",

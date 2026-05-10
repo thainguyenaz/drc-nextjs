@@ -82,7 +82,6 @@ export default function PHPPage() {
         name="Partial Hospitalization Program (PHP) in Arizona | Desert Recovery Centers"
         dateModified="2026-04-07"
         reviewer="carr"
-        specialty="Psychiatry"
         about={{
           "@type": "MedicalTherapy",
           name: "Partial Hospitalization Program",

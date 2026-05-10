@@ -81,7 +81,8 @@ export default function AdolescentAnxietyPage() {
         name={PAGE_TITLE}
         dateModified="2026-04-29"
         reviewer="nguyen"
-        specialty="Adolescent Psychiatry"
+        specialty="Psychiatric"
+        audience={{ minAge: 13, maxAge: 17 }}
       />
       <Navigation />
       <Breadcrumb
