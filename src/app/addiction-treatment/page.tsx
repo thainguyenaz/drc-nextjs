@@ -4,7 +4,7 @@ import PageHero from "@/components/PageHero";
 import AddictionPrograms from "@/components/AddictionPrograms";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { VideoSchemas, SpeakableSchema } from "@/lib/seo";
+import { VideoSchemas, SpeakableSchema, MedicalWebPageSchema } from "@/lib/seo";
 import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
 import { faqData } from "@/data/faq-data";
 import SchemaScript from "@/components/SchemaScript";
@@ -34,6 +34,7 @@ export default function AddictionTreatmentPage() {
   return (
     <>
       <SchemaScript schema={[getFAQSchema(faqData["addiction-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/addiction-treatment"))]} />
+      <MedicalWebPageSchema url="/addiction-treatment" name="Residential Addiction Treatment Centers in Arizona | Desert Recovery Centers" dateModified="2026-05-04" reviewer="carr" />
       <SpeakableSchema url="/addiction-treatment" cssSelectors={["h1", "[data-speakable]"]} />
       <VideoSchemas path="/addiction-treatment/" />
       <Navigation />

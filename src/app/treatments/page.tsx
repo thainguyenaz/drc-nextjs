@@ -3,7 +3,7 @@ import Navigation from "@/components/Navigation";
 import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { VideoSchemas } from "@/lib/seo";
+import { VideoSchemas, MedicalWebPageSchema } from "@/lib/seo";
 import YouTubeEmbed from "@/components/YouTubeEmbed";
 import { getPageMeta } from "@/data/page-metadata";
 import AnimatedSection from "@/components/animated/AnimatedSection";
@@ -77,6 +77,7 @@ export default function TreatmentsPage() {
   return (
     <>
       <SchemaScript schema={[getFAQSchema(faqData["treatments"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/treatments"))]} />
+      <MedicalWebPageSchema url="/treatments" name="Evidence-Based Addiction & Mental Health Treatment Services | DRC" dateModified="2026-04-29" reviewer="carr" />
       <VideoSchemas path="/treatments/" />
       <Navigation />
       <Breadcrumb items={getBreadcrumbsFromPathname("/treatments")} />
