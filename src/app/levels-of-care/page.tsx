@@ -128,7 +128,7 @@ export default function LevelsOfCarePage() {
         ]}
       />
       <MedicalWebPageSchema
-        url="/levels-of-care/"
+        url="/levels-of-care"
         name="Levels of Care: Addiction & Mental Health Treatment in Arizona | DRC"
         dateModified="2026-04-07"
         reviewer="carr"

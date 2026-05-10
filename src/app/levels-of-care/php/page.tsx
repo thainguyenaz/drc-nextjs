@@ -78,7 +78,7 @@ export default function PHPPage() {
         ]}
       />
       <MedicalWebPageSchema
-        url="/levels-of-care/php/"
+        url="/levels-of-care/php"
         name="Partial Hospitalization Program (PHP) in Arizona | Desert Recovery Centers"
         dateModified="2026-04-07"
         reviewer="carr"
