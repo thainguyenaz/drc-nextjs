@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import AEOBlock from "@/components/AEOBlock";
 import RelatedPages from "@/components/RelatedPages";
 import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
+import { MedicalWebPageSchema } from "@/lib/seo";
 import SchemaScript from "@/components/SchemaScript";
 import Breadcrumb from "@/components/Breadcrumb";
 import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
@@ -74,39 +75,20 @@ export default function PHPPage() {
           getBreadcrumbSchema(
             getBreadcrumbsFromPathname("/levels-of-care/php")
           ),
-          {
-            "@context": "https://schema.org",
-            "@type": "MedicalWebPage",
-            "@id":
-              "https://desertrecoverycenters.com/levels-of-care/php/#webpage",
-            url: "https://desertrecoverycenters.com/levels-of-care/php/",
-            name: "Partial Hospitalization Program (PHP) in Arizona | Desert Recovery Centers",
-            specialty: "Addiction Medicine",
-            about: {
-              "@type": "MedicalTherapy",
-              name: "Partial Hospitalization Program",
-              description:
-                "Intensive day treatment program for addiction and mental health providing 5-6 hours of daily clinical programming while clients return home each evening.",
-            },
-            reviewedBy: {
-              "@type": "Person",
-              "@id":
-                "https://desertrecoverycenters.com/our-team#dr-an-nguyen",
-              name: "Dr. An Nguyen",
-              jobTitle:
-                "Licensed Clinical Psychologist, Clinical Director",
-              worksFor: {
-                "@id":
-                  "https://desertrecoverycenters.com/#organization",
-              },
-            },
-            dateModified: "2026-04-07",
-            publisher: {
-              "@id":
-                "https://desertrecoverycenters.com/#organization",
-            },
-          },
         ]}
+      />
+      <MedicalWebPageSchema
+        url="/levels-of-care/php/"
+        name="Partial Hospitalization Program (PHP) in Arizona | Desert Recovery Centers"
+        dateModified="2026-04-07"
+        reviewer="carr"
+        specialty="Psychiatry"
+        about={{
+          "@type": "MedicalTherapy",
+          name: "Partial Hospitalization Program",
+          description:
+            "Intensive day treatment program for addiction and mental health providing 5-6 hours of daily clinical programming while clients return home each evening.",
+        }}
       />
       <Navigation />
       <Breadcrumb

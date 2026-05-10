@@ -166,12 +166,14 @@ export function MedicalWebPageSchema({
   dateModified,
   reviewer = "nguyen",
   specialty = "Psychiatry",
+  about,
 }: {
   url: string;
   name: string;
   dateModified: string;
   reviewer?: Reviewer;
   specialty?: string;
+  about?: Record<string, unknown>;
 }) {
   const fullUrl = `${SITE_URL}${url}`;
   return ld({
@@ -181,6 +183,7 @@ export function MedicalWebPageSchema({
     url: fullUrl,
     name,
     specialty,
+    ...(about ? { about } : {}),
     ...(reviewer !== "none" ? { reviewedBy: DRC_REVIEWERS[reviewer] } : {}),
     dateModified,
     publisher: { "@id": `${SITE_URL}/#organization` },
