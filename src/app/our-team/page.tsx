@@ -50,6 +50,12 @@ export default function OurTeamPage() {
         description="Psychiatric Nurse Practitioner at Desert Recovery Centers, conducting psychiatric evaluations and providing medication management for clients across all locations."
       />
       <PersonSchema
+        name="Dr. Reyes Topete, MD, FASAM"
+        jobTitle="Attending Physician"
+        image="/images/team/Dr._Reyes_Topete-cropped.jpg"
+        description="Attending Physician at Desert Recovery Centers, conducting admission physical examinations and general medical care for patients across all programs."
+      />
+      <PersonSchema
         name="Dr. Jonathan Shelton"
         jobTitle="Licensed Clinical Psychologist"
         image="/images/team/Jonathan-Shelton.jpg"
