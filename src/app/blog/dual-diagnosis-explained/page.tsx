@@ -33,6 +33,7 @@ export default function DualDiagnosisExplainedPage() {
     dateModified: DATE_MODIFIED,
     image: "https://desertrecoverycenters.com/images/scottsdale/DRC-DRONE-SCOTTSDALE-08-01-2024-August-01-202400006-2.jpg",
     description: POST_DESCRIPTION,
+    reviewer: "nguyen",
   });
 
   const breadcrumbItems = [
