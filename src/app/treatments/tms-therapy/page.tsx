@@ -6,7 +6,7 @@ import Image from "next/image";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import AnimatedCounter from "@/components/AnimatedCounter";
-import { InlineFAQSchema, VideoSchemas } from "@/lib/seo";
+import { InlineFAQSchema, MedicalWebPageSchema, VideoSchemas } from "@/lib/seo";
 import SchemaScript from "@/components/SchemaScript";
 import TMSVideoSection from "./TMSVideoSection";
 
@@ -210,6 +210,7 @@ export default function TMSTherapyPage() {
     <>
       <InlineFAQSchema items={faqs} />
       <VideoSchemas path="/treatments/tms-therapy/" />
+      <MedicalWebPageSchema url="/treatments/tms-therapy" name="NeuroStar TMS Therapy" dateModified="2026-05-07" />
       <SchemaScript schema={[
         {
           "@context": "https://schema.org",
