@@ -7,7 +7,7 @@ import Navigation from "@/components/Navigation";
 import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { MedicalTherapySchema } from "@/lib/seo";
+import { MedicalTherapySchema, MedicalWebPageSchema } from "@/lib/seo";
 import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
 import { faqData } from "@/data/faq-data";
 import SchemaScript from "@/components/SchemaScript";
@@ -69,6 +69,7 @@ export default function TraumaTherapyPage() {
   return (
     <>
       <SchemaScript schema={[getFAQSchema(faqData["trauma-therapy"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/treatments/trauma-therapy"))]} />
+      <MedicalWebPageSchema url="/treatments/trauma-therapy" name="Trauma Therapy Center in Arizona | Desert Recovery Centers" dateModified="2026-04-08" />
       <MedicalTherapySchema
         name="Trauma Therapy"
         description="Comprehensive multi-modal trauma treatment combining EMDR, somatic experiencing, and trauma-focused CBT to help clients heal from disturbing life experiences."

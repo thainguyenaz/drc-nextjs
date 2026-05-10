@@ -7,7 +7,7 @@ import Navigation from "@/components/Navigation";
 import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { MedicalTherapySchema } from "@/lib/seo";
+import { MedicalTherapySchema, MedicalWebPageSchema } from "@/lib/seo";
 import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
 import { faqData } from "@/data/faq-data";
 import SchemaScript from "@/components/SchemaScript";
@@ -58,6 +58,7 @@ export default function DBTPage() {
   return (
     <>
       <SchemaScript schema={[getFAQSchema(faqData["dbt-therapy"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/treatments/dbt-dialectical-behavior-therapy"))]} />
+      <MedicalWebPageSchema url="/treatments/dbt-dialectical-behavior-therapy" name="Dialectical Behavior Therapy (DBT) in Arizona | Desert Recovery Centers" dateModified="2026-04-08" />
       <MedicalTherapySchema
         name="Dialectical Behavior Therapy (DBT)"
         description="Skills-based psychotherapy that balances acceptance and change, helping clients navigate intense emotions without self-destruction."

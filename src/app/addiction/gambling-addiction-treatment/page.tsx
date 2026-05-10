@@ -4,7 +4,7 @@ import PageHero from "@/components/PageHero";
 import AddictionPrograms from "@/components/AddictionPrograms";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { MedicalConditionSchema, VideoSchemas } from "@/lib/seo";
+import { MedicalConditionSchema, MedicalWebPageSchema, VideoSchemas } from "@/lib/seo";
 import AEOBlock from "@/components/AEOBlock";
 import RelatedPages from "@/components/RelatedPages";
 import ConditionFAQ from "@/components/ConditionFAQ";
@@ -59,6 +59,7 @@ export default function GamblingAddictionPage() {
     <>
       <SchemaScript schema={[getFAQSchema(faqData["gambling-addiction-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/addiction/gambling-addiction-treatment"))]} />
       <VideoSchemas path="/addiction/gambling-addiction-treatment/" />
+      <MedicalWebPageSchema url="/addiction/gambling-addiction-treatment" name="Gambling Addiction Treatment Arizona | Desert Recovery Centers" dateModified="2026-05-07" />
       <MedicalConditionSchema
         name="Gambling Addiction"
         description="Gambling disorder is a behavioral addiction classified in the DSM-5. Like substance addictions, compulsive gambling hijacks the brain's reward system, with the anticipation of winning triggering dopamine surges that mirror the effects of drugs."

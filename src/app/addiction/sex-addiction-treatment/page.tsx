@@ -4,7 +4,7 @@ import PageHero from "@/components/PageHero";
 import AddictionPrograms from "@/components/AddictionPrograms";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { MedicalConditionSchema } from "@/lib/seo";
+import { MedicalConditionSchema, MedicalWebPageSchema } from "@/lib/seo";
 import AEOBlock from "@/components/AEOBlock";
 import RelatedPages from "@/components/RelatedPages";
 import ConditionFAQ from "@/components/ConditionFAQ";
@@ -58,6 +58,7 @@ export default function SexAddictionPage() {
   return (
     <>
       <SchemaScript schema={[getFAQSchema(faqData["sex-addiction-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/addiction/sex-addiction-treatment"))]} />
+      <MedicalWebPageSchema url="/addiction/sex-addiction-treatment" name="Sex Addiction Treatment Arizona | Desert Recovery Centers" dateModified="2026-05-02" />
       <MedicalConditionSchema
         name="Compulsive Sexual Behavior Disorder"
         description="Compulsive sexual behavior disorder is recognized by the WHO as an impulse control disorder. It involves a cycle of escalating behavior driven by the brain's reward system, with temporary relief followed by guilt, shame, and intensified urges."

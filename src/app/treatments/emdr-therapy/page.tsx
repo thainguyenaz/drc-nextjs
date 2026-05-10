@@ -7,7 +7,7 @@ import Navigation from "@/components/Navigation";
 import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { MedicalTherapySchema } from "@/lib/seo";
+import { MedicalTherapySchema, MedicalWebPageSchema } from "@/lib/seo";
 import ConditionFAQ from "@/components/ConditionFAQ";
 import SchemaScript from "@/components/SchemaScript";
 import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
@@ -49,6 +49,7 @@ export default function EMDRPage() {
   return (
     <>
       <SchemaScript schema={[getFAQSchema(faqData["emdr"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/treatments/emdr-therapy"))]} />
+      <MedicalWebPageSchema url="/treatments/emdr-therapy" name="EMDR Therapy for Trauma & PTSD in Arizona | Desert Recovery Centers" dateModified="2026-04-08" />
       <MedicalTherapySchema
         name="EMDR Therapy"
         description="Eye Movement Desensitization and Reprocessing therapy that unlocks the brain's natural ability to heal from trauma and disturbing life experiences."
