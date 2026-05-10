@@ -7,6 +7,60 @@ const SITE_URL = "https://desertrecoverycenters.com";
 const SITE_NAME = "Desert Recovery Centers";
 const DEFAULT_OG_IMAGE = `${SITE_URL}/logo.png`;
 
+// ─── A12: Clinical reviewer roster (4-person YMYL reviewer set) ────
+
+type Reviewer = "carr" | "nguyen" | "dy" | "topete" | "none";
+
+const DRC_REVIEWERS: Record<Exclude<Reviewer, "none">, Record<string, unknown>> = {
+  carr: {
+    "@type": "Person",
+    "@id": `${SITE_URL}/our-team#dr-greg-carr-md`,
+    name: "Dr. Greg Carr, MD",
+    jobTitle: "Medical Director",
+    hasCredential: {
+      "@type": "EducationalOccupationalCredential",
+      credentialCategory: "MD",
+      educationalLevel: "Board Certified in Psychiatry",
+    },
+    worksFor: { "@id": `${SITE_URL}/#organization` },
+  },
+  nguyen: {
+    "@type": "Person",
+    "@id": `${SITE_URL}/our-team#dr-an-nguyen`,
+    name: "Dr. An Nguyen",
+    jobTitle: "Licensed Clinical Psychologist, Clinical Director",
+    hasCredential: {
+      "@type": "EducationalOccupationalCredential",
+      credentialCategory: "PsyD",
+    },
+    worksFor: { "@id": `${SITE_URL}/#organization` },
+  },
+  dy: {
+    "@type": "Person",
+    "@id": `${SITE_URL}/our-team#ian-dy`,
+    name: "Ian Dy",
+    jobTitle: "Psychiatric Nurse Practitioner",
+    hasCredential: {
+      "@type": "EducationalOccupationalCredential",
+      credentialCategory: "Master's Degree",
+      educationalLevel: "Psychiatric Mental Health Nurse Practitioner, Board Certified (PMHNP-BC)",
+    },
+    worksFor: { "@id": `${SITE_URL}/#organization` },
+  },
+  topete: {
+    "@type": "Person",
+    "@id": `${SITE_URL}/our-team#dr-reyes-topete-md`,
+    name: "Dr. Reyes Topete, MD, FASAM",
+    jobTitle: "Attending Physician",
+    hasCredential: {
+      "@type": "EducationalOccupationalCredential",
+      credentialCategory: "MD",
+      educationalLevel: "Board Certified in Addiction Medicine, FASAM",
+    },
+    worksFor: { "@id": `${SITE_URL}/#organization` },
+  },
+};
+
 // ─── Metadata helper ────────────────────────────────────────────────
 export function buildMetadata({
   title,
@@ -110,10 +164,14 @@ export function MedicalWebPageSchema({
   url,
   name,
   dateModified,
+  reviewer = "nguyen",
+  specialty = "Psychiatry",
 }: {
   url: string;
   name: string;
   dateModified: string;
+  reviewer?: Reviewer;
+  specialty?: string;
 }) {
   const fullUrl = `${SITE_URL}${url}`;
   return ld({
@@ -122,14 +180,8 @@ export function MedicalWebPageSchema({
     "@id": `${fullUrl}#webpage`,
     url: fullUrl,
     name,
-    specialty: "Psychiatry",
-    reviewedBy: {
-      "@type": "Person",
-      "@id": `${SITE_URL}/our-team#dr-an-nguyen`,
-      name: "Dr. An Nguyen",
-      jobTitle: "Licensed Clinical Psychologist, Clinical Director",
-      worksFor: { "@id": `${SITE_URL}/#organization` },
-    },
+    specialty,
+    ...(reviewer !== "none" ? { reviewedBy: DRC_REVIEWERS[reviewer] } : {}),
     dateModified,
     publisher: { "@id": `${SITE_URL}/#organization` },
   });
