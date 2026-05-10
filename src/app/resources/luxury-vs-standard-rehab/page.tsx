@@ -4,7 +4,7 @@ import PageHero from "@/components/PageHero";
 import ConditionFAQ from "@/components/ConditionFAQ";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { buildMetadata, BreadcrumbSchema } from "@/lib/seo";
+import { buildMetadata, BreadcrumbSchema, MedicalWebPageSchema } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
   title: "Luxury Rehab vs Standard Rehab: What the Difference Actually Means, Desert Recovery Centers",
@@ -39,6 +39,7 @@ const faqs = [
 export default function LuxuryVsStandardRehabPage() {
   return (
     <>
+      <MedicalWebPageSchema url="/resources/luxury-vs-standard-rehab" name="Luxury Rehab vs Standard Rehab: What the Difference Actually Means, Desert Recovery Centers" dateModified="2026-04-04" reviewer="none" />
       <BreadcrumbSchema
         items={[
           { name: "Resources", path: "/resources/luxury-vs-standard-rehab" },
@@ -52,15 +53,6 @@ export default function LuxuryVsStandardRehabPage() {
         description="Most people know luxury rehab costs more. Few understand what that money actually buys in terms of clinical quality and recovery experience."
         bgImage="/images/general/DRC-TREATMENTS.jpg"
       />
-
-      {/* Medical Review */}
-      <div className="bg-cream border-b border-gold/20">
-        <div className="max-w-container mx-auto px-6 py-3 text-center">
-          <p className="text-xs text-sage font-body tracking-wide">
-            Medically reviewed by Dr. An Nguyen, Licensed Clinical Psychologist, Clinical Director, Desert Recovery Centers
-          </p>
-        </div>
-      </div>
 
       {/* Opening */}
       <section className="py-16 md:py-24 bg-white">

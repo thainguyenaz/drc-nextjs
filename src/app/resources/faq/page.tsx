@@ -4,7 +4,7 @@ import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import FAQAccordion from "@/components/FAQAccordion";
-import { buildMetadata, BreadcrumbSchema } from "@/lib/seo";
+import { buildMetadata, BreadcrumbSchema, MedicalWebPageSchema } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
   title: "Rehab FAQ, Desert Recovery Centers",
@@ -169,6 +169,7 @@ const categories = [
 export default function FAQPage() {
   return (
     <>
+      <MedicalWebPageSchema url="/resources/faq" name="Rehab FAQ, Desert Recovery Centers" dateModified="2026-05-06" />
       <BreadcrumbSchema
         items={[
           { name: "Resources", path: "/resources" },

@@ -4,7 +4,7 @@ import PageHero from "@/components/PageHero";
 import ConditionFAQ from "@/components/ConditionFAQ";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { buildMetadata, BreadcrumbSchema } from "@/lib/seo";
+import { buildMetadata, BreadcrumbSchema, MedicalWebPageSchema } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
   title: "How Much Does Rehab Cost in Arizona?, Desert Recovery Centers",
@@ -39,6 +39,7 @@ const faqs = [
 export default function CostOfRehabPage() {
   return (
     <>
+      <MedicalWebPageSchema url="/resources/cost-of-rehab" name="How Much Does Rehab Cost in Arizona?, Desert Recovery Centers" dateModified="2026-04-04" reviewer="none" />
       <BreadcrumbSchema
         items={[
           { name: "Resources", path: "/resources/cost-of-rehab" },
@@ -52,15 +53,6 @@ export default function CostOfRehabPage() {
         description="Cost is the number one barrier to treatment. Here&apos;s an honest, transparent breakdown of what rehab actually costs, and how to pay for it."
         bgImage="/images/general/DRC-ADDICTION.jpg"
       />
-
-      {/* Medical Review */}
-      <div className="bg-cream border-b border-gold/20">
-        <div className="max-w-container mx-auto px-6 py-3 text-center">
-          <p className="text-xs text-sage font-body tracking-wide">
-            Medically reviewed by Dr. An Nguyen, Licensed Clinical Psychologist, Clinical Director, Desert Recovery Centers
-          </p>
-        </div>
-      </div>
 
       {/* Opening */}
       <section className="py-16 md:py-24 bg-white">
