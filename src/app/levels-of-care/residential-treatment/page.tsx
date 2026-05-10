@@ -3,6 +3,7 @@ import dynamic from "next/dynamic";
 import Navigation from "@/components/Navigation";
 import PageHero from "@/components/PageHero";
 import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
+import { MedicalWebPageSchema } from "@/lib/seo";
 import SchemaScript from "@/components/SchemaScript";
 import Breadcrumb from "@/components/Breadcrumb";
 import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
@@ -77,39 +78,20 @@ export default function ResidentialTreatmentPage() {
               "/levels-of-care/residential-treatment"
             )
           ),
-          {
-            "@context": "https://schema.org",
-            "@type": "MedicalWebPage",
-            "@id":
-              "https://desertrecoverycenters.com/levels-of-care/residential-treatment/#webpage",
-            url: "https://desertrecoverycenters.com/levels-of-care/residential-treatment/",
-            name: "Residential Addiction Treatment in Arizona | Desert Recovery Centers",
-            specialty: "Addiction Medicine",
-            about: {
-              "@type": "MedicalTherapy",
-              name: "Residential Addiction Treatment",
-              description:
-                "Full-time inpatient addiction and mental health treatment with 24/7 clinical support in a luxury residential setting.",
-            },
-            reviewedBy: {
-              "@type": "Person",
-              "@id":
-                "https://desertrecoverycenters.com/our-team#dr-an-nguyen",
-              name: "Dr. An Nguyen",
-              jobTitle:
-                "Licensed Clinical Psychologist, Clinical Director",
-              worksFor: {
-                "@id":
-                  "https://desertrecoverycenters.com/#organization",
-              },
-            },
-            dateModified: "2026-04-07",
-            publisher: {
-              "@id":
-                "https://desertrecoverycenters.com/#organization",
-            },
-          },
         ]}
+      />
+      <MedicalWebPageSchema
+        url="/levels-of-care/residential-treatment/"
+        name="Residential Addiction Treatment in Arizona | Desert Recovery Centers"
+        dateModified="2026-04-07"
+        reviewer="carr"
+        specialty="Psychiatry"
+        about={{
+          "@type": "MedicalTherapy",
+          name: "Residential Addiction Treatment",
+          description:
+            "Full-time inpatient addiction and mental health treatment with 24/7 clinical support in a luxury residential setting.",
+        }}
       />
       <Navigation />
       <Breadcrumb

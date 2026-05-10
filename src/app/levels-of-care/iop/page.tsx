@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import AEOBlock from "@/components/AEOBlock";
 import RelatedPages from "@/components/RelatedPages";
 import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
+import { MedicalWebPageSchema } from "@/lib/seo";
 import SchemaScript from "@/components/SchemaScript";
 import Breadcrumb from "@/components/Breadcrumb";
 import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
@@ -74,39 +75,20 @@ export default function IOPPage() {
           getBreadcrumbSchema(
             getBreadcrumbsFromPathname("/levels-of-care/iop")
           ),
-          {
-            "@context": "https://schema.org",
-            "@type": "MedicalWebPage",
-            "@id":
-              "https://desertrecoverycenters.com/levels-of-care/iop/#webpage",
-            url: "https://desertrecoverycenters.com/levels-of-care/iop/",
-            name: "Intensive Outpatient Program (IOP) in Arizona | Desert Recovery Centers",
-            specialty: "Addiction Medicine",
-            about: {
-              "@type": "MedicalTherapy",
-              name: "Intensive Outpatient Program",
-              description:
-                "Flexible outpatient addiction and mental health treatment providing 9-15 hours of weekly clinical programming while clients maintain daily responsibilities.",
-            },
-            reviewedBy: {
-              "@type": "Person",
-              "@id":
-                "https://desertrecoverycenters.com/our-team#dr-an-nguyen",
-              name: "Dr. An Nguyen",
-              jobTitle:
-                "Licensed Clinical Psychologist, Clinical Director",
-              worksFor: {
-                "@id":
-                  "https://desertrecoverycenters.com/#organization",
-              },
-            },
-            dateModified: "2026-04-07",
-            publisher: {
-              "@id":
-                "https://desertrecoverycenters.com/#organization",
-            },
-          },
         ]}
+      />
+      <MedicalWebPageSchema
+        url="/levels-of-care/iop/"
+        name="Intensive Outpatient Program (IOP) in Arizona | Desert Recovery Centers"
+        dateModified="2026-04-07"
+        reviewer="carr"
+        specialty="Psychiatry"
+        about={{
+          "@type": "MedicalTherapy",
+          name: "Intensive Outpatient Program",
+          description:
+            "Flexible outpatient addiction and mental health treatment providing 9-15 hours of weekly clinical programming while clients maintain daily responsibilities.",
+        }}
       />
       <Navigation />
       <Breadcrumb

@@ -6,6 +6,7 @@ import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import AEOBlock from "@/components/AEOBlock";
 import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
+import { MedicalWebPageSchema } from "@/lib/seo";
 import SchemaScript from "@/components/SchemaScript";
 import Breadcrumb from "@/components/Breadcrumb";
 import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
@@ -124,39 +125,20 @@ export default function LevelsOfCarePage() {
           getBreadcrumbSchema(
             getBreadcrumbsFromPathname("/levels-of-care")
           ),
-          {
-            "@context": "https://schema.org",
-            "@type": "MedicalWebPage",
-            "@id":
-              "https://desertrecoverycenters.com/levels-of-care/#webpage",
-            url: "https://desertrecoverycenters.com/levels-of-care/",
-            name: "Levels of Care: Addiction & Mental Health Treatment in Arizona | DRC",
-            specialty: "Addiction Medicine",
-            about: {
-              "@type": "MedicalTherapy",
-              name: "Addiction Treatment Continuum of Care",
-              description:
-                "A full range of addiction and mental health treatment levels including coordinated medical detox at partner facilities, residential treatment, partial hospitalization, intensive outpatient, outpatient therapy, and aftercare.",
-            },
-            reviewedBy: {
-              "@type": "Person",
-              "@id":
-                "https://desertrecoverycenters.com/our-team#dr-an-nguyen",
-              name: "Dr. An Nguyen",
-              jobTitle:
-                "Licensed Clinical Psychologist, Clinical Director",
-              worksFor: {
-                "@id":
-                  "https://desertrecoverycenters.com/#organization",
-              },
-            },
-            dateModified: "2026-04-07",
-            publisher: {
-              "@id":
-                "https://desertrecoverycenters.com/#organization",
-            },
-          },
         ]}
+      />
+      <MedicalWebPageSchema
+        url="/levels-of-care/"
+        name="Levels of Care: Addiction & Mental Health Treatment in Arizona | DRC"
+        dateModified="2026-04-07"
+        reviewer="carr"
+        specialty="Psychiatry"
+        about={{
+          "@type": "MedicalTherapy",
+          name: "Addiction Treatment Continuum of Care",
+          description:
+            "A full range of addiction and mental health treatment levels including coordinated medical detox at partner facilities, residential treatment, partial hospitalization, intensive outpatient, outpatient therapy, and aftercare.",
+        }}
       />
       <Navigation />
       <Breadcrumb
