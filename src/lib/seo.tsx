@@ -11,7 +11,7 @@ const DEFAULT_OG_IMAGE = `${SITE_URL}/logo.png`;
 
 type Reviewer = "carr" | "nguyen" | "dy" | "topete" | "none";
 
-const DRC_REVIEWERS: Record<Exclude<Reviewer, "none">, Record<string, unknown>> = {
+export const DRC_REVIEWERS: Record<Exclude<Reviewer, "none">, Record<string, unknown>> = {
   carr: {
     "@type": "Person",
     "@id": `${SITE_URL}/our-team#dr-greg-carr-md`,
