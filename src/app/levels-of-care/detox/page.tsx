@@ -75,7 +75,7 @@ export default function DetoxPage() {
         ]}
       />
       <MedicalWebPageSchema
-        url="/levels-of-care/detox/"
+        url="/levels-of-care/detox"
         name="Drug & Alcohol Detox in Arizona | Desert Recovery Centers"
         dateModified="2026-04-07"
         reviewer="topete"

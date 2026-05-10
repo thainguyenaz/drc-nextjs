@@ -78,7 +78,7 @@ export default function IOPPage() {
         ]}
       />
       <MedicalWebPageSchema
-        url="/levels-of-care/iop/"
+        url="/levels-of-care/iop"
         name="Intensive Outpatient Program (IOP) in Arizona | Desert Recovery Centers"
         dateModified="2026-04-07"
         reviewer="carr"

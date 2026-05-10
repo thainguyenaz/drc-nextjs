@@ -81,7 +81,7 @@ export default function ResidentialTreatmentPage() {
         ]}
       />
       <MedicalWebPageSchema
-        url="/levels-of-care/residential-treatment/"
+        url="/levels-of-care/residential-treatment"
         name="Residential Addiction Treatment in Arizona | Desert Recovery Centers"
         dateModified="2026-04-07"
         reviewer="carr"
