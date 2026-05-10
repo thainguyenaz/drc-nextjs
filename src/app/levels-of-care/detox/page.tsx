@@ -79,7 +79,7 @@ export default function DetoxPage() {
         name="Drug & Alcohol Detox in Arizona | Desert Recovery Centers"
         dateModified="2026-04-07"
         reviewer="topete"
-        specialty="Addiction Medicine"
+        specialty="Toxicologic"
       />
       <Navigation />
       <Breadcrumb

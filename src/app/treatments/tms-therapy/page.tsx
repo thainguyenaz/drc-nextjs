@@ -221,7 +221,7 @@ export default function TMSTherapyPage() {
           "url": "https://desertrecoverycenters.com/treatments/tms-therapy",
           "recognizingAuthority": { "@type": "Organization", "name": "U.S. Food and Drug Administration", "url": "https://www.fda.gov" },
           "legalStatus": "FDA Cleared",
-          "relevantSpecialty": "Psychiatry",
+          "relevantSpecialty": "Psychiatric",
           "study": [
             { "@type": "MedicalStudy", "name": "NeuroStar Outcomes Registry", "description": "83% of patients experienced measurable improvement, 62% achieved full remission in real-world outcomes study of over 8.2 million treatments." },
             { "@type": "MedicalStudy", "name": "NIMH-Funded Randomized Controlled Trial", "description": "Patients treated with NeuroStar were 4 times more likely to achieve remission compared to sham treatment." },
