@@ -7,6 +7,7 @@ import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import SchemaScript from "@/components/SchemaScript";
+import { MedicalWebPageSchema } from "@/lib/seo";
 import Breadcrumb from "@/components/Breadcrumb";
 import AnimatedSection from "@/components/animated/AnimatedSection";
 import Image from "next/image";
@@ -16,7 +17,6 @@ const PAGE_PATH = "/adolescent/adhd";
 const PAGE_TITLE = "Adolescent ADHD Treatment Arizona | Teen ADHD With Co-occurring Conditions | Desert Recovery Centers";
 
 const breadcrumbSchema = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: SITE_URL }, { "@type": "ListItem", position: 2, name: "Adolescent Treatment", item: `${SITE_URL}/adolescent-treatment` }, { "@type": "ListItem", position: 3, name: "ADHD" }] };
-const medicalWebPageSchema = { "@context": "https://schema.org", "@type": "MedicalWebPage", "@id": `${SITE_URL}${PAGE_PATH}/#webpage`, url: `${SITE_URL}${PAGE_PATH}`, name: PAGE_TITLE, specialty: "Adolescent Psychiatry", reviewedBy: { "@type": "Person", name: "Dr. An Nguyen", jobTitle: "Licensed Clinical Psychologist, Clinical Director", worksFor: { "@id": `${SITE_URL}/#organization` } }, publisher: { "@id": `${SITE_URL}/#organization` } };
 const faqSchema = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: [
   { "@type": "Question", name: "My teenager was diagnosed with ADHD years ago and is on medication. Why are they still struggling?", acceptedAnswer: { "@type": "Answer", text: "Medication addresses the core symptoms of ADHD but does not treat depression, anxiety, trauma, or the emotional consequences of years of struggle. If your teenager is still significantly impaired on medication, a comprehensive reassessment is warranted to identify what else is present and what level of care is appropriate." } },
   { "@type": "Question", name: "Can ADHD cause emotional outbursts?", acceptedAnswer: { "@type": "Answer", text: "Yes. Emotional dysregulation is a well-documented feature of ADHD. Teenagers with ADHD often experience emotions more intensely and have less capacity to regulate them. This is neurological, not behavioral. It responds to treatment that targets emotional regulation specifically, such as DBT skills training." } },
@@ -43,7 +43,14 @@ const speakableSchema = {
 export default function AdolescentAdhdPage() {
   return (
     <>
-      <SchemaScript schema={[breadcrumbSchema, medicalWebPageSchema, faqSchema, speakableSchema]} />
+      <SchemaScript schema={[breadcrumbSchema, faqSchema, speakableSchema]} />
+      <MedicalWebPageSchema
+        url={PAGE_PATH}
+        name={PAGE_TITLE}
+        dateModified="2026-05-08"
+        reviewer="nguyen"
+        specialty="Adolescent Psychiatry"
+      />
       <Navigation />
       <Breadcrumb items={[{ name: "Home", url: SITE_URL }, { name: "Adolescent Treatment", url: `${SITE_URL}/adolescent-treatment` }, { name: "ADHD", url: `${SITE_URL}${PAGE_PATH}` }]} />
       <PageHero eyebrow="Adolescent Treatment" title="Adolescent ADHD Treatment in Arizona" description="ADHD in adolescence is frequently misunderstood as a focus problem. It is more accurate to describe it as a regulation problem that rarely travels alone." bgImage="/images/locations/phoenix/phoenix-lobby-2.jpg" />

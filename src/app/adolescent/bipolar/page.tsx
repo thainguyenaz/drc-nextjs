@@ -7,6 +7,7 @@ import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import SchemaScript from "@/components/SchemaScript";
+import { MedicalWebPageSchema } from "@/lib/seo";
 import Breadcrumb from "@/components/Breadcrumb";
 import AnimatedSection from "@/components/animated/AnimatedSection";
 import Image from "next/image";
@@ -16,7 +17,6 @@ const PAGE_PATH = "/adolescent/bipolar";
 const PAGE_TITLE = "Adolescent Bipolar Disorder Treatment Arizona | Teen Bipolar | Desert Recovery Centers";
 
 const breadcrumbSchema = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: SITE_URL }, { "@type": "ListItem", position: 2, name: "Adolescent Treatment", item: `${SITE_URL}/adolescent-treatment` }, { "@type": "ListItem", position: 3, name: "Bipolar Disorder" }] };
-const medicalWebPageSchema = { "@context": "https://schema.org", "@type": "MedicalWebPage", "@id": `${SITE_URL}${PAGE_PATH}/#webpage`, url: `${SITE_URL}${PAGE_PATH}`, name: PAGE_TITLE, specialty: "Adolescent Psychiatry", reviewedBy: { "@type": "Person", name: "Dr. An Nguyen", jobTitle: "Licensed Clinical Psychologist, Clinical Director", worksFor: { "@id": `${SITE_URL}/#organization` } }, publisher: { "@id": `${SITE_URL}/#organization` } };
 const faqSchema = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: [
   { "@type": "Question", name: "How is bipolar disorder different from normal teenage mood swings?", acceptedAnswer: { "@type": "Answer", text: "Normal adolescent mood variability is responsive to events, shorter in duration, and does not produce the level of impairment associated with bipolar episodes. Bipolar mood episodes are more prolonged, more severe, less clearly tied to external triggers, and associated with marked changes in sleep, energy, thinking, and behavior that are distinct from the adolescent's baseline functioning." } },
   { "@type": "Question", name: "Can teenagers be diagnosed with bipolar disorder?", acceptedAnswer: { "@type": "Answer", text: "Yes. Bipolar disorder can and does present in adolescence. Early-onset bipolar disorder is associated with more complex presentations and greater diagnostic difficulty, which is why it is so frequently missed. An accurate diagnosis requires a thorough longitudinal history, not just a snapshot of current symptoms." } },
@@ -43,7 +43,14 @@ const speakableSchema = {
 export default function AdolescentBipolarPage() {
   return (
     <>
-      <SchemaScript schema={[breadcrumbSchema, medicalWebPageSchema, faqSchema, speakableSchema]} />
+      <SchemaScript schema={[breadcrumbSchema, faqSchema, speakableSchema]} />
+      <MedicalWebPageSchema
+        url={PAGE_PATH}
+        name={PAGE_TITLE}
+        dateModified="2026-05-08"
+        reviewer="nguyen"
+        specialty="Adolescent Psychiatry"
+      />
       <Navigation />
       <Breadcrumb items={[{ name: "Home", url: SITE_URL }, { name: "Adolescent Treatment", url: `${SITE_URL}/adolescent-treatment` }, { name: "Bipolar Disorder", url: `${SITE_URL}${PAGE_PATH}` }]} />
       <PageHero eyebrow="Adolescent Treatment" title="Adolescent Bipolar Disorder Treatment in Arizona" description="Bipolar disorder in adolescents is one of the most misdiagnosed conditions in teenage mental health. The average time from first symptoms to accurate diagnosis is ten years." bgImage="/images/locations/phoenix/phoenix-lobby-2.jpg" />

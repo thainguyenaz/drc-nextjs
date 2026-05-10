@@ -7,6 +7,7 @@ import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import SchemaScript from "@/components/SchemaScript";
+import { MedicalWebPageSchema } from "@/lib/seo";
 import Breadcrumb from "@/components/Breadcrumb";
 import AnimatedSection from "@/components/animated/AnimatedSection";
 import Image from "next/image";
@@ -24,22 +25,6 @@ const breadcrumbSchema = {
     { "@type": "ListItem", position: 2, name: "Adolescent Treatment", item: `${SITE_URL}/adolescent-treatment` },
     { "@type": "ListItem", position: 3, name: "Anxiety Disorders" },
   ],
-};
-
-const medicalWebPageSchema = {
-  "@context": "https://schema.org",
-  "@type": "MedicalWebPage",
-  "@id": `${SITE_URL}${PAGE_PATH}/#webpage`,
-  url: `${SITE_URL}${PAGE_PATH}`,
-  name: PAGE_TITLE,
-  specialty: "Adolescent Psychiatry",
-  reviewedBy: {
-    "@type": "Person",
-    name: "Dr. An Nguyen",
-    jobTitle: "Licensed Clinical Psychologist, Clinical Director",
-    worksFor: { "@id": `${SITE_URL}/#organization` },
-  },
-  publisher: { "@id": `${SITE_URL}/#organization` },
 };
 
 const faqSchema = {
@@ -90,7 +75,14 @@ const speakableSchema = {
 export default function AdolescentAnxietyPage() {
   return (
     <>
-      <SchemaScript schema={[breadcrumbSchema, medicalWebPageSchema, faqSchema, speakableSchema]} />
+      <SchemaScript schema={[breadcrumbSchema, faqSchema, speakableSchema]} />
+      <MedicalWebPageSchema
+        url={PAGE_PATH}
+        name={PAGE_TITLE}
+        dateModified="2026-04-29"
+        reviewer="nguyen"
+        specialty="Adolescent Psychiatry"
+      />
       <Navigation />
       <Breadcrumb
         items={[
