@@ -65,7 +65,12 @@ export default function RootLayout({
           {`window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
+          gtag('set', 'linker', {"domains":["desertrecoverycenters.com"]});
+          gtag('set', 'developer_id.dZTNiMT', true);
           gtag('config', 'G-0MSPF0DPVK');`}
+        </Script>
+        <Script id="gt-init" strategy="afterInteractive">
+          {`gtag('config', 'GT-K825VTDM');`}
         </Script>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-16468277860"
@@ -78,6 +83,13 @@ export default function RootLayout({
           src="//517993.tctm.co/t.js"
           strategy="afterInteractive"
           async
+        />
+        <Script
+          id="hs-script-loader"
+          src="//js-na2.hs-scripts.com/48050688.js"
+          strategy="afterInteractive"
+          async
+          defer
         />
       </head>
       <body className="font-body antialiased bg-white">
