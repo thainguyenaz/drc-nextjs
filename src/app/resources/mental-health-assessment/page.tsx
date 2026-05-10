@@ -4,7 +4,7 @@ import PageHero from "@/components/PageHero";
 import SelfAssessmentTool from "@/components/SelfAssessmentTool";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { buildMetadata, BreadcrumbSchema } from "@/lib/seo";
+import { buildMetadata, BreadcrumbSchema, MedicalWebPageSchema } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
   title: "Free Mental Health Assessment, DRC",
@@ -16,6 +16,7 @@ export const metadata: Metadata = buildMetadata({
 export default function MentalHealthAssessmentPage() {
   return (
     <>
+      <MedicalWebPageSchema url="/resources/mental-health-assessment" name="Free Mental Health Assessment, DRC" dateModified="2026-04-08" />
       <BreadcrumbSchema
         items={[
           { name: "Resources", path: "/resources" },

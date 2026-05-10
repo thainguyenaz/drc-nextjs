@@ -4,7 +4,7 @@ import PageHero from "@/components/PageHero";
 import ConditionFAQ from "@/components/ConditionFAQ";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { buildMetadata, BreadcrumbSchema } from "@/lib/seo";
+import { buildMetadata, BreadcrumbSchema, MedicalWebPageSchema } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
   title: "How to Stage an Intervention, DRC",
@@ -43,6 +43,7 @@ const faqs = [
 export default function InterventionGuidePage() {
   return (
     <>
+      <MedicalWebPageSchema url="/resources/intervention-guide" name="How to Stage an Intervention, DRC" dateModified="2026-04-28" />
       <BreadcrumbSchema
         items={[
           { name: "Resources", path: "/resources" },
