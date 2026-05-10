@@ -7,6 +7,7 @@ import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import SchemaScript from "@/components/SchemaScript";
+import { MedicalWebPageSchema } from "@/lib/seo";
 import Breadcrumb from "@/components/Breadcrumb";
 import AnimatedSection from "@/components/animated/AnimatedSection";
 import Image from "next/image";
@@ -16,7 +17,6 @@ const PAGE_PATH = "/adolescent/substance-use";
 const PAGE_TITLE = "Adolescent Substance Use Treatment Arizona | Teen Drug and Alcohol Treatment | Desert Recovery Centers";
 
 const breadcrumbSchema = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: SITE_URL }, { "@type": "ListItem", position: 2, name: "Adolescent Treatment", item: `${SITE_URL}/adolescent-treatment` }, { "@type": "ListItem", position: 3, name: "Substance Use" }] };
-const medicalWebPageSchema = { "@context": "https://schema.org", "@type": "MedicalWebPage", "@id": `${SITE_URL}${PAGE_PATH}/#webpage`, url: `${SITE_URL}${PAGE_PATH}`, name: PAGE_TITLE, specialty: "Adolescent Psychiatry", reviewedBy: { "@type": "Person", name: "Dr. An Nguyen", jobTitle: "Licensed Clinical Psychologist, Clinical Director", worksFor: { "@id": `${SITE_URL}/#organization` } }, publisher: { "@id": `${SITE_URL}/#organization` } };
 const faqSchema = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: [
   { "@type": "Question", name: "My teenager says they can stop on their own. Do they really need residential treatment?", acceptedAnswer: { "@type": "Answer", text: "The ability to stop without help varies significantly based on the substance, the duration and intensity of use, and the severity of underlying conditions. An honest clinical assessment is the only way to determine the appropriate level of care. Self-assessment of substance use severity is frequently inaccurate, particularly in adolescents. If your teenager's use has continued despite consequences, if there is a co-occurring mental health condition, or if safety is a concern, a clinical evaluation is warranted." } },
   { "@type": "Question", name: "Is marijuana really a problem?", acceptedAnswer: { "@type": "Answer", text: "Legal status does not determine clinical impact. The adolescent brain is in an active developmental period through the mid-twenties. Regular marijuana use during adolescence is associated with impaired memory and learning, increased risk for psychosis in genetically predisposed individuals, and higher rates of addiction compared to adult-onset use. For teenagers with anxiety or depression, marijuana often worsens symptoms over time despite providing short-term relief." } },
@@ -45,7 +45,14 @@ const speakableSchema = {
 export default function AdolescentSubstanceUsePage() {
   return (
     <>
-      <SchemaScript schema={[breadcrumbSchema, medicalWebPageSchema, faqSchema, speakableSchema]} />
+      <SchemaScript schema={[breadcrumbSchema, faqSchema, speakableSchema]} />
+      <MedicalWebPageSchema
+        url={PAGE_PATH}
+        name={PAGE_TITLE}
+        dateModified="2026-05-08"
+        reviewer="nguyen"
+        specialty="Adolescent Psychiatry"
+      />
       <Navigation />
       <Breadcrumb items={[{ name: "Home", url: SITE_URL }, { name: "Adolescent Treatment", url: `${SITE_URL}/adolescent-treatment` }, { name: "Substance Use", url: `${SITE_URL}${PAGE_PATH}` }]} />
       <PageHero eyebrow="Adolescent Treatment" title="Adolescent Substance Use Treatment in Arizona" description="Adolescent substance use is rarely just substance use. There is almost always a mental health condition underneath it. We treat both simultaneously." bgImage="/images/locations/phoenix/phoenix-lobby-2.jpg" />

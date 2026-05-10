@@ -7,6 +7,7 @@ import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import SchemaScript from "@/components/SchemaScript";
+import { MedicalWebPageSchema } from "@/lib/seo";
 import Breadcrumb from "@/components/Breadcrumb";
 import AnimatedSection from "@/components/animated/AnimatedSection";
 import Image from "next/image";
@@ -16,7 +17,6 @@ const PAGE_PATH = "/adolescent/suicidal-ideation";
 const PAGE_TITLE = "Adolescent Suicidal Ideation Treatment Arizona | Teen Suicide Prevention | Desert Recovery Centers";
 
 const breadcrumbSchema = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: SITE_URL }, { "@type": "ListItem", position: 2, name: "Adolescent Treatment", item: `${SITE_URL}/adolescent-treatment` }, { "@type": "ListItem", position: 3, name: "Suicidal Ideation" }] };
-const medicalWebPageSchema = { "@context": "https://schema.org", "@type": "MedicalWebPage", "@id": `${SITE_URL}${PAGE_PATH}/#webpage`, url: `${SITE_URL}${PAGE_PATH}`, name: PAGE_TITLE, specialty: "Adolescent Psychiatry", reviewedBy: { "@type": "Person", name: "Dr. An Nguyen", jobTitle: "Licensed Clinical Psychologist, Clinical Director", worksFor: { "@id": `${SITE_URL}/#organization` } }, publisher: { "@id": `${SITE_URL}/#organization` } };
 const faqSchema = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: [
   { "@type": "Question", name: "My teenager said they were not serious when they mentioned wanting to die. Should I still be concerned?", acceptedAnswer: { "@type": "Answer", text: "Yes. Disclosures of suicidal ideation, even when immediately walked back or minimized, warrant a clinical evaluation. Teenagers frequently minimize disclosures after making them due to fear of consequences or shame. The initial disclosure is clinically significant regardless of the follow-up statement." } },
   { "@type": "Question", name: "Will taking my teenager to treatment make them angry with me?", acceptedAnswer: { "@type": "Answer", text: "Possibly, in the short term. Most adolescents who receive effective treatment and stabilize recognize that their parents' decision to seek help was the right one. Your teenager's immediate anger is a manageable clinical situation. A preventable suicide is not." } },
@@ -47,7 +47,14 @@ const speakableSchema = {
 export default function AdolescentSuicidalIdeationPage() {
   return (
     <>
-      <SchemaScript schema={[breadcrumbSchema, medicalWebPageSchema, faqSchema, speakableSchema]} />
+      <SchemaScript schema={[breadcrumbSchema, faqSchema, speakableSchema]} />
+      <MedicalWebPageSchema
+        url={PAGE_PATH}
+        name={PAGE_TITLE}
+        dateModified="2026-04-29"
+        reviewer="nguyen"
+        specialty="Adolescent Psychiatry"
+      />
       <Navigation />
       <Breadcrumb items={[{ name: "Home", url: SITE_URL }, { name: "Adolescent Treatment", url: `${SITE_URL}/adolescent-treatment` }, { name: "Suicidal Ideation", url: `${SITE_URL}${PAGE_PATH}` }]} />
       <PageHero eyebrow="Adolescent Treatment" title="Adolescent Suicidal Ideation Treatment in Arizona" description="Every point on the spectrum of suicidal ideation requires clinical attention. The distance between passive ideation and a crisis event can be shorter than parents or teenagers expect." bgImage="/images/locations/phoenix/phoenix-lobby-2.jpg" />

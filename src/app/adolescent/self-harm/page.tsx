@@ -7,6 +7,7 @@ import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import SchemaScript from "@/components/SchemaScript";
+import { MedicalWebPageSchema } from "@/lib/seo";
 import Breadcrumb from "@/components/Breadcrumb";
 import AnimatedSection from "@/components/animated/AnimatedSection";
 import Image from "next/image";
@@ -16,7 +17,6 @@ const PAGE_PATH = "/adolescent/self-harm";
 const PAGE_TITLE = "Adolescent Self Harm Treatment Arizona | Teen Cutting and Self Injury | Desert Recovery Centers";
 
 const breadcrumbSchema = { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: SITE_URL }, { "@type": "ListItem", position: 2, name: "Adolescent Treatment", item: `${SITE_URL}/adolescent-treatment` }, { "@type": "ListItem", position: 3, name: "Self Harm" }] };
-const medicalWebPageSchema = { "@context": "https://schema.org", "@type": "MedicalWebPage", "@id": `${SITE_URL}${PAGE_PATH}/#webpage`, url: `${SITE_URL}${PAGE_PATH}`, name: PAGE_TITLE, specialty: "Adolescent Psychiatry", reviewedBy: { "@type": "Person", name: "Dr. An Nguyen", jobTitle: "Licensed Clinical Psychologist, Clinical Director", worksFor: { "@id": `${SITE_URL}/#organization` } }, publisher: { "@id": `${SITE_URL}/#organization` } };
 const faqSchema = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: [
   { "@type": "Question", name: "My teenager says they self harm to feel better, not to die. Should I still be worried?", acceptedAnswer: { "@type": "Answer", text: "Yes, and your concern is appropriate. Non-suicidal self injury is a serious clinical issue regardless of suicidal intent. It indicates your teenager is experiencing emotional pain they do not have adequate tools to manage. It also carries physical risk and is associated with elevated risk for future suicidal ideation. It requires clinical treatment." } },
   { "@type": "Question", name: "Will talking about self harm make it worse or give my teenager ideas?", acceptedAnswer: { "@type": "Answer", text: "No. This is a common concern and it is not supported by evidence. Clinical assessment and treatment of self harm does not increase the behavior. Avoidance of the topic, however, leaves the adolescent without support and without better alternatives. Open, non-judgmental clinical conversation is the foundation of effective treatment." } },
@@ -43,7 +43,14 @@ const speakableSchema = {
 export default function AdolescentSelfHarmPage() {
   return (
     <>
-      <SchemaScript schema={[breadcrumbSchema, medicalWebPageSchema, faqSchema, speakableSchema]} />
+      <SchemaScript schema={[breadcrumbSchema, faqSchema, speakableSchema]} />
+      <MedicalWebPageSchema
+        url={PAGE_PATH}
+        name={PAGE_TITLE}
+        dateModified="2026-04-29"
+        reviewer="nguyen"
+        specialty="Adolescent Psychiatry"
+      />
       <Navigation />
       <Breadcrumb items={[{ name: "Home", url: SITE_URL }, { name: "Adolescent Treatment", url: `${SITE_URL}/adolescent-treatment` }, { name: "Self Harm", url: `${SITE_URL}${PAGE_PATH}` }]} />
       <PageHero eyebrow="Adolescent Treatment" title="Adolescent Self Harm Treatment in Arizona" description="Self harm in adolescents is not manipulation. It is a dysregulated coping mechanism that responds to clinical treatment." bgImage="/images/locations/phoenix/phoenix-lobby-2.jpg" />
