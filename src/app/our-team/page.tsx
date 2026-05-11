@@ -32,54 +32,63 @@ export default function OurTeamPage() {
     <>
       <SchemaScript schema={[getFAQSchema(faqData["our-team"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/our-team"))]} />
       <PersonSchema
+        slug="dr-an-nguyen"
         name="Dr. An Nguyen"
         jobTitle="Licensed Clinical Psychologist, Clinical Director"
         image="/images/team/Dr-An-Nguyen.jpg"
         description="Clinical Director at Desert Recovery Centers, a licensed clinical psychologist specializing in addiction and mental health treatment."
       />
       <PersonSchema
+        slug="dr-greg-carr-md"
         name="Dr. Greg Carr, MD"
         jobTitle="Medical Director"
         image="/images/team/Dr-Greg-Carr.jpg"
         description="Medical Director at Desert Recovery Centers, a board-certified psychiatrist overseeing medical care and medication management across all DRC programs."
       />
       <PersonSchema
+        slug="ian-dy"
         name="Ian Dy"
         jobTitle="Psychiatric Nurse Practitioner"
         image="/images/team/Ian-Dy.jpg"
         description="Psychiatric Nurse Practitioner at Desert Recovery Centers, conducting psychiatric evaluations and providing medication management for clients across all locations."
       />
       <PersonSchema
+        slug="dr-reyes-topete-md"
         name="Dr. Reyes Topete, MD, FASAM"
         jobTitle="Attending Physician"
         image="/images/team/Dr._Reyes_Topete-cropped.jpg"
         description="Attending Physician at Desert Recovery Centers, conducting admission physical examinations and general medical care for patients across all programs."
       />
       <PersonSchema
+        slug="dr-jonathan-shelton"
         name="Dr. Jonathan Shelton"
         jobTitle="Licensed Clinical Psychologist"
         image="/images/team/Jonathan-Shelton.jpg"
         description="Licensed Clinical Psychologist at Desert Recovery Centers with over 17 years of clinical experience in addiction and trauma treatment."
       />
       <PersonSchema
+        slug="dr-caitlin-ellis"
         name="Dr. Caitlin Ellis"
         jobTitle="Licensed Clinical Psychologist"
         image="/images/team/Caitlin-Ellis.jpg"
         description="Licensed Clinical Psychologist at Desert Recovery Centers specializing in culturally sensitive and trauma-informed care."
       />
       <PersonSchema
+        slug="dr-madison-day-robinson"
         name="Dr. Madison Day-Robinson"
         jobTitle="Licensed Clinical Psychologist"
         image="/images/team/dr-madison-day-robinson.jpg"
         description="Licensed Clinical Psychologist at Desert Recovery Centers with expertise in evidence-based interventions and psychological assessment."
       />
       <PersonSchema
+        slug="jason-inserra"
         name="Jason Inserra"
         jobTitle="Director of Operations"
         image="/images/team/Jason-Inserra-3.jpg"
         description="Director of Operations at Desert Recovery Centers, certified peer support specialist and recovery advocate."
       />
       <PersonSchema
+        slug="adam-leonard"
         name="Adam Leonard"
         jobTitle="Admissions Director"
         image="/images/team/Adam-Leonard.jpg"

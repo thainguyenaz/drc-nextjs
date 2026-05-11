@@ -5,12 +5,13 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { siteData } from "@/lib/site-data";
 
-type TeamMember = { name: string; title: string; image: string; bio: string };
+type TeamMember = { name: string; title: string; image: string; bio: string; slug?: string };
 
 function TeamCard({ member, i, onSelect }: { member: TeamMember; i: number; onSelect: () => void }) {
   return (
     <motion.div
       key={member.name}
+      id={member.slug}
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
