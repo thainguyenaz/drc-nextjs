@@ -183,7 +183,7 @@ export default function PHPPage() {
                 },
                 {
                   title: "The Step-Down Pathway",
-                  desc: "The most effective treatment journeys follow a graduated pathway: residential to PHP to IOP to outpatient aftercare. Each step reduces the intensity of clinical programming while increasing your independence, ensuring that you are never left without adequate support at any stage of your recovery.",
+                  desc: "The most effective treatment follows a graduated pathway: residential to PHP to IOP to outpatient aftercare. Each step reduces the intensity of clinical programming while increasing your independence, ensuring you are never left without adequate support at any stage of your recovery.",
                 },
               ].map((item, i) => (
                 <div

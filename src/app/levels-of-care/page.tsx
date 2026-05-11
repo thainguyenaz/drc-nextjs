@@ -311,7 +311,7 @@ export default function LevelsOfCarePage() {
               Why Desert Recovery Centers
             </span>
             <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4 mb-8">
-              Why DRC for Your Recovery Journey
+              What Sets Us Apart
             </h2>
             <div className="space-y-4">
               {[
