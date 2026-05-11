@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const reasons = [
   {
     title: "Luxury, Home-Like Setting",
-    description: "Our facilities feel like high-end residences, not hospitals. Private rooms, gourmet meals, and resort-style amenities support your healing journey.",
+    description: "Our facilities feel like high-end residences, not hospitals. Private rooms, gourmet meals, and resort-style amenities are designed for comfort, not clinical sterility.",
     icon: "M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6",
   },
   {
