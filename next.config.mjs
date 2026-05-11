@@ -176,6 +176,16 @@ const nextConfig = {
 
       // ─── End WP Redirection plugin migration ───
 
+      // -- Post-migration discovery: legacy WP /thank-you paths (T13.5, 2026-05-11) --
+      // WP served homepage-clone re-engagement page at /get-help/thank-you/. Next.js
+      // form-success UX is in-page (GetHelpForm.tsx success state); no post-submit
+      // navigation. Redirect protects against legacy bookmark/external-link 404s
+      // post-cutover. Decision to port WP marketing content deferred (Path C).
+      { source: "/thank-you", destination: "/get-help", permanent: true },
+      { source: "/thank-you/", destination: "/get-help", permanent: true },
+      { source: "/get-help/thank-you", destination: "/get-help", permanent: true },
+      { source: "/get-help/thank-you/", destination: "/get-help", permanent: true },
+
       // Resource page dead link redirects
       { source: "/resources/podcast", destination: "https://open.spotify.com/show/5thFT5DNC1exCkhmiug1Nb", permanent: false },
       { source: "/resources/what-to-pack", destination: "/resources/blog", permanent: false },
