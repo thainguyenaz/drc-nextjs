@@ -254,15 +254,18 @@ export function PersonSchema({
   jobTitle,
   image,
   description,
+  slug,
 }: {
   name: string;
   jobTitle: string;
   image: string;
   description?: string;
+  slug?: string;
 }) {
   return ld({
     "@context": "https://schema.org",
     "@type": "Person",
+    ...(slug ? { "@id": `${SITE_URL}/our-team#${slug}` } : {}),
     name,
     jobTitle,
     image: `${SITE_URL}${image}`,
