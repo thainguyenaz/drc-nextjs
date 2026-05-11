@@ -34,6 +34,7 @@ export function getMedicalOrganizationSchema() {
     sameAs: [
       "https://www.facebook.com/desertrecoverycenters/",
       "https://www.instagram.com/desertrecoverycenter/",
+      "https://x.com/desertrecoverycenters",
       "https://www.youtube.com/channel/UCiXgogSH5-yTjshI9FJuxLg",
       "https://open.spotify.com/show/5thFT5DNC1exCkhmiug1Nb",
       "https://www.yelp.com/biz/desert-recovery-centers-glendale",

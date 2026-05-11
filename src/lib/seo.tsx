@@ -200,6 +200,39 @@ export function MedicalWebPageSchema({
   });
 }
 
+/**
+ * AboutPage schema for company/organization info pages (/about, future
+ * company-info pages). Semantically distinct from MedicalWebPageSchema —
+ * the page is about the Organization entity, not clinical YMYL content,
+ * so no reviewedBy/specialty fields. Links to the sitewide #organization
+ * @id (rendered by root layout) as both mainEntity and publisher.
+ */
+export function AboutPageSchema({
+  url,
+  name,
+  description,
+  dateModified,
+}: {
+  url: string;
+  name: string;
+  description: string;
+  dateModified: string;
+}) {
+  const fullUrl = `${SITE_URL}${url}`;
+  return ld({
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "@id": `${fullUrl}#aboutpage`,
+    url: fullUrl,
+    name,
+    description,
+    inLanguage: "en-US",
+    mainEntity: { "@id": `${SITE_URL}/#organization` },
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    dateModified,
+  });
+}
+
 export function BreadcrumbSchema({ items }: { items: { name: string; path: string }[] }) {
   return ld({
     "@context": "https://schema.org",

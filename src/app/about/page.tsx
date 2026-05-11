@@ -5,19 +5,27 @@ import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import AboutContent from "./AboutContent";
-import { VideoSchemas } from "@/lib/seo";
+import { VideoSchemas, buildMetadata, BreadcrumbSchema, AboutPageSchema } from "@/lib/seo";
 
 const GoogleReviews = dynamic(() => import("@/components/GoogleReviews"), { ssr: false });
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "About Us, Desert Recovery Centers",
   description:
     "Learn about Desert Recovery Centers, Joint Commission-accredited luxury behavioral health treatment in Arizona. Dual diagnosis specialists with a 10-bed maximum for personalized care.",
-};
+  path: "/about",
+});
 
 export default function AboutPage() {
   return (
     <>
+      <AboutPageSchema
+        url="/about"
+        name="About Us, Desert Recovery Centers"
+        description="Learn about Desert Recovery Centers, Joint Commission-accredited luxury behavioral health treatment in Arizona. Dual diagnosis specialists with a 10-bed maximum for personalized care."
+        dateModified="2026-04-10"
+      />
+      <BreadcrumbSchema items={[{ name: "About", path: "/about" }]} />
       <VideoSchemas path="/about/" />
       <Navigation />
       <PageHero
