@@ -107,10 +107,11 @@ const nextConfig = {
       // ─── WP Redirection plugin migration (pre-cutover 2026-05-07) ───
       // Sourced from migration-audit/wp_redirects_clean.json. Hit counts
       // reflect last 30 days on apex WP per Redirection plugin export.
-      // Last 4 source URLs (partner-referral, drug-alcohol-detox-lp clone,
+      // Source URLs (partner-referral, drug-alcohol-detox-lp clone,
       // call-center-clone, on-demand-webinars) point at destinations that
-      // currently 404 on Next.js or use closest-sibling — pre-staged so
-      // they auto-resolve when Tickets 13/14/15 land.
+      // currently 404 on Next.js or use closest-sibling. T13/T15 remain
+      // pre-staged pending action; T14 reframed 2026-05-11 from port to
+      // retire via redirect, -clone rule flattened to /get-help above.
 
       // -- Active legacy URLs (CRITICAL ADDITIONS) --
       { source: "/understanding-marijuana", destination: "/addiction/marijuana-addiction-treatment", permanent: true }, // 354 hits/30d
@@ -165,8 +166,8 @@ const nextConfig = {
       // -- Pre-staging: destinations 404 today, ports in flight (Tickets 13/14) --
       { source: "/partner-referral", destination: "/partner-referral-vrc", permanent: true }, // 106 — Ticket 13 ports /partner-referral-vrc
       { source: "/partner-referral/", destination: "/partner-referral-vrc", permanent: true },
-      { source: "/drug-alcohol-detox-lp/drug-alcohol-detox-lp-clone", destination: "/drug-alcohol-detox-lp/thank-you", permanent: true }, // 85 — Ticket 14 ports /drug-alcohol-detox-lp/thank-you
-      { source: "/drug-alcohol-detox-lp/drug-alcohol-detox-lp-clone/", destination: "/drug-alcohol-detox-lp/thank-you", permanent: true },
+      { source: "/drug-alcohol-detox-lp/drug-alcohol-detox-lp-clone", destination: "/get-help", permanent: true }, // 85 hits/30d - was T14 port target, flattened to /get-help on T14 retirement (2026-05-11)
+      { source: "/drug-alcohol-detox-lp/drug-alcohol-detox-lp-clone/", destination: "/get-help", permanent: true },
       { source: "/call-center-clone", destination: "/partner-referral-vrc", permanent: true }, // 84 — chain-collapsed; same Ticket 13 dependency
       { source: "/call-center-clone/", destination: "/partner-referral-vrc", permanent: true },
 
@@ -208,9 +209,17 @@ const nextConfig = {
       { source: "/resources/access-webinars/", destination: "/resources", permanent: true },
       { source: "/resources/our-podcast", destination: "/resources", permanent: true },
       { source: "/resources/our-podcast/", destination: "/resources", permanent: true },
-      // Google Ads landing page redirects
+      // -- T14: Detox Treatment [STR] campaign retirement (2026-05-11) --
+      // Parent LP rules existed pre-T14 (original WP-era Google Ads LP target).
+      // T14 audit 2026-05-11 confirmed Detox Treatment [STR] campaign paused,
+      // 4 of 4 ads limited by policy, zero clicks/impressions May 1-11.
+      // Decision: retire /drug-alcohol-detox-lp/* tree via redirect, do not
+      // port content. Parent + thank-you both retired here; -clone passthrough
+      // flattened above (WP migration block).
       { source: "/drug-alcohol-detox-lp", destination: "/levels-of-care/detox", permanent: true },
       { source: "/drug-alcohol-detox-lp/", destination: "/levels-of-care/detox", permanent: true },
+      { source: "/drug-alcohol-detox-lp/thank-you", destination: "/get-help", permanent: true },
+      { source: "/drug-alcohol-detox-lp/thank-you/", destination: "/get-help", permanent: true },
       // Duplicate page cleanup
       { source: "/about-us", destination: "/about", permanent: true },
       { source: "/about-us/", destination: "/about", permanent: true },
