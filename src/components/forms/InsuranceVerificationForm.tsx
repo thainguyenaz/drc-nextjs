@@ -41,13 +41,14 @@ export default function InsuranceVerificationForm() {
   const [formData, setFormData] = useState<FormData>(initialFormData);
   const [submitting, setSubmitting] = useState(false);
   const [turnstileReady, setTurnstileReady] = useState(false);
-  const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
+  const [status, setStatus] = useState<"idle" | "success" | "partial" | "error">("idle");
+  const [warningMessage, setWarningMessage] = useState<string>("");
   const [fileErrors, setFileErrors] = useState<{ front?: string; back?: string }>({});
   const formRef = useRef<HTMLFormElement>(null);
   const thankYouRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (status === "success") {
+    if (status === "success" || status === "partial") {
       thankYouRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   }, [status]);
@@ -130,7 +131,21 @@ export default function InsuranceVerificationForm() {
       });
 
       if (response.ok) {
-        setStatus("success");
+        let warning = "";
+        try {
+          const data = await response.json();
+          if (data && typeof data.warning === "string" && data.warning.length > 0) {
+            warning = data.warning;
+          }
+        } catch {
+          // body wasn't JSON; treat as plain success
+        }
+        if (warning) {
+          setWarningMessage(warning);
+          setStatus("partial");
+        } else {
+          setStatus("success");
+        }
         setFormData(initialFormData);
       } else {
         setStatus("error");
@@ -141,6 +156,43 @@ export default function InsuranceVerificationForm() {
       setSubmitting(false);
     }
   };
+
+  if (status === "partial") {
+    return (
+      <div
+        ref={thankYouRef}
+        className="bg-amber-50 border border-amber-200 rounded-2xl p-8 text-center"
+      >
+        <div className="w-16 h-16 bg-sage/10 rounded-full flex items-center justify-center mx-auto mb-4">
+          <svg className="w-8 h-8 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+          </svg>
+        </div>
+        <h3 className="font-display text-xl text-forest font-semibold mb-3">
+          We received your information
+        </h3>
+        <p className="text-amber-900 leading-relaxed mb-6">
+          {warningMessage}
+        </p>
+        <a
+          href="tel:+14809313617"
+          className="inline-block bg-gold hover:bg-gold-dark text-white font-semibold text-base px-8 py-4 rounded-xl transition-colors"
+        >
+          Call (480) 931-3617
+        </a>
+        <p className="text-xs text-gray-500 mt-4">
+          Or email{" "}
+          <a
+            href="mailto:admissions@desertrecoverycenters.com"
+            className="font-medium underline text-sage"
+          >
+            admissions@desertrecoverycenters.com
+          </a>
+          .
+        </p>
+      </div>
+    );
+  }
 
   if (status === "success") {
     return (
