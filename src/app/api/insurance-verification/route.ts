@@ -20,6 +20,7 @@ export async function POST(request: NextRequest) {
   }
 
   const results = { hubspot: false, email: false };
+  let relayError: string | null = null;
 
   try {
     const formData = await request.formData();
@@ -107,6 +108,9 @@ export async function POST(request: NextRequest) {
     }
 
     // STEP 2: Email + Telegram via jarvis-api notifications (secondary, never blocks)
+    const relaySource = "website_insurance_verification";
+    let filesAttached = 0;
+    const fieldsAttempted = 9;
     try {
       const relayBody = new FormData();
       relayBody.append("firstname", firstName);
@@ -117,13 +121,15 @@ export async function POST(request: NextRequest) {
       relayBody.append("member_id", memberId || "");
       relayBody.append("date_of_birth", dateOfBirth);
       relayBody.append("how_did_you_hear", howDidYouHear || "");
-      relayBody.append("source", "website_insurance_verification");
+      relayBody.append("source", relaySource);
 
       if (frontCard && frontCard.size > 0) {
         relayBody.append("front_card", frontCard);
+        filesAttached += 1;
       }
       if (backCard && backCard.size > 0) {
         relayBody.append("back_card", backCard);
+        filesAttached += 1;
       }
 
       const relayRes = await fetch(INSURANCE_NOTIFY_URL, {
@@ -133,14 +139,28 @@ export async function POST(request: NextRequest) {
 
       results.email = relayRes.ok;
       if (!relayRes.ok) {
-        const err = await relayRes.text();
-        console.error("Insurance notify error:", relayRes.status, err);
+        const errText = await relayRes.text();
+        relayError = `HTTP ${relayRes.status}: ${errText.slice(0, 300)}`;
+        console.error("[insurance-verification] relay failed:", {
+          error: relayError,
+          source: relaySource,
+          fields_attempted: fieldsAttempted,
+        });
       } else {
-        console.log("Insurance notification delivered (email + telegram)");
+        console.log("[insurance-verification] relay delivered:", {
+          emailOk: true,
+          filesAttached,
+          source: relaySource,
+        });
       }
     } catch (e: unknown) {
       const err = e as Error;
-      console.error("Insurance notify exception (non-blocking):", err.message);
+      relayError = err.message;
+      console.error("[insurance-verification] relay failed:", {
+        error: err.message,
+        source: relaySource,
+        fields_attempted: fieldsAttempted,
+      });
     }
 
     console.log("Submission results:", results);
@@ -175,10 +195,24 @@ export async function POST(request: NextRequest) {
         })
       );
 
-      return NextResponse.json({
-        success: true,
-        emailSent: results.email,
-      });
+      if (results.email) {
+        return NextResponse.json({
+          success: true,
+          emailSent: true,
+        });
+      }
+
+      return NextResponse.json(
+        {
+          success: true,
+          hubspotSubmitted: true,
+          emailSent: false,
+          warning:
+            "We got your insurance info but had trouble notifying our team. Please call (480) 931-3617 so we can verify your benefits right away.",
+          relayError,
+        },
+        { status: 207 }
+      );
     }
 
     return NextResponse.json({ error: "Submission failed" }, { status: 500 });
