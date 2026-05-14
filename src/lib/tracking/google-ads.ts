@@ -31,11 +31,18 @@ function formatAdsDateTime(date: Date = new Date()): string {
 }
 
 function conversionActionIdFor(formType: FormType): string | undefined {
-  return formType === "get_help"
-    ? process.env.GOOGLE_ADS_CONVERSION_ACTION_GET_HELP
-    : formType === "insurance_verification"
-      ? process.env.GOOGLE_ADS_CONVERSION_ACTION_INSURANCE
-      : process.env.GOOGLE_ADS_CONVERSION_ACTION_PARTNER_REFERRAL;
+  switch (formType) {
+    case "get_help":
+      return process.env.GOOGLE_ADS_CONVERSION_ACTION_GET_HELP;
+    case "insurance_verification":
+      return process.env.GOOGLE_ADS_CONVERSION_ACTION_INSURANCE;
+    case "partner_referral":
+      return process.env.GOOGLE_ADS_CONVERSION_ACTION_PARTNER_REFERRAL;
+    default: {
+      const _exhaustive: never = formType;
+      return _exhaustive;
+    }
+  }
 }
 
 export async function uploadFormConversion(
