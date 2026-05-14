@@ -33,7 +33,7 @@ export default function PartnerReferralContent() {
             alt="Desert Recovery Centers and Virtue Recovery Center partnership"
             width={2172}
             height={724}
-            className="max-h-16 md:max-h-20 w-auto"
+            className="max-h-32 md:max-h-40 w-auto"
             priority
           />
         </div>
