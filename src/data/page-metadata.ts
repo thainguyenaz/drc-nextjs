@@ -17,7 +17,7 @@ export const pageMetadata: Record<string, PageMeta> = {
   },
   "/about-us/": {
     title: "About Desert Recovery Centers | Luxury Rehab in Arizona",
-    description: "Learn about Desert Recovery Centers — Joint Commission accredited luxury rehab in Arizona. Founded by clinicians with personal ties to recovery. Call (480) 931-3617.",
+    description: "Learn about Desert Recovery Centers, a Joint Commission accredited luxury rehab in Arizona. Founded by clinicians with personal ties to recovery. Call (480) 931-3617.",
     canonical: "https://desertrecoverycenters.com/about-us/",
     ogImage: DEFAULT_OG_IMAGE,
   },
