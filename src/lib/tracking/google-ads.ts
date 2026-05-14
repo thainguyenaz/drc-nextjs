@@ -2,7 +2,7 @@ import { GoogleAdsApi } from "google-ads-api";
 import { trackingGateCheck, logTrackingSkip } from "./env-gate";
 import { hashedEmail, hashedPhone } from "./hash";
 
-export type FormType = "get_help" | "insurance_verification";
+export type FormType = "get_help" | "insurance_verification" | "partner_referral";
 
 interface UploadInput {
   formType: FormType;
@@ -33,7 +33,9 @@ function formatAdsDateTime(date: Date = new Date()): string {
 function conversionActionIdFor(formType: FormType): string | undefined {
   return formType === "get_help"
     ? process.env.GOOGLE_ADS_CONVERSION_ACTION_GET_HELP
-    : process.env.GOOGLE_ADS_CONVERSION_ACTION_INSURANCE;
+    : formType === "insurance_verification"
+      ? process.env.GOOGLE_ADS_CONVERSION_ACTION_INSURANCE
+      : process.env.GOOGLE_ADS_CONVERSION_ACTION_PARTNER_REFERRAL;
 }
 
 export async function uploadFormConversion(
