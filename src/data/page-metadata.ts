@@ -209,7 +209,7 @@ export const pageMetadata: Record<string, PageMeta> = {
   },
   "/treatments/holistic-therapies/": {
     title: "Holistic Addiction & Mental Health Therapies in Arizona | DRC",
-    description: "Holistic therapies in Arizona — yoga, massage, chiropractic, personal training, and more. Combined with clinical care. Call (480) 931-3617.",
+    description: "Holistic therapies in Arizona: yoga, massage, chiropractic, personal training, and more. Combined with clinical care. Call (480) 931-3617.",
     canonical: "https://desertrecoverycenters.com/treatments/holistic-therapies/",
     ogImage: DEFAULT_OG_IMAGE,
   },
@@ -217,6 +217,12 @@ export const pageMetadata: Record<string, PageMeta> = {
     title: "SoftWave Therapy Arizona | Desert Recovery Centers",
     description: "SoftWave therapy for pain management and physical wellness as part of holistic addiction recovery at Desert Recovery Centers.",
     canonical: "https://desertrecoverycenters.com/treatments/softwave-therapy/",
+    ogImage: DEFAULT_OG_IMAGE,
+  },
+  "/treatments/bridgework/": {
+    title: "BridgeWork™ Therapy in Arizona | Desert Recovery Centers",
+    description: "Clinical psychologist-led skill integration program. Bridges therapeutic insight to real-world behavioral change. Exclusive to Desert Recovery Centers. Call (480) 931-3617.",
+    canonical: "https://desertrecoverycenters.com/treatments/bridgework/",
     ogImage: DEFAULT_OG_IMAGE,
   },
   "/get-help/": {
