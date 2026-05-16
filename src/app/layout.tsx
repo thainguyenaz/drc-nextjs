@@ -69,9 +69,6 @@ export default function RootLayout({
           gtag('set', 'developer_id.dZTNiMT', true);
           gtag('config', 'G-0MSPF0DPVK');`}
         </Script>
-        <Script id="gt-init" strategy="afterInteractive">
-          {`gtag('config', 'GT-K825VTDM');`}
-        </Script>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-16468277860"
           strategy="afterInteractive"
