@@ -203,7 +203,7 @@ const nextConfig = {
       // SEO redirects — renamed content pages
       { source: "/addiction/understanding-gambling-addiction/", destination: "/addiction/gambling-addiction-treatment/", permanent: true },
       { source: "/addiction/understanding-sex-addiction/", destination: "/addiction/sex-addiction-treatment/", permanent: true },
-      { source: "/treatments/alternative-therapy", destination: "/treatments/softwave-therapy", permanent: true }, // fix: was 404 (trailing slash on source caused slash-strip → bare → 404)
+      { source: "/treatments/alternative-therapy", destination: "/treatments/holistic-therapies", permanent: true }, // destination reconciled to redirects-final.json + matches 22 other holistic-* consolidations 2026-05-16
       { source: "/treatments/understanding-cbt-cognitive-behavioral-therapy/", destination: "/treatments/cbt-cognitive-behavioral-therapy", permanent: true }, // fix: was 404 (cognitive-behavioral-therapy-cbt route does not exist)
       { source: "/treatments/understanding-dbt-dialectic-behavior-therapy/", destination: "/treatments/dbt-dialectical-behavior-therapy", permanent: true }, // fix: was 404 (dialectical-behavior-therapy-dbt route does not exist)
       { source: "/treatments/emdr-eye-movement-desensitization-and-reprocessing", destination: "/treatments/emdr-therapy", permanent: true },
@@ -249,7 +249,7 @@ const nextConfig = {
       // CBT/DBT bug fix: existing entries above had 404 destinations; corrected in-place.
       // Skipped (already covered by existing entries above): /about-us, /insurance-verification,
       //   /resources/our-podcast, /treatments/emdr-eye-movement-desensitization-and-reprocessing,
-      //   /blog (5 dedup pairs); /treatments/alternative-therapy (existing softwave wins).
+      //   /blog (5 dedup pairs); /treatments/alternative-therapy (already covered above; destination matches audit).
 
       // --- Exact /blog/* → /resources/blog/* passthroughs (preserves SEO for ported posts) ---
       { source: "/blog/can-quitting-weed-cause-anxiety", destination: "/resources/blog/can-quitting-weed-cause-anxiety", permanent: true },
