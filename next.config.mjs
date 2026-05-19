@@ -374,6 +374,9 @@ const nextConfig = {
       { source: "/learning/", destination: "/resources", permanent: true },
       { source: "/linktree", destination: "/", permanent: true },
       { source: "/linktree/", destination: "/", permanent: true },
+      // KML geo-sitemap redirect (cutover 2026-05-24) — Yoast Local SEO file
+      // deprecated, geo signals come from GBP post-flip
+      { source: "/locations.kml", destination: "/locations", permanent: true },
       { source: "/resources/addiction-detox-guide", destination: "/resources/detox-guide", permanent: true },
       { source: "/resources/addiction-detox-guide/", destination: "/resources/detox-guide", permanent: true },
       { source: "/resources/addiction-detox-guide/adderall", destination: "/resources/detox-guide", permanent: true },
