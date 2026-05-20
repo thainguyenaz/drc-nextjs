@@ -1,11 +1,6 @@
-"use client";
-
-import { motion, useReducedMotion } from "framer-motion";
 import Image from "next/image";
 
 export default function Hero() {
-  const shouldReduceMotion = useReducedMotion();
-
   return (
     <section className="relative h-screen min-h-[700px] flex items-end overflow-hidden">
       {/* Hero background — static poster (desktop + mobile) */}
@@ -79,12 +74,7 @@ export default function Hero() {
           </p>
 
           {/* Trust Badges with real images */}
-          <motion.div
-            initial={shouldReduceMotion ? false : { opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.5, ease: "easeOut", delay: 0.3 }}
-            className="flex flex-wrap items-center gap-4 mb-10"
-          >
+          <div className="flex flex-wrap items-center gap-4 mb-10 hero-anim-badges">
             <a href="https://www.jointcommission.org" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/15 rounded-xl px-4 py-2.5 hover:bg-white/15 transition-colors">
               <Image src="/images/branding/JointCommission_GoldSeal_National.png" alt="Joint Commission Gold Seal of Approval, Desert Recovery Centers is accredited" width={28} height={28} className="flex-shrink-0" />
               <span className="text-white/90 text-sm font-medium">Joint Commission Accredited</span>
@@ -93,15 +83,10 @@ export default function Hero() {
               <Image src="/images/branding/legitscript-seal-25653576.png" alt="Verify Approval for www.desertrecoverycenters.com - LegitScript Certified" width={28} height={30} unoptimized className="flex-shrink-0" />
               <span className="text-white/90 text-sm font-medium">LegitScript Certified</span>
             </a>
-          </motion.div>
+          </div>
 
           {/* CTAs */}
-          <motion.div
-            initial={shouldReduceMotion ? false : { opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.6, ease: "easeOut", delay: 0.9 }}
-            className="flex flex-col sm:flex-row items-start gap-4"
-          >
+          <div className="flex flex-col sm:flex-row items-start gap-4 hero-anim-ctas">
             <a
               href="/insurance"
               className="bg-gold hover:bg-gold-dark text-white font-semibold text-base px-8 py-4 rounded-xl transition-all shadow-lg shadow-gold/25 cursor-pointer"
@@ -114,16 +99,11 @@ export default function Hero() {
             >
               Call (480) 931-3617
             </a>
-          </motion.div>
+          </div>
 
-          <motion.p
-            initial={shouldReduceMotion ? false : { opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={shouldReduceMotion ? { duration: 0 } : { duration: 0.5, delay: 1.1 }}
-            className="text-cream/50 text-sm italic mt-5"
-          >
+          <p className="text-cream/50 text-sm italic mt-5 hero-anim-tagline">
             Most clients begin treatment within 48 hours of their first call.
-          </motion.p>
+          </p>
         </div>
       </div>
 
