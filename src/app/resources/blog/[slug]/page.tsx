@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import Navigation from "@/components/Navigation";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
@@ -119,7 +120,14 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
       {/* Hero */}
       <section className="relative bg-forest pt-28 md:pt-36 pb-16 md:pb-24">
-        <div className="absolute inset-0 opacity-20" style={{ backgroundImage: `url(${post.featuredImage})`, backgroundSize: "cover", backgroundPosition: "center" }} />
+        <Image
+          src={post.featuredImage}
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover opacity-20"
+        />
         <div className="absolute inset-0 bg-gradient-to-b from-forest/90 to-forest" />
         <div className="relative z-10 max-w-container mx-auto px-6">
           <div className="max-w-3xl">
