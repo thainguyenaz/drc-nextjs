@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useScrollReveal } from "@/lib/useScrollReveal";
 import AnimatedCounter from "./AnimatedCounter";
 
 const stats = [
@@ -25,6 +25,7 @@ const stats = [
 ];
 
 export default function StatsSection() {
+  const { ref, visible } = useScrollReveal<HTMLDivElement>();
   return (
     <section className="py-20 md:py-28 bg-forest relative overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
@@ -42,15 +43,15 @@ export default function StatsSection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div ref={ref} className="grid md:grid-cols-3 gap-8">
           {stats.map((stat, i) => (
-            <motion.div
+            <div
               key={stat.label}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.15 }}
-              className="text-center"
+              className={`reveal-fade-up text-center${visible ? " reveal-in" : ""}`}
+              style={{
+                "--reveal-delay": `${i * 0.15}s`,
+                "--reveal-duration": "0.5s",
+              } as React.CSSProperties}
             >
               <div className="text-gold font-display text-5xl md:text-6xl font-bold mb-3">
                 <AnimatedCounter target={stat.value} suffix={stat.suffix} />
@@ -61,7 +62,7 @@ export default function StatsSection() {
               {stat.source && (
                 <span className="text-white/30 text-xs mt-2 block">({stat.source})</span>
               )}
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
