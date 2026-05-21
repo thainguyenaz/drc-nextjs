@@ -56,6 +56,13 @@ export default function RootLayout({
   return (
     <html lang="en-US" className={`${inter.variable} ${playfair.variable}`}>
       <head>
+        {/* JS-disabled safety net for useScrollReveal: reveal-* elements
+            start at opacity:0 in CSS and depend on the hook (JS) to
+            become visible. With JS disabled this would leave entire
+            sections blank, so force them to their final state. */}
+        <noscript>
+          <style>{`.reveal-fade-up,.reveal-fade-left,.reveal-fade-right,.reveal-fade{opacity:1!important;transform:none!important;animation:none!important;}`}</style>
+        </noscript>
         <SchemaScript schema={[getMedicalOrganizationSchema()]} />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-0MSPF0DPVK"
