@@ -64,3 +64,59 @@ h1, h2, h3 {
     transform: none;
   }
 }
+
+/* Shared scroll-reveal entrance animations (replaces framer-motion whileInView).
+   Pair with the useScrollReveal hook in src/lib/useScrollReveal.ts: the hook
+   adds `.reveal-in` when the element scrolls into view, which triggers the
+   animation. Tunables per instance via CSS custom properties:
+     --reveal-shift    (default 30px)  translation distance
+     --reveal-duration (default 0.6s)  animation duration
+     --reveal-delay    (default 0s)    stagger offset                       */
+@keyframes revealFadeUp {
+  from { opacity: 0; transform: translateY(var(--reveal-shift, 30px)); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes revealFadeLeft {
+  from { opacity: 0; transform: translateX(calc(-1 * var(--reveal-shift, 30px))); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes revealFadeRight {
+  from { opacity: 0; transform: translateX(var(--reveal-shift, 30px)); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes revealFade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.reveal-fade-up,
+.reveal-fade-left,
+.reveal-fade-right,
+.reveal-fade {
+  opacity: 0;
+  will-change: opacity, transform;
+}
+
+.reveal-fade-up.reveal-in {
+  animation: revealFadeUp var(--reveal-duration, 0.6s) cubic-bezier(0, 0, 0.58, 1) var(--reveal-delay, 0s) both;
+}
+.reveal-fade-left.reveal-in {
+  animation: revealFadeLeft var(--reveal-duration, 0.6s) cubic-bezier(0, 0, 0.58, 1) var(--reveal-delay, 0s) both;
+}
+.reveal-fade-right.reveal-in {
+  animation: revealFadeRight var(--reveal-duration, 0.6s) cubic-bezier(0, 0, 0.58, 1) var(--reveal-delay, 0s) both;
+}
+.reveal-fade.reveal-in {
+  animation: revealFade var(--reveal-duration, 0.5s) ease var(--reveal-delay, 0s) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-fade-up,
+  .reveal-fade-left,
+  .reveal-fade-right,
+  .reveal-fade {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
