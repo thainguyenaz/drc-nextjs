@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useScrollReveal } from "@/lib/useScrollReveal";
 
 const reasons = [
   {
@@ -36,15 +36,15 @@ const reasons = [
 ];
 
 export default function WhyChooseUs() {
+  const { ref: headerRef, visible: headerVisible } = useScrollReveal<HTMLDivElement>({ rootMargin: "-80px" });
+  const { ref: cardsRef, visible: cardsVisible } = useScrollReveal<HTMLDivElement>({ rootMargin: "-50px" });
   return (
     <section className="py-20 md:py-28 bg-white overflow-hidden">
       <div className="max-w-container mx-auto px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-14"
+        <div
+          ref={headerRef}
+          className={`reveal-fade-up text-center mb-14${headerVisible ? " reveal-in" : ""}`}
+          style={{ "--reveal-shift": "40px" } as React.CSSProperties}
         >
           <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
             Why Choose Us
@@ -53,17 +53,17 @@ export default function WhyChooseUs() {
           <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold mb-4">
             Six Reasons to Choose Desert Recovery Centers
           </h2>
-        </motion.div>
+        </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div ref={cardsRef} className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {reasons.map((reason, i) => (
-            <motion.div
+            <div
               key={reason.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.4, delay: i * 0.1 }}
-              className="group flex gap-4 bg-white rounded-xl p-5 border-t-2 border-t-transparent hover:border-t-gold hover:shadow-lg hover:-translate-y-1.5 transition-all duration-300 cursor-pointer"
+              className={`reveal-fade-up group flex gap-4 bg-white rounded-xl p-5 border-t-2 border-t-transparent hover:border-t-gold hover:shadow-lg hover:-translate-y-1.5 transition-all duration-300 cursor-pointer${cardsVisible ? " reveal-in" : ""}`}
+              style={{
+                "--reveal-delay": `${i * 0.1}s`,
+                "--reveal-duration": "0.4s",
+              } as React.CSSProperties}
             >
               <div className="flex-shrink-0 w-12 h-12 bg-sage/10 rounded-xl flex items-center justify-center group-hover:bg-gold/10 transition-colors duration-300">
                 <svg className="w-6 h-6 text-sage group-hover:text-gold transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -78,7 +78,7 @@ export default function WhyChooseUs() {
                   {reason.description}
                 </p>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
