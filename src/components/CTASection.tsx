@@ -9,7 +9,7 @@ export default function CTASection() {
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
       <div
         ref={ref}
-        className={`reveal-fade-up max-w-container mx-auto px-6 text-center ${visible ? "reveal-in" : ""}`}
+        className={`reveal-fade-up max-w-container mx-auto px-6 text-center${visible ? " reveal-in" : ""}`}
       >
         <h2 className="font-display text-3xl md:text-4xl text-white font-semibold mb-6">
           Your Recovery Starts With One Call
