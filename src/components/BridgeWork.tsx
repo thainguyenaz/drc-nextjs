@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useScrollReveal } from "@/lib/useScrollReveal";
 import Image from "next/image";
 
 const includes = [
@@ -23,17 +23,20 @@ const idealFor = [
 ];
 
 export default function BridgeWork() {
+  const { ref: leftRef, visible: leftVisible } = useScrollReveal<HTMLDivElement>({ rootMargin: "-60px" });
+  const { ref: rightRef, visible: rightVisible } = useScrollReveal<HTMLDivElement>({ rootMargin: "-60px" });
   return (
     <section className="bg-forest py-20 md:py-28 overflow-hidden">
       <div className="max-w-container mx-auto px-6">
         <div className="flex flex-col md:flex-row gap-12 lg:gap-20 items-center">
           {/* Left content, 60% */}
-          <motion.div
-            initial={{ opacity: 0, x: -120 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.7, ease: "easeOut" }}
-            className="md:w-[60%]"
+          <div
+            ref={leftRef}
+            className={`reveal-fade-left md:w-[60%]${leftVisible ? " reveal-in" : ""}`}
+            style={{
+              "--reveal-shift": "120px",
+              "--reveal-duration": "0.7s",
+            } as React.CSSProperties}
           >
             <span className="text-gold font-body text-sm tracking-[0.2em] uppercase font-medium">
               Proprietary Program
@@ -114,15 +117,17 @@ export default function BridgeWork() {
                 programs in the region.
               </p>
             </div>
-          </motion.div>
+          </div>
 
           {/* Right photo, 40%, slides in from right */}
-          <motion.div
-            initial={{ opacity: 0, x: 120 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
-            className="md:w-[40%] w-full"
+          <div
+            ref={rightRef}
+            className={`reveal-fade-right md:w-[40%] w-full${rightVisible ? " reveal-in" : ""}`}
+            style={{
+              "--reveal-shift": "120px",
+              "--reveal-duration": "0.7s",
+              "--reveal-delay": "0.1s",
+            } as React.CSSProperties}
           >
             <div className="relative h-[400px] md:h-[600px] rounded-2xl overflow-hidden shadow-xl group">
               <Image
@@ -139,7 +144,7 @@ export default function BridgeWork() {
                 </span>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
