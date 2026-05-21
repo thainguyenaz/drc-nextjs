@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useScrollReveal } from "@/lib/useScrollReveal";
 import Link from "next/link";
 
 const phases = [
@@ -43,15 +43,18 @@ const phases = [
 ];
 
 export default function ContinuumOfCare() {
+  const { ref: headerRef, visible: headerVisible } = useScrollReveal<HTMLDivElement>();
+  const { ref: cardsRef, visible: cardsVisible } = useScrollReveal<HTMLDivElement>();
   return (
     <section className="py-20 md:py-28 bg-white">
       <div className="max-w-container mx-auto px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-14"
+        <div
+          ref={headerRef}
+          className={`reveal-fade-up text-center mb-14${headerVisible ? " reveal-in" : ""}`}
+          style={{
+            "--reveal-shift": "20px",
+            "--reveal-duration": "0.5s",
+          } as React.CSSProperties}
         >
           <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
             Levels of Care
@@ -62,16 +65,18 @@ export default function ContinuumOfCare() {
           <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed">
             A structured path from acute care to long-term independence
           </p>
-        </motion.div>
+        </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div ref={cardsRef} className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {phases.map((phase, i) => (
-            <motion.div
+            <div
               key={phase.step}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: i * 0.08 }}
+              className={`reveal-fade-up${cardsVisible ? " reveal-in" : ""}`}
+              style={{
+                "--reveal-shift": "20px",
+                "--reveal-delay": `${i * 0.08}s`,
+                "--reveal-duration": "0.4s",
+              } as React.CSSProperties}
             >
               <Link
                 href={phase.href}
@@ -87,7 +92,7 @@ export default function ContinuumOfCare() {
                   {phase.desc}
                 </p>
               </Link>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
