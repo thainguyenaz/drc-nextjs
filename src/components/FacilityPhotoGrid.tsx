@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useScrollReveal } from "@/lib/useScrollReveal";
 import Image from "next/image";
 
 const photos = [
@@ -13,17 +13,16 @@ const photos = [
 ];
 
 export default function FacilityPhotoGrid() {
+  const { ref: textRef, visible: textVisible } = useScrollReveal<HTMLDivElement>();
+  const { ref: gridRef, visible: gridVisible } = useScrollReveal<HTMLDivElement>();
   return (
     <section className="py-20 md:py-28 bg-white">
       <div className="max-w-container mx-auto px-6">
         <div className="flex flex-col md:flex-row gap-12 md:gap-16 items-center">
           {/* Left, 40% text */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="md:w-[40%]"
+          <div
+            ref={textRef}
+            className={`reveal-fade-left md:w-[40%]${textVisible ? " reveal-in" : ""}`}
           >
             <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
               Our Facilities
@@ -44,19 +43,20 @@ export default function FacilityPhotoGrid() {
             >
               Explore Our Facilities
             </a>
-          </motion.div>
+          </div>
 
           {/* Right, 60% photo grid */}
           <div className="md:w-[60%]">
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+            <div ref={gridRef} className="grid grid-cols-2 md:grid-cols-3 gap-3">
               {photos.map((photo, i) => (
-                <motion.div
+                <div
                   key={photo.label}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: i * 0.06 }}
-                  className="relative aspect-[4/3] rounded-xl overflow-hidden group cursor-pointer"
+                  className={`reveal-fade-up relative aspect-[4/3] rounded-xl overflow-hidden group cursor-pointer${gridVisible ? " reveal-in" : ""}`}
+                  style={{
+                    "--reveal-shift": "20px",
+                    "--reveal-duration": "0.4s",
+                    "--reveal-delay": `${i * 0.06}s`,
+                  } as React.CSSProperties}
                 >
                   <Image
                     src={photo.src}
@@ -68,7 +68,7 @@ export default function FacilityPhotoGrid() {
                   <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-forest/80 to-transparent pt-8 pb-3 px-3">
                     <span className="text-white text-xs font-medium">{photo.label}</span>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
