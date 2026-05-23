@@ -41,11 +41,16 @@ export default function TeamMemberPage({
   const member = teamMembers.find((m) => m.slug === params.slug);
   if (!member) notFound();
 
+  // Temporary: Dr. Carr's headshot is a monogram placeholder, so omit it from
+  // the Person JSON-LD on his bio page. The <Image> slot below still renders
+  // member.image (the monogram file). Restore by removing this slug check when
+  // the real headshot replaces /images/team/Dr-Greg-Carr.jpg.
+  const schemaImage = member.slug === "dr-greg-carr-md" ? undefined : member.image;
   const personSchema = getPersonSchema({
     name: member.name,
     jobTitle: member.jobTitle,
     description: member.description,
-    image: member.image,
+    image: schemaImage,
     url: member.url,
     credentials: member.credentials,
     linkedIn: member.linkedIn,

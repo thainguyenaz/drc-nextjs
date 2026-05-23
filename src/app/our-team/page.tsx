@@ -38,11 +38,11 @@ export default function OurTeamPage() {
         image="/images/team/Dr-An-Nguyen.jpg"
         description="Clinical Director at Desert Recovery Centers, a licensed clinical psychologist specializing in addiction and mental health treatment."
       />
+      {/* Temporary: image omitted from JSON-LD until Dr. Carr's real headshot arrives. Visual slot renders monogram placeholder via TeamSection (src/components/TeamSection.tsx) reading siteData.team.clinical. Restore image prop when real photo lands at /images/team/Dr-Greg-Carr.jpg. */}
       <PersonSchema
         slug="dr-greg-carr-md"
         name="Dr. Greg Carr, MD"
         jobTitle="Medical Director"
-        image="/images/team/Dr-Greg-Carr.jpg"
         description="Medical Director at Desert Recovery Centers, a board-certified psychiatrist overseeing medical care and medication management across all DRC programs."
       />
       <PersonSchema
