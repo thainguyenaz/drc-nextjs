@@ -21,7 +21,7 @@ const videos = [
     videoId: "1Bed8b5DQBQ",
     title: "Life After NeuroStar TMS Therapy, Patient Experience",
     label: "NeuroStar Patient Story",
-    description: "A NeuroStar TMS patient describes their journey through treatment and the impact on their daily life.",
+    description: "A NeuroStar TMS patient describes their experience with treatment and the impact on their daily life.",
   },
 ];
 

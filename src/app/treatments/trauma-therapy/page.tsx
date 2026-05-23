@@ -72,7 +72,7 @@ export default function TraumaTherapyPage() {
       <MedicalWebPageSchema url="/treatments/trauma-therapy" name="Trauma Therapy Center in Arizona | Desert Recovery Centers" dateModified="2026-04-08" />
       <MedicalTherapySchema
         name="Trauma Therapy"
-        description="Comprehensive multi-modal trauma treatment combining EMDR, somatic experiencing, and trauma-focused CBT to help clients heal from disturbing life experiences."
+        description="Multi-modal trauma treatment combining EMDR, somatic experiencing, and trauma-focused CBT to help clients heal from disturbing life experiences."
         url="/treatments/trauma-therapy"
         conditions={["PTSD", "Complex PTSD", "Childhood Abuse", "Sexual Assault", "Domestic Violence", "Combat Trauma", "Grief", "Intergenerational Trauma"]}
       />
@@ -133,7 +133,7 @@ export default function TraumaTherapyPage() {
               Trauma rewires the brain and nervous system. It changes how you perceive danger, how you relate to others, and how you cope with stress. For many, substance use becomes the only way to manage the flashbacks, hypervigilance, numbness, and emotional pain that trauma leaves behind.
             </p>
             <p className="text-gray-600 leading-relaxed mb-4">
-              At Desert Recovery Centers, trauma therapy is not a single modality, it is a comprehensive, multi-modal approach designed by our clinical psychologists to meet each client exactly where they are. Some clients need the structured reprocessing of EMDR. Others benefit from the body-based release of somatic experiencing. Many need both.
+              At Desert Recovery Centers, trauma therapy is not a single modality, it is a multi-modal approach designed by our clinical psychologists to meet each client exactly where they are. Some clients need the structured reprocessing of EMDR. Others benefit from the body-based release of somatic experiencing. Many need both.
             </p>
             <p className="text-gray-600 leading-relaxed">
               Our trauma program is delivered in individual and group formats, with gender-specific groups that create the safety necessary for deep healing work. Every session is led or directly supervised by a licensed clinical psychologist.
@@ -286,7 +286,7 @@ export default function TraumaTherapyPage() {
           <div className="max-w-3xl mx-auto space-y-8">
             <article className="border-l-2 border-gold/30 pl-5">
               <h3 className="text-forest font-semibold text-sm mb-1">What is trauma therapy at Desert Recovery Centers?</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">Trauma therapy at Desert Recovery Centers is a comprehensive, multi-modal treatment program that combines EMDR, trauma-focused CBT, somatic experiencing, narrative therapy, and expressive arts therapies. Desert Recovery Centers is a Joint Commission accredited luxury treatment center in Arizona where trauma treatment is individualized to meet each client&apos;s specific needs and trauma history.</p>
+              <p className="text-gray-600 text-sm leading-relaxed">Trauma therapy at Desert Recovery Centers is a multi-modal treatment program that combines EMDR, trauma-focused CBT, somatic experiencing, narrative therapy, and expressive arts therapies. Desert Recovery Centers is a Joint Commission accredited luxury treatment center in Arizona where trauma treatment is individualized to meet each client&apos;s specific needs and trauma history.</p>
             </article>
             <article className="border-l-2 border-gold/30 pl-5">
               <h3 className="text-forest font-semibold text-sm mb-1">How does trauma therapy work for addiction and mental health treatment?</h3>

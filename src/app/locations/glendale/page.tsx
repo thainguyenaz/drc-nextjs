@@ -92,7 +92,7 @@ const faqs = [
   },
   {
     q: "Can my family visit the Glendale facility?",
-    a: "Yes, family involvement is encouraged. We offer designated visiting hours and a comprehensive family therapy program including education sessions, joint therapy, and family support groups. The Glendale location is centrally located in the West Valley, making visits convenient for families throughout the area.",
+    a: "Yes, family involvement is encouraged. We offer designated visiting hours and a family therapy program including education sessions, joint therapy, and family support groups. The Glendale location is centrally located in the West Valley, making visits convenient for families throughout the area.",
   },
   {
     q: "How quickly can I start treatment at Glendale?",
@@ -236,7 +236,7 @@ export default function GlendaleLocationPage() {
               What We Treat
             </span>
             <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4 mb-8">
-              Comprehensive Treatment at DRC Glendale
+              Addiction and Mental Health Treatment at DRC Glendale
             </h2>
             <p className="text-gray-600 leading-relaxed mb-8">
               Our flagship Glendale team treats the full spectrum of addiction and mental health conditions with a dual diagnosis specialization, ensuring all co-occurring conditions are addressed simultaneously.
@@ -301,7 +301,7 @@ export default function GlendaleLocationPage() {
                 },
                 {
                   title: "Family Therapy Program",
-                  desc: "Our comprehensive family program includes psychoeducation, communication skills training, joint therapy sessions, and family support groups, rebuilding relationships damaged by addiction and mental health conditions.",
+                  desc: "Our family program includes psychoeducation, communication skills training, joint therapy sessions, and family support groups, rebuilding relationships damaged by addiction and mental health conditions.",
                 },
               ].map((item, i) => (
                 <div key={i} className="border-l-2 border-gold/40 pl-6">
@@ -324,7 +324,7 @@ export default function GlendaleLocationPage() {
         },
         {
           question: "What addiction treatment is available in Glendale, Arizona?",
-          answer: "Desert Recovery Centers offers comprehensive addiction and mental health treatment at our flagship Glendale facility. As a Joint Commission accredited luxury treatment center in Arizona, we provide evidence-based dual diagnosis treatment using CBT, DBT, EMDR, and holistic therapies, delivered by licensed psychologists and board-certified psychiatrists with resort-level amenities including a basketball court, tennis court, and pool.",
+          answer: "Desert Recovery Centers offers addiction and mental health treatment at our flagship Glendale facility. As a Joint Commission accredited luxury treatment center in Arizona, we provide evidence-based dual diagnosis treatment using CBT, DBT, EMDR, and holistic therapies, delivered by licensed psychologists and board-certified psychiatrists with resort-level amenities including a basketball court, tennis court, and pool.",
         },
         {
           question: "Does Desert Recovery Centers accept insurance for Glendale residents?",

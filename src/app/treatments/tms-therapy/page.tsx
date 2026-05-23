@@ -109,7 +109,7 @@ const faqs = [
   },
   {
     q: "Can TMS be combined with my current therapy or medication?",
-    a: "Yes. TMS is designed to work alongside other treatments including psychotherapy, medication, and residential programs. At DRC, TMS will integrate directly with our clinical programs for a comprehensive treatment approach.",
+    a: "Yes. TMS is designed to work alongside other treatments including psychotherapy, medication, and residential programs. At DRC, TMS will integrate directly with our clinical programs as part of your treatment plan.",
   },
   {
     q: "Is TMS safe?",
