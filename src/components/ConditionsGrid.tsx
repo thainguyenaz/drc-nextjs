@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useScrollReveal } from "@/lib/useScrollReveal";
 import Link from "next/link";
 import { siteData } from "@/lib/site-data";
 
@@ -87,16 +87,57 @@ function ConditionIcon({ name }: { name: string }) {
   }
 }
 
+function ConditionCard({
+  condition,
+  index,
+}: {
+  condition: { name: string; href: string; description: string };
+  index: number;
+}) {
+  const { ref, visible } = useScrollReveal<HTMLDivElement>({ rootMargin: "-50px" });
+  return (
+    <div
+      ref={ref}
+      className={`reveal-fade-up${visible ? " reveal-in" : ""}`}
+      style={{
+        "--reveal-duration": "0.4s",
+        "--reveal-delay": `${index * 0.1}s`,
+      } as React.CSSProperties}
+    >
+      <Link
+        href={condition.href}
+        className="group block bg-white rounded-xl p-6 shadow-sm border-t-[3px] border-t-transparent hover:border-t-gold hover:shadow-xl transition-all duration-[250ms] ease-out h-full cursor-pointer overflow-hidden"
+      >
+        {/* Icon square */}
+        <div className="w-[80px] h-[80px] mb-5 border border-sage/40 group-hover:border-gold rounded-xl flex items-center justify-center transition-colors duration-[250ms] bg-sage/5">
+          <ConditionIcon name={condition.name} />
+        </div>
+        {/* Name */}
+        <h3 className="font-body text-forest font-bold text-base mb-2">
+          {condition.name}
+        </h3>
+        {/* Description */}
+        <p className="text-gray-500 text-sm leading-relaxed mb-4 line-clamp-1">
+          {condition.description}
+        </p>
+        {/* Learn More */}
+        <span className="text-gold text-sm font-semibold group-hover:underline">
+          Learn More →
+        </span>
+      </Link>
+    </div>
+  );
+}
+
 export default function ConditionsGrid() {
+  const { ref: headerRef, visible: headerVisible } = useScrollReveal<HTMLDivElement>({ rootMargin: "-80px" });
   return (
     <section className="py-20 md:py-28 bg-cream">
       <div className="max-w-container mx-auto px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-14"
+        <div
+          ref={headerRef}
+          className={`reveal-fade-up text-center mb-14${headerVisible ? " reveal-in" : ""}`}
+          style={{ "--reveal-shift": "40px" } as React.CSSProperties}
         >
           <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
             Conditions We Treat
@@ -109,39 +150,11 @@ export default function ConditionsGrid() {
             Evidence-based care for a wide range of mental health
             conditions, delivered with compassion in a luxury setting.
           </p>
-        </motion.div>
+        </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {siteData.mentalHealth.map((condition, i) => (
-            <motion.div
-              key={condition.name}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.4, delay: i * 0.1 }}
-            >
-              <Link
-                href={condition.href}
-                className="group block bg-white rounded-xl p-6 shadow-sm border-t-[3px] border-t-transparent hover:border-t-gold hover:shadow-xl transition-all duration-[250ms] ease-out h-full cursor-pointer overflow-hidden"
-              >
-                {/* Icon square */}
-                <div className="w-[80px] h-[80px] mb-5 border border-sage/40 group-hover:border-gold rounded-xl flex items-center justify-center transition-colors duration-[250ms] bg-sage/5">
-                  <ConditionIcon name={condition.name} />
-                </div>
-                {/* Name */}
-                <h3 className="font-body text-forest font-bold text-base mb-2">
-                  {condition.name}
-                </h3>
-                {/* Description */}
-                <p className="text-gray-500 text-sm leading-relaxed mb-4 line-clamp-1">
-                  {condition.description}
-                </p>
-                {/* Learn More */}
-                <span className="text-gold text-sm font-semibold group-hover:underline">
-                  Learn More →
-                </span>
-              </Link>
-            </motion.div>
+            <ConditionCard key={condition.name} condition={condition} index={i} />
           ))}
         </div>
       </div>
