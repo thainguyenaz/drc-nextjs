@@ -11,7 +11,7 @@ import AnimatedSection from "@/components/animated/AnimatedSection";
 import AnimatedGrid from "@/components/animated/AnimatedGrid";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Our Locations — Desert Recovery Centers",
+  title: "Our Locations | Desert Recovery Centers",
   description:
     "Desert Recovery Centers operates three locations across Arizona: Glendale residential, Scottsdale residential, and Phoenix PHP / IOP / TMS.",
   path: "/locations",
@@ -26,7 +26,7 @@ const locations = [
     phoneTel: "+16233231012",
     sqft: "7,500 sq ft",
     description:
-      "Our flagship residential treatment center — where evidence-based clinical care meets resort-level comfort.",
+      "Our flagship residential treatment center. Evidence-based clinical care meets resort-level comfort.",
     services: ["Residential", "PHP", "IOP", "OP"],
     amenities: ["Basketball Court", "Tennis Court", "Pool", "Gym", "Massage Room", "Gourmet Kitchen"],
     image: "/images/glendale/Glendale-Front.jpg",
@@ -80,7 +80,7 @@ export default function LocationsPage() {
       <PageHero
         eyebrow="Our Locations"
         title="Three Locations Across Arizona"
-        description="From residential treatment to outpatient care and TMS therapy — find the DRC location that fits your recovery needs."
+        description="From residential treatment to outpatient care and TMS therapy. Find the DRC location that fits your recovery needs."
         bgImage="/images/scottsdale/DRC-DRONE-SCOTTSDALE-08-01-2024-0068August-01-202400009-2.jpg"
       />
 

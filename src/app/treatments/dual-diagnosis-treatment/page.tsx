@@ -19,7 +19,7 @@ import Citations from "@/components/Citations";
 const approachPillars = [
   {
     name: "Integrated Assessment",
-    description: "Comprehensive psychiatric evaluation that identifies all co-occurring conditions from day one, no missed diagnoses, no fragmented care.",
+    description: "Full psychiatric evaluation that identifies all co-occurring conditions from day one, no missed diagnoses, no fragmented care.",
   },
   {
     name: "Unified Treatment Planning",
@@ -129,7 +129,7 @@ export default function DualDiagnosisPage() {
               Nearly half of all individuals with a substance use disorder also have a co-occurring mental health condition. Depression fuels drinking. Trauma drives opioid use. Anxiety triggers benzodiazepine dependence. These conditions don&apos;t exist in isolation, and they can&apos;t be treated that way.
             </p>
             <p className="text-gray-600 leading-relaxed mb-4">
-              Dual diagnosis treatment at Desert Recovery Centers is not an add-on. It is our foundation. Every client receives a comprehensive psychiatric evaluation within the first 72 hours, and every treatment plan is designed to address the full clinical picture from day one.
+              Dual diagnosis treatment at Desert Recovery Centers is not an add-on. It is our foundation. Every client receives a full psychiatric evaluation within the first 72 hours, and every treatment plan is designed to address the full clinical picture from day one.
             </p>
             <p className="text-gray-600 leading-relaxed">
               Our clinical psychologists, psychiatrist, and medical team collaborate daily to ensure that medication management, therapy protocols, and holistic programming work in concert, not at cross-purposes.
@@ -282,7 +282,7 @@ export default function DualDiagnosisPage() {
           <div className="max-w-3xl mx-auto space-y-8">
             <article className="border-l-2 border-gold/30 pl-5">
               <h3 className="text-forest font-semibold text-sm mb-1">What is dual diagnosis treatment at Desert Recovery Centers?</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">Dual diagnosis treatment at Desert Recovery Centers is an integrated approach that treats co-occurring mental health conditions and substance use disorders simultaneously. Desert Recovery Centers is a Joint Commission accredited luxury treatment center in Arizona where every client receives a comprehensive psychiatric evaluation within the first 72 hours, and every treatment plan addresses the full clinical picture from day one.</p>
+              <p className="text-gray-600 text-sm leading-relaxed">Dual diagnosis treatment at Desert Recovery Centers is an integrated approach that treats co-occurring mental health conditions and substance use disorders simultaneously. Desert Recovery Centers is a Joint Commission accredited luxury treatment center in Arizona where every client receives a full psychiatric evaluation within the first 72 hours, and every treatment plan addresses the full clinical picture from day one.</p>
             </article>
             <article className="border-l-2 border-gold/30 pl-5">
               <h3 className="text-forest font-semibold text-sm mb-1">How does dual diagnosis treatment work for addiction and mental health?</h3>

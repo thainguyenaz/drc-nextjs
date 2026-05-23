@@ -66,7 +66,7 @@ export default function HolisticPage() {
       <MedicalWebPageSchema url="/treatments/holistic-therapies" name="Holistic Addiction & Mental Health Therapies in Arizona | DRC" dateModified="2026-04-28" />
       <MedicalTherapySchema
         name="Holistic Therapies"
-        description="Evidence-informed complementary therapies including yoga, mindfulness, art therapy, and nutrition counseling that enhance clinical treatment for whole-person recovery."
+        description="Evidence-informed complementary therapies including yoga, mindfulness, art therapy, and nutrition counseling that support clinical treatment for whole-person recovery."
         url="/treatments/holistic-therapies"
         conditions={["Substance Use Disorders", "Anxiety", "Depression", "PTSD", "Chronic Stress", "Insomnia", "Chronic Pain"]}
       />
@@ -75,7 +75,7 @@ export default function HolisticPage() {
       <PageHero
         eyebrow="Whole-Person Care"
         title="Holistic Therapies"
-        description="Healing the whole person, mind, body, and spirit, through evidence-informed complementary therapies that enhance clinical treatment."
+        description="Healing the whole person, mind, body, and spirit, through evidence-informed complementary therapies that support clinical treatment."
         bgImage="/images/general/DRC-Treatment-Therapies-BG-Fade.jpg"
       />
 

@@ -122,10 +122,10 @@ export default function DBTPage() {
               Dialectical Behavior Therapy was originally developed by Dr. Marsha Linehan for individuals with borderline personality disorder, but its effectiveness extends far beyond. DBT is now a first-line treatment for anyone who experiences emotions so intensely that they overwhelm coping capacity, leading to impulsive decisions, substance use, self-harm, or relationship destruction.
             </p>
             <p className="text-gray-600 leading-relaxed mb-4">
-              The word &quot;dialectical&quot; refers to the balance between two opposing truths: accepting yourself as you are right now, while simultaneously working to change behaviors that cause suffering. This paradox is at the heart of DBT and what makes it transformative.
+              The word &quot;dialectical&quot; refers to the balance between two opposing truths: accepting yourself as you are right now, while simultaneously working to change behaviors that cause suffering. This paradox is at the heart of DBT and what makes it effective.
             </p>
             <p className="text-gray-600 leading-relaxed">
-              At Desert Recovery Centers, DBT is delivered in both individual and group formats by licensed clinical psychologists, creating a comprehensive skill-building experience that clients carry with them long after discharge.
+              At Desert Recovery Centers, DBT is delivered in both individual and group formats by licensed clinical psychologists, creating a skill-building experience that clients carry with them long after discharge.
             </p>
           </motion.div>
         </div>
@@ -278,7 +278,7 @@ export default function DBTPage() {
           <div className="max-w-3xl mx-auto space-y-8">
             <article className="border-l-2 border-gold/30 pl-5">
               <h3 className="text-forest font-semibold text-sm mb-1">What is Dialectical Behavior Therapy (DBT) at Desert Recovery Centers?</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">DBT at Desert Recovery Centers is a comprehensive skills-based psychotherapy that teaches mindfulness, distress tolerance, emotion regulation, and interpersonal effectiveness. Desert Recovery Centers is a Joint Commission accredited luxury treatment center in Arizona where DBT is delivered in both individual and group formats as part of an integrated treatment plan.</p>
+              <p className="text-gray-600 text-sm leading-relaxed">DBT at Desert Recovery Centers is a skills-based psychotherapy that teaches mindfulness, distress tolerance, emotion regulation, and interpersonal effectiveness. Desert Recovery Centers is a Joint Commission accredited luxury treatment center in Arizona where DBT is delivered in both individual and group formats as part of an integrated treatment plan.</p>
             </article>
             <article className="border-l-2 border-gold/30 pl-5">
               <h3 className="text-forest font-semibold text-sm mb-1">How does DBT work for addiction and mental health treatment?</h3>

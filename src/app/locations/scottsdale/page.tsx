@@ -235,7 +235,7 @@ export default function ScottsdaleLocationPage() {
               What We Treat
             </span>
             <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4 mb-8">
-              Comprehensive Treatment at DRC Scottsdale
+              Addiction and Mental Health Treatment at DRC Scottsdale
             </h2>
             <p className="text-gray-600 leading-relaxed mb-8">
               Our Scottsdale clinical team treats the full spectrum of addiction and mental health conditions, with a specialization in dual diagnosis, treating co-occurring conditions simultaneously for lasting recovery.
@@ -323,7 +323,7 @@ export default function ScottsdaleLocationPage() {
         },
         {
           question: "What addiction treatment is available in Scottsdale, Arizona?",
-          answer: "Desert Recovery Centers offers comprehensive addiction and mental health treatment in Scottsdale. As a Joint Commission accredited luxury treatment center in Arizona, we provide evidence-based dual diagnosis treatment using CBT, DBT, EMDR, gender-specific group therapy, and holistic therapies, delivered by licensed psychologists and board-certified psychiatrists.",
+          answer: "Desert Recovery Centers offers addiction and mental health treatment in Scottsdale. As a Joint Commission accredited luxury treatment center in Arizona, we provide evidence-based dual diagnosis treatment using CBT, DBT, EMDR, gender-specific group therapy, and holistic therapies, delivered by licensed psychologists and board-certified psychiatrists.",
         },
         {
           question: "Does Desert Recovery Centers accept insurance for Scottsdale residents?",

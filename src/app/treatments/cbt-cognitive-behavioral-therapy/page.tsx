@@ -228,7 +228,7 @@ export default function CBTPage() {
               Unlike many treatment centers that rely on master&apos;s-level therapists for primary therapy, Desert Recovery Centers provides CBT led by licensed clinical psychologists. This means your treatment is guided by clinicians with the highest level of training in evidence-based interventions.
             </p>
             <p className="text-gray-600 leading-relaxed mb-8">
-              CBT at DRC is not a standalone intervention, it integrates seamlessly with DBT skills training, EMDR for trauma processing, holistic therapies, and our proprietary BridgeWork™ program to deliver comprehensive, whole-person care.
+              CBT at DRC is not a standalone intervention, it integrates seamlessly with DBT skills training, EMDR for trauma processing, holistic therapies, and our proprietary BridgeWork™ program to deliver whole-person care.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <a href="tel:+14809313617" className="bg-gold hover:bg-gold-dark text-white font-semibold text-sm px-6 py-3 rounded-xl transition-colors cursor-pointer">
