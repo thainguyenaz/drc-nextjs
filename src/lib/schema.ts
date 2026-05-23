@@ -103,7 +103,7 @@ export function getPersonSchema(person: {
   name: string;
   jobTitle: string;
   description: string;
-  image: string;
+  image?: string;
   url: string;
   credentials?: string[];
   linkedIn?: string;
@@ -114,7 +114,7 @@ export function getPersonSchema(person: {
     name: person.name,
     jobTitle: person.jobTitle,
     description: person.description,
-    image: person.image,
+    ...(person.image ? { image: person.image } : {}),
     url: person.url,
     ...(person.credentials?.length
       ? { hasCredential: person.credentials }

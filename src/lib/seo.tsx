@@ -258,7 +258,7 @@ export function PersonSchema({
 }: {
   name: string;
   jobTitle: string;
-  image: string;
+  image?: string;
   description?: string;
   slug?: string;
 }) {
@@ -268,7 +268,7 @@ export function PersonSchema({
     ...(slug ? { "@id": `${SITE_URL}/our-team#${slug}` } : {}),
     name,
     jobTitle,
-    image: `${SITE_URL}${image}`,
+    ...(image ? { image: `${SITE_URL}${image}` } : {}),
     worksFor: {
       "@type": "Organization",
       name: SITE_NAME,
