@@ -111,6 +111,13 @@ export default function GetHelpForm({ variant = "lp" }: GetHelpFormProps) {
 
       if (response.ok) {
         setStatus("success");
+        if (typeof window !== "undefined" && variant === "lp") {
+          window.gtag?.("event", "page_view", {
+            page_path: "/get-help/thank-you/",
+            page_location: window.location.origin + "/get-help/thank-you/",
+            page_title: "Thank You - Get Help",
+          });
+        }
         setFormData(initialFormData);
       } else {
         setStatus("error");
