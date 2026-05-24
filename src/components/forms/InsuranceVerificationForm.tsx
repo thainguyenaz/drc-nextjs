@@ -145,6 +145,14 @@ export default function InsuranceVerificationForm() {
           setStatus("partial");
         } else {
           setStatus("success");
+          if (typeof window !== "undefined") {
+            const ty = window.location.pathname.replace(/\/$/, "") + "/thank-you/";
+            window.gtag?.("event", "page_view", {
+              page_path: ty,
+              page_location: window.location.origin + ty,
+              page_title: "Thank You",
+            });
+          }
         }
         setFormData(initialFormData);
       } else {
