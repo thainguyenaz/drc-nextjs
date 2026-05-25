@@ -12,7 +12,9 @@ Cutover proceeds when **all** of the following are true:
 
 1. **All audit phases (Sections A through I) close as PASS or WARN.** Zero CRITICAL findings outstanding.
 2. **All open Tickets shipped** (currently 13, 14, 15, and any surfaced during Phases 4-9). No "blocked on content port" rules in `next.config.mjs`.
-3. **Every lead-capture form on the site tested end-to-end.** Confirmed submission arrival in Dazos via the CTM → Dazos → Kipu attribution chain. Test minimum: contact form, admissions form, insurance verification form, partner referral form, any landing-page form.
+3. **Every lead-capture form on the site tested end-to-end.** Confirmed: form submits successfully, HubSpot contact created, and Admissions notified by email and Telegram. Test minimum: contact form, admissions form, insurance verification form, partner referral form, any landing-page form.
+
+   _Note: Dazos integration is post-cutover, gated on HubSpot-assisted form migration. HubSpot remains in the live form-submit path until then._
 4. **Every internal link audited for 200 response** (not 308, not 404). No internal link should redirect-hop or break.
 5. **Lighthouse scores on top 20 pages by traffic match or exceed WordPress baseline.** No regression on Performance, Accessibility, Best Practices, or SEO category scores.
 6. **JSON-LD Rich Results Test passes on every page template:** single-location, multi-location hub, treatment, addiction, mental-health, blog post, learning page, podcast, home, get-help, adolescent, levels-of-care, facilities, resources. Zero errors. Warnings documented and reviewed.
