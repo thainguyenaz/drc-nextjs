@@ -19,7 +19,7 @@ Cutover proceeds when **all** of the following are true:
    _Note: Dazos integration is post-cutover, gated on HubSpot-assisted form migration. HubSpot remains in the live form-submit path until then._
    - PENDING-EXTERNAL 2026-05-26 - requires form E2E test (HubSpot contact + Admissions email/Telegram), verification in progress.
 4. **Every internal link audited for 200 response** (not 308, not 404). No internal link should redirect-hop or break.
-   - NOT-GREEN 2026-05-26 - fix src/lib/blog.ts:98 internal links to direct routes.
+   - GREEN 2026-05-26 - blog.ts:98 links fixed (commit 6f33fe7); b6 Cat 3 finding and trailing-slash flags resolved; verified live, /get-help and /insurance both return HTTP 200 direct.
 5. **Lighthouse scores on top 20 pages by traffic match or exceed WordPress baseline.** No regression on Performance, Accessibility, Best Practices, or SEO category scores.
    - PENDING-EXTERNAL 2026-05-26 - requires Lighthouse run vs WordPress baseline.
 6. **JSON-LD Rich Results Test passes on every page template:** single-location, multi-location hub, treatment, addiction, mental-health, blog post, learning page, podcast, home, get-help, adolescent, levels-of-care, facilities, resources. Zero errors. Warnings documented and reviewed.
