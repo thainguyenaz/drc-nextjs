@@ -25,7 +25,7 @@ Cutover proceeds when **all** of the following are true:
 6. **JSON-LD Rich Results Test passes on every page template:** single-location, multi-location hub, treatment, addiction, mental-health, blog post, learning page, podcast, home, get-help, adolescent, levels-of-care, facilities, resources. Zero errors. Warnings documented and reviewed.
    - PENDING-EXTERNAL 2026-05-26 - requires Google Rich Results Test on page templates.
 7. **llms.txt audited and updated** to reflect current site structure post-A6/A7/A8. Verified accurate for AEO/GEO ranking signals.
-   - NOT-GREEN 2026-05-26 - llms.txt missing 7 Key Pages, needs update.
+   - GREEN 2026-05-26 - llms.txt updated: 7 Key Pages, adolescent callout, Phoenix outpatient phone added (commit 7d65939); Leadership block em dashes removed; D.1 gaps closed.
 8. **GMB NAP cross-reference complete.** All 3 location listings (Glendale, Scottsdale, Phoenix PHP/IOP) match siteData and JSON-LD exactly: business name, street address, phone number formatting.
    - PENDING-EXTERNAL 2026-05-26 - requires GMB NAP cross-check on 3 listings.
 9. **Vercel 404 monitoring set up** and 24 hours of post-fix traffic shows zero unexpected 404s.
