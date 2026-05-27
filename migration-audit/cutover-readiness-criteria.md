@@ -13,7 +13,7 @@ Cutover proceeds when **all** of the following are true:
 1. **All audit phases (Sections A through I) close as PASS or WARN.** Zero CRITICAL findings outstanding.
    - NOT-GREEN 2026-05-26 - open: /alcohol-rehab/ disposition, THIN-NX content gap on /mental-health, /get-help, /addiction/alcoholism-treatment, and Sections F/G/H execution.
 2. **All open Tickets shipped** (currently 13, 14, 15, and any surfaced during Phases 4-9). No "blocked on content port" rules in `next.config.mjs`.
-   - NOT-GREEN 2026-05-26 - Ticket 15 needs explicit disposition (close as won't-do or ship).
+   - GREEN 2026-05-26 - Tickets 13, 14 shipped; Ticket 15 closed as won't-do (0 hits/30d, redirect to /resources in place); no blocked-on-content-port rules in next.config.mjs.
 3. **Every lead-capture form on the site tested end-to-end.** Confirmed: form submits successfully, HubSpot contact created, and Admissions notified by email and Telegram. Test minimum: contact form, admissions form, insurance verification form, partner referral form, any landing-page form.
 
    _Note: Dazos integration is post-cutover, gated on HubSpot-assisted form migration. HubSpot remains in the live form-submit path until then._
