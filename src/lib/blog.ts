@@ -95,7 +95,7 @@ A: Because multiple therapeutic approaches work together, many people notice imp
 
 <p>Taking the step toward integrated treatment requires courage, and you should feel proud for considering this comprehensive approach to your healing. The team at Desert Recovery Centers understands that recovery involves more than just addressing symptoms - it's about building a foundation for lasting wellness that encompasses every aspect of your life.</p>
 
-<p>Our experienced clinical staff is ready to help you understand how BridgeWork™ therapy principles can be applied to your unique situation. We're here to answer your questions about our integrated treatment approach and help you determine whether our program aligns with your recovery goals. Call us at <strong>(480) 931-3617</strong> to speak with our admissions team, or visit our <a href="/get-help/">get help page</a> to learn more about starting treatment. You can also complete our <a href="/insurance-verification/">insurance verification</a> to understand your coverage options for comprehensive, integrated treatment.</p>
+<p>Our experienced clinical staff is ready to help you understand how BridgeWork™ therapy principles can be applied to your unique situation. We're here to answer your questions about our integrated treatment approach and help you determine whether our program aligns with your recovery goals. Call us at <strong>(480) 931-3617</strong> to speak with our admissions team, or visit our <a href="/get-help">get help page</a> to learn more about starting treatment. You can also complete our <a href="/insurance">insurance verification</a> to understand your coverage options for comprehensive, integrated treatment.</p>
 
 ${DISCLAIMER}`
   },
