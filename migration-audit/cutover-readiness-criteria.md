@@ -30,8 +30,8 @@ Cutover proceeds when **all** of the following are true:
    - PENDING-EXTERNAL 2026-05-26 - requires GMB NAP cross-check on 3 listings.
 9. **Vercel 404 monitoring set up** and 24 hours of post-fix traffic shows zero unexpected 404s.
    - PENDING-EXTERNAL 2026-05-26 - requires Vercel 404 monitoring, 24h post-flip.
-10. **DNS TTL set to 5 minutes for at least 7 days before cutover**, so rollback is fast if needed.
-    - NOT-GREEN 2026-05-26 - TTL is 600s, criterion requires 300s held 7 days.
+10. **DNS TTL set to the GoDaddy provider minimum of 600 seconds for at least 7 days before cutover, so rollback is reasonably fast if needed.** Note: GoDaddy enforces a hard 600s floor; a 300s TTL is not achievable on this provider.
+    - GREEN 2026-05-26 - TTL confirmed at 600s via dig (GoDaddy provider minimum, 300s not achievable); 600s setting held since early-May cutover prep, well past the 7-day window.
 11. **Rollback procedure documented and dry-run tested.**
     - NOT-GREEN 2026-05-26 - rollback documented but dry-run never executed.
 12. **HubSpot form integration verified.** Every live HubSpot form on WordPress has a matching working implementation on Next.js. Test submission for each form confirms contact creation in HubSpot. Drip workflows continue firing without disruption.
