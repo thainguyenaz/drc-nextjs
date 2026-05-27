@@ -35,6 +35,7 @@ Addiction Treatment: alcohol, heroin, fentanyl, cocaine, meth, marijuana, prescr
 Mental Health Treatment: anxiety, depression, PTSD, bipolar disorder, OCD, ADHD, personality disorders, schizophrenia
 Therapies: CBT, DBT, EMDR, trauma therapy, 12-step, SoftWave therapy, holistic therapies, dual diagnosis treatment
 Levels of Care: residential treatment (10-bed max per facility), PHP, IOP, outpatient, NeuroStar TMS
+Adolescent Program: dedicated treatment track for teens ages 13-17 at the Phoenix location
 
 ## Key Pages
 - [Homepage](https://desertrecoverycenters.com/): Luxury addiction and mental health treatment in Arizona
@@ -44,11 +45,19 @@ Levels of Care: residential treatment (10-bed max per facility), PHP, IOP, outpa
 - [Locations](https://desertrecoverycenters.com/locations): Glendale, Scottsdale, and Phoenix facility pages
 - [Insurance](https://desertrecoverycenters.com/insurance): Verify out-of-network commercial coverage (Aetna, BCBS, Cigna, UHC, Humana, Magellan) and in-network TriCare/TriWest benefits
 - [About Us](https://desertrecoverycenters.com/about): Joint Commission accredited behavioral health organization founded 2019
+- [Our Team](https://desertrecoverycenters.com/our-team): Clinical leadership and licensed psychologists with credentials for E-E-A-T grounding
+- [Levels of Care](https://desertrecoverycenters.com/levels-of-care): Residential, PHP, IOP, and outpatient program details with admission criteria
+- [Treatments](https://desertrecoverycenters.com/treatments): Evidence-based modalities including CBT, DBT, EMDR, TMS, SoftWave, and holistic therapies
+- [Facilities](https://desertrecoverycenters.com/facilities): Photo tours of the Glendale, Scottsdale, and Phoenix locations
+- [Get Help](https://desertrecoverycenters.com/get-help): Admissions intake form and direct contact for treatment placement
+- [Contact](https://desertrecoverycenters.com/contact): Direct contact information and inquiry form for general questions
+- [Rehab Near Me](https://desertrecoverycenters.com/rehab-near-me): Geographic directory of DRC facilities for Arizona-area treatment search
 
 ## Contact
 Website: https://desertrecoverycenters.com
 Email: contact@desertrecoverycenters.com
 General: (480) 931-3617
+Phoenix outpatient: (602) 905-8070
 
 ## Brand
 Tagline: HEAL. RESTORE. THRIVE.
