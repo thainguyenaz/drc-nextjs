@@ -11,19 +11,31 @@
 Cutover proceeds when **all** of the following are true:
 
 1. **All audit phases (Sections A through I) close as PASS or WARN.** Zero CRITICAL findings outstanding.
+   - NOT-GREEN 2026-05-26 - open: /alcohol-rehab/ disposition, THIN-NX content gap on /mental-health, /get-help, /addiction/alcoholism-treatment, and Sections F/G/H execution.
 2. **All open Tickets shipped** (currently 13, 14, 15, and any surfaced during Phases 4-9). No "blocked on content port" rules in `next.config.mjs`.
+   - NOT-GREEN 2026-05-26 - Ticket 15 needs explicit disposition (close as won't-do or ship).
 3. **Every lead-capture form on the site tested end-to-end.** Confirmed: form submits successfully, HubSpot contact created, and Admissions notified by email and Telegram. Test minimum: contact form, admissions form, insurance verification form, partner referral form, any landing-page form.
 
    _Note: Dazos integration is post-cutover, gated on HubSpot-assisted form migration. HubSpot remains in the live form-submit path until then._
+   - PENDING-EXTERNAL 2026-05-26 - requires form E2E test (HubSpot contact + Admissions email/Telegram), verification in progress.
 4. **Every internal link audited for 200 response** (not 308, not 404). No internal link should redirect-hop or break.
+   - NOT-GREEN 2026-05-26 - fix src/lib/blog.ts:98 internal links to direct routes.
 5. **Lighthouse scores on top 20 pages by traffic match or exceed WordPress baseline.** No regression on Performance, Accessibility, Best Practices, or SEO category scores.
+   - PENDING-EXTERNAL 2026-05-26 - requires Lighthouse run vs WordPress baseline.
 6. **JSON-LD Rich Results Test passes on every page template:** single-location, multi-location hub, treatment, addiction, mental-health, blog post, learning page, podcast, home, get-help, adolescent, levels-of-care, facilities, resources. Zero errors. Warnings documented and reviewed.
+   - PENDING-EXTERNAL 2026-05-26 - requires Google Rich Results Test on page templates.
 7. **llms.txt audited and updated** to reflect current site structure post-A6/A7/A8. Verified accurate for AEO/GEO ranking signals.
+   - NOT-GREEN 2026-05-26 - llms.txt missing 7 Key Pages, needs update.
 8. **GMB NAP cross-reference complete.** All 3 location listings (Glendale, Scottsdale, Phoenix PHP/IOP) match siteData and JSON-LD exactly: business name, street address, phone number formatting.
+   - PENDING-EXTERNAL 2026-05-26 - requires GMB NAP cross-check on 3 listings.
 9. **Vercel 404 monitoring set up** and 24 hours of post-fix traffic shows zero unexpected 404s.
+   - PENDING-EXTERNAL 2026-05-26 - requires Vercel 404 monitoring, 24h post-flip.
 10. **DNS TTL set to 5 minutes for at least 7 days before cutover**, so rollback is fast if needed.
+    - NOT-GREEN 2026-05-26 - TTL is 600s, criterion requires 300s held 7 days.
 11. **Rollback procedure documented and dry-run tested.**
+    - NOT-GREEN 2026-05-26 - rollback documented but dry-run never executed.
 12. **HubSpot form integration verified.** Every live HubSpot form on WordPress has a matching working implementation on Next.js. Test submission for each form confirms contact creation in HubSpot. Drip workflows continue firing without disruption.
+    - PENDING-EXTERNAL 2026-05-26 - HubSpot form verification pending, see criterion 3.
 13. **Blog content gap closed.** Every WordPress blog post with non-zero traffic exists on Next.js with the same canonical slug, OR has an explicit redirect rule in `next.config.mjs` pointing to a topical sibling. Zero hard-404 blog URLs post-cutover. — **✓ GREEN 2026-05-08** (closed by A13, commit `cd362bf`; audit `46896b1` confirmed the gap was 3 posts, all Option B redirected to topical siblings; 51 of 54 WP posts handled, 6 line additions to `next.config.mjs`).
 
 When all 13 criteria are green, cutover proceeds on the next Tuesday morning Arizona time.
