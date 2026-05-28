@@ -97,7 +97,7 @@ export default function RootLayout({
         />
       </head>
       <body className="font-body antialiased bg-white">
-        {children}
+        <main>{children}</main>
         <LiveChatLoader />
       </body>
     </html>
