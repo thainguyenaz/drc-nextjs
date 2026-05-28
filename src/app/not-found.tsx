@@ -17,7 +17,7 @@ export default function NotFound() {
   return (
     <>
       <Navigation />
-      <main className="min-h-[70vh] bg-cream">
+      <div className="min-h-[70vh] bg-cream">
         <div className="max-w-3xl mx-auto px-6 py-20 text-center">
           <h1 className="font-display text-5xl md:text-6xl text-forest font-bold mb-4">
             Page Not Found
@@ -64,7 +64,7 @@ export default function NotFound() {
             </div>
           </div>
         </div>
-      </main>
+      </div>
       <Footer />
     </>
   );

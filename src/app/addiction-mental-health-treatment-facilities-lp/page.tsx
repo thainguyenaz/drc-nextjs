@@ -80,7 +80,7 @@ export default function AdsLandingPage() {
           </div>
         </header>
 
-        <main className="flex-1">
+        <div className="flex-1">
           {/* Hero + CTA */}
           <section className="relative">
             <div className="max-w-container mx-auto px-6 py-12 lg:py-16 grid lg:grid-cols-5 gap-10 lg:gap-14 items-start">
@@ -273,7 +273,7 @@ export default function AdsLandingPage() {
               </div>
             </div>
           </section>
-        </main>
+        </div>
 
         {/* Minimal footer — phone + legal only, no nav links */}
         <footer className="bg-forest text-white/80">
