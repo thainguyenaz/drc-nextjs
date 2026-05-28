@@ -11,7 +11,10 @@
 Cutover proceeds when **all** of the following are true:
 
 1. **All audit phases (Sections A through I) close as PASS or WARN.** Zero CRITICAL findings outstanding.
-   - NOT-GREEN 2026-05-26 - open: /alcohol-rehab/ disposition, THIN-NX content gap on /mental-health, /get-help, /addiction/alcoholism-treatment, and Sections F/G/H execution.
+   - NOT-GREEN 2026-05-27. Open: sub-task B (THIN-NX content gap, 3 pages) and Sections F/G/H execution. Closed: sub-task A (/alcohol-rehab/ hard-404).
+     - Sub-task A CLOSED 2026-05-27: /alcohol-rehab/ hard-404, no 301. Evidence: GSC URL Inspection "unknown to Google", Last crawl N/A, no referring sitemaps; Performance 3-mo "Page contains alcohol-rehab" = 0 clicks / 0 impressions / empty queries. Residual direct-referral risk theoretical, caught reactively via criterion 9.
+     - Sub-task B OPEN: content gap on /mental-health, /get-help, /addiction/alcoholism-treatment. Under investigation 2026-05-27 (gap re-verification + GSC traffic check in progress).
+     - Sections F/G/H execution still pending.
 2. **All open Tickets shipped** (currently 13, 14, 15, and any surfaced during Phases 4-9). No "blocked on content port" rules in `next.config.mjs`.
    - GREEN 2026-05-26 - Tickets 13, 14 shipped; Ticket 15 closed as won't-do (0 hits/30d, redirect to /resources in place); no blocked-on-content-port rules in next.config.mjs.
 3. **Every lead-capture form on the site tested end-to-end.** Confirmed: form submits successfully, HubSpot contact created, and Admissions notified by email and Telegram. Test minimum: contact form, admissions form, insurance verification form, partner referral form, any landing-page form.
