@@ -284,6 +284,43 @@ These are not flip-blocking factual contradictions, but they are visible quality
 
 ---
 
+## Section 3: Gender designation on locations (pre-cutover canonical additions)
+
+Tonight's C1 pre-audit (2026-05-29) found that the gender-specific facility designation, Glendale as an adult-men residential facility and Scottsdale as an adult-women residential facility the majority of the time (occasionally coed when the Glendale men's facility reaches capacity), exists ONLY in the local FAQ arrays on `/locations/glendale` and `/locations/scottsdale`. The canonical FAQ entries in `src/data/faq-data.ts` carry no gender designation at all. The C1 dedupe removes the local arrays from both pages, so the gender designation would disappear from the FAQ surface entirely unless it is added to canonical. This section captures the two questions needed to preserve that content. G1 is already decided and is recorded here for clinical visibility only. G2 is held for An because the framing has an advertising-truth implication.
+
+---
+
+### Item G1 (Glendale): men-only designation. DECIDED, FYI to clinical
+
+**Page:** `/locations/glendale`
+**Question being added to canonical:** "Is Glendale a men-only facility?"
+
+**ANSWER (decided by Thai 2026-05-28):**
+> Yes. Glendale is an adult-men-only residential facility, no exceptions.
+
+**Status:** FYI / DECIDED. No An action needed. This answer is being added to the canonical Glendale FAQ in commit 2 of the C1 sequence. Recorded here for clinical visibility.
+
+---
+
+### Item G2 (Scottsdale): women-only designation. PENDING An review
+
+**Page:** `/locations/scottsdale`
+**Question being considered for canonical:** "Is Scottsdale a women-only facility?"
+
+**Context:** Scottsdale operates as a women-only residential program the majority of the time, but transitions to coed admissions when the Glendale men's facility reaches capacity. Thai held this question from auto-decision because the framing carries a compliance implication that mirrors Section 1 Item 1 (the prescription-drug detox-location claim): advertising a service description on an accredited facility that may not match operational reality. An's confirmation is needed on the correct canonical framing.
+
+**Framing options (An, choose one):**
+1. "Scottsdale is our women's residential program." Clean and search-friendly, but inaccurate during coed periods. Possible advertising-truth issue on an accredited facility.
+2. "Scottsdale primarily serves women, with capacity for coed admissions when the Glendale men's facility reaches occupancy." Accurate, but introduces admissions-call ambiguity, since callers may ask which applies to them.
+3. Omit the gender designation from the canonical Scottsdale FAQ entirely. Loses the "women's rehab Scottsdale" search-intent capture, but carries no over-claim risk.
+
+**TRUE ANSWER (clinical confirmation):** ____
+(Selected framing: option ____ , or alternative wording: ____ )
+
+**Status:** PENDING An review. BLOCKS the canonical Scottsdale gender question from shipping until resolved. The Glendale G1 addition (commit 2) does not depend on this; G2 ships in a later commit only after An confirms.
+
+---
+
 ## Notes
 
 - All quotes above are taken verbatim from `src/data/faq-data.ts` and the per-page `const faqs = [...]` arrays inside each `page.tsx` as of 2026-05-28.
