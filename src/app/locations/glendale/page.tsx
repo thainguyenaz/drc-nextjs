@@ -5,7 +5,6 @@ import Navigation from "@/components/Navigation";
 import PageHero from "@/components/PageHero";
 import LocationCollision from "@/components/LocationCollision";
 import VideoLightbox from "@/components/VideoLightbox";
-import ConditionFAQ from "@/components/ConditionFAQ";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import { LocalBusinessSchema, SpeakableSchema, VideoSchemas } from "@/lib/seo";
@@ -63,41 +62,6 @@ const gallery = [
   { src: "/images/glendale/Glendale-Tennis.jpg", alt: "Tennis court at Desert Recovery Centers Glendale luxury rehab facility" },
   { src: "/images/glendale/Glendale-Game-Room.jpg", alt: "Game and recreation room at Desert Recovery Centers Glendale treatment center" },
   { src: "/images/glendale/Glendale-Group-Room.jpg", alt: "Group therapy room at Desert Recovery Centers Glendale rehab in Arizona" },
-];
-
-const faqs = [
-  {
-    q: "Where is the Glendale facility located?",
-    a: "Our flagship Glendale center is located at 8105 W Frier Dr, Glendale, AZ 85303. It's easily accessible from the I-17, Loop 101, and US-60, serving the entire West Valley including Peoria, Surprise, Avondale, Goodyear, and Buckeye.",
-  },
-  {
-    q: "Why is Glendale considered your flagship facility?",
-    a: "Our Glendale location was our first center and remains our largest at 7,500 square feet. It offers the widest range of amenities, basketball court, tennis court, pool, gym, billiards, and massage room. Glendale is a male-only residential treatment center; clients who step down to PHP or IOP transition to our outpatient center in Phoenix.",
-  },
-  {
-    q: "What programs are available at the Glendale location?",
-    a: "The Glendale location offers Residential Treatment (24/7 live-in care for adult men). Clients ready for a step-down to PHP or IOP transition to our outpatient center in Phoenix at 4160 N. 108th Ave. Your clinical team recommends the right level of care based on your evaluation.",
-  },
-  {
-    q: "What conditions do you treat at the Glendale center?",
-    a: "We treat the full spectrum of substance use disorders, alcohol, opioids, fentanyl, cocaine, meth, prescription drugs, and mental health conditions including anxiety, depression, PTSD, bipolar disorder, OCD, personality disorders, ADHD, and schizophrenia. Our dual diagnosis approach treats co-occurring conditions simultaneously.",
-  },
-  {
-    q: "Do you accept insurance at the Glendale location?",
-    a: "Desert Recovery Centers accepts out-of-network coverage from most major commercial insurance plans (Aetna, Blue Cross Blue Shield, Cigna, UnitedHealthcare, Humana, Magellan, and others), is in-network with TriCare and TriWest, and offers cash-pay options. Our admissions team verifies your benefits at no cost.",
-  },
-  {
-    q: "What is the clinical team like at Glendale?",
-    a: "Your care is led by licensed clinical psychologists and overseen by our board-certified psychiatrist and Medical Director, Dr. Greg Carr, MD. Registered nurses provide 24/7 medical monitoring, and licensed therapists deliver individual and group sessions daily. Our clinical director, Dr. An Nguyen, oversees treatment quality across all locations.",
-  },
-  {
-    q: "Can my family visit the Glendale facility?",
-    a: "Yes, family involvement is encouraged. We offer designated visiting hours and a family therapy program including education sessions, joint therapy, and family support groups. The Glendale location is centrally located in the West Valley, making visits convenient for families throughout the area.",
-  },
-  {
-    q: "How quickly can I start treatment at Glendale?",
-    a: "Most clients begin treatment within 48 hours of their first call. Our admissions team is available 24/7 at (623) 323-1012 and handles insurance verification, clinical assessment, and intake coordination rapidly so there's no unnecessary delay when you're ready.",
-  },
 ];
 
 export default function GlendaleLocationPage() {
@@ -316,7 +280,6 @@ export default function GlendaleLocationPage() {
 
       <PhotoGallery photos={gallery} title="Glendale Facility Gallery" />
 
-      <ConditionFAQ items={faqs} />
       <AEOBlock entries={[
         {
           question: "Is there a Desert Recovery Centers in Glendale?",
