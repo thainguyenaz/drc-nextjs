@@ -7,7 +7,6 @@ import Footer from "@/components/Footer";
 import { MedicalConditionSchema, MedicalWebPageSchema, VideoSchemas } from "@/lib/seo";
 import AEOBlock from "@/components/AEOBlock";
 import RelatedPages from "@/components/RelatedPages";
-import ConditionFAQ from "@/components/ConditionFAQ";
 import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
 import { faqData } from "@/data/faq-data";
 import SchemaScript from "@/components/SchemaScript";
@@ -32,29 +31,6 @@ export const metadata: Metadata = {
     images: [{ url: meta.ogImage ?? "https://desertrecoverycenters.com/images/scottsdale/DRC-DRONE-SCOTTSDALE-08-01-2024-August-01-202400006-2.jpg", alt: meta.title }],
   },
 };
-
-const faqs = [
-  {
-    question: "Can heroin addiction be treated?",
-    answer:
-      "Yes. Heroin addiction is a treatable medical condition. At Desert Recovery Centers, we coordinate medically supervised detox through partner facilities, combined with MAT and behavioral therapy at our residential locations. Our Arizona facilities maintain just 10 beds per location for individualized, high-quality care.",
-  },
-  {
-    question: "How long does heroin rehab take?",
-    answer:
-      "Heroin detox typically lasts 7 to 14 days, followed by 30 days of residential treatment. Many clients benefit from extended MAT and step-down care through PHP and IOP. Desert Recovery Centers tailors every treatment timeline to your unique situation and recovery goals.",
-  },
-  {
-    question: "Does insurance cover heroin addiction treatment?",
-    answer:
-      "Yes, most major insurance plans cover heroin addiction treatment at Desert Recovery Centers. Coverage varies by plan and provider. Our admissions team will verify your benefits and walk you through any out-of-pocket costs before you begin.",
-  },
-  {
-    question: "What medications are used for heroin withdrawal?",
-    answer:
-      "Medically supervised heroin detox may include buprenorphine (Suboxone), naltrexone (Vivitrol), and comfort medications for pain, nausea, and insomnia. Our dual diagnosis approach also treats co-occurring conditions like depression, anxiety, and PTSD alongside opioid dependence.",
-  },
-];
 
 export default function HeroinAddictionPage() {
   return (
@@ -184,7 +160,6 @@ export default function HeroinAddictionPage() {
       </section>
 
       <AddictionPrograms />
-      <ConditionFAQ items={faqs} />
       <AEOBlock
         entries={[
           {
