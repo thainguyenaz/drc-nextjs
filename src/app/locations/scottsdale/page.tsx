@@ -5,7 +5,6 @@ import Navigation from "@/components/Navigation";
 import PageHero from "@/components/PageHero";
 import LocationCollision from "@/components/LocationCollision";
 import VideoLightbox from "@/components/VideoLightbox";
-import ConditionFAQ from "@/components/ConditionFAQ";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import { LocalBusinessSchema, SpeakableSchema, VideoSchemas } from "@/lib/seo";
@@ -63,41 +62,6 @@ const gallery = [
   { src: "/images/scottsdale/DRC-SERANITY-NORTH-SCOTTSDALE-08-01-2024-August-01-202400001-2.jpg", alt: "Serenity therapy room at Desert Recovery Centers Scottsdale rehab facility" },
   { src: "/images/scottsdale/DRC-OUTSIDE-NORTH-SCOTTSDALE-08-01-2024-1553August-01-202400004-2.jpg", alt: "Outdoor patio and mountain views at Desert Recovery Centers Scottsdale Arizona" },
   { src: "/images/scottsdale/DRC-VHARMONY-ROOM-NORTH-SCOTTSDALE-08-01-2024-0631August-01-202400010-2.jpg", alt: "Harmony therapy room at Desert Recovery Centers Scottsdale treatment center" },
-];
-
-const faqs = [
-  {
-    q: "Where exactly is the Scottsdale facility?",
-    a: "Our Scottsdale center is located at 23222 N Church Rd, Scottsdale, AZ 85255, in the north Scottsdale area surrounded by stunning mountain views and serene desert landscape. It's easily accessible from the Loop 101, Scottsdale Road, and the Pima Freeway.",
-  },
-  {
-    q: "What programs are available at the Scottsdale location?",
-    a: "The Scottsdale location offers Residential Treatment (24/7 live-in care for adult women). Clients ready for a step-down to PHP or IOP transition to our outpatient center in Phoenix at 4160 N. 108th Ave. Your clinical team recommends the right level of care based on your evaluation.",
-  },
-  {
-    q: "What conditions do you treat at the Scottsdale center?",
-    a: "We treat the full spectrum of mental health conditions and substance use disorders, including anxiety, depression, PTSD, bipolar disorder, OCD, alcohol addiction, opioid dependence, stimulant addiction, and more. Our dual diagnosis approach treats co-occurring conditions simultaneously for stronger outcomes.",
-  },
-  {
-    q: "Do you accept insurance at the Scottsdale location?",
-    a: "Desert Recovery Centers accepts out-of-network coverage from most major commercial insurance plans (Aetna, Blue Cross Blue Shield, Cigna, UnitedHealthcare, Humana, Magellan, and others), is in-network with TriCare and TriWest, and offers cash-pay options. Our admissions team verifies your benefits at no cost.",
-  },
-  {
-    q: "What is the clinical team like at Scottsdale?",
-    a: "Your care team includes licensed clinical psychologists, a board-certified psychiatrist, registered nurses, and licensed therapists. Our clinical director, Dr. An Nguyen, is a Licensed Clinical Psychologist who oversees treatment quality across all locations. This is doctoral-level care, not a counselor-driven program.",
-  },
-  {
-    q: "How long does residential treatment typically last?",
-    a: "Residential stays typically range from 30 days, depending on the severity and complexity of your condition. Your clinical team continuously evaluates your progress and adjusts the timeline to ensure you have the strongest possible foundation before stepping down to a lower level of care.",
-  },
-  {
-    q: "Can family members visit the Scottsdale facility?",
-    a: "Absolutely. We encourage family involvement as a core part of recovery. Family members can visit during designated hours and participate in our family therapy program, including education sessions, joint therapy, and family support groups. The north Scottsdale location is convenient for families throughout the metro area.",
-  },
-  {
-    q: "What makes the Scottsdale location different from other DRC facilities?",
-    a: "Our Scottsdale center is nestled in north Scottsdale with panoramic mountain views and a serene desert setting. It features gender-specific group therapy, a pool, tennis and basketball courts, a state-of-the-art gym, massage room, and a peaceful outdoor environment that supports contemplative healing. It's our most scenically stunning location.",
-  },
 ];
 
 export default function ScottsdaleLocationPage() {
@@ -315,7 +279,6 @@ export default function ScottsdaleLocationPage() {
 
       <PhotoGallery photos={gallery} title="Scottsdale Facility Gallery" />
 
-      <ConditionFAQ items={faqs} />
       <AEOBlock entries={[
         {
           question: "Is there a Desert Recovery Centers in Scottsdale?",
