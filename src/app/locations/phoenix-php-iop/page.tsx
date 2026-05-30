@@ -13,6 +13,7 @@ import SchemaScript from "@/components/SchemaScript";
 import Breadcrumb from "@/components/Breadcrumb";
 import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
 import { faqData } from "@/data/faq-data";
+import { getFAQSchema } from "@/lib/schema";
 import FAQSection from "@/components/FAQSection";
 import PhoenixPHPContent from "./PhoenixPHPContent";
 
@@ -154,85 +155,6 @@ const clinicSchema = {
   parentOrganization: { "@id": `${SITE_URL}/#organization` },
 };
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "What is a Partial Hospitalization Program (PHP) in Phoenix?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "A Partial Hospitalization Program (PHP) is a structured outpatient level of care where clients attend treatment 5 to 6 hours per day, 5 days per week. At Desert Recovery Centers Phoenix, PHP includes group therapy, individual therapy, psychiatric care, and medication management. It is designed for individuals who need intensive clinical support but do not require overnight residential care. PHP is often used as a step down from inpatient treatment or as a direct entry point for those with moderate to severe mental health or substance use disorders.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What is an Intensive Outpatient Program (IOP) in Phoenix?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "An Intensive Outpatient Program (IOP) at Desert Recovery Centers Phoenix meets 3 hours per day, 3 to 5 days per week. IOP provides meaningful clinical programming, including group and individual therapy, while allowing clients to maintain daily responsibilities like work, school, or family. It is commonly used as a step down from PHP or residential treatment, or as a primary level of care for clients with a supportive home environment.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What is the address of the Desert Recovery Centers Phoenix PHP / IOP location?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "The Desert Recovery Centers Phoenix PHP / IOP center is located at 4160 N. 108th Ave, Phoenix, AZ 85037. You can reach the facility at (602) 905-8070. Admissions support is available 24 hours a day, 7 days a week.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Does Desert Recovery Centers Phoenix accept insurance?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "For commercial insurance, Desert Recovery Centers works on an out-of-network basis with major plans including Aetna, Blue Cross Blue Shield, Cigna, UnitedHealthcare, Humana, Magellan, and others. Many out-of-network plans provide significant coverage for our level of care. We are also in-network with TriCare and TriWest, and offer cash-pay options. Our admissions team verifies your benefits at no cost. Call (602) 905-8070 or visit our website to start a free insurance verification.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Is TMS therapy available at the Phoenix location?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. The Phoenix center houses a dedicated NeuroStar TMS therapy suite. NeuroStar is the only TMS system FDA cleared for depression, anxious depression, OCD, and adolescents ages 15 and older. TMS is non-invasive, requires no sedation, and sessions take approximately 19 minutes. It can be combined with PHP, IOP, or outpatient programming.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What is the difference between PHP and IOP treatment?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "PHP meets 5 to 6 hours per day, 5 days per week and is the more intensive option, appropriate for individuals who need significant daily clinical support. IOP meets 3 hours per day, 3 to 5 days per week, offering more schedule flexibility while still delivering meaningful therapy. Both include group therapy, individual therapy, and psychiatric support at Desert Recovery Centers Phoenix.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What mental health conditions are treated at the Phoenix PHP / IOP center?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Desert Recovery Centers Phoenix treats depression, anxiety disorders, PTSD and trauma, bipolar disorder, OCD, and co-occurring substance use disorders. All programming is individualized, evidence based, and clinically supervised. The facility is Joint Commission accredited.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How do I get admitted to the Phoenix PHP or IOP program?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Call (602) 905-8070 any time, day or night. Our admissions team conducts a brief clinical assessment by phone, verifies your insurance, and answers all your questions. Most clients are able to begin treatment within 48 hours of their first call.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Does the Phoenix location offer residential treatment?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "No. The Phoenix center specializes in outpatient services: PHP, IOP, OP, and TMS therapy. For residential (inpatient) treatment, Desert Recovery Centers operates separate facilities in Glendale and Scottsdale, Arizona. Clients often complete residential care and then step down to the Phoenix outpatient programs.",
-      },
-    },
-  ],
-};
-
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -246,7 +168,7 @@ const breadcrumbSchema = {
 export default function PhoenixPhpIopPage() {
   return (
     <>
-      <SchemaScript schema={[clinicSchema, faqSchema, breadcrumbSchema, {
+      <SchemaScript schema={[clinicSchema, getFAQSchema(faqData["locations/phoenix"]), breadcrumbSchema, {
         "@context": "https://schema.org",
         "@type": "HowTo",
         "name": "How to Get Admitted to Desert Recovery Centers Phoenix",
