@@ -135,6 +135,8 @@ const nextConfig = {
       { source: "/trauma/", destination: "/treatments/trauma-therapy", permanent: true },
       { source: "/ptsd", destination: "/mental-health/ptsd-treatment", permanent: true }, // 144
       { source: "/ptsd/", destination: "/mental-health/ptsd-treatment", permanent: true },
+      { source: "/mental-health/trauma-treatment", destination: "/treatments/trauma-therapy", permanent: true }, // Cluster A canonical (Option B)
+      { source: "/mental-health/trauma-treatment/", destination: "/treatments/trauma-therapy", permanent: true },
       { source: "/meth", destination: "/addiction/meth-addiction-treatment", permanent: true }, // 137
       { source: "/meth/", destination: "/addiction/meth-addiction-treatment", permanent: true },
       { source: "/alcohol", destination: "/addiction/alcoholism-treatment", permanent: true }, // 135

@@ -38,7 +38,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/mental-health/personality-disorder-treatment", priority: 0.7, changeFrequency: "weekly" },
     { path: "/mental-health/adhd-add", priority: 0.7, changeFrequency: "weekly" },
     { path: "/mental-health/schizophrenia-treatment", priority: 0.7, changeFrequency: "weekly" },
-    { path: "/mental-health/trauma-treatment", priority: 0.7, changeFrequency: "weekly" },
 
     // Addiction condition pages
     { path: "/addiction/alcoholism-treatment", priority: 0.7, changeFrequency: "weekly" },

@@ -75,9 +75,6 @@ export const videoData: Record<string, VideoEntry[]> = {
   "/mental-health/schizophrenia-treatment/": [
     { youtubeId: "rH2AgymLCh8", title: "Can Alcohol Consumption Lead to Psychosis?", description: "The link between alcohol use and psychosis, and treatment approaches for co-occurring psychotic disorders.", uploadDate: "2025-02-01T00:00:00+00:00" },
   ],
-  "/mental-health/trauma-treatment/": [
-    { youtubeId: "xVYH_9v8xDE", title: "How Does Trauma Impact Addiction Recovery Outcomes?", description: "Understanding how unresolved trauma affects addiction recovery and why trauma-informed care matters.", uploadDate: "2024-10-01T00:00:00+00:00" },
-  ],
 
   // ── ADDICTION CONDITION PAGES — 1 video each ──
   "/addiction/alcoholism-treatment/": [
