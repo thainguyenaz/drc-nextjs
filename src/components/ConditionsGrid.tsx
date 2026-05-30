@@ -140,11 +140,11 @@ export default function ConditionsGrid() {
           style={{ "--reveal-shift": "40px" } as React.CSSProperties}
         >
           <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
-            Conditions We Treat
+            Specialized Care
           </span>
           <div className="w-[60px] h-0.5 bg-gold mx-auto mt-4 mb-4" />
           <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold mb-4">
-            Mental Health Treatment
+            Conditions We Treat
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Evidence-based care for a wide range of mental health

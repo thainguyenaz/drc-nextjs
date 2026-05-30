@@ -100,7 +100,8 @@ export const siteData = {
   mentalHealth: [
     { name: "Anxiety Disorders", href: "/mental-health/anxiety-treatment", description: "Generalized anxiety, panic disorder, social anxiety, and phobias treated with proven therapeutic approaches." },
     { name: "Depression", href: "/mental-health/depression-treatment", description: "Major depressive disorder, persistent depression, and seasonal affective disorder addressed through integrated care." },
-    { name: "PTSD & Trauma", href: "/mental-health/ptsd-treatment", description: "Specialized trauma therapy including EMDR, somatic experiencing, and trauma-focused CBT for lasting healing." },
+    { name: "PTSD", href: "/mental-health/ptsd-treatment", description: "Treatment for flashbacks, nightmares, hypervigilance, and avoidance, helping your nervous system process traumatic memories so they no longer control daily life." },
+    { name: "Trauma Therapy", href: "/treatments/trauma-therapy", description: "Specialized trauma therapy using EMDR, somatic experiencing, and trauma-focused CBT to process and heal from traumatic experiences." },
     { name: "Bipolar Disorder", href: "/mental-health/bipolar-disorder-treatment", description: "Mood stabilization, medication management, and psychotherapy for bipolar I and bipolar II disorders." },
     { name: "OCD", href: "/mental-health/ocd-treatment", description: "Exposure and response prevention (ERP) and cognitive therapy for obsessive-compulsive disorder." },
     { name: "Personality Disorders", href: "/mental-health/personality-disorder-treatment", description: "DBT-based treatment for borderline personality disorder and other personality conditions." },
