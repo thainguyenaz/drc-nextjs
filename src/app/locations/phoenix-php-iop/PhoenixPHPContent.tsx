@@ -241,7 +241,7 @@ function ProgramsTabs() {
             >
               <span
                 className={`text-xs font-bold tracking-widest uppercase block mb-0.5 ${
-                  activeTab === prog.tag ? "text-gold" : "text-gray-400"
+                  activeTab === prog.tag ? "text-gold" : "text-gray-600"
                 }`}
               >
                 {prog.tag}
@@ -740,7 +740,7 @@ export default function PhoenixPHPContent() {
               Verify Insurance Free
             </Link>
           </div>
-          <p className="text-white/40 text-xs">
+          <p className="text-white/70 text-xs">
             If you are experiencing a medical emergency, please call 911. Desert Recovery Centers does not provide emergency services.
           </p>
         </motion.div>
@@ -768,7 +768,7 @@ export default function PhoenixPHPContent() {
                 </span>
               ))}
             </div>
-            <p className="text-gray-400 text-xs">
+            <p className="text-gray-600 text-xs">
               Coverage varies by plan. Call{" "}
               <a href="tel:+16029058070" className="text-gold hover:underline">
                 (602) 905-8070

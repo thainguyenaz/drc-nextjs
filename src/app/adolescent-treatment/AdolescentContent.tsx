@@ -612,7 +612,7 @@ export default function AdolescentContent({ checklistSlot }: { checklistSlot?: R
               Email Us
             </a>
           </div>
-          <p className="text-white/40 text-xs mt-8 max-w-xl mx-auto">
+          <p className="text-white/70 text-xs mt-8 max-w-xl mx-auto">
             If your teenager is in immediate danger, please call 911 or go to your nearest emergency room. Desert Recovery Centers does not provide emergency or crisis stabilization services.
           </p>
         </motion.div>
@@ -634,7 +634,7 @@ export default function AdolescentContent({ checklistSlot }: { checklistSlot?: R
               </span>
             ))}
           </div>
-          <p className="text-gray-400 text-xs">
+          <p className="text-gray-600 text-xs">
             Coverage varies by plan. Call (602) 905-8070 for a free benefits verification specific to your teenager&apos;s insurance.
           </p>
         </div>

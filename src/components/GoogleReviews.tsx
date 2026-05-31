@@ -90,7 +90,7 @@ function ReviewCard({ review }: { review: Review }) {
           <p className="font-semibold text-forest text-sm truncate">
             {review.author}
           </p>
-          <p className="text-gray-400 text-xs">{review.time}</p>
+          <p className="text-gray-600 text-xs">{review.time}</p>
         </div>
       </div>
       <StarRating rating={review.rating} />

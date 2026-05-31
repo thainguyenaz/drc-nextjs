@@ -150,7 +150,7 @@ export default function AdolescentProgramsTabs() {
             >
               <span
                 className={`text-xs font-bold tracking-widest uppercase block mb-0.5 ${
-                  activeId === program.id ? "text-gold" : "text-gray-400"
+                  activeId === program.id ? "text-gold" : "text-gray-600"
                 }`}
               >
                 {program.label}

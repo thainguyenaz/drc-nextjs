@@ -171,7 +171,7 @@ export default function FacilitiesPage() {
                   <h2 className="font-display text-xl text-forest font-semibold mb-1">
                     {facility.name}
                   </h2>
-                  <p className="text-gray-400 text-sm mb-3">
+                  <p className="text-gray-600 text-sm mb-3">
                     {facility.address}
                   </p>
                   <p className="text-gray-600 text-sm leading-relaxed mb-4">
