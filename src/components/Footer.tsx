@@ -130,14 +130,14 @@ export default function Footer() {
 
         {/* Bottom */}
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-white/40 text-xs">
+          <p className="text-white/70 text-xs">
             &copy; {new Date().getFullYear()} Desert Recovery Centers. All
             rights reserved.
           </p>
-          <div className="flex gap-6 text-xs text-white/40">
-            <Link href="/privacy-policy" className="hover:text-white/60 transition-colors">Privacy Policy</Link>
-            <Link href="/terms-of-service" className="hover:text-white/60 transition-colors">Terms of Service</Link>
-            <Link href="/hipaa-notice" className="hover:text-white/60 transition-colors">HIPAA Notice</Link>
+          <div className="flex gap-6 text-xs text-white/70">
+            <Link href="/privacy-policy" className="hover:text-white/90 transition-colors">Privacy Policy</Link>
+            <Link href="/terms-of-service" className="hover:text-white/90 transition-colors">Terms of Service</Link>
+            <Link href="/hipaa-notice" className="hover:text-white/90 transition-colors">HIPAA Notice</Link>
           </div>
         </div>
         <p className="text-white/30 text-xs mt-4 text-center">

@@ -184,7 +184,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                           <p className="text-sm text-forest font-medium group-hover:text-gold transition-colors line-clamp-2">
                             {r.title}
                           </p>
-                          <p className="text-xs text-gray-400 mt-0.5">{r.readTime} min read</p>
+                          <p className="text-xs text-gray-600 mt-0.5">{r.readTime} min read</p>
                         </Link>
                       ))}
                     </div>
@@ -223,7 +223,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                 {related.map((r) => (
                   <Link key={r.slug} href={`/resources/blog/${r.slug}`} className="group block bg-cream rounded-xl p-4 hover:shadow-md transition-shadow">
                     <p className="text-sm text-forest font-semibold group-hover:text-gold transition-colors">{r.title}</p>
-                    <p className="text-xs text-gray-400 mt-1">{r.readTime} min read</p>
+                    <p className="text-xs text-gray-600 mt-1">{r.readTime} min read</p>
                   </Link>
                 ))}
               </div>

@@ -110,7 +110,7 @@ export default function TMSVideoSection() {
         <p className="text-gray-500 text-sm text-center mt-8 max-w-2xl mx-auto italic">
           Videos courtesy of NeuroStar.
         </p>
-        <p className="text-gray-400 text-xs text-center mt-3 max-w-2xl mx-auto">
+        <p className="text-gray-600 text-xs text-center mt-3 max-w-2xl mx-auto">
           Individual results may vary. Patient testimonials reflect personal experiences with NeuroStar TMS therapy and are not a guarantee of outcome. Patients featured in these videos are not necessarily patients of Desert Recovery Centers.
         </p>
       </div>

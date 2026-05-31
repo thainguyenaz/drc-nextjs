@@ -365,7 +365,7 @@ export default function GetHelpForm({ variant = "lp" }: GetHelpFormProps) {
               : "Verifying..."}
         </button>
 
-        <p className="text-xs text-gray-400 text-center">
+        <p className="text-xs text-gray-600 text-center">
           Protected by HIPAA &amp; 42 CFR Part 2. Your information is completely confidential.
         </p>
       </form>

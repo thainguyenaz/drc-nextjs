@@ -124,7 +124,7 @@ export default function InsuranceContent() {
               </motion.div>
             ))}
           </div>
-          <p className="text-center text-gray-400 text-xs mt-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-center text-gray-600 text-xs mt-8 max-w-3xl mx-auto leading-relaxed">
             Logos shown are trademarks of their respective owners and do not imply endorsement, partnership, or in-network status. Desert Recovery Centers is in-network with TriCare and TriWest only; commercial insurance is processed on an out-of-network basis. Our admissions team will verify your specific benefits at no cost.
           </p>
           <p className="text-center text-gray-500 text-sm mt-4">

@@ -127,7 +127,7 @@ export default function BlogCategoryFilter({ posts }: { posts: BlogPost[] }) {
                     <p className="text-gray-500 text-sm leading-relaxed mb-3 line-clamp-2">
                       {post.excerpt}
                     </p>
-                    <div className="flex items-center justify-between text-xs text-gray-400">
+                    <div className="flex items-center justify-between text-xs text-gray-600">
                       <span>{formatDate(post.datePublished)}</span>
                       <span>{post.readTime} min read</span>
                     </div>
@@ -138,7 +138,7 @@ export default function BlogCategoryFilter({ posts }: { posts: BlogPost[] }) {
           </motion.div>
 
           {filtered.length === 0 && (
-            <p className="text-center text-gray-400 py-12">No posts in this category yet.</p>
+            <p className="text-center text-gray-600 py-12">No posts in this category yet.</p>
           )}
         </div>
       </section>

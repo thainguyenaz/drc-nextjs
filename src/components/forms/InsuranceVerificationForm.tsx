@@ -368,7 +368,7 @@ export default function InsuranceVerificationForm() {
 
       <div>
         <label htmlFor="iv-front" className="block text-sm font-medium text-forest mb-1.5">
-          Front of Insurance Card <span className="text-gray-400 text-xs font-normal">(optional)</span>
+          Front of Insurance Card <span className="text-gray-600 text-xs font-normal">(optional)</span>
         </label>
         <input
           id="iv-front"
@@ -387,7 +387,7 @@ export default function InsuranceVerificationForm() {
 
       <div>
         <label htmlFor="iv-back" className="block text-sm font-medium text-forest mb-1.5">
-          Back of Insurance Card <span className="text-gray-400 text-xs font-normal">(optional)</span>
+          Back of Insurance Card <span className="text-gray-600 text-xs font-normal">(optional)</span>
         </label>
         <input
           id="iv-back"
@@ -482,7 +482,7 @@ export default function InsuranceVerificationForm() {
             : "Verifying..."}
       </button>
 
-      <p className="text-xs text-gray-400 text-center">
+      <p className="text-xs text-gray-600 text-center">
         Protected by HIPAA &amp; 42 CFR Part 2. Your information is completely confidential.
       </p>
       </form>
