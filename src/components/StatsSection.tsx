@@ -60,7 +60,7 @@ export default function StatsSection() {
                 {stat.label}
               </p>
               {stat.source && (
-                <span className="text-white/30 text-xs mt-2 block">({stat.source})</span>
+                <span className="text-white/70 text-xs mt-2 block">({stat.source})</span>
               )}
             </div>
           ))}

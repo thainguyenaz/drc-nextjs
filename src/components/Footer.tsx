@@ -140,7 +140,7 @@ export default function Footer() {
             <Link href="/hipaa-notice" className="hover:text-white/90 transition-colors">HIPAA Notice</Link>
           </div>
         </div>
-        <p className="text-white/30 text-xs mt-4 text-center">
+        <p className="text-white/70 text-xs mt-4 text-center">
           If you are experiencing a medical emergency, please call 911. Desert
           Recovery Centers does not provide emergency services.
         </p>
