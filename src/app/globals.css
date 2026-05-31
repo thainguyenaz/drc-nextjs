@@ -157,3 +157,18 @@ h1, h2, h3 {
 @media (prefers-reduced-motion: reduce) {
   details.faq-item::details-content { transition: none; }
 }
+
+/* Pre-reserve LiveChat launcher corner to prevent layout shift on late injection.
+   LiveChat injects #chat-widget-container (position:fixed) after user interaction
+   or a 10s fallback. The CLS is intra-element movement: LiveChat's own JS
+   repositions the fixed container during load, not document reflow (fixed elements
+   do not reserve flow space). Pinning the container to the bottom-right corner at
+   first paint anchors its origin so the load does not register as a shift.
+   No size constraint is set, so the expanded chat panel is not clipped. z-index
+   matches LiveChat's own value (2147483639). Verify offsets in a real browser. */
+#chat-widget-container {
+  position: fixed !important;
+  bottom: 0 !important;
+  right: 0 !important;
+  z-index: 2147483639;
+}
