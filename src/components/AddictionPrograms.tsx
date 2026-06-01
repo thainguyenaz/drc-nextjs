@@ -1,8 +1,8 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Link from "next/link";
 import { siteData } from "@/lib/site-data";
+import { useScrollReveal } from "@/lib/useScrollReveal";
 
 function AddictionIcon({ name }: { name: string }) {
   const cls = "w-9 h-9 text-sage";
@@ -117,15 +117,14 @@ function AddictionIcon({ name }: { name: string }) {
 }
 
 export default function AddictionPrograms() {
+  const { ref: headerRef, visible: headerVisible } = useScrollReveal<HTMLDivElement>({ rootMargin: "-80px" });
+  const { ref: gridRef, visible: gridVisible } = useScrollReveal<HTMLDivElement>({ rootMargin: "-50px" });
   return (
     <section className="py-20 md:py-28 bg-white">
       <div className="max-w-container mx-auto px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-14"
+        <div
+          ref={headerRef}
+          className={`text-center mb-14 reveal-fade-up${headerVisible ? " reveal-in" : ""}`}
         >
           <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
             Substance Use Treatment
@@ -138,16 +137,14 @@ export default function AddictionPrograms() {
             From detox coordination through long-term recovery support, our
             addiction programs are built on science, guided by compassion.
           </p>
-        </motion.div>
+        </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-5">
+        <div ref={gridRef} className="grid sm:grid-cols-2 lg:grid-cols-5 gap-5">
           {siteData.addictionPrograms.map((program, i) => (
-            <motion.div
+            <div
               key={program.name}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.4, delay: i * 0.1 }}
+              className={`reveal-fade-up${gridVisible ? " reveal-in" : ""}`}
+              style={{ "--reveal-delay": `${i * 0.1}s`, "--reveal-duration": "0.4s" } as React.CSSProperties}
             >
               <Link
                 href={program.href}
@@ -170,7 +167,7 @@ export default function AddictionPrograms() {
                   Learn More →
                 </span>
               </Link>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
