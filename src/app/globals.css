@@ -130,6 +130,34 @@ h1, h2, h3 {
   }
 }
 
+/* TeamSection bio modal — CSS enter/exit (replaces framer-motion AnimatePresence).
+   Open: keyframe plays on mount (no rAF needed). Close: JS adds the *-closing class,
+   the more-specific exit rule plays, and onAnimationEnd unmounts. Reduced-motion
+   disables both keyframes; the close path unmounts immediately in JS. */
+@keyframes modalBackdropIn  { from { opacity: 0; } to { opacity: 1; } }
+@keyframes modalBackdropOut { from { opacity: 1; } to { opacity: 0; } }
+@keyframes modalPanelIn {
+  from { opacity: 0; transform: scale(0.95) translateY(20px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+@keyframes modalPanelOut {
+  from { opacity: 1; transform: scale(1) translateY(0); }
+  to   { opacity: 0; transform: scale(0.95) translateY(20px); }
+}
+.modal-backdrop { animation: modalBackdropIn 0.2s ease both; }
+.modal-backdrop.modal-backdrop-closing { animation: modalBackdropOut 0.2s ease both; }
+.modal-panel { animation: modalPanelIn 0.3s cubic-bezier(0, 0, 0.58, 1) both; }
+.modal-panel.modal-panel-closing { animation: modalPanelOut 0.3s cubic-bezier(0, 0, 0.58, 1) both; }
+
+@media (prefers-reduced-motion: reduce) {
+  .modal-backdrop,
+  .modal-backdrop.modal-backdrop-closing,
+  .modal-panel,
+  .modal-panel.modal-panel-closing {
+    animation: none;
+  }
+}
+
 /* FAQSection (native <details>) expand/collapse animation — no JS / framer-motion.
    Design decision (2026-05-28): animate ONLY where the browser can do it
    symmetrically. Browsers with interpolate-size support (Chromium 129+: Chrome,
