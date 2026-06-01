@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { motion } from "framer-motion";
+import { useScrollReveal } from "@/lib/useScrollReveal";
 
 interface Review {
   author: string;
@@ -118,6 +118,7 @@ export default function GoogleReviews() {
   const [error, setError] = useState(false);
   const [shouldFetch, setShouldFetch] = useState(false);
   const sectionRef = useRef<HTMLElement | null>(null);
+  const { ref, visible } = useScrollReveal<HTMLDivElement>();
 
   useEffect(() => {
     const el = sectionRef.current;
@@ -163,12 +164,9 @@ export default function GoogleReviews() {
   return (
     <section ref={sectionRef} className="py-16 md:py-20 bg-forest relative overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
-      <motion.div
-        initial={{ opacity: 0, y: 24 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-        className="max-w-container mx-auto px-6"
+      <div
+        ref={ref}
+        className={`max-w-container mx-auto px-6 reveal-fade-up${visible ? " reveal-in" : ""}`}
       >
         {/* Header */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-10">
@@ -267,7 +265,7 @@ export default function GoogleReviews() {
             )}
           </>
         )}
-      </motion.div>
+      </div>
     </section>
   );
 }
