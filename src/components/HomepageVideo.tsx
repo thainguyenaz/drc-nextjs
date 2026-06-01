@@ -1,19 +1,18 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useScrollReveal } from "@/lib/useScrollReveal";
 import Image from "next/image";
 import VideoLightbox from "./VideoLightbox";
 
 export default function HomepageVideo() {
+  const { ref: headerRef, visible: headerVisible } = useScrollReveal<HTMLDivElement>({ rootMargin: "-80px" });
+  const { ref: videoRef, visible: videoVisible } = useScrollReveal<HTMLDivElement>({ rootMargin: "-60px" });
   return (
     <section className="py-20 md:py-28 bg-cream overflow-hidden">
       <div className="max-w-container mx-auto px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+        <div
+          ref={headerRef}
+          className={`text-center mb-12 reveal-fade-up${headerVisible ? " reveal-in" : ""}`}
         >
           <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
             Watch Our Story
@@ -26,14 +25,12 @@ export default function HomepageVideo() {
             Take a look inside our luxury treatment facilities and hear from our
             clinical team about our approach to lasting recovery.
           </p>
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true, margin: "-60px" }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="max-w-4xl mx-auto"
+        <div
+          ref={videoRef}
+          style={{ "--reveal-delay": "0.1s" } as React.CSSProperties}
+          className={`max-w-4xl mx-auto reveal-fade-up${videoVisible ? " reveal-in" : ""}`}
         >
           <VideoLightbox videoId="6x9IQq6h9Rk">
             <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-xl group">
@@ -48,7 +45,7 @@ export default function HomepageVideo() {
               <div className="absolute inset-0 bg-forest/20 group-hover:bg-forest/10 transition-colors duration-300" />
             </div>
           </VideoLightbox>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
