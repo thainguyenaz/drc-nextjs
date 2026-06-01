@@ -1,7 +1,6 @@
 "use client";
 
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { siteData } from "@/lib/site-data";
 import { useScrollReveal } from "@/lib/useScrollReveal";
@@ -41,23 +40,31 @@ function TeamCard({ member, i, onSelect }: { member: TeamMember; i: number; onSe
   );
 }
 
-function BioModal({ member, onClose }: { member: TeamMember; onClose: () => void }) {
+function BioModal({
+  member,
+  closing,
+  onClose,
+  onExited,
+}: {
+  member: TeamMember;
+  closing: boolean;
+  onClose: () => void;
+  onExited: () => void;
+}) {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.2 }}
-      className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
+    <div
+      className={`fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm modal-backdrop${closing ? " modal-backdrop-closing" : ""}`}
       onClick={onClose}
     >
-      <motion.div
-        initial={{ opacity: 0, scale: 0.95, y: 20 }}
-        animate={{ opacity: 1, scale: 1, y: 0 }}
-        exit={{ opacity: 0, scale: 0.95, y: 20 }}
-        transition={{ duration: 0.3, ease: "easeOut" }}
-        className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[85vh] overflow-y-auto"
+      <div
+        className={`bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[85vh] overflow-y-auto modal-panel${closing ? " modal-panel-closing" : ""}`}
         onClick={(e) => e.stopPropagation()}
+        onAnimationEnd={(e) => {
+          // Unmount ONLY on the panel's own EXIT animation:
+          // - `closing` guard ignores the entrance animation (ends with closing=false)
+          // - target===currentTarget ignores any bubbled child animationend
+          if (closing && e.target === e.currentTarget) onExited();
+        }}
       >
         <div className="flex flex-col sm:flex-row gap-6 p-6 sm:p-8">
           {/* Photo */}
@@ -88,16 +95,51 @@ function BioModal({ member, onClose }: { member: TeamMember; onClose: () => void
             Close
           </button>
         </div>
-      </motion.div>
-    </motion.div>
+      </div>
+    </div>
   );
 }
 
 export default function TeamSection() {
   const [selected, setSelected] = useState<TeamMember | null>(null);
+  const [closing, setClosing] = useState(false);
   const { ref: headerRef, visible: headerVisible } = useScrollReveal<HTMLDivElement>({ rootMargin: "-80px" });
   const { ref: leadershipRef, visible: leadershipVisible } = useScrollReveal<HTMLHeadingElement>();
   const { ref: clinicalRef, visible: clinicalVisible } = useScrollReveal<HTMLHeadingElement>();
+
+  // Idempotent: setting selected=null + closing=false twice is harmless (React bails on same-value).
+  const finishClose = useCallback(() => {
+    setSelected(null);
+    setClosing(false);
+  }, []);
+
+  const openModal = (member: TeamMember) => {
+    setClosing(false);
+    setSelected(member);
+  };
+
+  const requestClose = () => {
+    // Reduced-motion: skip the exit animation and unmount immediately.
+    // (The exit keyframe is disabled under reduced-motion, so onAnimationEnd
+    //  would never fire and the modal would otherwise stay stuck open.)
+    if (
+      typeof window !== "undefined" &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    ) {
+      finishClose();
+      return;
+    }
+    setClosing(true);
+  };
+
+  // Fallback: if onAnimationEnd never fires (interrupted animation, backgrounded
+  // tab, CSS conflict), unmount 50ms after the 300ms panel exit. Cleared if the
+  // close resolves first (onAnimationEnd flips `closing` false → cleanup runs).
+  useEffect(() => {
+    if (!closing) return;
+    const t = setTimeout(finishClose, 350);
+    return () => clearTimeout(t);
+  }, [closing, finishClose]);
 
   return (
     <>
@@ -131,7 +173,7 @@ export default function TeamSection() {
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
               {siteData.team.leadership.map((member, i) => (
-                <TeamCard key={member.name} member={member} i={i} onSelect={() => setSelected(member)} />
+                <TeamCard key={member.name} member={member} i={i} onSelect={() => openModal(member)} />
               ))}
             </div>
           </div>
@@ -147,7 +189,7 @@ export default function TeamSection() {
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
               {siteData.team.clinical.map((member, i) => (
-                <TeamCard key={member.name} member={member} i={i} onSelect={() => setSelected(member)} />
+                <TeamCard key={member.name} member={member} i={i} onSelect={() => openModal(member)} />
               ))}
             </div>
           </div>
@@ -155,9 +197,14 @@ export default function TeamSection() {
       </section>
 
       {/* Bio Modal */}
-      <AnimatePresence>
-        {selected && <BioModal member={selected} onClose={() => setSelected(null)} />}
-      </AnimatePresence>
+      {selected && (
+        <BioModal
+          member={selected}
+          closing={closing}
+          onClose={requestClose}
+          onExited={finishClose}
+        />
+      )}
     </>
   );
 }
