@@ -4,19 +4,18 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { siteData } from "@/lib/site-data";
+import { useScrollReveal } from "@/lib/useScrollReveal";
 
 type TeamMember = { name: string; title: string; image: string; bio: string; slug?: string };
 
 function TeamCard({ member, i, onSelect }: { member: TeamMember; i: number; onSelect: () => void }) {
+  const { ref, visible } = useScrollReveal<HTMLDivElement>({ rootMargin: "-50px" });
   return (
-    <motion.div
-      key={member.name}
+    <div
+      ref={ref}
       id={member.slug}
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-50px" }}
-      transition={{ duration: 0.4, delay: i * 0.1 }}
-      className="group cursor-pointer"
+      className={`group cursor-pointer reveal-fade-up${visible ? " reveal-in" : ""}`}
+      style={{ "--reveal-delay": `${i * 0.1}s`, "--reveal-duration": "0.4s" } as React.CSSProperties}
       onClick={onSelect}
     >
       <div className="relative w-full aspect-[4/5] rounded-2xl overflow-hidden mb-4 bg-gray-100">
@@ -38,7 +37,7 @@ function TeamCard({ member, i, onSelect }: { member: TeamMember; i: number; onSe
       </div>
       <h3 className="font-display text-base text-forest font-semibold text-center">{member.name}</h3>
       <p className="text-gray-500 text-sm mt-1 text-center">{member.title}</p>
-    </motion.div>
+    </div>
   );
 }
 
@@ -96,17 +95,17 @@ function BioModal({ member, onClose }: { member: TeamMember; onClose: () => void
 
 export default function TeamSection() {
   const [selected, setSelected] = useState<TeamMember | null>(null);
+  const { ref: headerRef, visible: headerVisible } = useScrollReveal<HTMLDivElement>({ rootMargin: "-80px" });
+  const { ref: leadershipRef, visible: leadershipVisible } = useScrollReveal<HTMLHeadingElement>();
+  const { ref: clinicalRef, visible: clinicalVisible } = useScrollReveal<HTMLHeadingElement>();
 
   return (
     <>
       <section id="team" className="py-20 md:py-28 bg-cream overflow-hidden">
         <div className="max-w-container mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-14"
+          <div
+            ref={headerRef}
+            className={`text-center mb-14 reveal-fade-up${headerVisible ? " reveal-in" : ""}`}
           >
             <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
               Our Team
@@ -119,19 +118,17 @@ export default function TeamSection() {
               Board-certified psychiatrists, licensed therapists, and dedicated
               support staff committed to your recovery.
             </p>
-          </motion.div>
+          </div>
 
           {/* Leadership */}
           <div className="mb-16">
-            <motion.h3
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4 }}
-              className="text-center font-body text-xs tracking-[0.25em] uppercase text-gold font-semibold mb-8"
+            <h3
+              ref={leadershipRef}
+              className={`text-center font-body text-xs tracking-[0.25em] uppercase text-gold font-semibold mb-8 reveal-fade-up${leadershipVisible ? " reveal-in" : ""}`}
+              style={{ "--reveal-duration": "0.4s" } as React.CSSProperties}
             >
               Leadership
-            </motion.h3>
+            </h3>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
               {siteData.team.leadership.map((member, i) => (
                 <TeamCard key={member.name} member={member} i={i} onSelect={() => setSelected(member)} />
@@ -141,15 +138,13 @@ export default function TeamSection() {
 
           {/* Clinical Staff */}
           <div>
-            <motion.h3
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4 }}
-              className="text-center font-body text-xs tracking-[0.25em] uppercase text-gold font-semibold mb-8"
+            <h3
+              ref={clinicalRef}
+              className={`text-center font-body text-xs tracking-[0.25em] uppercase text-gold font-semibold mb-8 reveal-fade-up${clinicalVisible ? " reveal-in" : ""}`}
+              style={{ "--reveal-duration": "0.4s" } as React.CSSProperties}
             >
               Clinical Staff
-            </motion.h3>
+            </h3>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
               {siteData.team.clinical.map((member, i) => (
                 <TeamCard key={member.name} member={member} i={i} onSelect={() => setSelected(member)} />
