@@ -42,7 +42,7 @@ Levels of Care: residential treatment (10-bed max per facility), PHP, IOP, outpa
 - [Mental Health Treatment](https://desertrecoverycenters.com/mental-health): Residential and outpatient care for anxiety, depression, PTSD, bipolar, OCD, and more
 - [Locations](https://desertrecoverycenters.com/locations): Glendale, Scottsdale, and Phoenix facility pages
 - [Insurance](https://desertrecoverycenters.com/insurance): Verify out-of-network commercial coverage (Aetna, BCBS, Cigna, UHC, Humana, Magellan) and in-network TriCare/TriWest benefits
-- [About Us](https://desertrecoverycenters.com/about): Joint Commission accredited behavioral health organization founded 2019
+- [About Us](https://desertrecoverycenters.com/about): Joint Commission accredited behavioral health organization founded 2022
 - [Our Team](https://desertrecoverycenters.com/our-team): Clinical leadership and licensed psychologists with credentials for E-E-A-T grounding
 - [Levels of Care](https://desertrecoverycenters.com/levels-of-care): Residential, PHP, IOP, and outpatient program details with admission criteria
 - [Treatments](https://desertrecoverycenters.com/treatments): Evidence-based modalities including CBT, DBT, EMDR, TMS, SoftWave, and holistic therapies
