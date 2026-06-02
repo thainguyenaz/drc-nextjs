@@ -58,7 +58,7 @@ export default function PartnerReferralContent() {
                   <svg className="w-5 h-5 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
-                  <span>Direct line: <a href="tel:+14809313617" className="text-sage font-medium">(480) 931-3617</a></span>
+                  <span>Direct line: <a href="tel:+16233050496" className="text-sage font-medium">(623) 305-0496</a></span>
                 </div>
                 <div className="flex items-center gap-3">
                   <svg className="w-5 h-5 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">

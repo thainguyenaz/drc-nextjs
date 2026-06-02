@@ -79,7 +79,7 @@ export default function PrivacyPolicyPage() {
               You may opt out of SMS communications at any time by replying STOP to any message you receive from us. After replying STOP, you will receive a confirmation message and will not receive further marketing or operational SMS communications from Desert Recovery Centers, except where required for active treatment care coordination as defined under HIPAA.
             </p>
             <p>
-              To re-subscribe after opting out, reply START or contact our admissions team at (480) 931-3617.
+              To re-subscribe after opting out, reply START or contact our admissions team at (623) 305-0496.
             </p>
 
             <h3>Message and Data Rates</h3>
@@ -94,7 +94,7 @@ export default function PrivacyPolicyPage() {
 
             <h3>Help</h3>
             <p>
-              For help with SMS communications, reply HELP to any message or contact our admissions team at admissions@desertrecoverycenters.com or (480) 931-3617.
+              For help with SMS communications, reply HELP to any message or contact our admissions team at admissions@desertrecoverycenters.com or (623) 305-0496.
             </p>
 
             <h3>Eligibility</h3>
@@ -117,7 +117,7 @@ export default function PrivacyPolicyPage() {
 
             <h2>Contact Us</h2>
             <p>
-              If you have questions about this privacy policy or how your information is handled, please contact us at <a href="tel:+14809313617" className="text-sage hover:text-gold">(480) 931-3617</a> or email us at <a href="mailto:info@desertrecoverycenters.com" className="text-sage hover:text-gold">info@desertrecoverycenters.com</a>.
+              If you have questions about this privacy policy or how your information is handled, please contact us at <a href="tel:+16233050496" className="text-sage hover:text-gold">(623) 305-0496</a> or email us at <a href="mailto:info@desertrecoverycenters.com" className="text-sage hover:text-gold">info@desertrecoverycenters.com</a>.
             </p>
           </div>
         </div>

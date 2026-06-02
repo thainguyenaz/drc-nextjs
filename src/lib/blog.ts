@@ -16,7 +16,7 @@ export interface BlogPost {
   metaDescription: string
 }
 
-const DISCLAIMER = `<p><em>This article is for informational purposes only and does not constitute medical advice. The content has been reviewed by Dr. An Nguyen, Licensed Clinical Psychologist and Clinical Director at Desert Recovery Centers. If you or a loved one is struggling with addiction or a mental health condition, please contact a qualified healthcare professional. Desert Recovery Centers can be reached 24 hours a day at (480) 931-3617.</em></p>`
+const DISCLAIMER = `<p><em>This article is for informational purposes only and does not constitute medical advice. The content has been reviewed by Dr. An Nguyen, Licensed Clinical Psychologist and Clinical Director at Desert Recovery Centers. If you or a loved one is struggling with addiction or a mental health condition, please contact a qualified healthcare professional. Desert Recovery Centers can be reached 24 hours a day at (623) 305-0496.</em></p>`
 
 export const blogPosts: BlogPost[] = [
   {
@@ -33,7 +33,7 @@ export const blogPosts: BlogPost[] = [
     featuredImageAlt: "BridgeWork™ Therapy: What Is It and How Can It Help? - Desert Recovery Centers",
     tags: ["bridgework therapy", "addiction treatment", "mental health therapy", "recovery methods", "therapeutic approaches"],
     metaTitle: "BridgeWork™ Therapy: What Is It & How Can It Help Recovery?",
-    metaDescription: "Learn how BridgeWork™ therapy connects different treatment methods for addiction and mental health recovery. Get help today at (480) 931-3617.",
+    metaDescription: "Learn how BridgeWork™ therapy connects different treatment methods for addiction and mental health recovery. Get help today at (623) 305-0496.",
     content: `<p>You've heard about different types of therapy for addiction and mental health, but you're wondering how they all work together. Maybe you've tried individual approaches that helped somewhat, but didn't address the full picture of your challenges. BridgeWork™ therapy represents an integrated approach that connects different therapeutic methods to create a comprehensive treatment plan tailored to your specific needs.</p>
 
 <p>Rather than relying on a single therapeutic technique, BridgeWork™ therapy builds bridges between evidence-based treatments like cognitive behavioral therapy (CBT), dialectical behavior therapy (DBT), trauma-focused therapies, and holistic approaches. This integrated method recognizes that addiction and mental health conditions are complex and often require multiple therapeutic tools working together to achieve lasting recovery.</p>
@@ -95,7 +95,7 @@ A: Because multiple therapeutic approaches work together, many people notice imp
 
 <p>Taking the step toward integrated treatment requires courage, and you should feel proud for considering this comprehensive approach to your healing. The team at Desert Recovery Centers understands that recovery involves more than just addressing symptoms - it's about building a foundation for lasting wellness that encompasses every aspect of your life.</p>
 
-<p>Our experienced clinical staff is ready to help you understand how BridgeWork™ therapy principles can be applied to your unique situation. We're here to answer your questions about our integrated treatment approach and help you determine whether our program aligns with your recovery goals. Call us at <strong>(480) 931-3617</strong> to speak with our admissions team, or visit our <a href="/get-help">get help page</a> to learn more about starting treatment. You can also complete our <a href="/insurance">insurance verification</a> to understand your coverage options for comprehensive, integrated treatment.</p>
+<p>Our experienced clinical staff is ready to help you understand how BridgeWork™ therapy principles can be applied to your unique situation. We're here to answer your questions about our integrated treatment approach and help you determine whether our program aligns with your recovery goals. Call us at <strong>(623) 305-0496</strong> to speak with our admissions team, or visit our <a href="/get-help">get help page</a> to learn more about starting treatment. You can also complete our <a href="/insurance">insurance verification</a> to understand your coverage options for comprehensive, integrated treatment.</p>
 
 ${DISCLAIMER}`
   },
@@ -891,7 +891,7 @@ ${DISCLAIMER}`
 
 <h2>Insurance Verification at Desert Recovery Centers</h2>
 <p>The fastest way to understand your coverage is to contact our admissions team for a free, confidential insurance verification. Our team will contact your insurance company, review your specific benefits, determine your estimated out of pocket costs, and explain what your plan covers at each level of care. This process typically takes less than an hour and provides the clarity you need to make an informed decision.</p>
-<p>You can begin the <a href="/insurance">insurance verification process</a> by calling Desert Recovery Centers at (480) 931-3617 or by submitting a request through our website. Our team is available 24 hours a day, 7 days a week.</p>
+<p>You can begin the <a href="/insurance">insurance verification process</a> by calling Desert Recovery Centers at (623) 305-0496 or by submitting a request through our website. Our team is available 24 hours a day, 7 days a week.</p>
 
 <h2>Private Pay and Other Options</h2>
 <p>For clients who do not have insurance, who prefer not to use insurance, or whose insurance coverage is limited, Desert Recovery Centers offers private pay options and can work with clients to develop a financial plan that makes treatment accessible. We believe that financial barriers should never prevent someone from receiving the care they need, and our team is committed to finding solutions that work for each individual and family.</p>
@@ -1224,7 +1224,7 @@ ${DISCLAIMER}`
 <h2>Medication Assisted Treatment and Residential Care</h2>
 <p>Medication assisted treatment (MAT) is the evidence based standard of care for opioid use disorder, including fentanyl addiction. Medications like buprenorphine (Suboxone) and naltrexone (Vivitrol) stabilize brain chemistry, reduce cravings, and block the euphoric effects of opioids, dramatically reducing the risk of relapse and fatal overdose (<a href="https://nida.nih.gov/research-topics/medications-opioid-use-disorder" target="_blank" rel="noopener">NIDA — Medications for Opioid Use Disorder</a>). MAT is not "substituting one drug for another." It is a clinically proven treatment that saves lives.</p>
 <p><a href="/levels-of-care/residential-treatment">Residential treatment</a> provides the structured, supervised environment that is often necessary for safe fentanyl detox and the intensive therapeutic work that follows. At Desert Recovery Centers, clients with fentanyl addiction receive medically supervised withdrawal management, MAT when clinically indicated, individual and group therapy, treatment for co occurring mental health conditions, and comprehensive aftercare planning.</p>
-<p>If someone you love is struggling with fentanyl addiction, the urgency cannot be overstated. Every day of continued use carries the risk of fatal overdose. Treatment works, recovery is possible, and reaching out for help today could save their life. Contact Desert Recovery Centers 24 hours a day at (480) 931-3617.</p>
+<p>If someone you love is struggling with fentanyl addiction, the urgency cannot be overstated. Every day of continued use carries the risk of fatal overdose. Treatment works, recovery is possible, and reaching out for help today could save their life. Contact Desert Recovery Centers 24 hours a day at (623) 305-0496.</p>
 
 ${DISCLAIMER}`
   },
@@ -1325,7 +1325,7 @@ ${DISCLAIMER}`
 
 <p>For patients whose dependence developed from psychiatric medication that was clinically appropriate but is no longer serving them, we work with prescribers to design a slow, monitored taper rather than an abrupt stop. For patients whose use has escalated outside the prescription, we begin with stabilization and addiction treatment first, then collaborate on a plan for whatever underlying condition needs continued management.</p>
 
-<p>If you recognize yourself or someone you love in any part of this article, the next step is a conversation, not a commitment. Call our admissions team at <strong>(480) 931-3617</strong> any hour of the day or night, or <a href="/insurance">verify your insurance</a> in a few minutes online. We can talk through what's happening, what treatment would actually look like, and whether Desert Recovery Centers is the right fit. The brain that adapted to the medication can adapt back — with the right support, and time.</p>
+<p>If you recognize yourself or someone you love in any part of this article, the next step is a conversation, not a commitment. Call our admissions team at <strong>(623) 305-0496</strong> any hour of the day or night, or <a href="/insurance">verify your insurance</a> in a few minutes online. We can talk through what's happening, what treatment would actually look like, and whether Desert Recovery Centers is the right fit. The brain that adapted to the medication can adapt back — with the right support, and time.</p>
 
 ${DISCLAIMER}`
   }

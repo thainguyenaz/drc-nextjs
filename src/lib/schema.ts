@@ -17,8 +17,8 @@ export function getMedicalOrganizationSchema() {
     image: `${SITE_URL}/images/branding/drlogo-black.png`,
     description:
       "Joint Commission accredited luxury behavioral health treatment organization in Arizona specializing in residential treatment, PHP, IOP, and outpatient programs for addiction and mental health.",
-    telephone: "(480) 931-3617",
-    email: "contact@desertrecoverycenters.com",
+    telephone: "(623) 305-0496",
+    email: "admissions@desertrecoverycenters.com",
     foundingDate: "2020",
     hasCredential: [
       { "@type": "EducationalOccupationalCredential", name: "Joint Commission Accreditation" },

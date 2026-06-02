@@ -16,7 +16,7 @@ export const metadata: Metadata = buildMetadata({
 const faqs = [
   {
     q: "Does Aetna cover residential rehab for addiction?",
-    a: "Most Aetna plans include coverage for residential substance abuse treatment when deemed medically necessary. Aetna evaluates medical necessity using clinical criteria, and our admissions team works directly with Aetna to secure authorization for the appropriate level of care. Call us at (480) 931-3617 to verify your specific plan benefits.",
+    a: "Most Aetna plans include coverage for residential substance abuse treatment when deemed medically necessary. Aetna evaluates medical necessity using clinical criteria, and our admissions team works directly with Aetna to secure authorization for the appropriate level of care. Call us at (623) 305-0496 to verify your specific plan benefits.",
   },
   {
     q: "Does Aetna&apos;s Employee Assistance Program (EAP) cover rehab?",
@@ -77,7 +77,7 @@ export default function AetnaInsurancePage() {
             </p>
             <p className="text-gray-600 leading-relaxed text-lg">
               Because Aetna offers dozens of different plan types, the only way to know exactly what your plan covers is to verify your benefits directly. Call our admissions team at{" "}
-              <a href="tel:+14809313617" className="text-gold-dark font-semibold hover:underline">(480) 931-3617</a>
+              <a href="tel:+16233050496" className="text-gold-dark font-semibold hover:underline">(623) 305-0496</a>
               {" "}and we will confirm your coverage at no cost.
             </p>
           </div>
@@ -181,7 +181,7 @@ export default function AetnaInsurancePage() {
                 {
                   step: "1",
                   title: "Call Our Admissions Team",
-                  desc: "Reach us at (480) 931-3617. Have your Aetna member ID card handy if possible, though it is not required to get started.",
+                  desc: "Reach us at (623) 305-0496. Have your Aetna member ID card handy if possible, though it is not required to get started.",
                 },
                 {
                   step: "2",
@@ -250,7 +250,7 @@ export default function AetnaInsurancePage() {
           <div className="max-w-3xl mx-auto">
             <p className="text-gray-500 text-sm leading-relaxed text-center">
               Coverage varies by plan. Contact us to verify your benefits. The information on this page is intended for general informational purposes only and does not guarantee coverage or payment for any specific treatment. Insurance benefits are determined by your individual plan and are subject to change. Desert Recovery Centers is not affiliated with Aetna. Please call our admissions team at{" "}
-              <a href="tel:+14809313617" className="text-gold-dark font-semibold hover:underline">(480) 931-3617</a>{" "}
+              <a href="tel:+16233050496" className="text-gold-dark font-semibold hover:underline">(623) 305-0496</a>{" "}
               for a complimentary benefits verification.
             </p>
           </div>

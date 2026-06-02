@@ -63,7 +63,7 @@ export default function HipaaNoticePage() {
 
             <h2>Contact Our Privacy Officer</h2>
             <p>
-              If you have questions about this notice or wish to exercise your rights, please contact our Privacy Officer at <a href="tel:+14809313617" className="text-sage hover:text-gold">(480) 931-3617</a> or email <a href="mailto:info@desertrecoverycenters.com" className="text-sage hover:text-gold">info@desertrecoverycenters.com</a>.
+              If you have questions about this notice or wish to exercise your rights, please contact our Privacy Officer at <a href="tel:+16233050496" className="text-sage hover:text-gold">(623) 305-0496</a> or email <a href="mailto:info@desertrecoverycenters.com" className="text-sage hover:text-gold">info@desertrecoverycenters.com</a>.
             </p>
 
             <h2>Filing a Complaint</h2>

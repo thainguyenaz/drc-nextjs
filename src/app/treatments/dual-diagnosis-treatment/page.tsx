@@ -249,8 +249,8 @@ export default function DualDiagnosisPage() {
               Our admissions team conducts a free, confidential clinical pre-assessment that evaluates both mental health and substance use concerns. You&apos;ll know within one call whether dual diagnosis treatment is right for you, and what your insurance will cover.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <a href="tel:+14809313617" className="bg-gold hover:bg-gold-dark text-white font-semibold text-sm px-6 py-3 rounded-xl transition-colors cursor-pointer">
-                Call (480) 931-3617
+              <a href="tel:+16233050496" className="bg-gold hover:bg-gold-dark text-white font-semibold text-sm px-6 py-3 rounded-xl transition-colors cursor-pointer">
+                Call (623) 305-0496
               </a>
               <a href="/treatments" className="border border-sage text-sage hover:bg-sage hover:text-white font-semibold text-sm px-6 py-3 rounded-xl transition-colors cursor-pointer">
                 View All Therapies

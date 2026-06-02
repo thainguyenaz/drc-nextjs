@@ -53,7 +53,7 @@ const faqSchema = {
       name: "Can I tour the facilities before starting treatment?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Contact our admissions team at (480) 931-3617 to schedule a tour of our Phoenix outpatient center. For privacy reasons, tours of residential facilities are arranged on a case-by-case basis.",
+        text: "Yes. Contact our admissions team at (623) 305-0496 to schedule a tour of our Phoenix outpatient center. For privacy reasons, tours of residential facilities are arranged on a case-by-case basis.",
       },
     },
   ],

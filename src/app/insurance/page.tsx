@@ -16,7 +16,7 @@ const insuranceFaqSchema = {
     {
       "@type": "Question",
       "name": "What if my insurance isn't listed?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Desert Recovery Centers works with many insurance plans beyond those listed on our website. Call (480) 931-3617 and the admissions team will check your specific plan. Private pay options and financing are also available." },
+      "acceptedAnswer": { "@type": "Answer", "text": "Desert Recovery Centers works with many insurance plans beyond those listed on our website. Call (623) 305-0496 and the admissions team will check your specific plan. Private pay options and financing are also available." },
     },
     {
       "@type": "Question",
@@ -31,7 +31,7 @@ const insuranceFaqSchema = {
     {
       "@type": "Question",
       "name": "Is there any cost for the insurance verification?",
-      "acceptedAnswer": { "@type": "Answer", "text": "None. Insurance verification at Desert Recovery Centers is completely free, completely confidential, and comes with no obligation to begin treatment. Call (480) 931-3617 to verify your benefits." },
+      "acceptedAnswer": { "@type": "Answer", "text": "None. Insurance verification at Desert Recovery Centers is completely free, completely confidential, and comes with no obligation to begin treatment. Call (623) 305-0496 to verify your benefits." },
     },
   ],
 };
@@ -39,7 +39,7 @@ const insuranceFaqSchema = {
 export const metadata: Metadata = {
   title: "Verify Insurance for Addiction & Mental Health Treatment | DRC",
   description:
-    "Verify your insurance for addiction and mental health treatment at Desert Recovery Centers. Out-of-network commercial coverage and in-network TriCare/TriWest. Call (480) 931-3617.",
+    "Verify your insurance for addiction and mental health treatment at Desert Recovery Centers. Out-of-network commercial coverage and in-network TriCare/TriWest. Call (623) 305-0496.",
   alternates: { canonical: "https://desertrecoverycenters.com/insurance" },
   openGraph: {
     images: [{ url: "/images/glendale/Glendale-Front.jpg", width: 1200, height: 630, alt: "Exterior of Desert Recovery Centers luxury residential rehab facility in Glendale Arizona" }],

@@ -12,7 +12,7 @@ import { buildMetadata, InlineFAQSchema, SpeakableSchema } from "@/lib/seo";
 export const metadata: Metadata = buildMetadata({
   title: "DRC vs APN: Compare Arizona Rehab Centers",
   description:
-    "Compare Desert Recovery Centers to APN Lodge. See differences in location, clinical team, bed count, and dual diagnosis care. Call (480) 931-3617.",
+    "Compare Desert Recovery Centers to APN Lodge. See differences in location, clinical team, bed count, and dual diagnosis care. Call (623) 305-0496.",
   path: "/compare/drc-vs-apn",
 });
 

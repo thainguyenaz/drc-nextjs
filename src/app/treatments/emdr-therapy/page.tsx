@@ -233,8 +233,8 @@ export default function EMDRPage() {
               EMDR has helped combat veterans, survivors of abuse, first responders, and individuals struggling with addiction find relief from memories that once controlled their lives. Our clinical team is here to guide you through every step of the process.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <a href="tel:+14809313617" className="bg-gold hover:bg-gold-dark text-white font-semibold text-sm px-6 py-3 rounded-xl transition-colors cursor-pointer">
-                Call (480) 931-3617
+              <a href="tel:+16233050496" className="bg-gold hover:bg-gold-dark text-white font-semibold text-sm px-6 py-3 rounded-xl transition-colors cursor-pointer">
+                Call (623) 305-0496
               </a>
               <a href="/treatments" className="border border-sage text-sage hover:bg-sage hover:text-white font-semibold text-sm px-6 py-3 rounded-xl transition-colors cursor-pointer">
                 View All Therapies

@@ -28,10 +28,10 @@ export default function NotFound() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <a
-              href="tel:+14809313617"
+              href="tel:+16233050496"
               className="inline-flex items-center justify-center gap-2 bg-gold text-forest px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gold/90 transition-colors"
             >
-              Call (480) 931-3617
+              Call (623) 305-0496
             </a>
             <Link
               href="/contact"

@@ -53,7 +53,7 @@ const faqs = [
   },
   {
     q: "Does insurance cover PHP in Arizona?",
-    a: "Yes, most major insurance plans cover partial hospitalization programs in Arizona. PHP is a recognized, medically necessary level of care under the Mental Health Parity and Addiction Equity Act. Plans from Aetna, Cigna, Blue Cross Blue Shield, UnitedHealthcare, and many other carriers typically provide coverage for PHP when clinically indicated. Note: Desert Recovery Centers works with these commercial carriers on an out-of-network basis; we are in-network with TriCare and TriWest, and offer cash-pay options. Our admissions team will verify your specific insurance benefits before you begin the program. Call (480) 931-3617 for a free, confidential benefits check.",
+    a: "Yes, most major insurance plans cover partial hospitalization programs in Arizona. PHP is a recognized, medically necessary level of care under the Mental Health Parity and Addiction Equity Act. Plans from Aetna, Cigna, Blue Cross Blue Shield, UnitedHealthcare, and many other carriers typically provide coverage for PHP when clinically indicated. Note: Desert Recovery Centers works with these commercial carriers on an out-of-network basis; we are in-network with TriCare and TriWest, and offer cash-pay options. Our admissions team will verify your specific insurance benefits before you begin the program. Call (623) 305-0496 for a free, confidential benefits check.",
   },
   {
     q: "Who is PHP right for?",
@@ -377,10 +377,10 @@ export default function PHPPage() {
                 To learn more about our PHP or to begin the admissions
                 process, call{" "}
                 <a
-                  href="tel:+14809313617"
+                  href="tel:+16233050496"
                   className="text-gold hover:text-gold-dark font-semibold"
                 >
-                  (480) 931-3617
+                  (623) 305-0496
                 </a>
                 . Our team is available 24 hours a day, 7 days a week.
               </p>

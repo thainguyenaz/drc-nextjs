@@ -4,8 +4,8 @@ import InsuranceVerificationForm from "@/components/forms/InsuranceVerificationF
 import SchemaScript from "@/components/SchemaScript";
 import { getFAQSchema } from "@/lib/schema";
 
-const PHONE_DISPLAY = "(480) 931-3617";
-const PHONE_HREF = "tel:+14809313617";
+const PHONE_DISPLAY = "(623) 305-0496";
+const PHONE_HREF = "tel:+16233050496";
 const PAGE_URL =
   "https://desertrecoverycenters.com/addiction-mental-health-treatment-facilities-lp";
 
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title:
     "Luxury Addiction & Mental Health Treatment in Arizona | Desert Recovery Centers",
   description:
-    "Luxury addiction and mental health treatment in Arizona. Same-day admissions available. Out-of-network commercial insurance and in-network TriCare/TriWest accepted. Joint Commission accredited. Call (480) 931-3617.",
+    "Luxury addiction and mental health treatment in Arizona. Same-day admissions available. Out-of-network commercial insurance and in-network TriCare/TriWest accepted. Joint Commission accredited. Call (623) 305-0496.",
   alternates: { canonical: PAGE_URL },
   robots: { index: false, follow: false },
 };
@@ -22,7 +22,7 @@ const faqs = [
   {
     question: "How fast can I be admitted to Desert Recovery Centers?",
     answer:
-      "Same-day admissions are typically available. Call our admissions team at (480) 931-3617 and in most cases we can verify your insurance, complete a clinical assessment, and coordinate transportation to one of our Arizona facilities within hours.",
+      "Same-day admissions are typically available. Call our admissions team at (623) 305-0496 and in most cases we can verify your insurance, complete a clinical assessment, and coordinate transportation to one of our Arizona facilities within hours.",
   },
   {
     question: "What does the admissions process look like?",

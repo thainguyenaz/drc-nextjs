@@ -211,10 +211,10 @@ export default function Navigation() {
         {/* Desktop CTA */}
         <div className="hidden lg:flex items-center gap-4 flex-shrink-0 ml-8">
           <a
-            href="tel:+14809313617"
+            href="tel:+16233050496"
             className={`font-semibold text-sm transition-colors ${scrolled ? "text-gray-900" : "text-white"}`}
           >
-            (480) 931-3617
+            (623) 305-0496
           </a>
           <Link
             href="/insurance"
@@ -255,7 +255,7 @@ export default function Navigation() {
             />
           ))}
           <div className="pt-4 border-t border-white/10 space-y-3">
-            <a href="tel:+14809313617" className="block text-gold font-semibold text-lg">(480) 931-3617</a>
+            <a href="tel:+16233050496" className="block text-gold font-semibold text-lg">(623) 305-0496</a>
             <Link
               href="/insurance"
               className="block bg-gold text-white text-center font-semibold px-6 py-3 rounded-xl"

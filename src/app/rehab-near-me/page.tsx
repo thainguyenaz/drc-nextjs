@@ -12,7 +12,7 @@ import { buildMetadata, InlineFAQSchema, SpeakableSchema, AllLocalBusinessSchema
 export const metadata: Metadata = buildMetadata({
   title: "Rehab Centers Near Me in Arizona | DRC",
   description:
-    "Find rehab near you in Arizona. Two residential facilities (Glendale, Scottsdale) plus Phoenix outpatient. Call (480) 931-3617.",
+    "Find rehab near you in Arizona. Two residential facilities (Glendale, Scottsdale) plus Phoenix outpatient. Call (623) 305-0496.",
   path: "/rehab-near-me",
 });
 
@@ -38,8 +38,8 @@ const locations = [
     name: "DRC Scottsdale",
     tagline: "Mountain Views, North Scottsdale",
     address: "23222 N Church Rd, Scottsdale, AZ 85255",
-    phone: "(480) 931-3617",
-    phoneTel: "+14809313617",
+    phone: "(602) 755-4310",
+    phoneTel: "+16027554310",
     programs: ["Residential", "PHP", "IOP"],
     amenities: ["Pool", "Tennis Court", "Basketball Court", "Gym", "Massage Room", "Mountain Views"],
     driveTimesFrom: [
@@ -76,7 +76,7 @@ const faqs = [
   },
   {
     q: "Which DRC location is closest to me?",
-    a: "If you're in the West Valley (Peoria, Surprise, Avondale, Goodyear), Glendale is closest. If you're in North Scottsdale, Paradise Valley, Fountain Hills, or Cave Creek, Scottsdale is nearest. If you're in Tempe, Mesa, Chandler, or Gilbert, Phoenix is your closest facility. Call (480) 931-3617 and we'll help you determine the best option.",
+    a: "If you're in the West Valley (Peoria, Surprise, Avondale, Goodyear), Glendale is closest. If you're in North Scottsdale, Paradise Valley, Fountain Hills, or Cave Creek, Scottsdale is nearest. If you're in Tempe, Mesa, Chandler, or Gilbert, Phoenix is your closest facility. Call (623) 305-0496 and we'll help you determine the best option.",
   },
   {
     q: "Can I tour a facility before committing?",
@@ -234,7 +234,7 @@ export default function RehabNearMePage() {
       <AEOBlock
         entries={[
           { question: "Where are Desert Recovery Centers locations in Arizona?", answer: "Desert Recovery Centers operates two residential treatment facilities and one outpatient center in Arizona: Glendale (8105 W Frier Dr, 85303) and Scottsdale (23222 N Church Rd, 85255) provide residential treatment with 10 beds each, and Phoenix (4160 N. 108th Ave, 85037) provides outpatient PHP, IOP, and TMS care. All locations are Joint Commission accredited with doctoral-level clinical leadership." },
-          { question: "Which Desert Recovery Centers location is closest to me?", answer: "West Valley residents (Peoria, Surprise, Avondale) are closest to DRC Glendale at (623) 323-1012. North Scottsdale, Paradise Valley, and Cave Creek residents are closest to DRC Scottsdale at (480) 931-3617. Tempe, Mesa, Chandler, and Gilbert residents are closest to DRC Phoenix at (602) 905-8070." },
+          { question: "Which Desert Recovery Centers location is closest to me?", answer: "West Valley residents (Peoria, Surprise, Avondale) are closest to DRC Glendale at (623) 323-1012. North Scottsdale, Paradise Valley, and Cave Creek residents are closest to DRC Scottsdale at (602) 755-4310. Tempe, Mesa, Chandler, and Gilbert residents are closest to DRC Phoenix at (602) 905-8070." },
         ]}
       />
       <CTASection />

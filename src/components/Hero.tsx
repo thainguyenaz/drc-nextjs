@@ -94,10 +94,10 @@ export default function Hero() {
               Verify Insurance Today
             </a>
             <a
-              href="tel:+14809313617"
+              href="tel:+16233050496"
               className="bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/30 text-white font-semibold text-base px-8 py-4 rounded-xl transition-all cursor-pointer"
             >
-              Call (480) 931-3617
+              Call (623) 305-0496
             </a>
           </div>
 

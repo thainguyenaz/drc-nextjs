@@ -253,8 +253,8 @@ export default function TraumaTherapyPage() {
               You don&apos;t have to keep surviving on autopilot. Our clinical team specializes in helping people who have been through the worst experiences imaginable find a way back to themselves. The first step is a confidential conversation.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <a href="tel:+14809313617" className="bg-gold hover:bg-gold-dark text-white font-semibold text-sm px-6 py-3 rounded-xl transition-colors cursor-pointer">
-                Call (480) 931-3617
+              <a href="tel:+16233050496" className="bg-gold hover:bg-gold-dark text-white font-semibold text-sm px-6 py-3 rounded-xl transition-colors cursor-pointer">
+                Call (623) 305-0496
               </a>
               <a href="/treatments" className="border border-sage text-sage hover:bg-sage hover:text-white font-semibold text-sm px-6 py-3 rounded-xl transition-colors cursor-pointer">
                 View All Therapies

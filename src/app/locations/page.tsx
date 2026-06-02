@@ -37,8 +37,8 @@ const locations = [
     name: "Scottsdale",
     label: "NORTH SCOTTSDALE, ARIZONA",
     address: "23222 N Church Rd, Scottsdale, AZ 85255",
-    phone: "(480) 931-3617",
-    phoneTel: "+14809313617",
+    phone: "(602) 755-4310",
+    phoneTel: "+16027554310",
     description:
       "Residential treatment nestled in north Scottsdale with stunning mountain views and serene desert landscape.",
     services: ["Residential", "PHP", "IOP", "OP"],

@@ -16,7 +16,7 @@ export const metadata: Metadata = buildMetadata({
 const faqs = [
   {
     q: "Does Blue Cross Blue Shield of Arizona cover addiction treatment?",
-    a: "Blue Cross Blue Shield of Arizona (BCBSAZ) plans typically include behavioral health benefits that cover substance abuse treatment. As a local BCBS affiliate, BCBSAZ maintains its own provider network for Arizona residents. Coverage specifics depend on your plan type and benefit tier. Call us at (480) 931-3617 to verify your BCBSAZ benefits at no cost.",
+    a: "Blue Cross Blue Shield of Arizona (BCBSAZ) plans typically include behavioral health benefits that cover substance abuse treatment. As a local BCBS affiliate, BCBSAZ maintains its own provider network for Arizona residents. Coverage specifics depend on your plan type and benefit tier. Call us at (623) 305-0496 to verify your BCBSAZ benefits at no cost.",
   },
   {
     q: "Can I use an out-of-state BCBS plan for rehab in Arizona?",
@@ -77,7 +77,7 @@ export default function BlueCrossInsurancePage() {
             </p>
             <p className="text-gray-600 leading-relaxed text-lg">
               The question is not usually whether you have coverage, it&apos;s understanding the details. That&apos;s where we come in. Call our admissions team at{" "}
-              <a href="tel:+14809313617" className="text-gold-dark font-semibold hover:underline">(480) 931-3617</a>
+              <a href="tel:+16233050496" className="text-gold-dark font-semibold hover:underline">(623) 305-0496</a>
               {" "}and we will verify your BCBS benefits completely free of charge.
             </p>
           </div>
@@ -197,7 +197,7 @@ export default function BlueCrossInsurancePage() {
                 {
                   step: "1",
                   title: "Call Our Admissions Team",
-                  desc: "Reach us at (480) 931-3617. If you have your BCBS member ID card available, that helps us get started faster, but it is not required.",
+                  desc: "Reach us at (623) 305-0496. If you have your BCBS member ID card available, that helps us get started faster, but it is not required.",
                 },
                 {
                   step: "2",
@@ -266,7 +266,7 @@ export default function BlueCrossInsurancePage() {
           <div className="max-w-3xl mx-auto">
             <p className="text-gray-500 text-sm leading-relaxed text-center">
               Coverage varies by plan. Contact us to verify your benefits. The information on this page is intended for general informational purposes only and does not guarantee coverage or payment for any specific treatment. Insurance benefits are determined by your individual plan and the BCBS affiliate that issued it. Desert Recovery Centers is not affiliated with Blue Cross Blue Shield. Please call our admissions team at{" "}
-              <a href="tel:+14809313617" className="text-gold-dark font-semibold hover:underline">(480) 931-3617</a>{" "}
+              <a href="tel:+16233050496" className="text-gold-dark font-semibold hover:underline">(623) 305-0496</a>{" "}
               for a complimentary benefits verification.
             </p>
           </div>

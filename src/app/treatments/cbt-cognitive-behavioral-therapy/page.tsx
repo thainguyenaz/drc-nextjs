@@ -231,8 +231,8 @@ export default function CBTPage() {
               CBT at DRC is not a standalone intervention, it integrates seamlessly with DBT skills training, EMDR for trauma processing, holistic therapies, and our proprietary BridgeWork™ program to deliver whole-person care.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <a href="tel:+14809313617" className="bg-gold hover:bg-gold-dark text-white font-semibold text-sm px-6 py-3 rounded-xl transition-colors cursor-pointer">
-                Call (480) 931-3617
+              <a href="tel:+16233050496" className="bg-gold hover:bg-gold-dark text-white font-semibold text-sm px-6 py-3 rounded-xl transition-colors cursor-pointer">
+                Call (623) 305-0496
               </a>
               <a href="/treatments" className="border border-sage text-sage hover:bg-sage hover:text-white font-semibold text-sm px-6 py-3 rounded-xl transition-colors cursor-pointer">
                 View All Therapies

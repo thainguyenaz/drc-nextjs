@@ -229,8 +229,8 @@ export default function TMSTherapyPage() {
           ],
           "availableAtOrFrom": {
             "@type": "MedicalClinic",
-            "name": "Desert Recovery Centers Phoenix PHP / IOP",
-            "address": { "@type": "PostalAddress", "streetAddress": "4160 N. 108th Ave", "addressLocality": "Phoenix", "addressRegion": "AZ", "postalCode": "85037" },
+            "name": "Desert Recovery Centers - Phoenix",
+            "address": { "@type": "PostalAddress", "streetAddress": "4160 N 108th Ave", "addressLocality": "Phoenix", "addressRegion": "AZ", "postalCode": "85037" },
             "telephone": "+16029058070",
           },
         },

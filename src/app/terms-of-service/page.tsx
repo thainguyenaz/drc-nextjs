@@ -61,7 +61,7 @@ export default function TermsOfServicePage() {
 
             <h2>Contact Us</h2>
             <p>
-              If you have questions about these terms, please contact us at <a href="tel:+14809313617" className="text-sage hover:text-gold">(480) 931-3617</a>.
+              If you have questions about these terms, please contact us at <a href="tel:+16233050496" className="text-sage hover:text-gold">(623) 305-0496</a>.
             </p>
           </div>
         </div>

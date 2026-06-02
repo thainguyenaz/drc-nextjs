@@ -187,8 +187,8 @@ export default function SignsOfAddictionPage() {
               You do not have to figure this out alone.
             </p>
             <div className="flex flex-wrap gap-4">
-              <a href="tel:+14809313617" className="bg-gold hover:bg-gold-dark text-white font-semibold text-sm px-6 py-3 rounded-xl transition-colors cursor-pointer">
-                Call (480) 931-3617
+              <a href="tel:+16233050496" className="bg-gold hover:bg-gold-dark text-white font-semibold text-sm px-6 py-3 rounded-xl transition-colors cursor-pointer">
+                Call (623) 305-0496
               </a>
               <a href="/resources/mental-health-assessment" className="border border-sage text-sage hover:bg-sage hover:text-white font-semibold text-sm px-6 py-3 rounded-xl transition-colors cursor-pointer">
                 Take a Free Assessment

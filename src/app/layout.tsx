@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://desertrecoverycenters.com"),
   title: "Luxury Addiction & Mental Health Treatment in Arizona | Desert Recovery Centers",
   description:
-    "Luxury addiction and mental health treatment in Arizona. Joint Commission accredited, dual diagnosis care. Verify insurance today. Call (480) 931-3617.",
+    "Luxury addiction and mental health treatment in Arizona. Joint Commission accredited, dual diagnosis care. Verify insurance today. Call (623) 305-0496.",
   alternates: {
     canonical: "https://desertrecoverycenters.com",
     languages: { "en-US": "https://desertrecoverycenters.com" },

@@ -18,7 +18,7 @@ import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
 export const metadata: Metadata = buildMetadata({
   title: "Trauma Treatment Center in Arizona",
   description:
-    "Specialized trauma treatment in Arizona using EMDR, somatic therapy & trauma-focused CBT. Call DRC at (480) 931-3617.",
+    "Specialized trauma treatment in Arizona using EMDR, somatic therapy & trauma-focused CBT. Call DRC at (623) 305-0496.",
   path: "/mental-health/trauma-treatment",
 });
 

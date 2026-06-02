@@ -16,7 +16,7 @@ const partnerReferralFaqSchema = {
     {
       "@type": "Question",
       "name": "How quickly will DRC respond after I submit a referral?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Our admissions team will verify the patient's insurance benefits and contact the referring provider within one hour during business hours. For urgent referrals after hours, call (480) 931-3617." },
+      "acceptedAnswer": { "@type": "Answer", "text": "Our admissions team will verify the patient's insurance benefits and contact the referring provider within one hour during business hours. For urgent referrals after hours, call (623) 305-0496." },
     },
     {
       "@type": "Question",
@@ -29,7 +29,7 @@ const partnerReferralFaqSchema = {
 export const metadata: Metadata = {
   title: "Partner Referral | Desert Recovery Centers",
   description:
-    "Refer a patient to Desert Recovery Centers. Submit patient and insurance details and our admissions team will verify benefits and coordinate admission within the hour. Call (480) 931-3617.",
+    "Refer a patient to Desert Recovery Centers. Submit patient and insurance details and our admissions team will verify benefits and coordinate admission within the hour. Call (623) 305-0496.",
   alternates: { canonical: "https://desertrecoverycenters.com/partner-referral-vrc" },
   openGraph: {
     images: [{ url: "/images/general/DRC-TREATMENTS.jpg", width: 1200, height: 630, alt: "Desert Recovery Centers Partner Referral" }],

@@ -67,8 +67,8 @@ export default function Footer() {
               Luxury mental health and addiction treatment in the heart of the
               Arizona desert.
             </p>
-            <a href="tel:+14809313617" className="text-gold font-semibold text-sm">
-              (480) 931-3617
+            <a href="tel:+16233050496" className="text-gold font-semibold text-sm">
+              (623) 305-0496
             </a>
             <div className="mt-3">
               <a

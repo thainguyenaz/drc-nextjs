@@ -15,8 +15,8 @@ const locations = [
   {
     name: "Scottsdale",
     address: "23222 N Church Rd, Scottsdale, AZ 85255",
-    phone: "(480) 931-3617",
-    phoneTel: "+14809313617",
+    phone: "(602) 755-4310",
+    phoneTel: "+16027554310",
     programs: ["Residential", "PHP", "IOP", "OP"],
     mapQuery: "23222+N+Church+Rd+Scottsdale+AZ+85255",
   },
@@ -39,8 +39,8 @@ const locations = [
   {
     name: "Phoenix PHP Living",
     address: "1623 W Moody Trail, Phoenix, AZ 85041",
-    phone: "(602) 905-8070",
-    phoneTel: "+16029058070",
+    phone: "(623) 257-5384",
+    phoneTel: "+16232575384",
     programs: ["PHP Living", "Sober Living"],
     mapQuery: "1623+W+Moody+Trail+Phoenix+AZ+85041",
   },
@@ -84,7 +84,7 @@ export default function ContactContent() {
                   <svg className="w-5 h-5 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
-                  <span>Scottsdale: <a href="tel:+14809313617" className="text-sage font-medium">(480) 931-3617</a></span>
+                  <span>Scottsdale: <a href="tel:+16027554310" className="text-sage font-medium">(602) 755-4310</a></span>
                 </div>
                 <div className="flex items-center gap-3">
                   <svg className="w-5 h-5 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">

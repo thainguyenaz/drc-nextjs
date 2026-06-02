@@ -26,8 +26,8 @@ export const siteData = {
       name: "Scottsdale",
       href: "/locations/scottsdale",
       address: "23222 N Church Rd, Scottsdale, AZ 85255",
-      phone: "(480) 931-3617",
-      phoneTel: "+14809313617",
+      phone: "(602) 755-4310",
+      phoneTel: "+16027554310",
       description:
         "Residential mental health and addiction treatment nestled in north Scottsdale with stunning mountain views and serene desert surroundings.",
       programs: ["Residential", "PHP", "IOP", "OP"],
@@ -67,8 +67,8 @@ export const siteData = {
       name: "Phoenix PHP Living",
       href: "/locations/phoenix-living",
       address: "1623 W Moody Trail, Phoenix, AZ 85041",
-      phone: "(602) 905-8070",
-      phoneTel: "+16029058070",
+      phone: "(623) 257-5384",
+      phoneTel: "+16232575384",
       description:
         "Supportive PHP living and sober living housing for clients enrolled in DRC outpatient programs.",
       programs: ["PHP Living", "Sober Living"],
