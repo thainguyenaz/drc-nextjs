@@ -94,7 +94,7 @@ export default function PrivacyPolicyPage() {
 
             <h3>Help</h3>
             <p>
-              For help with SMS communications, reply HELP to any message or contact our admissions team at admissions@desertrecoverycenters.com or (623) 305-0496.
+              For help with SMS communications, reply HELP to any message or contact our admissions team at contact@desertrecoverycenters.com or (623) 305-0496.
             </p>
 
             <h3>Eligibility</h3>

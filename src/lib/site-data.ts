@@ -1,6 +1,6 @@
 export const siteData = {
   name: "Desert Recovery Centers",
-  email: "admissions@desertrecoverycenters.com",
+  email: "contact@desertrecoverycenters.com",
   social: {
     facebook: "https://www.facebook.com/desertrecoverycenters",
     instagram: "https://www.instagram.com/desertrecoverycenter",
