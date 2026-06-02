@@ -160,7 +160,7 @@ export default function ADHDTreatmentPage() {
                 },
                 {
                   title: "Medication Management",
-                  desc: "Our psychiatrists specialize in ADHD pharmacotherapy, carefully selecting and titrating medications based on your specific symptoms, co-occurring conditions, and history. We monitor closely for efficacy and side effects, making adjustments until we find the right fit.",
+                  desc: "Our psychiatric providers specialize in ADHD pharmacotherapy, carefully selecting and titrating medications based on your specific symptoms, co-occurring conditions, and history. We monitor closely for efficacy and side effects, making adjustments until we find the right fit.",
                 },
                 {
                   title: "Cognitive Behavioral Therapy for ADHD",

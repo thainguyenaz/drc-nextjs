@@ -9,7 +9,7 @@ const locations = [
     address: "8105 W Frier Dr, Glendale, AZ 85303",
     phone: "(623) 323-1012",
     phoneTel: "+16233231012",
-    programs: ["Residential", "PHP", "IOP", "OP", "Detox"],
+    programs: ["Residential"],
     mapQuery: "8105+W+Frier+Dr+Glendale+AZ+85303",
   },
   {
@@ -17,7 +17,7 @@ const locations = [
     address: "23222 N Church Rd, Scottsdale, AZ 85255",
     phone: "(602) 755-4310",
     phoneTel: "+16027554310",
-    programs: ["Residential", "PHP", "IOP", "OP"],
+    programs: ["Residential"],
     mapQuery: "23222+N+Church+Rd+Scottsdale+AZ+85255",
   },
   {

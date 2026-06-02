@@ -136,7 +136,7 @@ export default function CignaInsurancePage() {
               {[
                 {
                   title: "Medical Detoxification",
-                  desc: "Medically supervised detox to safely manage withdrawal symptoms. Cigna typically covers detox as a medically necessary first step in addiction treatment.",
+                  desc: "Medically supervised detox, coordinated by DRC through a trusted partner facility. Cigna typically covers detox as a medically necessary first step in addiction treatment.",
                 },
                 {
                   title: "Residential Treatment",

@@ -157,7 +157,7 @@ export default function TeamSection() {
               Meet Our Clinical Leadership
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Board-certified psychiatrists, licensed therapists, and dedicated
+              A board-certified psychiatrist, licensed therapists, and dedicated
               support staff committed to your recovery.
             </p>
           </div>

@@ -152,7 +152,7 @@ export default function AnxietyTreatmentPage() {
                 },
                 {
                   title: "Medication Management",
-                  desc: "When appropriate, our psychiatrists provide carefully monitored medication to reduce acute symptoms while therapy takes hold, always as part of a broader treatment plan, never as a standalone solution.",
+                  desc: "When appropriate, our psychiatric providers provide carefully monitored medication to reduce acute symptoms while therapy takes hold, always as part of a broader treatment plan, never as a standalone solution.",
                 },
                 {
                   title: "Holistic Wellness",
@@ -190,7 +190,7 @@ export default function AnxietyTreatmentPage() {
                 },
                 {
                   title: "Small Client-to-Clinician Ratios",
-                  desc: "You're not a number here. Our intentionally small program sizes mean you receive deeply personalized attention from licensed psychologists, psychiatrists, and therapists.",
+                  desc: "You're not a number here. Our intentionally small program sizes mean you receive deeply personalized attention from licensed psychologists, psychiatric providers, and therapists.",
                 },
                 {
                   title: "Luxury Healing Environment",

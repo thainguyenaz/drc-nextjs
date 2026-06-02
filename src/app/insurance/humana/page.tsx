@@ -156,7 +156,7 @@ export default function HumanaInsurancePage() {
               {[
                 {
                   title: "Medical Detoxification",
-                  desc: "Medically supervised withdrawal management to safely manage withdrawal symptoms. Humana typically authorizes detox as a medically necessary acute service when clinical criteria are met.",
+                  desc: "Medically supervised withdrawal management, coordinated by DRC through a trusted partner facility. Humana typically authorizes detox as a medically necessary acute service when clinical criteria are met.",
                 },
                 {
                   title: "Residential Treatment",

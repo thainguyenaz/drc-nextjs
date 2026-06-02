@@ -94,7 +94,7 @@ export default function ScottsdaleLocationPage() {
               Our Scottsdale center sits between stunning mountain ranges in one of Arizona&apos;s most beautiful neighborhoods. But what happens inside these walls matters far more than the views outside them. This is where people come to face the hardest challenges of their lives, and where our doctoral-level clinical team helps them do exactly that.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              Licensed psychologists, a board-certified psychiatrist, and a dedicated nursing staff deliver evidence-based treatment for addiction and mental health conditions in a residential setting designed for comfort, privacy, and deep personal transformation. Every treatment plan is individualized. Every client receives the attention they deserve.
+              Licensed psychologists, a board-certified psychiatrist, and a dedicated nursing staff deliver evidence-based treatment for women in a residential setting designed for comfort, privacy, and deep personal transformation. Every treatment plan is individualized. Every client receives the attention they deserve.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg">
               If you or someone you love is ready for help, our Scottsdale facility offers the clinical excellence of a top-tier treatment program in a luxury environment you have to see to believe.
@@ -155,6 +155,7 @@ export default function ScottsdaleLocationPage() {
                     <span key={p} className="text-sm bg-sage/10 text-sage font-medium px-4 py-2 rounded-full">{p}</span>
                   ))}
                 </div>
+                <p className="text-gray-500 text-xs mt-3">PHP, IOP, and OP available via step-down at our Phoenix outpatient center.</p>
               </div>
               <div>
                 <h3 className="font-display text-xl text-forest font-semibold mb-4">Amenities</h3>
@@ -282,11 +283,11 @@ export default function ScottsdaleLocationPage() {
       <AEOBlock entries={[
         {
           question: "Is there a Desert Recovery Centers in Scottsdale?",
-          answer: "Yes, Desert Recovery Centers has a facility located at 23222 N Church Rd in north Scottsdale, AZ 85255. Desert Recovery Centers is a Joint Commission accredited luxury treatment provider in Arizona. The Scottsdale location is a female-only residential treatment center surrounded by stunning mountain views. PHP and IOP programs are offered at our outpatient center in Phoenix at 4160 N. 108th Ave.",
+          answer: "Yes, Desert Recovery Centers has a facility located at 23222 N Church Rd in north Scottsdale, AZ 85255. Desert Recovery Centers is a Joint Commission accredited luxury treatment provider in Arizona. The Scottsdale location is a women's residential treatment center surrounded by stunning mountain views. PHP and IOP programs are offered at our outpatient center in Phoenix at 4160 N. 108th Ave.",
         },
         {
           question: "What addiction treatment is available in Scottsdale, Arizona?",
-          answer: "Desert Recovery Centers offers addiction and mental health treatment in Scottsdale. As a Joint Commission accredited luxury treatment center in Arizona, we provide evidence-based dual diagnosis treatment using CBT, DBT, EMDR, gender-specific group therapy, and holistic therapies, delivered by licensed psychologists and board-certified psychiatrists.",
+          answer: "Desert Recovery Centers offers addiction and mental health treatment in Scottsdale. As a Joint Commission accredited luxury treatment center in Arizona, we provide evidence-based dual diagnosis treatment using CBT, DBT, EMDR, gender-specific group therapy, and holistic therapies, delivered by licensed psychologists and a board-certified psychiatrist.",
         },
         {
           question: "Does Desert Recovery Centers accept insurance for Scottsdale residents?",

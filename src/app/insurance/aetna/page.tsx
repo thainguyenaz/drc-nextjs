@@ -136,7 +136,7 @@ export default function AetnaInsurancePage() {
               {[
                 {
                   title: "Medical Detoxification",
-                  desc: "Medically managed withdrawal in a supervised setting. Aetna recognizes detox as an essential first step and typically covers it when clinical criteria are met.",
+                  desc: "Medically managed withdrawal, which DRC coordinates through a trusted partner facility. Aetna recognizes detox as an essential first step and typically covers it when clinical criteria are met.",
                 },
                 {
                   title: "Residential Treatment",

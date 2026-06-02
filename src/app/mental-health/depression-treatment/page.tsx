@@ -150,7 +150,7 @@ export default function DepressionTreatmentPage() {
                 },
                 {
                   title: "Medication Optimization",
-                  desc: "Our psychiatrists specialize in finding the right medication at the right dose, and monitoring your response closely. For clients with treatment-resistant depression, we explore advanced options to find what works.",
+                  desc: "Our psychiatric providers specialize in finding the right medication at the right dose, and monitoring your response closely. For clients with treatment-resistant depression, we explore advanced options to find what works.",
                 },
                 {
                   title: "Trauma-Informed Care",
@@ -192,7 +192,7 @@ export default function DepressionTreatmentPage() {
                 },
                 {
                   title: "Doctor-Led Clinical Teams",
-                  desc: "Your treatment is led by licensed clinical psychologists and board-certified psychiatrists, not paraprofessionals. You receive the highest standard of clinical care available in residential treatment.",
+                  desc: "Your treatment is led by licensed clinical psychologists and a board-certified psychiatrist, not paraprofessionals. You receive the highest standard of clinical care available in residential treatment.",
                 },
                 {
                   title: "A Healing Environment",

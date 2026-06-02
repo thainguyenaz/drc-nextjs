@@ -42,7 +42,7 @@ export default function FentanylAddictionPage() {
         name="Fentanyl Addiction"
         description="Fentanyl addiction is a severe opioid use disorder involving one of the most potent synthetic opioids in existence. Fentanyl is 50 to 100 times more potent than morphine and creates rapid, severe physical dependence."
         url="/addiction/fentanyl-addiction-treatment"
-        possibleTreatments={["Medically Supervised Detox", "MAT (Suboxone, Vivitrol)", "Trauma-Informed Therapy (EMDR)", "Dual Diagnosis Treatment"]}
+        possibleTreatments={["MAT (Suboxone, Vivitrol)", "Trauma-Informed Therapy (EMDR)", "Dual Diagnosis Treatment"]}
       />
       <Navigation />
       <Breadcrumb items={getBreadcrumbsFromPathname("/addiction/fentanyl-addiction-treatment")} />
@@ -107,7 +107,7 @@ export default function FentanylAddictionPage() {
               {[
                 {
                   title: "Medically Supervised Detox",
-                  desc: "Round-the-clock medical monitoring with comfort medications to manage fentanyl withdrawal safely. Our protocols are specifically designed for synthetic opioid detoxification.",
+                  desc: "We coordinate medically supervised detox at a trusted partner facility, where round-the-clock monitoring and comfort medications manage fentanyl withdrawal safely using protocols designed for synthetic opioid detoxification. You then transition to Desert Recovery Centers for residential care.",
                 },
                 {
                   title: "Medication-Assisted Treatment (MAT)",

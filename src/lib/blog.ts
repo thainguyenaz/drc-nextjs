@@ -68,7 +68,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>What to Expect During BridgeWork™ Therapy Treatment</h2>
 
-<p>When you enter treatment using BridgeWork™ principles, expect a coordinated but flexible approach to your healing. Your treatment team will work together to ensure different therapies complement rather than conflict with each other. This means your individual therapist communicates with group facilitators, psychiatrists, and holistic practitioners to maintain treatment consistency.</p>
+<p>When you enter treatment using BridgeWork™ principles, expect a coordinated but flexible approach to your healing. Your treatment team will work together to ensure different therapies complement rather than conflict with each other. This means your individual therapist communicates with group facilitators, psychiatric providers, and holistic practitioners to maintain treatment consistency.</p>
 
 <p>You'll likely notice themes and skills from one therapy session appearing in others. For instance, grounding techniques learned in trauma therapy might be practiced during yoga sessions. Communication skills developed in group therapy get reinforced during individual counseling. This repetition and reinforcement helps solidify new patterns and coping strategies.</p>
 
@@ -141,7 +141,7 @@ ${DISCLAIMER}`
 
 <h2>How Desert Recovery Centers Treats Alcohol Use Disorder</h2>
 <p>At Desert Recovery Centers, <a href="/addiction/alcoholism-treatment">alcohol addiction treatment</a> begins with a comprehensive clinical assessment that evaluates not only the severity of alcohol use but also any co occurring mental health conditions, medical complications, and psychosocial factors. From there, each client receives an individualized treatment plan that may include medically supervised detox, residential treatment, individual and group therapy, holistic wellness programming, and aftercare planning.</p>
-<p>Our clinical team, led by licensed psychologists and psychiatrists, ensures that every client receives the level of care appropriate to their diagnosis. Treatment is not one size fits all, and recovery from alcohol use disorder requires addressing the brain, the body, and the underlying emotional and psychological factors that contribute to the disease.</p>
+<p>Our clinical team, led by licensed psychologists and psychiatric providers, ensures that every client receives the level of care appropriate to their diagnosis. Treatment is not one size fits all, and recovery from alcohol use disorder requires addressing the brain, the body, and the underlying emotional and psychological factors that contribute to the disease.</p>
 <p>If you or someone you love is struggling with alcohol abuse, the most important step is reaching out. Recovery is possible, and it begins with the right clinical support.</p>
 
 ${DISCLAIMER}`
@@ -742,7 +742,7 @@ ${DISCLAIMER}`
 
 <h2>The Desert Recovery Centers Dual Diagnosis Program</h2>
 <p>At Desert Recovery Centers, dual diagnosis is not a specialty program or add on. It is the standard of care. Our clinical team operates from the assumption that every client may have co occurring conditions, and our assessment process is designed to identify and address the full scope of each client's clinical needs.</p>
-<p>Our treatment team includes licensed psychologists, licensed clinical social workers, psychiatrists, registered nurses, and certified addiction counselors, all of whom are trained in the treatment of co occurring disorders. This multidisciplinary approach ensures that clients receive comprehensive care that addresses the biological, psychological, and social dimensions of both their addiction and their mental health.</p>
+<p>Our treatment team includes licensed psychologists, licensed clinical social workers, psychiatric providers, registered nurses, and certified addiction counselors, all of whom are trained in the treatment of co occurring disorders. This multidisciplinary approach ensures that clients receive comprehensive care that addresses the biological, psychological, and social dimensions of both their addiction and their mental health.</p>
 <p>If you or someone you love is struggling with both addiction and a mental health condition, know that effective treatment exists. Dual diagnosis is complex, but it is treatable, and integrated treatment produces outcomes that sequential treatment simply cannot match. Recovery from both conditions is possible, and it begins with reaching out for help.</p>
 
 ${DISCLAIMER}`
@@ -1126,7 +1126,7 @@ ${DISCLAIMER}`
 <p>For many clients, the decision to enter treatment is already fraught with fear and resistance. An environment that feels safe, comfortable, and dignified can make the difference between a client who engages fully in the process and one who leaves prematurely. Treatment retention is one of the strongest predictors of positive outcomes, and the treatment environment directly influences retention.</p>
 
 <h2>What Desert Recovery Centers Offers</h2>
-<p>At <a href="/levels-of-care/residential-treatment">Desert Recovery Centers</a>, we combine the clinical rigor of a top tier treatment program with the comfort and individualization of a luxury facility. Our clinical team includes doctoral level psychologists, licensed therapists, board certified psychiatrists, and experienced medical staff. Our client to therapist ratios ensure that every client receives the individual attention their recovery requires.</p>
+<p>At <a href="/levels-of-care/residential-treatment">Desert Recovery Centers</a>, we combine the clinical rigor of a top tier treatment program with the comfort and individualization of a luxury facility. Our clinical team includes doctoral level psychologists, licensed therapists, a board certified psychiatrist, and experienced medical staff. Our client to therapist ratios ensure that every client receives the individual attention their recovery requires.</p>
 <p>Our programming includes individual therapy multiple times per week, evidence based group therapy, EMDR, psychiatric medication management, holistic wellness programming, and comprehensive aftercare planning. Our facilities offer private rooms, chef prepared meals, outdoor recreational areas, and a warm, professional environment designed to support healing.</p>
 <p>The difference between luxury and standard rehab is not about luxury for its own sake. It is about the clinical depth, individualization, and quality of care that produce the best possible outcomes. When the stakes are this high, the quality of the clinical program matters more than anything else.</p>
 

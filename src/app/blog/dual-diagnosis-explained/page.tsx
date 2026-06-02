@@ -201,7 +201,7 @@ export default function DualDiagnosisExplainedPage() {
               {[
                 {
                   title: "One Clinical Team, One Plan",
-                  desc: "The same team of psychologists, psychiatrists, and therapists manages both your mental health and addiction treatment, ensuring medications, therapy protocols, and holistic programming are coordinated rather than contradictory.",
+                  desc: "The same team of psychologists, psychiatric providers, and therapists manages both your mental health and addiction treatment, ensuring medications, therapy protocols, and holistic programming are coordinated rather than contradictory.",
                 },
                 {
                   title: "Evidence-Based Modalities",

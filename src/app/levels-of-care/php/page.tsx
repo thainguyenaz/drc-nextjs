@@ -281,7 +281,7 @@ export default function PHPPage() {
                   },
                   {
                     title: "Psychiatric Care and Medication Management",
-                    desc: "Our psychiatrists continue to monitor and adjust your medications during PHP, ensuring that your psychiatric treatment plan evolves alongside your clinical progress. Regular psychiatric sessions are built into the PHP schedule.",
+                    desc: "Our psychiatric providers continue to monitor and adjust your medications during PHP, ensuring that your psychiatric treatment plan evolves alongside your clinical progress. Regular psychiatric sessions are built into the PHP schedule.",
                   },
                   {
                     title: "Relapse Prevention and Life Skills",

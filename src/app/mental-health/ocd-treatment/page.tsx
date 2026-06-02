@@ -165,7 +165,7 @@ export default function OCDTreatmentPage() {
                 },
                 {
                   title: "Medication Management",
-                  desc: "When indicated, our psychiatrists may prescribe SSRIs or other medications that have demonstrated efficacy for OCD. Medication can reduce the intensity of obsessions, making it easier to engage with and benefit from ERP therapy.",
+                  desc: "When indicated, our psychiatric providers may prescribe SSRIs or other medications that have demonstrated efficacy for OCD. Medication can reduce the intensity of obsessions, making it easier to engage with and benefit from ERP therapy.",
                 },
                 {
                   title: "Mindfulness-Based Approaches",

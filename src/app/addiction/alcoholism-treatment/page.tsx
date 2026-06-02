@@ -41,7 +41,7 @@ export default function AlcoholAddictionPage() {
         name="Alcohol Use Disorder"
         description="Alcohol use disorder (AUD) is a chronic condition characterized by an inability to control drinking despite negative consequences. Prolonged alcohol use changes brain chemistry, creating physical dependence that makes quitting dangerous without medical supervision."
         url="/addiction/alcoholism-treatment"
-        possibleTreatments={["Medically Supervised Detox", "Medication-Assisted Treatment", "CBT", "Dual Diagnosis Treatment"]}
+        possibleTreatments={["Medication-Assisted Treatment", "CBT", "Dual Diagnosis Treatment"]}
       />
       <Navigation />
       <Breadcrumb items={getBreadcrumbsFromPathname("/addiction/alcoholism-treatment")} />
@@ -106,7 +106,7 @@ export default function AlcoholAddictionPage() {
               {[
                 {
                   title: "Medically Supervised Detox",
-                  desc: "24/7 medical monitoring with medications to manage withdrawal safely. Our nursing staff and psychiatrists ensure your comfort and safety throughout the detox process.",
+                  desc: "We coordinate your medically supervised detox at a trusted partner facility, where the medical team provides 24/7 monitoring and medications to manage withdrawal safely. Once you are stabilized, you transition directly to Desert Recovery Centers for residential treatment.",
                 },
                 {
                   title: "Medication-Assisted Treatment",

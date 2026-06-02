@@ -433,7 +433,7 @@ export default function ResidentialTreatmentPage() {
                 },
                 {
                   title: "Doctoral-Level Clinical Team",
-                  desc: "Your care is led by licensed clinical psychologists, board-certified psychiatrists, and experienced therapists — not technicians or entry-level counselors.",
+                  desc: "Your care is led by licensed clinical psychologists, a board-certified psychiatrist, and experienced therapists, not technicians or entry-level counselors.",
                 },
                 {
                   title: "Integrated Dual Diagnosis Treatment",

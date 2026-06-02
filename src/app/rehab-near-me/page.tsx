@@ -24,7 +24,7 @@ const locations = [
     phone: "(623) 323-1012",
     phoneTel: "+16233231012",
     sqft: "7,500",
-    programs: ["Residential", "PHP", "IOP"],
+    programs: ["Residential"],
     amenities: ["Basketball Court", "Tennis Court", "Pool", "Gym", "Billiards", "Massage Room"],
     driveTimesFrom: [
       { city: "Peoria", time: "15-25 min" },
@@ -40,7 +40,7 @@ const locations = [
     address: "23222 N Church Rd, Scottsdale, AZ 85255",
     phone: "(602) 755-4310",
     phoneTel: "+16027554310",
-    programs: ["Residential", "PHP", "IOP"],
+    programs: ["Residential"],
     amenities: ["Pool", "Tennis Court", "Basketball Court", "Gym", "Massage Room", "Mountain Views"],
     driveTimesFrom: [
       { city: "North Scottsdale", time: "5-15 min" },

@@ -66,17 +66,17 @@ const facilities = [
     address: "8105 W Frier Dr, Glendale, AZ 85303",
     description:
       "Our flagship male-only residential treatment center. 10-bed luxury facility with basketball court, tennis court, pool, gym, and gourmet kitchen.",
-    services: ["Residential", "PHP", "IOP", "OP", "Detox"],
+    services: ["Residential"],
     image: "/images/glendale/Glendale-Front.jpg",
     href: "/locations/glendale",
   },
   {
     name: "Scottsdale Residential",
-    label: "FEMALE RESIDENTIAL",
+    label: "WOMEN'S RESIDENTIAL",
     address: "23222 N Church Rd, Scottsdale, AZ 85255",
     description:
-      "Female-only residential treatment nestled in north Scottsdale with stunning mountain views. 10-bed luxury facility with pool, tennis court, and serene desert landscape.",
-    services: ["Residential", "PHP", "IOP", "OP"],
+      "Women's residential treatment nestled in north Scottsdale with stunning mountain views. 10-bed luxury facility with pool, tennis court, and serene desert landscape.",
+    services: ["Residential"],
     image:
       "/images/scottsdale/DRC-FRONT-ENTRANCE-NORTH-SCOTTSDALE-08-01-2024-1210August-01-202400002-2.jpg",
     href: "/locations/scottsdale",
@@ -187,6 +187,9 @@ export default function FacilitiesPage() {
                       </span>
                     ))}
                   </div>
+                  {facility.name.includes("Residential") && (
+                    <p className="text-gray-500 text-xs mb-4">PHP, IOP, and OP available via step-down at our Phoenix outpatient center.</p>
+                  )}
                   <span className="text-gold font-semibold text-sm group-hover:text-gold-dark transition-colors">
                     Explore Facility &rarr;
                   </span>

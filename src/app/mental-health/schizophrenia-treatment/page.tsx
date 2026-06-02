@@ -169,7 +169,7 @@ export default function SchizophreniaTreatmentPage() {
               {[
                 {
                   title: "Psychiatric Assessment & Medication Management",
-                  desc: "Our board-certified psychiatrists conduct comprehensive evaluations and develop individualized medication protocols using antipsychotic medications. We monitor your response meticulously, adjusting type, dosage, and combinations to achieve optimal symptom control with minimal side effects.",
+                  desc: "Our board-certified psychiatrist conducts comprehensive evaluations and develops individualized medication protocols using antipsychotic medications. We monitor your response meticulously, adjusting type, dosage, and combinations to achieve optimal symptom control with minimal side effects.",
                 },
                 {
                   title: "Cognitive Behavioral Therapy for Psychosis (CBTp)",
@@ -215,7 +215,7 @@ export default function SchizophreniaTreatmentPage() {
               {[
                 {
                   title: "Experienced Psychiatric Team",
-                  desc: "Our psychiatrists and psychologists have specific experience treating schizophrenia spectrum disorders, understanding the nuances of medication management, the importance of therapeutic rapport, and the patience this condition requires.",
+                  desc: "Our psychiatric providers and psychologists have specific experience treating schizophrenia spectrum disorders, understanding the nuances of medication management, the importance of therapeutic rapport, and the patience this condition requires.",
                 },
                 {
                   title: "Structured, Stable Environment",
@@ -251,8 +251,8 @@ export default function SchizophreniaTreatmentPage() {
 
       <AEOBlock
         entries={[
-          { question: "What is schizophrenia treatment at Desert Recovery Centers?", answer: "Desert Recovery Centers (a Joint Commission accredited luxury treatment center in Arizona) provides integrated psychiatric care for schizophrenia and schizoaffective disorder. With board-certified psychiatrists experienced in schizophrenia spectrum disorders, a maximum of 10 beds per facility, and 24/7 clinical support, clients receive expert medication management and therapeutic support in a structured, dignified residential environment." },
-          { question: "How does Desert Recovery Centers treat schizophrenia?", answer: "DRC treats schizophrenia through careful antipsychotic medication management, Cognitive Behavioral Therapy for Psychosis (CBTp), social skills and life skills training, family psychoeducation, and dual diagnosis treatment for co-occurring substance use. Treatment plans are individualized by experienced psychiatrists who specialize in schizophrenia spectrum disorders." },
+          { question: "What is schizophrenia treatment at Desert Recovery Centers?", answer: "Desert Recovery Centers (a Joint Commission accredited luxury treatment center in Arizona) provides integrated psychiatric care for schizophrenia and schizoaffective disorder. With a board-certified psychiatrist experienced in schizophrenia spectrum disorders, a maximum of 10 beds per facility, and 24/7 clinical support, clients receive expert medication management and therapeutic support in a structured, dignified residential environment." },
+          { question: "How does Desert Recovery Centers treat schizophrenia?", answer: "DRC treats schizophrenia through careful antipsychotic medication management, Cognitive Behavioral Therapy for Psychosis (CBTp), social skills and life skills training, family psychoeducation, and dual diagnosis treatment for co-occurring substance use. Treatment plans are individualized by an experienced psychiatrist who specializes in schizophrenia spectrum disorders." },
           { question: "How long does schizophrenia treatment take at Desert Recovery Centers?", answer: "Residential schizophrenia treatment at DRC typically lasts 30 days, providing time for thorough medication stabilization and skills development. Outpatient PHP and IOP programs offer 6 to 12 weeks of continued structured support. Comprehensive discharge planning ensures continuity of psychiatric care and community support after residential treatment." },
         ]}
       />

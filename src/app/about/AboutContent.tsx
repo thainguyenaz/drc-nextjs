@@ -10,7 +10,7 @@ const values = [
   },
   {
     title: "10-Bed Residential Maximum Philosophy",
-    desc: "We intentionally limit each residential facility to 10 beds. This ensures every client receives deeply personalized attention from licensed psychologists, psychiatrists, and therapists, not assembly-line care.",
+    desc: "We intentionally limit each residential facility to 10 beds. This ensures every client receives deeply personalized attention from licensed psychologists, a psychiatrist, and therapists, not assembly-line care.",
   },
   {
     title: "Joint Commission Accredited",

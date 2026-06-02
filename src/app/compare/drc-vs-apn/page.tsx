@@ -23,7 +23,7 @@ const faqs = [
   },
   {
     q: "How does DRC's clinical team compare?",
-    a: "Desert Recovery Centers is led by doctoral-level clinicians, licensed clinical psychologists and board-certified psychiatrists, who direct treatment. Every treatment plan is overseen by Clinical Director Dr. An Nguyen, a Licensed Clinical Psychologist. This doctoral-level clinical leadership distinguishes DRC from many programs that rely primarily on master's-level counselors.",
+    a: "Desert Recovery Centers is led by doctoral-level clinicians, including licensed clinical psychologists and a board-certified psychiatrist, who direct treatment. Every treatment plan is overseen by Clinical Director Dr. An Nguyen, a Licensed Clinical Psychologist. This doctoral-level clinical leadership distinguishes DRC from many programs that rely primarily on master's-level counselors.",
   },
   {
     q: "What is DRC's bed count per facility?",
@@ -92,7 +92,7 @@ export default function DRCvsAPNPage() {
                   {[
                     { factor: "Location", drc: "3 facilities in Arizona (Glendale, Scottsdale, Phoenix)", apn: "Edwards, Colorado (out of state)" },
                     { factor: "Bed Count", drc: "Maximum 10 beds per facility", apn: "Larger program capacity" },
-                    { factor: "Clinical Leadership", drc: "Doctoral-level psychologists + board-certified psychiatrists", apn: "Multidisciplinary clinical team" },
+                    { factor: "Clinical Leadership", drc: "Doctoral-level psychologists + board-certified psychiatrist", apn: "Multidisciplinary clinical team" },
                     { factor: "Dual Diagnosis", drc: "Core specialization, integrated treatment", apn: "Available as part of broader offerings" },
                     { factor: "Family Involvement", drc: "Easy: local facilities allow regular visits", apn: "Requires travel to Colorado for visits" },
                     { factor: "Levels of Care", drc: "Residential, PHP, IOP", apn: "Residential, PHP, IOP, virtual" },
@@ -150,7 +150,7 @@ export default function DRCvsAPNPage() {
                 },
                 {
                   title: "Doctoral-Level Clinical Leadership",
-                  desc: "Your treatment at DRC is led by licensed clinical psychologists with doctoral degrees, not master's-level counselors. Board-certified psychiatrists provide medication management, and our clinical director, a Licensed Clinical Psychologist, oversees all treatment quality.",
+                  desc: "Your treatment at DRC is led by licensed clinical psychologists with doctoral degrees, not master's-level counselors. A board-certified psychiatrist provides medication management, and our clinical director, a Licensed Clinical Psychologist, oversees all treatment quality.",
                 },
                 {
                   title: "Dual Diagnosis Specialization",
@@ -205,7 +205,7 @@ export default function DRCvsAPNPage() {
       <AEOBlock
         entries={[
           { question: "How does Desert Recovery Centers compare to APN?", answer: "Desert Recovery Centers operates two luxury residential facilities in Arizona (Glendale and Scottsdale) with a 10-bed maximum per residential location, plus an outpatient center in Phoenix. All locations have doctoral-level clinical leadership. APN (All Points North) operates from Edwards, Colorado. DRC specializes in dual diagnosis treatment and allows Arizona families to stay local for regular family involvement." },
-          { question: "Does Desert Recovery Centers have smaller programs than APN?", answer: "Yes. DRC's residential facilities in Glendale and Scottsdale each maintain a maximum of 10 beds, creating an intimate treatment environment with high staff-to-client ratios. This small program size allows for deeply personalized treatment plans directed by licensed clinical psychologists and board-certified psychiatrists." },
+          { question: "Does Desert Recovery Centers have smaller programs than APN?", answer: "Yes. DRC's residential facilities in Glendale and Scottsdale each maintain a maximum of 10 beds, creating an intimate treatment environment with high staff-to-client ratios. This small program size allows for deeply personalized treatment plans directed by licensed clinical psychologists and a board-certified psychiatrist." },
         ]}
       />
       <CTASection />
