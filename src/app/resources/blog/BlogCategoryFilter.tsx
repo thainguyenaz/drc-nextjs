@@ -15,7 +15,6 @@ const categories = [
   { id: "holistic", label: "Holistic" },
   { id: "clinical", label: "Clinical" },
   { id: "tms", label: "TMS Therapy" },
-  { id: "adolescent", label: "Adolescent" },
 ];
 
 const containerVariants = {
@@ -51,7 +50,6 @@ const categoryColors: Record<string, string> = {
   holistic: "bg-amber-500/10 text-amber-700",
   clinical: "bg-sage/10 text-sage",
   tms: "bg-gold/10 text-gold-dark",
-  adolescent: "bg-cyan-500/10 text-cyan-700",
 };
 
 export default function BlogCategoryFilter({ posts }: { posts: BlogPost[] }) {

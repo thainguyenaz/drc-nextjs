@@ -99,7 +99,7 @@ export default function PrivacyPolicyPage() {
 
             <h3>Eligibility</h3>
             <p>
-              SMS communications are available to U.S. mobile phone subscribers age 18 and older, or to a parent or legal guardian of a minor seeking treatment. By providing a phone number, you represent that you are authorized to consent to SMS communications on behalf of the phone number provided.
+              SMS communications are available to U.S. mobile phone subscribers age 18 and older. By providing a phone number, you represent that you are authorized to consent to SMS communications on behalf of the phone number provided.
             </p>
 
             <h3>HIPAA Notice</h3>
