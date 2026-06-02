@@ -156,6 +156,7 @@ export default function GlendaleLocationPage() {
                     <span key={p} className="text-sm bg-sage/10 text-sage font-medium px-4 py-2 rounded-full">{p}</span>
                   ))}
                 </div>
+                <p className="text-gray-500 text-xs mt-3">PHP, IOP, and OP available via step-down at our Phoenix outpatient center.</p>
               </div>
               <div>
                 <h3 className="font-display text-xl text-forest font-semibold mb-4">Amenities</h3>
@@ -249,7 +250,7 @@ export default function GlendaleLocationPage() {
               {[
                 {
                   title: "Doctoral-Level Clinical Team",
-                  desc: "Your treatment is directed by licensed clinical psychologists with doctoral degrees, not counselors or paraprofessionals. Board-certified psychiatrists provide medication management, and registered nurses offer 24/7 medical monitoring.",
+                  desc: "Your treatment is directed by licensed clinical psychologists with doctoral degrees, not counselors or paraprofessionals. A board-certified psychiatrist provides medication management, and registered nurses offer 24/7 medical monitoring.",
                 },
                 {
                   title: "Individualized Treatment Plans",
@@ -287,7 +288,7 @@ export default function GlendaleLocationPage() {
         },
         {
           question: "What addiction treatment is available in Glendale, Arizona?",
-          answer: "Desert Recovery Centers offers addiction and mental health treatment at our flagship Glendale facility. As a Joint Commission accredited luxury treatment center in Arizona, we provide evidence-based dual diagnosis treatment using CBT, DBT, EMDR, and holistic therapies, delivered by licensed psychologists and board-certified psychiatrists with resort-level amenities including a basketball court, tennis court, and pool.",
+          answer: "Desert Recovery Centers offers addiction and mental health treatment at our flagship Glendale facility. As a Joint Commission accredited luxury treatment center in Arizona, we provide evidence-based dual diagnosis treatment using CBT, DBT, EMDR, and holistic therapies, delivered by licensed psychologists and a board-certified psychiatrist with resort-level amenities including a basketball court, tennis court, and pool.",
         },
         {
           question: "Does Desert Recovery Centers accept insurance for Glendale residents?",

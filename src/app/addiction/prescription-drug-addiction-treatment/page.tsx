@@ -40,7 +40,7 @@ export default function PrescriptionDrugAddictionPage() {
         name="Prescription Drug Addiction"
         description="Prescription drug addiction involves dependence on opioid painkillers, benzodiazepines, or stimulant medications. Dependence often develops gradually from legitimate medical use, making it difficult to recognize until it has significantly impacted your life."
         url="/addiction/prescription-drug-addiction-treatment"
-        possibleTreatments={["Medically Supervised Detox & Tapering", "Medication-Assisted Treatment", "CBT", "DBT", "Pain Management Alternatives"]}
+        possibleTreatments={["Medication-Assisted Treatment", "CBT", "DBT", "Pain Management Alternatives"]}
       />
       <Navigation />
       <Breadcrumb items={getBreadcrumbsFromPathname("/addiction/prescription-drug-addiction-treatment")} />
@@ -105,7 +105,7 @@ export default function PrescriptionDrugAddictionPage() {
               {[
                 {
                   title: "Medically Supervised Detox & Tapering",
-                  desc: "Safe, gradual dose reduction under medical supervision. Benzodiazepine and opioid withdrawal require precise medical protocols, our team manages this process with expertise and care.",
+                  desc: "We coordinate safe, gradual dose reduction under medical supervision at a trusted partner facility. Benzodiazepine and opioid withdrawal require precise protocols, which the partner facility's medical team manages before you transition to Desert Recovery Centers.",
                 },
                 {
                   title: "Medication-Assisted Treatment",

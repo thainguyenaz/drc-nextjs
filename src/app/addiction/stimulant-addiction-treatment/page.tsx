@@ -125,7 +125,7 @@ export default function StimulantAddictionPage() {
                 },
                 {
                   title: "Psychiatric Support",
-                  desc: "Stimulant withdrawal frequently involves depression, anxiety, and cognitive impairment. Our psychiatrists provide medication support for co-occurring mental health symptoms.",
+                  desc: "Stimulant withdrawal frequently involves depression, anxiety, and cognitive impairment. Our psychiatric providers provide medication support for co-occurring mental health symptoms.",
                 },
                 {
                   title: "Physical Health Restoration",

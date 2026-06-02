@@ -148,7 +148,7 @@ export default function UnitedInsurancePage() {
               {[
                 {
                   title: "Medical Detoxification",
-                  desc: "Medically supervised detox to safely manage withdrawal. UHC typically covers detox as an acute medical service, often with fewer authorization hurdles than other levels of care.",
+                  desc: "Medically supervised detox, coordinated by DRC through a trusted partner facility. UHC typically covers detox as an acute medical service, often with fewer authorization hurdles than other levels of care.",
                 },
                 {
                   title: "Residential Treatment",

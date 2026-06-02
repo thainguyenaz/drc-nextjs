@@ -116,7 +116,7 @@ const differentiators = [
       </svg>
     ),
     title: "Doctoral Level Clinical Team",
-    body: "Your care is directed by licensed clinical psychologists, not paraprofessionals or counselors working beyond their scope. Our psychiatrists are board certified. Our therapists are specifically trained in CBT, DBT, and EMDR. When you are here, you are working with the best.",
+    body: "Your care is directed by licensed clinical psychologists, not paraprofessionals or counselors working beyond their scope. Our psychiatrist is board certified. Our therapists are specifically trained in CBT, DBT, and EMDR. When you are here, you are working with the best.",
   },
   {
     icon: (
@@ -392,7 +392,7 @@ export default function PhoenixPHPContent() {
                 transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
                 className="text-gray-600 leading-relaxed text-lg mb-4"
               >
-                Every client at our Phoenix location works with a licensed clinical team that includes therapists, psychiatrists, and case managers. Treatment is individualized from day one. You are not placed into a generic group and forgotten. You get a plan built around your specific diagnosis, your history, and your goals, reviewed and adjusted as you progress.
+                Every client at our Phoenix location works with a licensed clinical team that includes therapists, psychiatric providers, and case managers. Treatment is individualized from day one. You are not placed into a generic group and forgotten. You get a plan built around your specific diagnosis, your history, and your goals, reviewed and adjusted as you progress.
               </motion.p>
               <motion.p
                 initial={{ opacity: 0, y: 30 }}

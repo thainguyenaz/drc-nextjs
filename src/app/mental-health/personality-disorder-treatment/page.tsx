@@ -150,7 +150,7 @@ export default function PersonalityDisorderTreatmentPage() {
                 },
                 {
                   title: "Medication Support",
-                  desc: "While there's no medication that treats personality disorders directly, our psychiatrists can prescribe medications to manage specific symptoms like mood instability, anxiety, impulsivity, or co-occurring conditions, always as part of a broader therapeutic plan.",
+                  desc: "While there's no medication that treats personality disorders directly, our psychiatric providers can prescribe medications to manage specific symptoms like mood instability, anxiety, impulsivity, or co-occurring conditions, always as part of a broader therapeutic plan.",
                 },
                 {
                   title: "Therapeutic Community",

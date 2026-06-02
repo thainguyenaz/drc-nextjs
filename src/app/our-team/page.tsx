@@ -108,7 +108,7 @@ export default function OurTeamPage() {
         <div className="max-w-container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              At Desert Recovery Centers, you&apos;re not treated by rotating staff or contract clinicians. You&apos;re treated by a dedicated team of licensed psychologists, psychiatrists, therapists, and medical professionals who know your name, your history, and your goals. Our intentionally small program sizes, a maximum of 10 beds per facility, make this level of personalized care possible.
+              At Desert Recovery Centers, you&apos;re not treated by rotating staff or contract clinicians. You&apos;re treated by a dedicated team of licensed psychologists, psychiatric providers, therapists, and medical professionals who know your name, your history, and your goals. Our intentionally small program sizes, a maximum of 10 beds per facility, make this level of personalized care possible.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg">
               Every clinician on our team brings specialized expertise in dual diagnosis treatment, evidence-based therapies, and trauma-informed care. Together, they collaborate daily to ensure your treatment plan evolves as you do. <strong className="text-forest">Heal. Restore. Thrive.</strong>
@@ -143,7 +143,7 @@ export default function OurTeamPage() {
                 },
                 {
                   title: "Daily Clinical Collaboration",
-                  desc: "Our psychologists, psychiatrists, nurses, and behavioral health professionals meet daily to review progress, adjust treatment plans, and coordinate care, ensuring nothing falls through the cracks.",
+                  desc: "Our psychologists, psychiatric providers, nurses, and behavioral health professionals meet daily to review progress, adjust treatment plans, and coordinate care, ensuring nothing falls through the cracks.",
                 },
               ].map((item, i) => (
                 <div key={i} className="border-l-2 border-gold/40 pl-6">

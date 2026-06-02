@@ -152,7 +152,7 @@ export default function BlueCrossInsurancePage() {
               {[
                 {
                   title: "Medical Detoxification",
-                  desc: "Medically supervised withdrawal management to safely manage withdrawal symptoms. BCBS typically covers detox as a medically necessary acute service.",
+                  desc: "Medically supervised withdrawal management, coordinated by DRC through a trusted partner facility. BCBS typically covers detox as a medically necessary acute service.",
                 },
                 {
                   title: "Residential Treatment",

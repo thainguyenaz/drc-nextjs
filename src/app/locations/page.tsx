@@ -27,7 +27,7 @@ const locations = [
     sqft: "7,500 sq ft",
     description:
       "Our flagship residential treatment center. Evidence-based clinical care meets resort-level comfort.",
-    services: ["Residential", "PHP", "IOP", "OP"],
+    services: ["Residential"],
     amenities: ["Basketball Court", "Tennis Court", "Pool", "Gym", "Massage Room", "Gourmet Kitchen"],
     image: "/images/glendale/Glendale-Front.jpg",
     href: "/locations/glendale",
@@ -41,7 +41,7 @@ const locations = [
     phoneTel: "+16027554310",
     description:
       "Residential treatment nestled in north Scottsdale with stunning mountain views and serene desert landscape.",
-    services: ["Residential", "PHP", "IOP", "OP"],
+    services: ["Residential"],
     amenities: ["Pool", "Tennis Court", "Basketball Court", "Gym", "Massage Room", "Mountain Views"],
     image: "/images/scottsdale/DRC-FRONT-ENTRANCE-NORTH-SCOTTSDALE-08-01-2024-1210August-01-202400002-2.jpg",
     href: "/locations/scottsdale",
@@ -65,9 +65,9 @@ const locations = [
 
 const programMatrix = [
   { program: "Residential", glendale: true, scottsdale: true, phoenix: false },
-  { program: "PHP", glendale: true, scottsdale: true, phoenix: true },
-  { program: "IOP", glendale: true, scottsdale: true, phoenix: true },
-  { program: "OP", glendale: true, scottsdale: true, phoenix: true },
+  { program: "PHP", glendale: false, scottsdale: false, phoenix: true },
+  { program: "IOP", glendale: false, scottsdale: false, phoenix: true },
+  { program: "OP", glendale: false, scottsdale: false, phoenix: true },
   { program: "Detox", glendale: false, scottsdale: false, phoenix: false },
   { program: "TMS Therapy", glendale: false, scottsdale: false, phoenix: true },
 ];
@@ -178,6 +178,7 @@ export default function LocationsPage() {
                   ))}
                 </tbody>
               </table>
+              <p className="text-gray-500 text-xs mt-4 text-center max-w-2xl mx-auto">PHP, IOP, and outpatient care are delivered at our Phoenix outpatient center. Residential clients in Glendale and Scottsdale transition to Phoenix as they step down.</p>
             </div>
           </AnimatedSection>
         </div>

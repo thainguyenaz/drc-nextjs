@@ -107,7 +107,7 @@ export default function HeroinAddictionPage() {
               {[
                 {
                   title: "Medically Supervised Detox",
-                  desc: "Our medical team manages withdrawal with comfort medications and 24/7 monitoring, keeping you safe during the most physically demanding phase of recovery.",
+                  desc: "We coordinate medically supervised detox at a trusted partner facility, where the medical team manages withdrawal with comfort medications and 24/7 monitoring, keeping you safe during the most physically demanding phase. You then transition to Desert Recovery Centers for residential treatment.",
                 },
                 {
                   title: "Medication-Assisted Treatment (MAT)",

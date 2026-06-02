@@ -145,7 +145,7 @@ export default function LuxuryRehabArizonaPage() {
               {[
                 {
                   title: "Doctoral-Level Clinical Team",
-                  desc: "Treatment directed by licensed clinical psychologists and overseen by board-certified psychiatrists. Clinical Director Dr. An Nguyen leads a team of doctoral-level clinicians across three facilities.",
+                  desc: "Treatment directed by licensed clinical psychologists and overseen by a board-certified psychiatrist. Clinical Director Dr. An Nguyen leads a team of doctoral-level clinicians across three facilities.",
                 },
                 {
                   title: "10 Beds Per Residential Facility",

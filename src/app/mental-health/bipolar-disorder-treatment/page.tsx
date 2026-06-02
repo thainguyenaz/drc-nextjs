@@ -104,7 +104,7 @@ export default function BipolarTreatmentPage() {
               {[
                 {
                   title: "Psychiatric Evaluation & Medication Management",
-                  desc: "Our board-certified psychiatrists conduct thorough diagnostic evaluations, develop targeted medication protocols using mood stabilizers and other appropriate medications, and monitor your response closely, adjusting as needed to achieve optimal stabilization with minimal side effects.",
+                  desc: "Our board-certified psychiatrist conducts thorough diagnostic evaluations, develops targeted medication protocols using mood stabilizers and other appropriate medications, and monitors your response closely, adjusting as needed to achieve optimal stabilization with minimal side effects.",
                 },
                 {
                   title: "Cognitive Behavioral Therapy (CBT)",
@@ -150,7 +150,7 @@ export default function BipolarTreatmentPage() {
               {[
                 {
                   title: "Expert Psychiatric Care",
-                  desc: "Our psychiatrists specialize in mood disorders and have extensive experience with the nuances of bipolar medication management, including clients who haven't responded to previous treatments.",
+                  desc: "Our psychiatric providers specialize in mood disorders and have extensive experience with the nuances of bipolar medication management, including clients who haven't responded to previous treatments.",
                 },
                 {
                   title: "Dual Diagnosis Integration",
@@ -186,7 +186,7 @@ export default function BipolarTreatmentPage() {
 
       <AEOBlock
         entries={[
-          { question: "What is bipolar disorder treatment at Desert Recovery Centers?", answer: "Desert Recovery Centers (a Joint Commission accredited luxury treatment center in Arizona) offers specialized bipolar disorder treatment for both bipolar I and bipolar II. With board-certified psychiatrists, doctoral-level psychologists, and a maximum of 10 beds per facility, clients receive expert mood stabilization and intensive psychotherapy in a structured residential setting." },
+          { question: "What is bipolar disorder treatment at Desert Recovery Centers?", answer: "Desert Recovery Centers (a Joint Commission accredited luxury treatment center in Arizona) offers specialized bipolar disorder treatment for both bipolar I and bipolar II. With a board-certified psychiatrist, doctoral-level psychologists, and a maximum of 10 beds per facility, clients receive expert mood stabilization and intensive psychotherapy in a structured residential setting." },
           { question: "How does Desert Recovery Centers treat bipolar disorder?", answer: "DRC treats bipolar disorder through psychiatric medication management using mood stabilizers and atypical antipsychotics, Cognitive Behavioral Therapy adapted for bipolar, Interpersonal and Social Rhythm Therapy (IPSRT), psychoeducation, and family therapy. Treatment plans are individualized to address each client's specific bipolar subtype and co-occurring conditions." },
           { question: "How long does bipolar disorder treatment take at Desert Recovery Centers?", answer: "Residential bipolar disorder treatment at DRC typically lasts 30 days, allowing time for thorough medication optimization and therapeutic skill-building. Outpatient PHP and IOP programs provide 6 to 12 weeks of continued structured support. Treatment duration is tailored to each client's stabilization progress and aftercare needs." },
         ]}

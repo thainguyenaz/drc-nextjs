@@ -111,7 +111,7 @@ export default function MethAddictionPage() {
                 },
                 {
                   title: "Psychiatric Stabilization",
-                  desc: "Meth withdrawal often includes severe depression, anxiety, and psychotic symptoms. Our psychiatrists provide medication support to stabilize your mental health safely.",
+                  desc: "Meth withdrawal often includes severe depression, anxiety, and psychotic symptoms. Our psychiatric providers provide medication support to stabilize your mental health safely.",
                 },
                 {
                   title: "Nutritional & Physical Recovery",
