@@ -210,11 +210,6 @@ export default function GetHelpPage() {
                 desc: "PHP and IOP options for flexible, high-quality treatment while living at home.",
                 href: "/levels-of-care/iop",
               },
-              {
-                name: "Adolescent Program",
-                desc: "Specialized treatment for teens ages 13-17 with age-appropriate clinical care.",
-                href: "/adolescent-treatment",
-              },
             ].map((program) => (
               <Link
                 key={program.name}

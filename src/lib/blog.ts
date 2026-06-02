@@ -3,7 +3,7 @@ export interface BlogPost {
   title: string
   excerpt: string
   content: string
-  category: 'addiction' | 'mental-health' | 'recovery-tips' | 'family' | 'holistic' | 'clinical' | 'tms' | 'adolescent'
+  category: 'addiction' | 'mental-health' | 'recovery-tips' | 'family' | 'holistic' | 'clinical' | 'tms'
   author: string
   authorTitle: string
   datePublished: string
@@ -363,7 +363,7 @@ ${DISCLAIMER}`
 
 <h2>Family Therapy and the Desert Recovery Centers Approach</h2>
 <p>At Desert Recovery Centers, family involvement is a core component of treatment. Our <a href="/levels-of-care/residential-treatment">residential program</a> includes family therapy sessions, family education programming, and structured opportunities for families to participate in the recovery process. We work with families to identify enabling patterns, rebuild communication, establish healthy boundaries, and begin their own healing.</p>
-<p>We also recognize that some family members, particularly <a href="/adolescent-treatment">adolescents</a>, may need their own clinical support. Children and teenagers who have grown up in homes affected by addiction often carry trauma, anxiety, and behavioral patterns that require professional attention. Our team can help families identify the appropriate level of care for every member of the household, ensuring that recovery is truly a family endeavor.</p>
+<p>We also recognize that family members affected by a loved one's addiction may benefit from their own support. Our team can help families connect with the appropriate resources, so that recovery is truly a family endeavor.</p>
 <p>If your family is struggling with the effects of a loved one's addiction, you do not have to navigate this alone. Reaching out for help is not a sign of weakness. It is the strongest thing a family can do.</p>
 
 ${DISCLAIMER}`
@@ -647,56 +647,6 @@ ${DISCLAIMER}`
 <p>Clinical research shows the majority of patients with treatment-resistant depression experience clinically meaningful improvement with TMS therapy, with a significant subset achieving full remission (<a href="https://www.nimh.nih.gov/health/topics/brain-stimulation-therapies/brain-stimulation-therapies" target="_blank" rel="noopener">NIMH — Brain Stimulation Therapies</a>). These results are remarkable, particularly considering that TMS is typically used in patients who have already failed one or more medication trials.</p>
 <p>The best responders to TMS tend to be individuals with moderate to severe depression who have not responded to one or two medication trials but who do not have treatment resistance across many medication classes. However, significant improvement is seen across a wide range of clinical presentations, and many people who have struggled with depression for years experience their first meaningful relief through TMS.</p>
 <p>It is important to note that TMS is not a cure for depression. Some clients maintain their improvement indefinitely, while others may benefit from periodic maintenance sessions. TMS can also be combined with psychotherapy and, in some cases, medication to optimize outcomes. At Desert Recovery Centers, TMS is offered as part of a comprehensive treatment approach that addresses the full complexity of each client's condition.</p>
-
-${DISCLAIMER}`
-  },
-  {
-    slug: "teen-mental-health-crisis-warning-signs-parents",
-    title: "The Teen Mental Health Crisis: Warning Signs Every Parent Needs to Know",
-    excerpt: "One in five teenagers has a diagnosable mental health condition and most go untreated. Learn the warning signs parents often miss and when outpatient treatment is the right step.",
-    category: "adolescent",
-    author: "Dr. An Nguyen",
-    authorTitle: "Licensed Clinical Psychologist, Clinical Director",
-    datePublished: "2025-11-30",
-    dateModified: "2025-11-30",
-    readTime: 8,
-    featuredImage: "/images/locations/phoenix/phoenix-lobby-lounge.jpg",
-    featuredImageAlt: "Desert Recovery Centers Phoenix lounge area for adolescent treatment programs",
-    tags: ["teen mental health", "adolescent depression", "warning signs", "parents", "Arizona", "youth mental health"],
-    metaTitle: "Teen Mental Health Warning Signs Every Parent Should Know | DRC Phoenix",
-    metaDescription: "One in five teenagers has a diagnosable mental health condition. Most go untreated. Learn the warning signs parents miss and when outpatient treatment is the right step.",
-    content: `<h2>The Scope of the Teen Mental Health Crisis</h2>
-<p>The numbers are alarming. According to the National Institute of Mental Health, approximately one in five adolescents in the United States has a diagnosable mental health condition. The CDC reports that persistent feelings of sadness or hopelessness among high school students increased by 40 percent between 2009 and 2019, a trend that accelerated during and after the pandemic. Suicide is now the second leading cause of death among young people aged 10 to 24. And yet, the majority of teenagers with mental health conditions never receive treatment.</p>
-<p>For parents, these statistics are frightening. But statistics alone do not help parents recognize when their own teenager is struggling. The challenge is that adolescence is inherently a period of emotional volatility, identity exploration, and behavioral change. Every teenager is moody sometimes. Every teenager pulls away from their parents to some degree. The question parents face is: when does normal adolescent behavior cross the line into something that needs clinical attention?</p>
-
-<h2>Warning Signs by Category</h2>
-<h3>Emotional Warning Signs</h3>
-<p>Persistent sadness or irritability lasting more than two weeks is one of the most important emotional warning signs. While teenagers naturally experience mood swings, a sustained shift in baseline mood that does not improve with positive experiences or rest warrants attention. Other emotional warning signs include excessive worry or fearfulness that interferes with daily functioning, emotional outbursts that are disproportionate to the situation, feelings of worthlessness or excessive guilt, and a pervasive sense of hopelessness about the future.</p>
-
-<h3>Behavioral Warning Signs</h3>
-<p>Changes in behavior are often the most visible indicators that something is wrong. Withdrawal from friends, family, and activities the teenager previously enjoyed is a significant red flag. Other behavioral warning signs include a decline in academic performance, changes in sleep patterns (sleeping significantly more or less than usual), changes in appetite or weight, increased secrecy or deception, engagement in risky behaviors such as substance use or reckless driving, and self harm, including cutting, burning, or other forms of deliberate self injury.</p>
-
-<h3>Social Warning Signs</h3>
-<p>Social changes can indicate that a teenager is struggling. A sudden shift in friend groups, particularly toward peers who engage in risky behavior, is noteworthy. Social isolation, avoidance of social situations the teenager previously enjoyed, and difficulty maintaining friendships are also concerning. Increased conflict with family members, teachers, and authority figures can indicate underlying emotional distress that the teenager is unable to express directly.</p>
-
-<h3>Physical Warning Signs</h3>
-<p>Mental health conditions frequently manifest as physical symptoms in adolescents. Frequent headaches, stomach aches, or other physical complaints without a clear medical cause may indicate anxiety or depression. Fatigue, low energy, and a general sense of physical malaise are common in depressed teenagers. Unexplained weight changes, either gain or loss, can be related to depression, anxiety, disordered eating, or substance use.</p>
-
-<h2>Why Teenagers Hide Their Struggles</h2>
-<p>One of the most important things parents need to understand is that teenagers often actively conceal their mental health struggles. They may fear being judged, worry about being a burden, feel ashamed of what they are experiencing, or simply not have the language to describe what they are going through. Many teenagers also fear the consequences of disclosure: being taken to a doctor, having their phones taken away, being treated differently, or having information shared without their consent.</p>
-<p>Social media adds another layer of complexity. Teenagers often present a curated, positive version of their lives online while struggling privately. Parents who rely on their teenager's social media presence as an indicator of well being may miss significant signs of distress. Additionally, teenagers may be exposed to harmful content online, including pro self harm communities, cyberbullying, and unrealistic standards of appearance and achievement, that exacerbate mental health symptoms without parents' awareness.</p>
-
-<h2>How to Start the Conversation</h2>
-<p>Approaching a teenager about their mental health requires care, patience, and genuine curiosity. Direct confrontation or expressions of alarm are likely to trigger defensiveness and withdrawal. Instead, parents should aim for conversations that are open ended, non judgmental, and private. Choosing a time when the teenager is calm and relatively relaxed, rather than in the middle of a conflict, increases the likelihood of a productive conversation.</p>
-<p>Effective opening statements include "I have noticed you seem different lately, and I want to check in," "You do not have to have everything figured out. I just want to know how you are really doing," and "Whatever you are going through, you do not have to go through it alone." The goal is not to diagnose or fix anything in a single conversation but to open a door that the teenager can walk through when they are ready.</p>
-
-<h2>Normal Adolescent Behavior vs. Clinical Concern</h2>
-<p>Distinguishing between normal adolescent development and clinical concern can be challenging. Some general guidelines: normal adolescent behavior is intermittent, context specific, and does not significantly impair functioning. Clinical concern is warranted when symptoms are persistent (lasting more than two weeks), pervasive (occurring across multiple settings), progressive (getting worse over time), and impairing (interfering with school, relationships, or daily functioning).</p>
-
-<h2>When to Seek Professional Evaluation</h2>
-<p>Parents should seek a professional evaluation for their teenager when they observe persistent changes in mood, behavior, or functioning that do not improve with time and support. Any mention of suicide, self harm, or a desire to die should be taken seriously and evaluated immediately, regardless of whether the teenager seems "serious" or is "just seeking attention."</p>
-<p><a href="/adolescent-treatment">Desert Recovery Centers' adolescent treatment programs</a> provide age appropriate, evidence based care for teenagers struggling with depression, anxiety, trauma, substance use, and other mental health conditions. Our clinical team understands the unique developmental needs of adolescents and works closely with families to ensure that treatment is effective, supportive, and aligned with the teenager's long term well being.</p>
-<p>If you are concerned about your teenager, do not wait. Early intervention produces significantly better outcomes, and reaching out for a professional evaluation is the most important thing you can do.</p>
 
 ${DISCLAIMER}`
   },
