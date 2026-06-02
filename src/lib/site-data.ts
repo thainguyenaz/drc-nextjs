@@ -17,7 +17,7 @@ export const siteData = {
       description:
         "Our flagship residential treatment center offering comprehensive mental health and addiction programs in a luxury home-like setting.",
       programs: ["Residential", "PHP", "IOP", "OP"],
-      amenities: ["Basketball Court", "Tennis Court", "Pool", "Gym", "Billiards", "Massage Room"],
+      amenities: ["Basketball Court", "Tennis Court", "Pool", "Gym", "Billiards", "Massage Room", "Group Therapy Rooms", "Private Bedrooms", "Outdoor Recreation"],
       image: "/images/glendale/Glendale-Front.jpg",
       sameAs: ["https://www.yelp.com/biz/desert-recovery-centers-glendale"],
       licenseNumber: "BH9449",

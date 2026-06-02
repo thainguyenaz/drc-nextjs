@@ -111,7 +111,7 @@ export default function GlendaleLocationPage() {
         address="8105 W Frier Dr, Glendale, AZ 85303"
         phone="(623) 323-1012"
         sqft="7,500 sq ft"
-        amenities={["Pool", "Tennis Court", "Basketball Court", "Massage Therapy", "Gym", "Group Therapy Rooms", "Private Bedrooms", "Outdoor Recreation"]}
+        amenities={["Pool", "Tennis Court", "Basketball Court", "Billiards", "Massage Room", "Gym", "Group Therapy Rooms", "Private Bedrooms", "Outdoor Recreation"]}
         ctaPhone="6233231012"
       />
 
