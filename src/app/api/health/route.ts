@@ -17,13 +17,11 @@ type EndpointStatus = number | "timeout" | "error";
 
 const FORM_ENDPOINTS = [
   "insurance_verification",
-  "partner_referral",
   "get_help",
 ] as const;
 
 const ENDPOINT_PATHS: Record<(typeof FORM_ENDPOINTS)[number], string> = {
   insurance_verification: "/api/insurance-verification",
-  partner_referral: "/api/partner-referral",
   get_help: "/api/get-help",
 };
 

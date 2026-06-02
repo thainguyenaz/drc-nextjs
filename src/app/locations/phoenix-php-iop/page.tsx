@@ -57,7 +57,7 @@ const clinicSchema = {
     "Joint Commission accredited behavioral health treatment center offering PHP, IOP, OP, and TMS therapy in Phoenix, AZ.",
   url: `${SITE_URL}/locations/phoenix-php-iop`,
   telephone: "+16029058070",
-  email: "admissions@desertrecoverycenters.com",
+  email: "contact@desertrecoverycenters.com",
   address: {
     "@type": "PostalAddress",
     streetAddress: "4160 N 108th Ave",
