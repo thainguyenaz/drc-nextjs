@@ -92,7 +92,6 @@ const programs = [
     body: "One in three people with depression do not get better with antidepressants. If that is you, you have not failed treatment. Treatment has failed you. NeuroStar TMS is different. It uses precise magnetic pulses to stimulate the specific regions of the brain that regulate mood, with no sedation, no systemic side effects, and no downtime. Sessions take about 19 minutes. Most clients start feeling a difference within two to four weeks. Our Phoenix TMS suite is one of the few in Arizona integrated directly into a full outpatient clinical program, so your TMS treatment works alongside your therapy, not in isolation.",
     features: [
       "FDA cleared for depression, anxious depression, and OCD",
-      "Cleared for adolescents ages 15 and older",
       "Typically 36 sessions over 7 to 9 weeks",
       "Can be scheduled around PHP, IOP, or OP programming",
       "No medication, no sedation, no recovery time needed",
@@ -402,7 +401,7 @@ export default function PhoenixPHPContent() {
                 transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1], delay: 0.4 }}
                 className="text-gray-600 leading-relaxed text-lg mb-6"
               >
-                This location also houses our NeuroStar TMS therapy suite, the only TMS system FDA cleared for depression, anxious depression, OCD, and adolescents ages 15 and older. If you have tried medications and they have not worked, TMS may be the answer you have been looking for.
+                This location also houses our NeuroStar TMS therapy suite, the only TMS system FDA cleared for depression, anxious depression, and OCD. If you have tried medications and they have not worked, TMS may be the answer you have been looking for.
               </motion.p>
               <motion.div
                 initial={{ opacity: 0, x: -60 }}
@@ -587,7 +586,7 @@ export default function PhoenixPHPContent() {
                 Our Phoenix TMS suite is integrated directly into our outpatient clinical program. Your TMS schedule is coordinated with your therapy sessions and your psychiatric appointments. Your entire team is in one building, looking at one treatment plan. That level of coordination is not something you will find at most standalone TMS clinics.
               </p>
               <div className="flex flex-wrap gap-2 mb-6">
-                {["Depression", "Anxious Depression", "OCD", "Ages 15 and Up", "No Medication Required", "No Sedation", "No Downtime"].map((badge) => (
+                {["Depression", "Anxious Depression", "OCD", "No Medication Required", "No Sedation", "No Downtime"].map((badge) => (
                   <span key={badge} className="text-xs bg-sage/10 text-sage font-medium px-3 py-1.5 rounded-full">
                     {badge}
                   </span>

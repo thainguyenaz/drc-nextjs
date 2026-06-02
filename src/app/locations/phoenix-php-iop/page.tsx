@@ -99,7 +99,7 @@ const clinicSchema = {
     {
       "@type": "MedicalTherapy",
       name: "TMS Therapy",
-      description: "FDA cleared NeuroStar TMS for depression, anxious depression, OCD, and adolescents ages 15 and older.",
+      description: "FDA cleared NeuroStar TMS for depression, anxious depression, and OCD.",
     },
   ],
   hasCredential: {

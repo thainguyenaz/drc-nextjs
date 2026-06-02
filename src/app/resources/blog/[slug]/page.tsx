@@ -61,7 +61,6 @@ const categoryColors: Record<string, string> = {
   holistic: "bg-amber-500/10 text-amber-700",
   clinical: "bg-sage/10 text-sage",
   tms: "bg-gold/10 text-gold-dark",
-  adolescent: "bg-cyan-500/10 text-cyan-700",
 };
 
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {

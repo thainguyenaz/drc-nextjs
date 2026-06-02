@@ -28,7 +28,6 @@ const candidateReasons = [
   "You prefer a drug-free treatment approach",
   "You have anxiety symptoms alongside depression (NeuroStar is FDA-cleared for anxious depression)",
   "You have OCD (NeuroStar is FDA-cleared as adjunct treatment for OCD)",
-  "You are between ages 15 and 21 with MDD (NeuroStar is the only FDA-cleared TMS for adolescents)",
 ];
 
 const notCandidate = [
@@ -45,7 +44,7 @@ const differentiators = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
       </svg>
     ),
-    body: "The only TMS system FDA-cleared for MDD, anxious depression, OCD, and adolescents ages 15 and older",
+    body: "The only TMS system FDA-cleared for MDD, anxious depression, and OCD",
   },
   {
     title: "Largest Clinical Dataset",
@@ -218,7 +217,7 @@ export default function TMSTherapyPage() {
           "@id": "https://desertrecoverycenters.com/treatments/tms-therapy#therapy",
           "name": "NeuroStar TMS Therapy",
           "alternateName": "Transcranial Magnetic Stimulation",
-          "description": "FDA-cleared non-invasive brain stimulation therapy for major depressive disorder, anxious depression, OCD, and adolescents ages 15 and older. Available at Desert Recovery Centers Phoenix.",
+          "description": "FDA-cleared non-invasive brain stimulation therapy for major depressive disorder, anxious depression, and OCD. Available at Desert Recovery Centers Phoenix.",
           "url": "https://desertrecoverycenters.com/treatments/tms-therapy",
           "recognizingAuthority": { "@type": "Organization", "name": "U.S. Food and Drug Administration", "url": "https://www.fda.gov" },
           "legalStatus": "FDA Cleared",
@@ -777,31 +776,6 @@ export default function TMSTherapyPage() {
                 Download PDF
               </span>
             </motion.a>
-
-            <motion.a
-              href="https://www.dropbox.com/scl/fi/7mqo34090zve4u1zd582t/NeuroStar-Brochure-for-Adolescent.pdf?rlkey=sqbhteu9j3lx09b84y7ci2jak&dl=1"
-              target="_blank"
-              rel="noopener noreferrer"
-              data-brochure="adolescent"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: 0.1 }}
-              whileHover={{ y: -6, boxShadow: "0 20px 40px rgba(0,0,0,0.12)" }}
-              className="bg-white rounded-xl p-6 border border-gray-100 block transition-shadow"
-            >
-              <div className="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center text-gold mb-4">
-                <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m.75 12l3 3m0 0l3-3m-3 3v-6m-1.5-9H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
-                </svg>
-              </div>
-              <h3 className="font-display text-lg text-forest font-semibold mb-2">Adolescent TMS Brochure</h3>
-              <p className="text-gray-600 text-sm leading-relaxed mb-4">Guide to NeuroStar TMS therapy for adolescents ages 15 and older with treatment resistant depression.</p>
-              <span className="text-gold font-semibold text-sm flex items-center gap-2">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                Download PDF
-              </span>
-            </motion.a>
           </div>
         </div>
       </section>
@@ -951,59 +925,12 @@ export default function TMSTherapyPage() {
         <div className="max-w-container mx-auto px-6">
           <p className="text-forest/40 font-body text-xs leading-relaxed text-center max-w-4xl mx-auto">
             NeuroStar TMS therapy is FDA-cleared for Major Depressive Disorder,
-            anxious depression, OCD, and adolescents ages 15 and older with MDD.
-            Individual results vary. This page is for informational purposes only
+            anxious depression, and OCD. Individual results vary. This page is for informational purposes only
             and does not constitute medical advice. Please consult with a qualified
             healthcare professional to determine if TMS is appropriate for your
             situation. Medically reviewed by Dr. An Nguyen, Licensed Clinical
             Psychologist, Clinical Director, Desert Recovery Centers.
           </p>
-        </div>
-      </section>
-
-      {/* ── TMS for Adolescents ───────────────────────────────── */}
-      <section className="py-20 md:py-28 bg-forest relative overflow-hidden">
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
-        <div className="max-w-container mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.6 }}
-            className="max-w-3xl mx-auto text-center"
-          >
-            <span className="text-gold font-body text-sm tracking-[0.2em] uppercase font-medium">Adolescent Treatment</span>
-            <div className="w-[60px] h-0.5 bg-gold mx-auto mt-4 mb-4" />
-            <h2 className="font-display text-3xl md:text-4xl text-white font-semibold mb-6">
-              TMS Therapy for Adolescents
-            </h2>
-            <p className="text-white/70 font-body text-lg leading-relaxed mb-10">
-              NeuroStar is the only TMS system FDA-cleared for adolescents ages 15 and older, offering a safe, drug-free treatment option for teens with treatment-resistant depression.
-            </p>
-            <div className="grid sm:grid-cols-2 gap-4 text-left max-w-2xl mx-auto mb-12">
-              {[
-                "FDA-cleared for patients 15 and older",
-                "Clinically proven for treatment-resistant depression in teenagers",
-                "Non-invasive, no medication required",
-                "Sessions fit around school schedules",
-                "No sedation or recovery time needed",
-                "No impact on daily activities",
-              ].map((item, i) => (
-                <div key={i} className="flex items-start gap-3">
-                  <svg className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  <span className="text-white/80 text-sm">{item}</span>
-                </div>
-              ))}
-            </div>
-            <a
-              href="/adolescent-treatment"
-              className="inline-block bg-gold hover:bg-gold-dark text-white font-semibold text-base px-8 py-4 rounded-xl transition-colors shadow-lg shadow-gold/25"
-            >
-              Learn About Adolescent Treatment
-            </a>
-          </motion.div>
         </div>
       </section>
 

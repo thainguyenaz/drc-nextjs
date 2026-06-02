@@ -8,7 +8,6 @@ const quickLinks = [
   { label: "Phoenix (PHP / IOP)", href: "/locations/phoenix-php-iop" },
   { label: "Addiction Treatment", href: "/addiction-treatment" },
   { label: "Mental Health Treatment", href: "/mental-health" },
-  { label: "Adolescent Treatment", href: "/adolescent-treatment" },
   { label: "Verify Insurance", href: "/insurance" },
   { label: "Contact Us", href: "/contact" },
 ];
