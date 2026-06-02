@@ -69,18 +69,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/treatments/softwave-therapy", priority: 0.7, changeFrequency: "weekly" },
     { path: "/treatments/bridgework", priority: 0.7, changeFrequency: "weekly" },
 
-    // Adolescent program pages
-    { path: "/adolescent-treatment", priority: 0.9, changeFrequency: "weekly" },
-    { path: "/adolescent/depression", priority: 0.7, changeFrequency: "weekly" },
-    { path: "/adolescent/anxiety", priority: 0.7, changeFrequency: "weekly" },
-    { path: "/adolescent/substance-use", priority: 0.7, changeFrequency: "weekly" },
-    { path: "/adolescent/adhd", priority: 0.7, changeFrequency: "weekly" },
-    { path: "/adolescent/ocd", priority: 0.7, changeFrequency: "weekly" },
-    { path: "/adolescent/self-harm", priority: 0.7, changeFrequency: "weekly" },
-    { path: "/adolescent/bipolar", priority: 0.7, changeFrequency: "weekly" },
-    { path: "/adolescent/suicidal-ideation", priority: 0.7, changeFrequency: "weekly" },
-    { path: "/adolescent/ptsd-trauma", priority: 0.7, changeFrequency: "weekly" },
-
     // Insurance pages
     { path: "/insurance", priority: 0.7, changeFrequency: "weekly" },
     { path: "/insurance/aetna", priority: 0.7, changeFrequency: "weekly" },
@@ -132,7 +120,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/resources/blog/what-is-partial-hospitalization-php-program", priority: 0.6, changeFrequency: "monthly" },
     { path: "/resources/blog/what-is-intensive-outpatient-iop-program", priority: 0.6, changeFrequency: "monthly" },
     { path: "/resources/blog/tms-therapy-for-depression-what-to-expect", priority: 0.6, changeFrequency: "monthly" },
-    { path: "/resources/blog/teen-mental-health-crisis-warning-signs-parents", priority: 0.6, changeFrequency: "monthly" },
     { path: "/resources/blog/how-to-talk-to-someone-about-going-to-rehab", priority: 0.6, changeFrequency: "monthly" },
     { path: "/resources/blog/dual-diagnosis-mental-health-and-addiction", priority: 0.6, changeFrequency: "monthly" },
     { path: "/resources/blog/what-to-expect-in-residential-treatment-first-week", priority: 0.6, changeFrequency: "monthly" },
