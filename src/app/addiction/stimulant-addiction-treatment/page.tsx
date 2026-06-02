@@ -55,14 +55,14 @@ export default function StimulantAddictionPage() {
             Confidential admissions, 24/7. Out-of-network commercial insurance and in-network TriCare/TriWest accepted.
           </p>
           <a
-            href="tel:+14809313617"
+            href="tel:+16233050496"
             className="inline-flex items-center gap-2 bg-gold hover:bg-gold-dark text-white font-semibold text-base px-6 py-3 rounded-xl transition-colors"
-            aria-label="Call Desert Recovery Centers at (480) 931-3617"
+            aria-label="Call Desert Recovery Centers at (623) 305-0496"
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.95.68l1.5 4.5a1 1 0 01-.27 1.06l-2.1 2.1a12 12 0 005.3 5.3l2.1-2.1a1 1 0 011.06-.27l4.5 1.5a1 1 0 01.68.95V19a2 2 0 01-2 2h-1C9.72 21 3 14.28 3 6V5z" />
             </svg>
-            Call (480) 931-3617
+            Call (623) 305-0496
           </a>
         </div>
       </section>
@@ -200,13 +200,13 @@ export default function StimulantAddictionPage() {
                 Our admissions team is available 24/7 for a confidential conversation. We&apos;ll verify your insurance, conduct a brief clinical assessment, and help you begin treatment, often within 24 hours.
               </p>
               <a
-                href="tel:+14809313617"
+                href="tel:+16233050496"
                 className="inline-flex items-center gap-2 bg-forest hover:bg-forest/90 text-white font-semibold text-base px-7 py-4 rounded-xl transition-colors"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.95.68l1.5 4.5a1 1 0 01-.27 1.06l-2.1 2.1a12 12 0 005.3 5.3l2.1-2.1a1 1 0 011.06-.27l4.5 1.5a1 1 0 01.68.95V19a2 2 0 01-2 2h-1C9.72 21 3 14.28 3 6V5z" />
                 </svg>
-                Call (480) 931-3617
+                Call (623) 305-0496
               </a>
               <p className="text-sm text-gray-500 mt-4">
                 Confidential · HIPAA protected · 24/7 admissions

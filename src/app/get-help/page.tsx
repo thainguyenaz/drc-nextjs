@@ -21,7 +21,7 @@ const faqSchema = {
       name: "How do I start treatment at Desert Recovery Centers?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Call (480) 931-3617 any time, day or night. Our admissions team will conduct a brief clinical assessment, verify your insurance, and help coordinate your admission. Most clients begin treatment within 24 hours of their first call.",
+        text: "Call (623) 305-0496 any time, day or night. Our admissions team will conduct a brief clinical assessment, verify your insurance, and help coordinate your admission. Most clients begin treatment within 24 hours of their first call.",
       },
     },
     {
@@ -45,7 +45,7 @@ const faqSchema = {
       name: "How quickly can I be admitted?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Most clients begin treatment within 24 hours of their first call to (480) 931-3617. Our admissions team is available 24 hours a day, 7 days a week.",
+        text: "Most clients begin treatment within 24 hours of their first call to (623) 305-0496. Our admissions team is available 24 hours a day, 7 days a week.",
       },
     },
     {
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
   title:
     "Get Help for Addiction & Mental Health Today | Desert Recovery Centers",
   description:
-    "Ready to start your recovery? Contact Desert Recovery Centers today. Luxury addiction and mental health treatment in Arizona. Call (480) 931-3617.",
+    "Ready to start your recovery? Contact Desert Recovery Centers today. Luxury addiction and mental health treatment in Arizona. Call (623) 305-0496.",
   alternates: {
     canonical: "https://desertrecoverycenters.com/get-help/",
   },
@@ -121,10 +121,10 @@ export default function GetHelpPage() {
                     confidential.
                   </p>
                   <a
-                    href="tel:+14809313617"
+                    href="tel:+16233050496"
                     className="inline-block bg-gold hover:bg-gold-dark text-white font-semibold text-base px-8 py-4 rounded-xl transition-colors"
                   >
-                    (480) 931-3617
+                    (623) 305-0496
                   </a>
                 </div>
 

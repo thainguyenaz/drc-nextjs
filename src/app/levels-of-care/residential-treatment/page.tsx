@@ -54,7 +54,7 @@ const faqs = [
   },
   {
     q: "Does insurance cover residential rehab in Arizona?",
-    a: "Most major insurance plans provide coverage for residential addiction treatment in Arizona, including Aetna, Cigna, Blue Cross Blue Shield, UnitedHealthcare, and many others. Coverage levels and out-of-pocket costs vary by plan. Note: Desert Recovery Centers works with these commercial carriers on an out-of-network basis; we are in-network with TriCare and TriWest, and offer cash-pay options. Our admissions team will verify your specific benefits and explain your coverage before treatment begins. Call (480) 931-3617 for a free, confidential insurance verification.",
+    a: "Most major insurance plans provide coverage for residential addiction treatment in Arizona, including Aetna, Cigna, Blue Cross Blue Shield, UnitedHealthcare, and many others. Coverage levels and out-of-pocket costs vary by plan. Note: Desert Recovery Centers works with these commercial carriers on an out-of-network basis; we are in-network with TriCare and TriWest, and offer cash-pay options. Our admissions team will verify your specific benefits and explain your coverage before treatment begins. Call (623) 305-0496 for a free, confidential insurance verification.",
   },
   {
     q: "How is DRC different from other rehabs?",
@@ -346,10 +346,10 @@ export default function ResidentialTreatmentPage() {
               assessment over the phone can clarify which level of care
               matches your situation. Call{" "}
               <a
-                href="tel:+14809313617"
+                href="tel:+16233050496"
                 className="text-gold hover:text-gold-dark font-semibold"
               >
-                (480) 931-3617
+                (623) 305-0496
               </a>{" "}
               to speak with someone today.
             </p>
@@ -397,10 +397,10 @@ export default function ResidentialTreatmentPage() {
             <p className="text-gray-600 leading-relaxed text-lg">
               To begin the admissions process or verify your insurance, call{" "}
               <a
-                href="tel:+14809313617"
+                href="tel:+16233050496"
                 className="text-gold hover:text-gold-dark font-semibold"
               >
-                (480) 931-3617
+                (623) 305-0496
               </a>{" "}
               or complete our online{" "}
               <Link

@@ -243,7 +243,7 @@ export async function POST(request: NextRequest) {
           hubspotSubmitted: true,
           emailSent: false,
           warning:
-            "We got the referral but had trouble notifying our team. Please call (480) 931-3617 so we can verify the patient's benefits right away.",
+            "We got the referral but had trouble notifying our team. Please call (623) 305-0496 so we can verify the patient's benefits right away.",
           relayError,
         },
         { status: 207 }

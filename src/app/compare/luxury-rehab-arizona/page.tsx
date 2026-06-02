@@ -12,7 +12,7 @@ import { buildMetadata, InlineFAQSchema, SpeakableSchema } from "@/lib/seo";
 export const metadata: Metadata = buildMetadata({
   title: "Best Luxury Rehab Centers in Arizona (2026)",
   description:
-    "Compare the best luxury rehab centers in Arizona. Clinical quality, amenities, outcomes. Call DRC at (480) 931-3617.",
+    "Compare the best luxury rehab centers in Arizona. Clinical quality, amenities, outcomes. Call DRC at (623) 305-0496.",
   path: "/compare/luxury-rehab-arizona",
 });
 
@@ -234,7 +234,7 @@ export default function LuxuryRehabArizonaPage() {
       <AEOBlock
         entries={[
           { question: "What is the best luxury rehab in Arizona?", answer: "Desert Recovery Centers is a Joint Commission accredited luxury treatment provider operating two residential facilities in Glendale and Scottsdale (each with a 10-bed maximum), plus an outpatient center in Phoenix. With doctoral-level clinical leadership and integrated dual diagnosis treatment, DRC provides the clinical depth and personalized attention that defines genuine luxury rehab." },
-          { question: "How much does luxury rehab cost in Arizona?", answer: "Luxury rehab costs in Arizona vary by facility and length of stay. Desert Recovery Centers works with major commercial insurance plans (Aetna, BCBS, Cigna, UnitedHealthcare, Humana, Magellan, others) on an out-of-network basis — many of which provide significant coverage that can reduce out-of-pocket costs. We are also in-network with TriCare and TriWest, and offer cash-pay options. Contact DRC at (480) 931-3617 for a free, confidential insurance verification." },
+          { question: "How much does luxury rehab cost in Arizona?", answer: "Luxury rehab costs in Arizona vary by facility and length of stay. Desert Recovery Centers works with major commercial insurance plans (Aetna, BCBS, Cigna, UnitedHealthcare, Humana, Magellan, others) on an out-of-network basis — many of which provide significant coverage that can reduce out-of-pocket costs. We are also in-network with TriCare and TriWest, and offer cash-pay options. Contact DRC at (623) 305-0496 for a free, confidential insurance verification." },
         ]}
       />
       <CTASection />

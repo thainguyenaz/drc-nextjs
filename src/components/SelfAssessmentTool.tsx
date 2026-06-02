@@ -157,10 +157,10 @@ export default function SelfAssessmentTool() {
 
                 <div className="flex flex-col sm:flex-row gap-4 pt-4">
                   <a
-                    href="tel:+14809313617"
+                    href="tel:+16233050496"
                     className="text-center bg-gold hover:bg-gold-dark text-white font-semibold text-sm px-6 py-3 rounded-xl transition-colors cursor-pointer"
                   >
-                    Call (480) 931-3617
+                    Call (623) 305-0496
                   </a>
                   <button
                     onClick={handleReset}

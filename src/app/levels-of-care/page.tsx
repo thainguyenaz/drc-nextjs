@@ -48,7 +48,7 @@ const faqs = [
   },
   {
     q: "Do I need detox before residential treatment?",
-    a: "Whether you need medical detox before residential treatment depends on the substance you have been using, the duration and severity of your use, and your overall physical health. Individuals with physical dependence on alcohol, opioids, or benzodiazepines typically require medically supervised detox before beginning residential treatment. Stimulant use may or may not require formal detox depending on the individual. Our admissions team conducts a preliminary clinical assessment over the phone to determine if detox is an appropriate starting point for you. Call (480) 931-3617 to discuss your situation confidentially.",
+    a: "Whether you need medical detox before residential treatment depends on the substance you have been using, the duration and severity of your use, and your overall physical health. Individuals with physical dependence on alcohol, opioids, or benzodiazepines typically require medically supervised detox before beginning residential treatment. Stimulant use may or may not require formal detox depending on the individual. Our admissions team conducts a preliminary clinical assessment over the phone to determine if detox is an appropriate starting point for you. Call (623) 305-0496 to discuss your situation confidentially.",
   },
   {
     q: "How do I know which level of care I need?",
@@ -56,7 +56,7 @@ const faqs = [
   },
   {
     q: "Does insurance cover all levels of care?",
-    a: "Most major insurance plans in Arizona cover all medically necessary levels of addiction and mental health treatment, including detox, residential, PHP, IOP, and outpatient services. The Mental Health Parity and Addiction Equity Act requires insurers to provide equal coverage for behavioral health and medical conditions. Coverage specifics (including deductibles, copays, and length-of-stay authorizations) vary by plan. Note: Desert Recovery Centers works with commercial carriers on an out-of-network basis; we are in-network with TriCare and TriWest, and offer cash-pay options. Our admissions team verifies your insurance benefits across all levels of care and explains your coverage before treatment begins. Call (480) 931-3617 for a free benefits check.",
+    a: "Most major insurance plans in Arizona cover all medically necessary levels of addiction and mental health treatment, including detox, residential, PHP, IOP, and outpatient services. The Mental Health Parity and Addiction Equity Act requires insurers to provide equal coverage for behavioral health and medical conditions. Coverage specifics (including deductibles, copays, and length-of-stay authorizations) vary by plan. Note: Desert Recovery Centers works with commercial carriers on an out-of-network basis; we are in-network with TriCare and TriWest, and offer cash-pay options. Our admissions team verifies your insurance benefits across all levels of care and explains your coverage before treatment begins. Call (623) 305-0496 for a free benefits check.",
   },
 ];
 
@@ -223,10 +223,10 @@ export default function LevelsOfCarePage() {
               <p className="text-gray-600 leading-relaxed text-lg mb-4">
                 When you call our admissions team at{" "}
                 <a
-                  href="tel:+14809313617"
+                  href="tel:+16233050496"
                   className="text-gold hover:text-gold-dark font-semibold"
                 >
-                  (480) 931-3617
+                  (623) 305-0496
                 </a>
                 , the process begins with an initial clinical assessment.
                 Based on the severity of your substance use, any
@@ -378,10 +378,10 @@ export default function LevelsOfCarePage() {
               <p className="text-gray-600 leading-relaxed text-lg">
                 Call{" "}
                 <a
-                  href="tel:+14809313617"
+                  href="tel:+16233050496"
                   className="text-gold hover:text-gold-dark font-semibold"
                 >
-                  (480) 931-3617
+                  (623) 305-0496
                 </a>{" "}
                 to speak with our admissions team today. You can also begin
                 the process by completing our online{" "}
@@ -417,7 +417,7 @@ export default function LevelsOfCarePage() {
             question:
               "Does insurance cover all levels of addiction treatment at DRC?",
             answer:
-              "Most major insurance plans in Arizona cover medically necessary addiction treatment at all levels of care, including detox, residential, PHP, IOP, and outpatient services. The Mental Health Parity and Addiction Equity Act requires equal coverage for behavioral health and medical conditions. Note: DRC works with commercial carriers on an out-of-network basis; we are in-network with TriCare and TriWest, and offer cash-pay options. DRC's admissions team verifies benefits across all levels before treatment begins. Call (480) 931-3617 for a free insurance check.",
+              "Most major insurance plans in Arizona cover medically necessary addiction treatment at all levels of care, including detox, residential, PHP, IOP, and outpatient services. The Mental Health Parity and Addiction Equity Act requires equal coverage for behavioral health and medical conditions. Note: DRC works with commercial carriers on an out-of-network basis; we are in-network with TriCare and TriWest, and offer cash-pay options. DRC's admissions team verifies benefits across all levels before treatment begins. Call (623) 305-0496 for a free insurance check.",
           },
         ]}
       />

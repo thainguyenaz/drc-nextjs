@@ -50,7 +50,7 @@ const faqs = [
   },
   {
     q: "Does insurance cover detox in Arizona?",
-    a: "Most major insurance plans cover medically necessary detoxification services in Arizona, including plans from Aetna, Cigna, Blue Cross Blue Shield, UnitedHealthcare, and many others. The Mental Health Parity and Addiction Equity Act requires insurers to cover substance use treatment at the same level as other medical conditions. Note: Desert Recovery Centers works with these commercial carriers on an out-of-network basis; we are in-network with TriCare and TriWest, and offer cash-pay options. Our admissions team will verify your insurance benefits and explain your coverage before you begin treatment. Call (480) 931-3617 for a free, confidential insurance verification.",
+    a: "Most major insurance plans cover medically necessary detoxification services in Arizona, including plans from Aetna, Cigna, Blue Cross Blue Shield, UnitedHealthcare, and many others. The Mental Health Parity and Addiction Equity Act requires insurers to cover substance use treatment at the same level as other medical conditions. Note: Desert Recovery Centers works with these commercial carriers on an out-of-network basis; we are in-network with TriCare and TriWest, and offer cash-pay options. Our admissions team will verify your insurance benefits and explain your coverage before you begin treatment. Call (623) 305-0496 for a free, confidential insurance verification.",
   },
   {
     q: "What happens after detox?",
@@ -312,10 +312,10 @@ export default function DetoxPage() {
                 situation, our admissions team can provide a preliminary
                 assessment over the phone. Call{" "}
                 <a
-                  href="tel:+14809313617"
+                  href="tel:+16233050496"
                   className="text-gold hover:text-gold-dark font-semibold"
                 >
-                  (480) 931-3617
+                  (623) 305-0496
                 </a>{" "}
                 to speak with someone who can help you understand what to
                 expect.
@@ -374,10 +374,10 @@ export default function DetoxPage() {
                 </Link>{" "}
                 page or call{" "}
                 <a
-                  href="tel:+14809313617"
+                  href="tel:+16233050496"
                   className="text-gold hover:text-gold-dark font-semibold"
                 >
-                  (480) 931-3617
+                  (623) 305-0496
                 </a>{" "}
                 to speak with our admissions team. You can also begin by{" "}
                 <Link

@@ -5,13 +5,14 @@ import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import { buildMetadata, BreadcrumbSchema } from "@/lib/seo";
+import SchemaScript from "@/components/SchemaScript";
 import dynamic from "next/dynamic";
 const PhotoGallery = dynamic(() => import("@/components/PhotoGallery"), { ssr: false, loading: () => null });
 
 export const metadata: Metadata = buildMetadata({
   title: "Phoenix PHP Sober Living, Desert Recovery Centers",
   description:
-    "Structured sober living housing for clients enrolled in DRC PHP programs. 1623 W Moody Trail, Phoenix, AZ 85041. Call (602) 905-8070.",
+    "Structured sober living housing for clients enrolled in DRC PHP programs. 1623 W Moody Trail, Phoenix, AZ 85041. Call (623) 257-5384.",
   path: "/locations/phoenix-living",
 });
 
@@ -42,10 +43,29 @@ const gallery = [
   { src: "/images/locations/phoenix-living/phoenix-pool.jpg", alt: "Phoenix sober living pool with waterfall" },
 ];
 
+const lodgingSchema = {
+  "@context": "https://schema.org",
+  "@type": ["LodgingBusiness"],
+  "@id": "https://desertrecoverycenters.com/locations/phoenix-living",
+  name: "Desert Recovery Centers",
+  url: "https://desertrecoverycenters.com/locations/phoenix-living",
+  telephone: "+16232575384",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "1623 W Moody Trail",
+    addressLocality: "Phoenix",
+    addressRegion: "AZ",
+    postalCode: "85041",
+    addressCountry: "US",
+  },
+  parentOrganization: { "@id": "https://desertrecoverycenters.com/#organization" },
+};
+
 export default function PhoenixLivingPage() {
   return (
     <>
       <BreadcrumbSchema items={[{ name: "Locations", path: "/locations" }, { name: "Phoenix PHP Sober Living", path: "/locations/phoenix-living" }]} />
+      <SchemaScript schema={[lodgingSchema]} />
       <Navigation />
       <PageHero
         eyebrow="Our Locations"
@@ -85,7 +105,7 @@ export default function PhoenixLivingPage() {
               </div>
               <div className="flex items-start gap-3">
                 <span className="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0" />
-                <span><strong>Phone:</strong>&nbsp;<a href="tel:+16029058070" className="text-sage font-medium">(602) 905-8070</a></span>
+                <span><strong>Phone:</strong>&nbsp;<a href="tel:+16232575384" className="text-sage font-medium">(623) 257-5384</a></span>
               </div>
               <div className="flex items-start gap-3">
                 <span className="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0" />
@@ -126,10 +146,10 @@ export default function PhoenixLivingPage() {
 
             <div className="mt-12 flex flex-col sm:flex-row items-center gap-4">
               <a
-                href="tel:+16029058070"
+                href="tel:+16232575384"
                 className="bg-gold hover:bg-gold-dark text-white font-semibold text-base px-8 py-4 rounded-xl transition-all shadow-lg shadow-gold/25 w-full sm:w-auto text-center"
               >
-                Call (602) 905-8070
+                Call (623) 257-5384
               </a>
               <Link
                 href="/locations/phoenix-php-iop"

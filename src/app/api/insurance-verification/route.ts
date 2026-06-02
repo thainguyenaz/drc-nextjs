@@ -208,7 +208,7 @@ export async function POST(request: NextRequest) {
           hubspotSubmitted: true,
           emailSent: false,
           warning:
-            "We got your insurance info but had trouble notifying our team. Please call (480) 931-3617 so we can verify your benefits right away.",
+            "We got your insurance info but had trouble notifying our team. Please call (623) 305-0496 so we can verify your benefits right away.",
           relayError,
         },
         { status: 207 }

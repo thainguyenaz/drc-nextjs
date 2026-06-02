@@ -16,11 +16,11 @@ export const metadata: Metadata = buildMetadata({
 const faqs = [
   {
     q: "Does Cigna cover inpatient rehab for drug and alcohol addiction?",
-    a: "Most Cigna plans include coverage for inpatient (residential) substance abuse treatment when it is deemed medically necessary. The extent of coverage depends on your specific plan, including factors like your deductible, copay, and whether the facility is in-network. Contact our admissions team at (480) 931-3617 to verify your specific Cigna benefits.",
+    a: "Most Cigna plans include coverage for inpatient (residential) substance abuse treatment when it is deemed medically necessary. The extent of coverage depends on your specific plan, including factors like your deductible, copay, and whether the facility is in-network. Contact our admissions team at (623) 305-0496 to verify your specific Cigna benefits.",
   },
   {
     q: "Does Cigna insurance cover treatment at Desert Recovery Centers?",
-    a: "Desert Recovery Centers is out-of-network with Cigna. However, many out-of-network plans provide significant coverage for our level of care, and our admissions team will verify your specific benefits at no cost and walk you through what your coverage looks like. We are in-network with TriCare and TriWest, and offer cash-pay options. Call (480) 931-3617 for a free, confidential benefits verification.",
+    a: "Desert Recovery Centers is out-of-network with Cigna. However, many out-of-network plans provide significant coverage for our level of care, and our admissions team will verify your specific benefits at no cost and walk you through what your coverage looks like. We are in-network with TriCare and TriWest, and offer cash-pay options. Call (623) 305-0496 for a free, confidential benefits verification.",
   },
   {
     q: "How much will I pay out of pocket with Cigna insurance?",
@@ -77,7 +77,7 @@ export default function CignaInsurancePage() {
             </p>
             <p className="text-gray-600 leading-relaxed text-lg">
               That&apos;s why we encourage you to call our admissions team at{" "}
-              <a href="tel:+14809313617" className="text-gold-dark font-semibold hover:underline">(480) 931-3617</a>
+              <a href="tel:+16233050496" className="text-gold-dark font-semibold hover:underline">(623) 305-0496</a>
               . We verify your Cigna benefits at no cost and walk you through exactly what your plan covers before you make any decisions.
             </p>
           </div>
@@ -181,7 +181,7 @@ export default function CignaInsurancePage() {
                 {
                   step: "1",
                   title: "Call Our Admissions Team",
-                  desc: "Reach us at (480) 931-3617. Our team is available to take your call and begin the process immediately.",
+                  desc: "Reach us at (623) 305-0496. Our team is available to take your call and begin the process immediately.",
                 },
                 {
                   step: "2",
@@ -250,7 +250,7 @@ export default function CignaInsurancePage() {
           <div className="max-w-3xl mx-auto">
             <p className="text-gray-500 text-sm leading-relaxed text-center">
               Coverage varies by plan. Contact us to verify your benefits. The information on this page is intended for general informational purposes only and does not guarantee coverage or payment for any specific treatment. Insurance benefits are determined by your individual plan and are subject to change. Desert Recovery Centers is not affiliated with Cigna. Please call our admissions team at{" "}
-              <a href="tel:+14809313617" className="text-gold-dark font-semibold hover:underline">(480) 931-3617</a>{" "}
+              <a href="tel:+16233050496" className="text-gold-dark font-semibold hover:underline">(623) 305-0496</a>{" "}
               for a complimentary benefits verification.
             </p>
           </div>

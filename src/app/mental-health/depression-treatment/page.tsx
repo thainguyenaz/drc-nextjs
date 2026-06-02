@@ -117,7 +117,7 @@ export default function DepressionTreatmentPage() {
             </div>
             <div className="mt-6 bg-forest/5 rounded-lg p-4 border border-forest/10">
               <p className="text-forest text-sm leading-relaxed font-medium">
-                If you or someone you love is experiencing thoughts of suicide, please call 988 (Suicide & Crisis Lifeline) immediately, or contact our admissions team 24/7 at (480) 931-3617.
+                If you or someone you love is experiencing thoughts of suicide, please call 988 (Suicide & Crisis Lifeline) immediately, or contact our admissions team 24/7 at (623) 305-0496.
               </p>
             </div>
           </div>

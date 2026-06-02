@@ -16,11 +16,11 @@ export const metadata: Metadata = buildMetadata({
 const faqs = [
   {
     q: "Does UnitedHealthcare insurance cover treatment at Desert Recovery Centers?",
-    a: "Desert Recovery Centers is out-of-network with UnitedHealthcare. However, many out-of-network plans provide significant coverage for our level of care, and our admissions team will verify your specific benefits at no cost and walk you through what your coverage looks like. We are in-network with TriCare and TriWest, and offer cash-pay options. Call (480) 931-3617 for a free, confidential benefits verification.",
+    a: "Desert Recovery Centers is out-of-network with UnitedHealthcare. However, many out-of-network plans provide significant coverage for our level of care, and our admissions team will verify your specific benefits at no cost and walk you through what your coverage looks like. We are in-network with TriCare and TriWest, and offer cash-pay options. Call (623) 305-0496 for a free, confidential benefits verification.",
   },
   {
     q: "Does United Healthcare cover inpatient drug rehab?",
-    a: "Most United Healthcare plans include coverage for inpatient substance abuse treatment when it meets UHC\u0027s medical necessity criteria. UHC uses clinical guidelines managed through Optum to determine the appropriate level of care. Our admissions team works directly with Optum to secure authorization for treatment. Call (480) 931-3617 to verify your specific benefits.",
+    a: "Most United Healthcare plans include coverage for inpatient substance abuse treatment when it meets UHC\u0027s medical necessity criteria. UHC uses clinical guidelines managed through Optum to determine the appropriate level of care. Our admissions team works directly with Optum to secure authorization for treatment. Call (623) 305-0496 to verify your specific benefits.",
   },
   {
     q: "What is Optum and how does it affect my UHC rehab coverage?",
@@ -81,7 +81,7 @@ export default function UnitedInsurancePage() {
             </p>
             <p className="text-gray-600 leading-relaxed text-lg">
               Rather than spending hours on hold with UHC or Optum, let our team verify your benefits for you. Call{" "}
-              <a href="tel:+14809313617" className="text-gold-dark font-semibold hover:underline">(480) 931-3617</a>
+              <a href="tel:+16233050496" className="text-gold-dark font-semibold hover:underline">(623) 305-0496</a>
               {" "}and we will have a clear picture of your coverage within hours.
             </p>
           </div>
@@ -193,7 +193,7 @@ export default function UnitedInsurancePage() {
                 {
                   step: "1",
                   title: "Call Our Admissions Team",
-                  desc: "Reach us at (480) 931-3617. If you have your UHC member ID card available, that helps speed up the process.",
+                  desc: "Reach us at (623) 305-0496. If you have your UHC member ID card available, that helps speed up the process.",
                 },
                 {
                   step: "2",
@@ -262,7 +262,7 @@ export default function UnitedInsurancePage() {
           <div className="max-w-3xl mx-auto">
             <p className="text-gray-500 text-sm leading-relaxed text-center">
               Coverage varies by plan. Contact us to verify your benefits. The information on this page is intended for general informational purposes only and does not guarantee coverage or payment for any specific treatment. Insurance benefits are determined by your individual plan and are subject to change. Desert Recovery Centers is not affiliated with United Healthcare or Optum. Please call our admissions team at{" "}
-              <a href="tel:+14809313617" className="text-gold-dark font-semibold hover:underline">(480) 931-3617</a>{" "}
+              <a href="tel:+16233050496" className="text-gold-dark font-semibold hover:underline">(623) 305-0496</a>{" "}
               for a complimentary benefits verification.
             </p>
           </div>

@@ -182,10 +182,10 @@ export default function PartnerReferralForm() {
           {warningMessage}
         </p>
         <a
-          href="tel:+14809313617"
+          href="tel:+16233050496"
           className="inline-block bg-gold hover:bg-gold-dark text-white font-semibold text-base px-8 py-4 rounded-xl transition-colors"
         >
-          Call (480) 931-3617
+          Call (623) 305-0496
         </a>
         <p className="text-xs text-gray-500 mt-4">
           Or email{" "}
@@ -213,13 +213,13 @@ export default function PartnerReferralForm() {
         <p className="text-gray-600 leading-relaxed mb-6">
           Our admissions team will verify the patient&apos;s insurance and contact you within the hour to coordinate admission.
           For urgent matters, call{" "}
-          <a href="tel:+14809313617" className="text-sage font-medium">
-            (480) 931-3617
+          <a href="tel:+16233050496" className="text-sage font-medium">
+            (623) 305-0496
           </a>
           .
         </p>
         <a
-          href="tel:+14809313617"
+          href="tel:+16233050496"
           className="inline-block bg-gold hover:bg-gold-dark text-white font-semibold text-base px-8 py-4 rounded-xl transition-colors"
         >
           Call Now
@@ -247,8 +247,8 @@ export default function PartnerReferralForm() {
       {status === "error" && (
         <div className="bg-red-50 border border-red-200 rounded-xl p-4 text-sm text-red-700">
           Something went wrong. Please call{" "}
-          <a href="tel:+14809313617" className="font-medium underline">
-            (480) 931-3617
+          <a href="tel:+16233050496" className="font-medium underline">
+            (623) 305-0496
           </a>{" "}
           or email{" "}
           <a href="mailto:admissions@desertrecoverycenters.com" className="font-medium underline">
