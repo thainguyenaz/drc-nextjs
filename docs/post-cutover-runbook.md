@@ -157,7 +157,7 @@ This bypasses recursive-resolver caching and shows what GoDaddy is actually serv
 curl -sS https://desertrecoverycenters.com/api/health | python3 -m json.tool
 ```
 
-Expected: JSON with `status`, `sha`, `form_endpoints`, `env_vars` fields. WordPress has no such route, so a 200 + valid JSON is strong evidence the apex is now Next.js.
+Expected: JSON with `status`, `deployed_sha`, `form_endpoints`, `env_vars_present` fields. WordPress has no such route, so a 200 + valid JSON is strong evidence the apex is now Next.js.
 
 PASS: HTTP 200, valid JSON, `status` is `"healthy"` or `"degraded"`.
 FAIL: 404 (DNS not propagated, or Vercel domain alias not bound), or any non-JSON response.
@@ -176,7 +176,7 @@ FAIL criterion: any non-zero count. Means apex is still serving WordPress. Same 
 ### 3.4 Vercel deployed SHA matches `origin/main`
 
 ```bash
-APEX_SHA=$(curl -sS https://desertrecoverycenters.com/api/health | python3 -c 'import sys,json; print(json.load(sys.stdin).get("sha","?"))')
+APEX_SHA=$(curl -sS https://desertrecoverycenters.com/api/health | python3 -c 'import sys,json; print(json.load(sys.stdin).get("deployed_sha","?"))')
 MAIN_SHA=$(cd ~/drc-website && git rev-parse --short=7 origin/main)
 echo "apex: $APEX_SHA"
 echo "main: $MAIN_SHA"
@@ -295,7 +295,7 @@ Expected per source URL:
 | `/understanding-depression` | `HTTP/2 308` | `/mental-health/depression-treatment` |
 | `/trauma` | `HTTP/2 308` | `/treatments/trauma-therapy` |
 | `/ptsd` | `HTTP/2 308` | `/mental-health/ptsd-treatment` |
-| `/partner-referral` | `HTTP/2 308` | `/partner-referral-vrc` |
+| `/partner-referral` | `HTTP/2 308` | `/get-help` |
 
 PASS criterion: every row matches exactly. A 200 means the redirect is missing (the destination would be reached only if a same-named page coincidentally exists, which is not the intended behavior).
 FAIL criterion: any 404 (cutover regressed a redirect) or any `location` pointing somewhere unexpected.

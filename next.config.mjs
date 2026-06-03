@@ -121,10 +121,9 @@ const nextConfig = {
       // Sourced from migration-audit/wp_redirects_clean.json. Hit counts
       // reflect last 30 days on apex WP per Redirection plugin export.
       // Source URLs (partner-referral, drug-alcohol-detox-lp clone,
-      // call-center-clone, on-demand-webinars) point at destinations that
-      // currently 404 on Next.js or use closest-sibling. T13/T15 remain
-      // pre-staged pending action; T14 reframed 2026-05-11 from port to
-      // retire via redirect, -clone rule flattened to /get-help above.
+      // call-center-clone) are retired pages with no Next.js equivalent and
+      // redirect to /get-help. The earlier T13/T15 port plan was dropped:
+      // partner referral is handled via Dazos, not an on-site page.
 
       // -- Active legacy URLs (CRITICAL ADDITIONS) --
       { source: "/understanding-marijuana", destination: "/addiction/marijuana-addiction-treatment", permanent: true }, // 354 hits/30d
@@ -178,13 +177,13 @@ const nextConfig = {
       { source: "/webinars-lp", destination: "/resources", permanent: true }, // 0 (chain-collapsed: /resources/access-webinars retired → /resources)
       { source: "/webinars-lp/", destination: "/resources", permanent: true },
 
-      // -- Pre-staging: destinations 404 today, ports in flight (Tickets 13/14) --
-      { source: "/partner-referral", destination: "/partner-referral-vrc", permanent: true }, // 106 — Ticket 13 ports /partner-referral-vrc
-      { source: "/partner-referral/", destination: "/partner-referral-vrc", permanent: true },
+      // -- Retired pages: redirect to /get-help (no on-site equivalent) --
+      { source: "/partner-referral", destination: "/get-help", permanent: true }, // 106 hits/30d; partner-referral page retired, redirect to /get-help
+      { source: "/partner-referral/", destination: "/get-help", permanent: true },
       { source: "/drug-alcohol-detox-lp/drug-alcohol-detox-lp-clone", destination: "/get-help", permanent: true }, // 85 hits/30d - was T14 port target, flattened to /get-help on T14 retirement (2026-05-11)
       { source: "/drug-alcohol-detox-lp/drug-alcohol-detox-lp-clone/", destination: "/get-help", permanent: true },
-      { source: "/call-center-clone", destination: "/partner-referral-vrc", permanent: true }, // 84 — chain-collapsed; same Ticket 13 dependency
-      { source: "/call-center-clone/", destination: "/partner-referral-vrc", permanent: true },
+      { source: "/call-center-clone", destination: "/get-help", permanent: true }, // 84 hits/30d; retired clone, redirect to /get-help
+      { source: "/call-center-clone/", destination: "/get-help", permanent: true },
 
       // -- Closest-sibling redirect (no Next.js destination match) --
       { source: "/on-demand-webinars", destination: "/resources", permanent: true }, // 0 hits (chain-collapsed: /resources/access-webinars retired → /resources) — Ticket 15 may revisit
