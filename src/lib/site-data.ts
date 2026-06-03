@@ -49,6 +49,12 @@ export const siteData = {
       image: "/images/general/accom-group-room.jpg",
       sameAs: [] as string[],
       licenseNumber: "TC20452",
+      hours: {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        opens: "08:00",
+        closes: "17:00",
+      },
     },
     {
       name: "Phoenix TMS",

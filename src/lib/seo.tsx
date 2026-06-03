@@ -138,7 +138,9 @@ export function LocalBusinessSchema({ index }: { index: number }) {
       addressCountry: "US",
     },
     priceRange: "$$$$",
-    openingHours: "Mo-Su 00:00-24:00",
+    ...("hours" in loc && loc.hours
+      ? { openingHoursSpecification: loc.hours }
+      : { openingHours: "Mo-Su 00:00-24:00" }),
     parentOrganization: { "@id": `${SITE_URL}/#organization` },
     ...("licenseNumber" in loc && loc.licenseNumber ? { licenseNumber: loc.licenseNumber } : {}),
     ...(loc.sameAs?.length ? { sameAs: loc.sameAs } : {}),

@@ -634,6 +634,10 @@ export default function PhoenixPHPContent() {
                   </a>
                 </div>
                 <div>
+                  <h3 className="font-semibold text-forest text-sm mb-1">Office Hours</h3>
+                  <p className="text-gray-600 text-sm">Monday to Friday, 8 AM to 5 PM</p>
+                </div>
+                <div>
                   <h3 className="font-semibold text-forest text-sm mb-1">Admissions Hours</h3>
                   <p className="text-gray-600 text-sm">24 hours a day, 7 days a week</p>
                 </div>
@@ -717,7 +721,7 @@ export default function PhoenixPHPContent() {
             You Have Already Done the Hard Part
           </h2>
           <p className="text-white/70 max-w-2xl mx-auto mb-4 leading-relaxed">
-            Deciding you want things to be different is the hardest step. Everything after this is something we help you with. Our admissions team is available right now, 24 hours a day, and most clients start treatment within 48 hours of this call.
+            Deciding you want things to be different is the hardest step. Everything after this is something we help you with. You can reach our admissions line right now, any time of day, and most clients start treatment within 48 hours of this call. A live admissions specialist answers from 6 AM to 10 PM, and our line is always open after hours.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
             <a
