@@ -7,10 +7,12 @@ export default function YouTubeEmbed({
   youtubeId,
   title,
   className,
+  start,
 }: {
   youtubeId: string;
   title: string;
   className?: string;
+  start?: number;
 }) {
   const [playing, setPlaying] = useState(false);
 
@@ -18,7 +20,7 @@ export default function YouTubeEmbed({
     <div className={`w-full aspect-video rounded-lg overflow-hidden shadow-lg relative ${className ?? ""}`}>
       {playing ? (
         <iframe
-          src={`https://www.youtube.com/embed/${youtubeId}?autoplay=1&rel=0`}
+          src={`https://www.youtube.com/embed/${youtubeId}?autoplay=1&rel=0${start ? `&start=${start}` : ""}`}
           title={title}
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen

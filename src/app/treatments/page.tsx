@@ -117,16 +117,7 @@ export default function TreatmentsPage() {
             <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold mb-10">Overview of DRC&apos;s Levels of Care</h2>
           </AnimatedSection>
           <AnimatedSection animation="fadeIn" delay={0.15}>
-            <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-xl">
-              <iframe
-                src="https://www.youtube.com/embed/v3cEgF6yARY?rel=0"
-                title="Overview of the New DRC Levels of Care and What That Looks Like"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                loading="lazy"
-                className="absolute inset-0 w-full h-full border-0"
-              />
-            </div>
+            <YouTubeEmbed youtubeId="v3cEgF6yARY" title="Overview of the New DRC Levels of Care and What That Looks Like" />
           </AnimatedSection>
         </div>
       </section>
@@ -140,31 +131,13 @@ export default function TreatmentsPage() {
             <h2 className="font-display text-3xl md:text-4xl text-white font-semibold mb-10">How Treatment Is Individualized at DRC</h2>
           </AnimatedSection>
           <AnimatedSection animation="fadeIn" delay={0.15}>
-            <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-xl ring-1 ring-white/10 mb-16">
-              <iframe
-                src="https://www.youtube.com/embed/W8WKhAAhPM0?rel=0"
-                title="How Is Treatment Individualized Rather Than One Size Fits All"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                loading="lazy"
-                className="absolute inset-0 w-full h-full border-0"
-              />
-            </div>
+            <YouTubeEmbed youtubeId="W8WKhAAhPM0" title="How Is Treatment Individualized Rather Than One Size Fits All" className="mb-16" />
           </AnimatedSection>
           <AnimatedSection>
             <h2 className="font-display text-3xl md:text-4xl text-white font-semibold mb-10">What Are the 12 Steps?</h2>
           </AnimatedSection>
           <AnimatedSection animation="fadeIn" delay={0.15}>
-            <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-xl ring-1 ring-white/10">
-              <iframe
-                src="https://www.youtube.com/embed/8O27euQ82cY?rel=0"
-                title="What Are the 12 Steps and How Do They Help Addicts and Alcoholics Recover"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                loading="lazy"
-                className="absolute inset-0 w-full h-full border-0"
-              />
-            </div>
+            <YouTubeEmbed youtubeId="8O27euQ82cY" title="What Are the 12 Steps and How Do They Help Addicts and Alcoholics Recover" />
           </AnimatedSection>
         </div>
       </section>

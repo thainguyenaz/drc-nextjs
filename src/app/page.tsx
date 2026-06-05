@@ -8,6 +8,7 @@ import { SpeakableSchema, VideoSchemas } from "@/lib/seo";
 import SchemaScript from "@/components/SchemaScript";
 import { getFAQSchema, getWebSiteSchema } from "@/lib/schema";
 import { faqData } from "@/data/faq-data";
+import YouTubeEmbed from "@/components/YouTubeEmbed";
 
 export const metadata: Metadata = {
   title: "Luxury Addiction & Mental Health Treatment in Arizona | Desert Recovery Centers",
@@ -85,16 +86,7 @@ export default function Home() {
           <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">Real Stories</span>
           <div className="w-[60px] h-0.5 bg-gold mx-auto mt-4 mb-4" />
           <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold mb-10">Hear From Our Community</h2>
-          <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-xl">
-            <iframe
-              src="https://www.youtube.com/embed/LjK58DeWTSY?rel=0"
-              title="Desert Recovery Centers, Real Stories"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              loading="lazy"
-              className="absolute inset-0 w-full h-full border-0"
-            />
-          </div>
+          <YouTubeEmbed youtubeId="LjK58DeWTSY" title="Desert Recovery Centers, Real Stories" />
         </div>
       </section>
 

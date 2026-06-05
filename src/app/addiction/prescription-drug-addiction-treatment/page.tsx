@@ -15,6 +15,7 @@ import { faqData } from "@/data/faq-data";
 import FAQSection from "@/components/FAQSection";
 import Breadcrumb from "@/components/Breadcrumb";
 import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
+import YouTubeEmbed from "@/components/YouTubeEmbed";
 
 const meta = getPageMeta("/addiction/prescription-drug-addiction-treatment/");
 
@@ -153,16 +154,7 @@ export default function PrescriptionDrugAddictionPage() {
           <span className="text-gold font-body text-sm tracking-[0.2em] uppercase font-medium">Expert Insight</span>
           <div className="w-[60px] h-0.5 bg-gold mx-auto mt-4 mb-4" />
           <h2 className="font-display text-3xl md:text-4xl text-white font-semibold mb-10">Prescription Stimulant Abuse vs. Street Meth</h2>
-          <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-xl ring-1 ring-white/10">
-            <iframe
-              src="https://www.youtube.com/embed/TE0bw1_Pwqo?rel=0"
-              title="How Does Prescription Stimulant Abuse Differ From Street Meth in Treatment Needs"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              loading="lazy"
-              className="absolute inset-0 w-full h-full border-0"
-            />
-          </div>
+          <YouTubeEmbed youtubeId="TE0bw1_Pwqo" title="How Does Prescription Stimulant Abuse Differ From Street Meth in Treatment Needs" />
         </div>
       </section>
 

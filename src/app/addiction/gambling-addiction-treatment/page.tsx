@@ -15,6 +15,7 @@ import SchemaScript from "@/components/SchemaScript";
 import FAQSection from "@/components/FAQSection";
 import Breadcrumb from "@/components/Breadcrumb";
 import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
+import YouTubeEmbed from "@/components/YouTubeEmbed";
 
 const meta = getPageMeta("/addiction/gambling-addiction-treatment/");
 
@@ -153,16 +154,7 @@ export default function GamblingAddictionPage() {
           <span className="text-gold font-body text-sm tracking-[0.2em] uppercase font-medium">Expert Insight</span>
           <div className="w-[60px] h-0.5 bg-gold mx-auto mt-4 mb-4" />
           <h2 className="font-display text-3xl md:text-4xl text-white font-semibold mb-10">When Gambling Crosses From Recreation to Addiction</h2>
-          <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-xl ring-1 ring-white/10">
-            <iframe
-              src="https://www.youtube.com/embed/Vgb-tnoS8R0?rel=0"
-              title="What Are the Warning Signs That Gambling Has Crossed From Recreation to Addiction"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              loading="lazy"
-              className="absolute inset-0 w-full h-full border-0"
-            />
-          </div>
+          <YouTubeEmbed youtubeId="Vgb-tnoS8R0" title="What Are the Warning Signs That Gambling Has Crossed From Recreation to Addiction" />
         </div>
       </section>
 
