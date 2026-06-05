@@ -16,6 +16,7 @@ import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
 import Citations from "@/components/Citations";
 import { getPageMeta } from "@/data/page-metadata";
 import AnimatedSection from "@/components/animated/AnimatedSection";
+import YouTubeEmbed from "@/components/YouTubeEmbed";
 
 const meta = getPageMeta("/addiction/alcoholism-treatment/");
 
@@ -154,49 +155,13 @@ export default function AlcoholAddictionPage() {
           <span className="text-gold font-body text-sm tracking-[0.2em] uppercase font-medium">Understanding the Connection</span>
           <div className="w-[60px] h-0.5 bg-gold mx-auto mt-4 mb-4" />
           <h2 className="font-display text-3xl md:text-4xl text-white font-semibold mb-10">How Does Alcohol Affect Mental Health?</h2>
-          <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-xl ring-1 ring-white/10 mb-16">
-            <iframe
-              src="https://www.youtube.com/embed/-IAFRFF8DCQ?rel=0"
-              title="How Does Alcohol Affect Mental Health?"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              loading="lazy"
-              className="absolute inset-0 w-full h-full border-0"
-            />
-          </div>
+          <YouTubeEmbed youtubeId="-IAFRFF8DCQ" title="How Does Alcohol Affect Mental Health?" className="mb-16" />
           <h2 className="font-display text-3xl md:text-4xl text-white font-semibold mb-10">Is There a Link Between Alcohol Use and Suicide Risk?</h2>
-          <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-xl ring-1 ring-white/10 mb-16">
-            <iframe
-              src="https://www.youtube.com/embed/025O4_-fugI?rel=0"
-              title="Is There a Link Between Alcohol Use and Suicide Risk"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              loading="lazy"
-              className="absolute inset-0 w-full h-full border-0"
-            />
-          </div>
+          <YouTubeEmbed youtubeId="025O4_-fugI" title="Is There a Link Between Alcohol Use and Suicide Risk" className="mb-16" />
           <h2 className="font-display text-3xl md:text-4xl text-white font-semibold mb-10">Long-Term Mental Health Effects of Chronic Alcohol Use</h2>
-          <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-xl ring-1 ring-white/10 mb-16">
-            <iframe
-              src="https://www.youtube.com/embed/MpZDZkqSJWQ?rel=0"
-              title="What Are the Long-Term Mental Health Effects of Chronic Alcohol Use"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              loading="lazy"
-              className="absolute inset-0 w-full h-full border-0"
-            />
-          </div>
+          <YouTubeEmbed youtubeId="MpZDZkqSJWQ" title="What Are the Long-Term Mental Health Effects of Chronic Alcohol Use" className="mb-16" />
           <h2 className="font-display text-3xl md:text-4xl text-white font-semibold mb-10">What Is &ldquo;Gray-Area Drinking&rdquo;?</h2>
-          <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-xl ring-1 ring-white/10">
-            <iframe
-              src="https://www.youtube.com/embed/itGlGak_JOk?rel=0"
-              title="What Is Gray-Area Drinking, and Why Is It Dangerous"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              loading="lazy"
-              className="absolute inset-0 w-full h-full border-0"
-            />
-          </div>
+          <YouTubeEmbed youtubeId="itGlGak_JOk" title="What Is Gray-Area Drinking, and Why Is It Dangerous" />
         </div>
       </section>
 
