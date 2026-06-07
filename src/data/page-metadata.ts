@@ -69,6 +69,12 @@ export const pageMetadata: Record<string, PageMeta> = {
     canonical: "https://desertrecoverycenters.com/locations/phoenix-php-iop/",
     ogImage: "https://desertrecoverycenters.com/images/locations/phoenix/phoenix-lobby-2.jpg",
   },
+  "/adolescent-treatment/": {
+    title: "Adolescent IOP (Ages 12-17) in Phoenix, AZ | Desert Recovery Centers",
+    description: "Evening intensive outpatient (IOP) for adolescents ages 12 to 17 in Phoenix, AZ. In person, family involved, school compatible. Joint Commission accredited. Call (602) 905-0057.",
+    canonical: "https://desertrecoverycenters.com/adolescent-treatment/",
+    ogImage: "https://desertrecoverycenters.com/images/locations/phoenix/phoenix-lobby-2.jpg",
+  },
   "/mental-health/anxiety-treatment/": {
     title: "Anxiety Treatment Center in Arizona | Desert Recovery Centers",
     description: "Residential anxiety treatment in Arizona. Evidence-based CBT and DBT therapies, luxury setting, dual diagnosis care. Call (623) 305-0496.",

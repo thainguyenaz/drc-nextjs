@@ -61,6 +61,7 @@ const navLinks = [
       { label: "Glendale", href: "/locations/glendale" },
       { label: "Scottsdale", href: "/locations/scottsdale" },
       { label: "Phoenix PHP/IOP", href: "/locations/phoenix-php-iop" },
+      { label: "Adolescent IOP", href: "/adolescent-treatment" },
       { label: "Phoenix Sober Living", href: "/locations/phoenix-living" },
     ],
   },
