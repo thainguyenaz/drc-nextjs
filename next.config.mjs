@@ -239,8 +239,9 @@ const nextConfig = {
       { source: "/about-us/", destination: "/about", permanent: true },
       { source: "/addiction", destination: "/addiction-treatment", permanent: true },
       { source: "/addiction/", destination: "/addiction-treatment", permanent: true },
-      // /adolescent-program intentionally removed: adolescent treatment is unlicensed and
-      // these paths now return 410 Gone via middleware (see src/middleware.ts isGonePath).
+      // /adolescent-treatment restored 2026-06: licensed adolescent IOP (OTC20452) now lives at
+      // that path. /adolescent-program and /adolescent/* remain retired and return 410 Gone via
+      // middleware (see src/middleware.ts isGonePath).
       { source: "/facilities/glendale", destination: "/locations/glendale", permanent: true },
       { source: "/facilities/glendale/", destination: "/locations/glendale", permanent: true },
       { source: "/facilities/phoenix", destination: "/locations/phoenix-php-iop", permanent: true },
@@ -325,8 +326,8 @@ const nextConfig = {
       { source: "/blog/how-to-rewire-the-brain-from-addiction/", destination: "/resources/blog/how-does-an-addicts-brain-work", permanent: true },
       { source: "/blog/how-to-stop-being-codependent-with-an-addict-or-alcoholic", destination: "/resources/blog/how-drug-and-alcohol-addiction-impacts-families", permanent: true },
       { source: "/blog/how-to-stop-being-codependent-with-an-addict-or-alcoholic/", destination: "/resources/blog/how-drug-and-alcohol-addiction-impacts-families", permanent: true },
-      { source: "/blog/how-to-tell-if-my-son-or-daughter-needs-addiction-treatment-or-mental-health-treatment", destination: "/resources/blog/how-to-talk-to-someone-about-going-to-rehab", permanent: true },
-      { source: "/blog/how-to-tell-if-my-son-or-daughter-needs-addiction-treatment-or-mental-health-treatment/", destination: "/resources/blog/how-to-talk-to-someone-about-going-to-rehab", permanent: true },
+      { source: "/blog/how-to-tell-if-my-son-or-daughter-needs-addiction-treatment-or-mental-health-treatment", destination: "/adolescent-treatment", permanent: true },
+      { source: "/blog/how-to-tell-if-my-son-or-daughter-needs-addiction-treatment-or-mental-health-treatment/", destination: "/adolescent-treatment", permanent: true },
       { source: "/blog/is-depression-a-disease", destination: "/mental-health/depression-treatment", permanent: true },
       { source: "/blog/is-depression-a-disease/", destination: "/mental-health/depression-treatment", permanent: true },
       { source: "/blog/is-there-a-link-between-alcohol-use-and-suicide-risk", destination: "/resources/blog/how-does-alcohol-abuse-impact-mental-and-physical-health", permanent: true },
