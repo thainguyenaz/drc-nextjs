@@ -41,6 +41,7 @@ export default function InsuranceVerificationForm() {
   const [formData, setFormData] = useState<FormData>(initialFormData);
   const [submitting, setSubmitting] = useState(false);
   const [turnstileReady, setTurnstileReady] = useState(false);
+  const [turnstileDegraded, setTurnstileDegraded] = useState(false);
   const [status, setStatus] = useState<"idle" | "success" | "partial" | "error">("idle");
   const [warningMessage, setWarningMessage] = useState<string>("");
   const [fileErrors, setFileErrors] = useState<{ front?: string; back?: string }>({});
@@ -61,14 +62,39 @@ export default function InsuranceVerificationForm() {
         onInsuranceTurnstileError?: () => void;
       };
     const w = window as W;
-    w.onInsuranceTurnstileSuccess = () => setTurnstileReady(true);
-    w.onInsuranceTurnstileExpired = () => setTurnstileReady(false);
-    w.onInsuranceTurnstileError = () => setTurnstileReady(false);
+    w.onInsuranceTurnstileSuccess = () => {
+      setTurnstileReady(true);
+      setTurnstileDegraded(false);
+    };
+    w.onInsuranceTurnstileExpired = () => {
+      setTurnstileReady(false);
+      setTurnstileDegraded(true);
+    };
+    w.onInsuranceTurnstileError = () => {
+      setTurnstileReady(false);
+      setTurnstileDegraded(true);
+    };
     return () => {
       delete w.onInsuranceTurnstileSuccess;
       delete w.onInsuranceTurnstileExpired;
       delete w.onInsuranceTurnstileError;
     };
+  }, []);
+
+  useEffect(() => {
+    // Graceful degradation: if Turnstile has not signaled success within 12s
+    // (script blocked, network failure, or no callback ever fires), enable the
+    // button anyway. The server still verifies the token and fails closed when
+    // TURNSTILE_SECRET_KEY is set, so this does not weaken bot protection; it
+    // only prevents a real user from being permanently locked out.
+    if (!TURNSTILE_SITE_KEY) return;
+    const timer = setTimeout(() => {
+      setTurnstileReady((ready) => {
+        if (!ready) setTurnstileDegraded(true);
+        return ready;
+      });
+    }, 12_000);
+    return () => clearTimeout(timer);
   }, []);
 
   const handleChange = (
@@ -472,15 +498,21 @@ export default function InsuranceVerificationForm() {
 
       <button
         type="submit"
-        disabled={submitting || (!!TURNSTILE_SITE_KEY && !turnstileReady)}
+        disabled={submitting || (!!TURNSTILE_SITE_KEY && !turnstileReady && !turnstileDegraded)}
         className="w-full bg-gold hover:bg-gold-dark text-white font-semibold text-base py-4 rounded-xl transition-colors cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
       >
         {submitting
           ? "Submitting..."
-          : !TURNSTILE_SITE_KEY || turnstileReady
+          : !TURNSTILE_SITE_KEY || turnstileReady || turnstileDegraded
             ? "Verify My Insurance"
             : "Verifying..."}
       </button>
+
+      {TURNSTILE_SITE_KEY && turnstileDegraded && !turnstileReady && (
+        <p className="text-xs text-gray-600 text-center">
+          Security check unavailable, you can still submit.
+        </p>
+      )}
 
       <p className="text-xs text-gray-600 text-center">
         Protected by HIPAA &amp; 42 CFR Part 2. Your information is completely confidential.
