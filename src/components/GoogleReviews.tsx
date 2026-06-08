@@ -111,7 +111,7 @@ function ReviewCard({ review }: { review: Review }) {
   );
 }
 
-export default function GoogleReviews() {
+export default function GoogleReviews({ include }: { include?: string[] } = {}) {
   const [locations, setLocations] = useState<LocationData[]>([]);
   const [activeTab, setActiveTab] = useState(0);
   const [loading, setLoading] = useState(true);
@@ -148,13 +148,22 @@ export default function GoogleReviews() {
         return res.json();
       })
       .then((data) => {
-        setLocations(data.locations);
+        const all: LocationData[] = data.locations ?? [];
+        const filtered = include
+          ? include
+              .map((name) => all.find((loc) => loc.name === name))
+              .filter((loc): loc is LocationData => Boolean(loc))
+          : all;
+        setLocations(filtered);
         setLoading(false);
       })
       .catch(() => {
         setError(true);
         setLoading(false);
       });
+    // `include` is read at fetch time and is a stable literal from the parent;
+    // the fetch intentionally runs once when the section scrolls into view.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [shouldFetch]);
 
   if (error || (shouldFetch && !loading && locations.length === 0)) return null;
@@ -207,7 +216,7 @@ export default function GoogleReviews() {
 
         {/* Location tabs */}
         <div className="flex gap-2 mb-8 overflow-x-auto pb-1">
-          {(loading ? ["Scottsdale", "Glendale", "Phoenix"] : locations).map(
+          {(loading ? (include ?? ["Scottsdale", "Glendale", "Phoenix"]) : locations).map(
             (loc, i) => {
               const name = typeof loc === "string" ? loc : loc.name;
               return (
