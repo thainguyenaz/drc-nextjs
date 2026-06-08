@@ -444,7 +444,7 @@ export default function AdsLandingPage() {
                     alt={insurer.name}
                     width={150}
                     height={56}
-                    className="h-10 sm:h-12 w-auto object-contain"
+                    className="h-10 sm:h-12 w-auto max-w-[88px] sm:max-w-[104px] object-contain"
                   />
                 ))}
               </div>
