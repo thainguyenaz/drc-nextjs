@@ -95,7 +95,7 @@ const gallery = [
   { src: "/images/locations/phoenix/phoenix-therapy-office-3.jpg", alt: "Therapy office at the Desert Recovery Centers Phoenix outpatient location" },
   { src: "/images/locations/phoenix/phoenix-lobby-2.jpg",        alt: "Lobby at the Desert Recovery Centers Phoenix outpatient location" },
   { src: "/images/locations/phoenix/phoenix-reception-1.jpg",    alt: "Reception area at the Phoenix outpatient location" },
-  { src: "/images/locations/phoenix/phoenix-game-room-1.jpg",    alt: "Recreation room at the Phoenix outpatient location" },
+  { src: "/images/locations/phoenix/phoenix-game-room-2.jpg",    alt: "Recreation area at the Phoenix outpatient location" },
   { src: "/images/locations/phoenix/phoenix-hallway.jpg",        alt: "Interior hallway at the Desert Recovery Centers Phoenix outpatient location" },
 ];
 
@@ -159,8 +159,8 @@ export default function AdolescentTreatmentPage() {
       {/* Full-width facility photo band */}
       <section className="relative w-full h-[42vh] md:h-[55vh] overflow-hidden">
         <Image
-          src="/images/locations/phoenix/phoenix-group-room-2.jpg"
-          alt="Group room at the Phoenix outpatient location"
+          src="/images/locations/phoenix/phoenix-game-room-1.jpg"
+          alt="Recreation room at the Desert Recovery Centers Phoenix outpatient location"
           fill
           sizes="100vw"
           className="object-cover"
