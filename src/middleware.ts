@@ -20,14 +20,14 @@ const PHI_QUERY_PARAMS = [
 const GCLID_COOKIE = "_dr_gclid";
 const GCLID_MAX_AGE = 60 * 60 * 24 * 90;
 
-// Adolescent treatment is not a licensed service. These paths are permanently
-// removed and must return 410 Gone so crawlers de-index them (not a redirect to
-// adult content, not a soft 404). Covers the retired /adolescent-program URL too.
+// The retired /adolescent-program URL and the old /adolescent/* tree remain
+// permanently removed and must return 410 Gone so crawlers de-index them (not a
+// redirect to adult content, not a soft 404). /adolescent-treatment is the licensed
+// adolescent IOP page (OTC20452) and is served normally.
 const GONE_HTML = `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex"><title>Content no longer available</title></head><body style="font-family:system-ui,sans-serif;max-width:36rem;margin:4rem auto;padding:0 1.5rem;line-height:1.6"><h1>This content is no longer available</h1><p>The page you requested has been removed. Visit our <a href="/">homepage</a> to explore our current programs.</p></body></html>`;
 
 function isGonePath(pathname: string): boolean {
   return (
-    pathname === "/adolescent-treatment" ||
     pathname === "/adolescent-program" ||
     pathname.startsWith("/adolescent/")
   );
