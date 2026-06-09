@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Image from "next/image";
 import Navigation from "@/components/Navigation";
 import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
@@ -95,8 +96,6 @@ const gallery = [
   { src: "/images/locations/phoenix/phoenix-lobby-2.jpg",        alt: "Lobby at the Desert Recovery Centers Phoenix outpatient location" },
   { src: "/images/locations/phoenix/phoenix-reception-1.jpg",    alt: "Reception area at the Phoenix outpatient location" },
   { src: "/images/locations/phoenix/phoenix-game-room-1.jpg",    alt: "Recreation room at the Phoenix outpatient location" },
-  { src: "/images/locations/phoenix/phoenix-theater-1.jpg",      alt: "Theater room at the Phoenix outpatient location" },
-  { src: "/images/locations/phoenix/phoenix-gym.jpg",            alt: "Fitness space at the Phoenix outpatient location" },
   { src: "/images/locations/phoenix/phoenix-hallway.jpg",        alt: "Interior hallway at the Desert Recovery Centers Phoenix outpatient location" },
 ];
 
@@ -130,6 +129,7 @@ export default function AdolescentTreatmentPage() {
         bgImage="/images/locations/phoenix/phoenix-lobby-2.jpg"
       />
 
+      {/* Intro + opening sections */}
       <section className="py-16 md:py-24 bg-white" data-speakable="true">
         <div className="max-w-container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
@@ -152,7 +152,26 @@ export default function AdolescentTreatmentPage() {
                 Treatment is individualized and developmentally appropriate, using evidence-based and trauma-informed methods, including Cognitive Behavioral Therapy (CBT), Dialectical Behavior Therapy (DBT) skills training, Motivational Interviewing (MI), trauma-informed care, psychoeducation, mindfulness and emotional-regulation skill building, relapse prevention and coping-skills development, strengths-based and solution-focused interventions, group therapy with process-oriented and skills-based components, and family systems interventions.
               </p>
             </BodySection>
+          </div>
+        </div>
+      </section>
 
+      {/* Full-width facility photo band */}
+      <section className="relative w-full h-[42vh] md:h-[55vh] overflow-hidden">
+        <Image
+          src="/images/locations/phoenix/phoenix-group-room-2.jpg"
+          alt="Group room at the Phoenix outpatient location"
+          fill
+          sizes="100vw"
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-forest/20" />
+      </section>
+
+      {/* Middle sections */}
+      <section className="py-16 md:py-24 bg-white" data-speakable="true">
+        <div className="max-w-container mx-auto px-6">
+          <div className="max-w-3xl mx-auto">
             <BodySection title="Family involvement">
               <p className="text-gray-600 leading-relaxed">
                 Family engagement is a central part of adolescent treatment. Caregivers are actively involved through family therapy sessions, participation in treatment planning and progress updates, ongoing communication and care coordination, building communication skills and healthy boundaries, and support in reinforcing coping skills at home. Parents and caregivers also attend weekly psychoeducation and support groups built to deepen understanding of adolescent mental health and strengthen the family system. Topics may include understanding adolescent mental and behavioral health concerns, communication strategies and de-escalation techniques, healthy boundaries and limit setting, emotional regulation and coping skills for families, family-systems dynamics, supporting treatment goals at home, relapse-prevention awareness and early warning signs, and building consistency and healthy routines.
@@ -164,7 +183,26 @@ export default function AdolescentTreatmentPage() {
                 The program supports academic functioning and, when appropriate and authorized, coordinates with schools and educational staff to help with school attendance and engagement, academic stress management, behavioral support planning in the school setting, reintegration or transition planning, and coordination with school counselors or support staff. The goal is to support continued education while addressing emotional and behavioral needs.
               </p>
             </BodySection>
+          </div>
+        </div>
+      </section>
 
+      {/* Pull-quote callout (verbatim body text) */}
+      <section className="py-20 md:py-28 bg-forest relative overflow-hidden">
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
+        <div className="max-w-container mx-auto px-6 text-center">
+          <span className="block w-12 h-px bg-gold mx-auto mb-8" />
+          <blockquote className="font-display text-2xl md:text-3xl lg:text-4xl text-white font-semibold leading-snug max-w-4xl mx-auto">
+            The program is appropriate for adolescents who are safe to remain in the community and able to participate in structured outpatient treatment.
+          </blockquote>
+          <span className="block w-12 h-px bg-gold mx-auto mt-8" />
+        </div>
+      </section>
+
+      {/* Closing sections */}
+      <section className="py-16 md:py-24 bg-white" data-speakable="true">
+        <div className="max-w-container mx-auto px-6">
+          <div className="max-w-3xl mx-auto">
             <BodySection title="Bridgework services">
               <p className="text-gray-600 leading-relaxed">
                 Bridgework services may be included as part of adolescent care when clinically appropriate. These services help adolescents apply treatment gains in real-world settings and strengthen functioning outside of structured programming. Bridgework may include practicing coping skills in home and community environments, supporting healthy peer and family interactions, strengthening daily routines and responsibility, academic and extracurricular engagement support, improving communication and problem-solving in real-life situations, and transition support and continuity-of-care planning. These services bridge the gap between structured treatment and everyday life.
@@ -181,6 +219,33 @@ export default function AdolescentTreatmentPage() {
       </section>
 
       <PhotoGallery photos={gallery} title="See the Space" eyebrow="Our Facility" />
+
+      {/* Next steps */}
+      <section className="py-20 md:py-28 bg-forest relative overflow-hidden">
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
+        <div className="max-w-container mx-auto px-6 text-center">
+          <div className="flex items-center justify-center gap-4 mb-6">
+            <span className="w-10 h-px bg-gold" />
+            <span className="text-gold font-body text-xs tracking-[0.3em] uppercase font-medium">
+              Admissions
+            </span>
+            <span className="w-10 h-px bg-gold" />
+          </div>
+          <h2 className="font-display text-3xl md:text-4xl text-white font-semibold mb-6">
+            Starting the adolescent program
+          </h2>
+          <p className="text-white/70 max-w-2xl mx-auto mb-10 leading-relaxed">
+            To ask about the adolescent IOP or begin the admissions process, call{" "}
+            <a href="tel:+16029050057" className="text-gold font-semibold">(602) 905-0057</a>. Our team will answer your questions about the program, schedule, and insurance, and help you understand whether the program is the right fit for your teen.
+          </p>
+          <a
+            href="tel:+16029050057"
+            className="inline-block bg-gold hover:bg-gold-dark text-white font-semibold text-base px-8 py-4 rounded-xl transition-all shadow-lg shadow-gold/25 text-center cursor-pointer"
+          >
+            Call (602) 905-0057
+          </a>
+        </div>
+      </section>
 
       {/* AEO Blocks */}
       <AEOBlock
