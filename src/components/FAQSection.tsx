@@ -5,6 +5,8 @@ export default function FAQSection({
 }: {
   faqs: Array<{ question: string; answer: string }>;
 }) {
+  if (faqs.length === 0) return null;
+
   return (
     <ScrollReveal delay={0.1}>
       <section aria-labelledby="faq-heading" className="py-20 md:py-28 bg-white">

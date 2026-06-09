@@ -48,12 +48,32 @@ export const siteData = {
       amenities: ["Treatment Rooms", "Group Therapy Space"],
       image: "/images/general/accom-group-room.jpg",
       sameAs: [] as string[],
-      licenseNumber: "TC20452",
+      licenseNumber: "OTC20452",
       hours: {
         "@type": "OpeningHoursSpecification",
         dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
         opens: "08:00",
         closes: "17:00",
+      },
+    },
+    {
+      name: "Adolescent IOP",
+      href: "/adolescent-treatment",
+      address: "4160 N. 108th Ave, Phoenix, AZ 85037",
+      phone: "(602) 905-0057",
+      phoneTel: "+16029050057",
+      description:
+        "Evening intensive outpatient program for adolescents ages 12 to 17, at our Phoenix outpatient location.",
+      programs: ["IOP"],
+      amenities: ["Group Therapy Space"],
+      image: "/images/general/accom-group-room.jpg",
+      sameAs: [] as string[],
+      licenseNumber: "OTC20452",
+      hours: {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        opens: "16:00",
+        closes: "21:00",
       },
     },
     {
