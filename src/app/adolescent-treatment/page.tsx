@@ -10,6 +10,9 @@ import SchemaScript from "@/components/SchemaScript";
 import Breadcrumb from "@/components/Breadcrumb";
 import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
 import FAQSection from "@/components/FAQSection";
+import dynamic from "next/dynamic";
+
+const PhotoGallery = dynamic(() => import("@/components/PhotoGallery"), { ssr: false, loading: () => null });
 
 const SITE_URL = "https://desertrecoverycenters.com";
 
@@ -81,6 +84,21 @@ const adolescentSchema = {
     },
   ],
 };
+
+const gallery = [
+  { src: "/images/locations/phoenix/phoenix-group-room-2.jpg",   alt: "Group therapy room at the Desert Recovery Centers Phoenix outpatient location" },
+  { src: "/images/locations/phoenix/phoenix-group-room-3.jpg",   alt: "Group room used for adolescent IOP sessions at the Phoenix outpatient location" },
+  { src: "/images/locations/phoenix/phoenix-classroom-1.jpg",    alt: "Classroom space at the Desert Recovery Centers Phoenix outpatient location" },
+  { src: "/images/locations/phoenix/phoenix-classroom-2.jpg",    alt: "Skills-based learning space at the Phoenix outpatient location" },
+  { src: "/images/locations/phoenix/phoenix-therapy-office-2.jpg", alt: "Individual therapy office at the Phoenix outpatient location" },
+  { src: "/images/locations/phoenix/phoenix-therapy-office-3.jpg", alt: "Therapy office at the Desert Recovery Centers Phoenix outpatient location" },
+  { src: "/images/locations/phoenix/phoenix-lobby-2.jpg",        alt: "Lobby at the Desert Recovery Centers Phoenix outpatient location" },
+  { src: "/images/locations/phoenix/phoenix-reception-1.jpg",    alt: "Reception area at the Phoenix outpatient location" },
+  { src: "/images/locations/phoenix/phoenix-game-room-1.jpg",    alt: "Recreation room at the Phoenix outpatient location" },
+  { src: "/images/locations/phoenix/phoenix-theater-1.jpg",      alt: "Theater room at the Phoenix outpatient location" },
+  { src: "/images/locations/phoenix/phoenix-gym.jpg",            alt: "Fitness space at the Phoenix outpatient location" },
+  { src: "/images/locations/phoenix/phoenix-hallway.jpg",        alt: "Interior hallway at the Desert Recovery Centers Phoenix outpatient location" },
+];
 
 function BodySection({
   title,
@@ -161,6 +179,8 @@ export default function AdolescentTreatmentPage() {
           </div>
         </div>
       </section>
+
+      <PhotoGallery photos={gallery} title="See the Space" eyebrow="Our Facility" />
 
       {/* AEO Blocks */}
       <AEOBlock
