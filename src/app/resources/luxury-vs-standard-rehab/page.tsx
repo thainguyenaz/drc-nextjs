@@ -6,12 +6,20 @@ import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import { buildMetadata, BreadcrumbSchema, MedicalWebPageSchema } from "@/lib/seo";
 
-export const metadata: Metadata = buildMetadata({
-  title: "Luxury Rehab vs Standard Rehab: What the Difference Actually Means, Desert Recovery Centers",
-  description:
-    "Understand the real differences between luxury and standard rehab programs, from clinical depth and staff ratios to environment, privacy, and long-term outcomes.",
-  path: "/resources/luxury-vs-standard-rehab",
-});
+export const metadata: Metadata = {
+  ...buildMetadata({
+    title: "Luxury Rehab vs Standard Rehab: What the Difference Actually Means, Desert Recovery Centers",
+    description:
+      "Understand the real differences between luxury and standard rehab programs, from clinical depth and staff ratios to environment, privacy, and long-term outcomes.",
+    path: "/resources/luxury-vs-standard-rehab",
+  }),
+  // Self-consolidating near-duplicate: canonical points at the more comprehensive
+  // /resources/luxury-vs-traditional-rehab page so Google consolidates ranking signals
+  // there. This page stays live and crawlable; only the canonical signal is redirected.
+  alternates: {
+    canonical: "https://desertrecoverycenters.com/resources/luxury-vs-traditional-rehab",
+  },
+};
 
 const faqs = [
   {
