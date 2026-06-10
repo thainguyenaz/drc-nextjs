@@ -81,13 +81,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     url: `${SITE_URL}/resources/blog/${post.slug}`,
     datePublished: post.datePublished,
     dateModified: post.dateModified,
-    author: {
-      "@type": "Person",
-      "@id": `${SITE_URL}/our-team#dr-an-nguyen`,
-      name: post.author,
-      jobTitle: post.authorTitle,
-      worksFor: { "@id": `${SITE_URL}/#organization` },
-    },
+    author: { "@id": `${SITE_URL}/#organization` },
     publisher: { "@id": `${SITE_URL}/#organization` },
     medicalAudience: { "@type": "MedicalAudience", audienceType: "Patient" },
     reviewedBy: DRC_REVIEWERS.nguyen,
@@ -161,7 +155,6 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                 <div className="bg-cream rounded-xl p-6 border border-gold/10">
                   <p className="text-xs text-sage uppercase tracking-widest font-semibold mb-2">Written By</p>
                   <p className="font-display text-forest font-semibold">{post.author}</p>
-                  <p className="text-gray-500 text-sm">{post.authorTitle}</p>
                 </div>
 
                 {/* CTA */}
