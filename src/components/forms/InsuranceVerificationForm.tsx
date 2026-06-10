@@ -166,19 +166,25 @@ export default function InsuranceVerificationForm() {
         } catch {
           // body wasn't JSON; treat as plain success
         }
+        // Lead is captured whenever the API returns 2xx — 200 clean success
+        // OR 207 partial (HubSpot saved, notify relay failed). Fire the
+        // thank-you page_view in both cases. The true error branch (non-2xx)
+        // and the network/throw branch never reach here, so a lost lead
+        // still fires nothing.
+        if (typeof window !== "undefined") {
+          const ty = window.location.pathname.replace(/\/$/, "") + "/thank-you/";
+          window.gtag?.("event", "page_view", {
+            page_path: ty,
+            page_location: window.location.origin + ty,
+            page_title: "Thank You",
+          });
+        }
+
         if (warning) {
           setWarningMessage(warning);
           setStatus("partial");
         } else {
           setStatus("success");
-          if (typeof window !== "undefined") {
-            const ty = window.location.pathname.replace(/\/$/, "") + "/thank-you/";
-            window.gtag?.("event", "page_view", {
-              page_path: ty,
-              page_location: window.location.origin + ty,
-              page_title: "Thank You",
-            });
-          }
         }
         setFormData(initialFormData);
       } else {
