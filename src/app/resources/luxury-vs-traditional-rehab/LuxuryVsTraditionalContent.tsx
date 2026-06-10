@@ -197,7 +197,93 @@ export default function LuxuryVsTraditionalContent({ faqs }: { faqs: readonly FA
         </div>
       </section>
 
-      {/* Section 3 — Why Environment Matters */}
+      {/* Clinical Depth */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="max-w-container mx-auto px-6">
+          <motion.div {...fadeUp} className="max-w-3xl mx-auto">
+            <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
+              The Core Difference
+            </span>
+            <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4 mb-8">
+              Clinical Depth: The Most Important Difference
+            </h2>
+            <p className="text-gray-600 leading-relaxed text-lg mb-6">
+              The single biggest difference between luxury and standard rehab is the intensity
+              and personalization of clinical care. This shows up in several concrete ways:
+            </p>
+            <div className="space-y-6">
+              {[
+                {
+                  title: "Staff-to-Client Ratios",
+                  desc: "Standard facilities often operate with 30 or more beds, meaning therapists and psychiatrists divide their attention across large groups. Luxury programs like Desert Recovery Centers maintain intentionally small program sizes, which allows clinicians to know each client deeply, not just their diagnosis, but their story, their triggers, and what motivates their recovery.",
+                },
+                {
+                  title: "Frequency of Individual Therapy",
+                  desc: "In many standard programs, clients may receive one individual therapy session per week, with the bulk of treatment delivered through group sessions. Luxury programs typically offer multiple individual sessions per week with doctoral-level clinicians, providing space for the deeper therapeutic work that group settings cannot always accommodate.",
+                },
+                {
+                  title: "Psychiatrist Access",
+                  desc: "Medication management is critical for many people in early recovery, especially those with co-occurring mental health conditions. Standard programs may have a psychiatrist available one or two days per week. Luxury programs generally provide more frequent psychiatric oversight, allowing for faster medication adjustments and more responsive care.",
+                },
+                {
+                  title: "Dual Diagnosis Capability",
+                  desc: "Addiction rarely exists in isolation. Depression, anxiety, PTSD, bipolar disorder, and other conditions frequently co-occur with substance use disorders. While some standard programs offer basic dual diagnosis services, luxury programs are more likely to have the specialized clinical staff needed to treat complex co-occurring conditions simultaneously and comprehensively.",
+                },
+              ].map((item, i) => (
+                <div key={i} className="border-l-2 border-gold/40 pl-6">
+                  <h3 className="font-display text-lg text-forest font-semibold mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Amenities */}
+      <section className="py-16 md:py-24 bg-cream">
+        <div className="max-w-container mx-auto px-6">
+          <motion.div {...fadeUp} className="max-w-3xl mx-auto">
+            <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
+              Clinical Tools, Not Just Perks
+            </span>
+            <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4 mb-8">
+              Amenities: More Than a Sales Pitch
+            </h2>
+            <p className="text-gray-600 leading-relaxed text-lg mb-6">
+              Pools, fitness centers, gourmet meals, and outdoor recreation might seem like
+              marketing fluff. But when you understand the science of addiction recovery, these
+              amenities serve real clinical purposes:
+            </p>
+            <div className="grid md:grid-cols-2 gap-4">
+              {[
+                "Exercise has been shown to reduce cravings, improve mood, and support neurological repair during early recovery",
+                "Proper nutrition helps restore neurochemistry disrupted by substance use, gourmet meals built around recovery nutrition are not indulgence, they are medicine",
+                "Recreational activities like swimming, hiking, and sports help clients build sober social skills and rediscover enjoyment without substances",
+                "Yoga, meditation, and mindfulness spaces support nervous system regulation and emotional processing",
+                "Comfortable outdoor spaces encourage clients to spend time in nature, which research links to reduced anxiety and improved mental clarity",
+                "Art and music therapy rooms provide creative expression outlets for processing emotions that are difficult to verbalize",
+              ].map((item, i) => (
+                <div
+                  key={i}
+                  className="flex items-start gap-3 bg-white rounded-lg p-4 border border-gray-100"
+                >
+                  <span className="w-2 h-2 bg-gold rounded-full mt-2 flex-shrink-0" />
+                  <p className="text-gray-600 text-sm leading-relaxed">{item}</p>
+                </div>
+              ))}
+            </div>
+            <p className="text-gray-600 leading-relaxed mt-6 text-sm">
+              The best luxury programs integrate these elements into the treatment plan itself,
+              not as optional extras, but as components of a holistic recovery experience.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Why Environment Matters */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-container mx-auto px-6">
           <motion.div {...fadeUp} className="max-w-3xl mx-auto">
@@ -223,8 +309,124 @@ export default function LuxuryVsTraditionalContent({ faqs }: { faqs: readonly FA
         </div>
       </section>
 
-      {/* Section 4 — FAQ Accordion */}
-      <section className="py-20 md:py-28 bg-cream overflow-hidden">
+      {/* Privacy and Discretion */}
+      <section className="py-16 md:py-24 bg-cream">
+        <div className="max-w-container mx-auto px-6">
+          <motion.div {...fadeUp} className="max-w-3xl mx-auto">
+            <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
+              Confidentiality Matters
+            </span>
+            <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4 mb-8">
+              Privacy and Discretion
+            </h2>
+            <p className="text-gray-600 leading-relaxed text-lg mb-4">
+              For many people considering rehab, privacy is a significant concern. Executives
+              worried about professional reputation, healthcare workers navigating licensing
+              implications, public figures concerned about media exposure, and parents who
+              don&apos;t want to alarm their children, all of them need discretion.
+            </p>
+            <p className="text-gray-600 leading-relaxed text-lg mb-4">
+              Standard facilities, with their larger census sizes, inherently offer less privacy.
+              More clients means more people aware of your presence, more shared spaces, and more
+              opportunities for confidentiality to be compromised, not through malice, but simply
+              through volume.
+            </p>
+            <p className="text-gray-600 leading-relaxed text-lg">
+              Luxury programs with small census sizes naturally provide greater privacy. Fewer
+              clients means fewer people know you&apos;re there. Private rooms mean your space is
+              your own. And smaller group therapy sessions create a more intimate, controlled
+              environment where vulnerability feels safer. For professionals whose careers depend
+              on discretion, this is not a luxury, it is a necessity.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Outcomes and Aftercare */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="max-w-container mx-auto px-6">
+          <motion.div {...fadeUp} className="max-w-3xl mx-auto">
+            <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
+              Long-Term Recovery
+            </span>
+            <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4 mb-8">
+              Outcomes and Aftercare
+            </h2>
+            <p className="text-gray-600 leading-relaxed text-lg mb-4">
+              Research in addiction treatment consistently suggests that longer stays in treatment
+              are associated with improved long-term outcomes. While a 28-day standard program can
+              begin the recovery process, many clinical experts recommend 60 to 90 days for more
+              durable results, particularly for individuals with co-occurring mental health
+              conditions or long histories of substance use.
+            </p>
+            <p className="text-gray-600 leading-relaxed text-lg mb-4">
+              Luxury programs are more likely to support extended stays, both because their
+              environments make longer treatment more sustainable and because their clinical
+              models are designed for deeper, more gradual therapeutic work.
+            </p>
+            <p className="text-gray-600 leading-relaxed text-lg">
+              Equally important is what happens after discharge. The best luxury programs invest
+              heavily in aftercare planning, step-down recommendations, outpatient referrals,
+              therapist matching, alumni support networks, and ongoing check-ins. Recovery
+              doesn&apos;t end when treatment does, and comprehensive aftercare can make the
+              difference between sustained sobriety and relapse.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* How Desert Recovery Centers Compares */}
+      <section className="py-16 md:py-24 bg-cream">
+        <div className="max-w-container mx-auto px-6">
+          <motion.div {...fadeUp} className="max-w-3xl mx-auto">
+            <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
+              Arizona&apos;s Choice
+            </span>
+            <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4 mb-8">
+              How Desert Recovery Centers Compares
+            </h2>
+            <p className="text-gray-600 leading-relaxed text-lg mb-8">
+              National luxury rehab brands like All Points North (APN) offer quality care, and we
+              respect the work they do. But for Arizona residents and families, Desert Recovery
+              Centers offers distinct advantages that national chains often cannot match.
+            </p>
+            <div className="space-y-4">
+              {[
+                {
+                  title: "Smaller Program Sizes",
+                  desc: "DRC maintains intentionally small client cohorts across our Arizona facilities. This means your clinical team does not just know your chart, they know you. Treatment plans are genuinely individualized, not templated.",
+                },
+                {
+                  title: "Local Clinical Leadership",
+                  desc: "Our Clinical Director, Dr. An Nguyen, is on-site and actively involved in treatment planning. You are not being treated by rotating staff or remote oversight, you are receiving care from a consistent, invested clinical team.",
+                },
+                {
+                  title: "Arizona-Rooted Aftercare",
+                  desc: "Because DRC is based in Arizona, our aftercare network, therapists, psychiatrists, support groups, sober living, is local. When you transition out of residential care, you are stepping into a recovery community we have helped build, not being handed a generic referral list for a state you do not live in.",
+                },
+                {
+                  title: "Multiple Facility Options",
+                  desc: "With locations across the Phoenix metropolitan area, DRC offers flexibility in setting and environment while maintaining consistent clinical standards across every facility.",
+                },
+                {
+                  title: "Comparable Clinical Depth",
+                  desc: "DRC provides the same evidence-based therapies, psychiatric oversight, and dual diagnosis treatment that national luxury programs offer, with the added benefit of a smaller, more personal environment where you will not get lost in the system.",
+                },
+              ].map((item, i) => (
+                <div key={i} className="bg-white rounded-xl p-6 border border-gray-100">
+                  <h3 className="font-display text-lg text-forest font-semibold mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* FAQ Accordion */}
+      <section className="py-20 md:py-28 bg-white overflow-hidden">
         <div className="max-w-container mx-auto px-6">
           <motion.div {...fadeUp} className="text-center mb-14">
             <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
@@ -288,7 +490,7 @@ export default function LuxuryVsTraditionalContent({ faqs }: { faqs: readonly FA
         </div>
       </section>
 
-      {/* Section 5 — CTA */}
+      {/* CTA */}
       <section className="py-20 md:py-28 bg-forest relative overflow-hidden">
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
         <motion.div {...fadeUp} className="max-w-container mx-auto px-6 text-center">
