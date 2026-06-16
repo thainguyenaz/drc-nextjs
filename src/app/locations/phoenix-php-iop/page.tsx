@@ -33,19 +33,19 @@ export const metadata: Metadata = {
 };
 
 const gallery = [
-  { src: "/images/locations/phoenix/phoenix-lobby-2.jpg", alt: "Modern lobby at Desert Recovery Centers Phoenix PHP IOP treatment center" },
-  { src: "/images/locations/phoenix/phoenix-reception-2.jpg", alt: "Reception desk at Desert Recovery Centers Phoenix PHP IOP treatment center" },
-  { src: "/images/locations/phoenix/phoenix-reception-1.jpg", alt: "Reception area entrance at Desert Recovery Centers Phoenix PHP IOP treatment center" },
-  { src: "/images/locations/phoenix/phoenix-lobby-1.jpg", alt: "Waiting area at Desert Recovery Centers Phoenix PHP IOP treatment center" },
-  { src: "/images/locations/phoenix/phoenix-lobby-lounge.jpg", alt: "Lobby lounge at Desert Recovery Centers Phoenix PHP IOP treatment center" },
-  { src: "/images/locations/phoenix/phoenix-hallway.jpg", alt: "Hallway with artwork at Desert Recovery Centers Phoenix PHP IOP treatment center" },
-  { src: "/images/locations/phoenix/phoenix-game-room-1.jpg", alt: "Game room with pool table at Desert Recovery Centers Phoenix PHP IOP treatment center" },
-  { src: "/images/locations/phoenix/phoenix-game-room-2.jpg", alt: "Recreation room at Desert Recovery Centers Phoenix PHP IOP treatment center" },
-  { src: "/images/locations/phoenix/phoenix-classroom-1.jpg", alt: "Classroom at Desert Recovery Centers Phoenix PHP IOP treatment center" },
-  { src: "/images/locations/phoenix/phoenix-group-room-2.jpg", alt: "Group therapy room at Desert Recovery Centers Phoenix PHP IOP treatment center" },
-  { src: "/images/locations/phoenix/phoenix-therapy-office-3.jpg", alt: "Private therapy office at Desert Recovery Centers Phoenix PHP IOP treatment center" },
-  { src: "/images/locations/phoenix/phoenix-medical-room.jpg", alt: "Medical room at Desert Recovery Centers Phoenix PHP IOP treatment center" },
-  { src: "/images/locations/phoenix/phoenix-kitchen-2.jpg", alt: "Kitchen at Desert Recovery Centers Phoenix PHP IOP treatment center" },
+  { src: "/images/locations/php-iop/php-iop-reception-1.jpg", alt: "Reception desk and lobby seating at Desert Recovery Centers Phoenix PHP and IOP treatment center" },
+  { src: "/images/locations/php-iop/php-iop-waiting-1.jpg", alt: "Comfortable waiting lounge with seating at Desert Recovery Centers Phoenix outpatient center" },
+  { src: "/images/locations/php-iop/php-iop-hallway-1.jpg", alt: "Main hallway leading to therapy offices at Desert Recovery Centers Phoenix PHP and IOP center" },
+  { src: "/images/locations/php-iop/php-iop-group-room-1.jpg", alt: "Group therapy room with seating at Desert Recovery Centers Phoenix outpatient program" },
+  { src: "/images/locations/php-iop/php-iop-classroom-1.jpg", alt: "Psychoeducation classroom with work tables at Desert Recovery Centers Phoenix PHP and IOP center" },
+  { src: "/images/locations/php-iop/php-iop-classroom-2.jpg", alt: "Group education room with seating and presentation screen at Desert Recovery Centers Phoenix outpatient center" },
+  { src: "/images/locations/php-iop/php-iop-therapy-office-1.jpg", alt: "Private individual therapy office at Desert Recovery Centers Phoenix PHP and IOP treatment center" },
+  { src: "/images/locations/php-iop/php-iop-therapy-office-2.jpg", alt: "One on one counseling office at Desert Recovery Centers Phoenix outpatient program" },
+  { src: "/images/locations/php-iop/php-iop-clinic-1.jpg", alt: "Medical exam room for psychiatric and medical evaluations at Desert Recovery Centers Phoenix PHP and IOP center" },
+  { src: "/images/locations/php-iop/php-iop-kitchen-1.jpg", alt: "Client kitchen and break room at Desert Recovery Centers Phoenix outpatient treatment center" },
+  { src: "/images/locations/php-iop/php-iop-game-room-1.jpg", alt: "Recreation game room with pool table and arcade games at Desert Recovery Centers Phoenix PHP and IOP center" },
+  { src: "/images/locations/php-iop/php-iop-game-room-2.jpg", alt: "Game room with billiards and lounge seating at Desert Recovery Centers Phoenix outpatient program" },
+  { src: "/images/locations/php-iop/php-iop-shuffleboard.jpg", alt: "Shuffleboard table in the recreation room at Desert Recovery Centers Phoenix PHP and IOP center" },
 ];
 
 const clinicSchema = {
@@ -144,7 +144,7 @@ export default function PhoenixPhpIopPage() {
         eyebrow="Phoenix, Arizona"
         title="Real Treatment. Real Life. All at Once."
         description="Most people cannot put their life on hold. You still have a job, a family, responsibilities that do not stop because you are struggling. Our Phoenix center was built for exactly that, delivering the same clinical depth as residential treatment, structured around the life you still have to live."
-        bgImage="/images/locations/phoenix/phoenix-lobby-2.jpg"
+        bgImage="/images/locations/php-iop/php-iop-reception-1.jpg"
       />
 
       {/* All animated content sections */}
