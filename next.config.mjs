@@ -54,7 +54,7 @@ const nextConfig = {
               "img-src 'self' data: https: blob:",
               "font-src 'self' https://fonts.gstatic.com data:",
               "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.google.com https://api.desertrecoverycenters.com https://challenges.cloudflare.com https://api.livechatinc.com https://cdn.livechatinc.com wss://*.livechatinc.com https://*.tctm.co https://*.hubspot.com https://*.hubapi.com https://js.hscta.net https://js-eu1.hscta.net https://*.hs-banner.com https://*.hsforms.com https://*.hscollectedforms.net https://*.hsadspixel.net https://*.hs-analytics.net https://stats.g.doubleclick.net https://ad.doubleclick.net https://*.hsappstatic.net",
-              "frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com https://challenges.cloudflare.com https://secure.livechatinc.com https://maps.google.com",
+              "frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com https://challenges.cloudflare.com https://secure.livechatinc.com https://maps.google.com https://www.google.com",
               "object-src 'none'",
               "base-uri 'self'",
               "form-action 'self'",
