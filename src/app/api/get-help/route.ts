@@ -139,7 +139,7 @@ export async function POST(request: NextRequest) {
               communications: [
                 {
                   value: true,
-                  subscriptionTypeId: 999,
+                  subscriptionTypeId: 457126657,
                   text: "I agree to receive marketing communications.",
                 },
               ],
