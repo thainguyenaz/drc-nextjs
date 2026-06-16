@@ -74,6 +74,7 @@ export async function POST(request: NextRequest) {
     }
 
     // STEP 1: HubSpot submission (primary)
+    const hutk = request.cookies.get("hubspotutk")?.value;
     try {
       const hubspotRes = await fetch(
         "https://api.hsforms.com/submissions/v3/integration/submit/48050688/5fc5394d-3806-4291-a308-da475add5c6c",
@@ -92,6 +93,7 @@ export async function POST(request: NextRequest) {
               { name: "how_did_you_hear", value: howDidYouHear || "" },
             ],
             context: {
+              ...(hutk ? { hutk } : {}),
               pageUri: "https://desertrecoverycenters.com/insurance",
               pageName: "Insurance Verification",
             },
