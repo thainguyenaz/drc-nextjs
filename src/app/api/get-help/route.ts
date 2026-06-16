@@ -109,6 +109,7 @@ export async function POST(request: NextRequest) {
 
   // Primary: HubSpot submission. Mirrors the payload the form used to send
   // directly from the browser.
+  const hutk = request.cookies.get("hubspotutk")?.value;
   let hubspotOk = false;
   try {
     const hsRes = await fetch(
@@ -127,6 +128,7 @@ export async function POST(request: NextRequest) {
             { name: "message", value: situation },
           ],
           context: {
+            ...(hutk ? { hutk } : {}),
             pageUri: str(body.pageUri),
             pageName: str(body.pageName) || "Get Help Today",
           },
