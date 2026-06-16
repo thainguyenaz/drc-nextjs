@@ -123,10 +123,10 @@ export const teamMembers: TeamMember[] = [
   {
     slug: "ron-alessi",
     name: "Ron Alessi",
-    jobTitle: "Clinical Staff",
+    jobTitle: "Director of Clinical Operations and Standards",
     credentials: [],
     description:
-      "Ron Alessi is a valued member of the Desert Recovery Centers clinical team, supporting clients through evidence-based and peer-led recovery programming.",
+      "With over a decade of personal recovery and professional experience, Ronald Alessi Jr. serves as the Director of Clinical Operations and Standards at Desert Recovery Centers. As a certified Peer Support Specialist and Peer Support Technician, Ronald combines lived experience with a deep understanding of behavioral health systems to ensure ethical, compassionate, and high-quality care across all programs. Known for his leadership and attention to detail, Ronald oversees documentation, policy development, and staff training to maintain the highest standards of compliance and client safety. Driven by a passion for helping others find freedom through recovery, Ronald leads with empathy, accountability, and purpose, cultivating a culture where both clients and team members can grow, heal, and thrive.",
     image: "/images/team/Ron-Alessi-2.jpg",
     url: "https://desertrecoverycenters.com/team/ron-alessi/",
   },
