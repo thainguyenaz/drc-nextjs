@@ -33,6 +33,7 @@ export const metadata: Metadata = {
 };
 
 const gallery = [
+  { src: "/images/locations/php-iop/php-iop-game-room-hero.jpg", alt: "Recreation and game room with billiards table and lounge seating at Desert Recovery Centers Phoenix PHP and IOP outpatient center" },
   { src: "/images/locations/php-iop/php-iop-game-room-2.jpg", alt: "Game room with billiards and lounge seating at Desert Recovery Centers Phoenix outpatient program" },
   { src: "/images/locations/php-iop/php-iop-reception-1.jpg", alt: "Reception desk and lobby seating at Desert Recovery Centers Phoenix PHP and IOP treatment center" },
   { src: "/images/locations/php-iop/php-iop-waiting-1.jpg", alt: "Comfortable waiting lounge with seating at Desert Recovery Centers Phoenix outpatient center" },

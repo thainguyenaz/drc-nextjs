@@ -422,6 +422,27 @@ export default function PhoenixPHPContent() {
         </div>
       </section>
 
+      {/* ── Feature image: Recreation / Game Room ───────────── */}
+      <section className="bg-white pb-16 md:pb-24">
+        <div className="max-w-container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.1 }}
+            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+            className="relative aspect-[3/2] rounded-xl overflow-hidden shadow-xl max-w-5xl mx-auto"
+          >
+            <Image
+              src="/images/locations/php-iop/php-iop-game-room-hero.jpg"
+              alt="Recreation and game room with billiards table and lounge seating at Desert Recovery Centers Phoenix PHP and IOP outpatient center"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 1024px"
+            />
+          </motion.div>
+        </div>
+      </section>
+
       {/* ── SECTION 4: Programs — Tabbed Panel ────────────── */}
       <motion.div
         initial={{ opacity: 0, y: 40 }}
