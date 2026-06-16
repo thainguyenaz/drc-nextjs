@@ -33,6 +33,7 @@ export const metadata: Metadata = {
 };
 
 const gallery = [
+  { src: "/images/locations/php-iop/php-iop-game-room-2.jpg", alt: "Game room with billiards and lounge seating at Desert Recovery Centers Phoenix outpatient program" },
   { src: "/images/locations/php-iop/php-iop-reception-1.jpg", alt: "Reception desk and lobby seating at Desert Recovery Centers Phoenix PHP and IOP treatment center" },
   { src: "/images/locations/php-iop/php-iop-waiting-1.jpg", alt: "Comfortable waiting lounge with seating at Desert Recovery Centers Phoenix outpatient center" },
   { src: "/images/locations/php-iop/php-iop-hallway-1.jpg", alt: "Main hallway leading to therapy offices at Desert Recovery Centers Phoenix PHP and IOP center" },
@@ -44,7 +45,6 @@ const gallery = [
   { src: "/images/locations/php-iop/php-iop-clinic-1.jpg", alt: "Medical exam room for psychiatric and medical evaluations at Desert Recovery Centers Phoenix PHP and IOP center" },
   { src: "/images/locations/php-iop/php-iop-kitchen-1.jpg", alt: "Client kitchen and break room at Desert Recovery Centers Phoenix outpatient treatment center" },
   { src: "/images/locations/php-iop/php-iop-game-room-1.jpg", alt: "Recreation game room with pool table and arcade games at Desert Recovery Centers Phoenix PHP and IOP center" },
-  { src: "/images/locations/php-iop/php-iop-game-room-2.jpg", alt: "Game room with billiards and lounge seating at Desert Recovery Centers Phoenix outpatient program" },
   { src: "/images/locations/php-iop/php-iop-shuffleboard.jpg", alt: "Shuffleboard table in the recreation room at Desert Recovery Centers Phoenix PHP and IOP center" },
 ];
 
