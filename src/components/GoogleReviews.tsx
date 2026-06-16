@@ -24,8 +24,8 @@ const GOOGLE_MAPS_REVIEW_URLS: Record<string, string> = {
     "https://search.google.com/local/writereview?placeid=ChIJIY0JCJR3K4cR2AsN2S1SMsw",
   ChIJhwUwqWFrK4cRcJizcuP0hCI:
     "https://search.google.com/local/writereview?placeid=ChIJhwUwqWFrK4cRcJizcuP0hCI",
-  ChIJP_eZSIRAK4cRrE5xwNZoYdA:
-    "https://search.google.com/local/writereview?placeid=ChIJP-eZSIRAK4cRrE5xwNZoYdA",
+  ChIJcdK2ZV1BK4cRW6IF7BiIqUA:
+    "https://search.google.com/local/writereview?placeid=ChIJcdK2ZV1BK4cRW6IF7BiIqUA",
 };
 
 function StarRating({ rating }: { rating: number }) {

@@ -10,7 +10,7 @@ export const runtime = "nodejs";
 const LOCATIONS = [
   { name: "Scottsdale", placeId: "ChIJIY0JCJR3K4cR2AsN2S1SMsw" },
   { name: "Glendale", placeId: "ChIJhwUwqWFrK4cRcJizcuP0hCI" },
-  { name: "Phoenix", placeId: "ChIJP-eZSIRAK4cRrE5xwNZoYdA" },
+  { name: "Phoenix", placeId: "ChIJcdK2ZV1BK4cRW6IF7BiIqUA" },
 ];
 
 const FIELDS = "displayName,rating,reviews,userRatingCount";
