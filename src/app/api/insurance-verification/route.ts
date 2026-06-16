@@ -97,6 +97,19 @@ export async function POST(request: NextRequest) {
               pageUri: "https://desertrecoverycenters.com/insurance",
               pageName: "Insurance Verification",
             },
+            legalConsentOptions: {
+              consent: {
+                consentToProcess: true,
+                text: "I agree to allow Desert Recovery Centers to store and process my personal data.",
+                communications: [
+                  {
+                    value: true,
+                    subscriptionTypeId: 457126657,
+                    text: "I agree to receive marketing communications.",
+                  },
+                ],
+              },
+            },
           }),
         }
       );
