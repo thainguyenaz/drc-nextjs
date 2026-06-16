@@ -121,6 +121,19 @@ export default function Navigation() {
         scrolled ? "bg-white/95 backdrop-blur-sm shadow-md" : "bg-transparent"
       }`}
     >
+      {/* At-top scrim: keeps the white logo, hamburger, and breadcrumb legible over
+          light heroes. Fades out once scrolled — the solid white bar handles it then. */}
+      <div
+        aria-hidden="true"
+        className={`pointer-events-none absolute inset-x-0 top-0 h-40 -z-10 transition-opacity duration-300 ${
+          scrolled ? "opacity-0" : "opacity-100"
+        }`}
+        style={{
+          background:
+            "linear-gradient(to bottom, rgba(28,43,30,0.55) 0%, rgba(28,43,30,0.28) 45%, rgba(28,43,30,0) 100%)",
+        }}
+      />
+
       <div className="max-w-container mx-auto px-6 flex items-center justify-between h-14">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 flex-shrink-0 mr-8">
