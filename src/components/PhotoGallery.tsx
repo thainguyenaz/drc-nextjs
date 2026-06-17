@@ -11,10 +11,12 @@ export default function PhotoGallery({
   photos,
   title,
   eyebrow = "Our Facility",
+  aspect = "aspect-square",
 }: {
   photos: Photo[];
   title: string;
   eyebrow?: string;
+  aspect?: string;
 }) {
   const [index, setIndex] = useState(-1);
 
@@ -34,7 +36,7 @@ export default function PhotoGallery({
             <button
               key={img.src}
               onClick={() => setIndex(i)}
-              className="relative aspect-square rounded-xl overflow-hidden cursor-pointer group"
+              className={`relative ${aspect} rounded-xl overflow-hidden cursor-pointer group`}
             >
               <Image
                 src={img.src}
