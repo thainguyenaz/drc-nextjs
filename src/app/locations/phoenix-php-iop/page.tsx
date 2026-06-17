@@ -152,7 +152,7 @@ export default function PhoenixPhpIopPage() {
       <PhoenixPHPContent />
 
       {/* Photo Gallery (uses yet-another-react-lightbox) */}
-      <PhotoGallery photos={gallery} title="See the Space" eyebrow="Our Facility" />
+      <PhotoGallery photos={gallery} title="See the Space" eyebrow="Our Facility" aspect="aspect-[3/2]" />
 
       {/* AEO Blocks */}
       <AEOBlock
