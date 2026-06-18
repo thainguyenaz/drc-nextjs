@@ -21,14 +21,14 @@ export const metadata: Metadata = {
     "Flexible intensive outpatient program (IOP) for addiction and mental health in Arizona. 3-4 hours of daily programming that fits around work, school, and family.",
   alternates: {
     canonical:
-      "https://desertrecoverycenters.com/levels-of-care/iop/",
+      "https://desertrecoverycenters.com/levels-of-care/iop",
   },
   openGraph: {
     title:
       "Intensive Outpatient Program (IOP) in Arizona | Desert Recovery Centers",
     description:
       "Flexible intensive outpatient program (IOP) for addiction and mental health in Arizona. 3-4 hours of daily programming that fits around work, school, and family.",
-    url: "https://desertrecoverycenters.com/levels-of-care/iop/",
+    url: "https://desertrecoverycenters.com/levels-of-care/iop",
     images: [
       {
         url: "https://desertrecoverycenters.com/images/scottsdale/DRC-DRONE-SCOTTSDALE-08-01-2024-August-01-202400006-2.jpg",
