@@ -68,7 +68,7 @@ const faqSchemaItems = faqs.map((f) => ({
 const levels = [
   {
     title: "Medical Detox",
-    href: "/levels-of-care/detox/",
+    href: "/levels-of-care/detox",
     description:
       "The first step for individuals with physical dependence on drugs or alcohol. Medical detox provides 24/7 physician oversight and nursing care to manage withdrawal symptoms safely and comfortably. DRC coordinates detox at trusted partner facilities. It is the entry point into a seamless continuum of care that continues at our DRC residential program. Our medical team designs individualized protocols for alcohol, opioid, benzodiazepine, stimulant, and polysubstance withdrawal, using FDA-approved medications and continuous monitoring to keep you safe throughout the process.",
     who: "Individuals with physical dependence on alcohol, opioids, benzodiazepines, or other substances who need medically supervised withdrawal management before beginning therapeutic treatment.",

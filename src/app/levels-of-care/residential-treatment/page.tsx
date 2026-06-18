@@ -145,7 +145,7 @@ export default function ResidentialTreatmentPage() {
             <p className="text-gray-600 leading-relaxed text-lg">
               Whether you are stepping down from{" "}
               <Link
-                href="/levels-of-care/detox/"
+                href="/levels-of-care/detox"
                 className="text-gold hover:text-gold-dark font-semibold"
               >
                 medical detox
