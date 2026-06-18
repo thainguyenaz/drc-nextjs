@@ -21,14 +21,14 @@ export const metadata: Metadata = {
     "Structured partial hospitalization program (PHP) for addiction and mental health in Arizona. Full-day clinical programming with the flexibility to return home each evening.",
   alternates: {
     canonical:
-      "https://desertrecoverycenters.com/levels-of-care/php/",
+      "https://desertrecoverycenters.com/levels-of-care/php",
   },
   openGraph: {
     title:
       "Partial Hospitalization Program (PHP) in Arizona | Desert Recovery Centers",
     description:
       "Structured partial hospitalization program (PHP) for addiction and mental health in Arizona. Full-day clinical programming with the flexibility to return home each evening.",
-    url: "https://desertrecoverycenters.com/levels-of-care/php/",
+    url: "https://desertrecoverycenters.com/levels-of-care/php",
     images: [
       {
         url: "https://desertrecoverycenters.com/images/scottsdale/DRC-DRONE-SCOTTSDALE-08-01-2024-August-01-202400006-2.jpg",

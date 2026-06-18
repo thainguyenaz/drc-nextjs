@@ -20,14 +20,14 @@ export const metadata: Metadata = {
     "Explore every level of addiction and mental health treatment at Desert Recovery Centers: medical detox, residential, PHP, IOP, outpatient, and aftercare in Arizona.",
   alternates: {
     canonical:
-      "https://desertrecoverycenters.com/levels-of-care/",
+      "https://desertrecoverycenters.com/levels-of-care",
   },
   openGraph: {
     title:
       "Levels of Care: Addiction & Mental Health Treatment in Arizona | DRC",
     description:
       "Explore every level of addiction and mental health treatment at Desert Recovery Centers: medical detox, residential, PHP, IOP, outpatient, and aftercare in Arizona.",
-    url: "https://desertrecoverycenters.com/levels-of-care/",
+    url: "https://desertrecoverycenters.com/levels-of-care",
     images: [
       {
         url: "https://desertrecoverycenters.com/images/scottsdale/DRC-DRONE-SCOTTSDALE-08-01-2024-August-01-202400006-2.jpg",

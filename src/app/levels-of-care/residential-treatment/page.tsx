@@ -22,14 +22,14 @@ export const metadata: Metadata = {
     "Luxury residential addiction and mental health treatment in Arizona. 10-bed max facilities, individualized care, evidence-based therapies at Desert Recovery Centers.",
   alternates: {
     canonical:
-      "https://desertrecoverycenters.com/levels-of-care/residential-treatment/",
+      "https://desertrecoverycenters.com/levels-of-care/residential-treatment",
   },
   openGraph: {
     title:
       "Residential Addiction Treatment in Arizona | Desert Recovery Centers",
     description:
       "Luxury residential addiction and mental health treatment in Arizona. 10-bed max facilities, individualized care, evidence-based therapies at Desert Recovery Centers.",
-    url: "https://desertrecoverycenters.com/levels-of-care/residential-treatment/",
+    url: "https://desertrecoverycenters.com/levels-of-care/residential-treatment",
     images: [
       {
         url: "https://desertrecoverycenters.com/images/scottsdale/DRC-DRONE-SCOTTSDALE-08-01-2024-August-01-202400006-2.jpg",

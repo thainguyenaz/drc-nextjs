@@ -19,13 +19,13 @@ export const metadata: Metadata = {
   description:
     "Drug and alcohol detox in Arizona, coordinated through Desert Recovery Centers. We partner with trusted medical detox providers for safe withdrawal management before transition to our residential treatment program.",
   alternates: {
-    canonical: "https://desertrecoverycenters.com/levels-of-care/detox/",
+    canonical: "https://desertrecoverycenters.com/levels-of-care/detox",
   },
   openGraph: {
     title: "Drug & Alcohol Detox in Arizona | Desert Recovery Centers",
     description:
       "Drug and alcohol detox in Arizona, coordinated through Desert Recovery Centers. We partner with trusted medical detox providers for safe withdrawal management before transition to our residential treatment program.",
-    url: "https://desertrecoverycenters.com/levels-of-care/detox/",
+    url: "https://desertrecoverycenters.com/levels-of-care/detox",
     images: [
       {
         url: "https://desertrecoverycenters.com/images/scottsdale/DRC-DRONE-SCOTTSDALE-08-01-2024-August-01-202400006-2.jpg",
