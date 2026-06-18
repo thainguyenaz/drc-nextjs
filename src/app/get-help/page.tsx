@@ -65,7 +65,7 @@ export const metadata: Metadata = {
   description:
     "Ready to start your recovery? Contact Desert Recovery Centers today. Luxury addiction and mental health treatment in Arizona. Call (623) 305-0496.",
   alternates: {
-    canonical: "https://desertrecoverycenters.com/get-help/",
+    canonical: "https://desertrecoverycenters.com/get-help",
   },
   openGraph: {
     images: [

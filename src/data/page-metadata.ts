@@ -246,8 +246,13 @@ export const pageMetadata: Record<string, PageMeta> = {
 };
 
 export function getPageMeta(pathname: string): PageMeta {
-  return (
-    pageMetadata[pathname] ??
-    pageMetadata["/"]!
-  );
+  const meta = pageMetadata[pathname] ?? pageMetadata["/"]!;
+  // Served URLs are non-slash (trailingSlash: false). Strip a single trailing
+  // slash from the canonical so it matches the 200-serving URL, EXCEPT the bare
+  // domain root, which legitimately keeps its slash.
+  const canonical =
+    meta.canonical === "https://desertrecoverycenters.com/"
+      ? meta.canonical
+      : meta.canonical.replace(/\/$/, "");
+  return { ...meta, canonical };
 }
