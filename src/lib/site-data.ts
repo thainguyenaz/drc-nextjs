@@ -135,11 +135,11 @@ export const siteData = {
     { name: "Schizophrenia", href: "/mental-health/schizophrenia-treatment", description: "Integrated psychiatric care and therapeutic support for schizophrenia spectrum disorders." },
   ],
   addictionPrograms: [
-    { name: "Alcohol", href: "/addiction/alcoholism-treatment", description: "Medical detox and comprehensive alcohol use disorder treatment." },
+    { name: "Alcohol", href: "/addiction/alcoholism-treatment", description: "Medical detox coordination and comprehensive alcohol use disorder treatment." },
     { name: "Opioids", href: "/addiction/heroin-addiction-treatment", description: "MAT-supported treatment for heroin, fentanyl, and prescription opioid addiction." },
     { name: "Cocaine", href: "/addiction/cocaine-addiction-treatment", description: "Cocaine and crack cocaine addiction treatment with behavioral therapies." },
     { name: "Meth", href: "/addiction/meth-addiction-treatment", description: "Methamphetamine addiction treatment with evidence-based protocols." },
-    { name: "Fentanyl", href: "/addiction/fentanyl-addiction-treatment", description: "Specialized fentanyl addiction treatment with medically supervised detox." },
+    { name: "Fentanyl", href: "/addiction/fentanyl-addiction-treatment", description: "Specialized fentanyl addiction treatment with coordinated medical detox." },
     { name: "Prescription Drugs", href: "/addiction/prescription-drug-addiction-treatment", description: "Treatment for prescription drug dependencies including opioids, benzos, and stimulants." },
     { name: "Marijuana", href: "/addiction/marijuana-addiction-treatment", description: "Cannabis use disorder treatment addressing psychological dependence." },
     { name: "Gambling", href: "/addiction/gambling-addiction-treatment", description: "Behavioral addiction treatment for compulsive gambling." },
