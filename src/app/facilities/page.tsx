@@ -99,7 +99,7 @@ export const metadata: Metadata = {
   description:
     "Desert Recovery Centers operates luxury residential treatment facilities in Glendale and Scottsdale, Arizona, and outpatient services in Phoenix. Tour our facilities today.",
   alternates: {
-    canonical: "https://desertrecoverycenters.com/facilities/",
+    canonical: "https://desertrecoverycenters.com/facilities",
   },
   openGraph: {
     images: [
