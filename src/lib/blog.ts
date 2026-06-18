@@ -457,7 +457,7 @@ ${DISCLAIMER}`
   {
     slug: "what-is-sex-addiction",
     title: "What Is Sex Addiction? Understanding Compulsive Sexual Behavior",
-    excerpt: "Sex addiction, or compulsive sexual behavior disorder, is a real and treatable condition. Learn the signs, underlying causes, and how behavioral addiction treatment works.",
+    excerpt: "Sex addiction is compulsive sexual behavior a person cannot control despite the harm it causes. Learn the definition, signs, causes, and treatment.",
     category: "addiction",
     author: "Desert Recovery Centers Clinical Team",
     authorTitle: "Licensed Clinical Psychologist, Clinical Director",
@@ -467,10 +467,10 @@ ${DISCLAIMER}`
     featuredImage: "/images/glendale/Glendale-Front.jpg",
     featuredImageAlt: "Desert Recovery Centers Glendale treatment center for behavioral addiction",
     tags: ["sex addiction", "compulsive behavior", "hypersexuality", "behavioral addiction", "treatment"],
-    metaTitle: "What Is Sex Addiction? Signs, Causes, and Treatment | Desert Recovery Centers",
-    metaDescription: "Sex addiction, or compulsive sexual behavior disorder, is a real and treatable condition. Learn the signs, underlying causes, and how behavioral addiction treatment works.",
+    metaTitle: "What Is Sex Addiction? Definition, Signs & Treatment | DRC",
+    metaDescription: "Sex addiction is compulsive sexual behavior a person cannot control despite the harm it causes. Learn the definition, signs, causes, and treatment.",
     content: `<h2>Understanding Sex Addiction as a Clinical Condition</h2>
-<p>Sex addiction, more accurately referred to as compulsive sexual behavior disorder (CSBD), is a condition in which a person engages in repetitive sexual behaviors despite negative consequences to their health, relationships, career, and emotional well being. It is not about having a high sex drive or enjoying sexual activity. It is about a loss of control, an inability to stop despite wanting to, and the escalation of behaviors that cause increasing harm over time.</p>
+<p>A sex addict is a person who feels unable to stop compulsive sexual thoughts or behaviors even when those behaviors cause clear harm to their health, relationships, career, or emotional well being. Sex addiction, known clinically as compulsive sexual behavior disorder (CSBD), is not about having a high sex drive or enjoying sexual activity. It is about a loss of control, an inability to stop despite wanting to, and the escalation of behaviors that cause increasing harm over time.</p>
 <p>The topic of sex addiction is surrounded by misunderstanding, stigma, and debate. Some question whether it is a "real" addiction. Others confuse it with moral failing or simple irresponsibility. But for the millions of people who struggle with compulsive sexual behavior, the experience is devastatingly real: broken relationships, professional consequences, financial loss, and profound shame that makes seeking help feel almost impossible.</p>
 
 <h2>The Clinical Definition and DSM Debate</h2>
