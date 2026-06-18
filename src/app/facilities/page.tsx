@@ -141,7 +141,9 @@ export default function FacilitiesPage() {
                 programs in Glendale and Scottsdale each maintain a strict
                 10-bed maximum, and our Phoenix outpatient center provides PHP,
                 IOP, and the only integrated NeuroStar TMS program in west
-                Phoenix.
+                Phoenix. Before residential care, DRC coordinates{" "}
+                <Link href="/levels-of-care/detox" className="text-gold font-semibold hover:underline">medical detox</Link>{" "}
+                through trusted partner providers for clients who need it.
               </p>
             </AnimatedSection>
           </div>

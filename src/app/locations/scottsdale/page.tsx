@@ -203,7 +203,9 @@ export default function ScottsdaleLocationPage() {
               Addiction and Mental Health Treatment at DRC Scottsdale
             </h2>
             <p className="text-gray-600 leading-relaxed mb-8">
-              Our Scottsdale clinical team treats the full spectrum of addiction and mental health conditions, with a specialization in dual diagnosis, treating co-occurring conditions simultaneously for lasting recovery.
+              Our Scottsdale clinical team treats the full spectrum of addiction and mental health conditions, with a specialization in dual diagnosis, treating co-occurring conditions simultaneously for lasting recovery. For clients who need it, care begins with{" "}
+              <Link href="/levels-of-care/detox" className="text-gold font-semibold hover:underline">coordinated medical detox</Link>{" "}
+              through our trusted partner facilities before residential treatment at our Scottsdale center.
             </p>
             <div className="grid md:grid-cols-2 gap-4 mb-6">
               {[
