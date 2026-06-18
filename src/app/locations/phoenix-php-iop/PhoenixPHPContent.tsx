@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import ScrollReveal from "@/components/ScrollReveal";
+import PhotoGallery from "@/components/PhotoGallery";
 
 const diffContainerVariants = {
   hidden: {},
@@ -187,6 +188,31 @@ const insuranceProviders = [
   "Humana",
   "Magellan",
   "Beacon Health",
+];
+
+const gallery = [
+  { src: "/images/locations/php-iop/php-iop-reception-1.jpg", alt: "Reception desk with backlit Desert Recovery Centers logo at the Phoenix PHP and IOP outpatient center" },
+  { src: "/images/locations/php-iop/php-iop-group-therapy-1.jpg", alt: "Group therapy room with a circle of chairs at the Phoenix PHP and IOP outpatient program" },
+  { src: "/images/locations/php-iop/php-iop-waiting-1.jpg", alt: "Patient waiting lounge with sofa and lounge seating at the Phoenix PHP and IOP center" },
+  { src: "/images/locations/php-iop/php-iop-game-room-hero.jpg", alt: "Recreation room with pool table, air hockey, and arcade games at the Phoenix PHP and IOP center" },
+  { src: "/images/locations/php-iop/php-iop-therapy-office-1.jpg", alt: "Private clinical therapy office at the Phoenix PHP and IOP outpatient center" },
+  { src: "/images/locations/php-iop/php-iop-kitchen-1.jpg", alt: "Patient kitchen and break room at the Phoenix PHP and IOP outpatient program" },
+  { src: "/images/locations/php-iop/php-iop-classroom-3.jpg", alt: "Group education room at the Phoenix PHP and IOP center" },
+  { src: "/images/locations/php-iop/php-iop-classroom-1.jpg", alt: "Psychoeducation classroom at the Phoenix PHP and IOP outpatient program" },
+  { src: "/images/locations/php-iop/php-iop-hallway-1.jpg", alt: "Interior hallway with framed desert artwork at the Phoenix PHP and IOP center" },
+  { src: "/images/locations/php-iop/php-iop-reception-2.jpg", alt: "Reception and lobby seating area at the Phoenix PHP and IOP outpatient program" },
+  { src: "/images/locations/php-iop/php-iop-game-room-1.jpg", alt: "Pool table and recreation area at the Phoenix PHP and IOP center" },
+  { src: "/images/locations/php-iop/php-iop-medical-room-1.jpg", alt: "Medical exam room for on-site nursing and medication management at the Phoenix PHP and IOP center" },
+  { src: "/images/locations/php-iop/php-iop-therapy-office-2.jpg", alt: "Individual counseling office at the Phoenix PHP and IOP outpatient center" },
+  { src: "/images/locations/php-iop/php-iop-kitchen-2.jpg", alt: "Kitchen and dining area at the Phoenix PHP and IOP outpatient program" },
+  { src: "/images/locations/php-iop/php-iop-classroom-2.jpg", alt: "Classroom and group learning space at the Phoenix PHP and IOP center" },
+  { src: "/images/locations/php-iop/php-iop-hallway-2.jpg", alt: "Corridor with decorative mirrors at the Phoenix PHP and IOP outpatient center" },
+  { src: "/images/locations/php-iop/php-iop-game-room-2.jpg", alt: "Game room with arcade machines at the Phoenix PHP and IOP center" },
+  { src: "/images/locations/php-iop/php-iop-reception-3.jpg", alt: "Front desk and entrance area at the Phoenix PHP and IOP outpatient program" },
+  { src: "/images/locations/php-iop/php-iop-hallway-3.jpg", alt: "Hallway with framed artwork at the Phoenix PHP and IOP outpatient center" },
+  { src: "/images/locations/php-iop/php-iop-game-room-3.jpg", alt: "Recreation and lounge area at the Phoenix PHP and IOP center" },
+  { src: "/images/locations/php-iop/php-iop-lobby-detail-1.jpg", alt: "Desert Recovery Centers signage in the lobby at the Phoenix PHP and IOP center" },
+  { src: "/images/locations/php-iop/php-iop-waiting-2.jpg", alt: "Lounge and waiting area at the Phoenix PHP and IOP outpatient program" },
 ];
 
 function ProgramTabContent({ prog }: { prog: typeof programs[number] }) {
@@ -422,26 +448,8 @@ export default function PhoenixPHPContent() {
         </div>
       </section>
 
-      {/* ── Feature image: Recreation / Game Room ───────────── */}
-      <section className="bg-white pb-16 md:pb-24">
-        <div className="max-w-container mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.1 }}
-            transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="relative aspect-[3/2] rounded-xl overflow-hidden shadow-xl max-w-5xl mx-auto"
-          >
-            <Image
-              src="/images/locations/php-iop/php-iop-game-room-hero.jpg"
-              alt="Recreation and game room with billiards table and lounge seating at Desert Recovery Centers Phoenix PHP and IOP outpatient center"
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 1024px"
-            />
-          </motion.div>
-        </div>
-      </section>
+      {/* Photo Gallery, full facility gallery */}
+      <PhotoGallery photos={gallery} title="See the Space" eyebrow="Our Facility" aspect="aspect-[3/2]" />
 
       {/* ── SECTION 4: Programs — Tabbed Panel ────────────── */}
       <motion.div
