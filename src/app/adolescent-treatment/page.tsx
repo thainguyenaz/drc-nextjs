@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import Image from "next/image";
 import Navigation from "@/components/Navigation";
 import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
@@ -87,16 +86,28 @@ const adolescentSchema = {
 };
 
 const gallery = [
-  { src: "/images/locations/phoenix/phoenix-group-room-2.jpg",   alt: "Group therapy room at the Desert Recovery Centers Phoenix outpatient location" },
-  { src: "/images/locations/phoenix/phoenix-group-room-3.jpg",   alt: "Group room used for adolescent IOP sessions at the Phoenix outpatient location" },
-  { src: "/images/locations/phoenix/phoenix-classroom-1.jpg",    alt: "Classroom space at the Desert Recovery Centers Phoenix outpatient location" },
-  { src: "/images/locations/phoenix/phoenix-classroom-2.jpg",    alt: "Skills-based learning space at the Phoenix outpatient location" },
-  { src: "/images/locations/phoenix/phoenix-therapy-office-2.jpg", alt: "Individual therapy office at the Phoenix outpatient location" },
-  { src: "/images/locations/phoenix/phoenix-therapy-office-3.jpg", alt: "Therapy office at the Desert Recovery Centers Phoenix outpatient location" },
-  { src: "/images/locations/phoenix/phoenix-lobby-2.jpg",        alt: "Lobby at the Desert Recovery Centers Phoenix outpatient location" },
-  { src: "/images/locations/phoenix/phoenix-reception-1.jpg",    alt: "Reception area at the Phoenix outpatient location" },
-  { src: "/images/locations/phoenix/phoenix-game-room-2.jpg",    alt: "Recreation area at the Phoenix outpatient location" },
-  { src: "/images/locations/phoenix/phoenix-hallway.jpg",        alt: "Interior hallway at the Desert Recovery Centers Phoenix outpatient location" },
+  { src: "/images/locations/php-iop/php-iop-reception-1.jpg", alt: "Reception and welcome area at the Desert Recovery Centers Phoenix adolescent IOP location" },
+  { src: "/images/locations/php-iop/php-iop-group-therapy-1.jpg", alt: "Group therapy room used for adolescent IOP sessions at Desert Recovery Centers Phoenix" },
+  { src: "/images/locations/php-iop/php-iop-waiting-1.jpg", alt: "Waiting lounge for adolescent clients and families at the Phoenix IOP location" },
+  { src: "/images/locations/php-iop/php-iop-game-room-hero.jpg", alt: "Recreation room with games for adolescents at the Desert Recovery Centers Phoenix location" },
+  { src: "/images/locations/php-iop/php-iop-therapy-office-1.jpg", alt: "Private therapy office for individual adolescent counseling at Phoenix" },
+  { src: "/images/locations/php-iop/php-iop-kitchen-1.jpg", alt: "Kitchen and break area at the Desert Recovery Centers Phoenix adolescent IOP location" },
+  { src: "/images/locations/php-iop/php-iop-classroom-3.jpg", alt: "Group education room used for adolescent programming at Phoenix" },
+  { src: "/images/locations/php-iop/php-iop-classroom-1.jpg", alt: "Classroom for adolescent psychoeducation sessions at Desert Recovery Centers Phoenix" },
+  { src: "/images/locations/php-iop/php-iop-hallway-1.jpg", alt: "Interior hallway at the Desert Recovery Centers Phoenix adolescent IOP location" },
+  { src: "/images/locations/php-iop/php-iop-reception-2.jpg", alt: "Lobby and seating area at the Phoenix adolescent IOP location" },
+  { src: "/images/locations/php-iop/php-iop-game-room-1.jpg", alt: "Recreation area for adolescent clients at Desert Recovery Centers Phoenix" },
+  { src: "/images/locations/php-iop/php-iop-medical-room-1.jpg", alt: "Medical room for on-site nursing at the Desert Recovery Centers Phoenix location" },
+  { src: "/images/locations/php-iop/php-iop-therapy-office-2.jpg", alt: "Counseling office for adolescent therapy sessions at Phoenix" },
+  { src: "/images/locations/php-iop/php-iop-kitchen-2.jpg", alt: "Kitchen and dining area at the Desert Recovery Centers Phoenix adolescent IOP location" },
+  { src: "/images/locations/php-iop/php-iop-classroom-2.jpg", alt: "Group learning space for adolescent programming at Phoenix" },
+  { src: "/images/locations/php-iop/php-iop-hallway-2.jpg", alt: "Corridor at the Desert Recovery Centers Phoenix adolescent IOP location" },
+  { src: "/images/locations/php-iop/php-iop-game-room-2.jpg", alt: "Game room for adolescent clients at Desert Recovery Centers Phoenix" },
+  { src: "/images/locations/php-iop/php-iop-reception-3.jpg", alt: "Entrance and front desk at the Phoenix adolescent IOP location" },
+  { src: "/images/locations/php-iop/php-iop-hallway-3.jpg", alt: "Hallway with artwork at the Desert Recovery Centers Phoenix location" },
+  { src: "/images/locations/php-iop/php-iop-game-room-3.jpg", alt: "Recreation and lounge area for adolescents at Phoenix" },
+  { src: "/images/locations/php-iop/php-iop-lobby-detail-1.jpg", alt: "Desert Recovery Centers signage in the lobby at the Phoenix adolescent IOP location" },
+  { src: "/images/locations/php-iop/php-iop-waiting-2.jpg", alt: "Lounge and waiting area at the Phoenix adolescent IOP location" },
 ];
 
 function BodySection({
@@ -156,17 +167,8 @@ export default function AdolescentTreatmentPage() {
         </div>
       </section>
 
-      {/* Full-width facility photo band */}
-      <section className="relative w-full h-[42vh] md:h-[55vh] overflow-hidden">
-        <Image
-          src="/images/locations/phoenix/phoenix-game-room-1.jpg"
-          alt="Recreation room at the Desert Recovery Centers Phoenix outpatient location"
-          fill
-          sizes="100vw"
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-forest/20" />
-      </section>
+      {/* Photo Gallery, facility photos */}
+      <PhotoGallery photos={gallery} title="See the Space" eyebrow="Our Facility" aspect="aspect-[3/2]" />
 
       {/* Middle sections */}
       <section className="py-16 md:py-24 bg-white" data-speakable="true">
@@ -217,8 +219,6 @@ export default function AdolescentTreatmentPage() {
           </div>
         </div>
       </section>
-
-      <PhotoGallery photos={gallery} title="See the Space" eyebrow="Our Facility" />
 
       {/* Next steps */}
       <section className="py-20 md:py-28 bg-forest relative overflow-hidden">
