@@ -6,36 +6,42 @@ import Link from "next/link";
 const phases = [
   {
     step: "01",
+    title: "Coordinated Medical Detox",
+    desc: "Medically supervised withdrawal coordinated through trusted partner facilities with 24/7 nursing and physician oversight, before you transition into residential care at DRC.",
+    href: "/levels-of-care/detox",
+  },
+  {
+    step: "02",
     title: "30-Day Residential Treatment (RTC)",
     desc: "24/7 immersive care in a luxury 10-bed facility with doctoral-level clinicians and Bridge Work individual therapy.",
     href: "/levels-of-care/residential-treatment",
   },
   {
-    step: "02",
+    step: "03",
     title: "Partial Hospitalization Program (PHP)",
     desc: "Up to 60 days of structured day programming, 5-6 hours daily, 5 days per week, while returning home each evening.",
     href: "/locations/phoenix-php-iop",
   },
   {
-    step: "03",
+    step: "04",
     title: "Intensive Outpatient Program (IOP)",
     desc: "4 to 8 weeks stepping down from 5 to 3 days per week. Bridge Work continues with group therapy, relapse prevention, and peer support.",
     href: "/locations/phoenix-php-iop",
   },
   {
-    step: "04",
+    step: "05",
     title: "Outpatient Program (OP)",
     desc: "Ongoing 1-3 day per week sessions for long-term stabilization, psychiatric care, and full community reintegration.",
     href: "/locations/phoenix-php-iop",
   },
   {
-    step: "05",
+    step: "06",
     title: "Alumni Program",
     desc: "Lifetime access to our recovery community, peer events, check-ins, and ongoing support from the team that knows your journey.",
     href: "/about",
   },
   {
-    step: "06",
+    step: "07",
     title: "Family Workshop",
     desc: "Education and healing for the whole family, communication skills, boundary setting, and understanding the recovery process.",
     href: "/contact",

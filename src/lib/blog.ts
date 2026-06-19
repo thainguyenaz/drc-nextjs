@@ -413,7 +413,7 @@ ${DISCLAIMER}`
   {
     slug: "can-quitting-weed-cause-anxiety",
     title: "Can Quitting Weed Cause Anxiety?",
-    excerpt: "Yes, quitting marijuana can cause anxiety and other withdrawal symptoms. Learn why this happens, how long it lasts, and when professional support is needed.",
+    excerpt: "Quitting weed can cause anxiety, irritability, insomnia, and other withdrawal symptoms. See the full symptom list, withdrawal timeline, and when to get help.",
     category: "addiction",
     author: "Desert Recovery Centers Clinical Team",
     authorTitle: "Licensed Clinical Psychologist, Clinical Director",
@@ -424,7 +424,7 @@ ${DISCLAIMER}`
     featuredImageAlt: "Desert Recovery Centers Glendale facility for cannabis addiction treatment",
     tags: ["marijuana", "cannabis withdrawal", "anxiety", "THC", "weed addiction", "detox"],
     metaTitle: "Can Quitting Marijuana Cause Anxiety? Cannabis Withdrawal Explained | DRC",
-    metaDescription: "Yes, quitting marijuana can cause anxiety and other withdrawal symptoms. Learn why this happens, how long it lasts, and when professional support is needed.",
+    metaDescription: "Quitting weed can cause anxiety, irritability, insomnia, and other withdrawal symptoms. See the full symptom list, withdrawal timeline, and when to get help.",
     content: `<h2>Cannabis Withdrawal Is Real</h2>
 <p>For years, marijuana was widely considered non addictive. Cultural narratives portrayed it as harmless, and many people believed that quitting would involve no withdrawal symptoms at all. The clinical reality is quite different. Cannabis withdrawal syndrome is a recognized medical condition, and one of its most common and distressing symptoms is anxiety. If you have recently quit marijuana and are experiencing anxiety, irritability, insomnia, or other uncomfortable symptoms, what you are going through is real, well documented, and treatable.</p>
 
@@ -437,7 +437,22 @@ ${DISCLAIMER}`
 <p>The timeline and severity of withdrawal depend on several factors: the potency and frequency of use, the duration of use, individual brain chemistry, and whether the person has an underlying anxiety or mood disorder. People who have been using high potency concentrates or edibles daily for months or years are likely to experience more severe and prolonged withdrawal than occasional users.</p>
 
 <h2>Psychological Symptoms Beyond Anxiety</h2>
-<p>While anxiety is one of the most common withdrawal symptoms, it is rarely the only one. Other psychological symptoms of cannabis withdrawal include irritability and anger, depressed mood, difficulty concentrating, vivid and disturbing dreams, and restlessness. Physical symptoms can include decreased appetite, sleep disturbance, sweating, headaches, and stomach discomfort.</p>
+<p>While anxiety is one of the most common withdrawal symptoms, it is rarely the only one. Psychological symptoms of cannabis withdrawal include:</p>
+<ul>
+<li>Irritability and anger</li>
+<li>Depressed mood</li>
+<li>Difficulty concentrating</li>
+<li>Vivid and disturbing dreams</li>
+<li>Restlessness</li>
+</ul>
+<p>Physical symptoms can include:</p>
+<ul>
+<li>Decreased appetite</li>
+<li>Sleep disturbance</li>
+<li>Sweating</li>
+<li>Headaches</li>
+<li>Stomach discomfort</li>
+</ul>
 <p>The combination of psychological and physical symptoms can be overwhelming, particularly for people who were using marijuana specifically to manage anxiety or other emotional distress. The cruel irony of cannabis withdrawal is that the very symptom the person was self medicating often returns with greater intensity during the withdrawal period. This can create a powerful urge to resume use, which is why so many quit attempts fail without professional support.</p>
 
 <h2>Anxiety Spikes and Panic During Withdrawal</h2>
@@ -450,14 +465,14 @@ ${DISCLAIMER}`
 
 <h2>When to Seek Professional Treatment</h2>
 <p>Not everyone who quits marijuana needs professional treatment, but several indicators suggest that clinical support would be beneficial. If you have tried to quit multiple times and been unable to sustain sobriety, if withdrawal symptoms are severe enough to interfere with work, relationships, or daily functioning, or if you have an underlying anxiety or mood disorder that worsens when you stop using, professional treatment can make a significant difference.</p>
-<p><a href="/addiction/marijuana-addiction-treatment">Cannabis addiction treatment</a> at Desert Recovery Centers addresses both the substance use and any co occurring mental health conditions. Our <a href="/locations/phoenix-php-iop">Phoenix PHP and IOP programs</a> provide structured outpatient support that allows clients to receive evidence based therapy, psychiatric care, and peer support while maintaining their daily responsibilities. Recovery from marijuana dependence is absolutely possible, and you do not have to navigate it alone.</p>
+<p><a href="/addiction/marijuana-addiction-treatment">Cannabis addiction treatment</a> at Desert Recovery Centers addresses both the substance use and any co occurring mental health conditions. Our <a href="/locations/phoenix-php-iop">Phoenix PHP and IOP programs</a> provide structured outpatient support that allows clients to receive evidence based therapy, psychiatric care, and peer support while maintaining their daily responsibilities. Recovery from marijuana dependence is absolutely possible, and you do not have to face it alone.</p>
 
 ${DISCLAIMER}`
   },
   {
     slug: "what-is-sex-addiction",
     title: "What Is Sex Addiction? Understanding Compulsive Sexual Behavior",
-    excerpt: "Sex addiction, or compulsive sexual behavior disorder, is a real and treatable condition. Learn the signs, underlying causes, and how behavioral addiction treatment works.",
+    excerpt: "Sex addiction is compulsive sexual behavior a person cannot control despite the harm it causes. Learn the definition, signs, causes, and treatment.",
     category: "addiction",
     author: "Desert Recovery Centers Clinical Team",
     authorTitle: "Licensed Clinical Psychologist, Clinical Director",
@@ -467,10 +482,10 @@ ${DISCLAIMER}`
     featuredImage: "/images/glendale/Glendale-Front.jpg",
     featuredImageAlt: "Desert Recovery Centers Glendale treatment center for behavioral addiction",
     tags: ["sex addiction", "compulsive behavior", "hypersexuality", "behavioral addiction", "treatment"],
-    metaTitle: "What Is Sex Addiction? Signs, Causes, and Treatment | Desert Recovery Centers",
-    metaDescription: "Sex addiction, or compulsive sexual behavior disorder, is a real and treatable condition. Learn the signs, underlying causes, and how behavioral addiction treatment works.",
+    metaTitle: "What Is Sex Addiction? Definition, Signs & Treatment | DRC",
+    metaDescription: "Sex addiction is compulsive sexual behavior a person cannot control despite the harm it causes. Learn the definition, signs, causes, and treatment.",
     content: `<h2>Understanding Sex Addiction as a Clinical Condition</h2>
-<p>Sex addiction, more accurately referred to as compulsive sexual behavior disorder (CSBD), is a condition in which a person engages in repetitive sexual behaviors despite negative consequences to their health, relationships, career, and emotional well being. It is not about having a high sex drive or enjoying sexual activity. It is about a loss of control, an inability to stop despite wanting to, and the escalation of behaviors that cause increasing harm over time.</p>
+<p>A sex addict is a person who feels unable to stop compulsive sexual thoughts or behaviors even when those behaviors cause clear harm to their health, relationships, career, or emotional well being. Sex addiction, known clinically as compulsive sexual behavior disorder (CSBD), is not about having a high sex drive or enjoying sexual activity. It is about a loss of control, an inability to stop despite wanting to, and the escalation of behaviors that cause increasing harm over time.</p>
 <p>The topic of sex addiction is surrounded by misunderstanding, stigma, and debate. Some question whether it is a "real" addiction. Others confuse it with moral failing or simple irresponsibility. But for the millions of people who struggle with compulsive sexual behavior, the experience is devastatingly real: broken relationships, professional consequences, financial loss, and profound shame that makes seeking help feel almost impossible.</p>
 
 <h2>The Clinical Definition and DSM Debate</h2>

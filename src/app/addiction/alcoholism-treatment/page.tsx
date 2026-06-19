@@ -49,7 +49,7 @@ export default function AlcoholAddictionPage() {
       <PageHero
         eyebrow="Addiction Treatment"
         title="Alcohol Addiction Treatment"
-        description="Medically supervised detox and comprehensive care for alcohol use disorder, because you deserve more than white-knuckling your way through another day."
+        description="Coordinated medical detox and comprehensive care for alcohol use disorder, because you deserve more than white-knuckling your way through another day."
         bgImage="/images/general/DRC-ADDICTION.jpg"
       />
       <section className="py-16 md:py-24 bg-white">

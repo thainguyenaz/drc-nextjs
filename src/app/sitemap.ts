@@ -56,7 +56,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // Levels of care
     { path: "/levels-of-care", priority: 0.8, changeFrequency: "weekly" },
-    { path: "/levels-of-care/detox", priority: 0.7, changeFrequency: "weekly" },
+    { path: "/levels-of-care/detox", priority: 0.8, changeFrequency: "weekly" },
     { path: "/levels-of-care/residential-treatment", priority: 0.7, changeFrequency: "weekly" },
     { path: "/levels-of-care/php", priority: 0.7, changeFrequency: "weekly" },
     { path: "/levels-of-care/iop", priority: 0.7, changeFrequency: "weekly" },

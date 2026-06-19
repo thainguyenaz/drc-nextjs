@@ -204,7 +204,9 @@ export default function GlendaleLocationPage() {
               Addiction and Mental Health Treatment at DRC Glendale
             </h2>
             <p className="text-gray-600 leading-relaxed mb-8">
-              Our flagship Glendale team treats the full spectrum of addiction and mental health conditions with a dual diagnosis specialization, ensuring all co-occurring conditions are addressed simultaneously.
+              Our flagship Glendale team treats the full spectrum of addiction and mental health conditions with a dual diagnosis specialization, ensuring all co-occurring conditions are addressed simultaneously. For clients who need it, care begins with{" "}
+              <Link href="/levels-of-care/detox" className="text-gold font-semibold hover:underline">coordinated medical detox</Link>{" "}
+              through our trusted partner facilities before residential treatment at our Glendale center.
             </p>
             <div className="grid md:grid-cols-2 gap-4 mb-6">
               {[

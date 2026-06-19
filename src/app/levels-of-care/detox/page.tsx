@@ -117,7 +117,7 @@ export default function DetoxPage() {
                 That&apos;s why Desert Recovery Centers coordinates every client&apos;s detox through trusted medical detox partners — facilities equipped with 24/7 nursing, physician oversight, and FDA-approved medications to manage withdrawal safely.
               </p>
               <p className="text-gray-600 leading-relaxed text-lg">
-                Once detox is complete, you transition into residential treatment with our clinical team, where the deeper therapeutic work begins.
+                Once detox is complete, you transition into residential treatment at our Glendale or Scottsdale facility, or outpatient care at our Phoenix center, where the deeper therapeutic work begins.
               </p>
             </AnimatedSection>
           </div>
