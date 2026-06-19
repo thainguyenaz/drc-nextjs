@@ -47,7 +47,7 @@ export default function TeamMemberPage({
     jobTitle: member.jobTitle,
     description: member.description,
     image: schemaImage,
-    url: member.url,
+    url: `${SITE_URL}/team/${member.slug}`,
     credentials: member.credentials,
     linkedIn: member.linkedIn,
   });
@@ -55,7 +55,7 @@ export default function TeamMemberPage({
   const breadcrumbItems = [
     { name: "Home", url: SITE_URL },
     { name: "Our Team", url: `${SITE_URL}/our-team` },
-    { name: member.name, url: member.url },
+    { name: member.name, url: `${SITE_URL}/team/${member.slug}` },
   ];
 
   const breadcrumbSchema = getBreadcrumbSchema(breadcrumbItems);
