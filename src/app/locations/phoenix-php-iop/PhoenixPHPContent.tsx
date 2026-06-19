@@ -439,7 +439,9 @@ export default function PhoenixPHPContent() {
                 <p className="text-forest text-sm leading-relaxed">
                   <strong>Looking for residential treatment?</strong> Our Phoenix location specializes in PHP, IOP, OP, and TMS therapy. For full residential care, see our{" "}
                   <Link href="/locations/glendale" className="text-gold font-semibold hover:underline">Glendale</Link> and{" "}
-                  <Link href="/locations/scottsdale" className="text-gold font-semibold hover:underline">Scottsdale</Link> campuses.
+                  <Link href="/locations/scottsdale" className="text-gold font-semibold hover:underline">Scottsdale</Link> campuses. If you need{" "}
+                  <Link href="/levels-of-care/detox" className="text-gold font-semibold hover:underline">medical detox</Link>{" "}
+                  before starting treatment, our team coordinates it through trusted partner facilities first.
                 </p>
               </motion.div>
             </div>
