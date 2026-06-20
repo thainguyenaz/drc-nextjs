@@ -91,7 +91,7 @@ export default function RootLayout({
         <Script
           id="hs-script-loader"
           src="//js-na2.hs-scripts.com/48050688.js"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           async
           defer
         />
