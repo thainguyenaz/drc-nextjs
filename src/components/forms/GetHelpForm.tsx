@@ -162,7 +162,7 @@ export default function GetHelpForm({ variant = "lp" }: GetHelpFormProps) {
         <Script
           id="cf-turnstile-script"
           src="https://challenges.cloudflare.com/turnstile/v0/api.js"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           async
           defer
         />
