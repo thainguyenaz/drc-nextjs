@@ -66,9 +66,9 @@ export default function RootLayout({
         <SchemaScript schema={[getMedicalOrganizationSchema()]} />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-0MSPF0DPVK"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="ga4-init" strategy="afterInteractive">
+        <Script id="ga4-init" strategy="lazyOnload">
           {`window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
@@ -78,9 +78,9 @@ export default function RootLayout({
         </Script>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-16468277860"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="gads-init" strategy="afterInteractive">
+        <Script id="gads-init" strategy="lazyOnload">
           {`gtag('config', 'AW-16468277860');`}
         </Script>
         <Script
