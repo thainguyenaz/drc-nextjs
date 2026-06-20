@@ -12,6 +12,7 @@ export default function Hero() {
             fill
             priority
             sizes="100vw"
+            quality={50}
             className="object-cover opacity-60"
           />
         </div>
