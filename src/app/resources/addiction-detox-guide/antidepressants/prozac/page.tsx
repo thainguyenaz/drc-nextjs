@@ -107,7 +107,7 @@ export default function ProzacTaperPage() {
               There is no fixed timeline. How long it takes depends on your dose, how long you have taken fluoxetine, and how you respond at each step. Because Prozac leaves the body slowly, the medication keeps working for days after a reduction, which can make the taper smoother but also delays when withdrawal symptoms appear.
             </p>
             <p className="text-gray-600 leading-relaxed mb-4">
-              A taper commonly spans several weeks to a few months. Many prescribers make smaller cuts near the lower doses, where discontinuation symptoms are most likely to surface, and wait longer between steps to account for fluoxetine's slow clearance.
+              A taper commonly spans several weeks to a few months. Many prescribers make smaller cuts near the lower doses, where discontinuation symptoms are most likely to surface, and wait longer between steps to account for how slowly fluoxetine clears.
             </p>
             <p className="text-gray-600 leading-relaxed">
               The goal is not speed, it is stability. A taper that feels slow is almost always the right pace.
@@ -127,7 +127,7 @@ export default function ProzacTaperPage() {
               Prozac Withdrawal Symptoms
             </h2>
             <p className="text-gray-600 leading-relaxed mb-6">
-              Fluoxetine's long half-life usually makes withdrawal, clinically called antidepressant discontinuation syndrome, milder than with short-acting drugs. When symptoms do appear, they often show up later and fade more gradually.
+              Because fluoxetine has a long half-life, withdrawal, clinically called antidepressant discontinuation syndrome, is usually milder than with short-acting drugs. When symptoms do appear, they often show up later and fade more gradually.
             </p>
             <div className="space-y-6">
               {[
