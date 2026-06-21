@@ -127,7 +127,7 @@ export default function ZoloftTaperPage() {
               Zoloft Withdrawal Symptoms
             </h2>
             <p className="text-gray-600 leading-relaxed mb-6">
-              Sertraline's short half-life means withdrawal, clinically called antidepressant discontinuation syndrome, can be more noticeable than with longer-acting medications. Slow tapering is the most effective way to keep these symptoms mild.
+              Because sertraline has a short half-life, withdrawal, clinically called antidepressant discontinuation syndrome, can be more noticeable than with longer-acting medications. Slow tapering is the most effective way to keep these symptoms mild.
             </p>
             <div className="space-y-6">
               {[
