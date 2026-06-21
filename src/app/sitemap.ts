@@ -104,6 +104,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/resources/what-to-bring", priority: 0.6, changeFrequency: "weekly" },
     { path: "/resources/detox-guide", priority: 0.6, changeFrequency: "weekly" },
     { path: "/resources/addiction-detox-guide/antidepressants", priority: 0.6, changeFrequency: "weekly" },
+    { path: "/resources/addiction-detox-guide/antidepressants/zoloft", priority: 0.6, changeFrequency: "weekly" },
+    { path: "/resources/addiction-detox-guide/antidepressants/prozac", priority: 0.6, changeFrequency: "weekly" },
     { path: "/resources/cost-of-rehab", priority: 0.6, changeFrequency: "weekly" },
     { path: "/resources/luxury-vs-traditional-rehab", priority: 0.6, changeFrequency: "weekly" },
     { path: "/resources/intervention-guide", priority: 0.6, changeFrequency: "weekly" },

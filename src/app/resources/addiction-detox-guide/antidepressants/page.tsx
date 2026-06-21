@@ -394,6 +394,8 @@ export default function AntidepressantTaperPage() {
               <h3 className="font-display text-lg text-forest font-semibold mb-4">Related Resources</h3>
               <div className="flex flex-wrap gap-3">
                 {[
+                  { label: "How to Wean Off Zoloft", href: "/resources/addiction-detox-guide/antidepressants/zoloft" },
+                  { label: "How to Taper Off Prozac", href: "/resources/addiction-detox-guide/antidepressants/prozac" },
                   { label: "Medical Detox Guide", href: "/resources/detox-guide" },
                   { label: "Depression Treatment", href: "/mental-health/depression-treatment" },
                   { label: "TMS Therapy", href: "/treatments/tms-therapy" },
