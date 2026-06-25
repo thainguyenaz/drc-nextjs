@@ -422,7 +422,7 @@ export default function LevelsOfCarePage() {
         ]}
       />
       <CTASection />
-      <Footer />
+      <Footer showPreferredSource={false} />
     </>
   );
 }

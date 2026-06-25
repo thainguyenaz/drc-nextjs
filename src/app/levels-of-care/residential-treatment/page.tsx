@@ -523,7 +523,7 @@ export default function ResidentialTreatmentPage() {
       />
       <RelatedPages currentPath="/levels-of-care/residential-treatment" />
       <CTASection />
-      <Footer />
+      <Footer showPreferredSource={false} />
     </>
   );
 }

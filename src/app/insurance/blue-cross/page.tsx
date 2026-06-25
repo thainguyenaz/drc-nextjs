@@ -275,7 +275,7 @@ export default function BlueCrossInsurancePage() {
 
       <ConditionFAQ items={faqs} />
       <CTASection />
-      <Footer />
+      <Footer showPreferredSource={false} />
     </>
   );
 }

@@ -271,7 +271,7 @@ export default function UnitedInsurancePage() {
 
       <ConditionFAQ items={faqs} />
       <CTASection />
-      <Footer />
+      <Footer showPreferredSource={false} />
     </>
   );
 }

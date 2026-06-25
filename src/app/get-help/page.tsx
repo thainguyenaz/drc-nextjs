@@ -264,7 +264,7 @@ export default function GetHelpPage() {
       </section>
 
       <CTASection />
-      <Footer />
+      <Footer showPreferredSource={false} />
     </>
   );
 }
