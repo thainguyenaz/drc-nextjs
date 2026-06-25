@@ -140,7 +140,7 @@ export default function Home() {
       </section>
       <AEOBlock entries={faqData["homepage"]} />
       <CTASection />
-      <Footer />
+      <Footer showPreferredSource={false} />
     </>
   );
 }

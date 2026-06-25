@@ -44,7 +44,7 @@ export default function ContactPage() {
       <GoogleReviews />
       <ContactCTA />
       <CTASection />
-      <Footer />
+      <Footer showPreferredSource={false} />
     </>
   );
 }

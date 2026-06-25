@@ -279,7 +279,7 @@ export default function HumanaInsurancePage() {
 
       <ConditionFAQ items={faqs} />
       <CTASection />
-      <Footer />
+      <Footer showPreferredSource={false} />
     </>
   );
 }
