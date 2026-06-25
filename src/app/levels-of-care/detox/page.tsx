@@ -471,7 +471,7 @@ export default function DetoxPage() {
       />
       <RelatedPages currentPath="/levels-of-care/detox" />
       <CTASection />
-      <Footer />
+      <Footer showPreferredSource={false} />
     </>
   );
 }

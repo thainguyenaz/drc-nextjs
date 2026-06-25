@@ -463,7 +463,7 @@ export default function PHPPage() {
       />
       <RelatedPages currentPath="/levels-of-care/php" />
       <CTASection />
-      <Footer />
+      <Footer showPreferredSource={false} />
     </>
   );
 }

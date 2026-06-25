@@ -469,7 +469,7 @@ export default function IOPPage() {
       />
       <RelatedPages currentPath="/levels-of-care/iop" />
       <CTASection />
-      <Footer />
+      <Footer showPreferredSource={false} />
     </>
   );
 }

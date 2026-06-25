@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { siteData } from "@/lib/site-data";
+import PreferredSourceButton from "./PreferredSourceButton";
 
 const footerLinks = {
   "Mental Health": [
@@ -47,7 +48,11 @@ const footerLinks = {
   ],
 };
 
-export default function Footer() {
+export default function Footer({
+  showPreferredSource = true,
+}: {
+  showPreferredSource?: boolean;
+} = {}) {
   return (
     <footer className="bg-forest text-white">
       <div className="max-w-container mx-auto px-6 py-16">
@@ -127,6 +132,13 @@ export default function Footer() {
             />
           </a>
         </div>
+
+        {/* Google preferred source (low-emphasis; suppressed on conversion-CTA pages) */}
+        {showPreferredSource && (
+          <div className="flex justify-center mb-8">
+            <PreferredSourceButton variant="footer" />
+          </div>
+        )}
 
         {/* Bottom */}
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">

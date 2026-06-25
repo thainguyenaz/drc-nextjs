@@ -10,6 +10,7 @@ import SchemaScript from "@/components/SchemaScript";
 import { DRC_REVIEWERS } from "@/lib/seo";
 import { getPostBySlug, getAllSlugs, getPostsByCategory } from "@/lib/blog";
 import BlogPostBody from "./BlogPostBody";
+import PreferredSourceButton from "@/components/PreferredSourceButton";
 
 const SITE_URL = "https://desertrecoverycenters.com";
 
@@ -146,7 +147,13 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         <div className="max-w-container mx-auto px-6">
           <div className="grid lg:grid-cols-[1fr_320px] gap-12">
             {/* Main content */}
-            <BlogPostBody content={post.content} />
+            <div className="min-w-0">
+              <BlogPostBody content={post.content} />
+              {/* End of article body: low-emphasis Google preferred-source opt-in */}
+              <div className="mt-10">
+                <PreferredSourceButton variant="light" />
+              </div>
+            </div>
 
             {/* Sidebar */}
             <aside className="hidden lg:block">

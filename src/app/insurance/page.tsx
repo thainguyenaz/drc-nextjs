@@ -60,7 +60,7 @@ export default function InsurancePage() {
       />
       <InsuranceContent />
       <CTASection />
-      <Footer />
+      <Footer showPreferredSource={false} />
     </>
   );
 }
