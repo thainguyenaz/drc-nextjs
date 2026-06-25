@@ -259,7 +259,7 @@ export default function AetnaInsurancePage() {
 
       <ConditionFAQ items={faqs} />
       <CTASection />
-      <Footer />
+      <Footer showPreferredSource={false} />
     </>
   );
 }
