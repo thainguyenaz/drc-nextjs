@@ -26,7 +26,8 @@ export const DRC_REVIEWERS: Record<Exclude<Reviewer, "none">, Record<string, unk
   },
   nguyen: {
     "@type": "Person",
-    "@id": `${SITE_URL}/our-team#dr-an-nguyen`,
+    "@id": `${SITE_URL}/team/dr-an-nguyen`,
+    url: `${SITE_URL}/team/dr-an-nguyen`,
     name: "Dr. An Nguyen",
     jobTitle: "Licensed Clinical Psychologist, Clinical Director",
     hasCredential: {
