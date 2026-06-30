@@ -111,6 +111,7 @@ export function getPersonSchema(person: {
   return {
     "@context": "https://schema.org",
     "@type": "Person",
+    "@id": person.url,
     name: person.name,
     jobTitle: person.jobTitle,
     description: person.description,
