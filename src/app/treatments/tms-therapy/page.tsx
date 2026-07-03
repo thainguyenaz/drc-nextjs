@@ -117,7 +117,7 @@ const faqs = [
   },
   {
     q: "Is NeuroStar TMS therapy available now at Desert Recovery Centers?",
-    a: "Yes. NeuroStar TMS therapy is now available at our Phoenix outpatient center at 4160 N. 108th Ave, Phoenix, AZ 85037. Call (602) 905-8070 to schedule your initial consultation. Most patients begin treatment within one to two weeks of their first call.",
+    a: "Yes. NeuroStar TMS therapy is now available at our Phoenix outpatient center at 4160 N. 108th Ave, Phoenix, AZ 85037. Call (623) 305-0496 to schedule your initial consultation. Most patients begin treatment within one to two weeks of their first call.",
   },
 ] as const;
 
@@ -343,7 +343,7 @@ export default function TMSTherapyPage() {
           {/* Hero CTAs */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <motion.a
-              href="tel:+16029058070"
+              href="tel:+16233050496"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.65 }}
@@ -351,7 +351,7 @@ export default function TMSTherapyPage() {
               whileTap={{ scale: 0.97 }}
               className="bg-gold hover:bg-gold-dark text-white font-semibold text-base px-8 py-4 rounded-xl transition-colors shadow-lg shadow-gold/25 w-full sm:w-auto text-center cursor-pointer"
             >
-              Call (602) 905-8070
+              Call (623) 305-0496
             </motion.a>
             <motion.a
               href="/insurance"
@@ -831,10 +831,10 @@ export default function TMSTherapyPage() {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
-                href="tel:+16029058070"
+                href="tel:+16233050496"
                 className="bg-gold hover:bg-gold-dark text-white font-semibold text-base px-8 py-4 rounded-xl transition-colors shadow-lg shadow-gold/25 w-full sm:w-auto text-center"
               >
-                Call (602) 905-8070
+                Call (623) 305-0496
               </a>
               <a
                 href="/insurance"

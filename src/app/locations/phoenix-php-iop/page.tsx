@@ -112,7 +112,7 @@ export default function PhoenixPhpIopPage() {
         "description": "The admissions process at Desert Recovery Centers Phoenix PHP and IOP program.",
         "totalTime": "PT48H",
         "step": [
-          { "@type": "HowToStep", "position": 1, "name": "Call Admissions", "text": "Call (602) 905-8070 any time, day or night. A live admissions specialist answers from 6 AM to 10 PM, and our line is always open after hours." },
+          { "@type": "HowToStep", "position": 1, "name": "Call Admissions", "text": "Call (623) 305-0496 any time, day or night. A live admissions specialist answers from 6 AM to 10 PM, and our line is always open after hours." },
           { "@type": "HowToStep", "position": 2, "name": "Clinical Assessment", "text": "Complete a brief 15 to 20 minute clinical assessment by phone to determine the right level of care." },
           { "@type": "HowToStep", "position": 3, "name": "Insurance Verification", "text": "The admissions team contacts your insurance provider directly and explains your coverage and costs before you commit." },
           { "@type": "HowToStep", "position": 4, "name": "Begin Treatment", "text": "Most clients begin treatment within 48 hours of their first call." },
@@ -138,7 +138,7 @@ export default function PhoenixPhpIopPage() {
           {
             question: "Is there a Desert Recovery Centers PHP / IOP center in Phoenix?",
             answer:
-              "Yes. Desert Recovery Centers operates a dedicated outpatient treatment center at 4160 N. 108th Ave, Phoenix, AZ 85037. This location offers Partial Hospitalization (PHP), Intensive Outpatient (IOP), Outpatient (OP), and NeuroStar TMS therapy. It is Joint Commission accredited. Desert Recovery Centers accepts out-of-network coverage from most major commercial insurance plans, is in-network with TriCare and TriWest, and offers cash-pay options. Call (602) 905-8070 for admissions.",
+              "Yes. Desert Recovery Centers operates a dedicated outpatient treatment center at 4160 N. 108th Ave, Phoenix, AZ 85037. This location offers Partial Hospitalization (PHP), Intensive Outpatient (IOP), Outpatient (OP), and NeuroStar TMS therapy. It is Joint Commission accredited. Desert Recovery Centers accepts out-of-network coverage from most major commercial insurance plans, is in-network with TriCare and TriWest, and offers cash-pay options. Call (623) 305-0496 for admissions.",
           },
           {
             question: "What outpatient mental health treatment is available in Phoenix, Arizona?",
@@ -148,7 +148,7 @@ export default function PhoenixPhpIopPage() {
           {
             question: "Does Desert Recovery Centers Phoenix accept insurance?",
             answer:
-              "Desert Recovery Centers accepts out-of-network coverage from most major commercial insurance plans (Aetna, Blue Cross Blue Shield, Cigna, UnitedHealthcare, Humana, Magellan, and others), is in-network with TriCare and TriWest, and offers cash-pay options. Benefits are verified at no cost before treatment begins. Call (602) 905-8070 for a free insurance check.",
+              "Desert Recovery Centers accepts out-of-network coverage from most major commercial insurance plans (Aetna, Blue Cross Blue Shield, Cigna, UnitedHealthcare, Humana, Magellan, and others), is in-network with TriCare and TriWest, and offers cash-pay options. Benefits are verified at no cost before treatment begins. Call (623) 305-0496 for a free insurance check.",
           },
         ]}
       />

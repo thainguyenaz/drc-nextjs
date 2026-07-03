@@ -22,8 +22,8 @@ const locations = [
     name: "Glendale",
     label: "GLENDALE, ARIZONA",
     address: "8105 W Frier Dr, Glendale, AZ 85303",
-    phone: "(623) 323-1012",
-    phoneTel: "+16233231012",
+    phone: "(623) 305-0496",
+    phoneTel: "+16233050496",
     sqft: "7,500 sq ft",
     description:
       "Our flagship residential treatment center. Evidence-based clinical care meets resort-level comfort.",
@@ -37,8 +37,8 @@ const locations = [
     name: "Scottsdale",
     label: "NORTH SCOTTSDALE, ARIZONA",
     address: "23222 N Church Rd, Scottsdale, AZ 85255",
-    phone: "(602) 755-4310",
-    phoneTel: "+16027554310",
+    phone: "(623) 305-0496",
+    phoneTel: "+16233050496",
     description:
       "Residential treatment nestled in north Scottsdale with stunning mountain views and serene desert landscape.",
     services: ["Residential"],
@@ -51,8 +51,8 @@ const locations = [
     name: "Phoenix PHP / IOP",
     label: "PHOENIX, ARIZONA",
     address: "4160 N. 108th Ave, Phoenix, AZ 85037",
-    phone: "(602) 905-8070",
-    phoneTel: "+16029058070",
+    phone: "(623) 305-0496",
+    phoneTel: "+16233050496",
     description:
       "Outpatient addiction and mental health treatment, PHP, IOP, OP, and NeuroStar TMS therapy. The only integrated TMS program in west Phoenix.",
     services: ["PHP", "IOP", "OP", "TMS Therapy"],

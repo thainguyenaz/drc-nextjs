@@ -71,7 +71,7 @@ export const blogPosts: BlogPost[] = [
 
 <p>If you are reading this and you have already stopped drinking and your symptoms are getting worse by the hour, that matters. The window between early withdrawal and a seizure can be short, and there is no reliable way to know from the inside which direction things are heading.</p>
 
-<p><strong>You do not have to figure this out alone.</strong> Desert Recovery Centers is here 24 hours a day, 7 days a week. Call <a href="tel:+16026357207">(602) 635-7207</a> to talk with our admissions team, or <a href="/insurance">verify your insurance</a> online in a few minutes.</p>
+<p><strong>You do not have to figure this out alone.</strong> Desert Recovery Centers is here 24 hours a day, 7 days a week. Call <a href="tel:+16233050496">(623) 305-0496</a> to talk with our admissions team, or <a href="/insurance">verify your insurance</a> online in a few minutes.</p>
 
 <h2>What Medical Detox Actually Looks Like</h2>
 
@@ -106,7 +106,7 @@ export const blogPosts: BlogPost[] = [
 
 <p>If you are scared right now, that fear is pointing you in the right direction. Use it.</p>
 
-<p><strong>You do not have to figure this out alone.</strong> Desert Recovery Centers is here 24 hours a day, 7 days a week. Call <a href="tel:+16026357207">(602) 635-7207</a> to talk with our admissions team, or <a href="/insurance">verify your insurance</a> online in a few minutes.</p>`,
+<p><strong>You do not have to figure this out alone.</strong> Desert Recovery Centers is here 24 hours a day, 7 days a week. Call <a href="tel:+16233050496">(623) 305-0496</a> to talk with our admissions team, or <a href="/insurance">verify your insurance</a> online in a few minutes.</p>`,
   },
   {
     slug: "weed-withdrawal-symptoms",
@@ -178,7 +178,7 @@ export const blogPosts: BlogPost[] = [
 
 <p>This matters because the window when withdrawal is hardest is also the window when the decision to keep going or to quit quitting gets made. Without enough structure and support, many people never get past week two. And for daily users with a long history, week two is still early.</p>
 
-<p><strong>You do not have to figure this out alone.</strong> Desert Recovery Centers is here 24 hours a day, 7 days a week. Call <a href="tel:+16026357207">(602) 635-7207</a> to talk with our admissions team, or <a href="/insurance">verify your insurance</a> online in a few minutes.</p>
+<p><strong>You do not have to figure this out alone.</strong> Desert Recovery Centers is here 24 hours a day, 7 days a week. Call <a href="tel:+16233050496">(623) 305-0496</a> to talk with our admissions team, or <a href="/insurance">verify your insurance</a> online in a few minutes.</p>
 
 <h2>Does Anything Help With Weed Withdrawal?</h2>
 
@@ -215,7 +215,7 @@ export const blogPosts: BlogPost[] = [
 
 <p>If you are reading this at 2am because you cannot sleep and you are questioning everything, that is the withdrawal talking. It is real. It is treatable. And you do not have to figure out the next six weeks tonight. You just have to decide whether to get some help.</p>
 
-<p><strong>You do not have to figure this out alone.</strong> Desert Recovery Centers is here 24 hours a day, 7 days a week. Call <a href="tel:+16026357207">(602) 635-7207</a> to talk with our admissions team, or <a href="/insurance">verify your insurance</a> online in a few minutes.</p>`,
+<p><strong>You do not have to figure this out alone.</strong> Desert Recovery Centers is here 24 hours a day, 7 days a week. Call <a href="tel:+16233050496">(623) 305-0496</a> to talk with our admissions team, or <a href="/insurance">verify your insurance</a> online in a few minutes.</p>`,
   },
   {
     slug: "bridgework-therapy-what-is-it-how-can-it-help",

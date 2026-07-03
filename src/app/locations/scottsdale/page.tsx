@@ -109,9 +109,9 @@ export default function ScottsdaleLocationPage() {
         videoTitle="Scottsdale Recovery Center Tour"
         location="North Scottsdale, Arizona"
         address="23222 N Church Rd, Scottsdale, AZ 85255"
-        phone="(602) 755-4310"
+        phone="(623) 305-0496"
         amenities={["Pool", "Private Suites", "Gym", "Game Room", "Massage Therapy", "Yoga", "SoftWave Therapy", "Outdoor Recreation", "Chiropractic Care"]}
-        ctaPhone="6027554310"
+        ctaPhone="6233050496"
       />
 
       {/* Collision Animation */}
@@ -145,7 +145,7 @@ export default function ScottsdaleLocationPage() {
                 <h3 className="font-semibold text-forest mb-3">Address</h3>
                 <p className="text-gray-600 text-sm">23222 N Church Rd</p>
                 <p className="text-gray-600 text-sm">Scottsdale, AZ 85255</p>
-                <a href="tel:+16027554310" className="text-gold font-semibold text-xl block mt-3">(602) 755-4310</a>
+                <a href="tel:+16233050496" className="text-gold font-semibold text-xl block mt-3">(623) 305-0496</a>
                 <p className="text-gray-500 text-xs mt-2">Admissions available 24/7</p>
               </div>
               <div className="mb-6">
@@ -293,7 +293,7 @@ export default function ScottsdaleLocationPage() {
         },
         {
           question: "Does Desert Recovery Centers accept insurance for Scottsdale residents?",
-          answer: "For commercial insurance, Desert Recovery Centers works on an out-of-network basis with major plans including Aetna, Blue Cross Blue Shield, Cigna, UnitedHealthcare, Humana, Magellan, and others. Many out-of-network plans provide significant coverage for our level of care. We are also in-network with TriCare and TriWest, and offer cash-pay options. Our admissions team verifies your benefits at no cost. Call (602) 755-4310 for a free insurance check.",
+          answer: "For commercial insurance, Desert Recovery Centers works on an out-of-network basis with major plans including Aetna, Blue Cross Blue Shield, Cigna, UnitedHealthcare, Humana, Magellan, and others. Many out-of-network plans provide significant coverage for our level of care. We are also in-network with TriCare and TriWest, and offer cash-pay options. Our admissions team verifies your benefits at no cost. Call (623) 305-0496 for a free insurance check.",
         },
       ]} />
       <FAQSection faqs={faqData["locations/scottsdale"]} />
