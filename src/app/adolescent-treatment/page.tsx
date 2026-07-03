@@ -146,7 +146,7 @@ export default function AdolescentTreatmentPage() {
           <div className="max-w-3xl mx-auto">
             <p className="text-gray-600 leading-relaxed text-lg">
               Desert Recovery Centers provides intensive outpatient (IOP) treatment for adolescents ages 12 to 17 at our Phoenix location on N. 108th Avenue. Our adolescent IOP is a dedicated program track, scheduled separately from our adult sessions, led by Clinical Director Dr. An Nguyen, PsyD. Sessions run Monday through Friday from 4 to 9 pm, in the evening after adult programming concludes for the day. To ask about the adolescent program, call{" "}
-              <a href="tel:+16029050057" className="text-gold font-semibold">(602) 905-0057</a>.
+              <a href="tel:+16233050496" className="text-gold font-semibold">(623) 305-0496</a>.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg mt-6">
               The program provides structured, evidence-based treatment for adolescents facing emotional, behavioral, substance use, and family-related challenges, while they remain engaged in their home, school, and community. It is built to support stabilization, skill development, and improved functioning without 24-hour residential care. Sessions are scheduled in the evening so adolescents can stay in school during the day. Treatment is delivered primarily in person to support peer interaction and skills-based group learning. Telehealth may be used on a limited, case-by-case basis when clinically appropriate, such as transportation barriers, illness, or temporary access limitations.
@@ -236,13 +236,13 @@ export default function AdolescentTreatmentPage() {
           </h2>
           <p className="text-white/70 max-w-2xl mx-auto mb-10 leading-relaxed">
             To ask about the adolescent IOP or begin the admissions process, call{" "}
-            <a href="tel:+16029050057" className="text-gold font-semibold">(602) 905-0057</a>. Our team will answer your questions about the program, schedule, and insurance, and help you understand whether the program is the right fit for your teen.
+            <a href="tel:+16233050496" className="text-gold font-semibold">(623) 305-0496</a>. Our team will answer your questions about the program, schedule, and insurance, and help you understand whether the program is the right fit for your teen.
           </p>
           <a
-            href="tel:+16029050057"
+            href="tel:+16233050496"
             className="inline-block bg-gold hover:bg-gold-dark text-white font-semibold text-base px-8 py-4 rounded-xl transition-all shadow-lg shadow-gold/25 text-center cursor-pointer"
           >
-            Call (602) 905-0057
+            Call (623) 305-0496
           </a>
         </div>
       </section>
@@ -253,7 +253,7 @@ export default function AdolescentTreatmentPage() {
           {
             question: "Is there an adolescent IOP at Desert Recovery Centers in Phoenix?",
             answer:
-              "Yes. Desert Recovery Centers offers an intensive outpatient program for adolescents ages 12 to 17 at 4160 N. 108th Ave, Phoenix, AZ 85037. Sessions run in the evening, Monday through Friday from 4 to 9 pm, after adult programming concludes for the day. The program is Joint Commission accredited. Call (602) 905-0057 to ask about admissions.",
+              "Yes. Desert Recovery Centers offers an intensive outpatient program for adolescents ages 12 to 17 at 4160 N. 108th Ave, Phoenix, AZ 85037. Sessions run in the evening, Monday through Friday from 4 to 9 pm, after adult programming concludes for the day. The program is Joint Commission accredited. Call (623) 305-0496 to ask about admissions.",
           },
           {
             question: "Who is the adolescent IOP for?",
@@ -263,7 +263,7 @@ export default function AdolescentTreatmentPage() {
           {
             question: "Does the adolescent program accept insurance?",
             answer:
-              "Desert Recovery Centers accepts out-of-network coverage from most major commercial insurance plans (Blue Cross Blue Shield, UnitedHealthcare, Aetna, Cigna, and others), is in-network with TriCare and TriWest, and offers cash-pay options. Benefits are verified before treatment begins. Call (602) 905-0057.",
+              "Desert Recovery Centers accepts out-of-network coverage from most major commercial insurance plans (Blue Cross Blue Shield, UnitedHealthcare, Aetna, Cigna, and others), is in-network with TriCare and TriWest, and offers cash-pay options. Benefits are verified before treatment begins. Call (623) 305-0496.",
           },
         ]}
       />

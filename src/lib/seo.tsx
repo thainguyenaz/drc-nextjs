@@ -127,7 +127,7 @@ export function LocalBusinessSchema({ index }: { index: number }) {
     name: `Desert Recovery Centers - ${city}`,
     image: `${SITE_URL}${loc.image}`,
     url: `${SITE_URL}${loc.href}`,
-    telephone: loc.phone,
+    telephone: loc.gbpPhone,
     email: siteData.email,
     description: loc.description,
     address: {

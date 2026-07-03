@@ -4,10 +4,10 @@
 Desert Recovery Centers is a Joint Commission accredited luxury behavioral health organization with residential treatment facilities in Glendale, Arizona and Scottsdale, Arizona, and outpatient services (PHP, IOP, TMS) in Phoenix, Arizona. Founded by Jason Inserra, Thai Nguyen, and Dr. An Nguyen, DRC provides evidence-based addiction and mental health treatment including dual diagnosis care.
 
 ## Locations
-- Glendale (male residential): 8105 W Frier Dr, Glendale, AZ 85303 | Phone: (623) 323-1012 | License: ADHS BH9449
-- Scottsdale (women's residential): 23222 N Church Rd, Scottsdale, AZ 85255 | Phone: (602) 755-4310 | License: ADHS BH10131
-- Phoenix (outpatient PHP/IOP/TMS): 4160 N. 108th Ave, Phoenix, AZ 85037 | Phone: (602) 905-8070
-- Phoenix adolescent IOP (ages 12-17): 4160 N. 108th Ave, Phoenix, AZ 85037 | Phone: (602) 905-0057
+- Glendale (male residential): 8105 W Frier Dr, Glendale, AZ 85303 | Phone: (623) 305-0496 | License: ADHS BH9449
+- Scottsdale (women's residential): 23222 N Church Rd, Scottsdale, AZ 85255 | Phone: (623) 305-0496 | License: ADHS BH10131
+- Phoenix (outpatient PHP/IOP/TMS): 4160 N. 108th Ave, Phoenix, AZ 85037 | Phone: (623) 305-0496
+- Phoenix adolescent IOP (ages 12-17): 4160 N. 108th Ave, Phoenix, AZ 85037 | Phone: (623) 305-0496
 - Phoenix (sober living transitional housing): 1623 W Moody Trail, Phoenix, AZ 85041 | (tracked via main admissions line)
 
 ## Accreditations & Certifications
@@ -56,7 +56,7 @@ Levels of Care: residential treatment (10-bed max per facility), PHP, IOP, outpa
 Website: https://desertrecoverycenters.com
 Email: contact@desertrecoverycenters.com
 General: (623) 305-0496
-Phoenix outpatient: (602) 905-8070
+Phoenix outpatient: (623) 305-0496
 
 ## Brand
 Tagline: HEAL. RESTORE. THRIVE.

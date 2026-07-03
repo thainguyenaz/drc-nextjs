@@ -12,7 +12,7 @@ const PhotoGallery = dynamic(() => import("@/components/PhotoGallery"), { ssr: f
 export const metadata: Metadata = buildMetadata({
   title: "Phoenix PHP Sober Living, Desert Recovery Centers",
   description:
-    "Structured sober living housing for clients enrolled in DRC PHP programs. 1623 W Moody Trail, Phoenix, AZ 85041. Call (623) 257-5384.",
+    "Structured sober living housing for clients enrolled in DRC PHP programs. 1623 W Moody Trail, Phoenix, AZ 85041. Call (623) 305-0496.",
   path: "/locations/phoenix-living",
 });
 
@@ -105,7 +105,7 @@ export default function PhoenixLivingPage() {
               </div>
               <div className="flex items-start gap-3">
                 <span className="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0" />
-                <span><strong>Phone:</strong>&nbsp;<a href="tel:+16232575384" className="text-sage font-medium">(623) 257-5384</a></span>
+                <span><strong>Phone:</strong>&nbsp;<a href="tel:+16233050496" className="text-sage font-medium">(623) 305-0496</a></span>
               </div>
               <div className="flex items-start gap-3">
                 <span className="w-1.5 h-1.5 rounded-full bg-gold mt-2.5 shrink-0" />
@@ -146,10 +146,10 @@ export default function PhoenixLivingPage() {
 
             <div className="mt-12 flex flex-col sm:flex-row items-center gap-4">
               <a
-                href="tel:+16232575384"
+                href="tel:+16233050496"
                 className="bg-gold hover:bg-gold-dark text-white font-semibold text-base px-8 py-4 rounded-xl transition-all shadow-lg shadow-gold/25 w-full sm:w-auto text-center"
               >
-                Call (623) 257-5384
+                Call (623) 305-0496
               </a>
               <Link
                 href="/locations/phoenix-php-iop"

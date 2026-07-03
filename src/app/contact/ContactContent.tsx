@@ -7,48 +7,48 @@ const locations = [
   {
     name: "Glendale",
     address: "8105 W Frier Dr, Glendale, AZ 85303",
-    phone: "(623) 323-1012",
-    phoneTel: "+16233231012",
+    phone: "(623) 305-0496",
+    phoneTel: "+16233050496",
     programs: ["Residential"],
     mapQuery: "8105+W+Frier+Dr+Glendale+AZ+85303",
   },
   {
     name: "Scottsdale",
     address: "23222 N Church Rd, Scottsdale, AZ 85255",
-    phone: "(602) 755-4310",
-    phoneTel: "+16027554310",
+    phone: "(623) 305-0496",
+    phoneTel: "+16233050496",
     programs: ["Residential"],
     mapQuery: "23222+N+Church+Rd+Scottsdale+AZ+85255",
   },
   {
     name: "Phoenix PHP/IOP",
     address: "4160 N. 108th Ave, Phoenix, AZ 85037",
-    phone: "(602) 905-8070",
-    phoneTel: "+16029058070",
+    phone: "(623) 305-0496",
+    phoneTel: "+16233050496",
     programs: ["PHP", "IOP", "OP", "TMS"],
     mapQuery: "4160+N+108th+Ave+Phoenix+AZ+85037",
   },
   {
     name: "Adolescent IOP",
     address: "4160 N. 108th Ave, Phoenix, AZ 85037",
-    phone: "(602) 905-0057",
-    phoneTel: "+16029050057",
+    phone: "(623) 305-0496",
+    phoneTel: "+16233050496",
     programs: ["IOP"],
     mapQuery: "4160+N+108th+Ave+Phoenix+AZ+85037",
   },
   {
     name: "Phoenix TMS",
     address: "4160 N. 108th Ave, Phoenix, AZ 85037",
-    phone: "(602) 905-8070",
-    phoneTel: "+16029058070",
+    phone: "(623) 305-0496",
+    phoneTel: "+16233050496",
     programs: ["TMS Therapy"],
     mapQuery: "4160+N+108th+Ave+Phoenix+AZ+85037",
   },
   {
     name: "Phoenix PHP Living",
     address: "1623 W Moody Trail, Phoenix, AZ 85041",
-    phone: "(623) 257-5384",
-    phoneTel: "+16232575384",
+    phone: "(623) 305-0496",
+    phoneTel: "+16233050496",
     programs: ["PHP Living", "Sober Living"],
     mapQuery: "1623+W+Moody+Trail+Phoenix+AZ+85041",
   },
@@ -86,25 +86,25 @@ export default function ContactContent() {
                   <svg className="w-5 h-5 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
-                  <span>Glendale: <a href="tel:+16233231012" className="text-sage font-medium">(623) 323-1012</a></span>
+                  <span>Glendale: <a href="tel:+16233050496" className="text-sage font-medium">(623) 305-0496</a></span>
                 </div>
                 <div className="flex items-center gap-3">
                   <svg className="w-5 h-5 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
-                  <span>Scottsdale: <a href="tel:+16027554310" className="text-sage font-medium">(602) 755-4310</a></span>
+                  <span>Scottsdale: <a href="tel:+16233050496" className="text-sage font-medium">(623) 305-0496</a></span>
                 </div>
                 <div className="flex items-center gap-3">
                   <svg className="w-5 h-5 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
-                  <span>Phoenix: <a href="tel:+16029058070" className="text-sage font-medium">(602) 905-8070</a></span>
+                  <span>Phoenix: <a href="tel:+16233050496" className="text-sage font-medium">(623) 305-0496</a></span>
                 </div>
                 <div className="flex items-center gap-3">
                   <svg className="w-5 h-5 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
-                  <span>Adolescent IOP: <a href="tel:+16029050057" className="text-sage font-medium">(602) 905-0057</a></span>
+                  <span>Adolescent IOP: <a href="tel:+16233050496" className="text-sage font-medium">(623) 305-0496</a></span>
                 </div>
                 <div className="flex items-center gap-3">
                   <svg className="w-5 h-5 text-sage" fill="none" stroke="currentColor" viewBox="0 0 24 24">
