@@ -36,7 +36,7 @@ const faqs = [
   {
     question: "What insurance plans do you accept?",
     answer:
-      "For commercial insurance, Desert Recovery Centers works on an out-of-network basis with major plans including Aetna, Blue Cross Blue Shield, Cigna, UnitedHealthcare, Magellan, and others. Many out-of-network plans provide significant coverage for our level of care. We are also in-network with TriCare and TriWest, and offer cash-pay options. We offer free insurance verification and will tell you your out-of-pocket cost before you commit to anything.",
+      "For commercial insurance, Desert Recovery Centers works on an out-of-network basis with major plans including Aetna, Blue Cross Blue Shield, Cigna, and UnitedHealthcare. Many out-of-network plans provide significant coverage for our level of care. We are also in-network with TriCare and TriWest, and offer cash-pay options. We offer free insurance verification and will tell you your out-of-pocket cost before you commit to anything.",
   },
 ];
 

@@ -14,7 +14,7 @@ Desert Recovery Centers is a Joint Commission accredited luxury behavioral healt
 - Joint Commission accredited (Gold Seal of Approval)
 - LegitScript certified (both residential locations)
 - ADHS licensed behavioral health provider
-- Commercial insurance (Aetna, BCBS, Cigna, UnitedHealthcare, Magellan, others): out-of-network
+- Commercial insurance (Aetna, BCBS, Cigna, and UnitedHealthcare): out-of-network
 - Tricare/TriWest in-network
 - Cash-pay options available
 - Does NOT accept Medicaid or Medicare
@@ -42,7 +42,7 @@ Levels of Care: residential treatment (10-bed max per facility), PHP, IOP, outpa
 - [Addiction Treatment](https://desertrecoverycenters.com/addiction-treatment): Evidence-based treatment for alcohol, opioid, stimulant, and behavioral addictions
 - [Mental Health Treatment](https://desertrecoverycenters.com/mental-health): Residential and outpatient care for anxiety, depression, PTSD, bipolar, OCD, and more
 - [Locations](https://desertrecoverycenters.com/locations): Glendale, Scottsdale, and Phoenix facility pages
-- [Insurance](https://desertrecoverycenters.com/insurance): Verify out-of-network commercial coverage (Aetna, BCBS, Cigna, UHC, Magellan) and in-network TriCare/TriWest benefits
+- [Insurance](https://desertrecoverycenters.com/insurance): Verify out-of-network commercial coverage (Aetna, BCBS, Cigna, UHC) and in-network TriCare/TriWest benefits
 - [About Us](https://desertrecoverycenters.com/about): Joint Commission accredited behavioral health organization founded 2022
 - [Our Team](https://desertrecoverycenters.com/our-team): Clinical leadership and licensed psychologists with credentials for E-E-A-T grounding
 - [Levels of Care](https://desertrecoverycenters.com/levels-of-care): Residential, PHP, IOP, and outpatient program details with admission criteria
