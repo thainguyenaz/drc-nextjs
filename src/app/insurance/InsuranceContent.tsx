@@ -8,7 +8,6 @@ const insurers = [
   { name: "Aetna", slug: "aetna", desc: "Out-of-network coverage available." },
   { name: "Blue Cross Blue Shield", slug: "bcbs", desc: "Out-of-network coverage available, including PPO and select HMO plans." },
   { name: "UnitedHealthcare", slug: "uhc", desc: "Out-of-network coverage available for all levels of care." },
-  { name: "Humana", slug: "humana", desc: "Out-of-network coverage available." },
   { name: "TriCare", slug: "tricare", desc: "In-network for active-duty service members, veterans, and dependents." },
   { name: "TriWest", slug: "triwest", desc: "In-network: TriWest Healthcare Alliance plans for eligible veterans." },
 ];
