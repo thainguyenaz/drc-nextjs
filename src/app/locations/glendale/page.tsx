@@ -294,7 +294,7 @@ export default function GlendaleLocationPage() {
         },
         {
           question: "Does Desert Recovery Centers accept insurance for Glendale residents?",
-          answer: "For commercial insurance, Desert Recovery Centers works on an out-of-network basis with major plans including Aetna, Blue Cross Blue Shield, Cigna, UnitedHealthcare, Humana, Magellan, and others. Many out-of-network plans provide significant coverage for our level of care. We are also in-network with TriCare and TriWest, and offer cash-pay options. Our admissions team verifies your benefits at no cost. Call (623) 305-0496 for a free insurance check.",
+          answer: "For commercial insurance, Desert Recovery Centers works on an out-of-network basis with major plans including Aetna, Blue Cross Blue Shield, Cigna, UnitedHealthcare, Magellan, and others. Many out-of-network plans provide significant coverage for our level of care. We are also in-network with TriCare and TriWest, and offer cash-pay options. Our admissions team verifies your benefits at no cost. Call (623) 305-0496 for a free insurance check.",
         },
       ]} />
       <FAQSection faqs={faqData["locations/glendale"]} />

@@ -148,7 +148,7 @@ export default function PhoenixPhpIopPage() {
           {
             question: "Does Desert Recovery Centers Phoenix accept insurance?",
             answer:
-              "Desert Recovery Centers accepts out-of-network coverage from most major commercial insurance plans (Aetna, Blue Cross Blue Shield, Cigna, UnitedHealthcare, Humana, Magellan, and others), is in-network with TriCare and TriWest, and offers cash-pay options. Benefits are verified at no cost before treatment begins. Call (623) 305-0496 for a free insurance check.",
+              "Desert Recovery Centers accepts out-of-network coverage from most major commercial insurance plans (Aetna, Blue Cross Blue Shield, Cigna, UnitedHealthcare, Magellan, and others), is in-network with TriCare and TriWest, and offers cash-pay options. Benefits are verified at no cost before treatment begins. Call (623) 305-0496 for a free insurance check.",
           },
         ]}
       />

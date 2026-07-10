@@ -78,7 +78,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/insurance/blue-cross", priority: 0.7, changeFrequency: "weekly" },
     { path: "/insurance/cigna", priority: 0.7, changeFrequency: "weekly" },
     { path: "/insurance/united", priority: 0.7, changeFrequency: "weekly" },
-    { path: "/insurance/humana", priority: 0.7, changeFrequency: "weekly" },
 
     // Team & About pages
     { path: "/about", priority: 0.5, changeFrequency: "monthly" },
