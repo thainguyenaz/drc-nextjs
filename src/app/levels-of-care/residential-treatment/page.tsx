@@ -387,7 +387,7 @@ export default function ResidentialTreatmentPage() {
               plans cover residential addiction treatment in Arizona.
               Desert Recovery Centers works with commercial carriers
               including Aetna, Cigna, Blue Cross Blue Shield,
-              UnitedHealthcare, Humana, Magellan, and others on an
+              UnitedHealthcare, Magellan, and others on an
               out-of-network basis; we are in-network with TriCare and
               TriWest, and offer cash-pay options. Our admissions team
               handles the insurance verification process and will explain
