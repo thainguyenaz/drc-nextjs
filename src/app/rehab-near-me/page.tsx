@@ -88,7 +88,7 @@ const faqs = [
   },
   {
     q: "Do all three locations accept the same insurance?",
-    a: "All DRC locations accept out-of-network coverage from the same major commercial insurance plans (Aetna, Blue Cross Blue Shield, Cigna, UnitedHealthcare, Magellan, and others), are in-network with TriCare and TriWest, and offer cash-pay options. Our admissions team verifies your benefits at no cost.",
+    a: "All DRC locations accept out-of-network coverage from the same major commercial insurance plans (Aetna, Blue Cross Blue Shield, Cigna, and UnitedHealthcare), are in-network with TriCare and TriWest, and offer cash-pay options. Our admissions team verifies your benefits at no cost.",
   },
 ];
 

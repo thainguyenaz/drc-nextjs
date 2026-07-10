@@ -185,7 +185,6 @@ const insuranceProviders = [
   "Aetna",
   "Cigna",
   "UnitedHealthcare",
-  "Magellan",
   "Beacon Health",
 ];
 
