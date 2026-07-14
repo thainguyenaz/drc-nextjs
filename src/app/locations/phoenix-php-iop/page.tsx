@@ -36,7 +36,7 @@ const clinicSchema = {
   "@id": `${SITE_URL}/locations/phoenix-php-iop`,
   name: "Desert Recovery Centers - Phoenix",
   description:
-    "Joint Commission accredited behavioral health treatment center offering PHP, IOP, OP, and TMS therapy in Phoenix, AZ.",
+    "Joint Commission accredited behavioral health treatment center offering PHP, IOP, and OP in Phoenix, AZ, with on-site NeuroStar TMS provided by Desert TMS LLC.",
   url: `${SITE_URL}/locations/phoenix-php-iop`,
   telephone: "+16029058070",
   email: "contact@desertrecoverycenters.com",
@@ -81,7 +81,7 @@ const clinicSchema = {
     {
       "@type": "MedicalTherapy",
       name: "TMS Therapy",
-      description: "FDA cleared NeuroStar TMS for depression, anxious depression, and OCD.",
+      description: "FDA cleared NeuroStar TMS for depression, anxious depression, and OCD. TMS is provided by Desert TMS LLC, an affiliated licensed provider on-site at Desert Recovery Centers.",
     },
   ],
   hasCredential: {
@@ -138,7 +138,7 @@ export default function PhoenixPhpIopPage() {
           {
             question: "Is there a Desert Recovery Centers PHP / IOP center in Phoenix?",
             answer:
-              "Yes. Desert Recovery Centers operates a dedicated outpatient treatment center at 4160 N. 108th Ave, Phoenix, AZ 85037. This location offers Partial Hospitalization (PHP), Intensive Outpatient (IOP), Outpatient (OP), and NeuroStar TMS therapy. It is Joint Commission accredited. Desert Recovery Centers accepts out-of-network coverage from most major commercial insurance plans, is in-network with TriCare and TriWest, and offers cash-pay options. Call (623) 305-0496 for admissions.",
+              "Yes. Desert Recovery Centers operates a dedicated outpatient treatment center at 4160 N. 108th Ave, Phoenix, AZ 85037. This location offers Partial Hospitalization (PHP), Intensive Outpatient (IOP), and Outpatient (OP). NeuroStar TMS therapy is also available on-site, provided by Desert TMS LLC, an affiliated licensed provider. It is Joint Commission accredited. Desert Recovery Centers accepts out-of-network coverage from most major commercial insurance plans, is in-network with TriCare and TriWest, and offers cash-pay options. Call (623) 305-0496 for admissions.",
           },
           {
             question: "What outpatient mental health treatment is available in Phoenix, Arizona?",

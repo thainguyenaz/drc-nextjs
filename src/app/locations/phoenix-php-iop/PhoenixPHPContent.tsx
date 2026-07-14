@@ -90,7 +90,7 @@ const programs = [
     tag: "TMS",
     title: "Transcranial Magnetic Stimulation",
     schedule: "FDA Cleared. Non-Invasive. No Medication Required.",
-    body: "One in three people with depression do not get better with antidepressants. If that is you, you have not failed treatment. Treatment has failed you. NeuroStar TMS is different. It uses precise magnetic pulses to stimulate the specific regions of the brain that regulate mood, with no sedation, no systemic side effects, and no downtime. Sessions take about 19 minutes. Most clients start feeling a difference within two to four weeks. Our Phoenix TMS suite is one of the few in Arizona integrated directly into a full outpatient clinical program, so your TMS treatment works alongside your therapy, not in isolation.",
+    body: "One in three people with depression do not get better with antidepressants. If that is you, you have not failed treatment. Treatment has failed you. NeuroStar TMS is different. It uses precise magnetic pulses to stimulate the specific regions of the brain that regulate mood, with no sedation, no systemic side effects, and no downtime. Sessions take about 19 minutes. Most clients start feeling a difference within two to four weeks. The on-site Phoenix TMS suite, operated by Desert TMS LLC, is one of the few in Arizona integrated directly into a full outpatient clinical program, so your TMS treatment works alongside your therapy, not in isolation.",
     features: [
       "FDA cleared for depression, anxious depression, and OCD",
       "Typically 36 sessions over 7 to 9 weeks",
@@ -144,7 +144,7 @@ const differentiators = [
       </svg>
     ),
     title: "The Only Integrated TMS Program in West Phoenix",
-    body: "Most outpatient centers refer you out for TMS and hope the coordination works. We have our own NeuroStar suite on site. Your TMS sessions are scheduled in sync with your therapy, your medication management, and your clinical team. Everything works together because it is all in one place.",
+    body: "Most outpatient centers refer you out for TMS and hope the coordination works. TMS is provided by Desert TMS LLC, an affiliated licensed provider on-site at Desert Recovery Centers. Your TMS sessions are scheduled in sync with your therapy, your medication management, and your clinical team. Everything works together because it is all in one place.",
   },
   {
     icon: (
@@ -425,7 +425,7 @@ export default function PhoenixPHPContent() {
                 transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1], delay: 0.4 }}
                 className="text-gray-600 leading-relaxed text-lg mb-6"
               >
-                This location also houses our NeuroStar TMS therapy suite, the only TMS system FDA cleared for depression, anxious depression, and OCD. If you have tried medications and they have not worked, TMS may be the answer you have been looking for.
+                This location also houses a NeuroStar TMS therapy suite operated by Desert TMS LLC, the only TMS system FDA cleared for depression, anxious depression, and OCD. If you have tried medications and they have not worked, TMS may be the answer you have been looking for.
               </motion.p>
               <motion.div
                 initial={{ opacity: 0, x: -60 }}
@@ -612,7 +612,7 @@ export default function PhoenixPHPContent() {
                 NeuroStar TMS uses targeted magnetic pulses to stimulate the areas of the brain responsible for mood regulation. It is the same technology used in MRI machines, applied with precision to specific neural pathways. There is no sedation. No anesthesia. No recovery period. You sit in a chair, complete your session in about 19 minutes, and go about your day.
               </p>
               <p className="text-gray-600 leading-relaxed mb-6">
-                Our Phoenix TMS suite is integrated directly into our outpatient clinical program. Your TMS schedule is coordinated with your therapy sessions and your psychiatric appointments. Your entire team is in one building, looking at one treatment plan. That level of coordination is not something you will find at most standalone TMS clinics.
+                The on-site TMS suite, operated by Desert TMS LLC, is integrated directly into the outpatient clinical program. Your TMS schedule is coordinated with your therapy sessions and your psychiatric appointments. Your entire team is in one building, looking at one treatment plan. That level of coordination is not something you will find at most standalone TMS clinics.
               </p>
               <div className="flex flex-wrap gap-2 mb-6">
                 {["Depression", "Anxious Depression", "OCD", "No Medication Required", "No Sedation", "No Downtime"].map((badge) => (

@@ -927,7 +927,7 @@ ${DISCLAIMER}`
 
 <h2>Treatment Frequency and Duration</h2>
 <p>A standard course of TMS therapy consists of 36 sessions delivered over approximately 6 to 9 weeks. Sessions are typically scheduled 5 days per week (Monday through Friday) for the first 6 weeks, followed by a tapering schedule of 3 sessions per week, then 2 sessions per week during the final weeks. Each session lasts approximately 19 to 37 minutes, depending on the specific protocol used.</p>
-<p>The NeuroStar system used at Desert Recovery Centers offers the most extensively studied TMS protocol, with over 5 million treatments delivered worldwide. The treatment schedule is designed to produce cumulative neurological changes, which means that improvement is typically gradual rather than immediate.</p>
+<p>The NeuroStar system used at Desert Recovery Centers offers the most extensively studied TMS protocol, with over 8 million treatments delivered worldwide, according to NeuroStar. The treatment schedule is designed to produce cumulative neurological changes, which means that improvement is typically gradual rather than immediate.</p>
 
 <h2>What to Expect Week by Week</h2>
 <h3>Weeks 1 and 2</h3>
@@ -945,7 +945,7 @@ ${DISCLAIMER}`
 <h2>Outcome Expectations and Who Responds Best</h2>
 <p>Clinical research shows the majority of patients with treatment-resistant depression experience clinically meaningful improvement with TMS therapy, with a significant subset achieving full remission (<a href="https://www.nimh.nih.gov/health/topics/brain-stimulation-therapies/brain-stimulation-therapies" target="_blank" rel="noopener">NIMH — Brain Stimulation Therapies</a>). These results are remarkable, particularly considering that TMS is typically used in patients who have already failed one or more medication trials.</p>
 <p>The best responders to TMS tend to be individuals with moderate to severe depression who have not responded to one or two medication trials but who do not have treatment resistance across many medication classes. However, significant improvement is seen across a wide range of clinical presentations, and many people who have struggled with depression for years experience their first meaningful relief through TMS.</p>
-<p>It is important to note that TMS is not a cure for depression. Some clients maintain their improvement indefinitely, while others may benefit from periodic maintenance sessions. TMS can also be combined with psychotherapy and, in some cases, medication to optimize outcomes. At Desert Recovery Centers, TMS is offered as part of a comprehensive treatment approach that addresses the full complexity of each client's condition.</p>
+<p>It is important to note that TMS is not a cure for depression. Some clients maintain their improvement indefinitely, while others may benefit from periodic maintenance sessions. TMS can also be combined with psychotherapy and, in some cases, medication to optimize outcomes. TMS is provided by Desert TMS LLC, an affiliated licensed provider on-site at Desert Recovery Centers, as part of a comprehensive treatment approach that addresses the full complexity of each client's condition.</p>
 
 ${DISCLAIMER}`
   },
@@ -1377,10 +1377,10 @@ ${DISCLAIMER}`
 <p>TMS may not be appropriate for everyone. People with metallic implants in or near the head, a history of seizures, or certain neurological conditions may not be candidates. A thorough clinical evaluation is conducted before treatment begins to ensure that TMS is safe and appropriate for each individual.</p>
 
 <h2>Combining TMS With Other Treatments</h2>
-<p>TMS does not have to be an either or choice with medication. Many clients continue their antidepressant medication while receiving TMS, and the combination can be more effective than either treatment alone. TMS can also be combined with psychotherapy to optimize outcomes. At Desert Recovery Centers, TMS is offered as part of a comprehensive treatment approach that may include individual therapy, group therapy, psychiatric medication management, and holistic wellness programming.</p>
+<p>TMS does not have to be an either or choice with medication. Many clients continue their antidepressant medication while receiving TMS, and the combination can be more effective than either treatment alone. TMS can also be combined with psychotherapy to optimize outcomes. TMS is provided by Desert TMS LLC, an affiliated licensed provider on-site at Desert Recovery Centers, as part of a comprehensive treatment approach that may include individual therapy, group therapy, psychiatric medication management, and holistic wellness programming.</p>
 
-<h2>Cost and Insurance Coverage</h2>
-<p>TMS therapy is covered by most major commercial insurance plans when medically necessary criteria are met. Medicare and many state Medicaid programs also provide coverage. The typical criterion for insurance coverage is documented failure of at least one antidepressant medication. At Desert Recovery Centers, our team handles insurance verification and prior authorization for TMS therapy, ensuring that clients understand their coverage and financial responsibility before beginning treatment.</p>
+<h2>Cost and Payment Options</h2>
+<p>TMS at the Phoenix campus is currently offered on a private-pay basis while Desert TMS LLC, the affiliated licensed provider that delivers TMS on-site at Desert Recovery Centers, completes credentialing with insurance payers. Medicare and Medicaid are not accepted. Call (623) 305-0496 and the team will walk you through cost and payment options before beginning treatment.</p>
 <p>For people who have been struggling with depression and have not found relief from medication, TMS offers a clinically proven, drug free alternative that can produce meaningful, lasting improvement. If you are interested in learning whether TMS is right for you, contact Desert Recovery Centers for a consultation.</p>
 
 ${DISCLAIMER}`

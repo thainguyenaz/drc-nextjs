@@ -46,7 +46,7 @@ export const siteData = {
       phoneTel: "+16233050496",
       gbpPhone: "(602) 905-8070",
       description:
-        "Outpatient treatment center offering PHP, IOP, OP, and NeuroStar TMS therapy in Phoenix.",
+        "Outpatient treatment center offering PHP, IOP, and OP in Phoenix, with on-site NeuroStar TMS provided by Desert TMS LLC.",
       programs: ["PHP", "IOP", "OP", "TMS"],
       amenities: ["Treatment Rooms", "Group Therapy Space"],
       image: "/images/general/accom-group-room.jpg",
@@ -81,14 +81,14 @@ export const siteData = {
       },
     },
     {
-      name: "Phoenix TMS",
+      name: "Desert TMS",
       href: "/treatments/tms-therapy",
       address: "4160 N. 108th Ave, Phoenix, AZ 85037",
       phone: "(623) 305-0496",
       phoneTel: "+16233050496",
       gbpPhone: "(602) 905-8070",
       description:
-        "Dedicated NeuroStar TMS therapy center for depression, anxious depression, and OCD treatment.",
+        "Dedicated NeuroStar TMS therapy center for depression, anxious depression, and OCD treatment. TMS is provided by Desert TMS LLC, an affiliated licensed provider on-site at Desert Recovery Centers.",
       programs: ["TMS Therapy"],
       amenities: ["NeuroStar TMS Suite"],
       image: "/images/locations/phoenix/phoenix-lobby-2.jpg",
