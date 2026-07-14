@@ -125,7 +125,10 @@ export const videoData: Record<string, VideoEntry[]> = {
     { youtubeId: "Il5BV-EYP3E", title: "How Do Outcomes Improve When Clients Follow a Full Continuum of Care?", description: "Why dual diagnosis treatment across a full continuum of care leads to better recovery outcomes.", uploadDate: "2025-03-01T00:00:00+00:00" },
   ],
   "/treatments/tms-therapy/": [
-    { youtubeId: "OssO8dpYk2E", title: "How Does SoftWave Therapy Work for Addiction?", description: "Innovative therapy approaches including TMS and SoftWave for addiction and mental health.", uploadDate: "2024-10-01T00:00:00+00:00" },
+    { youtubeId: "4yWqQ_VVzgE", title: "NeuroStar TMS Therapy, How It Works", description: "How NeuroStar TMS therapy works as an FDA-cleared, non-invasive treatment for depression. Video courtesy of NeuroStar.", uploadDate: "2022-11-22T00:00:00+00:00" },
+    { youtubeId: "CrJz9g0ssZQ", title: "NeuroStar TMS Therapy Patient Experience", description: "A NeuroStar TMS patient shares their experience with the therapy and how it changed their life. Video courtesy of NeuroStar. Individual results may vary; featured patients are not necessarily patients of Desert Recovery Centers.", uploadDate: "2021-04-26T00:00:00+00:00" },
+    { youtubeId: "rcj4Tzbc34g", title: "NeuroStar TMS Therapy Results, Patient Testimonial", description: "Hear how NeuroStar TMS therapy helped a patient when medication alone was not enough. Video courtesy of NeuroStar. Individual results may vary; featured patients are not necessarily patients of Desert Recovery Centers.", uploadDate: "2021-08-05T00:00:00+00:00" },
+    { youtubeId: "1Bed8b5DQBQ", title: "Life After NeuroStar TMS Therapy, Patient Experience", description: "A NeuroStar TMS patient describes their experience with treatment and the impact on their daily life. Video courtesy of NeuroStar. Individual results may vary; featured patients are not necessarily patients of Desert Recovery Centers.", uploadDate: "2021-04-24T00:00:00+00:00" },
   ],
   "/treatments/softwave-therapy/": [
     { youtubeId: "PkH82oa6HkA", title: "How Does SoftWave Therapy Work for Addiction?", description: "SoftWave tissue regeneration therapy for addiction recovery support.", uploadDate: "2024-10-01T00:00:00+00:00" },
