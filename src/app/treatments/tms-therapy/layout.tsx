@@ -3,7 +3,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "NeuroStar TMS Therapy in Phoenix, AZ | Desert Recovery Centers",
   description:
-    "Desert Recovery Centers Phoenix offers FDA-cleared NeuroStar TMS therapy for depression, anxious depression, and OCD. Drug-free. No downtime. Sessions as short as 19 minutes. Out-of-network commercial insurance and in-network TriCare/TriWest accepted. Call (623) 305-0496.",
+    "FDA-cleared NeuroStar TMS therapy in Phoenix for depression, anxious depression, and OCD in adults, plus add-on treatment for adolescents ages 15-21, provided by Desert TMS LLC, an affiliated licensed provider on-site at Desert Recovery Centers. Drug-free. No downtime. Sessions as short as 19 minutes. Private pay while payer credentialing is completed. Call (623) 305-0496.",
   alternates: { canonical: "/treatments/tms-therapy" },
   keywords: [
     "TMS therapy Phoenix AZ",
@@ -13,11 +13,12 @@ export const metadata: Metadata = {
     "TMS therapy near me",
     "drug-free depression treatment Phoenix",
     "TMS for OCD Arizona",
+    "TMS for adolescents Phoenix",
   ],
   openGraph: {
     title: "NeuroStar TMS Therapy in Phoenix, AZ | Desert Recovery Centers",
     description:
-      "FDA-cleared NeuroStar TMS therapy for depression, anxious depression, and OCD. Now available at Desert Recovery Centers Phoenix.",
+      "FDA-cleared NeuroStar TMS therapy for depression, anxious depression, and OCD in adults, plus add-on treatment for adolescents ages 15-21. Now available at Desert Recovery Centers Phoenix.",
     url: "/treatments/tms-therapy",
     images: [{ url: "/images/locations/phoenix/phoenix-lobby-2.jpg", width: 1200, height: 630, alt: "NeuroStar TMS therapy suite at Desert Recovery Centers Phoenix Arizona" }],
     siteName: "Desert Recovery Centers",
@@ -27,7 +28,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "NeuroStar TMS Therapy in Phoenix, AZ | Desert Recovery Centers",
-    description: "FDA-cleared NeuroStar TMS therapy for depression, anxious depression, and OCD. Now available at Desert Recovery Centers Phoenix.",
+    description: "FDA-cleared NeuroStar TMS therapy for depression, anxious depression, and OCD in adults, plus add-on treatment for adolescents ages 15-21. Now available at Desert Recovery Centers Phoenix.",
   },
 };
 

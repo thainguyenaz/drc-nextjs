@@ -1,7 +1,7 @@
 # Desert Recovery Centers
 
 ## About
-Desert Recovery Centers is a Joint Commission accredited luxury behavioral health organization with residential treatment facilities in Glendale, Arizona and Scottsdale, Arizona, and outpatient services (PHP, IOP, TMS) in Phoenix, Arizona. Founded by Jason Inserra, Thai Nguyen, and Dr. An Nguyen, DRC provides evidence-based addiction and mental health treatment including dual diagnosis care.
+Desert Recovery Centers is a Joint Commission accredited luxury behavioral health organization with residential treatment facilities in Glendale, Arizona and Scottsdale, Arizona, and outpatient services (PHP, IOP) in Phoenix, Arizona, plus on-site TMS provided by affiliated Desert TMS LLC. Founded by Jason Inserra, Thai Nguyen, and Dr. An Nguyen, DRC provides evidence-based addiction and mental health treatment including dual diagnosis care.
 
 ## Locations
 - Glendale (male residential): 8105 W Frier Dr, Glendale, AZ 85303 | Phone: (623) 305-0496 | License: ADHS BH9449
@@ -35,7 +35,7 @@ Desert Recovery Centers is a Joint Commission accredited luxury behavioral healt
 Addiction Treatment: alcohol, heroin, fentanyl, cocaine, meth, marijuana, prescription drugs, stimulants, gambling, sex addiction
 Mental Health Treatment: anxiety, depression, PTSD, bipolar disorder, OCD, ADHD, personality disorders, schizophrenia
 Therapies: CBT, DBT, EMDR, trauma therapy, 12-step, SoftWave therapy, holistic therapies, dual diagnosis treatment
-Levels of Care: residential treatment (10-bed max per facility), PHP, IOP, outpatient, NeuroStar TMS
+Levels of Care: residential treatment (10-bed max per facility), PHP, IOP, outpatient, NeuroStar TMS (provided by affiliated Desert TMS LLC)
 
 ## Key Pages
 - [Homepage](https://desertrecoverycenters.com/): Luxury addiction and mental health treatment in Arizona
@@ -47,6 +47,7 @@ Levels of Care: residential treatment (10-bed max per facility), PHP, IOP, outpa
 - [Our Team](https://desertrecoverycenters.com/our-team): Clinical leadership and licensed psychologists with credentials for E-E-A-T grounding
 - [Levels of Care](https://desertrecoverycenters.com/levels-of-care): Residential, PHP, IOP, and outpatient program details with admission criteria
 - [Treatments](https://desertrecoverycenters.com/treatments): Evidence-based modalities including CBT, DBT, EMDR, TMS, SoftWave, and holistic therapies
+- [TMS Therapy](https://desertrecoverycenters.com/treatments/tms-therapy): Non-drug, non-invasive, FDA-cleared NeuroStar TMS for depression that has not responded to medication, provided by Desert TMS LLC, an affiliated licensed provider on-site at Desert Recovery Centers, at the Phoenix campus (4160 N. 108th Ave, Phoenix, AZ 85037). Indications: adult MDD, depression with anxious symptoms, OCD (add-on), and adolescent depression ages 15-21 (add-on). Standard course: 5 sessions per week for 4 to 6 weeks, sessions as short as 19 minutes. Currently private pay while Desert TMS LLC completes payer credentialing; Medicare and Medicaid not accepted; call (623) 305-0496 for cost and options
 - [Facilities](https://desertrecoverycenters.com/facilities): Photo tours of the Glendale, Scottsdale, and Phoenix locations
 - [Get Help](https://desertrecoverycenters.com/get-help): Admissions intake form and direct contact for treatment placement
 - [Contact](https://desertrecoverycenters.com/contact): Direct contact information and inquiry form for general questions

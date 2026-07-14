@@ -29,6 +29,18 @@ const candidateReasons = [
   "You prefer a drug-free treatment approach",
   "You have anxiety symptoms alongside depression (NeuroStar is FDA-cleared for anxious depression)",
   "You have OCD (NeuroStar is FDA-cleared as adjunct treatment for OCD)",
+  "You are the parent of a teenager ages 15 to 21 whose depression has not responded to standard care (NeuroStar is FDA-cleared for adolescents as an add-on treatment)",
+];
+
+const keyFacts = [
+  { label: "What it is", value: "A non-drug, non-invasive, FDA-cleared treatment for depression" },
+  { label: "Where", value: "The Phoenix outpatient center, 4160 N. 108th Ave, Phoenix, AZ 85037" },
+  { label: "Provided by", value: "Desert TMS LLC, an affiliated licensed provider on-site at Desert Recovery Centers" },
+  { label: "Device", value: "NeuroStar Advanced Therapy system" },
+  { label: "Treats", value: "Major depressive disorder, depression with anxious symptoms, OCD (add-on), and depression in adolescents ages 15 to 21 (add-on)" },
+  { label: "Typical course", value: "5 sessions per week for 4 to 6 weeks, each session as little as 19 minutes, no downtime" },
+  { label: "Cost", value: "Currently private pay while Desert TMS LLC completes payer credentialing; Medicare and Medicaid not accepted; call for cost and options" },
+  { label: "Phone", value: "(623) 305-0496" },
 ];
 
 const notCandidate = [
@@ -84,13 +96,13 @@ const differentiators = [
     body: "Sessions take as little as 19 minutes. Patients return to normal activities immediately after each session",
   },
   {
-    title: "Insurance Coverage",
+    title: "Straightforward Private Pay",
     icon: (
       <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z" />
       </svg>
     ),
-    body: "TMS therapy is typically covered by most commercial insurance plans on an out-of-network basis. Our admissions team will verify your specific TMS benefits at no cost.",
+    body: "TMS at the Phoenix campus is currently offered on a private-pay basis while Desert TMS LLC completes payer credentialing. Call us and we will walk you through cost and options.",
   },
 ];
 
@@ -101,7 +113,7 @@ const faqs = [
   },
   {
     q: "Is TMS covered by insurance?",
-    a: "TMS therapy is typically covered by most commercial insurance plans on an out-of-network basis. Desert Recovery Centers is in-network with TriCare and TriWest, and offers cash-pay options. Note: we do not accept Medicare or Medicaid. Coverage varies by plan. Our admissions team will verify your specific TMS benefits at no cost.",
+    a: "TMS at the Phoenix campus is currently offered on a private-pay basis while Desert TMS LLC completes credentialing with insurance payers. We do not accept Medicare or Medicaid. Call (623) 305-0496 and we will walk you through cost and payment options.",
   },
   {
     q: "How long does a TMS treatment course take?",
@@ -109,15 +121,19 @@ const faqs = [
   },
   {
     q: "Can TMS be combined with my current therapy or medication?",
-    a: "Yes. TMS is designed to work alongside other treatments including psychotherapy, medication, and residential programs. At DRC, TMS will integrate directly with our clinical programs as part of your treatment plan.",
+    a: "Yes. TMS is designed to work alongside other treatments including psychotherapy, medication, and residential programs. TMS is provided by Desert TMS LLC, an affiliated licensed provider on-site at Desert Recovery Centers, and sessions are coordinated with your clinical treatment plan.",
+  },
+  {
+    q: "Can teenagers get TMS therapy?",
+    a: "Yes. NeuroStar TMS is FDA-cleared for adolescents ages 15 to 21 as an add-on treatment for depression, and adolescent TMS is provided by Desert TMS LLC, an affiliated licensed provider on-site at Desert Recovery Centers. Treatment requires parental consent, and the clinical team completes a full evaluation to confirm TMS is appropriate before sessions begin.",
   },
   {
     q: "Is TMS safe?",
-    a: "NeuroStar TMS has been delivered in over 8.2 million treatments worldwide. The most common side effect is mild scalp discomfort or headache during treatment that typically resolves quickly. Serious side effects are rare. Our clinical team will evaluate your full medical history before recommending TMS.",
+    a: "NeuroStar TMS has been delivered in over 8 million treatments worldwide, according to NeuroStar. The most common side effect is mild scalp discomfort or headache during treatment that typically resolves quickly. Serious side effects are rare. Our clinical team will evaluate your full medical history before recommending TMS.",
   },
   {
     q: "Is NeuroStar TMS therapy available now at Desert Recovery Centers?",
-    a: "Yes. NeuroStar TMS therapy is now available at our Phoenix outpatient center at 4160 N. 108th Ave, Phoenix, AZ 85037. Call (623) 305-0496 to schedule your initial consultation. Most patients begin treatment within one to two weeks of their first call.",
+    a: "Yes. NeuroStar TMS therapy is available now at 4160 N. 108th Ave, Phoenix, AZ 85037, provided by Desert TMS LLC, an affiliated licensed provider on-site at Desert Recovery Centers. Call (623) 305-0496 to schedule your initial consultation. Most patients begin treatment within one to two weeks of their first call.",
   },
 ] as const;
 
@@ -210,7 +226,7 @@ export default function TMSTherapyPage() {
     <>
       <InlineFAQSchema items={faqs} />
       <VideoSchemas path="/treatments/tms-therapy/" />
-      <MedicalWebPageSchema url="/treatments/tms-therapy" name="NeuroStar TMS Therapy" dateModified="2026-05-07" />
+      <MedicalWebPageSchema url="/treatments/tms-therapy" name="NeuroStar TMS Therapy" dateModified="2026-07-14" />
       <SchemaScript schema={[
         {
           "@context": "https://schema.org",
@@ -218,20 +234,23 @@ export default function TMSTherapyPage() {
           "@id": "https://desertrecoverycenters.com/treatments/tms-therapy#therapy",
           "name": "NeuroStar TMS Therapy",
           "alternateName": "Transcranial Magnetic Stimulation",
-          "description": "FDA-cleared non-invasive brain stimulation therapy for major depressive disorder, anxious depression, and OCD. Available at Desert Recovery Centers Phoenix.",
+          "description": "FDA-cleared non-invasive brain stimulation therapy for major depressive disorder, anxious depression, and OCD in adults, and an add-on treatment for depression in adolescents ages 15 to 21. Transcranial Magnetic Stimulation (TMS) services are provided by Desert TMS LLC, a separately licensed Arizona Outpatient Treatment Center located within the Desert Recovery Centers campus.",
           "url": "https://desertrecoverycenters.com/treatments/tms-therapy",
+          "howPerformed": "Focused magnetic pulses are delivered to a mapped area of the brain that regulates mood during short outpatient sessions while the patient sits awake, with no anesthesia and no recovery time.",
+          "bodyLocation": "Brain (dorsolateral prefrontal cortex)",
+          "followup": "A standard course is 5 sessions per week for 4 to 6 weeks, with each session taking as little as 19 minutes.",
           "recognizingAuthority": { "@type": "Organization", "name": "U.S. Food and Drug Administration", "url": "https://www.fda.gov" },
           "legalStatus": "FDA Cleared",
           "relevantSpecialty": "Psychiatric",
           "study": [
-            { "@type": "MedicalStudy", "name": "NeuroStar Outcomes Registry", "description": "83% of patients experienced measurable improvement, 62% achieved full remission in real-world outcomes study of over 8.2 million treatments." },
+            { "@type": "MedicalStudy", "name": "NeuroStar Outcomes Registry", "description": "83% of patients experienced measurable improvement, 62% achieved full remission in real-world outcomes study of over 8 million treatments." },
             { "@type": "MedicalStudy", "name": "NIMH-Funded Randomized Controlled Trial", "description": "Patients treated with NeuroStar were 4 times more likely to achieve remission compared to sham treatment." },
           ],
           "availableAtOrFrom": {
             "@type": "MedicalClinic",
-            "name": "Desert Recovery Centers - Phoenix",
+            "name": "Desert TMS LLC",
             "address": { "@type": "PostalAddress", "streetAddress": "4160 N 108th Ave", "addressLocality": "Phoenix", "addressRegion": "AZ", "postalCode": "85037" },
-            "telephone": "+16029058070",
+            "telephone": "+16233050496",
           },
         },
         {
@@ -323,7 +342,7 @@ export default function TMSTherapyPage() {
               transition={{ duration: 0.65, delay: 0.5 }}
               className="text-white/70 font-body text-lg md:text-xl max-w-3xl mx-auto leading-relaxed mb-4"
             >
-              FDA-cleared, drug free, non invasive treatment for depression, anxious depression, and OCD. Now available at our Phoenix outpatient center. Out-of-network commercial insurance and in-network TriCare/TriWest accepted. Sessions as short as 19 minutes.
+              FDA-cleared, drug free, non invasive treatment for depression, anxious depression, and OCD. Now available at our Phoenix outpatient center. Private pay available while payer credentialing is completed. Sessions as short as 19 minutes.
             </motion.p>
 
             {/* Certified NeuroStar Provider Badge */}
@@ -336,7 +355,7 @@ export default function TMSTherapyPage() {
               <svg className="w-5 h-5 text-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
               </svg>
-              <span className="text-white/90 text-sm font-medium">Certified NeuroStar Provider</span>
+              <span className="text-white/90 text-sm font-medium">Desert TMS LLC, Certified NeuroStar Provider</span>
             </motion.div>
           </motion.div>
 
@@ -354,7 +373,7 @@ export default function TMSTherapyPage() {
               Call (623) 305-0496
             </motion.a>
             <motion.a
-              href="/insurance"
+              href="/contact"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.75 }}
@@ -362,9 +381,38 @@ export default function TMSTherapyPage() {
               whileTap={{ scale: 0.97 }}
               className="bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/30 text-white font-semibold text-base px-8 py-4 rounded-xl transition-all w-full sm:w-auto text-center cursor-pointer"
             >
-              Verify Insurance Free
+              Schedule a Consultation
             </motion.a>
           </div>
+        </div>
+      </section>
+
+      {/* ── TMS at a Glance ──────────────────────────────────── */}
+      <section className="py-14 md:py-18 bg-white border-b border-forest/5">
+        <div className="max-w-container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.6 }}
+            className="max-w-3xl mx-auto"
+          >
+            <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mb-6 text-center">
+              TMS Therapy at a Glance
+            </h2>
+            <dl className="bg-cream rounded-2xl border border-gold/10 divide-y divide-gold/10">
+              {keyFacts.map((fact) => (
+                <div key={fact.label} className="grid sm:grid-cols-[160px_1fr] gap-1 sm:gap-4 px-6 py-4">
+                  <dt className="text-sage font-body text-xs tracking-[0.15em] uppercase font-semibold pt-0.5">
+                    {fact.label}
+                  </dt>
+                  <dd className="text-forest font-body text-sm leading-relaxed">
+                    {fact.value}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+          </motion.div>
         </div>
       </section>
 
@@ -402,7 +450,7 @@ export default function TMSTherapyPage() {
                   </span>
                 </div>
                 <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold mb-6">
-                  How NeuroStar TMS Works
+                  What Is TMS Therapy and How Does It Work?
                 </h2>
               </motion.div>
               <motion.p
@@ -412,9 +460,10 @@ export default function TMSTherapyPage() {
                 transition={{ duration: 0.65, delay: 0.15 }}
                 className="text-forest/70 font-body leading-relaxed mb-8"
               >
-                Transcranial Magnetic Stimulation uses focused magnetic pulses,
-                similar to an MRI, to stimulate the specific area of the brain
-                responsible for mood regulation. When depression takes hold, the
+                Transcranial magnetic stimulation (TMS) is a non-drug,
+                non-invasive treatment for depression that uses focused magnetic
+                pulses, similar to an MRI, to stimulate the specific area of the
+                brain responsible for mood regulation. When depression takes hold, the
                 connections in this region become underactive. NeuroStar TMS
                 reawakens those connections, producing lasting changes in
                 neurotransmitter levels without medication and without systemic
@@ -476,8 +525,13 @@ export default function TMSTherapyPage() {
               <span className="w-8 h-px bg-gold" />
             </div>
             <h2 className="font-display text-3xl md:text-4xl text-white font-semibold">
-              Results That Speak for Themselves
+              How Well Does TMS Work?
             </h2>
+            <p className="text-white/60 font-body leading-relaxed max-w-2xl mx-auto mt-4">
+              Most people who complete a full NeuroStar treatment course
+              experience measurable relief from depression, according to
+              NeuroStar&apos;s published outcomes data.
+            </p>
           </motion.div>
 
           <motion.div
@@ -510,9 +564,8 @@ export default function TMSTherapyPage() {
                   "more likely to achieve remission compared to sham treatment in NIMH-funded independent clinical trial",
               },
               {
-                value: 8.2,
+                value: 8,
                 suffix: "M+",
-                isDecimal: true,
                 label:
                   "NeuroStar treatments delivered worldwide, backed by the largest clinical dataset of any TMS system",
               },
@@ -527,11 +580,7 @@ export default function TMSTherapyPage() {
                 className="text-center bg-white/5 rounded-xl p-6 backdrop-blur-sm"
               >
                 <div className="text-gold font-display text-5xl md:text-6xl font-bold mb-3">
-                  {stat.isDecimal ? (
-                    <span>8.2<span className="text-4xl">M+</span></span>
-                  ) : (
-                    <AnimatedCounter target={stat.value} suffix={stat.suffix} />
-                  )}
+                  <AnimatedCounter target={stat.value} suffix={stat.suffix} />
                 </div>
                 <p className="text-white/60 font-body text-sm leading-relaxed">
                   {stat.label}
@@ -624,6 +673,56 @@ export default function TMSTherapyPage() {
         </div>
       </section>
 
+      {/* ── Adolescent TMS ───────────────────────────────────── */}
+      <section className="py-20 md:py-28 bg-forest relative overflow-hidden">
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
+        <div className="max-w-container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.6 }}
+            className="max-w-3xl mx-auto"
+          >
+            <div className="flex items-center gap-3 mb-4">
+              <span className="w-8 h-px bg-gold" />
+              <span className="text-gold font-body text-xs tracking-[0.2em] uppercase font-medium">
+                Adolescent TMS
+              </span>
+            </div>
+            <h2 className="font-display text-3xl md:text-4xl text-white font-semibold mb-6">
+              Can Teenagers Get TMS?
+            </h2>
+            <p className="text-white/70 font-body leading-relaxed mb-6">
+              Yes. NeuroStar TMS is FDA-cleared for adolescents ages 15 to 21 as
+              an add-on treatment for depression, and adolescent TMS is provided
+              by Desert TMS LLC, an affiliated licensed provider on-site at
+              Desert Recovery Centers. According to NeuroStar, it is
+              the first and only TMS system FDA-cleared for this age group, used
+              alongside standard care such as therapy or medication rather than
+              in place of it.
+            </p>
+            <p className="text-white/70 font-body leading-relaxed mb-6">
+              For a teenager who has tried antidepressant medication without
+              enough relief, TMS offers a non-drug option with a well-studied
+              safety profile. Parents are involved at every step: treatment
+              requires parental consent, and the clinical team completes a full
+              evaluation to confirm TMS is appropriate before any sessions
+              begin.
+            </p>
+            <p className="text-white/50 font-body text-sm leading-relaxed">
+              An evening intensive outpatient program for adolescents ages 12 to
+              17 is also available at the same Phoenix location. Learn more on
+              the{" "}
+              <a href="/adolescent-treatment" className="text-gold hover:underline">
+                adolescent treatment page
+              </a>
+              .
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
       {/* ── Why NeuroStar ────────────────────────────────────── */}
       <section className="py-20 md:py-28 bg-cream">
         <div className="max-w-container mx-auto px-6">
@@ -635,11 +734,11 @@ export default function TMSTherapyPage() {
             className="text-center mb-14"
           >
             <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold mb-4">
-              Why We Chose NeuroStar
+              Why NeuroStar?
             </h2>
             <p className="text-forest/70 font-body max-w-2xl mx-auto leading-relaxed">
-              At Desert Recovery Centers, we do not add treatments to our program
-              without rigorous clinical evaluation. We chose NeuroStar because the
+              Desert TMS LLC, the affiliated licensed provider that delivers TMS
+              on-site at Desert Recovery Centers, chose NeuroStar because the
               evidence is unmatched.
             </p>
           </motion.div>
@@ -692,14 +791,14 @@ export default function TMSTherapyPage() {
               transition={{ duration: 0.6 }}
             >
               <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
-                Our Phoenix TMS Suite
+                The Phoenix TMS Suite
               </span>
               <div className="w-[60px] h-0.5 bg-gold mt-4 mb-4" />
               <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold mb-6">
-                The Same Technology. A Familiar Setting.
+                Where Is TMS Offered in Phoenix?
               </h2>
               <p className="text-forest/70 font-body leading-relaxed">
-                Our Phoenix outpatient center at 4160 N. 108th Ave houses a dedicated NeuroStar treatment suite. You come in for your session, sit in the comfortable treatment chair, complete your 19 minutes, and go about your day. No waiting room full of strangers. No clinical sterility. Just a focused, quiet space designed for exactly this purpose, staffed by a team that knows your name and your treatment plan.
+                Our Phoenix outpatient center at 4160 N. 108th Ave houses a dedicated NeuroStar treatment suite. Transcranial Magnetic Stimulation (TMS) services are provided by Desert TMS LLC, a separately licensed Arizona Outpatient Treatment Center located within the Desert Recovery Centers campus. You come in for your session, sit in the comfortable treatment chair, complete your 19 minutes, and go about your day. No waiting room full of strangers. No clinical sterility. Just a focused, quiet space designed for exactly this purpose, staffed by a team that knows your name and your treatment plan.
               </p>
             </motion.div>
             <motion.div
@@ -797,8 +896,9 @@ export default function TMSTherapyPage() {
             </h2>
             <p className="text-forest/70 font-body leading-relaxed mb-6">
               At Desert Recovery Centers, we have always believed that lasting
-              recovery requires treating the whole person. TMS therapy will
-              integrate seamlessly with our existing clinical programs, including
+              recovery requires treating the whole person. TMS therapy, provided
+              on-site by Desert TMS LLC, will integrate seamlessly with
+              DRC&apos;s clinical programs, including
               CBT, DBT, EMDR, BridgeWork&trade;, and dual diagnosis treatment. For
               clients whose depression has not fully responded to therapy alone, TMS
               offers a powerful neurological complement to the clinical work already
@@ -827,7 +927,7 @@ export default function TMSTherapyPage() {
               TMS Is Available Now at Our Phoenix Center
             </h2>
             <p className="text-white/60 font-body leading-relaxed mb-10">
-              Our NeuroStar TMS suite is open and accepting new patients. Call us today to schedule your initial consultation, verify your insurance, and find out if TMS is right for you. Most patients begin treatment within one to two weeks of their first call.
+              The NeuroStar TMS suite at the Phoenix campus is open and accepting new patients. Call us today to schedule your initial consultation, talk through private-pay cost and options, and find out if TMS is right for you. Most patients begin treatment within one to two weeks of their first call.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
@@ -835,12 +935,6 @@ export default function TMSTherapyPage() {
                 className="bg-gold hover:bg-gold-dark text-white font-semibold text-base px-8 py-4 rounded-xl transition-colors shadow-lg shadow-gold/25 w-full sm:w-auto text-center"
               >
                 Call (623) 305-0496
-              </a>
-              <a
-                href="/insurance"
-                className="bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/30 text-white font-semibold text-base px-8 py-4 rounded-xl transition-all w-full sm:w-auto text-center"
-              >
-                Verify Insurance Free
               </a>
               <a
                 href="/contact"
@@ -917,7 +1011,11 @@ export default function TMSTherapyPage() {
         <div className="max-w-container mx-auto px-6">
           <p className="text-forest/40 font-body text-xs leading-relaxed text-center max-w-4xl mx-auto">
             NeuroStar TMS therapy is FDA-cleared for Major Depressive Disorder,
-            anxious depression, and OCD. Individual results vary. This page is for informational purposes only
+            anxious depression, and OCD in adults, and as an add-on treatment
+            for depression in adolescents ages 15 to 21. Individual results vary.
+            Transcranial Magnetic Stimulation (TMS) services are provided by
+            Desert TMS LLC, a separately licensed Arizona Outpatient Treatment
+            Center located within the Desert Recovery Centers campus. This page is for informational purposes only
             and does not constitute medical advice. Please consult with a qualified
             healthcare professional to determine if TMS is appropriate for your
             situation. Medically reviewed by Dr. An Nguyen, Licensed Clinical
