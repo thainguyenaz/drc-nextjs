@@ -86,7 +86,7 @@ const facilities = [
     label: "PHP / IOP / TMS",
     address: "4160 N. 108th Ave, Phoenix, AZ 85037",
     description:
-      "Outpatient addiction and mental health treatment center offering PHP, IOP, and NeuroStar TMS therapy. The only integrated TMS program in west Phoenix.",
+      "Outpatient addiction and mental health treatment center offering PHP and IOP, with on-site NeuroStar TMS provided by Desert TMS LLC. The only integrated TMS program in west Phoenix.",
     services: ["PHP", "IOP", "OP", "TMS Therapy"],
     image: "/images/locations/phoenix/phoenix-lobby-2.jpg",
     href: "/locations/phoenix-php-iop",
@@ -139,9 +139,9 @@ export default function FacilitiesPage() {
                 Desert Recovery Centers operates three treatment facilities in
                 the Phoenix metropolitan area. Our gender-specific residential
                 programs in Glendale and Scottsdale each maintain a strict
-                10-bed maximum, and our Phoenix outpatient center provides PHP,
-                IOP, and the only integrated NeuroStar TMS program in west
-                Phoenix. Before residential care, DRC coordinates{" "}
+                10-bed maximum, and our Phoenix outpatient center provides PHP
+                and IOP and is home to the only integrated NeuroStar TMS program
+                in west Phoenix, provided on-site by Desert TMS LLC. Before residential care, DRC coordinates{" "}
                 <Link href="/levels-of-care/detox" className="text-gold font-semibold hover:underline">medical detox</Link>{" "}
                 through trusted partner providers for clients who need it.
               </p>

@@ -54,7 +54,7 @@ const locations = [
     phone: "(623) 305-0496",
     phoneTel: "+16233050496",
     description:
-      "Outpatient addiction and mental health treatment, PHP, IOP, OP, and NeuroStar TMS therapy. The only integrated TMS program in west Phoenix.",
+      "Outpatient addiction and mental health treatment, PHP, IOP, and OP, with on-site NeuroStar TMS provided by Desert TMS LLC. The only integrated TMS program in west Phoenix.",
     services: ["PHP", "IOP", "OP", "TMS Therapy"],
     amenities: ["Treatment Rooms", "Group Therapy Space", "TMS Suite", "Kitchen"],
     image: "/images/locations/phoenix/phoenix-lobby-2.jpg",
