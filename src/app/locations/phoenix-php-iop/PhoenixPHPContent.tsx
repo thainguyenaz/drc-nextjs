@@ -185,7 +185,6 @@ const insuranceProviders = [
   "Aetna",
   "Cigna",
   "UnitedHealthcare",
-  "Beacon Health",
 ];
 
 const gallery = [

@@ -844,7 +844,7 @@ ${DISCLAIMER}`
 <p>Residential treatment is typically necessary for clients in the early stages of recovery, those with severe medical or psychiatric conditions that require continuous monitoring, or individuals who do not have a safe and stable living environment to return to. PHP is appropriate for clients who are medically stable, have a supportive home environment, and can safely manage their evenings and weekends without clinical supervision.</p>
 
 <h2>Insurance Coverage for PHP</h2>
-<p>PHP is covered by most commercial insurance plans and by AHCCCS (Arizona's Medicaid program) when medically necessary. Coverage is typically authorized based on a clinical assessment that demonstrates the client's need for this level of care. At Desert Recovery Centers, our admissions team handles insurance verification and prior authorization on behalf of each client, ensuring that the process is as simple and transparent as possible.</p>
+<p>PHP is covered on an out-of-network basis by most major commercial insurance plans when medically necessary. Coverage is typically authorized based on a clinical assessment that demonstrates the client's need for this level of care. At Desert Recovery Centers, our admissions team handles insurance verification and prior authorization on behalf of each client, ensuring that the process is as simple and transparent as possible.</p>
 
 <h2>PHP as a Step Down in the Continuum of Care</h2>
 <p>One of the most important functions of PHP is its role as a step down from residential treatment. Research consistently shows that abrupt transitions from intensive treatment to no treatment produce high relapse rates. PHP provides a gradual, clinically supported transition that allows clients to practice the skills they learned in residential treatment while still having daily access to clinical support.</p>
@@ -1126,6 +1126,7 @@ ${DISCLAIMER}`
 
 <h3>Medicare</h3>
 <p>Medicare Part A covers inpatient psychiatric and substance use treatment, while Part B covers outpatient mental health services, including individual and group therapy, psychiatric visits, and partial hospitalization (<a href="https://www.medicare.gov/coverage/mental-health-substance-use-disorder" target="_blank" rel="noopener">Medicare.gov — Mental Health &amp; Substance Use Disorders</a>). Medicare Advantage plans may offer additional behavioral health benefits beyond original Medicare.</p>
+<p>Please note that Desert Recovery Centers accepts out-of-network coverage from most major commercial insurance plans and is in-network with TriCare and TriWest; Medicare and AHCCCS (Medicaid) are not accepted forms of payment at our facilities.</p>
 
 <h2>Prior Authorization: What It Is and How It Works</h2>
 <p>Most insurance plans require prior authorization before covering residential treatment, PHP, or IOP. Prior authorization is the process by which the insurance company reviews clinical information to determine whether the requested level of care is medically necessary. This typically involves the treatment facility submitting clinical documentation, including the client's diagnosis, symptom severity, functional impairment, and the rationale for the recommended level of care.</p>
