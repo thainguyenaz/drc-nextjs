@@ -7,7 +7,10 @@ import Navigation from "@/components/Navigation";
 import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { MedicalTherapySchema, MedicalWebPageSchema } from "@/lib/seo";
+import { MedicalTherapySchema, MedicalWebPageSchema, VideoSchemas } from "@/lib/seo";
+import YouTubeEmbed from "@/components/YouTubeEmbed";
+import VideoTranscript from "@/components/VideoTranscript";
+import TestimonialDisclaimer from "@/components/TestimonialDisclaimer";
 import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
 import { faqData } from "@/data/faq-data";
 import SchemaScript from "@/components/SchemaScript";
@@ -65,6 +68,7 @@ export default function DualDiagnosisPage() {
   return (
     <>
       <SchemaScript schema={[getFAQSchema(faqData["dual-diagnosis-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/treatments/dual-diagnosis-treatment"))]} />
+      <VideoSchemas path="/treatments/dual-diagnosis-treatment/" />
       <MedicalWebPageSchema url="/treatments/dual-diagnosis-treatment" name="Dual Diagnosis Treatment Center Arizona | Desert Recovery Centers" dateModified="2026-04-08" />
       <MedicalTherapySchema
         name="Dual Diagnosis Treatment"
@@ -135,6 +139,36 @@ export default function DualDiagnosisPage() {
               Our clinical psychologists, psychiatrist, and medical team collaborate daily to ensure that medication management, therapy protocols, and holistic programming work in concert, not at cross-purposes.
             </p>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Client Story: Jeff */}
+      <section className="py-20 md:py-28 bg-white border-t border-gray-100">
+        <div className="max-w-container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
+              Client Story
+            </span>
+            <div className="w-[60px] h-0.5 bg-gold mx-auto mt-4 mb-4" />
+            <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold">
+              Jeff&apos;s Story: Finding Mental Health First Treatment
+            </h2>
+          </motion.div>
+          <div className="max-w-3xl mx-auto">
+            <YouTubeEmbed
+              youtubeId="7EuzOR0lwk4"
+              title="Jeff's Story: Finding Mental Health First Treatment | Desert Recovery Centers"
+              caption="Other programs treated the substance and missed the mental health. This is Jeff's story."
+              belowVideo={<TestimonialDisclaimer />}
+            />
+            <VideoTranscript youtubeId="7EuzOR0lwk4" title="Jeff's Story" />
+          </div>
         </div>
       </section>
 

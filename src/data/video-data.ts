@@ -31,9 +31,13 @@ export const videoData: Record<string, VideoEntry[]> = {
   // ── LOCATION PAGES — 1 facility tour each ──
   "/locations/glendale/": [
     { youtubeId: "00ZDcQjXoE8", title: "Desert Recovery Centers Glendale Facility Tour", description: "Tour the Desert Recovery Centers Glendale Arizona luxury residential treatment facility.", uploadDate: "2024-10-01T00:00:00+00:00" },
+    { youtubeId: "vdI4QnsxAJQ", title: "Dylan's Story: Recovery After Grief, Homelessness, and Addiction | Desert Recovery Centers", description: "From living in his car to helping others. This is Dylan's story. Connection is the opposite of addiction.", uploadDate: "2026-07-15" },
+    { youtubeId: "5OMQUlfAcKk", title: "A Veteran's Recovery: Chris Herrera's Story | Desert Recovery Centers", description: "A service injury. Ten years on pills. Profound loss. This is veteran Chris Herrera's story of rebuilding his life.", uploadDate: "2026-07-15" },
   ],
   "/locations/scottsdale/": [
     { youtubeId: "7qvyphmKNxg", title: "Desert Recovery Centers Scottsdale Facility Tour", description: "Tour the Desert Recovery Centers North Scottsdale Arizona luxury residential treatment facility.", uploadDate: "2024-10-01T00:00:00+00:00" },
+    { youtubeId: "ANqsMXkAeGQ", title: "Mandy's Story: Hope After Bipolar and Alcohol Addiction | Desert Recovery Centers", description: "Twelve-step recovery never reached the root for Mandy. Here is how mental-health-based care changed that.", uploadDate: "2026-07-15" },
+    { youtubeId: "yW910OrE-1k", title: "Daleny's Story: From Hopeless to a Future | Desert Recovery Centers", description: "She could not picture a month ahead. This is Daleny's story, from hopeless to a future.", uploadDate: "2026-07-15" },
   ],
   "/locations/phoenix-php-iop/": [
     { youtubeId: "rMkEYhoW-kE", title: "Desert Recovery Centers Phoenix Facility Tour", description: "Tour the Desert Recovery Centers Phoenix Arizona PHP, IOP, and outpatient treatment facility.", uploadDate: "2024-10-01T00:00:00+00:00" },
@@ -129,7 +133,7 @@ export const videoData: Record<string, VideoEntry[]> = {
     { youtubeId: "t8ocXO9s9lw", title: "Why Holistic Treatment Is Required for Long-Term Success", description: "The role of holistic therapies in sustainable addiction and mental health recovery.", uploadDate: "2024-10-01T00:00:00+00:00" },
   ],
   "/treatments/dual-diagnosis-treatment/": [
-    { youtubeId: "Il5BV-EYP3E", title: "How Do Outcomes Improve When Clients Follow a Full Continuum of Care?", description: "Why dual diagnosis treatment across a full continuum of care leads to better recovery outcomes.", uploadDate: "2025-03-01T00:00:00+00:00" },
+    { youtubeId: "7EuzOR0lwk4", title: "Jeff's Story: Finding Mental Health First Treatment | Desert Recovery Centers", description: "Other programs treated the substance and missed the mental health. This is Jeff's story.", uploadDate: "2026-07-15" },
   ],
   "/treatments/tms-therapy/": [
     { youtubeId: "4yWqQ_VVzgE", title: "NeuroStar TMS Therapy, How It Works", description: "How NeuroStar TMS therapy works as an FDA-cleared, non-invasive treatment for depression. Video courtesy of NeuroStar.", uploadDate: "2022-11-22T00:00:00+00:00" },
