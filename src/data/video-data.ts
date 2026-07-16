@@ -9,9 +9,8 @@ export interface VideoEntry {
 }
 
 export const videoData: Record<string, VideoEntry[]> = {
-  // ── HOMEPAGE — 3 videos (overview, patient story, treatment overview) ──
+  // ── HOMEPAGE — 1 video (community stories; brand story #65 is embed-only, canonical on /about/) ──
   "/": [
-    { youtubeId: "6x9IQq6h9Rk", title: "Desert Recovery Centers Overview", description: "An overview of Desert Recovery Centers luxury addiction and mental health treatment facilities in Arizona.", uploadDate: "2024-10-01T00:00:00+00:00" },
     { youtubeId: "LjK58DeWTSY", title: "Desert Recovery Centers Treatment Programs", description: "Learn about addiction and mental health treatment programs at Desert Recovery Centers.", uploadDate: "2024-10-01T00:00:00+00:00" },
   ],
 
