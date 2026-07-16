@@ -9,6 +9,7 @@ import ContactCTA from "./ContactCTA";
 
 const GoogleReviews = dynamic(() => import("@/components/GoogleReviews"), { ssr: false });
 import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
+import { VideoSchemas } from "@/lib/seo";
 import { faqData } from "@/data/faq-data";
 import SchemaScript from "@/components/SchemaScript";
 import FAQSection from "@/components/FAQSection";
@@ -29,6 +30,7 @@ export default function ContactPage() {
   return (
     <>
       <SchemaScript schema={[getFAQSchema(faqData["contact"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/contact"))]} />
+      <VideoSchemas path="/contact/" />
       <Navigation />
       <Breadcrumb items={getBreadcrumbsFromPathname("/contact")} />
       <PageHero

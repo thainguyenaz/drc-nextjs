@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import SchemaScript from "@/components/SchemaScript";
 import InsuranceContent from "./InsuranceContent";
 import { getBreadcrumbSchema } from "@/lib/schema";
+import { VideoSchemas } from "@/lib/seo";
 import Breadcrumb from "@/components/Breadcrumb";
 import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
 
@@ -50,6 +51,7 @@ export default function InsurancePage() {
   return (
     <>
       <SchemaScript schema={[insuranceFaqSchema, getBreadcrumbSchema(getBreadcrumbsFromPathname("/insurance"))]} />
+      <VideoSchemas path="/insurance/" />
       <Navigation />
       <Breadcrumb items={getBreadcrumbsFromPathname("/insurance")} />
       <PageHero

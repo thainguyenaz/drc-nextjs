@@ -5,6 +5,9 @@
 // Paragraph breaks are blank lines (double newline).
 
 export const videoTranscripts: Record<string, string> = {
+  // #32 Why I Became a Clinical Psychologist | Dr. An Nguyen, Desert Recovery Centers
+  "MjuIDXGHwCE":
+    "Becoming a clinical psychologist many years ago, I think what kind of drew me to this field is that I like helping people, right? And learning about people. I was a teacher many, many years ago. So I enjoy teaching, but also learning. I've had many family members, friends that have suffered from mental illness, substance use disorder. When I pursued this, You know, it was probably because I wanted to help them. My goal is to really fill in those gaps, right? So at DRC, I know, and I confidently stand behind the fact of the treatment and the evidence based care that we provide, that is unlike no other.",
   // #38 What Can I Bring to Rehab? | Desert Recovery Centers
   "aapeAd-XNpE":
     "Can you bring medication to treatment? You absolutely can. Medications are inventoried as they are inventoried out. Oftentimes our medical providers will prescribe medications. I would suggest a week's worth of clothing. I would suggest something to keep your hands busy. That'd be crossword puzzles or regular puzzles or whatever your hobby may be. Some people are into music, some people are into poetry. Some people are into art. It's important to keep your mind, body, and hands busy while you are learning to manage and or cope with life's difficulties.",
@@ -35,12 +38,27 @@ export const videoTranscripts: Record<string, string> = {
   // #52 Can I Have My Phone in Rehab? | Desert Recovery Centers
   "8BNDkLsa8mE":
     "Can you have your phone? Yes, you can have your phone from 5 to 7 p.m. every night. Reason for that restriction is to keep you safe and free from harmful individuals that don't need to be making contact with you throughout the day.",
+  // #54 The Heartbeat of DRC: Our Staff | Dr. An Nguyen
+  "p1e4DHF_qR0":
+    "Here, DRC, of course, we're always highlighting and talking about our clinical psychologist, our doctoral trained therapist, our evidence based care. One part of a DRC, which is kind of the heartbeat, is our staff, right? Our BHT staff that are outside of all the clinical care our clients are receiving, there, with our clients, 24/7. And for us, it's so very important, who we bring on, to work with us here at DRC, because we want to make sure that they're trained, right? That they understand a mental health primary facility, and what that looks like. Our staff is an extension of our clinical team. So they receive hours of training. Every week, right? Even before they're on board with us, because they have to be aligned with our clinical staff, and understanding how to work with our clients, and always providing the highest level of care.",
   // #55 About Our Church Location (Women's Mental Health Facility) | Desert Recovery Centers
   "08UV2dP0qZo":
     "Here at our church location, it differs from our men's location in the fact that we are mental health primary, substance abuse secondary. Gender specific care is important to minimize distraction, distraction of someone of the other sex, of reluctance to become open and vulnerable because of another sex. It's people that have trauma related to the other sex. These things all create serious barriers to treatment progress.",
   // #56 Men and Depression: You Are Not Alone | Desert Recovery Centers
   "pc_QS4khZsw":
     "Depression is a huge problem right now, especially among men. I want to let you know, we have specific programs and counselors, along with therapists, to be able to address those issues for you here at Desert Recovery. I get it. In society today, men aren't supposed to talk about depression. They're not supposed to talk about their feelings. I just want to let you know you're not alone anymore. Please understand, you matter, you're valuable, and we're here for you. Please reach out to Desert Recovery Centers.",
+  // #57 We Will Be Your Strength | Desert Recovery Centers
+  "zoqFmK0L7W0":
+    "Depression and mental health and substance abuse can feel so lonely and you do not have to walk through this alone. I've been there. I know how that feels in that darkness. We will be your support. We will be your strength. will fight this fight with you. So pick up the phone, let us be your person. Let us help you, let us support you, and we will stand by you from the moment that you walk through those doors.",
+  // #58 Insurance and FMLA for Rehab: What You Should Know | Desert Recovery Centers
+  "j_iBdlrFojQ":
+    "we're going to walk side by side. The first 30 days, an inpatient, we're gonna carry you. And then the next 90, we're gonna walk with you. So what I need you to do is pick up that phone. We'll verify benefits, we work with all the major insurance companies, and if you have an amazing employer like I do, you might even have an FMLA. And what that means is we might even be able to get you paid while you're here, because your job loves you as much as we do. So pick up that phone and call, Desert Recovery Centers is waiting.",
+  // #60 Get a Personalized Assessment | Desert Recovery Centers
+  "UJmVdL-NDXk":
+    "If you or someone you care about is struggling with mental health or addiction, we're here to help. Reach out for a personalized assessment, a consultation with myself, where we can discuss what would be the best path for you or your loved one.",
+  // #62 Just Reach Out and Call | Desert Recovery Centers
+  "_HIvKUSmGIw":
+    "I wish there wasn't such a stigma around mental health. I believe everyone struggles in some ways, shape, or form with their mental health. There is so many people out there that need help, and all they have to do is reach out and call us, and we will give them all the help they need. I've literally built my career around helping people because I've struggled for so long. And all I want to do now is help people struggle less. So give us a call.",
   // #64 Born From an Act of Love | The Desert Recovery Centers Story
   "3B78Fzu6Y1M":
     "It was very scary. I felt extremely lost in the world, wasn't sure what the next step would be, or how to get out of the dark cold that I had been in for many years. And in that moment, I just told her, I don't know what to do. I need help. Desert Recovery Centers was born out of an act of love, of kindness, and of service. Love is an action word. Just, like, a warm hug walking into this house. You're not alone. I have been there. There are so many people that have been there, and this disease, whether it be mental illness or substance abuse, it does make you feel alone and singled out, but, you know, there is a lot of hope. We just kind of have to take that first step in asking for help. If you have 1% of willingness, that's all you need. That's all we need to start your journey of recovery, and then we will help you build on that. Because we're gonna walk side by side. The first 30 days, an inpatient we're gonna carry you, and then the next 90, we're gonna walk with you. So pick up that phone and call. Desert Recovery Centers is waiting.",

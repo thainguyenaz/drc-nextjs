@@ -7,6 +7,9 @@ import Footer from "@/components/Footer";
 import SchemaScript from "@/components/SchemaScript";
 import GetHelpForm from "@/components/forms/GetHelpForm";
 import { getBreadcrumbSchema } from "@/lib/schema";
+import { VideoSchemas } from "@/lib/seo";
+import YouTubeEmbed from "@/components/YouTubeEmbed";
+import VideoTranscript from "@/components/VideoTranscript";
 import Breadcrumb from "@/components/Breadcrumb";
 import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
 import AnimatedSection from "@/components/animated/AnimatedSection";
@@ -88,6 +91,7 @@ export default function GetHelpPage() {
           getBreadcrumbSchema(getBreadcrumbsFromPathname("/get-help")),
         ]}
       />
+      <VideoSchemas path="/get-help/" />
       <Navigation />
       <Breadcrumb items={getBreadcrumbsFromPathname("/get-help")} />
       <PageHero
@@ -174,6 +178,16 @@ export default function GetHelpPage() {
                   >
                     Verify your insurance online &rarr;
                   </Link>
+                </div>
+
+                <div className="mt-10 md:max-w-[380px]">
+                  <YouTubeEmbed
+                    youtubeId="zoqFmK0L7W0"
+                    title="We Will Be Your Strength | Desert Recovery Centers"
+                    caption="Depression and addiction can feel lonely. Lauren has been there, and she wants you to know: we will be your strength."
+                    vertical
+                  />
+                  <VideoTranscript youtubeId="zoqFmK0L7W0" title="We Will Be Your Strength" />
                 </div>
               </div>
             </AnimatedSection>

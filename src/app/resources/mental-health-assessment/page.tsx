@@ -4,7 +4,9 @@ import PageHero from "@/components/PageHero";
 import SelfAssessmentTool from "@/components/SelfAssessmentTool";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { buildMetadata, BreadcrumbSchema, MedicalWebPageSchema } from "@/lib/seo";
+import { buildMetadata, BreadcrumbSchema, MedicalWebPageSchema, VideoSchemas } from "@/lib/seo";
+import YouTubeEmbed from "@/components/YouTubeEmbed";
+import VideoTranscript from "@/components/VideoTranscript";
 
 export const metadata: Metadata = buildMetadata({
   title: "Free Mental Health Assessment, DRC",
@@ -17,6 +19,7 @@ export default function MentalHealthAssessmentPage() {
   return (
     <>
       <MedicalWebPageSchema url="/resources/mental-health-assessment" name="Free Mental Health Assessment, DRC" dateModified="2026-04-08" />
+      <VideoSchemas path="/resources/mental-health-assessment/" />
       <BreadcrumbSchema
         items={[
           { name: "Resources", path: "/resources" },
@@ -42,7 +45,8 @@ export default function MentalHealthAssessmentPage() {
       {/* Intro */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-container mx-auto px-6">
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-5xl mx-auto flex flex-col md:flex-row gap-10 items-start">
+            <div className="flex-1">
             <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mb-6">
               How Are You Really Doing?
             </h2>
@@ -55,6 +59,16 @@ export default function MentalHealthAssessmentPage() {
             <p className="text-gray-600 leading-relaxed text-lg">
               Your answers are completely private. Nothing is stored, recorded, or transmitted. This tool runs entirely in your browser.
             </p>
+            </div>
+            <div className="w-full md:w-[380px] md:flex-shrink-0">
+              <YouTubeEmbed
+                youtubeId="UJmVdL-NDXk"
+                title="Get a Personalized Assessment | Desert Recovery Centers"
+                caption="If you or someone you love is struggling, Dr. An Nguyen invites you to a personalized assessment."
+                vertical
+              />
+              <VideoTranscript youtubeId="UJmVdL-NDXk" title="Get a Personalized Assessment" />
+            </div>
           </div>
         </div>
       </section>

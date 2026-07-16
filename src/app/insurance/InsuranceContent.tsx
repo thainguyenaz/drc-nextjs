@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion";
 import InsuranceVerificationForm from "@/components/forms/InsuranceVerificationForm";
+import YouTubeEmbed from "@/components/YouTubeEmbed";
+import VideoTranscript from "@/components/VideoTranscript";
 
 const insurers = [
   { name: "Cigna", slug: "cigna", desc: "Out-of-network coverage available." },
@@ -71,6 +73,16 @@ export default function InsuranceContent() {
               <p className="text-gray-500 text-xs mt-4">
                 All information is protected by HIPAA and 42 CFR Part 2 federal confidentiality regulations.
               </p>
+
+              <div className="mt-10 md:max-w-[380px]">
+                <YouTubeEmbed
+                  youtubeId="j_iBdlrFojQ"
+                  title="Insurance and FMLA for Rehab: What You Should Know | Desert Recovery Centers"
+                  caption="Worried about work and cost? Here is how insurance and FMLA can help you get treatment, and maybe stay paid."
+                  vertical
+                />
+                <VideoTranscript youtubeId="j_iBdlrFojQ" title="Insurance and FMLA for Rehab" />
+              </div>
             </div>
 
             <div>

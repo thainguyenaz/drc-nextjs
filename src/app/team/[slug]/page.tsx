@@ -7,7 +7,20 @@ import Breadcrumb from "@/components/Breadcrumb";
 import SchemaScript from "@/components/SchemaScript";
 import { getPersonSchema, getBreadcrumbSchema } from "@/lib/schema";
 import { teamMembers } from "@/data/team-data";
-import { buildMetadata } from "@/lib/seo";
+import { buildMetadata, VideoSchemas } from "@/lib/seo";
+import YouTubeEmbed from "@/components/YouTubeEmbed";
+import VideoTranscript from "@/components/VideoTranscript";
+
+// Per-person video bios. To give a team member a video, add an entry here plus
+// a matching "/team/<slug>/" entry in video-data.ts and a transcript in video-transcripts.ts.
+const teamVideos: Record<string, { youtubeId: string; title: string; caption: string; shortTitle: string }> = {
+  "dr-an-nguyen": {
+    youtubeId: "MjuIDXGHwCE",
+    title: "Why I Became a Clinical Psychologist | Dr. An Nguyen, Desert Recovery Centers",
+    caption: "Dr. An Nguyen shares why she became a clinical psychologist, and why she stands behind the care we give.",
+    shortTitle: "Why I Became a Clinical Psychologist",
+  },
+};
 
 export function generateStaticParams() {
   return teamMembers.map((member) => ({ slug: member.slug }));
@@ -63,6 +76,7 @@ export default function TeamMemberPage({
   return (
     <>
       <SchemaScript schema={[personSchema, breadcrumbSchema]} />
+      <VideoSchemas path={`/team/${member.slug}/`} />
       <Navigation />
 
       <div className="bg-white">
@@ -106,6 +120,22 @@ export default function TeamMemberPage({
                 </p>
               </div>
             </div>
+            {teamVideos[member.slug] && (
+              <div className="max-w-3xl mx-auto mt-12">
+                <div className="md:max-w-[380px]">
+                  <YouTubeEmbed
+                    youtubeId={teamVideos[member.slug].youtubeId}
+                    title={teamVideos[member.slug].title}
+                    caption={teamVideos[member.slug].caption}
+                    vertical
+                  />
+                  <VideoTranscript
+                    youtubeId={teamVideos[member.slug].youtubeId}
+                    title={teamVideos[member.slug].shortTitle}
+                  />
+                </div>
+              </div>
+            )}
           </div>
         </section>
       </div>

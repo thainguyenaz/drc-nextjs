@@ -131,7 +131,8 @@ export default function OurTeamPage() {
       {/* Why Our Team is Different */}
       <section className="py-16 md:py-24 bg-cream">
         <div className="max-w-container mx-auto px-6">
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-5xl mx-auto flex flex-col md:flex-row gap-10 items-start">
+            <div className="flex-1">
             <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
               What Sets Our Team Apart
             </span>
@@ -164,6 +165,16 @@ export default function OurTeamPage() {
                   <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
                 </div>
               ))}
+            </div>
+            </div>
+            <div className="w-full md:w-[380px] md:flex-shrink-0">
+              <YouTubeEmbed
+                youtubeId="p1e4DHF_qR0"
+                title="The Heartbeat of DRC: Our Staff | Dr. An Nguyen"
+                caption="Our staff are with clients 24/7 and train every week. They are the heartbeat of DRC."
+                vertical
+              />
+              <VideoTranscript youtubeId="p1e4DHF_qR0" title="The Heartbeat of DRC: Our Staff" />
             </div>
           </div>
         </div>
