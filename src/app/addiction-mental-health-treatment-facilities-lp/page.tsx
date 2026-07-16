@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   title:
     "Luxury Addiction & Mental Health Treatment in Arizona | Desert Recovery Centers",
   description:
-    "Luxury addiction and mental health treatment in Arizona. Same-day admissions available. Out-of-network commercial insurance and in-network TriCare/TriWest accepted. Joint Commission accredited. Call (623) 305-0496.",
+    "Luxury addiction and mental health treatment in Arizona. Same-day admissions available. Out-of-network commercial insurance accepted. TRICARE accepted, in-network through TriWest. Joint Commission accredited. Call (623) 305-0496.",
   alternates: { canonical: PAGE_URL },
   robots: { index: false, follow: false },
 };
@@ -36,7 +36,7 @@ const faqs = [
   {
     question: "What insurance plans do you accept?",
     answer:
-      "For commercial insurance, Desert Recovery Centers works on an out-of-network basis with major plans including Aetna, Blue Cross Blue Shield, Cigna, and UnitedHealthcare. Many out-of-network plans provide significant coverage for our level of care. We are also in-network with TriCare and TriWest, and offer cash-pay options. We offer free insurance verification and will tell you your out-of-pocket cost before you commit to anything.",
+      "For commercial insurance, Desert Recovery Centers works on an out-of-network basis with major plans including Aetna, Blue Cross Blue Shield, Cigna, and UnitedHealthcare. Many out-of-network plans provide significant coverage for our level of care. We are also in-network with TRICARE through TriWest, and offer cash-pay options. We offer free insurance verification and will tell you your out-of-pocket cost before you commit to anything.",
   },
 ];
 
@@ -176,7 +176,7 @@ export default function AdsLandingPage() {
                 <p className="text-lg sm:text-xl text-gray-700 leading-relaxed mb-8 max-w-2xl">
                   A holistic approach to healing the mind, body, and spirit. Same-day
                   admissions available, with out-of-network commercial insurance and
-                  in-network TriCare and TriWest accepted.{" "}
+                  TRICARE accepted, in-network through TriWest.{" "}
                   <span className="text-gold font-semibold">Call now.</span>
                 </p>
 
@@ -271,13 +271,13 @@ export default function AdsLandingPage() {
                 <div
                   className="h-24 px-6 flex flex-col items-center justify-center border-2 border-forest rounded-lg bg-white"
                   role="img"
-                  aria-label="TRICARE and TriWest accepted"
+                  aria-label="TRICARE accepted, in-network through TriWest"
                 >
                   <span className="font-display text-2xl font-bold text-forest tracking-wide">
                     TRICARE
                   </span>
                   <span className="text-[10px] uppercase tracking-widest text-gray-500 mt-0.5">
-                    &amp; TriWest Accepted
+                    In-Network Through TriWest
                   </span>
                 </div>
               </div>
@@ -450,7 +450,7 @@ export default function AdsLandingPage() {
               <p className="text-center text-gray-400 text-xs mt-10 max-w-3xl mx-auto leading-relaxed">
                 Logos shown are trademarks of their respective owners and do not imply
                 endorsement, partnership, or in-network status. Desert Recovery Centers
-                is in-network with TriCare and TriWest only; commercial insurance is
+                is in-network with TRICARE through TriWest only; commercial insurance is
                 processed on an out-of-network basis. Our admissions team will verify
                 your specific benefits at no cost.
               </p>

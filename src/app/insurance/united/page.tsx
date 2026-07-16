@@ -16,7 +16,7 @@ export const metadata: Metadata = buildMetadata({
 const faqs = [
   {
     q: "Does UnitedHealthcare insurance cover treatment at Desert Recovery Centers?",
-    a: "Desert Recovery Centers is out-of-network with UnitedHealthcare. However, many out-of-network plans provide significant coverage for our level of care, and our admissions team will verify your specific benefits at no cost and walk you through what your coverage looks like. We are in-network with TriCare and TriWest, and offer cash-pay options. Call (623) 305-0496 for a free, confidential benefits verification.",
+    a: "Desert Recovery Centers is out-of-network with UnitedHealthcare. However, many out-of-network plans provide significant coverage for our level of care, and our admissions team will verify your specific benefits at no cost and walk you through what your coverage looks like. We are in-network with TRICARE through TriWest, and offer cash-pay options. Call (623) 305-0496 for a free, confidential benefits verification.",
   },
   {
     q: "Does United Healthcare cover inpatient drug rehab?",

@@ -54,7 +54,7 @@ const faqs = [
   },
   {
     q: "Does insurance cover residential rehab in Arizona?",
-    a: "Most major insurance plans provide coverage for residential addiction treatment in Arizona, including Aetna, Cigna, Blue Cross Blue Shield, UnitedHealthcare, and many others. Coverage levels and out-of-pocket costs vary by plan. Note: Desert Recovery Centers works with these commercial carriers on an out-of-network basis; we are in-network with TriCare and TriWest, and offer cash-pay options. Our admissions team will verify your specific benefits and explain your coverage before treatment begins. Call (623) 305-0496 for a free, confidential insurance verification.",
+    a: "Most major insurance plans provide coverage for residential addiction treatment in Arizona, including Aetna, Cigna, Blue Cross Blue Shield, UnitedHealthcare, and many others. Coverage levels and out-of-pocket costs vary by plan. Note: Desert Recovery Centers works with these commercial carriers on an out-of-network basis; we are in-network with TRICARE through TriWest, and offer cash-pay options. Our admissions team will verify your specific benefits and explain your coverage before treatment begins. Call (623) 305-0496 for a free, confidential insurance verification.",
   },
   {
     q: "How is DRC different from other rehabs?",
@@ -388,7 +388,7 @@ export default function ResidentialTreatmentPage() {
               Desert Recovery Centers works with commercial carriers
               including Aetna, Cigna, Blue Cross Blue Shield,
               and UnitedHealthcare on an
-              out-of-network basis; we are in-network with TriCare and
+              out-of-network basis; we are in-network with TRICARE through
               TriWest, and offer cash-pay options. Our admissions team
               handles the insurance verification process and will explain
               your benefits, estimated costs, and any out-of-pocket
