@@ -4,7 +4,9 @@ import PageHero from "@/components/PageHero";
 import TeamSection from "@/components/TeamSection";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { PersonSchema } from "@/lib/seo";
+import { PersonSchema, VideoSchemas } from "@/lib/seo";
+import YouTubeEmbed from "@/components/YouTubeEmbed";
+import VideoTranscript from "@/components/VideoTranscript";
 import { getPageMeta } from "@/data/page-metadata";
 import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
 import { faqData } from "@/data/faq-data";
@@ -31,6 +33,7 @@ export default function OurTeamPage() {
   return (
     <>
       <SchemaScript schema={[getFAQSchema(faqData["our-team"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/our-team"))]} />
+      <VideoSchemas path="/our-team/" />
       <PersonSchema
         slug="dr-an-nguyen"
         name="Dr. An Nguyen"
@@ -113,6 +116,14 @@ export default function OurTeamPage() {
             <p className="text-gray-600 leading-relaxed text-lg">
               Every clinician on our team brings specialized expertise in dual diagnosis treatment, evidence-based therapies, and trauma-informed care. Together, they collaborate daily to ensure your treatment plan evolves as you do. <strong className="text-forest">Heal. Restore. Thrive.</strong>
             </p>
+            <div className="mt-10">
+              <YouTubeEmbed
+                youtubeId="-UvsmwUSjag"
+                title="Meet the Team at Desert Recovery Centers | Nurses, Therapists & BHTs"
+                caption="Meet the people behind the care. Nurses, therapists, and staff, many in recovery themselves."
+              />
+              <VideoTranscript youtubeId="-UvsmwUSjag" title="Meet the Team at Desert Recovery Centers" />
+            </div>
           </div>
         </div>
       </section>

@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import AboutContent from "./AboutContent";
 import { VideoSchemas, buildMetadata, BreadcrumbSchema, AboutPageSchema } from "@/lib/seo";
 import YouTubeEmbed from "@/components/YouTubeEmbed";
+import VideoTranscript from "@/components/VideoTranscript";
 
 const GoogleReviews = dynamic(() => import("@/components/GoogleReviews"), { ssr: false });
 
@@ -40,6 +41,24 @@ export default function AboutPage() {
         <div className="max-w-4xl mx-auto px-6 text-center">
           <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">Our Story</span>
           <div className="w-[60px] h-0.5 bg-gold mx-auto mt-4 mb-4" />
+          <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold mb-10">The Desert Recovery Centers Story</h2>
+          <div className="mb-16 text-left">
+            <YouTubeEmbed
+              youtubeId="JUSM7ErxKq8"
+              title="The Desert Recovery Centers Story | Luxury Dual Diagnosis Treatment in Arizona"
+              caption="Two friends who found recovery together built the program they wished existed. This is the full DRC story."
+            />
+            <VideoTranscript youtubeId="JUSM7ErxKq8" title="The Desert Recovery Centers Story" />
+          </div>
+          <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold mb-10">Born From an Act of Love</h2>
+          <div className="mb-16 text-left">
+            <YouTubeEmbed
+              youtubeId="3B78Fzu6Y1M"
+              title="Born From an Act of Love | The Desert Recovery Centers Story"
+              caption="It started with a phone call and a promise to do treatment differently. This is our story."
+            />
+            <VideoTranscript youtubeId="3B78Fzu6Y1M" title="Born From an Act of Love" />
+          </div>
           <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold mb-10">Who We Are</h2>
           <YouTubeEmbed youtubeId="bqDzL4O3WDE" title="About Desert Recovery Centers" className="mb-16" />
           <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold mb-10">Why a Smaller, Boutique Program Leads to Better Outcomes</h2>
