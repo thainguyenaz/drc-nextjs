@@ -21,9 +21,8 @@ export default function HomepageVideo() {
             See What Makes Desert Recovery Centers Different
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Two friends who found recovery together built the program they wished
-            existed. This is how Desert Recovery Centers began, and how we treat
-            people now.
+            Where Desert Recovery Centers came from, and why we treat people the
+            way we do.
           </p>
         </div>
 
