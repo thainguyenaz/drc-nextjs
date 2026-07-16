@@ -201,7 +201,8 @@ export default function DualDiagnosisPage() {
               The DRC Dual Diagnosis Model
             </h2>
           </motion.div>
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <div className="max-w-5xl mx-auto flex flex-col md:flex-row gap-10 items-start">
+          <div className="grid sm:grid-cols-2 gap-6 flex-1">
             {approachPillars.map((pillar, i) => (
               <motion.div
                 key={pillar.name}
@@ -215,6 +216,16 @@ export default function DualDiagnosisPage() {
                 <p className="text-gray-600 text-sm leading-relaxed">{pillar.description}</p>
               </motion.div>
             ))}
+          </div>
+          <div className="w-full md:w-[380px] md:flex-shrink-0">
+            <YouTubeEmbed
+              youtubeId="oxfDeMtQUXg"
+              title="What Makes Us Different From Other Recovery Centers? | Dr. An Nguyen"
+              caption="Many clients never learned CBT or DBT in past treatment. Here is why clinician-led, evidence-based care matters."
+              vertical
+            />
+            <VideoTranscript youtubeId="oxfDeMtQUXg" title="What Makes Us Different From Other Recovery Centers?" />
+          </div>
           </div>
         </div>
       </section>

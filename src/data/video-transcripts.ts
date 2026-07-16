@@ -5,6 +5,24 @@
 // Paragraph breaks are blank lines (double newline).
 
 export const videoTranscripts: Record<string, string> = {
+  // #38 What Can I Bring to Rehab? | Desert Recovery Centers
+  "aapeAd-XNpE":
+    "Can you bring medication to treatment? You absolutely can. Medications are inventoried as they are inventoried out. Oftentimes our medical providers will prescribe medications. I would suggest a week's worth of clothing. I would suggest something to keep your hands busy. That'd be crossword puzzles or regular puzzles or whatever your hobby may be. Some people are into music, some people are into poetry. Some people are into art. It's important to keep your mind, body, and hands busy while you are learning to manage and or cope with life's difficulties.",
+  // #39 The First Day of Recovery: What to Expect | Desert Recovery Centers
+  "sEC1mSR6Jrc":
+    "First day is absolutely terrifying, walking through that door, whether you're staff or client. It's terrifying, but it's because you don't know what you're walking into. You don't know who's going to be here. You don't know staff. You don't know the establishment. You don't know what clients are going to be here or what the struggle is going to be. By the time you're done with your intake. You were given a proper introduction to the establishment, to the housemates that are here. And we have a culture that is very open and supportive. And the level of camaraderie is something that we have maintained for a long while now. And that is something rare, something that we don't take for granted, something we absolutely appreciate, that continues on, even after people graduate, that culture stays, that culture remains.",
+  // #40 Inside Our Phoenix Clinic (PHP, IOP & Outpatient) | Dr. An Nguyen
+  "f244VR7NcSo":
+    "One of the things we're most excited about is our clinic. That is to continue to provide the next level of care for our client, and that is our PHP, IOP, and outpatient clinic. And this clinic really brings joy to my heart, right? Because not only is it just so beautifully decorated designs, the rooms, you know, we really understand what will make people comfortable there. They are receiving programming throughout the day, but we want them to be not just comfortable, but a space where they feel like they can learn and grow.",
+  // #41 What Makes Us Different From Other Recovery Centers? | Dr. An Nguyen
+  "oxfDeMtQUXg":
+    "We've had clients that have come to us, and they've shared that they've been in treatment three, four, five times before, right? And they never learned over there things like CBT, DBT. And, you know, I was quite shocked to hear that, right? And what I know the difference is, is that here at Desert Recovery Centers, our groups, our evidence based groups are being led by clinicians, doctoral-level clinicians, by clinical psychologists, by masters level clinicians, And so what that means is they're able to provide the information, and they have been trained to do that, to help individuals understand and learn these skills. And so, oftentimes, in other treatment models, other treatment programming, we have found that they're not receiving evidence based care.",
+  // #43 Is Addiction Treatment Confidential? | Desert Recovery Centers
+  "XbxP1EnxVQg":
+    "Treatment is absolutely confidential. Every client is protected by HIPAA and your information and your presence here is absolutely protected.",
+  // #46 How Do I Know If I Need Rehab? | Desert Recovery Centers
+  "vSjFPTMiccI":
+    "Well, there are certainly stages of change a person can be in pre contemplation. You're not even thinking about it yet. You've got family members or other people telling me that you might need help. Maybe you have a problem. Problem is, that person's not going to have the willingness to change. They may come to treatment for somebody else. They may come for the wife, or the husband, or the friend, or the job, or if they're not coming here for themselves, the chances of finding success and recovery are pretty slim.",
   // #49 How Common Is Trauma With Addiction? | Desert Recovery Centers
   "E8RZJNW3Q3Y":
     "You'd be surprised how common trauma is, not just an addiction, but you gotta understand trauma is not what happens to you as much as it is, what happens inside you. It's not the hit. It's the concussion you get from the hit. Not many people seem to understand it.",
@@ -14,6 +32,12 @@ export const videoTranscripts: Record<string, string> = {
   // #51 Mental Health or Addiction: Which Comes First? | Desert Recovery Centers
   "vJ_pl06kJ_A":
     "Does mental health or addiction come first? I think they need to be treated at the same time, because when you treat one over the other, The other is still running rampant. And I think it is extremely important to treat them both at the same time.",
+  // #52 Can I Have My Phone in Rehab? | Desert Recovery Centers
+  "8BNDkLsa8mE":
+    "Can you have your phone? Yes, you can have your phone from 5 to 7 p.m. every night. Reason for that restriction is to keep you safe and free from harmful individuals that don't need to be making contact with you throughout the day.",
+  // #55 About Our Church Location (Women's Mental Health Facility) | Desert Recovery Centers
+  "08UV2dP0qZo":
+    "Here at our church location, it differs from our men's location in the fact that we are mental health primary, substance abuse secondary. Gender specific care is important to minimize distraction, distraction of someone of the other sex, of reluctance to become open and vulnerable because of another sex. It's people that have trauma related to the other sex. These things all create serious barriers to treatment progress.",
   // #56 Men and Depression: You Are Not Alone | Desert Recovery Centers
   "pc_QS4khZsw":
     "Depression is a huge problem right now, especially among men. I want to let you know, we have specific programs and counselors, along with therapists, to be able to address those issues for you here at Desert Recovery. I get it. In society today, men aren't supposed to talk about depression. They're not supposed to talk about their feelings. I just want to let you know you're not alone anymore. Please understand, you matter, you're valuable, and we're here for you. Please reach out to Desert Recovery Centers.",

@@ -39,15 +39,16 @@ export const videoData: Record<string, VideoEntry[]> = {
     { youtubeId: "ANqsMXkAeGQ", title: "Mandy's Story: Hope After Bipolar and Alcohol Addiction | Desert Recovery Centers", description: "Twelve-step recovery never reached the root for Mandy. Here is how mental-health-based care changed that.", uploadDate: "2026-07-15" },
     { youtubeId: "yW910OrE-1k", title: "Daleny's Story: From Hopeless to a Future | Desert Recovery Centers", description: "She could not picture a month ahead. This is Daleny's story, from hopeless to a future.", uploadDate: "2026-07-15" },
     { youtubeId: "4ur6PUnnnMM", title: "Inside Our Church Location (Women's Facility) | Dr. An Nguyen", description: "Step inside our Church location for women. Mountain views, a sanctuary backyard, and space to heal.", uploadDate: "2026-07-13" },
+    { youtubeId: "08UV2dP0qZo", title: "About Our Church Location (Women's Mental Health Facility) | Desert Recovery Centers", description: "Why is our Church location women-only? Gender-specific care removes barriers so women can open up and heal.", uploadDate: "2026-07-14" },
   ],
   "/locations/phoenix-php-iop/": [
-    { youtubeId: "rMkEYhoW-kE", title: "Desert Recovery Centers Phoenix Facility Tour", description: "Tour the Desert Recovery Centers Phoenix Arizona PHP, IOP, and outpatient treatment facility.", uploadDate: "2024-10-01T00:00:00+00:00" },
+    { youtubeId: "f244VR7NcSo", title: "Inside Our Phoenix Clinic (PHP, IOP & Outpatient) | Dr. An Nguyen", description: "A look inside our Phoenix clinic. Built for comfort, learning, and growth through PHP, IOP, and outpatient care.", uploadDate: "2026-07-13" },
   ],
 
   // ── ADDICTION HUB — 2 videos ──
   "/addiction-treatment/": [
     { youtubeId: "THSeLEff0I4", title: "Addiction Treatment Programs at Desert Recovery Centers", description: "Overview of drug and alcohol addiction treatment programs at Desert Recovery Centers Arizona.", uploadDate: "2024-10-01T00:00:00+00:00" },
-    { youtubeId: "9-8VxGYFlE0", title: "What Is High-Functioning Addiction and Why Is It So Hard to Recognize?", description: "Understanding high-functioning addiction and why it often goes undetected until crisis.", uploadDate: "2025-03-01T00:00:00+00:00" },
+    { youtubeId: "vSjFPTMiccI", title: "How Do I Know If I Need Rehab? | Desert Recovery Centers", description: "How do I know if I need rehab? If you are asking the question, this is worth two minutes.", uploadDate: "2026-07-13" },
   ],
 
   // ── MENTAL HEALTH HUB — 2 videos ──
@@ -136,6 +137,7 @@ export const videoData: Record<string, VideoEntry[]> = {
   "/treatments/dual-diagnosis-treatment/": [
     { youtubeId: "7EuzOR0lwk4", title: "Jeff's Story: Finding Mental Health First Treatment | Desert Recovery Centers", description: "Other programs treated the substance and missed the mental health. This is Jeff's story.", uploadDate: "2026-07-15" },
     { youtubeId: "vJ_pl06kJ_A", title: "Mental Health or Addiction: Which Comes First? | Desert Recovery Centers", description: "Mental health or addiction, which comes first? They have to be treated together. That is dual diagnosis care.", uploadDate: "2026-07-14" },
+    { youtubeId: "oxfDeMtQUXg", title: "What Makes Us Different From Other Recovery Centers? | Dr. An Nguyen", description: "Many clients never learned CBT or DBT in past treatment. Here is why clinician-led, evidence-based care matters.", uploadDate: "2026-07-13" },
   ],
   "/treatments/tms-therapy/": [
     { youtubeId: "4yWqQ_VVzgE", title: "NeuroStar TMS Therapy, How It Works", description: "How NeuroStar TMS therapy works as an FDA-cleared, non-invasive treatment for depression. Video courtesy of NeuroStar.", uploadDate: "2022-11-22T00:00:00+00:00" },
@@ -155,6 +157,11 @@ export const videoData: Record<string, VideoEntry[]> = {
     { youtubeId: "CkFNzie3Xp0", title: "What Happens During a Medical Detox Process?", description: "A guide to what happens during medically supervised detox for drugs and alcohol.", uploadDate: "2025-03-01T00:00:00+00:00" },
   ],
   "/resources/faq/": [
-    { youtubeId: "vo7puKDwMek", title: "Why a Luxury Treatment Center?", description: "Answering common questions about luxury addiction treatment at Desert Recovery Centers.", uploadDate: "2024-10-01T00:00:00+00:00" },
+    { youtubeId: "XbxP1EnxVQg", title: "Is Addiction Treatment Confidential? | Desert Recovery Centers", description: "Is treatment confidential? Yes. HIPAA protects your information and your privacy, always.", uploadDate: "2026-07-13" },
+    { youtubeId: "8BNDkLsa8mE", title: "Can I Have My Phone in Rehab? | Desert Recovery Centers", description: "Can I have my phone in rehab? Yes, from 5 to 7 pm each night. Here is why.", uploadDate: "2026-07-14" },
+  ],
+  "/levels-of-care/residential-treatment/": [
+    { youtubeId: "sEC1mSR6Jrc", title: "The First Day of Recovery: What to Expect | Desert Recovery Centers", description: "The first day of rehab can feel scary. Here is what walking through our door is really like.", uploadDate: "2026-07-13" },
+    { youtubeId: "aapeAd-XNpE", title: "What Can I Bring to Rehab? | Desert Recovery Centers", description: "What can I bring to rehab? Your meds, a week of clothes, and something to keep your hands busy. Here is the short list.", uploadDate: "2026-07-13" },
   ],
 };

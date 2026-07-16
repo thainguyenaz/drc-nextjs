@@ -13,6 +13,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
 import { getPageMeta } from "@/data/page-metadata";
 import YouTubeEmbed from "@/components/YouTubeEmbed";
+import VideoTranscript from "@/components/VideoTranscript";
 import AnimatedSection from "@/components/animated/AnimatedSection";
 import AnimatedGrid from "@/components/animated/AnimatedGrid";
 
@@ -47,7 +48,8 @@ export default function AddictionTreatmentPage() {
       />
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-container mx-auto px-6">
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-5xl mx-auto flex flex-col md:flex-row gap-10 items-start">
+            <div className="flex-1">
             <AnimatedSection>
               <p className="text-gray-600 leading-relaxed text-lg">
                 Addiction is a chronic medical condition that requires specialized, evidence-based treatment. Desert Recovery Centers coordinates medically supervised detox through trusted partner facilities, then provides residential treatment, partial hospitalization (PHP), intensive outpatient (IOP), and aftercare planning at our Arizona locations.
@@ -72,6 +74,16 @@ export default function AddictionTreatmentPage() {
                 </div>
               ))}
             </AnimatedGrid>
+            </div>
+            <div className="w-full md:w-[380px] md:flex-shrink-0">
+              <YouTubeEmbed
+                youtubeId="vSjFPTMiccI"
+                title="How Do I Know If I Need Rehab? | Desert Recovery Centers"
+                caption="How do I know if I need rehab? If you are asking the question, this is worth two minutes."
+                vertical
+              />
+              <VideoTranscript youtubeId="vSjFPTMiccI" title="How Do I Know If I Need Rehab?" />
+            </div>
           </div>
         </div>
       </section>

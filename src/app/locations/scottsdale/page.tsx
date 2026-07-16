@@ -250,7 +250,8 @@ export default function ScottsdaleLocationPage() {
       {/* What We Treat */}
       <section className="py-16 md:py-24 bg-cream">
         <div className="max-w-container mx-auto px-6">
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-5xl mx-auto flex flex-col md:flex-row gap-10 items-start">
+            <div className="flex-1">
             <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
               What We Treat
             </span>
@@ -288,6 +289,16 @@ export default function ScottsdaleLocationPage() {
             <p className="text-gray-500 text-xs leading-relaxed">
               Coverage varies by plan. Contact us to verify your benefits.
             </p>
+            </div>
+            <div className="w-full md:w-[380px] md:flex-shrink-0">
+              <YouTubeEmbed
+                youtubeId="08UV2dP0qZo"
+                title="About Our Church Location (Women's Mental Health Facility) | Desert Recovery Centers"
+                caption="Why is our Church location women-only? Gender-specific care removes barriers so women can open up and heal."
+                vertical
+              />
+              <VideoTranscript youtubeId="08UV2dP0qZo" title="About Our Church Location" />
+            </div>
           </div>
         </div>
       </section>

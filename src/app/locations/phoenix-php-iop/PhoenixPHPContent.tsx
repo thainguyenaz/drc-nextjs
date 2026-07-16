@@ -6,6 +6,8 @@ import Link from "next/link";
 import Image from "next/image";
 import ScrollReveal from "@/components/ScrollReveal";
 import PhotoGallery from "@/components/PhotoGallery";
+import YouTubeEmbed from "@/components/YouTubeEmbed";
+import VideoTranscript from "@/components/VideoTranscript";
 
 const diffContainerVariants = {
   hidden: {},
@@ -443,7 +445,18 @@ export default function PhoenixPHPContent() {
                 </p>
               </motion.div>
             </div>
-            <OverviewImage />
+            <div>
+              <OverviewImage />
+              <div className="mt-8 md:max-w-[380px]">
+                <YouTubeEmbed
+                  youtubeId="f244VR7NcSo"
+                  title="Inside Our Phoenix Clinic (PHP, IOP & Outpatient) | Dr. An Nguyen"
+                  caption="A look inside our Phoenix clinic. Built for comfort, learning, and growth through PHP, IOP, and outpatient care."
+                  vertical
+                />
+                <VideoTranscript youtubeId="f244VR7NcSo" title="Inside Our Phoenix Clinic" />
+              </div>
+            </div>
           </div>
         </div>
       </section>

@@ -4,7 +4,25 @@ import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import FAQAccordion from "@/components/FAQAccordion";
-import { buildMetadata, BreadcrumbSchema, MedicalWebPageSchema } from "@/lib/seo";
+import { buildMetadata, BreadcrumbSchema, MedicalWebPageSchema, VideoSchemas } from "@/lib/seo";
+import YouTubeEmbed from "@/components/YouTubeEmbed";
+import VideoTranscript from "@/components/VideoTranscript";
+
+// Vertical Q&A videos shown beside the matching FAQ category accordion.
+const categoryVideos: Record<string, { youtubeId: string; title: string; caption: string; shortTitle: string }> = {
+  Admissions: {
+    youtubeId: "XbxP1EnxVQg",
+    title: "Is Addiction Treatment Confidential? | Desert Recovery Centers",
+    caption: "Is treatment confidential? Yes. HIPAA protects your information and your privacy, always.",
+    shortTitle: "Is Addiction Treatment Confidential?",
+  },
+  "Facilities & Daily Life": {
+    youtubeId: "8BNDkLsa8mE",
+    title: "Can I Have My Phone in Rehab? | Desert Recovery Centers",
+    caption: "Can I have my phone in rehab? Yes, from 5 to 7 pm each night. Here is why.",
+    shortTitle: "Can I Have My Phone in Rehab?",
+  },
+};
 
 export const metadata: Metadata = buildMetadata({
   title: "Rehab FAQ, Desert Recovery Centers",
@@ -170,6 +188,7 @@ export default function FAQPage() {
   return (
     <>
       <MedicalWebPageSchema url="/resources/faq" name="Rehab FAQ, Desert Recovery Centers" dateModified="2026-05-06" />
+      <VideoSchemas path="/resources/faq/" />
       <BreadcrumbSchema
         items={[
           { name: "Resources", path: "/resources" },
@@ -199,14 +218,30 @@ export default function FAQPage() {
           className={`py-16 md:py-20 ${ci % 2 === 0 ? "bg-white" : "bg-cream"}`}
         >
           <div className="max-w-container mx-auto px-6">
-            <div className="max-w-3xl mx-auto">
-              <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
-                {category.name}
-              </span>
-              <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4 mb-8">
-                {category.name} Questions
-              </h2>
-              <FAQAccordion items={category.items} sectionKey={category.name} />
+            <div className={categoryVideos[category.name] ? "max-w-5xl mx-auto flex flex-col md:flex-row gap-10 items-start" : "max-w-3xl mx-auto"}>
+              <div className="flex-1">
+                <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
+                  {category.name}
+                </span>
+                <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4 mb-8">
+                  {category.name} Questions
+                </h2>
+                <FAQAccordion items={category.items} sectionKey={category.name} />
+              </div>
+              {categoryVideos[category.name] && (
+                <div className="w-full md:w-[380px] md:flex-shrink-0">
+                  <YouTubeEmbed
+                    youtubeId={categoryVideos[category.name].youtubeId}
+                    title={categoryVideos[category.name].title}
+                    caption={categoryVideos[category.name].caption}
+                    vertical
+                  />
+                  <VideoTranscript
+                    youtubeId={categoryVideos[category.name].youtubeId}
+                    title={categoryVideos[category.name].shortTitle}
+                  />
+                </div>
+              )}
             </div>
           </div>
         </section>
