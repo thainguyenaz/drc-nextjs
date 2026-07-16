@@ -12,7 +12,6 @@ export const videoData: Record<string, VideoEntry[]> = {
   // ── HOMEPAGE — 3 videos (overview, patient story, treatment overview) ──
   "/": [
     { youtubeId: "6x9IQq6h9Rk", title: "Desert Recovery Centers Overview", description: "An overview of Desert Recovery Centers luxury addiction and mental health treatment facilities in Arizona.", uploadDate: "2024-10-01T00:00:00+00:00" },
-    { youtubeId: "5SPU81P8iko", title: "Desert Recovery Centers Patient Stories", description: "Hear from clients who have recovered at Desert Recovery Centers in Arizona.", uploadDate: "2024-10-01T00:00:00+00:00" },
     { youtubeId: "LjK58DeWTSY", title: "Desert Recovery Centers Treatment Programs", description: "Learn about addiction and mental health treatment programs at Desert Recovery Centers.", uploadDate: "2024-10-01T00:00:00+00:00" },
   ],
 
@@ -128,9 +127,6 @@ export const videoData: Record<string, VideoEntry[]> = {
   "/addiction/marijuana-addiction-treatment/": [
     { youtubeId: "-kdPgVZItgY", title: "Why Do Many Marijuana Addicts Underestimate Their Dependence?", description: "Understanding marijuana addiction and why dependence is often underestimated.", uploadDate: "2025-03-01T00:00:00+00:00" },
   ],
-  "/addiction/prescription-drug-addiction-treatment/": [
-    { youtubeId: "asfcDVPgO1Y", title: "How Do Prescription Drugs Affect Your Brain?", description: "The neurological effects of prescription drug abuse and paths to recovery.", uploadDate: "2024-10-01T00:00:00+00:00" },
-  ],
   "/addiction/gambling-addiction-treatment/": [
     { youtubeId: "Vgb-tnoS8R0", title: "What Are the Warning Signs That Gambling Has Crossed From Recreation to Addiction?", description: "Recognizing gambling addiction warning signs and when to seek treatment.", uploadDate: "2025-03-01T00:00:00+00:00" },
   ],
@@ -144,9 +140,6 @@ export const videoData: Record<string, VideoEntry[]> = {
   ],
   "/treatments/dbt-dialectical-behavior-therapy/": [
     { youtubeId: "1llruRMnal8", title: "How Meditation Can Help With Addictive Cravings and Behaviors", description: "Mindfulness and DBT-based approaches to managing cravings and emotional regulation.", uploadDate: "2024-10-01T00:00:00+00:00" },
-  ],
-  "/treatments/emdr-therapy/": [
-    { youtubeId: "DhLGvWwqGX4", title: "What Is EMDR Therapy for PTSD?", description: "How EMDR therapy helps process traumatic memories and supports addiction recovery.", uploadDate: "2024-10-01T00:00:00+00:00" },
   ],
   "/treatments/trauma-therapy/": [
     { youtubeId: "dF2l-9ohRZs", title: "What Is Trauma-Focused Cognitive Behavioral Therapy and How Does It Help?", description: "How trauma-focused CBT addresses PTSD and trauma in addiction recovery settings.", uploadDate: "2024-10-01T00:00:00+00:00" },
