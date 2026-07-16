@@ -19,6 +19,9 @@ import Breadcrumb from "@/components/Breadcrumb";
 import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
 import { getPageMeta } from "@/data/page-metadata";
 import FacilityVideoSection from "@/components/FacilityVideoSection";
+import YouTubeEmbed from "@/components/YouTubeEmbed";
+import VideoTranscript from "@/components/VideoTranscript";
+import TestimonialDisclaimer from "@/components/TestimonialDisclaimer";
 
 const meta = getPageMeta("/locations/scottsdale/");
 
@@ -187,6 +190,47 @@ export default function ScottsdaleLocationPage() {
               <p className="text-gray-500 text-xs mt-3 text-center">
                 Click to watch a video tour of our Scottsdale facility
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Client Stories */}
+      <section className="py-16 md:py-24 bg-white border-t border-gray-100">
+        <div className="max-w-container mx-auto px-6">
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center mb-12">
+              <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
+                Client Stories
+              </span>
+              <div className="w-[60px] h-0.5 bg-gold mx-auto mt-4 mb-4" />
+              <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold">
+                Recovery Stories from Our Scottsdale Clients
+              </h2>
+            </div>
+            <h3 className="font-display text-xl text-forest font-semibold mb-4">
+              Mandy&apos;s Story: Hope After Bipolar and Alcohol Addiction
+            </h3>
+            <div className="mb-16">
+              <YouTubeEmbed
+                youtubeId="ANqsMXkAeGQ"
+                title="Mandy's Story: Hope After Bipolar and Alcohol Addiction | Desert Recovery Centers"
+                caption="Twelve-step recovery never reached the root for Mandy. Here is how mental-health-based care changed that."
+                belowVideo={<TestimonialDisclaimer />}
+              />
+              <VideoTranscript youtubeId="ANqsMXkAeGQ" title="Mandy's Story" />
+            </div>
+            <h3 className="font-display text-xl text-forest font-semibold mb-4">
+              Daleny&apos;s Story: From Hopeless to a Future
+            </h3>
+            <div>
+              <YouTubeEmbed
+                youtubeId="yW910OrE-1k"
+                title="Daleny's Story: From Hopeless to a Future | Desert Recovery Centers"
+                caption="She could not picture a month ahead. This is Daleny's story, from hopeless to a future."
+                belowVideo={<TestimonialDisclaimer />}
+              />
+              <VideoTranscript youtubeId="yW910OrE-1k" title="Daleny's Story" />
             </div>
           </div>
         </div>
