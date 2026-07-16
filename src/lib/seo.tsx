@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import { siteData } from "./site-data";
 import { videoData } from "@/data/video-data";
+import { videoTranscripts } from "@/data/video-transcripts";
 import { getYouTubeVideoSchema } from "./schema";
 
 const SITE_URL = "https://desertrecoverycenters.com";
@@ -387,7 +388,9 @@ export function VideoSchemas({ path }: { path: string }) {
           key={v.youtubeId}
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(getYouTubeVideoSchema(v)),
+            __html: JSON.stringify(
+              getYouTubeVideoSchema({ ...v, transcript: videoTranscripts[v.youtubeId] })
+            ),
           }}
         />
       ))}

@@ -152,6 +152,7 @@ export function getYouTubeVideoSchema(video: {
   title: string;
   description: string;
   uploadDate: string;
+  transcript?: string;
 }) {
   return {
     "@context": "https://schema.org",
@@ -162,6 +163,7 @@ export function getYouTubeVideoSchema(video: {
     embedUrl: `https://www.youtube.com/embed/${video.youtubeId}`,
     contentUrl: `https://www.youtube.com/watch?v=${video.youtubeId}`,
     uploadDate: video.uploadDate,
+    ...(video.transcript ? { transcript: video.transcript } : {}),
   };
 }
 
