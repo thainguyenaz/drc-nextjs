@@ -141,6 +141,17 @@ export const teamMembers: TeamMember[] = [
     url: "https://desertrecoverycenters.com/team/craig-hutchmacher",
   },
   {
+    slug: "christopher-kenyon",
+    name: "Christopher Kenyon",
+    jobTitle: "Program Supervisor (Scottsdale)",
+    credentials: ["Behavioral Health Professional"],
+    // PLACEHOLDER BIO: facts-only boilerplate pending Christopher's real bio from Thai.
+    description:
+      "Christopher Kenyon is the Program Supervisor at Desert Recovery Centers' Scottsdale facility, a Behavioral Health Professional supporting clients in residential treatment.",
+    image: "/images/team/Christopher-Kenyon.jpg",
+    url: "https://desertrecoverycenters.com/team/christopher-kenyon",
+  },
+  {
     slug: "ian-dy",
     name: "Ian Dy",
     jobTitle: "Psychiatric Nurse Practitioner",
