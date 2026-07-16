@@ -39,7 +39,7 @@ const insuranceFaqSchema = {
 export const metadata: Metadata = {
   title: "Verify Insurance for Addiction & Mental Health Treatment | DRC",
   description:
-    "Verify your insurance for addiction and mental health treatment at Desert Recovery Centers. Out-of-network commercial coverage and in-network TriCare/TriWest. Call (623) 305-0496.",
+    "Verify your insurance for addiction and mental health treatment at Desert Recovery Centers. Out-of-network commercial coverage and in-network with TRICARE through TriWest. Call (623) 305-0496.",
   alternates: { canonical: "https://desertrecoverycenters.com/insurance" },
   openGraph: {
     images: [{ url: "/images/glendale/Glendale-Front.jpg", width: 1200, height: 630, alt: "Exterior of Desert Recovery Centers luxury residential rehab facility in Glendale Arizona" }],
@@ -55,7 +55,7 @@ export default function InsurancePage() {
       <PageHero
         eyebrow="Insurance"
         title="Insurance Verification"
-        description="In-network with TriCare and TriWest. Out-of-network coverage available from major commercial insurance plans, plus cash-pay options. Submit your details and we'll verify your benefits at no cost."
+        description="In-network with TRICARE through TriWest. Out-of-network coverage available from major commercial insurance plans, plus cash-pay options. Submit your details and we'll verify your benefits at no cost."
         bgImage="/images/general/DRC-TREATMENTS.jpg"
       />
       <InsuranceContent />
