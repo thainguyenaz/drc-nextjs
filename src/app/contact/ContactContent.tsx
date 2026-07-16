@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion";
 import GetHelpForm from "@/components/forms/GetHelpForm";
+import YouTubeEmbed from "@/components/YouTubeEmbed";
+import VideoTranscript from "@/components/VideoTranscript";
 
 const locations = [
   {
@@ -119,6 +121,16 @@ export default function ContactContent() {
               <p className="text-gray-500 text-xs">
                 All inquiries are protected by HIPAA &amp; 42 CFR Part 2.
               </p>
+
+              <div className="mt-10 md:max-w-[380px]">
+                <YouTubeEmbed
+                  youtubeId="_HIvKUSmGIw"
+                  title="Just Reach Out and Call | Desert Recovery Centers"
+                  caption="Adam built his career on helping people, because he struggled too. His message: just reach out and call."
+                  vertical
+                />
+                <VideoTranscript youtubeId="_HIvKUSmGIw" title="Just Reach Out and Call" />
+              </div>
             </motion.div>
 
             <div>

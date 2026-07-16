@@ -23,9 +23,29 @@ export const videoData: Record<string, VideoEntry[]> = {
     { youtubeId: "bqDzL4O3WDE", title: "About Desert Recovery Centers", description: "Learn about the mission, team, and philosophy of Desert Recovery Centers in Arizona.", uploadDate: "2024-10-01T00:00:00+00:00" },
   ],
 
-  // ── OUR TEAM — 1 video ──
+  // ── OUR TEAM — 2 videos ──
   "/our-team/": [
     { youtubeId: "-UvsmwUSjag", title: "Meet the Team at Desert Recovery Centers | Nurses, Therapists & BHTs", description: "Meet the people behind the care. Nurses, therapists, and staff, many in recovery themselves.", uploadDate: "2026-07-15T18:16:49+00:00" },
+    { youtubeId: "p1e4DHF_qR0", title: "The Heartbeat of DRC: Our Staff | Dr. An Nguyen", description: "Our staff are with clients 24/7 and train every week. They are the heartbeat of DRC.", uploadDate: "2026-07-14" },
+  ],
+
+  // ── TEAM BIO PAGES ──
+  "/team/dr-an-nguyen/": [
+    { youtubeId: "MjuIDXGHwCE", title: "Why I Became a Clinical Psychologist | Dr. An Nguyen, Desert Recovery Centers", description: "Dr. An Nguyen shares why she became a clinical psychologist, and why she stands behind the care we give.", uploadDate: "2026-07-13" },
+  ],
+
+  // ── CONVERSION PAGES — 1 video each ──
+  "/contact/": [
+    { youtubeId: "_HIvKUSmGIw", title: "Just Reach Out and Call | Desert Recovery Centers", description: "Adam built his career on helping people, because he struggled too. His message: just reach out and call.", uploadDate: "2026-07-14" },
+  ],
+  "/get-help/": [
+    { youtubeId: "zoqFmK0L7W0", title: "We Will Be Your Strength | Desert Recovery Centers", description: "Depression and addiction can feel lonely. Lauren has been there, and she wants you to know: we will be your strength.", uploadDate: "2026-07-14" },
+  ],
+  "/insurance/": [
+    { youtubeId: "j_iBdlrFojQ", title: "Insurance and FMLA for Rehab: What You Should Know | Desert Recovery Centers", description: "Worried about work and cost? Here is how insurance and FMLA can help you get treatment, and maybe stay paid.", uploadDate: "2026-07-14" },
+  ],
+  "/resources/mental-health-assessment/": [
+    { youtubeId: "UJmVdL-NDXk", title: "Get a Personalized Assessment | Desert Recovery Centers", description: "If you or someone you love is struggling, Dr. An Nguyen invites you to a personalized assessment.", uploadDate: "2026-07-14" },
   ],
 
   // ── LOCATION PAGES — 1 facility tour each ──
