@@ -3,7 +3,9 @@ import dynamic from "next/dynamic";
 import Navigation from "@/components/Navigation";
 import PageHero from "@/components/PageHero";
 import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
-import { MedicalWebPageSchema } from "@/lib/seo";
+import { MedicalWebPageSchema, VideoSchemas } from "@/lib/seo";
+import YouTubeEmbed from "@/components/YouTubeEmbed";
+import VideoTranscript from "@/components/VideoTranscript";
 import SchemaScript from "@/components/SchemaScript";
 import Breadcrumb from "@/components/Breadcrumb";
 import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
@@ -92,6 +94,7 @@ export default function ResidentialTreatmentPage() {
             "Full-time inpatient addiction and mental health treatment with 24/7 clinical support in a luxury residential setting.",
         }}
       />
+      <VideoSchemas path="/levels-of-care/residential-treatment/" />
       <Navigation />
       <Breadcrumb
         items={getBreadcrumbsFromPathname(
@@ -214,7 +217,8 @@ export default function ResidentialTreatmentPage() {
       {/* Typical Day */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-container mx-auto px-6">
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-5xl mx-auto flex flex-col md:flex-row gap-10 items-start">
+            <div className="flex-1">
             <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
               Daily Life
             </span>
@@ -256,6 +260,16 @@ export default function ResidentialTreatmentPage() {
               you develop healthy routines while giving you space to process
               what you are learning in therapy.
             </p>
+            </div>
+            <div className="w-full md:w-[380px] md:flex-shrink-0">
+              <YouTubeEmbed
+                youtubeId="sEC1mSR6Jrc"
+                title="The First Day of Recovery: What to Expect | Desert Recovery Centers"
+                caption="The first day of rehab can feel scary. Here is what walking through our door is really like."
+                vertical
+              />
+              <VideoTranscript youtubeId="sEC1mSR6Jrc" title="The First Day of Recovery" />
+            </div>
           </div>
         </div>
       </section>
@@ -360,7 +374,8 @@ export default function ResidentialTreatmentPage() {
       {/* What to Bring / Insurance */}
       <section className="py-16 md:py-24 bg-cream">
         <div className="max-w-container mx-auto px-6">
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-5xl mx-auto flex flex-col md:flex-row gap-10 items-start">
+            <div className="flex-1">
             <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
               Preparing for Treatment
             </span>
@@ -411,6 +426,16 @@ export default function ResidentialTreatmentPage() {
               </Link>
               .
             </p>
+            </div>
+            <div className="w-full md:w-[380px] md:flex-shrink-0">
+              <YouTubeEmbed
+                youtubeId="aapeAd-XNpE"
+                title="What Can I Bring to Rehab? | Desert Recovery Centers"
+                caption="What can I bring to rehab? Your meds, a week of clothes, and something to keep your hands busy. Here is the short list."
+                vertical
+              />
+              <VideoTranscript youtubeId="aapeAd-XNpE" title="What Can I Bring to Rehab?" />
+            </div>
           </div>
         </div>
       </section>
