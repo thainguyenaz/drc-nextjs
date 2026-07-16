@@ -75,6 +75,8 @@ const nextConfig = {
   },
   async redirects() {
     return [
+      // Team bio slug typo fix (2026-07): old misspelled URL was live in the sitemap
+      { source: "/team/craig-hutchmacher", destination: "/team/craig-huthmacher", permanent: true },
       // Deleted fake location pages → nearest real facility (East Valley → Phoenix PHP/IOP, NW Valley → Glendale, Scottsdale-area → Scottsdale)
       { source: "/locations/chandler", destination: "/locations/phoenix-php-iop", permanent: true },
       { source: "/locations/gilbert", destination: "/locations/phoenix-php-iop", permanent: true },

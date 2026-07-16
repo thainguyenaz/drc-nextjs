@@ -131,14 +131,15 @@ export const teamMembers: TeamMember[] = [
     url: "https://desertrecoverycenters.com/team/ron-alessi",
   },
   {
-    slug: "craig-hutchmacher",
-    name: "Craig Hutchmacher",
-    jobTitle: "Clinical Staff",
-    credentials: [],
+    slug: "craig-huthmacher",
+    name: "Craig Huthmacher",
+    jobTitle: "Program Supervisor (Glendale)",
+    credentials: ["Behavioral Health Professional"],
+    // PLACEHOLDER BIO pending Craig's real bio.
     description:
-      "Craig Hutchmacher is a clinical staff member at Desert Recovery Centers committed to supporting client recovery through personalized care and peer connection.",
+      "Craig Huthmacher is the Program Supervisor at Desert Recovery Centers' Glendale facility, a Behavioral Health Professional supporting clients in residential treatment.",
     image: "/images/team/Craig-Huthmacher.jpg",
-    url: "https://desertrecoverycenters.com/team/craig-hutchmacher",
+    url: "https://desertrecoverycenters.com/team/craig-huthmacher",
   },
   {
     slug: "christopher-kenyon",
