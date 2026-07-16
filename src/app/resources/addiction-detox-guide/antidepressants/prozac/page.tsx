@@ -36,7 +36,7 @@ const faqs = [
   },
   {
     q: "Does insurance cover supervised Prozac discontinuation?",
-    a: "Most major insurance plans cover medically supervised antidepressant discontinuation when it is part of a broader mental health or dual diagnosis treatment program. Desert Recovery Centers accepts out-of-network coverage from most major commercial insurance plans, is in-network with TriCare and TriWest, and offers cash-pay options. Our admissions team verifies your benefits at no cost before you begin.",
+    a: "Most major insurance plans cover medically supervised antidepressant discontinuation when it is part of a broader mental health or dual diagnosis treatment program. Desert Recovery Centers accepts out-of-network coverage from most major commercial insurance plans, is in-network with TRICARE through TriWest, and offers cash-pay options. Our admissions team verifies your benefits at no cost before you begin.",
   },
 ];
 

@@ -1220,7 +1220,7 @@ ${DISCLAIMER}`
 
 <h3>Medicare</h3>
 <p>Medicare Part A covers inpatient psychiatric and substance use treatment, while Part B covers outpatient mental health services, including individual and group therapy, psychiatric visits, and partial hospitalization (<a href="https://www.medicare.gov/coverage/mental-health-substance-use-disorder" target="_blank" rel="noopener">Medicare.gov — Mental Health &amp; Substance Use Disorders</a>). Medicare Advantage plans may offer additional behavioral health benefits beyond original Medicare.</p>
-<p>Please note that Desert Recovery Centers accepts out-of-network coverage from most major commercial insurance plans and is in-network with TriCare and TriWest; Medicare and AHCCCS (Medicaid) are not accepted forms of payment at our facilities.</p>
+<p>Please note that Desert Recovery Centers accepts out-of-network coverage from most major commercial insurance plans and is in-network with TRICARE through TriWest; Medicare and AHCCCS (Medicaid) are not accepted forms of payment at our facilities.</p>
 
 <h2>Prior Authorization: What It Is and How It Works</h2>
 <p>Most insurance plans require prior authorization before covering residential treatment, PHP, or IOP. Prior authorization is the process by which the insurance company reviews clinical information to determine whether the requested level of care is medically necessary. This typically involves the treatment facility submitting clinical documentation, including the client's diagnosis, symptom severity, functional impairment, and the rationale for the recommended level of care.</p>
@@ -1228,7 +1228,7 @@ ${DISCLAIMER}`
 
 <h2>In Network vs. Out of Network</h2>
 <p>Insurance plans typically offer different benefit levels for in network and out of network providers. In network providers have contracted rates with the insurance company, which generally results in lower out of pocket costs for the client. Out of network providers may still be covered, but at a higher cost to the client, with higher deductibles and coinsurance rates.</p>
-<p>Desert Recovery Centers is out-of-network with all commercial insurance carriers, and is in-network with TriCare and TriWest. Even on an out-of-network basis, your plan may still cover a significant portion of the cost, and our team will help you understand your specific benefits and out of pocket responsibilities before you begin treatment.</p>
+<p>Desert Recovery Centers is out-of-network with all commercial insurance carriers, and is in-network with TRICARE through TriWest. Even on an out-of-network basis, your plan may still cover a significant portion of the cost, and our team will help you understand your specific benefits and out of pocket responsibilities before you begin treatment.</p>
 
 <h2>Understanding Deductibles, Copays, and Coinsurance</h2>
 <p>Your out of pocket cost for treatment will depend on your plan's specific terms. A deductible is the amount you must pay before insurance begins covering costs. A copay is a fixed amount you pay per visit or service. Coinsurance is the percentage of costs you pay after meeting your deductible. Understanding these terms and knowing your plan's specific numbers is essential for financial planning.</p>

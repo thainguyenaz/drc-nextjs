@@ -46,7 +46,7 @@ const COMPARISON_ROWS: { label: string; luxury: string; traditional: string }[] 
   },
   {
     label: "Insurance",
-    luxury: "OON commercial + in-network TriCare/TriWest",
+    luxury: "OON commercial + in-network TRICARE (through TriWest)",
     traditional: "Varies widely",
   },
   {

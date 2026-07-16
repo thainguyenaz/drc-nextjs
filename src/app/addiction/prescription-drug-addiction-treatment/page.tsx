@@ -142,7 +142,7 @@ export default function PrescriptionDrugAddictionPage() {
               Prescription drug recovery often involves unlearning the belief that you need a substance to function. Whether your dependence began with pain, anxiety, or attention issues, your treatment plan addresses the underlying condition alongside the addiction. Our step-down model, residential to PHP to IOP, gives you increasing autonomy as you build confidence in your ability to manage life without the medication that once controlled it.
             </p>
             <p className="text-gray-600 leading-relaxed mt-4">
-              For commercial insurance, we work on an out-of-network basis with major plans. We are also in-network with TriCare and TriWest, and offer cash-pay options. Coverage varies by plan. Contact us to verify your benefits at no cost.
+              For commercial insurance, we work on an out-of-network basis with major plans. We are also in-network with TRICARE through TriWest, and offer cash-pay options. Coverage varies by plan. Contact us to verify your benefits at no cost.
             </p>
             </AnimatedSection>
           </div>
@@ -174,7 +174,7 @@ export default function PrescriptionDrugAddictionPage() {
           {
             question: "Does Desert Recovery Centers accept insurance for prescription drug rehab?",
             answer:
-              "Desert Recovery Centers accepts out-of-network coverage from most major commercial insurance plans for prescription drug addiction treatment, is in-network with TriCare and TriWest, and offers cash-pay options. Coverage varies by plan and provider, so our admissions team verifies your benefits and explains costs before treatment begins.",
+              "Desert Recovery Centers accepts out-of-network coverage from most major commercial insurance plans for prescription drug addiction treatment, is in-network with TRICARE through TriWest, and offers cash-pay options. Coverage varies by plan and provider, so our admissions team verifies your benefits and explains costs before treatment begins.",
           },
         ]}
       />

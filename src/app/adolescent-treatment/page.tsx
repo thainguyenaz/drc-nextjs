@@ -65,7 +65,7 @@ const adolescentSchema = {
     suggestedMinAge: 12,
     suggestedMaxAge: 17,
   },
-  paymentAccepted: "Out-of-network commercial insurance, In-network TriCare/TriWest, Private Pay",
+  paymentAccepted: "Out-of-network commercial insurance, In-network TRICARE (through TriWest), Private Pay",
   identifier: {
     "@type": "PropertyValue",
     propertyID: "Arizona Department of Health Services license",
@@ -263,7 +263,7 @@ export default function AdolescentTreatmentPage() {
           {
             question: "Does the adolescent program accept insurance?",
             answer:
-              "Desert Recovery Centers accepts out-of-network coverage from most major commercial insurance plans (Blue Cross Blue Shield, UnitedHealthcare, Aetna, Cigna, and others), is in-network with TriCare and TriWest, and offers cash-pay options. Benefits are verified before treatment begins. Call (623) 305-0496.",
+              "Desert Recovery Centers accepts out-of-network coverage from most major commercial insurance plans (Blue Cross Blue Shield, UnitedHealthcare, Aetna, Cigna, and others), is in-network with TRICARE through TriWest, and offers cash-pay options. Benefits are verified before treatment begins. Call (623) 305-0496.",
           },
         ]}
       />

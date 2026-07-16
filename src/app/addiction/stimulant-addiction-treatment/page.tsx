@@ -52,7 +52,7 @@ export default function StimulantAddictionPage() {
       <section className="bg-forest py-8">
         <div className="max-w-container mx-auto px-6 flex flex-col sm:flex-row items-center justify-center gap-4 text-center">
           <p className="text-white/80 font-body text-sm sm:text-base">
-            Confidential admissions, 24/7. Out-of-network commercial insurance and in-network TriCare/TriWest accepted.
+            Confidential admissions, 24/7. Out-of-network commercial insurance and in-network TRICARE (through TriWest) accepted.
           </p>
           <a
             href="tel:+16233050496"
@@ -157,7 +157,7 @@ export default function StimulantAddictionPage() {
               Stimulant recovery is a process of neurological healing. Your brain needs time, often weeks to months, to restore natural dopamine function. During that period, the right clinical environment makes the difference between sustained recovery and relapse. At Desert Recovery Centers, we provide the structured, supportive setting that allows healing to happen, with step-down care from residential through IOP to ensure a smooth transition back to daily life.
             </p>
             <p className="text-gray-600 leading-relaxed mt-4">
-              For commercial insurance, we work on an out-of-network basis with major plans. We are also in-network with TriCare and TriWest, and offer cash-pay options. Coverage varies by plan. Contact us to verify your benefits at no cost.
+              For commercial insurance, we work on an out-of-network basis with major plans. We are also in-network with TRICARE through TriWest, and offer cash-pay options. Coverage varies by plan. Contact us to verify your benefits at no cost.
             </p>
             </AnimatedSection>
           </div>
@@ -179,7 +179,7 @@ export default function StimulantAddictionPage() {
           {
             question: "Does Desert Recovery Centers accept insurance for stimulant rehab?",
             answer:
-              "Desert Recovery Centers accepts out-of-network coverage from most major commercial insurance plans for stimulant addiction treatment, is in-network with TriCare and TriWest, and offers cash-pay options. Coverage varies by plan and provider, so our admissions team verifies your benefits and explains costs before treatment begins.",
+              "Desert Recovery Centers accepts out-of-network coverage from most major commercial insurance plans for stimulant addiction treatment, is in-network with TRICARE through TriWest, and offers cash-pay options. Coverage varies by plan and provider, so our admissions team verifies your benefits and explains costs before treatment begins.",
           },
         ]}
       />

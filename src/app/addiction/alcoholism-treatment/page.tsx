@@ -143,7 +143,7 @@ export default function AlcoholAddictionPage() {
               Recovery from alcohol addiction is not a straight line, and we don&apos;t treat it like one. Your treatment plan is built around your history, your triggers, and your goals. From residential care with 24/7 support to step-down programs that help you practice sobriety in the real world, we walk beside you through every stage. Our aftercare planning connects you with ongoing support, alumni networks, and community resources to sustain your progress long after treatment ends.
             </p>
             <p className="text-gray-600 leading-relaxed mt-4">
-              For commercial insurance, we work on an out-of-network basis with major plans. We are also in-network with TriCare and TriWest, and offer cash-pay options. Coverage varies by plan. Contact us to verify your benefits at no cost.
+              For commercial insurance, we work on an out-of-network basis with major plans. We are also in-network with TRICARE through TriWest, and offer cash-pay options. Coverage varies by plan. Contact us to verify your benefits at no cost.
             </p>
             </AnimatedSection>
           </div>
@@ -181,7 +181,7 @@ export default function AlcoholAddictionPage() {
           {
             question: "Does Desert Recovery Centers accept insurance for alcohol rehab?",
             answer:
-              "Desert Recovery Centers accepts out-of-network coverage from most major commercial insurance plans for alcohol addiction treatment, is in-network with TriCare and TriWest, and offers cash-pay options. Coverage varies by plan and provider, so our admissions team verifies your benefits and explains costs before treatment begins.",
+              "Desert Recovery Centers accepts out-of-network coverage from most major commercial insurance plans for alcohol addiction treatment, is in-network with TRICARE through TriWest, and offers cash-pay options. Coverage varies by plan and provider, so our admissions team verifies your benefits and explains costs before treatment begins.",
           },
         ]}
       />
