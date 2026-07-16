@@ -7,7 +7,9 @@ import Navigation from "@/components/Navigation";
 import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { MedicalTherapySchema, MedicalWebPageSchema } from "@/lib/seo";
+import { MedicalTherapySchema, MedicalWebPageSchema, VideoSchemas } from "@/lib/seo";
+import YouTubeEmbed from "@/components/YouTubeEmbed";
+import VideoTranscript from "@/components/VideoTranscript";
 import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
 import { faqData } from "@/data/faq-data";
 import SchemaScript from "@/components/SchemaScript";
@@ -58,6 +60,7 @@ export default function BridgeWorkPage() {
         url="/treatments/bridgework"
         conditions={["Substance Use Disorders", "Emotional Dysregulation", "Trauma", "ADHD", "Relapse Vulnerability", "Impulse Control Disorders"]}
       />
+      <VideoSchemas path="/treatments/bridgework/" />
       <Navigation />
       <Breadcrumb items={getBreadcrumbsFromPathname("/treatments/bridgework")} />
       <PageHero
@@ -121,6 +124,35 @@ export default function BridgeWorkPage() {
               BridgeWork™ is one of the only clinical psychologist-led skill integration programs in the region, and it is available exclusively at Desert Recovery Centers.
             </p>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Video: What Is BridgeWork Therapy */}
+      <section className="py-20 md:py-28 bg-cream">
+        <div className="max-w-container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
+          >
+            <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
+              Watch
+            </span>
+            <div className="w-[60px] h-0.5 bg-gold mx-auto mt-4 mb-4" />
+            <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold">
+              What Is BridgeWork™ Therapy?
+            </h2>
+          </motion.div>
+          <div className="max-w-3xl mx-auto">
+            <YouTubeEmbed
+              youtubeId="xlS4ux4JNT8"
+              title="What Is BridgeWork Therapy? | Desert Recovery Centers"
+              caption="What is BridgeWork therapy? It connects what you learn in session to real life, with a coach beside you."
+            />
+            <VideoTranscript youtubeId="xlS4ux4JNT8" title="What Is BridgeWork Therapy?" />
+          </div>
         </div>
       </section>
 

@@ -134,7 +134,7 @@ export const videoData: Record<string, VideoEntry[]> = {
     { youtubeId: "PkH82oa6HkA", title: "How Does SoftWave Therapy Work for Addiction?", description: "SoftWave tissue regeneration therapy for addiction recovery support.", uploadDate: "2024-10-01T00:00:00+00:00" },
   ],
   "/treatments/bridgework/": [
-    { youtubeId: "Kg1jBDrT3KI", title: "Changing Behaviors By Developing Healthy Coping Mechanisms", description: "How behavioral change and healthy coping mechanisms support long-term recovery.", uploadDate: "2024-10-01T00:00:00+00:00" },
+    { youtubeId: "xlS4ux4JNT8", title: "What Is BridgeWork Therapy? | Desert Recovery Centers", description: "BridgeWork therapy connects what clients learn in session to real life, with a coach walking clients through the skills at Desert Recovery Centers in Arizona.", uploadDate: "2026-07-15T18:11:57+00:00" },
   ],
 
   // ── RESOURCE PAGES ──

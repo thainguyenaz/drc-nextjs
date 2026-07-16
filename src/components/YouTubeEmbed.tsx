@@ -8,16 +8,22 @@ export default function YouTubeEmbed({
   title,
   className,
   start,
+  caption,
+  vertical,
 }: {
   youtubeId: string;
   title: string;
   className?: string;
   start?: number;
+  caption?: string;
+  vertical?: boolean;
 }) {
   const [playing, setPlaying] = useState(false);
 
-  return (
-    <div className={`w-full aspect-video rounded-lg overflow-hidden shadow-lg relative ${className ?? ""}`}>
+  const aspect = vertical ? "aspect-[9/16] max-w-sm mx-auto" : "aspect-video";
+
+  const frame = (
+    <div className={`w-full ${aspect} rounded-lg overflow-hidden shadow-lg relative ${caption ? "" : className ?? ""}`}>
       {playing ? (
         <iframe
           src={`https://www.youtube.com/embed/${youtubeId}?autoplay=1&rel=0${start ? `&start=${start}` : ""}`}
@@ -58,5 +64,16 @@ export default function YouTubeEmbed({
         </button>
       )}
     </div>
+  );
+
+  if (!caption) return frame;
+
+  return (
+    <figure className={className}>
+      {frame}
+      <figcaption className="text-gray-500 text-sm text-center mt-3 max-w-2xl mx-auto">
+        {caption}
+      </figcaption>
+    </figure>
   );
 }
