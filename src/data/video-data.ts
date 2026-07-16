@@ -16,9 +16,16 @@ export const videoData: Record<string, VideoEntry[]> = {
     { youtubeId: "LjK58DeWTSY", title: "Desert Recovery Centers Treatment Programs", description: "Learn about addiction and mental health treatment programs at Desert Recovery Centers.", uploadDate: "2024-10-01T00:00:00+00:00" },
   ],
 
-  // ── ABOUT US — 1 video ──
+  // ── ABOUT US — 3 videos ──
   "/about/": [
+    { youtubeId: "JUSM7ErxKq8", title: "The Desert Recovery Centers Story | Luxury Dual Diagnosis Treatment in Arizona", description: "Two friends who found recovery together built the program they wished existed. This is the full DRC story.", uploadDate: "2026-07-15T17:53:04+00:00" },
+    { youtubeId: "3B78Fzu6Y1M", title: "Born From an Act of Love | The Desert Recovery Centers Story", description: "It started with a phone call and a promise to do treatment differently. This is our story.", uploadDate: "2026-07-14" },
     { youtubeId: "bqDzL4O3WDE", title: "About Desert Recovery Centers", description: "Learn about the mission, team, and philosophy of Desert Recovery Centers in Arizona.", uploadDate: "2024-10-01T00:00:00+00:00" },
+  ],
+
+  // ── OUR TEAM — 1 video ──
+  "/our-team/": [
+    { youtubeId: "-UvsmwUSjag", title: "Meet the Team at Desert Recovery Centers | Nurses, Therapists & BHTs", description: "Meet the people behind the care. Nurses, therapists, and staff, many in recovery themselves.", uploadDate: "2026-07-15T18:16:49+00:00" },
   ],
 
   // ── LOCATION PAGES — 1 facility tour each ──
