@@ -89,7 +89,8 @@ export default function ScottsdaleLocationPage() {
       {/* Overview */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-container mx-auto px-6">
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-5xl mx-auto flex flex-col md:flex-row gap-10 items-start">
+            <div className="flex-1">
             <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mb-6">
               A Recovery Oasis in North Scottsdale
             </h2>
@@ -102,6 +103,16 @@ export default function ScottsdaleLocationPage() {
             <p className="text-gray-600 leading-relaxed text-lg">
               If you or someone you love is ready for help, our Scottsdale facility offers the clinical excellence of a top-tier treatment program in a luxury environment you have to see to believe.
             </p>
+            </div>
+            <div className="w-full md:w-[380px] md:flex-shrink-0">
+              <YouTubeEmbed
+                youtubeId="4ur6PUnnnMM"
+                title="Inside Our Church Location (Women's Facility) | Dr. An Nguyen"
+                caption="Step inside our Church location for women. Mountain views, a sanctuary backyard, and space to heal."
+                vertical
+              />
+              <VideoTranscript youtubeId="4ur6PUnnnMM" title="Inside Our Church Location" />
+            </div>
           </div>
         </div>
       </section>

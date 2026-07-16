@@ -45,7 +45,7 @@ export default function YouTubeEmbed({
           aria-label={`Play ${title}`}
         >
           <Image
-            src={`https://i.ytimg.com/vi/${youtubeId}/hqdefault.jpg`}
+            src={`https://i.ytimg.com/vi/${youtubeId}/${vertical ? "oardefault" : "hqdefault"}.jpg`}
             alt={title}
             fill
             unoptimized

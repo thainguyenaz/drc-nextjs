@@ -3,7 +3,9 @@ import Navigation from "@/components/Navigation";
 import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { SpeakableSchema, MedicalConditionSchema, MedicalWebPageSchema } from "@/lib/seo";
+import { SpeakableSchema, MedicalConditionSchema, MedicalWebPageSchema, VideoSchemas } from "@/lib/seo";
+import YouTubeEmbed from "@/components/YouTubeEmbed";
+import VideoTranscript from "@/components/VideoTranscript";
 import AEOBlock from "@/components/AEOBlock";
 import RelatedPages from "@/components/RelatedPages";
 import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
@@ -34,6 +36,7 @@ export default function DepressionTreatmentPage() {
   return (
     <>
       <SchemaScript schema={[getFAQSchema(faqData["depression-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/mental-health/depression-treatment"))]} />
+      <VideoSchemas path="/mental-health/depression-treatment/" />
       <MedicalWebPageSchema url="/mental-health/depression-treatment" name="Depression Treatment Center Arizona | Desert Recovery Centers" dateModified="2026-04-05" />
       <SpeakableSchema url="/mental-health/depression-treatment" cssSelectors={["[data-speakable]"]} />
       <MedicalConditionSchema
@@ -63,7 +66,8 @@ export default function DepressionTreatmentPage() {
       {/* Condition Overview */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-container mx-auto px-6">
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-5xl mx-auto flex flex-col md:flex-row gap-10 items-start">
+            <div className="flex-1">
             <AnimatedSection>
             <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mb-6">
               When the Weight Becomes Too Much to Carry
@@ -78,6 +82,16 @@ export default function DepressionTreatmentPage() {
               It&apos;s not. Depression is a medical condition, one that changes your brain chemistry, your energy, your ability to experience joy. And with the right treatment, it responds. At Desert Recovery Centers, we&apos;ve watched hundreds of people who felt exactly the way you do right now walk out of our program feeling genuinely, durably better. That possibility exists for you too.
             </p>
             </AnimatedSection>
+            </div>
+            <div className="w-full md:w-[380px] md:flex-shrink-0">
+              <YouTubeEmbed
+                youtubeId="pc_QS4khZsw"
+                title="Men and Depression: You Are Not Alone | Desert Recovery Centers"
+                caption="Society tells men not to talk about depression. Ron has a different message: you matter, and you are not alone."
+                vertical
+              />
+              <VideoTranscript youtubeId="pc_QS4khZsw" title="Men and Depression: You Are Not Alone" />
+            </div>
           </div>
         </div>
       </section>

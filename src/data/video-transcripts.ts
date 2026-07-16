@@ -5,6 +5,18 @@
 // Paragraph breaks are blank lines (double newline).
 
 export const videoTranscripts: Record<string, string> = {
+  // #49 How Common Is Trauma With Addiction? | Desert Recovery Centers
+  "E8RZJNW3Q3Y":
+    "You'd be surprised how common trauma is, not just an addiction, but you gotta understand trauma is not what happens to you as much as it is, what happens inside you. It's not the hit. It's the concussion you get from the hit. Not many people seem to understand it.",
+  // #50 Inside Our Church Location (Women's Facility) | Dr. An Nguyen
+  "4ur6PUnnnMM":
+    "So here at Desert Recovery Centers, we have our church location, and we call it church because that's the name of the road, and that is primarily our female, gender specific facility. When you come and see the church facility. is definitely breathtaking. The landscape in the back, there's mountains. Our property here is basically sprawling, right? We have separate group rooms. We have a game room. We have a massage room. So when we're providing a holistic care. And then outside, it's just a sanctuary. That's an amazing place where a lot of our individual sessions happen, right? Of course, we have therapy rooms, but we liked, you know, to be walking outside, maybe on the tennis court, walking around the pool. A lot of mindfulness, guided mindfulness walking around, as well, because",
+  // #51 Mental Health or Addiction: Which Comes First? | Desert Recovery Centers
+  "vJ_pl06kJ_A":
+    "Does mental health or addiction come first? I think they need to be treated at the same time, because when you treat one over the other, The other is still running rampant. And I think it is extremely important to treat them both at the same time.",
+  // #56 Men and Depression: You Are Not Alone | Desert Recovery Centers
+  "pc_QS4khZsw":
+    "Depression is a huge problem right now, especially among men. I want to let you know, we have specific programs and counselors, along with therapists, to be able to address those issues for you here at Desert Recovery. I get it. In society today, men aren't supposed to talk about depression. They're not supposed to talk about their feelings. I just want to let you know you're not alone anymore. Please understand, you matter, you're valuable, and we're here for you. Please reach out to Desert Recovery Centers.",
   // #64 Born From an Act of Love | The Desert Recovery Centers Story
   "3B78Fzu6Y1M":
     "It was very scary. I felt extremely lost in the world, wasn't sure what the next step would be, or how to get out of the dark cold that I had been in for many years. And in that moment, I just told her, I don't know what to do. I need help. Desert Recovery Centers was born out of an act of love, of kindness, and of service. Love is an action word. Just, like, a warm hug walking into this house. You're not alone. I have been there. There are so many people that have been there, and this disease, whether it be mental illness or substance abuse, it does make you feel alone and singled out, but, you know, there is a lot of hope. We just kind of have to take that first step in asking for help. If you have 1% of willingness, that's all you need. That's all we need to start your journey of recovery, and then we will help you build on that. Because we're gonna walk side by side. The first 30 days, an inpatient we're gonna carry you, and then the next 90, we're gonna walk with you. So pick up that phone and call. Desert Recovery Centers is waiting.",
