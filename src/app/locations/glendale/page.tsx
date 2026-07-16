@@ -224,7 +224,7 @@ export default function GlendaleLocationPage() {
             <h3 className="font-display text-xl text-forest font-semibold mb-4">
               A Veteran&apos;s Recovery: Chris Herrera&apos;s Story
             </h3>
-            <div>
+            <div className="mb-16">
               <YouTubeEmbed
                 youtubeId="5OMQUlfAcKk"
                 title="A Veteran's Recovery: Chris Herrera's Story | Desert Recovery Centers"
@@ -232,6 +232,18 @@ export default function GlendaleLocationPage() {
                 belowVideo={<TestimonialDisclaimer />}
               />
               <VideoTranscript youtubeId="5OMQUlfAcKk" title="Chris Herrera's Story" />
+            </div>
+            <h3 className="font-display text-xl text-forest font-semibold mb-4">
+              Jeff&apos;s Story: Finding Mental Health First Treatment
+            </h3>
+            <div>
+              <YouTubeEmbed
+                youtubeId="7EuzOR0lwk4"
+                title="Jeff's Story: Finding Mental Health First Treatment | Desert Recovery Centers"
+                caption="Other programs treated the substance and missed the mental health. This is Jeff's story."
+                belowVideo={<TestimonialDisclaimer />}
+              />
+              <VideoTranscript youtubeId="7EuzOR0lwk4" title="Jeff's Story" />
             </div>
           </div>
         </div>

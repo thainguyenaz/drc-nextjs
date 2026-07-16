@@ -38,6 +38,7 @@ export const videoData: Record<string, VideoEntry[]> = {
     { youtubeId: "7qvyphmKNxg", title: "Desert Recovery Centers Scottsdale Facility Tour", description: "Tour the Desert Recovery Centers North Scottsdale Arizona luxury residential treatment facility.", uploadDate: "2024-10-01T00:00:00+00:00" },
     { youtubeId: "ANqsMXkAeGQ", title: "Mandy's Story: Hope After Bipolar and Alcohol Addiction | Desert Recovery Centers", description: "Twelve-step recovery never reached the root for Mandy. Here is how mental-health-based care changed that.", uploadDate: "2026-07-15" },
     { youtubeId: "yW910OrE-1k", title: "Daleny's Story: From Hopeless to a Future | Desert Recovery Centers", description: "She could not picture a month ahead. This is Daleny's story, from hopeless to a future.", uploadDate: "2026-07-15" },
+    { youtubeId: "4ur6PUnnnMM", title: "Inside Our Church Location (Women's Facility) | Dr. An Nguyen", description: "Step inside our Church location for women. Mountain views, a sanctuary backyard, and space to heal.", uploadDate: "2026-07-13" },
   ],
   "/locations/phoenix-php-iop/": [
     { youtubeId: "rMkEYhoW-kE", title: "Desert Recovery Centers Phoenix Facility Tour", description: "Tour the Desert Recovery Centers Phoenix Arizona PHP, IOP, and outpatient treatment facility.", uploadDate: "2024-10-01T00:00:00+00:00" },
@@ -66,10 +67,10 @@ export const videoData: Record<string, VideoEntry[]> = {
     { youtubeId: "BBqDg2--6BY", title: "Does Alcohol Worsen Anxiety Disorders?", description: "How alcohol use impacts anxiety disorders and why treating both together leads to better outcomes.", uploadDate: "2025-02-01T00:00:00+00:00" },
   ],
   "/mental-health/depression-treatment/": [
-    { youtubeId: "GehgubrjdFg", title: "Can Alcohol Consumption Lead to Depression?", description: "The relationship between alcohol use and depression, and why integrated treatment is essential.", uploadDate: "2025-02-01T00:00:00+00:00" },
+    { youtubeId: "pc_QS4khZsw", title: "Men and Depression: You Are Not Alone | Desert Recovery Centers", description: "Society tells men not to talk about depression. Ron has a different message: you matter, and you are not alone.", uploadDate: "2026-07-14" },
   ],
   "/mental-health/ptsd-treatment/": [
-    { youtubeId: "DhLGvWwqGX4", title: "What Is EMDR Therapy for PTSD?", description: "How EMDR therapy helps treat PTSD and trauma at Desert Recovery Centers.", uploadDate: "2024-10-01T00:00:00+00:00" },
+    { youtubeId: "E8RZJNW3Q3Y", title: "How Common Is Trauma With Addiction? | Desert Recovery Centers", description: "Trauma is not what happens to you. It is what happens inside you. Here is how often trauma and addiction travel together.", uploadDate: "2026-07-13" },
   ],
   "/mental-health/bipolar-disorder-treatment/": [
     { youtubeId: "ieL-jXdg47M", title: "What Is the Relationship Between Alcohol Use and Bipolar Disorder?", description: "How alcohol use disorder and bipolar disorder interact and why dual diagnosis treatment is essential.", uploadDate: "2025-02-01T00:00:00+00:00" },
@@ -134,6 +135,7 @@ export const videoData: Record<string, VideoEntry[]> = {
   ],
   "/treatments/dual-diagnosis-treatment/": [
     { youtubeId: "7EuzOR0lwk4", title: "Jeff's Story: Finding Mental Health First Treatment | Desert Recovery Centers", description: "Other programs treated the substance and missed the mental health. This is Jeff's story.", uploadDate: "2026-07-15" },
+    { youtubeId: "vJ_pl06kJ_A", title: "Mental Health or Addiction: Which Comes First? | Desert Recovery Centers", description: "Mental health or addiction, which comes first? They have to be treated together. That is dual diagnosis care.", uploadDate: "2026-07-14" },
   ],
   "/treatments/tms-therapy/": [
     { youtubeId: "4yWqQ_VVzgE", title: "NeuroStar TMS Therapy, How It Works", description: "How NeuroStar TMS therapy works as an FDA-cleared, non-invasive treatment for depression. Video courtesy of NeuroStar.", uploadDate: "2022-11-22T00:00:00+00:00" },

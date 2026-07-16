@@ -3,7 +3,9 @@ import Navigation from "@/components/Navigation";
 import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { SpeakableSchema, MedicalConditionSchema, MedicalWebPageSchema } from "@/lib/seo";
+import { SpeakableSchema, MedicalConditionSchema, MedicalWebPageSchema, VideoSchemas } from "@/lib/seo";
+import YouTubeEmbed from "@/components/YouTubeEmbed";
+import VideoTranscript from "@/components/VideoTranscript";
 import AEOBlock from "@/components/AEOBlock";
 import RelatedPages from "@/components/RelatedPages";
 import { getFAQSchema, getBreadcrumbSchema } from "@/lib/schema";
@@ -34,6 +36,7 @@ export default function PTSDTreatmentPage() {
   return (
     <>
       <SchemaScript schema={[getFAQSchema(faqData["ptsd-treatment"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/mental-health/ptsd-treatment"))]} />
+      <VideoSchemas path="/mental-health/ptsd-treatment/" />
       <MedicalWebPageSchema url="/mental-health/ptsd-treatment" name="PTSD Treatment Center Arizona | Desert Recovery Centers" dateModified="2026-04-05" />
       <SpeakableSchema url="/mental-health/ptsd-treatment" cssSelectors={["[data-speakable]"]} />
       <MedicalConditionSchema
@@ -63,7 +66,8 @@ export default function PTSDTreatmentPage() {
       {/* Condition Overview */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-container mx-auto px-6">
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-5xl mx-auto flex flex-col md:flex-row gap-10 items-start">
+            <div className="flex-1">
             <AnimatedSection>
             <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mb-6">
               Living With Trauma You Can&apos;t Outrun
@@ -78,6 +82,16 @@ export default function PTSDTreatmentPage() {
               At Desert Recovery Centers, our trauma specialists use the most advanced, evidence-based therapies available to help your brain and body finally process what happened, so you can stop surviving and start living again.
             </p>
             </AnimatedSection>
+            </div>
+            <div className="w-full md:w-[380px] md:flex-shrink-0">
+              <YouTubeEmbed
+                youtubeId="E8RZJNW3Q3Y"
+                title="How Common Is Trauma With Addiction? | Desert Recovery Centers"
+                caption="Trauma is not what happens to you. It is what happens inside you. Here is how often trauma and addiction travel together."
+                vertical
+              />
+              <VideoTranscript youtubeId="E8RZJNW3Q3Y" title="How Common Is Trauma With Addiction?" />
+            </div>
           </div>
         </div>
       </section>

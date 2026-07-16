@@ -115,12 +115,13 @@ export default function DualDiagnosisPage() {
             </motion.div>
           </div>
 
+          <div className="max-w-5xl mx-auto flex flex-col md:flex-row gap-10 items-start">
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.6 }}
-            className="max-w-3xl mx-auto"
+            className="flex-1"
           >
             <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
               Understanding Dual Diagnosis
@@ -139,6 +140,16 @@ export default function DualDiagnosisPage() {
               Our clinical psychologists, psychiatrist, and medical team collaborate daily to ensure that medication management, therapy protocols, and holistic programming work in concert, not at cross-purposes.
             </p>
           </motion.div>
+          <div className="w-full md:w-[380px] md:flex-shrink-0">
+            <YouTubeEmbed
+              youtubeId="vJ_pl06kJ_A"
+              title="Mental Health or Addiction: Which Comes First? | Desert Recovery Centers"
+              caption="Mental health or addiction, which comes first? They have to be treated together. That is dual diagnosis care."
+              vertical
+            />
+            <VideoTranscript youtubeId="vJ_pl06kJ_A" title="Mental Health or Addiction: Which Comes First?" />
+          </div>
+          </div>
         </div>
       </section>
 
