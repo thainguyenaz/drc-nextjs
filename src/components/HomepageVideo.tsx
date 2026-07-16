@@ -1,8 +1,7 @@
 "use client";
 
 import { useScrollReveal } from "@/lib/useScrollReveal";
-import Image from "next/image";
-import VideoLightbox from "./VideoLightbox";
+import YouTubeEmbed from "./YouTubeEmbed";
 
 export default function HomepageVideo() {
   const { ref: headerRef, visible: headerVisible } = useScrollReveal<HTMLDivElement>({ rootMargin: "-80px" });
@@ -22,8 +21,9 @@ export default function HomepageVideo() {
             See What Makes Desert Recovery Centers Different
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Take a look inside our luxury treatment facilities and hear from our
-            clinical team about our approach to lasting recovery.
+            Two friends who found recovery together built the program they wished
+            existed. This is how Desert Recovery Centers began, and how we treat
+            people now.
           </p>
         </div>
 
@@ -32,19 +32,11 @@ export default function HomepageVideo() {
           style={{ "--reveal-delay": "0.1s" } as React.CSSProperties}
           className={`max-w-4xl mx-auto reveal-fade-up${videoVisible ? " reveal-in" : ""}`}
         >
-          <VideoLightbox videoId="6x9IQq6h9Rk">
-            <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-xl group">
-              <Image
-                src="/images/scottsdale/DRC-DRONE-SCOTTSDALE-08-01-2024-August-01-202400006-2.jpg"
-                alt="Desert Recovery Centers brand video, aerial view of Scottsdale facility"
-                fill
-                className="object-cover group-hover:scale-[1.04] transition-transform duration-[350ms] ease-out"
-                sizes="(max-width: 768px) 100vw, 800px"
-              />
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-forest/20 group-hover:bg-forest/10 transition-colors duration-300" />
-            </div>
-          </VideoLightbox>
+          <YouTubeEmbed
+            youtubeId="JUSM7ErxKq8"
+            title="The Desert Recovery Centers Story | Luxury Dual Diagnosis Treatment in Arizona"
+            caption="Two friends who found recovery together built the program they wished existed. This is the full DRC story."
+          />
         </div>
       </div>
     </section>

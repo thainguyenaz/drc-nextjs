@@ -90,20 +90,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Watch Our Story ──────────────────────────────── */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">Watch Our Story</span>
-          <div className="w-[60px] h-0.5 bg-gold mx-auto mt-4 mb-4" />
-          <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold mb-10">The Desert Recovery Centers Story</h2>
-          <YouTubeEmbed
-            youtubeId="JUSM7ErxKq8"
-            title="The Desert Recovery Centers Story | Luxury Dual Diagnosis Treatment in Arizona"
-            caption="Two friends who found recovery together built the program they wished existed. This is the full DRC story."
-          />
-        </div>
-      </section>
-
       {/* ── Get Help Form ─────────────────────────────── */}
       <section id="contact" className="py-20 md:py-28 bg-cream overflow-hidden">
         <div className="max-w-container mx-auto px-6">
