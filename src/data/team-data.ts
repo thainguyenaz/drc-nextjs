@@ -173,15 +173,6 @@ export const teamMembers: TeamMember[] = [
     url: "https://desertrecoverycenters.com/team/dr-reyes-topete-md",
   },
   {
-    slug: "ajuni-singh",
-    name: "Ajuni Singh",
-    jobTitle: "",
-    credentials: [],
-    description: "",
-    image: "/images/team/Ajuni-Singh.jpg",
-    url: "https://desertrecoverycenters.com/team/ajuni-singh",
-  },
-  {
     slug: "amanda-werner",
     name: "Amanda Werner",
     jobTitle: "Registered Nurse",
