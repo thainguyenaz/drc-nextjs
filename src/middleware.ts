@@ -56,7 +56,7 @@ export function middleware(request: NextRequest) {
 
   const incomingGclid = request.nextUrl.searchParams.get("gclid");
   const response = NextResponse.next();
-  if (incomingGclid && !request.cookies.get(GCLID_COOKIE)) {
+  if (incomingGclid) {
     response.cookies.set(GCLID_COOKIE, incomingGclid, {
       httpOnly: true,
       secure: true,
