@@ -23,7 +23,7 @@ export const videoData: Record<string, VideoEntry[]> = {
 
   // ── OUR TEAM — 2 videos ──
   "/our-team/": [
-    { youtubeId: "-UvsmwUSjag", title: "Meet the Team at Desert Recovery Centers | Nurses, Therapists & BHTs", description: "Meet the people behind the care. Nurses, therapists, and staff, many in recovery themselves.", uploadDate: "2026-07-15T18:16:49+00:00" },
+    { youtubeId: "gvvegeSDEGU", title: "Meet the Team at Desert Recovery Centers | Nurses, Therapists & BHTs", description: "Meet the people behind the care. Nurses, therapists, and staff, many in recovery themselves.", uploadDate: "2026-07-18T00:00:00-07:00" },
     { youtubeId: "p1e4DHF_qR0", title: "The Heartbeat of DRC: Our Staff | Dr. An Nguyen", description: "Our staff are with clients 24/7 and train every week. They are the heartbeat of DRC.", uploadDate: "2026-07-14T19:53:01+00:00" },
   ],
 

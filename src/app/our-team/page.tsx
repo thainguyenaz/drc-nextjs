@@ -118,11 +118,11 @@ export default function OurTeamPage() {
             </p>
             <div className="mt-10">
               <YouTubeEmbed
-                youtubeId="-UvsmwUSjag"
+                youtubeId="gvvegeSDEGU"
                 title="Meet the Team at Desert Recovery Centers | Nurses, Therapists & BHTs"
                 caption="Meet the people behind the care. Nurses, therapists, and staff, many in recovery themselves."
               />
-              <VideoTranscript youtubeId="-UvsmwUSjag" title="Meet the Team at Desert Recovery Centers" />
+              <VideoTranscript youtubeId="gvvegeSDEGU" title="Meet the Team at Desert Recovery Centers" />
             </div>
           </div>
         </div>
