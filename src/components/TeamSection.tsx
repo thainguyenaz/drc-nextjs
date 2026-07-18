@@ -5,7 +5,7 @@ import Image from "next/image";
 import { siteData } from "@/lib/site-data";
 import { useScrollReveal } from "@/lib/useScrollReveal";
 
-type TeamMember = { name: string; title: string; image: string; bio: string; slug?: string };
+type TeamMember = { name: string; title: string; image: string; bio: string; slug?: string; imagePosition?: string };
 
 function TeamCard({ member, i, onSelect }: { member: TeamMember; i: number; onSelect: () => void }) {
   const { ref, visible } = useScrollReveal<HTMLDivElement>({ rootMargin: "-50px" });
@@ -23,6 +23,7 @@ function TeamCard({ member, i, onSelect }: { member: TeamMember; i: number; onSe
           alt={`${member.name}, ${member.title} at Desert Recovery Centers`}
           fill
           className="object-cover object-top group-hover:scale-[1.04] transition-transform duration-[350ms] ease-out"
+          style={member.imagePosition ? { objectPosition: member.imagePosition } : undefined}
           sizes="(max-width: 768px) 50vw, 25vw"
         />
         {/* Hover overlay */}
@@ -103,6 +104,7 @@ function BioModal({
                 alt={`${member.name}, ${member.title} at Desert Recovery Centers Arizona`}
                 fill
                 className="object-cover object-top"
+                style={member.imagePosition ? { objectPosition: member.imagePosition } : undefined}
                 sizes="176px"
               />
             </div>
