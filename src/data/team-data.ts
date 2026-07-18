@@ -184,27 +184,32 @@ export const teamMembers: TeamMember[] = [
   {
     slug: "amanda-werner",
     name: "Amanda Werner",
-    jobTitle: "",
-    credentials: [],
-    description: "",
+    jobTitle: "Registered Nurse",
+    credentials: ["RN"],
+    // PLACEHOLDER BIO pending Amanda's real bio.
+    description:
+      "Amanda Werner is a Registered Nurse at Desert Recovery Centers, licensed in Arizona since 2020.",
     image: "/images/team/Amanda-Werner.jpg",
     url: "https://desertrecoverycenters.com/team/amanda-werner",
   },
   {
     slug: "celestine-snell",
-    name: "Celestine Snell",
-    jobTitle: "",
-    credentials: [],
-    description: "",
+    name: "Dr. Celestine Snell",
+    jobTitle: "Postdoctoral Resident in Clinical Psychology",
+    credentials: ["PsyD"],
+    description:
+      "Celestine Snell, PsyD, is a Postdoctoral Resident in Clinical Psychology at Desert Recovery Centers, providing clinical services under the supervision of Dr. An Nguyen, PsyD, Licensed Clinical Psychologist and Clinical Director. She earned her Doctor of Psychology in Clinical Psychology from the California School of Professional Psychology at Alliant International University. Her clinical experience spans children, adolescents, adults, and families across a range of healthcare settings, supporting people through trauma, adversity, and a broad range of mental health concerns. She works collaboratively with each client to build an individualized treatment approach.",
     image: "/images/team/Celestine-Snell.jpg",
     url: "https://desertrecoverycenters.com/team/celestine-snell",
   },
   {
     slug: "hailey-watson",
     name: "Hailey Watson",
-    jobTitle: "",
-    credentials: [],
-    description: "",
+    jobTitle: "Registered Nurse",
+    credentials: ["RN", "BSN"],
+    // PLACEHOLDER BIO pending Hailey's real bio.
+    description:
+      "Hailey Watson is a Registered Nurse at Desert Recovery Centers, licensed in Arizona since 2016. She holds a Bachelor of Science in Nursing from Grand Canyon University.",
     image: "/images/team/Hailey-Watson.jpg",
     url: "https://desertrecoverycenters.com/team/hailey-watson",
   },
