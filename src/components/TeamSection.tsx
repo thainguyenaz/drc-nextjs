@@ -40,6 +40,34 @@ function TeamCard({ member, i, onSelect }: { member: TeamMember; i: number; onSe
   );
 }
 
+function TeamGroup({
+  label,
+  members,
+  onSelect,
+}: {
+  label: string;
+  members: readonly TeamMember[];
+  onSelect: (member: TeamMember) => void;
+}) {
+  const { ref, visible } = useScrollReveal<HTMLHeadingElement>();
+  return (
+    <div className="mb-16">
+      <h3
+        ref={ref}
+        className={`text-center font-body text-xs tracking-[0.25em] uppercase text-gold font-semibold mb-8 reveal-fade-up${visible ? " reveal-in" : ""}`}
+        style={{ "--reveal-duration": "0.4s" } as React.CSSProperties}
+      >
+        {label}
+      </h3>
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        {members.map((member, i) => (
+          <TeamCard key={member.name} member={member} i={i} onSelect={() => onSelect(member)} />
+        ))}
+      </div>
+    </div>
+  );
+}
+
 function BioModal({
   member,
   closing,
@@ -100,12 +128,18 @@ function BioModal({
   );
 }
 
+const groups: { label: string; members: readonly TeamMember[] }[] = [
+  { label: "Leadership", members: siteData.team.leadership },
+  { label: "Medical", members: siteData.team.medical },
+  { label: "Psychology", members: siteData.team.psychology },
+  { label: "Nursing", members: siteData.team.nursing },
+  { label: "Program & Behavioral Health", members: siteData.team.program },
+];
+
 export default function TeamSection() {
   const [selected, setSelected] = useState<TeamMember | null>(null);
   const [closing, setClosing] = useState(false);
   const { ref: headerRef, visible: headerVisible } = useScrollReveal<HTMLDivElement>({ rootMargin: "-80px" });
-  const { ref: leadershipRef, visible: leadershipVisible } = useScrollReveal<HTMLHeadingElement>();
-  const { ref: clinicalRef, visible: clinicalVisible } = useScrollReveal<HTMLHeadingElement>();
 
   // Idempotent: setting selected=null + closing=false twice is harmless (React bails on same-value).
   const finishClose = useCallback(() => {
@@ -162,37 +196,14 @@ export default function TeamSection() {
             </p>
           </div>
 
-          {/* Leadership */}
-          <div className="mb-16">
-            <h3
-              ref={leadershipRef}
-              className={`text-center font-body text-xs tracking-[0.25em] uppercase text-gold font-semibold mb-8 reveal-fade-up${leadershipVisible ? " reveal-in" : ""}`}
-              style={{ "--reveal-duration": "0.4s" } as React.CSSProperties}
-            >
-              Leadership
-            </h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-              {siteData.team.leadership.map((member, i) => (
-                <TeamCard key={member.name} member={member} i={i} onSelect={() => openModal(member)} />
-              ))}
-            </div>
-          </div>
-
-          {/* Clinical Staff */}
-          <div>
-            <h3
-              ref={clinicalRef}
-              className={`text-center font-body text-xs tracking-[0.25em] uppercase text-gold font-semibold mb-8 reveal-fade-up${clinicalVisible ? " reveal-in" : ""}`}
-              style={{ "--reveal-duration": "0.4s" } as React.CSSProperties}
-            >
-              Clinical Staff
-            </h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-              {siteData.team.clinical.map((member, i) => (
-                <TeamCard key={member.name} member={member} i={i} onSelect={() => openModal(member)} />
-              ))}
-            </div>
-          </div>
+          {groups.map((group) => (
+            <TeamGroup
+              key={group.label}
+              label={group.label}
+              members={group.members}
+              onSelect={openModal}
+            />
+          ))}
         </div>
       </section>
 
