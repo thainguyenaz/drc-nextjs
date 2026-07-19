@@ -198,9 +198,8 @@ export const teamMembers: TeamMember[] = [
     name: "Hailey Watson",
     jobTitle: "Registered Nurse",
     credentials: ["RN", "BSN"],
-    // PLACEHOLDER BIO pending Hailey's real bio.
     description:
-      "Hailey Watson is a Registered Nurse at Desert Recovery Centers, licensed in Arizona since 2016. She holds a Bachelor of Science in Nursing from Grand Canyon University.",
+      "Hailey Watson is a registered nurse with over 10 years of experience in healthcare, including extensive experience in behavioral health, addiction treatment, crisis care, and psychiatric nursing. Throughout her career, she has developed a strong passion for supporting individuals on their journey toward recovery and overall well-being. Hailey is currently pursuing her Doctor of Nursing Practice degree with a specialization in psychiatric mental health. She believes that healing is a deeply personal journey and is passionate about providing compassionate care that supports the whole person, including the mind, body, and spirit. With a special interest in holistic and integrative approaches to mental health and addiction recovery, Hailey is dedicated to helping individuals find healing, build resilience, and create healthier, more meaningful lives.",
     image: "/images/team/Hailey-Watson.jpg",
     url: "https://desertrecoverycenters.com/team/hailey-watson",
   },
