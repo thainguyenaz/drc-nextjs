@@ -17,8 +17,31 @@ const PHI_QUERY_PARAMS = [
   "patient_name",
 ];
 
-const GCLID_COOKIE = "_dr_gclid";
-const GCLID_MAX_AGE = 60 * 60 * 24 * 90;
+const ATTRIBUTION_MAX_AGE = 60 * 60 * 24 * 90; // 90 days
+
+// Ad click IDs and UTM params captured verbatim from the entry URL into
+// first-party cookies, read server-side at form submit, mapped to native
+// Dazos Lead fields. Semantics match the original gclid capture: set when the
+// param is present, last non-empty value wins. These params appear only on the
+// ad-entry hit, so last-touch here is the click that drove the visit.
+const ATTRIBUTION_PARAM_COOKIES: Record<string, string> = {
+  gclid: "_dr_gclid",
+  gbraid: "_dr_gbraid",
+  wbraid: "_dr_wbraid",
+  utm_source: "_dr_utm_source",
+  utm_medium: "_dr_utm_medium",
+  utm_campaign: "_dr_utm_campaign",
+  utm_term: "_dr_utm_term",
+  utm_content: "_dr_utm_content",
+};
+
+const ATTRIBUTION_COOKIE_OPTIONS = {
+  httpOnly: true,
+  secure: true,
+  sameSite: "lax" as const,
+  maxAge: ATTRIBUTION_MAX_AGE,
+  path: "/",
+};
 
 // The retired /adolescent-program URL and the old /adolescent/* tree remain
 // permanently removed and must return 410 Gone so crawlers de-index them (not a
@@ -54,16 +77,12 @@ export function middleware(request: NextRequest) {
     return NextResponse.redirect(url, 301);
   }
 
-  const incomingGclid = request.nextUrl.searchParams.get("gclid");
   const response = NextResponse.next();
-  if (incomingGclid) {
-    response.cookies.set(GCLID_COOKIE, incomingGclid, {
-      httpOnly: true,
-      secure: true,
-      sameSite: "lax",
-      maxAge: GCLID_MAX_AGE,
-      path: "/",
-    });
+  for (const [param, cookieName] of Object.entries(ATTRIBUTION_PARAM_COOKIES)) {
+    const value = request.nextUrl.searchParams.get(param);
+    if (value) {
+      response.cookies.set(cookieName, value, ATTRIBUTION_COOKIE_OPTIONS);
+    }
   }
 
   return response;
