@@ -20,6 +20,109 @@ const DISCLAIMER = `<p><em>This article is for informational purposes only and d
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "alcohol-withdrawal-symptoms",
+    title: "Alcohol Withdrawal Symptoms",
+    excerpt: "Alcohol withdrawal can be dangerous and even life-threatening, but it is also well documented and treatable. Here is what to expect, when to get help, and why medical supervision matters.",
+    category: "clinical",
+    author: "Desert Recovery Centers Clinical Team",
+    authorTitle: "Licensed Clinical Psychologist, Clinical Director",
+    datePublished: "2026-07-22",
+    dateModified: "2026-07-22",
+    readTime: 7,
+    featuredImage: "/images/blog/clinical.jpg",
+    featuredImageAlt: "Alcohol Withdrawal Symptoms - Desert Recovery Centers",
+    tags: ["drinking withdrawal symptoms","symptoms of detoxing from alcohol","symptoms of alcohol dependence withdrawal","alcohol withdrawal timeline","drinking withdrawal timeline"],
+    metaTitle: "Alcohol Withdrawal Symptoms: Timeline & When to Get Help",
+    metaDescription: "Shaking, sweating, racing heart after stopping drinking? Learn what alcohol withdrawal symptoms to expect, the full timeline, and when to seek medical help.",
+    content: `<p>It is 2am and you stopped drinking, or you are thinking about stopping, and something feels wrong. Your hands are shaking. Your heart is racing. Maybe you feel like your skin is crawling, or you cannot sit still, or you are sweating through your shirt. You are scared, and you are wondering whether what is happening to your body is dangerous.</p>
+
+<p>The answer is: it can be. Alcohol withdrawal is one of the few withdrawal syndromes that can kill. But here is the other truth, the one you also need to hear right now: what you are going through is real, well documented, and treatable. People get through this every day with the right support. You are not losing your mind, and you are not beyond help.</p>
+
+<h2>Why Stopping Alcohol Hits the Body So Hard</h2>
+
+<p>Alcohol is a depressant. Over time, chronic drinking forces your brain to compensate by ramping up its own stimulating activity to stay functional. When alcohol is removed suddenly, that compensation does not stop. Your nervous system keeps firing at a level it was calibrated for when alcohol was present, and now there is nothing to balance it. The result is a state of hyperexcitability: elevated heart rate, tremor, agitation, and in serious cases, seizures.</p>
+
+<p>This is not a moral failing or a mental breakdown. It is a neurological event. NIDA identifies this process, called CNS hyperexcitability, as the primary driver of withdrawal severity. The DSM-5 formally recognizes alcohol withdrawal as a medical diagnosis requiring clinical attention.</p>
+
+<h2>What Drinking Withdrawal Symptoms Actually Feel Like</h2>
+
+<p>The symptoms of alcohol dependence withdrawal cover a wide range, from uncomfortable to life-threatening. Here is what to watch for:</p>
+
+<ul>
+  <li><strong>Tremor (shaking hands, arms, or body)</strong></li>
+  <li><strong>Sweating, especially at night</strong></li>
+  <li><strong>Elevated heart rate and blood pressure</strong></li>
+  <li><strong>Nausea and vomiting</strong></li>
+  <li><strong>Anxiety or a feeling of dread you cannot explain</strong></li>
+  <li><strong>Insomnia</strong></li>
+  <li><strong>Sensitivity to light and sound</strong></li>
+  <li><strong>Headache</strong></li>
+  <li><strong>Hallucinations (visual, auditory, or tactile) in more severe cases</strong></li>
+  <li><strong>Seizures</strong></li>
+  <li><strong>Delirium tremens (DTs): confusion, extreme agitation, fever, rapid heart rate</strong></li>
+</ul>
+
+<p>Not everyone experiences every symptom, and severity varies considerably from person to person. But there is no reliable way to predict at the outset how severe your withdrawal will become. That unpredictability is exactly why medical supervision matters.</p>
+
+<h2>The Alcohol Withdrawal Timeline: What Happens and When</h2>
+
+<p>The drinking withdrawal timeline follows a fairly predictable pattern, though the intensity differs for each person:</p>
+
+<ul>
+  <li><strong>6 to 24 hours after the last drink:</strong> Minor symptoms begin. Tremor, sweating, elevated heart rate, anxiety, and nausea are common in this window.</li>
+  <li><strong>12 to 48 hours:</strong> Alcoholic hallucinosis can emerge. This means seeing, hearing, or feeling things that are not there, while remaining largely oriented to reality.</li>
+  <li><strong>24 to 48 hours:</strong> Seizure risk is at its peak. Seizures can happen without warning, even in people who have withdrawn before without incident.</li>
+  <li><strong>48 to 96 hours:</strong> This is when delirium tremens is most likely to develop. DTs carry a reported mortality rate of 1 to 5 percent even with medical treatment. Symptoms include severe confusion, agitation, fever, and dangerous cardiovascular instability.</li>
+  <li><strong>5 to 7 days:</strong> For most people, acute symptoms begin to resolve around this point.</li>
+  <li><strong>Weeks to months afterward:</strong> Protracted withdrawal, recognized by SAMHSA, can persist long after the acute phase ends, showing up as anxiety, sleep disruption, and mood instability.</li>
+</ul>
+
+<h2>The Kindling Effect: Why It Gets Worse Each Time</h2>
+
+<p>If you have gone through withdrawal before and feel like this time is harder, you are not imagining it. Repeated withdrawal episodes sensitize the nervous system through a process called kindling. Each time the brain goes through withdrawal, it can produce more intense symptoms than the previous episode. This is one of the most important reasons not to white-knuckle through withdrawal alone and hope for the best.</p>
+
+<blockquote class="clinical-callout"><p><strong>Clinical perspective from Dr. Nguyen:</strong> In residential treatment, one of the biggest misconceptions I encounter is that if someone looks “fine” during the first day of detox, they’re out of danger. I remind families that alcohol withdrawal can escalate rapidly over the next 48-96 hours, and previous withdrawal episodes often result in more severe symptoms due to the kindling effect. I also emphasize that while the acute medical risks usually resolve within a week, anxiety, insomnia, and emotional instability frequently persist well beyond detox, making continued treatment essential rather than optional.</p></blockquote>
+
+<p>Looking okay in hour six does not mean you are safe in hour forty-eight. This is not meant to frighten you beyond what is useful. It is meant to give you an accurate picture, because accurate information is what helps you make the right call tonight.</p>
+
+<p><strong>You do not have to figure this out alone.</strong> Desert Recovery Centers is here 24 hours a day, 7 days a week. Call <a href="tel:+16026357207">(602) 635-7207</a> to talk with our admissions team, or <a href="/insurance">verify your insurance</a> online in a few minutes.</p>
+
+<h2>Can You Detox From Alcohol at Home?</h2>
+
+<p>Some people do. But there is no way to know ahead of time whether you are one of them. Seizures can occur without warning. DTs can develop rapidly. Clinicians use a validated tool called the CIWA-Ar to track withdrawal symptom severity in real time and guide medication decisions. That kind of monitoring is simply not available at home.</p>
+
+<p>Medically supervised detox uses benzodiazepines as the first-line treatment for alcohol withdrawal, a practice supported by substantial NIH-reviewed evidence. These medications calm the hyperactive nervous system, prevent seizures, and make the process safer and significantly more bearable. Some programs also use phenobarbital or gabapentin depending on the clinical picture.</p>
+
+<p>The question is not whether you are strong enough to do it alone. The question is whether it is worth the risk when safer options exist.</p>
+
+<h2>When to Seek Help Right Now</h2>
+
+<p>If any of the following are true, this is a medical situation that needs professional attention today, not tomorrow:</p>
+
+<ul>
+  <li>You are having a seizure or have had one in the past during withdrawal</li>
+  <li>You are seeing, hearing, or feeling things that are not there</li>
+  <li>Your heart is pounding or racing in a way that frightens you</li>
+  <li>You are severely confused or disoriented</li>
+  <li>You have a fever along with other withdrawal symptoms</li>
+  <li>You have withdrawn multiple times before and symptoms feel worse this time</li>
+  <li>You have liver disease, heart disease, or other serious medical conditions</li>
+  <li>You are vomiting and cannot keep fluids down</li>
+</ul>
+
+<p>If you are experiencing a seizure or signs of DTs right now, call 911. These are emergencies.</p>
+
+<p>For everyone else reading this at 2am, scared and trying to figure out what to do next: the window you are in, those first 24 to 48 hours, is exactly when having a clinical team available makes the difference between a safe detox and a dangerous one.</p>
+
+<h2>What Comes After Detox</h2>
+
+<p>Getting through acute withdrawal is the first step, not the finish line. Protracted withdrawal symptoms, particularly anxiety and insomnia, can persist for weeks to months. This is not a sign that something went wrong. It is a documented part of how the brain recalibrates after chronic alcohol exposure. It is also one of the most common reasons people return to drinking after a short detox: they feel awful, they do not have support, and drinking is the only thing they know that makes it stop.</p>
+
+<p>Continued treatment after detox, whether residential, intensive outpatient, or structured therapy, addresses both the physical aftermath and the patterns that led here. It is not a luxury. For most people with significant alcohol dependence, it is the difference between lasting change and starting the cycle over.</p>
+
+<p><strong>You do not have to figure this out alone.</strong> Desert Recovery Centers is here 24 hours a day, 7 days a week. Call <a href="tel:+16026357207">(602) 635-7207</a> to talk with our admissions team, or <a href="/insurance">verify your insurance</a> online in a few minutes.</p>`,
+  },
+  {
     slug: "fentanyl-withdrawal-symptoms",
     title: "Fentanyl Withdrawal Symptoms",
     excerpt: "Fentanyl withdrawal is intense, frightening, and follows a predictable timeline. This post explains what symptoms to expect, how long they last, and why medical supervision matters for your safety.",
