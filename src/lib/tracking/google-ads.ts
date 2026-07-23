@@ -2,6 +2,15 @@ import { GoogleAdsApi } from "google-ads-api";
 import { trackingGateCheck, logTrackingSkip } from "./env-gate";
 import { hashedEmail, hashedPhone } from "./hash";
 
+// Both web conversion actions (Get Help 7585142764, Insurance Verification
+// 7585191106) have a 30-day click-through lookback window; anything older is
+// rejected by Google as EXPIRED_EVENT, so gate it here instead of uploading.
+export const GCLID_UPLOAD_MAX_AGE_MS = 30 * 24 * 60 * 60 * 1000;
+
+// Google click IDs are URL-safe base64-ish tokens. Reject anything outside
+// that alphabet or implausibly short/long before spending an API call on it.
+const GCLID_FORMAT = /^[A-Za-z0-9_-]{10,200}$/;
+
 export type FormType = "get_help" | "insurance_verification" | "partner_referral";
 
 interface UploadInput {
@@ -57,6 +66,30 @@ export async function uploadFormConversion(
     return { attempted: false, uploaded: false, skippedReason: "no_gclid" };
   }
 
+  // Cookie format is "<gclid>|<epochMillis>" (see middleware TIMESTAMPED_COOKIES).
+  // The gclid alphabet never contains "|", so lastIndexOf splits unambiguously.
+  const sep = input.gclid.lastIndexOf("|");
+  const gclid = sep === -1 ? input.gclid : input.gclid.slice(0, sep);
+  const tsRaw = sep === -1 ? null : input.gclid.slice(sep + 1);
+
+  if (!GCLID_FORMAT.test(gclid)) {
+    return { attempted: false, uploaded: false, skippedReason: "gclid_malformed" };
+  }
+
+  // Cookies written before the timestamp suffix shipped have no "|<ts>" part;
+  // report those separately from genuine expiry so the backlog drain is visible.
+  const capturedAtMs = tsRaw ? Number(tsRaw) : NaN;
+  if (!Number.isFinite(capturedAtMs)) {
+    return {
+      attempted: false,
+      uploaded: false,
+      skippedReason: "gclid_stale_no_timestamp",
+    };
+  }
+  if (Date.now() - capturedAtMs > GCLID_UPLOAD_MAX_AGE_MS) {
+    return { attempted: false, uploaded: false, skippedReason: "gclid_stale" };
+  }
+
   const customerId = process.env.GOOGLE_ADS_CUSTOMER_ID;
   const managerId = process.env.GOOGLE_ADS_LOGIN_CUSTOMER_ID;
   const actionId = conversionActionIdFor(input.formType);
@@ -103,7 +136,7 @@ export async function uploadFormConversion(
 
     const conversion = {
       conversion_action: `customers/${customerId}/conversionActions/${actionId}`,
-      gclid: input.gclid,
+      gclid,
       conversion_date_time: formatAdsDateTime(),
       conversion_value: input.conversionValueUsd ?? 100.0,
       currency_code: "USD",
