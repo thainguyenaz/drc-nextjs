@@ -176,10 +176,9 @@ export const teamMembers: TeamMember[] = [
     slug: "amanda-werner",
     name: "Amanda Werner",
     jobTitle: "Registered Nurse",
-    credentials: ["RN"],
-    // PLACEHOLDER BIO pending Amanda's real bio.
+    credentials: ["RN", "BSN"],
     description:
-      "Amanda Werner is a Registered Nurse at Desert Recovery Centers, licensed in Arizona since 2020.",
+      "Amanda is a Registered Nurse dedicated to providing compassionate, patient-centered care to individuals on their journey toward recovery and wellness. She earned her Bachelor of Science in Nursing and cared for patients across a variety of acute care specialties before finding passion in mental health and substance use. Dedicated to treating every client with dignity, empathy, and respect, she believes healing begins with building trust and fostering meaningful therapeutic relationships. In collaboration with the team of professionals at Desert Recovery Centers, Amanda strives to make a positive impact through kindness and advocacy, while ensuring clients receive safe, high-quality medical care as they navigate recovery.",
     image: "/images/team/Amanda-Werner.jpg",
     url: "https://desertrecoverycenters.com/team/amanda-werner",
   },
