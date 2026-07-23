@@ -677,49 +677,67 @@ export default function TMSTherapyPage() {
       <section className="py-20 md:py-28 bg-forest relative overflow-hidden">
         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
         <div className="max-w-container mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.6 }}
-            className="max-w-3xl mx-auto"
-          >
-            <div className="flex items-center gap-3 mb-4">
-              <span className="w-8 h-px bg-gold" />
-              <span className="text-gold font-body text-xs tracking-[0.2em] uppercase font-medium">
-                Adolescent TMS
-              </span>
-            </div>
-            <h2 className="font-display text-3xl md:text-4xl text-white font-semibold mb-6">
-              Can Teenagers Get TMS?
-            </h2>
-            <p className="text-white/70 font-body leading-relaxed mb-6">
-              Yes. NeuroStar TMS is FDA-cleared for adolescents ages 15 to 21 as
-              an add-on treatment for depression, and adolescent TMS is provided
-              by Desert TMS LLC, an affiliated licensed provider on-site at
-              Desert Recovery Centers. According to NeuroStar, it is
-              the first and only TMS system FDA-cleared for this age group, used
-              alongside standard care such as therapy or medication rather than
-              in place of it.
-            </p>
-            <p className="text-white/70 font-body leading-relaxed mb-6">
-              For a teenager who has tried antidepressant medication without
-              enough relief, TMS offers a non-drug option with a well-studied
-              safety profile. Parents are involved at every step: treatment
-              requires parental consent, and the clinical team completes a full
-              evaluation to confirm TMS is appropriate before any sessions
-              begin.
-            </p>
-            <p className="text-white/50 font-body text-sm leading-relaxed">
-              An evening intensive outpatient program for adolescents ages 12 to
-              17 is also available at the same Phoenix location. Learn more on
-              the{" "}
-              <a href="/adolescent-treatment" className="text-gold hover:underline">
-                adolescent treatment page
-              </a>
-              .
-            </p>
-          </motion.div>
+          <div className="grid md:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.6 }}
+            >
+              <div className="flex items-center gap-3 mb-4">
+                <span className="w-8 h-px bg-gold" />
+                <span className="text-gold font-body text-xs tracking-[0.2em] uppercase font-medium">
+                  Adolescent TMS
+                </span>
+              </div>
+              <h2 className="font-display text-3xl md:text-4xl text-white font-semibold mb-6">
+                Can Teenagers Get TMS?
+              </h2>
+              <p className="text-white/70 font-body leading-relaxed mb-6">
+                Yes. NeuroStar TMS is FDA-cleared for adolescents ages 15 to 21 as
+                an add-on treatment for depression, and adolescent TMS is provided
+                by Desert TMS LLC, an affiliated licensed provider on-site at
+                Desert Recovery Centers. According to NeuroStar, it is
+                the first and only TMS system FDA-cleared for this age group, used
+                alongside standard care such as therapy or medication rather than
+                in place of it.
+              </p>
+              <p className="text-white/70 font-body leading-relaxed mb-6">
+                For a teenager who has tried antidepressant medication without
+                enough relief, TMS offers a non-drug option with a well-studied
+                safety profile. Parents are involved at every step: treatment
+                requires parental consent, and the clinical team completes a full
+                evaluation to confirm TMS is appropriate before any sessions
+                begin.
+              </p>
+              <p className="text-white/50 font-body text-sm leading-relaxed">
+                An evening intensive outpatient program for adolescents ages 12 to
+                17 is also available at the same Phoenix location. Learn more on
+                the{" "}
+                <a href="/adolescent-treatment" className="text-gold hover:underline">
+                  adolescent treatment page
+                </a>
+                .
+              </p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.6, delay: 0.15 }}
+            >
+              <div className="relative aspect-[3/2] rounded-xl overflow-hidden shadow-xl">
+                <Image
+                  src="/images/tms/adolescent-tms-session.webp"
+                  alt="A person receiving NeuroStar TMS therapy in a treatment chair"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              </div>
+              <p className="text-white/70 font-body text-xs mt-3 text-center">Not an actual patient.</p>
+            </motion.div>
+          </div>
         </div>
       </section>
 
@@ -741,6 +759,14 @@ export default function TMSTherapyPage() {
               on-site at Desert Recovery Centers, chose NeuroStar because the
               evidence is unmatched.
             </p>
+            <Image
+              src="/images/tms/neurostar-provider-badge.png"
+              alt="a NeuroStar provider"
+              width={240}
+              height={50}
+              unoptimized
+              className="mx-auto mt-8"
+            />
           </motion.div>
 
           <motion.div
@@ -817,6 +843,39 @@ export default function TMSTherapyPage() {
               />
             </motion.div>
           </div>
+
+          <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto mt-12">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.6 }}
+              className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-xl"
+            >
+              <Image
+                src="/images/tms/neurostar-system.webp"
+                alt="NeuroStar Advanced Therapy system in the Phoenix TMS suite"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.6, delay: 0.15 }}
+              className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-xl"
+            >
+              <Image
+                src="/images/tms/neurostar-coil-pulses.webp"
+                alt="NeuroStar TMS coil delivering magnetic pulses"
+                fill
+                className="object-contain"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </motion.div>
+          </div>
         </div>
       </section>
 
@@ -844,7 +903,7 @@ export default function TMSTherapyPage() {
 
           <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
             <motion.a
-              href="https://www.dropbox.com/scl/fi/vtiyuqb7g3x5ol2ptbkxc/NeuroStar-Brochure-for-Adults.pdf?rlkey=t0hd593i95eq28lmnoe4r8ud5&dl=1"
+              href="/documents/neurostar-brochure-adult.pdf"
               target="_blank"
               rel="noopener noreferrer"
               data-brochure="adult"
@@ -862,6 +921,30 @@ export default function TMSTherapyPage() {
               </div>
               <h3 className="font-display text-lg text-forest font-semibold mb-2">Adult TMS Brochure</h3>
               <p className="text-gray-600 text-sm leading-relaxed mb-4">Complete guide to NeuroStar TMS therapy for adults with depression, anxious depression, and OCD.</p>
+              <span className="text-gold font-semibold text-sm flex items-center gap-2">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Download PDF
+              </span>
+            </motion.a>
+            <motion.a
+              href="/documents/neurostar-brochure-adolescent.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-brochure="adolescent"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4 }}
+              whileHover={{ y: -6, boxShadow: "0 20px 40px rgba(0,0,0,0.12)" }}
+              className="bg-white rounded-xl p-6 border border-gray-100 block transition-shadow"
+            >
+              <div className="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center text-gold mb-4">
+                <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m.75 12l3 3m0 0l3-3m-3 3v-6m-1.5-9H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+                </svg>
+              </div>
+              <h3 className="font-display text-lg text-forest font-semibold mb-2">Adolescent TMS Brochure</h3>
+              <p className="text-gray-600 text-sm leading-relaxed mb-4">Guide to NeuroStar TMS therapy for adolescents ages 15 to 21 as an add-on treatment for depression.</p>
               <span className="text-gold font-semibold text-sm flex items-center gap-2">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                 Download PDF
