@@ -434,6 +434,10 @@ const nextConfig = {
       { source: "/addiction/understanding-sex-addiction", destination: "/addiction/sex-addiction-treatment", permanent: true },
       { source: "/treatments/understanding-cbt-cognitive-behavioral-therapy", destination: "/treatments/cbt-cognitive-behavioral-therapy", permanent: true },
       { source: "/treatments/understanding-dbt-dialectic-behavior-therapy", destination: "/treatments/dbt-dialectical-behavior-therapy", permanent: true },
+
+      // --- TMS assessment (NeuroStar PHQ-10) ---
+      { source: "/tms-assessment", destination: "https://phq9web.azurewebsites.net/PHQ9/Survey/90664", permanent: false },
+      { source: "/tms-assessment/", destination: "https://phq9web.azurewebsites.net/PHQ9/Survey/90664", permanent: false },
     ];
   },
 };
