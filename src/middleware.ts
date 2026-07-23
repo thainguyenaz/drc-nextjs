@@ -35,6 +35,13 @@ const ATTRIBUTION_PARAM_COOKIES: Record<string, string> = {
   utm_content: "_dr_utm_content",
 };
 
+// Click-ID cookies store "<value>|<epochMillis>" — capture time appended to the
+// same cookie so value and timestamp cannot drift apart. The Google Ads upload
+// gate parses the suffix (lastIndexOf "|") and drops click IDs older than the
+// conversion lookback window instead of uploading EXPIRED_EVENT rejects.
+// Click-ID alphabets never contain "|", so the separator is unambiguous.
+const TIMESTAMPED_COOKIES = new Set(["gclid", "gbraid", "wbraid"]);
+
 const ATTRIBUTION_COOKIE_OPTIONS = {
   httpOnly: true,
   secure: true,
@@ -81,7 +88,10 @@ export function middleware(request: NextRequest) {
   for (const [param, cookieName] of Object.entries(ATTRIBUTION_PARAM_COOKIES)) {
     const value = request.nextUrl.searchParams.get(param);
     if (value) {
-      response.cookies.set(cookieName, value, ATTRIBUTION_COOKIE_OPTIONS);
+      const stored = TIMESTAMPED_COOKIES.has(param)
+        ? `${value}|${Date.now()}`
+        : value;
+      response.cookies.set(cookieName, stored, ATTRIBUTION_COOKIE_OPTIONS);
     }
   }
 
