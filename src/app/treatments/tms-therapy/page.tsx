@@ -33,14 +33,50 @@ const candidateReasons = [
 ];
 
 const keyFacts = [
-  { label: "What it is", value: "A non-drug, non-invasive, FDA-cleared treatment for depression" },
-  { label: "Where", value: "The Phoenix outpatient center, 4160 N. 108th Ave, Phoenix, AZ 85037" },
-  { label: "Provided by", value: "Desert TMS LLC, an affiliated licensed provider on-site at Desert Recovery Centers" },
-  { label: "Device", value: "NeuroStar Advanced Therapy system" },
-  { label: "Treats", value: "Major depressive disorder, depression with anxious symptoms, OCD (add-on), and depression in adolescents ages 15 to 21 (add-on)" },
-  { label: "Typical course", value: "5 sessions per week for 4 to 6 weeks, each session as little as 19 minutes, no downtime" },
-  { label: "Cost", value: "Currently private pay while Desert TMS LLC completes payer credentialing; Medicare and Medicaid not accepted; call for cost and options" },
-  { label: "Phone", value: "(623) 305-0496" },
+  {
+    label: "What it is",
+    value: "A non-drug, non-invasive, FDA-cleared treatment for depression",
+    kind: "clinical",
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+      </svg>
+    ),
+  },
+  { label: "Where", value: "The Phoenix outpatient center, 4160 N. 108th Ave, Phoenix, AZ 85037", kind: "disclosure" },
+  { label: "Provided by", value: "Desert TMS LLC, an affiliated licensed provider on-site at Desert Recovery Centers", kind: "disclosure" },
+  {
+    label: "Device",
+    value: "NeuroStar Advanced Therapy system",
+    kind: "clinical",
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 002.25-2.25V6.75a2.25 2.25 0 00-2.25-2.25H6.75A2.25 2.25 0 004.5 6.75v10.5a2.25 2.25 0 002.25 2.25zm.75-12h9v9h-9v-9z" />
+      </svg>
+    ),
+  },
+  {
+    label: "Treats",
+    value: "Major depressive disorder, depression with anxious symptoms, OCD (add-on), and depression in adolescents ages 15 to 21 (add-on)",
+    kind: "clinical",
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+      </svg>
+    ),
+  },
+  {
+    label: "Typical course",
+    value: "5 sessions per week for 4 to 6 weeks, each session as little as 19 minutes, no downtime",
+    kind: "clinical",
+    icon: (
+      <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    ),
+  },
+  { label: "Cost", value: "Currently private pay while Desert TMS LLC completes payer credentialing; Medicare and Medicaid not accepted; call for cost and options", kind: "disclosure" },
+  { label: "Phone", value: "(623) 305-0496", kind: "disclosure" },
 ];
 
 const notCandidate = [
@@ -400,18 +436,35 @@ export default function TMSTherapyPage() {
             <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mb-6 text-center">
               TMS Therapy at a Glance
             </h2>
-            <dl className="bg-cream rounded-2xl border border-gold/10 divide-y divide-gold/10">
-              {keyFacts.map((fact) => (
-                <div key={fact.label} className="grid sm:grid-cols-[160px_1fr] gap-1 sm:gap-4 px-6 py-4">
-                  <dt className="text-sage font-body text-xs tracking-[0.15em] uppercase font-semibold pt-0.5">
-                    {fact.label}
-                  </dt>
-                  <dd className="text-forest font-body text-sm leading-relaxed">
-                    {fact.value}
-                  </dd>
-                </div>
-              ))}
-            </dl>
+            <div className="bg-cream rounded-2xl border border-gold/10 p-6">
+              <dl className="grid sm:grid-cols-2 gap-4">
+                {keyFacts.filter((fact) => fact.kind === "clinical").map((fact) => (
+                  <div key={fact.label} className="bg-white rounded-xl p-6 border border-gold/10">
+                    <div className="w-12 h-12 rounded-xl bg-forest/5 flex items-center justify-center text-sage mb-4">
+                      {fact.icon}
+                    </div>
+                    <dt className="text-sage font-body text-xs tracking-[0.15em] uppercase font-semibold mb-2">
+                      {fact.label}
+                    </dt>
+                    <dd className="text-forest font-body text-sm leading-relaxed">
+                      {fact.value}
+                    </dd>
+                  </div>
+                ))}
+              </dl>
+              <dl className="divide-y divide-gold/10 mt-4">
+                {keyFacts.filter((fact) => fact.kind === "disclosure").map((fact) => (
+                  <div key={fact.label} className="grid sm:grid-cols-[160px_1fr] gap-1 sm:gap-4 px-2 py-3">
+                    <dt className="text-sage font-body text-xs tracking-[0.15em] uppercase font-semibold pt-0.5">
+                      {fact.label}
+                    </dt>
+                    <dd className="text-forest font-body text-sm leading-relaxed">
+                      {fact.value}
+                    </dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -980,7 +1033,7 @@ export default function TMSTherapyPage() {
             <p className="text-forest/70 font-body leading-relaxed mb-6">
               At Desert Recovery Centers, we have always believed that lasting
               recovery requires treating the whole person. TMS therapy, provided
-              on-site by Desert TMS LLC, will integrate seamlessly with
+              on-site by Desert TMS LLC, integrates with
               DRC&apos;s clinical programs, including
               CBT, DBT, EMDR, BridgeWork&trade;, and dual diagnosis treatment. For
               clients whose depression has not fully responded to therapy alone, TMS
