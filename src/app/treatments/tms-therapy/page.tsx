@@ -947,6 +947,50 @@ export default function TMSTherapyPage() {
         </div>
       </section>
 
+      {/* ── PHQ-10 Assessment ─────────────────────────────────── */}
+      <section className="py-20 md:py-28 bg-white">
+        <div className="max-w-container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.6 }}
+            className="max-w-2xl mx-auto text-center"
+          >
+            <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold mb-4">
+              Take the Depression Assessment
+            </h2>
+            <p className="text-gray-500 font-body leading-relaxed mb-10">
+              The NeuroStar PHQ-10 is a short questionnaire that helps our team understand your symptoms before your first visit. It takes about five minutes.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-10">
+              <a
+                href="/tms-assessment"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-gold hover:bg-gold-dark text-white font-semibold text-base px-8 py-4 rounded-xl transition-colors shadow-lg shadow-gold/25 w-full sm:w-auto text-center"
+              >
+                Start the Assessment
+              </a>
+              <div className="flex flex-col items-center">
+                <Image
+                  src="/images/tms/phq10-qr.png"
+                  alt="QR code to open the NeuroStar PHQ-10 depression assessment"
+                  width={180}
+                  height={180}
+                  unoptimized
+                  className="rounded-lg"
+                />
+                <p className="text-gray-500 text-sm mt-2">Or scan to complete on your phone</p>
+              </div>
+            </div>
+            <p className="text-gray-400 text-sm mt-8">
+              Hosted by Neuronetics. Your responses go to the Desert TMS care team.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
       {/* ── FAQ ──────────────────────────────────────────────── */}
       <section className="py-20 md:py-28 bg-cream">
         <div className="max-w-container mx-auto px-6">
