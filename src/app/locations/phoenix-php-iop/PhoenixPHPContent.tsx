@@ -92,7 +92,7 @@ const programs = [
     tag: "TMS",
     title: "Transcranial Magnetic Stimulation",
     schedule: "FDA Cleared. Non-Invasive. No Medication Required.",
-    body: "One in three people with depression do not get better with antidepressants. If that is you, you have not failed treatment. Treatment has failed you. NeuroStar TMS is different. It uses precise magnetic pulses to stimulate the specific regions of the brain that regulate mood, with no sedation, no systemic side effects, and no downtime. Sessions take about 19 minutes. Most clients start feeling a difference within two to four weeks. The on-site Phoenix TMS suite, operated by Desert TMS LLC, is one of the few in Arizona integrated directly into a full outpatient clinical program, so your TMS treatment works alongside your therapy, not in isolation.",
+    body: "One in three people with depression do not get better with antidepressants. If that is you, you have not failed treatment. Treatment has failed you. NeuroStar TMS is different. It uses precise magnetic pulses to stimulate the specific regions of the brain that regulate mood, with no sedation, no systemic side effects, and no downtime. Sessions take about 19 minutes. Most clients start feeling a difference within two to four weeks. The on-site Phoenix TMS suite, operated by Desert TMS LLC, is integrated directly into a full outpatient clinical program, so your TMS treatment works alongside your therapy, not in isolation.",
     features: [
       "FDA cleared for depression, anxious depression, and OCD (add-on)",
       "Typically 36 sessions over 7 to 9 weeks",
