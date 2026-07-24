@@ -88,7 +88,7 @@ export const siteData = {
       phoneTel: "+16233050496",
       gbpPhone: "(602) 905-8070",
       description:
-        "Dedicated NeuroStar TMS therapy center for depression, anxious depression, and OCD treatment. TMS is provided by Desert TMS LLC, an affiliated licensed provider on-site at Desert Recovery Centers.",
+        "Dedicated NeuroStar TMS therapy center for depression, anxious depression, and OCD (add-on) treatment. TMS is provided by Desert TMS LLC, an affiliated licensed provider on-site at Desert Recovery Centers.",
       programs: ["TMS Therapy"],
       amenities: ["NeuroStar TMS Suite"],
       image: "/images/locations/phoenix/phoenix-lobby-2.jpg",
