@@ -28,7 +28,7 @@ const candidateReasons = [
   "You experience significant side effects from antidepressant medications",
   "You prefer a drug-free treatment approach",
   "You have anxiety symptoms alongside depression (NeuroStar is FDA-cleared for anxious depression)",
-  "You have OCD (NeuroStar is FDA-cleared as adjunct treatment for OCD)",
+  "You have OCD (NeuroStar is FDA-cleared as add-on treatment for OCD)",
   "You are the parent of a teenager ages 15 to 21 whose depression has not responded to standard care (NeuroStar is FDA-cleared for adolescents as an add-on treatment)",
 ];
 
@@ -93,7 +93,7 @@ const differentiators = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
       </svg>
     ),
-    body: "The only TMS system FDA-cleared for MDD, anxious depression, and OCD",
+    body: "FDA-cleared for MDD, anxious depression, and adult OCD (add-on), with over 6.6 million treatments delivered",
   },
   {
     title: "Largest Clinical Dataset",
@@ -165,7 +165,7 @@ const faqs = [
   },
   {
     q: "Is TMS safe?",
-    a: "NeuroStar TMS has been delivered in over 8 million treatments worldwide, according to NeuroStar. The most common side effect is mild scalp discomfort or headache during treatment that typically resolves quickly. Serious side effects are rare. Our clinical team will evaluate your full medical history before recommending TMS.",
+    a: "NeuroStar TMS has been delivered in over 6.6 million treatments worldwide, according to NeuroStar. The most common side effect is mild scalp discomfort or headache during treatment that typically resolves quickly. Serious side effects are rare. Our clinical team will evaluate your full medical history before recommending TMS.",
   },
   {
     q: "Is NeuroStar TMS therapy available now at Desert Recovery Centers?",
@@ -270,7 +270,7 @@ export default function TMSTherapyPage() {
           "@id": "https://desertrecoverycenters.com/treatments/tms-therapy#therapy",
           "name": "NeuroStar TMS Therapy",
           "alternateName": "Transcranial Magnetic Stimulation",
-          "description": "FDA-cleared non-invasive brain stimulation therapy for major depressive disorder, anxious depression, and OCD in adults, and an add-on treatment for depression in adolescents ages 15 to 21. Transcranial Magnetic Stimulation (TMS) services are provided by Desert TMS LLC, a separately licensed Arizona Outpatient Treatment Center located within the Desert Recovery Centers campus.",
+          "description": "FDA-cleared non-invasive brain stimulation therapy for major depressive disorder, anxious depression, and OCD (add-on) in adults, and an add-on treatment for depression in adolescents ages 15 to 21. Transcranial Magnetic Stimulation (TMS) services are provided by Desert TMS LLC, a separately licensed Arizona Outpatient Treatment Center located within the Desert Recovery Centers campus.",
           "url": "https://desertrecoverycenters.com/treatments/tms-therapy",
           "howPerformed": "Focused magnetic pulses are delivered to a mapped area of the brain that regulates mood during short outpatient sessions while the patient sits awake, with no anesthesia and no recovery time.",
           "bodyLocation": "Brain (dorsolateral prefrontal cortex)",
@@ -279,7 +279,7 @@ export default function TMSTherapyPage() {
           "legalStatus": "FDA Cleared",
           "relevantSpecialty": "Psychiatric",
           "study": [
-            { "@type": "MedicalStudy", "name": "NeuroStar Outcomes Registry", "description": "83% of patients experienced measurable improvement, 62% achieved full remission in real-world outcomes study of over 8 million treatments." },
+            { "@type": "MedicalStudy", "name": "NeuroStar Outcomes Registry", "description": "83% of patients experienced measurable improvement, 62% achieved full remission in real-world outcomes study." },
             { "@type": "MedicalStudy", "name": "NIMH-Funded Randomized Controlled Trial", "description": "Patients treated with NeuroStar were 4 times more likely to achieve remission compared to sham treatment." },
           ],
           "availableAtOrFrom": {
@@ -378,7 +378,7 @@ export default function TMSTherapyPage() {
               transition={{ duration: 0.65, delay: 0.5 }}
               className="text-white/70 font-body text-lg md:text-xl max-w-3xl mx-auto leading-relaxed mb-4"
             >
-              FDA-cleared, drug free, non invasive treatment for depression, anxious depression, and OCD. Now available at our Phoenix outpatient center. Private pay available while payer credentialing is completed. Sessions as short as 19 minutes.
+              FDA-cleared, drug free, non invasive treatment for depression, anxious depression, and OCD (add-on). Now available at our Phoenix outpatient center. Private pay available while payer credentialing is completed. Sessions as short as 19 minutes.
             </motion.p>
 
             {/* Certified NeuroStar Provider Badge */}
@@ -752,7 +752,7 @@ export default function TMSTherapyPage() {
                 an add-on treatment for depression, and adolescent TMS is provided
                 by Desert TMS LLC, an affiliated licensed provider on-site at
                 Desert Recovery Centers. According to NeuroStar, it is
-                the first and only TMS system FDA-cleared for this age group, used
+                the first TMS system FDA-cleared for this age group, used
                 alongside standard care such as therapy or medication rather than
                 in place of it.
               </p>
@@ -974,7 +974,7 @@ export default function TMSTherapyPage() {
                 </svg>
               </div>
               <h3 className="font-display text-lg text-forest font-semibold mb-2">Adult TMS Brochure</h3>
-              <p className="text-gray-600 text-sm leading-relaxed mb-4">Complete guide to NeuroStar TMS therapy for adults with depression, anxious depression, and OCD.</p>
+              <p className="text-gray-600 text-sm leading-relaxed mb-4">Complete guide to NeuroStar TMS therapy for adults with depression, anxious depression, and OCD (add-on).</p>
               <span className="text-gold font-semibold text-sm flex items-center gap-2">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                 Download PDF
@@ -1192,7 +1192,7 @@ export default function TMSTherapyPage() {
         <div className="max-w-container mx-auto px-6">
           <p className="text-forest/40 font-body text-xs leading-relaxed text-center max-w-4xl mx-auto">
             NeuroStar TMS therapy is FDA-cleared for Major Depressive Disorder,
-            anxious depression, and OCD in adults, and as an add-on treatment
+            anxious depression, and OCD (add-on) in adults, and as an add-on treatment
             for depression in adolescents ages 15 to 21. Individual results vary.
             Transcranial Magnetic Stimulation (TMS) services are provided by
             Desert TMS LLC, a separately licensed Arizona Outpatient Treatment
