@@ -1225,7 +1225,7 @@ ${DISCLAIMER}`
 
 <h2>Treatment Frequency and Duration</h2>
 <p>A standard course of TMS therapy consists of 36 sessions delivered over approximately 6 to 9 weeks. Sessions are typically scheduled 5 days per week (Monday through Friday) for the first 6 weeks, followed by a tapering schedule of 3 sessions per week, then 2 sessions per week during the final weeks. Each session lasts approximately 19 to 37 minutes, depending on the specific protocol used.</p>
-<p>The NeuroStar system used at Desert Recovery Centers offers the most extensively studied TMS protocol, with over 8 million treatments delivered worldwide, according to NeuroStar. The treatment schedule is designed to produce cumulative neurological changes, which means that improvement is typically gradual rather than immediate.</p>
+<p>The NeuroStar system used at Desert Recovery Centers offers the most extensively studied TMS protocol, with over 6.6 million treatments delivered worldwide, according to NeuroStar. The treatment schedule is designed to produce cumulative neurological changes, which means that improvement is typically gradual rather than immediate.</p>
 
 <h2>What to Expect Week by Week</h2>
 <h3>Weeks 1 and 2</h3>
