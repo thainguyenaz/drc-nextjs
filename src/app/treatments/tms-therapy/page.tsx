@@ -29,7 +29,7 @@ const candidateReasons = [
   "You prefer a drug-free treatment approach",
   "You have anxiety symptoms alongside depression (NeuroStar is FDA-cleared for anxious depression)",
   "You have OCD (NeuroStar is FDA-cleared as add-on treatment for OCD)",
-  "You are the parent of a teenager ages 15 to 21 whose depression has not responded to standard care (NeuroStar is FDA-cleared for adolescents as an add-on treatment)",
+  "You, or someone in your care, are ages 15 to 21 with depression that has not responded to standard care (NeuroStar is FDA-cleared for this age group as an add-on treatment)",
 ];
 
 const keyFacts = [
@@ -161,7 +161,7 @@ const faqs = [
   },
   {
     q: "Can teenagers get TMS therapy?",
-    a: "Yes. NeuroStar TMS is FDA-cleared for adolescents ages 15 to 21 as an add-on treatment for depression, and adolescent TMS is provided by Desert TMS LLC, an affiliated licensed provider on-site at Desert Recovery Centers. Treatment requires parental consent, and the clinical team completes a full evaluation to confirm TMS is appropriate before sessions begin.",
+    a: "Yes. NeuroStar TMS is FDA-cleared for adolescents ages 15 to 21 as an add-on treatment for depression, and adolescent TMS is provided by Desert TMS LLC, an affiliated licensed provider on-site at Desert Recovery Centers. The clinical team completes a full evaluation to confirm TMS is appropriate before sessions begin, and consent is handled according to the patient's age and Arizona law.",
   },
   {
     q: "Is TMS safe?",
@@ -757,12 +757,12 @@ export default function TMSTherapyPage() {
                 in place of it.
               </p>
               <p className="text-white/70 font-body leading-relaxed mb-6">
-                For a teenager who has tried antidepressant medication without
-                enough relief, TMS offers a non-drug option with a well-studied
-                safety profile. Parents are involved at every step: treatment
-                requires parental consent, and the clinical team completes a full
-                evaluation to confirm TMS is appropriate before any sessions
-                begin.
+                For a patient ages 15 to 21 who has tried antidepressant
+                medication without enough relief, TMS offers a non-drug option
+                with a well-studied safety profile. The clinical team completes
+                a full evaluation to confirm TMS is appropriate before any
+                sessions begin, and consent is handled according to the
+                patient&apos;s age and Arizona law.
               </p>
               <p className="text-white/50 font-body text-sm leading-relaxed">
                 An evening intensive outpatient program for adolescents ages 12 to
