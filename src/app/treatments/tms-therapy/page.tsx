@@ -160,8 +160,8 @@ const faqs = [
     a: "Yes. TMS is designed to work alongside other treatments including psychotherapy, medication, and residential programs. TMS is provided by Desert TMS LLC, an affiliated licensed provider on-site at Desert Recovery Centers, and sessions are coordinated with your clinical treatment plan.",
   },
   {
-    q: "Can teenagers get TMS therapy?",
-    a: "Yes. NeuroStar TMS is FDA-cleared for adolescents ages 15 to 21 as an add-on treatment for depression, and adolescent TMS is provided by Desert TMS LLC, an affiliated licensed provider on-site at Desert Recovery Centers. The clinical team completes a full evaluation to confirm TMS is appropriate before sessions begin, and consent is handled according to the patient's age and Arizona law.",
+    q: "Is TMS available for patients ages 15 to 21?",
+    a: "Yes. NeuroStar TMS is FDA-cleared for adolescents ages 15 to 21 as an add-on treatment for depression, and adolescent TMS is provided by Desert TMS LLC, an affiliated licensed provider on-site at Desert Recovery Centers. The clinical team completes a full evaluation to confirm TMS is appropriate before sessions begin. For patients under 18, consent from a parent or legal guardian is generally required. Patients 18 and older provide their own informed consent, subject to any applicable legal exceptions.",
   },
   {
     q: "Is TMS safe?",
@@ -745,7 +745,7 @@ export default function TMSTherapyPage() {
                 </span>
               </div>
               <h2 className="font-display text-3xl md:text-4xl text-white font-semibold mb-6">
-                Can Teenagers Get TMS?
+                Is TMS Available for Patients Ages 15 to 21?
               </h2>
               <p className="text-white/70 font-body leading-relaxed mb-6">
                 Yes. NeuroStar TMS is FDA-cleared for adolescents ages 15 to 21 as
@@ -761,8 +761,10 @@ export default function TMSTherapyPage() {
                 medication without enough relief, TMS offers a non-drug option
                 with a well-studied safety profile. The clinical team completes
                 a full evaluation to confirm TMS is appropriate before any
-                sessions begin, and consent is handled according to the
-                patient&apos;s age and Arizona law.
+                sessions begin. For patients under 18, consent from a parent
+                or legal guardian is generally required. Patients 18 and older
+                provide their own informed consent, subject to any applicable
+                legal exceptions.
               </p>
               <p className="text-white/50 font-body text-sm leading-relaxed">
                 An evening intensive outpatient program for adolescents ages 12 to
