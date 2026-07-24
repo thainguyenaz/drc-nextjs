@@ -424,47 +424,48 @@ export default function TMSTherapyPage() {
       </section>
 
       {/* ── TMS at a Glance ──────────────────────────────────── */}
-      <section className="py-14 md:py-18 bg-white border-b border-forest/5">
+      <section className="py-14 md:py-18 bg-cream border-b border-gold/10">
         <div className="max-w-container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.6 }}
-            className="max-w-3xl mx-auto"
+            className="max-w-5xl mx-auto"
           >
             <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mb-6 text-center">
               TMS Therapy at a Glance
             </h2>
-            <div className="bg-cream rounded-2xl border border-gold/10 p-6">
-              <dl className="grid sm:grid-cols-2 gap-4">
-                {keyFacts.filter((fact) => fact.kind === "clinical").map((fact) => (
-                  <div key={fact.label} className="bg-white rounded-xl p-6 border border-gold/10">
-                    <div className="w-12 h-12 rounded-xl bg-forest/5 flex items-center justify-center text-sage mb-4">
-                      {fact.icon}
-                    </div>
-                    <dt className="text-sage font-body text-xs tracking-[0.15em] uppercase font-semibold mb-2">
-                      {fact.label}
-                    </dt>
-                    <dd className="text-forest font-body text-sm leading-relaxed">
-                      {fact.value}
-                    </dd>
+            <dl className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {keyFacts.filter((fact) => fact.kind === "clinical").map((fact) => (
+                <div
+                  key={fact.label}
+                  className="bg-white rounded-2xl p-5 sm:p-6 border border-gold/20 shadow-sm grid grid-cols-[auto_1fr] sm:grid-cols-1 gap-x-4"
+                >
+                  <div className="w-11 h-11 rounded-xl bg-forest text-cream flex items-center justify-center row-span-2 sm:row-span-1 sm:mb-4">
+                    {fact.icon}
                   </div>
-                ))}
-              </dl>
-              <dl className="divide-y divide-gold/10 mt-4">
-                {keyFacts.filter((fact) => fact.kind === "disclosure").map((fact) => (
-                  <div key={fact.label} className="grid sm:grid-cols-[160px_1fr] gap-1 sm:gap-4 px-2 py-3">
-                    <dt className="text-sage font-body text-xs tracking-[0.15em] uppercase font-semibold pt-0.5">
-                      {fact.label}
-                    </dt>
-                    <dd className="text-forest font-body text-sm leading-relaxed">
-                      {fact.value}
-                    </dd>
-                  </div>
-                ))}
-              </dl>
-            </div>
+                  <dt className="text-sage font-body text-xs tracking-[0.15em] uppercase font-semibold mb-2 self-end sm:self-auto">
+                    {fact.label}
+                  </dt>
+                  <dd className="text-forest font-body text-sm leading-relaxed">
+                    {fact.value}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+            <dl className="mt-4 bg-forest rounded-2xl px-5 py-2 sm:px-8 divide-y divide-white/10">
+              {keyFacts.filter((fact) => fact.kind === "disclosure").map((fact) => (
+                <div key={fact.label} className="grid sm:grid-cols-[160px_1fr] gap-1 sm:gap-4 py-4">
+                  <dt className="text-gold font-body text-xs tracking-[0.15em] uppercase font-semibold pt-1">
+                    {fact.label}
+                  </dt>
+                  <dd className="text-cream font-body text-base leading-relaxed">
+                    {fact.value}
+                  </dd>
+                </div>
+              ))}
+            </dl>
           </motion.div>
         </div>
       </section>
