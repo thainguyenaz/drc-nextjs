@@ -13,6 +13,7 @@ import { faqData } from "@/data/faq-data";
 import { getFAQSchema } from "@/lib/schema";
 import FAQSection from "@/components/FAQSection";
 import PhoenixPHPContent from "./PhoenixPHPContent";
+import LeaveAReviewCTA from "@/components/LeaveAReviewCTA";
 
 const SITE_URL = "https://desertrecoverycenters.com";
 
@@ -93,6 +94,11 @@ export default function PhoenixPhpIopPage() {
       />
 
       <FAQSection faqs={faqData["locations/phoenix"]} />
+      <LeaveAReviewCTA
+        reviewUrl="https://g.page/r/CVuiBewYiKlAEBM/review"
+        supportingCopy="Share your experience with our Phoenix facility on Google."
+        showQr={true}
+      />
       <CTASection />
       <Footer />
     </>

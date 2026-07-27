@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import { buildMetadata, BreadcrumbSchema } from "@/lib/seo";
 import SchemaScript from "@/components/SchemaScript";
 import dynamic from "next/dynamic";
+import LeaveAReviewCTA from "@/components/LeaveAReviewCTA";
 const PhotoGallery = dynamic(() => import("@/components/PhotoGallery"), { ssr: false, loading: () => null });
 
 export const metadata: Metadata = buildMetadata({
@@ -170,6 +171,11 @@ export default function PhoenixLivingPage() {
 
       <PhotoGallery photos={gallery} title="Phoenix Sober Living Gallery" eyebrow="Our Property" />
 
+      <LeaveAReviewCTA
+        reviewUrl="https://g.page/r/CQSC75kiV1ZAEBM/review"
+        supportingCopy="Share your experience with our Phoenix sober living community on Google."
+        showQr={true}
+      />
       <CTASection />
       <Footer />
     </>
