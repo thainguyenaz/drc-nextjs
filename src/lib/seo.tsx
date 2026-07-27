@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { siteData } from "./site-data";
+import { siteData, type SiteLocation } from "./site-data";
 import { videoData } from "@/data/video-data";
 import { videoTranscripts } from "@/data/video-transcripts";
 import { getYouTubeVideoSchema } from "./schema";
@@ -114,7 +114,7 @@ function ld(data: Record<string, unknown>) {
 }
 
 export function LocalBusinessSchema({ index }: { index: number }) {
-  const loc = siteData.locations[index];
+  const loc: SiteLocation = siteData.locations[index];
   const parts = loc.address.split(", ");
   const street = parts[0];
   const city = parts[1];
@@ -140,6 +140,9 @@ export function LocalBusinessSchema({ index }: { index: number }) {
       addressCountry: "US",
     },
     priceRange: "$$$$",
+    ...(loc.lat && loc.lng
+      ? { geo: { "@type": "GeoCoordinates", latitude: loc.lat, longitude: loc.lng } }
+      : {}),
     ...("hours" in loc && loc.hours
       ? { openingHoursSpecification: loc.hours }
       : { openingHours: "Mo-Su 00:00-24:00" }),
