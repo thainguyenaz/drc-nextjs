@@ -227,13 +227,5 @@ export function getWebSiteSchema() {
     url: SITE_URL,
     description: "Luxury addiction and mental health treatment in Arizona",
     publisher: { "@id": `${SITE_URL}/#organization` },
-    potentialAction: {
-      "@type": "SearchAction",
-      target: {
-        "@type": "EntryPoint",
-        urlTemplate: `${SITE_URL}/search?q={search_term_string}`,
-      },
-      "query-input": "required name=search_term_string",
-    },
   };
 }

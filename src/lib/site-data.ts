@@ -22,6 +22,8 @@ export const siteData = {
       image: "/images/glendale/Glendale-Front.jpg",
       sameAs: ["https://www.yelp.com/biz/desert-recovery-centers-glendale"],
       licenseNumber: "BH9449",
+      lat: 33.548686,
+      lng: -112.233823,
     },
     {
       name: "Scottsdale",
@@ -37,6 +39,8 @@ export const siteData = {
       image: "/images/scottsdale/DRC-FRONT-ENTRANCE-NORTH-SCOTTSDALE-08-01-2024-1210August-01-202400002-2.jpg",
       sameAs: [] as string[],
       licenseNumber: "BH10131",
+      lat: 33.697135,
+      lng: -111.867225,
     },
     {
       name: "Phoenix PHP/IOP",
@@ -164,3 +168,9 @@ export const siteData = {
     { name: "Stimulants", href: "/addiction/stimulant-addiction-treatment", description: "Treatment for cocaine, meth, and other stimulant addictions." },
   ],
 } as const;
+
+// Location union with lat/lng optional — only some locations carry coordinates.
+export type SiteLocation = (typeof siteData.locations)[number] & {
+  lat?: number;
+  lng?: number;
+};
