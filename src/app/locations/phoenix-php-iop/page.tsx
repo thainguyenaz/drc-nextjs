@@ -3,7 +3,7 @@ import Navigation from "@/components/Navigation";
 import PageHero from "@/components/PageHero";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
-import { SpeakableSchema, VideoSchemas } from "@/lib/seo";
+import { SpeakableSchema, VideoSchemas, LocalBusinessSchema } from "@/lib/seo";
 import AEOBlock from "@/components/AEOBlock";
 import { getPageMeta } from "@/data/page-metadata";
 import SchemaScript from "@/components/SchemaScript";
@@ -30,68 +30,6 @@ export const metadata: Metadata = {
   },
 };
 
-const clinicSchema = {
-  "@context": "https://schema.org",
-  "@type": ["LocalBusiness", "MedicalClinic"],
-  "@id": `${SITE_URL}/locations/phoenix-php-iop`,
-  name: "Desert Recovery Centers - Phoenix",
-  description:
-    "Joint Commission accredited behavioral health treatment center offering PHP, IOP, and OP in Phoenix, AZ, with on-site NeuroStar TMS provided by Desert TMS LLC.",
-  url: `${SITE_URL}/locations/phoenix-php-iop`,
-  telephone: "+16029058070",
-  email: "contact@desertrecoverycenters.com",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "4160 N 108th Ave",
-    addressLocality: "Phoenix",
-    addressRegion: "AZ",
-    postalCode: "85037",
-    addressCountry: "US",
-  },
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: 33.495362,
-    longitude: -112.293824,
-  },
-  openingHoursSpecification: {
-    "@type": "OpeningHoursSpecification",
-    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-    opens: "08:00",
-    closes: "17:00",
-  },
-  priceRange: "$$$$",
-  paymentAccepted: "Out-of-network commercial insurance, In-network TRICARE (through TriWest), Private Pay",
-  medicalSpecialty: ["Psychiatric"],
-  availableService: [
-    {
-      "@type": "MedicalTherapy",
-      name: "Partial Hospitalization Program (PHP)",
-      description: "5 to 6 hours per day, 5 days per week. Group therapy, individual therapy, psychiatric care, and medication management.",
-    },
-    {
-      "@type": "MedicalTherapy",
-      name: "Intensive Outpatient Program (IOP)",
-      description: "3 hours per day, 3 to 5 days per week. Flexible scheduling for clients transitioning from PHP or residential care.",
-    },
-    {
-      "@type": "MedicalTherapy",
-      name: "Outpatient Program (OP)",
-      description: "1 to 2 sessions per week for ongoing support and relapse prevention.",
-    },
-    {
-      "@type": "MedicalTherapy",
-      name: "TMS Therapy",
-      description: "FDA cleared NeuroStar TMS for depression, anxious depression, and OCD. TMS is provided by Desert TMS LLC, an affiliated licensed provider on-site at Desert Recovery Centers.",
-    },
-  ],
-  hasCredential: {
-    "@type": "EducationalOccupationalCredential",
-    name: "Joint Commission Accreditation",
-  },
-  areaServed: ["Phoenix", "Glendale", "Peoria", "Goodyear", "Avondale", "Tolleson", "Surprise"],
-  parentOrganization: { "@id": `${SITE_URL}/#organization` },
-};
-
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -105,7 +43,7 @@ const breadcrumbSchema = {
 export default function PhoenixPhpIopPage() {
   return (
     <>
-      <SchemaScript schema={[clinicSchema, getFAQSchema(faqData["locations/phoenix"]), breadcrumbSchema, {
+      <SchemaScript schema={[getFAQSchema(faqData["locations/phoenix"]), breadcrumbSchema, {
         "@context": "https://schema.org",
         "@type": "HowTo",
         "name": "How to Get Admitted to Desert Recovery Centers Phoenix",
@@ -118,6 +56,7 @@ export default function PhoenixPhpIopPage() {
           { "@type": "HowToStep", "position": 4, "name": "Begin Treatment", "text": "Most clients begin treatment within 48 hours of their first call." },
         ],
       }]} />
+      <LocalBusinessSchema index={2} />
       <SpeakableSchema url="/locations/phoenix-php-iop" cssSelectors={["[data-speakable]"]} />
       <VideoSchemas path="/locations/phoenix-php-iop/" />
       <Navigation />
