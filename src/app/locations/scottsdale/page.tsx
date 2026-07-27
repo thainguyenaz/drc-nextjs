@@ -22,6 +22,7 @@ import FacilityVideoSection from "@/components/FacilityVideoSection";
 import YouTubeEmbed from "@/components/YouTubeEmbed";
 import VideoTranscript from "@/components/VideoTranscript";
 import TestimonialDisclaimer from "@/components/TestimonialDisclaimer";
+import LeaveAReviewCTA from "@/components/LeaveAReviewCTA";
 
 const meta = getPageMeta("/locations/scottsdale/");
 
@@ -363,6 +364,11 @@ export default function ScottsdaleLocationPage() {
         },
       ]} />
       <FAQSection faqs={faqData["locations/scottsdale"]} />
+      <LeaveAReviewCTA
+        reviewUrl="https://g.page/r/CdgLDdktUjLMEBM/review"
+        supportingCopy="Share your experience with our Scottsdale facility on Google."
+        showQr={true}
+      />
       <CTASection />
       <Footer />
     </>

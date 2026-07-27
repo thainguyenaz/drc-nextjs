@@ -22,6 +22,7 @@ import FacilityVideoSection from "@/components/FacilityVideoSection";
 import YouTubeEmbed from "@/components/YouTubeEmbed";
 import VideoTranscript from "@/components/VideoTranscript";
 import TestimonialDisclaimer from "@/components/TestimonialDisclaimer";
+import LeaveAReviewCTA from "@/components/LeaveAReviewCTA";
 
 const meta = getPageMeta("/locations/glendale/");
 
@@ -354,6 +355,11 @@ export default function GlendaleLocationPage() {
         },
       ]} />
       <FAQSection faqs={faqData["locations/glendale"]} />
+      <LeaveAReviewCTA
+        reviewUrl="https://g.page/r/CXCYs3Lj9lQiEBM/review"
+        supportingCopy="Share your experience with our Glendale facility on Google."
+        showQr={true}
+      />
       <CTASection />
       <Footer />
     </>
