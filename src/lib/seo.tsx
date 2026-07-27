@@ -147,7 +147,9 @@ export function LocalBusinessSchema({ index }: { index: number }) {
       ? { openingHoursSpecification: loc.hours }
       : { openingHours: "Mo-Su 00:00-24:00" }),
     parentOrganization: { "@id": `${SITE_URL}/#organization` },
-    ...("licenseNumber" in loc && loc.licenseNumber ? { licenseNumber: loc.licenseNumber } : {}),
+    ...("licenseNumber" in loc && loc.licenseNumber
+      ? { identifier: { "@type": "PropertyValue", propertyID: "ADHS License", value: loc.licenseNumber } }
+      : {}),
     ...(loc.sameAs?.length ? { sameAs: loc.sameAs } : {}),
   });
 }
