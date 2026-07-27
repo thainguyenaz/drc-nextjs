@@ -50,18 +50,49 @@ export const siteData = {
       phoneTel: "+16233050496",
       gbpPhone: "(602) 905-8070",
       description:
-        "Outpatient treatment center offering PHP, IOP, and OP in Phoenix, with on-site NeuroStar TMS provided by Desert TMS LLC.",
+        "Joint Commission accredited behavioral health treatment center offering PHP, IOP, and OP in Phoenix, AZ, with on-site NeuroStar TMS provided by Desert TMS LLC.",
       programs: ["PHP", "IOP", "OP", "TMS"],
       amenities: ["Treatment Rooms", "Group Therapy Space"],
       image: "/images/general/accom-group-room.jpg",
       sameAs: [] as string[],
       licenseNumber: "OTC20452",
+      lat: 33.495362,
+      lng: -112.293824,
       hours: {
         "@type": "OpeningHoursSpecification",
         dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
         opens: "08:00",
         closes: "17:00",
       },
+      paymentAccepted: "Out-of-network commercial insurance, In-network TRICARE (through TriWest), Private Pay",
+      medicalSpecialty: ["Psychiatric"],
+      availableService: [
+        {
+          "@type": "MedicalTherapy",
+          name: "Partial Hospitalization Program (PHP)",
+          description: "5 to 6 hours per day, 5 days per week. Group therapy, individual therapy, psychiatric care, and medication management.",
+        },
+        {
+          "@type": "MedicalTherapy",
+          name: "Intensive Outpatient Program (IOP)",
+          description: "3 hours per day, 3 to 5 days per week. Flexible scheduling for clients transitioning from PHP or residential care.",
+        },
+        {
+          "@type": "MedicalTherapy",
+          name: "Outpatient Program (OP)",
+          description: "1 to 2 sessions per week for ongoing support and relapse prevention.",
+        },
+        {
+          "@type": "MedicalTherapy",
+          name: "TMS Therapy",
+          description: "FDA cleared NeuroStar TMS for depression, anxious depression, and OCD. TMS is provided by Desert TMS LLC, an affiliated licensed provider on-site at Desert Recovery Centers.",
+        },
+      ],
+      hasCredential: {
+        "@type": "EducationalOccupationalCredential",
+        name: "Joint Commission Accreditation",
+      },
+      areaServed: ["Phoenix", "Glendale", "Peoria", "Goodyear", "Avondale", "Tolleson", "Surprise"],
     },
     {
       name: "Adolescent IOP",
@@ -169,8 +200,14 @@ export const siteData = {
   ],
 } as const;
 
-// Location union with lat/lng optional — only some locations carry coordinates.
+// Location union with schema-only fields optional — only locations with a live
+// GBP carry coordinates; only Phoenix carries the rich clinic fields.
 export type SiteLocation = (typeof siteData.locations)[number] & {
   lat?: number;
   lng?: number;
+  paymentAccepted?: string;
+  medicalSpecialty?: readonly string[];
+  availableService?: ReadonlyArray<{ "@type": string; name: string; description: string }>;
+  hasCredential?: { "@type": string; name: string };
+  areaServed?: readonly string[];
 };

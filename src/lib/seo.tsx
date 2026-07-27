@@ -150,6 +150,11 @@ export function LocalBusinessSchema({ index }: { index: number }) {
     ...("licenseNumber" in loc && loc.licenseNumber
       ? { identifier: { "@type": "PropertyValue", propertyID: "ADHS License", value: loc.licenseNumber } }
       : {}),
+    ...(loc.paymentAccepted ? { paymentAccepted: loc.paymentAccepted } : {}),
+    ...(loc.medicalSpecialty ? { medicalSpecialty: loc.medicalSpecialty } : {}),
+    ...(loc.availableService ? { availableService: loc.availableService } : {}),
+    ...(loc.hasCredential ? { hasCredential: loc.hasCredential } : {}),
+    ...(loc.areaServed ? { areaServed: loc.areaServed } : {}),
     ...(loc.sameAs?.length ? { sameAs: loc.sameAs } : {}),
   });
 }
