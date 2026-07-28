@@ -364,12 +364,12 @@ export default function ScottsdaleLocationPage() {
         },
       ]} />
       <FAQSection faqs={faqData["locations/scottsdale"]} />
+      <CTASection />
       <LeaveAReviewCTA
         reviewUrl="https://g.page/r/CdgLDdktUjLMEBM/review"
         supportingCopy="Share your experience with our Scottsdale facility on Google."
         showQr={true}
       />
-      <CTASection />
       <Footer />
     </>
   );
