@@ -72,6 +72,12 @@ export default function PhoenixPhpIopPage() {
       {/* All animated content sections */}
       <PhoenixPHPContent />
 
+      <LeaveAReviewCTA
+        reviewUrl="https://g.page/r/CVuiBewYiKlAEBM/review"
+        supportingCopy="Share your experience with our Phoenix facility on Google."
+        showQr={true}
+      />
+
       {/* AEO Blocks */}
       <AEOBlock
         entries={[
@@ -95,11 +101,6 @@ export default function PhoenixPhpIopPage() {
 
       <FAQSection faqs={faqData["locations/phoenix"]} />
       <CTASection />
-      <LeaveAReviewCTA
-        reviewUrl="https://g.page/r/CVuiBewYiKlAEBM/review"
-        supportingCopy="Share your experience with our Phoenix facility on Google."
-        showQr={true}
-      />
       <Footer />
     </>
   );

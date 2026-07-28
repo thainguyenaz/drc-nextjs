@@ -349,6 +349,12 @@ export default function ScottsdaleLocationPage() {
 
       <PhotoGallery photos={gallery} title="Scottsdale Facility Gallery" />
 
+      <LeaveAReviewCTA
+        reviewUrl="https://g.page/r/CdgLDdktUjLMEBM/review"
+        supportingCopy="Share your experience with our Scottsdale facility on Google."
+        showQr={true}
+      />
+
       <AEOBlock entries={[
         {
           question: "Is there a Desert Recovery Centers in Scottsdale?",
@@ -365,11 +371,6 @@ export default function ScottsdaleLocationPage() {
       ]} />
       <FAQSection faqs={faqData["locations/scottsdale"]} />
       <CTASection />
-      <LeaveAReviewCTA
-        reviewUrl="https://g.page/r/CdgLDdktUjLMEBM/review"
-        supportingCopy="Share your experience with our Scottsdale facility on Google."
-        showQr={true}
-      />
       <Footer />
     </>
   );
