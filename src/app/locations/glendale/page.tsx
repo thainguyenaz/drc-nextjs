@@ -355,12 +355,12 @@ export default function GlendaleLocationPage() {
         },
       ]} />
       <FAQSection faqs={faqData["locations/glendale"]} />
+      <CTASection />
       <LeaveAReviewCTA
         reviewUrl="https://g.page/r/CXCYs3Lj9lQiEBM/review"
         supportingCopy="Share your experience with our Glendale facility on Google."
         showQr={true}
       />
-      <CTASection />
       <Footer />
     </>
   );

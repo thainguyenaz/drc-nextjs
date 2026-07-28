@@ -171,12 +171,12 @@ export default function PhoenixLivingPage() {
 
       <PhotoGallery photos={gallery} title="Phoenix Sober Living Gallery" eyebrow="Our Property" />
 
+      <CTASection />
       <LeaveAReviewCTA
         reviewUrl="https://g.page/r/CQSC75kiV1ZAEBM/review"
         supportingCopy="Share your experience with our Phoenix sober living community on Google."
         showQr={true}
       />
-      <CTASection />
       <Footer />
     </>
   );
