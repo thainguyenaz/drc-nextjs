@@ -341,7 +341,7 @@ export default function GlendaleLocationPage() {
       <PhotoGallery photos={gallery} title="Glendale Facility Gallery" />
 
       <LeaveAReviewCTA
-        reviewUrl="https://g.page/r/CXCYs3Lj9lQiEBM/review"
+        reviewUrl="https://g.page/r/CXCYs3Lj9IQiEBM/review"
         supportingCopy="Share your experience with our Glendale facility on Google."
         showQr={true}
       />
