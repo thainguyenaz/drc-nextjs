@@ -340,6 +340,12 @@ export default function GlendaleLocationPage() {
 
       <PhotoGallery photos={gallery} title="Glendale Facility Gallery" />
 
+      <LeaveAReviewCTA
+        reviewUrl="https://g.page/r/CXCYs3Lj9lQiEBM/review"
+        supportingCopy="Share your experience with our Glendale facility on Google."
+        showQr={true}
+      />
+
       <AEOBlock entries={[
         {
           question: "Is there a Desert Recovery Centers in Glendale?",
@@ -356,11 +362,6 @@ export default function GlendaleLocationPage() {
       ]} />
       <FAQSection faqs={faqData["locations/glendale"]} />
       <CTASection />
-      <LeaveAReviewCTA
-        reviewUrl="https://g.page/r/CXCYs3Lj9lQiEBM/review"
-        supportingCopy="Share your experience with our Glendale facility on Google."
-        showQr={true}
-      />
       <Footer />
     </>
   );
