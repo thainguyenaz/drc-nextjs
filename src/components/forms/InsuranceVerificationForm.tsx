@@ -84,9 +84,8 @@ export default function InsuranceVerificationForm() {
   useEffect(() => {
     // Graceful degradation: if Turnstile has not signaled success within 12s
     // (script blocked, network failure, or no callback ever fires), enable the
-    // button anyway. The server still verifies the token and fails closed when
-    // TURNSTILE_SECRET_KEY is set, so this does not weaken bot protection; it
-    // only prevents a real user from being permanently locked out.
+    // button anyway. The server accepts token-less submissions in degraded
+    // mode; a present token is still verified strictly.
     if (!TURNSTILE_SITE_KEY) return;
     const timer = setTimeout(() => {
       setTurnstileReady((ready) => {
@@ -267,7 +266,7 @@ export default function InsuranceVerificationForm() {
         <Script
           id="cf-turnstile-script"
           src="https://challenges.cloudflare.com/turnstile/v0/api.js"
-          strategy="lazyOnload"
+          strategy="afterInteractive"
           async
           defer
         />

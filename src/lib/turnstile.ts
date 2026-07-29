@@ -25,7 +25,14 @@ export async function verifyTurnstile(
     );
     return true;
   }
-  if (!token) return false;
+  if (!token) {
+    // No token = widget never loaded/solved (blocked script, network failure,
+    // slow device). Fail open for real users; bots that POST directly also
+    // send no token, so the remaining gates are the honeypot and rate limit.
+    // A PRESENT token is still verified strictly below.
+    console.warn("Turnstile token missing — accepting submission (degraded mode).");
+    return true;
+  }
 
   try {
     const body = new URLSearchParams({
