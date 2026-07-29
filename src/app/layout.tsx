@@ -85,7 +85,7 @@ export default function RootLayout({
         </Script>
         <Script
           src="//517993.tctm.co/t.js"
-          strategy="afterInteractive"
+          strategy="beforeInteractive"
           async
         />
         <Script
