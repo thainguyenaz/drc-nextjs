@@ -36,6 +36,7 @@ export default function GetHelpForm({ variant = "lp" }: GetHelpFormProps) {
   const [formData, setFormData] = useState<FormData>(initialFormData);
   const [submitting, setSubmitting] = useState(false);
   const [turnstileReady, setTurnstileReady] = useState(false);
+  const [turnstileDegraded, setTurnstileDegraded] = useState(false);
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
   const formRef = useRef<HTMLFormElement>(null);
   const thankYouRef = useRef<HTMLDivElement>(null);
@@ -54,14 +55,38 @@ export default function GetHelpForm({ variant = "lp" }: GetHelpFormProps) {
         onGetHelpTurnstileError?: () => void;
       };
     const w = window as W;
-    w.onGetHelpTurnstileSuccess = () => setTurnstileReady(true);
-    w.onGetHelpTurnstileExpired = () => setTurnstileReady(false);
-    w.onGetHelpTurnstileError = () => setTurnstileReady(false);
+    w.onGetHelpTurnstileSuccess = () => {
+      setTurnstileReady(true);
+      setTurnstileDegraded(false);
+    };
+    w.onGetHelpTurnstileExpired = () => {
+      setTurnstileReady(false);
+      setTurnstileDegraded(true);
+    };
+    w.onGetHelpTurnstileError = () => {
+      setTurnstileReady(false);
+      setTurnstileDegraded(true);
+    };
     return () => {
       delete w.onGetHelpTurnstileSuccess;
       delete w.onGetHelpTurnstileExpired;
       delete w.onGetHelpTurnstileError;
     };
+  }, []);
+
+  useEffect(() => {
+    // Graceful degradation: if Turnstile has not signaled success within 12s
+    // (script blocked, network failure, or no callback ever fires), enable the
+    // button anyway. The server accepts token-less submissions in degraded
+    // mode; a present token is still verified strictly.
+    if (!TURNSTILE_SITE_KEY) return;
+    const timer = setTimeout(() => {
+      setTurnstileReady((ready) => {
+        if (!ready) setTurnstileDegraded(true);
+        return ready;
+      });
+    }, 12_000);
+    return () => clearTimeout(timer);
   }, []);
 
   const handleChange = (
@@ -162,7 +187,7 @@ export default function GetHelpForm({ variant = "lp" }: GetHelpFormProps) {
         <Script
           id="cf-turnstile-script"
           src="https://challenges.cloudflare.com/turnstile/v0/api.js"
-          strategy="lazyOnload"
+          strategy="afterInteractive"
           async
           defer
         />
@@ -355,15 +380,21 @@ export default function GetHelpForm({ variant = "lp" }: GetHelpFormProps) {
 
         <button
           type="submit"
-          disabled={submitting || (!!TURNSTILE_SITE_KEY && !turnstileReady)}
+          disabled={submitting || (!!TURNSTILE_SITE_KEY && !turnstileReady && !turnstileDegraded)}
           className="w-full bg-gold hover:bg-gold-dark text-white font-semibold text-base py-4 rounded-xl transition-colors cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
         >
           {submitting
             ? "Submitting..."
-            : !TURNSTILE_SITE_KEY || turnstileReady
+            : !TURNSTILE_SITE_KEY || turnstileReady || turnstileDegraded
               ? "Get Help Today"
               : "Verifying..."}
         </button>
+
+        {TURNSTILE_SITE_KEY && turnstileDegraded && !turnstileReady && (
+          <p className="text-xs text-gray-600 text-center">
+            Security check unavailable, you can still submit.
+          </p>
+        )}
 
         <p className="text-xs text-gray-600 text-center">
           Protected by HIPAA &amp; 42 CFR Part 2. Your information is completely confidential.
