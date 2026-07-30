@@ -73,6 +73,18 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    // Date of Birth is required server-side, mirroring Member ID.
+    if (!dateOfBirth || dateOfBirth.trim() === "") {
+      console.warn(
+        "[insurance-verification] 400:",
+        JSON.stringify({ reason: "missing_date_of_birth" })
+      );
+      return NextResponse.json(
+        { error: "Date of Birth is required" },
+        { status: 400 }
+      );
+    }
+
     // STEP 1: HubSpot submission (primary)
     const hutk = request.cookies.get("hubspotutk")?.value;
     try {
