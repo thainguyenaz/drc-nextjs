@@ -20,6 +20,92 @@ const DISCLAIMER = `<p><em>This article is for informational purposes only and d
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "tricare-coverage-for-rehab-in-arizona",
+    title: "TRICARE Coverage for Rehab in Arizona",
+    excerpt: "TRICARE covers addiction rehab in Arizona, but authorization depends on medical necessity documentation. Here is what military families need to know before they call.",
+    category: "clinical",
+    author: "Desert Recovery Centers Clinical Team",
+    authorTitle: "Licensed Clinical Psychologist, Clinical Director",
+    datePublished: "2026-07-31",
+    dateModified: "2026-07-31",
+    readTime: 6,
+    featuredImage: "/images/blog/clinical.jpg",
+    featuredImageAlt: "TRICARE Coverage for Rehab in Arizona - Desert Recovery Centers",
+    tags: ["tricare rehab","tricare approved rehab","military insurance addiction"],
+    metaTitle: "TRICARE Coverage for Rehab in Arizona | DRC",
+    metaDescription: "TRICARE covers residential, PHP, and IOP addiction treatment in Arizona. Learn how authorization works, common misconceptions, and when to get help now.",
+    content: `<p>You or someone you love is in the military community, struggling with addiction, and you're up at 2am asking the same question: <em>does my TRICARE insurance actually cover rehab in Arizona, or is this going to fall apart the moment I try to use it?</em> That fear is reasonable. Military families run into coverage surprises all the time, and the last thing anyone needs when they're ready to get help is a wall of red tape that sends them home without treatment.</p>
+
+<p>Here is the short answer: <strong>Yes, TRICARE does cover addiction treatment in Arizona.</strong> Residential care, partial hospitalization, and intensive outpatient programs are all covered benefits under your plan. There are real steps and real documentation requirements involved, but this is navigable, and you do not have to figure it out alone.</p>
+
+<h2>What TRICARE Plans Cover Rehab</h2>
+
+<p>TRICARE Prime, TRICARE Select, and TRICARE For Life all include substance use disorder (SUD) treatment as a covered benefit. This is not a gray area. The National Defense Authorization Act established mental health and SUD parity provisions that require TRICARE to cover addiction treatment the same way it covers other medical conditions. That parity is the legal backbone behind your benefits.</p>
+
+<p>Coverage in Arizona includes:</p>
+
+<ul>
+  <li><strong>Residential treatment (RTC):</strong> 24-hour structured care for moderate to severe addiction</li>
+  <li><strong>Partial Hospitalization Programs (PHP):</strong> Intensive daytime treatment, typically 5 to 6 hours per day</li>
+  <li><strong>Intensive Outpatient Programs (IOP):</strong> Structured therapy several days per week while living at home or in sober living</li>
+  <li><strong>Detox and medically managed withdrawal:</strong> Covered when clinically necessary</li>
+  <li><strong>Co-occurring mental health treatment:</strong> PTSD, depression, and anxiety treated alongside addiction</li>
+</ul>
+
+<h2>The One Thing That Determines Whether TRICARE Pays: Medical Necessity</h2>
+
+<p>TRICARE does not automatically approve treatment just because you have a diagnosis. Every level of care, residential, PHP, or IOP, has to be authorized based on <strong>medical necessity.</strong> That means a DSM-5 diagnosis has to support the admission, and the clinical documentation has to explain clearly why you need that specific level of care rather than something less intensive.</p>
+
+<p>Authorization decisions are made by managed care support contractors, either Humana Military or Health Net Federal Services, depending on your region in Arizona. These contractors conduct utilization reviews, and for residential stays especially, they typically authorize in short windows of 7 to 14 days at a time, requiring updated documentation for each renewal. Stays beyond 30 days require detailed evidence of ongoing clinical need.</p>
+
+<p>This is where many people run into problems. Not because coverage does not exist, but because the documentation burden is real and the reviews do not stop once you are admitted.</p>
+
+<h2>Three Misconceptions That Catch Military Families Off Guard</h2>
+
+<p><strong>1. Joint Commission accreditation is not enough.</strong> A facility must hold a separate TRICARE certification and appear in the TRICARE network, or obtain prior authorization as an out-of-network provider. Accreditation matters, but it does not equal TRICARE approval on its own.</p>
+
+<p><strong>2. A PCM referral is not the same as admission approval.</strong> Your primary care manager can refer you to rehab, and that referral is often required. But the utilization review contractor makes the final authorization decision. The referral starts the process; it does not finish it.</p>
+
+<p><strong>3. TRICARE and VA benefits are separate programs.</strong> Many military families assume they work together automatically. They do not. Separate eligibility rules, separate provider networks, separate application pathways. A beneficiary can qualify for one without having access to the other.</p>
+
+<h2>The Real Stakes of Waiting</h2>
+
+<p>SAMHSA data consistently shows that military-affiliated populations carry significantly elevated rates of co-occurring PTSD and alcohol or opioid use disorders. These conditions feed each other. Untreated PTSD drives substance use. Untreated addiction worsens trauma symptoms. NIDA research confirms that treatment episodes of 90 days or more produce meaningfully better outcomes for moderate to severe SUD, but most people never reach 90 days because they either never start or stop early when the authorization process gets confusing.</p>
+
+<p>Every week that passes without structured treatment is a week the cycle has room to dig deeper. That is not meant to frighten you. It is meant to be honest with you about why acting now, even at 2am, even with questions, matters.</p>
+
+<p><strong>You do not have to figure this out alone.</strong> Desert Recovery Centers is here 24 hours a day, 7 days a week. Call <a href="tel:+16026357207">(602) 635-7207</a> to talk with our admissions team, or <a href="/insurance">verify your insurance</a> online in a few minutes.</p>
+
+<h2>How Experienced Clinicians Handle the Authorization Process</h2>
+
+<blockquote class="clinical-callout"><p><strong>Clinical perspective from Dr. Nguyen:</strong> From my personal experience working with TRICARE-authorized clients, the most effective documentation strategy has been clearly demonstrating the connection between the client’s presenting symptoms, level of impairment, relapse risk, and why a lower level of care would not yet be clinically appropriate. I have found that reviewers respond best when documentation goes beyond the diagnosis and includes specific behavioral indicators, functional limitations, treatment engagement, and measurable progress while also identifying the ongoing barriers that require continued structure and support. When families ask about coverage, I explain that TRICARE can provide access to meaningful treatment, but authorization decisions are driven by medical necessity, and our role as clinicians is to clearly communicate why the recommended level of care is necessary for the client’s safety, stabilization, and long-term recovery.</p></blockquote>
+
+<p>What this means practically: when you choose a TRICARE-certified facility with clinicians who understand utilization review, your chances of sustained authorization are significantly higher. The treatment team becomes your advocate inside the insurance process, not just inside the therapy room.</p>
+
+<h2>When to Seek Help Right Now</h2>
+
+<p>Some situations call for professional treatment immediately, not tomorrow, not after one more conversation with yourself at midnight. Seek help now if any of these apply:</p>
+
+<ul>
+  <li>You or your family member has tried to stop and could not, more than once</li>
+  <li>There are signs of physical withdrawal: shaking, sweating, nausea, or seizure history</li>
+  <li>Alcohol or opioid use is daily or near-daily</li>
+  <li>There are co-occurring mental health symptoms: severe anxiety, depression, or PTSD flashbacks</li>
+  <li>Work, relationships, or housing are at risk because of substance use</li>
+  <li>There have been any thoughts of self-harm</li>
+</ul>
+
+<p>You do not have to check every box. If one of these is true, that is enough reason to make the call.</p>
+
+<h2>How Desert Recovery Centers Works With TRICARE</h2>
+
+<p>Desert Recovery Centers is a TRICARE-certified facility in Arizona. The clinical team at DRC handles verification, prior authorization, and concurrent review documentation as part of the admissions process. You do not need to know how to navigate the managed care contractor system before you call. That is the team's job.</p>
+
+<p>If you want to understand what your specific TRICARE plan covers before you commit to anything, DRC can walk through that with you. A benefits check costs you nothing and takes the guesswork out of the question you came here to answer.</p>
+
+<p><strong>You do not have to figure this out alone.</strong> Desert Recovery Centers is here 24 hours a day, 7 days a week. Call <a href="tel:+16026357207">(602) 635-7207</a> to talk with our admissions team, or <a href="/insurance">verify your insurance</a> online in a few minutes.</p>`,
+  },
+  {
     slug: "alcohol-withdrawal-symptoms",
     title: "Alcohol Withdrawal Symptoms",
     excerpt: "Alcohol withdrawal can be dangerous and even life-threatening, but it is also well documented and treatable. Here is what to expect, when to get help, and why medical supervision matters.",
