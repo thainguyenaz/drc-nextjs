@@ -146,9 +146,8 @@ export const teamMembers: TeamMember[] = [
     name: "Christopher Kenyon",
     jobTitle: "Program Supervisor (Scottsdale)",
     credentials: ["Behavioral Health Professional"],
-    // PLACEHOLDER BIO: facts-only boilerplate pending Christopher's real bio from Thai.
     description:
-      "Christopher Kenyon is the Program Supervisor at Desert Recovery Centers' Scottsdale facility, a Behavioral Health Professional supporting clients in residential treatment.",
+      "Christopher Kenyon is the Program Supervisor at Desert Recovery Centers. For many years, Christopher self-medicated unprocessed trauma, a particular and unfamiliar weight that many people quietly carry, and he understands the reasons behind the need to hide it. Through his own healing, Christopher decided to dedicate his life to helping others lay down that weight and find a different way of living. He believes recovery is about more than overcoming addiction. It is about reestablishing identity, building resilience, and creating a life rooted in purpose. Today, Christopher walks alongside others with compassion, accountability, and hope, helping them believe that healing is possible and that lasting change begins with a choice. You don't need to see the whole staircase; you only have to take the first step.",
     image: "/images/team/Christopher-Kenyon.jpg",
     url: "https://desertrecoverycenters.com/team/christopher-kenyon",
   },
