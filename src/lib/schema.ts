@@ -182,8 +182,6 @@ export function getBreadcrumbSchema(items: Array<{ name: string; url: string }>)
 
 export function getArticleSchema(article: {
   headline: string;
-  author: string;
-  authorUrl: string;
   datePublished: string;
   dateModified: string;
   image: string;
@@ -194,11 +192,7 @@ export function getArticleSchema(article: {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: article.headline,
-    author: {
-      "@type": "Person",
-      name: article.author,
-      url: article.authorUrl,
-    },
+    author: { "@id": `${SITE_URL}/#organization` },
     datePublished: article.datePublished,
     dateModified: article.dateModified,
     image: article.image,
