@@ -1,3 +1,5 @@
+import { validateBlogPosts } from '@/lib/blog-validate'
+
 export interface BlogPost {
   slug: string
   title: string
@@ -5,7 +7,6 @@ export interface BlogPost {
   content: string
   category: 'addiction' | 'mental-health' | 'recovery-tips' | 'family' | 'holistic' | 'clinical' | 'tms'
   author: string
-  authorTitle: string
   datePublished: string
   dateModified: string
   readTime: number
@@ -25,7 +26,6 @@ export const blogPosts: BlogPost[] = [
     excerpt: "Insurance can cover residential rehab in Arizona, but the process involves medical necessity reviews, prior authorizations, and appeals rights most people never hear about. Here is what you are actually entitled to.",
     category: "clinical",
     author: "Desert Recovery Centers Clinical Team",
-    authorTitle: "Licensed Clinical Psychologist, Clinical Director",
     datePublished: "2026-08-04",
     dateModified: "2026-08-04",
     readTime: 7,
@@ -100,7 +100,6 @@ export const blogPosts: BlogPost[] = [
     excerpt: "TRICARE covers addiction rehab in Arizona, but authorization depends on medical necessity documentation. Here is what military families need to know before they call.",
     category: "clinical",
     author: "Desert Recovery Centers Clinical Team",
-    authorTitle: "Licensed Clinical Psychologist, Clinical Director",
     datePublished: "2026-07-31",
     dateModified: "2026-07-31",
     readTime: 6,
@@ -186,7 +185,6 @@ export const blogPosts: BlogPost[] = [
     excerpt: "Alcohol withdrawal can be dangerous and even life-threatening, but it is also well documented and treatable. Here is what to expect, when to get help, and why medical supervision matters.",
     category: "clinical",
     author: "Desert Recovery Centers Clinical Team",
-    authorTitle: "Licensed Clinical Psychologist, Clinical Director",
     datePublished: "2026-07-22",
     dateModified: "2026-07-22",
     readTime: 7,
@@ -289,7 +287,6 @@ export const blogPosts: BlogPost[] = [
     excerpt: "Fentanyl withdrawal is intense, frightening, and follows a predictable timeline. This post explains what symptoms to expect, how long they last, and why medical supervision matters for your safety.",
     category: "addiction",
     author: "Desert Recovery Centers Clinical Team",
-    authorTitle: "Licensed Clinical Psychologist, Clinical Director",
     datePublished: "2026-07-16",
     dateModified: "2026-07-16",
     readTime: 7,
@@ -390,7 +387,6 @@ export const blogPosts: BlogPost[] = [
     excerpt: "Xanax withdrawal is a real, well-documented medical process that can become dangerous without proper supervision. Learn what the symptoms are, how long they last, and when to get help.",
     category: "clinical",
     author: "Desert Recovery Centers Clinical Team",
-    authorTitle: "Licensed Clinical Psychologist, Clinical Director",
     datePublished: "2026-07-15",
     dateModified: "2026-07-15",
     readTime: 6,
@@ -484,7 +480,6 @@ export const blogPosts: BlogPost[] = [
     excerpt: "Adderall withdrawal symptoms are real, biologically driven, and can include severe depression and anhedonia. Learn what to expect, how long it lasts, and when to get help.",
     category: "clinical",
     author: "Desert Recovery Centers Clinical Team",
-    authorTitle: "Licensed Clinical Psychologist, Clinical Director",
     datePublished: "2026-07-12",
     dateModified: "2026-07-12",
     readTime: 6,
@@ -570,7 +565,6 @@ export const blogPosts: BlogPost[] = [
     excerpt: "Alcohol withdrawal can be life-threatening, and going cold turkey without medical supervision carries real risks including seizures and delirium tremens. Here is what the detox timeline looks like and when to get help.",
     category: "clinical",
     author: "Desert Recovery Centers Clinical Team",
-    authorTitle: "Licensed Clinical Psychologist, Clinical Director",
     datePublished: "2026-07-02",
     dateModified: "2026-07-02",
     readTime: 8,
@@ -659,7 +653,6 @@ export const blogPosts: BlogPost[] = [
     excerpt: "Cannabis withdrawal is a real, DSM-5 recognized syndrome with a documented timeline. Learn what symptoms to expect, how long they last, and when professional support makes the difference.",
     category: "clinical",
     author: "Desert Recovery Centers Clinical Team",
-    authorTitle: "Licensed Clinical Psychologist, Clinical Director",
     datePublished: "2026-06-30",
     dateModified: "2026-06-30",
     readTime: 7,
@@ -768,7 +761,6 @@ export const blogPosts: BlogPost[] = [
     excerpt: "BridgeWork™ therapy creates connections between different treatment approaches to address addiction and mental health comprehensively.",
     category: "clinical",
     author: "Desert Recovery Centers Clinical Team",
-    authorTitle: "Licensed Clinical Psychologist, Clinical Director",
     datePublished: "2026-04-05",
     dateModified: "2026-04-05",
     readTime: 8,
@@ -848,7 +840,6 @@ ${DISCLAIMER}`
     excerpt: "Alcohol abuse damages the brain, liver, heart, and mental health simultaneously. Learn how alcohol impacts the whole person and what integrated treatment looks like at Desert Recovery Centers in Arizona.",
     category: "addiction",
     author: "Desert Recovery Centers Clinical Team",
-    authorTitle: "Licensed Clinical Psychologist, Clinical Director",
     datePublished: "2025-09-21",
     dateModified: "2025-09-21",
     readTime: 7,
@@ -895,7 +886,6 @@ ${DISCLAIMER}`
     excerpt: "Understanding dopamine's role in addiction explains why willpower alone is not enough. Learn the neuroscience behind cravings and how evidence based treatment restores healthy brain chemistry.",
     category: "addiction",
     author: "Desert Recovery Centers Clinical Team",
-    authorTitle: "Licensed Clinical Psychologist, Clinical Director",
     datePublished: "2025-10-05",
     dateModified: "2025-10-05",
     readTime: 6,
@@ -941,7 +931,6 @@ ${DISCLAIMER}`
     excerpt: "Addiction physically alters the brain's structure and function. Understanding these neurological changes helps explain why treatment works and what recovery actually looks like at a biological level.",
     category: "addiction",
     author: "Desert Recovery Centers Clinical Team",
-    authorTitle: "Licensed Clinical Psychologist, Clinical Director",
     datePublished: "2026-03-15",
     dateModified: "2026-03-15",
     readTime: 7,
@@ -986,7 +975,6 @@ ${DISCLAIMER}`
     excerpt: "Detoxing from alcohol or opioids without medical supervision can be life threatening. Learn what medically supervised detox involves and why it is essential for safe recovery.",
     category: "addiction",
     author: "Desert Recovery Centers Clinical Team",
-    authorTitle: "Licensed Clinical Psychologist, Clinical Director",
     datePublished: "2026-03-10",
     dateModified: "2026-03-10",
     readTime: 8,
@@ -1029,7 +1017,6 @@ ${DISCLAIMER}`
     excerpt: "Evidence based therapy alone is not enough for lasting recovery. Holistic treatment addresses the physical, spiritual, and emotional dimensions that clinical care cannot fully reach.",
     category: "holistic",
     author: "Desert Recovery Centers Clinical Team",
-    authorTitle: "Licensed Clinical Psychologist, Clinical Director",
     datePublished: "2026-01-20",
     dateModified: "2026-01-20",
     readTime: 6,
@@ -1072,7 +1059,6 @@ ${DISCLAIMER}`
     excerpt: "Addiction does not affect just one person. Learn how substance use disorders impact family dynamics, children, relationships, and finances, and what families can do to heal together.",
     category: "family",
     author: "Desert Recovery Centers Clinical Team",
-    authorTitle: "Licensed Clinical Psychologist, Clinical Director",
     datePublished: "2026-01-10",
     dateModified: "2026-01-10",
     readTime: 7,
@@ -1117,7 +1103,6 @@ ${DISCLAIMER}`
     excerpt: "Many in recovery describe addiction as a spiritual malady, a loss of connection and meaning. Understanding this dimension does not replace clinical care, it completes it.",
     category: "recovery-tips",
     author: "Desert Recovery Centers Clinical Team",
-    authorTitle: "Licensed Clinical Psychologist, Clinical Director",
     datePublished: "2026-01-07",
     dateModified: "2026-01-07",
     readTime: 6,
@@ -1159,7 +1144,6 @@ ${DISCLAIMER}`
     excerpt: "Quitting weed can cause anxiety, irritability, insomnia, and other withdrawal symptoms. See the full symptom list, withdrawal timeline, and when to get help.",
     category: "addiction",
     author: "Desert Recovery Centers Clinical Team",
-    authorTitle: "Licensed Clinical Psychologist, Clinical Director",
     datePublished: "2025-12-03",
     dateModified: "2025-12-03",
     readTime: 6,
@@ -1218,7 +1202,6 @@ ${DISCLAIMER}`
     excerpt: "Sex addiction is compulsive sexual behavior a person cannot control despite the harm it causes. Learn the definition, signs, causes, and treatment.",
     category: "addiction",
     author: "Desert Recovery Centers Clinical Team",
-    authorTitle: "Licensed Clinical Psychologist, Clinical Director",
     datePublished: "2025-09-09",
     dateModified: "2025-09-09",
     readTime: 7,
@@ -1269,7 +1252,6 @@ ${DISCLAIMER}`
     excerpt: "PHP is the most intensive outpatient level of care, meeting 5 to 6 hours per day. Learn who it is for, what it includes, and how it compares to residential treatment.",
     category: "clinical",
     author: "Desert Recovery Centers Clinical Team",
-    authorTitle: "Licensed Clinical Psychologist, Clinical Director",
     datePublished: "2025-10-19",
     dateModified: "2025-10-19",
     readTime: 8,
@@ -1317,7 +1299,6 @@ ${DISCLAIMER}`
     excerpt: "IOP meets 3 hours per day, 3 to 5 days per week, providing structured treatment while allowing clients to maintain work and family responsibilities.",
     category: "clinical",
     author: "Desert Recovery Centers Clinical Team",
-    authorTitle: "Licensed Clinical Psychologist, Clinical Director",
     datePublished: "2025-11-02",
     dateModified: "2025-11-02",
     readTime: 7,
@@ -1363,7 +1344,6 @@ ${DISCLAIMER}`
     excerpt: "TMS therapy is FDA cleared and drug free. Learn exactly what happens during a NeuroStar TMS session, how many sessions you need, and what results look like over the treatment course.",
     category: "tms",
     author: "Desert Recovery Centers Clinical Team",
-    authorTitle: "Licensed Clinical Psychologist, Clinical Director",
     datePublished: "2025-11-16",
     dateModified: "2025-11-16",
     readTime: 9,
@@ -1414,7 +1394,6 @@ ${DISCLAIMER}`
     excerpt: "Starting the conversation about rehab is one of the hardest things a family faces. Learn practical, clinically grounded strategies for approaching a loved one about getting help.",
     category: "family",
     author: "Desert Recovery Centers Clinical Team",
-    authorTitle: "Licensed Clinical Psychologist, Clinical Director",
     datePublished: "2025-12-14",
     dateModified: "2025-12-14",
     readTime: 7,
@@ -1468,7 +1447,6 @@ ${DISCLAIMER}`
     excerpt: "Up to 50% of people with addiction also have a mental health disorder. Treating only one condition leads to relapse. Learn how integrated dual diagnosis treatment works.",
     category: "clinical",
     author: "Desert Recovery Centers Clinical Team",
-    authorTitle: "Licensed Clinical Psychologist, Clinical Director",
     datePublished: "2025-12-28",
     dateModified: "2025-12-28",
     readTime: 8,
@@ -1511,7 +1489,6 @@ ${DISCLAIMER}`
     excerpt: "Not knowing what to expect is one of the biggest barriers to entering treatment. Here is an honest, detailed look at what the first seven days of residential treatment actually look like.",
     category: "recovery-tips",
     author: "Desert Recovery Centers Clinical Team",
-    authorTitle: "Licensed Clinical Psychologist, Clinical Director",
     datePublished: "2026-01-11",
     dateModified: "2026-01-11",
     readTime: 8,
@@ -1559,7 +1536,6 @@ ${DISCLAIMER}`
     excerpt: "Under federal law, insurance must cover mental health and addiction treatment the same as physical health. Learn how behavioral health benefits work and how to verify yours.",
     category: "clinical",
     author: "Desert Recovery Centers Clinical Team",
-    authorTitle: "Licensed Clinical Psychologist, Clinical Director",
     datePublished: "2026-01-18",
     dateModified: "2026-01-18",
     readTime: 7,
@@ -1613,7 +1589,6 @@ ${DISCLAIMER}`
     excerpt: "Anxiety and depression frequently co occur but require different treatment approaches. Understanding the distinction leads to more effective, targeted care.",
     category: "mental-health",
     author: "Desert Recovery Centers Clinical Team",
-    authorTitle: "Licensed Clinical Psychologist, Clinical Director",
     datePublished: "2026-01-25",
     dateModified: "2026-01-25",
     readTime: 7,
@@ -1662,7 +1637,6 @@ ${DISCLAIMER}`
     excerpt: "The majority of people with addiction have a history of trauma. PTSD and substance use disorder are deeply linked and must be treated together for lasting recovery.",
     category: "mental-health",
     author: "Desert Recovery Centers Clinical Team",
-    authorTitle: "Licensed Clinical Psychologist, Clinical Director",
     datePublished: "2026-02-01",
     dateModified: "2026-02-01",
     readTime: 8,
@@ -1705,7 +1679,6 @@ ${DISCLAIMER}`
     excerpt: "Gray area drinking is the space between social drinking and alcohol use disorder. Many people live here for years before recognizing they need help. Learn the warning signs.",
     category: "addiction",
     author: "Desert Recovery Centers Clinical Team",
-    authorTitle: "Licensed Clinical Psychologist, Clinical Director",
     datePublished: "2026-02-08",
     dateModified: "2026-02-08",
     readTime: 7,
@@ -1757,7 +1730,6 @@ ${DISCLAIMER}`
     excerpt: "The length of residential treatment depends on diagnosis, history, and clinical progress. Learn what drives treatment duration and why longer programs produce better outcomes.",
     category: "clinical",
     author: "Desert Recovery Centers Clinical Team",
-    authorTitle: "Licensed Clinical Psychologist, Clinical Director",
     datePublished: "2026-02-15",
     dateModified: "2026-02-15",
     readTime: 7,
@@ -1802,7 +1774,6 @@ ${DISCLAIMER}`
     excerpt: "When antidepressants have not worked, TMS therapy offers a fundamentally different approach. A clinical comparison of TMS and medication for depression treatment.",
     category: "tms",
     author: "Desert Recovery Centers Clinical Team",
-    authorTitle: "Licensed Clinical Psychologist, Clinical Director",
     datePublished: "2026-02-22",
     dateModified: "2026-02-22",
     readTime: 8,
@@ -1851,7 +1822,6 @@ ${DISCLAIMER}`
     excerpt: "Luxury rehab is more than amenities. The clinical differences in staff credentials, ratios, therapy access, and individualization produce meaningfully better outcomes.",
     category: "clinical",
     author: "Desert Recovery Centers Clinical Team",
-    authorTitle: "Licensed Clinical Psychologist, Clinical Director",
     datePublished: "2026-03-01",
     dateModified: "2026-03-01",
     readTime: 8,
@@ -1897,7 +1867,6 @@ ${DISCLAIMER}`
     excerpt: "Fentanyl is 100 times more potent than morphine and is now present in almost every illicit drug supply. Arizona families need to understand the signs and how to respond.",
     category: "addiction",
     author: "Desert Recovery Centers Clinical Team",
-    authorTitle: "Licensed Clinical Psychologist, Clinical Director",
     datePublished: "2026-03-01",
     dateModified: "2026-03-01",
     readTime: 9,
@@ -1943,7 +1912,6 @@ ${DISCLAIMER}`
     excerpt: "Prescription drugs change the brain by altering neurotransmitter signaling. Learn how opioids, benzodiazepines, stimulants, antidepressants, and antipsychotics work, what side effects to watch for, and when prescribed use crosses into dependence.",
     category: "addiction",
     author: "Desert Recovery Centers Clinical Team",
-    authorTitle: "Licensed Clinical Psychologist, Clinical Director",
     datePublished: "2025-01-02",
     dateModified: "2026-04-25",
     readTime: 9,
@@ -2039,6 +2007,9 @@ ${DISCLAIMER}`
 ${DISCLAIMER}`
   }
 ]
+
+// Refuses invalid entries: throws during `next build`, logs at runtime.
+validateBlogPosts(blogPosts)
 
 // Helper functions
 

@@ -8,7 +8,7 @@ import MedicalReview from "@/components/MedicalReview";
 import Breadcrumb from "@/components/Breadcrumb";
 import Citations from "@/components/Citations";
 import { getArticleSchema, getBreadcrumbSchema } from "@/lib/schema";
-import { defaultAuthor, defaultReviewer } from "@/data/blog-defaults";
+import { defaultReviewer } from "@/data/blog-defaults";
 import { buildMetadata } from "@/lib/seo";
 
 const SITE_URL = "https://desertrecoverycenters.com";
@@ -80,8 +80,6 @@ const signs = [
 export default function SignsOfAddictionPage() {
   const articleSchema = getArticleSchema({
     headline: POST_TITLE,
-    author: defaultAuthor.name,
-    authorUrl: `${SITE_URL}${defaultAuthor.url}`,
     datePublished: DATE_PUBLISHED,
     dateModified: DATE_MODIFIED,
     image:
