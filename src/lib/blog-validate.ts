@@ -58,9 +58,12 @@ export function validateBlogPosts(posts: BlogPost[]): void {
       }
     }
 
-    // Rule 5: if an entry sets a reviewer, the key must exist in DRC_REVIEWERS
+    // Rule 5: if an entry sets a reviewer, the key must exist in DRC_REVIEWERS.
+    // Kept as a runtime "in" check even though reviewer is now a typed field:
+    // blog-runtime splices entries into blog.ts from outside this repo, so
+    // TypeScript is not in that path.
     if ("reviewer" in post) {
-      const reviewer = (post as Record<string, unknown>).reviewer;
+      const reviewer = (post as unknown as Record<string, unknown>).reviewer;
       if (typeof reviewer !== "string" || !(reviewer in DRC_REVIEWERS)) {
         errors.push(`[${slug}] reviewer: "${String(reviewer)}" is not a key of DRC_REVIEWERS`);
       }
@@ -76,6 +79,31 @@ export function validateBlogPosts(posts: BlogPost[]): void {
     // that reintroduces it — e.g. from the Jarvis blog generator.
     if ("authorTitle" in post) {
       errors.push(`[${slug}] authorTitle: field is forbidden — remove it`);
+    }
+
+    // Rules 8–10: lastReviewed. Same runtime posture as Rule 5 — blog-runtime
+    // writes entries from outside this repo, so validate the value, not the type.
+    // Deliberately no lastReviewed <= datePublished rule: a later re-review
+    // legitimately has lastReviewed after datePublished.
+    if ("lastReviewed" in post) {
+      const lastReviewed = (post as unknown as Record<string, unknown>).lastReviewed;
+
+      // Rule 8: lastReviewed must parse as strict ISO YYYY-MM-DD
+      const reviewed =
+        typeof lastReviewed === "string" ? parseIsoDate(lastReviewed) : null;
+      if (reviewed === null) {
+        errors.push(
+          `[${slug}] lastReviewed: not a valid ISO date: "${String(lastReviewed)}"`
+        );
+      } else if (reviewed > now) {
+        // Rule 9: a review that has not happened yet is never legitimate
+        errors.push(`[${slug}] lastReviewed: ${String(lastReviewed)} is in the future`);
+      }
+
+      // Rule 10: lastReviewed asserts a review occurred — it must name who
+      if (!("reviewer" in post)) {
+        errors.push(`[${slug}] lastReviewed: set without reviewer — a review must name its reviewer`);
+      }
     }
   }
 
