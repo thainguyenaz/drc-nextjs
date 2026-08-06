@@ -44,6 +44,7 @@ const footerLinks = {
     { label: "Our Team", href: "/our-team" },
     { label: "Facilities", href: "/locations" },
     { label: "Insurance", href: "/insurance" },
+    { label: "Get Help", href: "/get-help" },
     { label: "Contact", href: "/contact" },
   ],
 };
