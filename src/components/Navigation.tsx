@@ -50,7 +50,6 @@ const navLinks = [
       { label: "Dual Diagnosis", href: "/treatments/dual-diagnosis-treatment" },
       { label: "Holistic Therapies", href: "/treatments/holistic-therapies" },
       { label: "BridgeWork™", href: "/treatments/bridgework" },
-      { label: "Family Program", href: "/treatment/family-program" },
     ],
   },
   { label: "Adolescent", href: "/adolescent-treatment" },
@@ -82,6 +81,7 @@ const navLinks = [
       { label: "Verify Insurance", href: "/insurance" },
     ],
   },
+  { label: "Get Help", href: "/get-help" },
 ];
 
 /** Measures scrollHeight then animates via CSS max-height */
