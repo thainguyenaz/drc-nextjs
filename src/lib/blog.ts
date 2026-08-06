@@ -36,6 +36,8 @@ export const blogPosts: BlogPost[] = [
     tags: ["does insurance cover rehab","rehab insurance arizona","in network rehab"],
     metaTitle: "How Insurance Covers Residential Rehab in Arizona",
     metaDescription: "Federal parity law and Arizona statute protect your right to residential rehab coverage. Learn how medical necessity works, what in-network means, and how to fight a denial.",
+    reviewer: "nguyen",
+    lastReviewed: "2026-08-04",
     content: `<p>You found out residential treatment exists. You need it, or someone you love needs it. And now you're staring at your insurance card wondering whether any of this is actually going to be paid for, or whether you're about to be told no in a dozen different ways. That fear is completely rational. Insurance coverage for rehab is genuinely complicated, and most people go into the process without knowing what they're entitled to. The good news: federal law and Arizona state law are on your side in ways most people never hear about.</p>
 
 <h2>Federal Law Requires Your Insurer to Treat Rehab Like Any Other Medical Care</h2>
@@ -110,6 +112,8 @@ export const blogPosts: BlogPost[] = [
     tags: ["tricare rehab","tricare approved rehab","military insurance addiction"],
     metaTitle: "TRICARE Coverage for Rehab in Arizona | DRC",
     metaDescription: "TRICARE covers residential, PHP, and IOP addiction treatment in Arizona. Learn how authorization works, common misconceptions, and when to get help now.",
+    reviewer: "nguyen",
+    lastReviewed: "2026-07-31",
     content: `<p>You or someone you love is in the military community, struggling with addiction, and you're up at 2am asking the same question: <em>does my TRICARE insurance actually cover rehab in Arizona, or is this going to fall apart the moment I try to use it?</em> That fear is reasonable. Military families run into coverage surprises all the time, and the last thing anyone needs when they're ready to get help is a wall of red tape that sends them home without treatment.</p>
 
 <p>Here is the short answer: <strong>Yes, TRICARE does cover addiction treatment in Arizona.</strong> Residential care, partial hospitalization, and intensive outpatient programs are all covered benefits under your plan. There are real steps and real documentation requirements involved, but this is navigable, and you do not have to figure it out alone.</p>
@@ -195,6 +199,8 @@ export const blogPosts: BlogPost[] = [
     tags: ["drinking withdrawal symptoms","symptoms of detoxing from alcohol","symptoms of alcohol dependence withdrawal","alcohol withdrawal timeline","drinking withdrawal timeline"],
     metaTitle: "Alcohol Withdrawal Symptoms: Timeline & When to Get Help",
     metaDescription: "Shaking, sweating, racing heart after stopping drinking? Learn what alcohol withdrawal symptoms to expect, the full timeline, and when to seek medical help.",
+    reviewer: "nguyen",
+    lastReviewed: "2026-07-22",
     content: `<p>It is 2am and you stopped drinking, or you are thinking about stopping, and something feels wrong. Your hands are shaking. Your heart is racing. Maybe you feel like your skin is crawling, or you cannot sit still, or you are sweating through your shirt. You are scared, and you are wondering whether what is happening to your body is dangerous.</p>
 
 <p>The answer is: it can be. Alcohol withdrawal is one of the few withdrawal syndromes that can kill. But here is the other truth, the one you also need to hear right now: what you are going through is real, well documented, and treatable. People get through this every day with the right support. You are not losing your mind, and you are not beyond help.</p>
@@ -297,6 +303,8 @@ export const blogPosts: BlogPost[] = [
     tags: ["fentanyl withdrawal symptoms","fentanyl withdrawal timeline","how long does oxycodone withdrawal last","how long does withdrawals from oxycodone last","how long does fentanyl withdrawal last"],
     metaTitle: "Fentanyl Withdrawal Symptoms & Timeline Explained",
     metaDescription: "Scared about fentanyl withdrawal? Learn what symptoms to expect, how long withdrawal lasts, and when to seek medical help. Real answers, no filler.",
+    reviewer: "nguyen",
+    lastReviewed: "2026-07-16",
     content: `<p>It's 2am and your body feels like it's turning against you. Maybe you stopped using fentanyl hours ago, or someone you love did, and now the sweating, the cramping, the anxiety, the absolute dread, have all shown up at once. You're searching because you need to know: <strong>is this going to get worse, how long does it last, and is something seriously wrong?</strong></p>
 
 <p>Here's the honest answer: what you're feeling is real, it's documented, it has a name, and it does not have to be faced alone. Fentanyl withdrawal is one of the most intense opioid withdrawal syndromes clinicians treat, but it follows a predictable pattern, it does end, and there are medications that make it survivable. Keep reading. This will tell you what to expect, hour by hour.</p>
@@ -397,6 +405,8 @@ export const blogPosts: BlogPost[] = [
     tags: ["xanax withdrawal symptoms","drug withdrawal xanax","xanax for withdrawal","effects of xanax withdrawal","xanax and withdrawal"],
     metaTitle: "Xanax Withdrawal Symptoms: What to Expect",
     metaDescription: "Racing heart, severe anxiety, shaking, even seizures: Xanax withdrawal is serious. Learn the symptoms, timeline, and when medical help is essential.",
+    reviewer: "nguyen",
+    lastReviewed: "2026-07-13",
     content: `<p>You stopped taking Xanax, or you're taking less of it, and now your body feels like it's falling apart. Your heart is racing. You can't sleep. Your anxiety is worse than it ever was before you started the medication. And somewhere in the back of your mind is a question you're almost afraid to type: <em>is this dangerous?</em></p>
 
 <p>The answer matters, so here it is plainly: yes, what you are feeling is real, it is well-documented, and it can be serious. Xanax withdrawal is not in your head. It is a physical process happening in your brain and nervous system right now, and it is treatable. You do not have to white-knuckle through this alone.</p>
@@ -490,6 +500,8 @@ export const blogPosts: BlogPost[] = [
     tags: ["adderall withdrawal symptoms","adderall withdrawal effects","withdrawal adderall symptoms","withdrawals from adderall symptoms","adderall withdrawal"],
     metaTitle: "Adderall Withdrawal Symptoms: Timeline & What to Expect",
     metaDescription: "Struggling with Adderall withdrawal symptoms? Learn the real timeline, what causes them, and the warning signs that mean it's time to seek professional support.",
+    reviewer: "nguyen",
+    lastReviewed: "2026-07-12",
     content: `<p>You stopped taking Adderall, and now you feel like you've been hit by a truck. You're exhausted but can't sleep right. You don't care about anything. Food tastes like nothing. You're wondering if something is seriously wrong with you, or if this is just going to be your life now. It's not. What you're feeling has a name, it has a well-documented biological cause, and it does get better. You are not broken.</p>
 
 <h2>What Is Actually Happening in Your Brain</h2>
@@ -575,6 +587,8 @@ export const blogPosts: BlogPost[] = [
     tags: ["alcohol detox timeline","alcohol withdrawal symptoms","cold turkey alcohol risk"],
     metaTitle: "Alcohol Detox Timeline, Symptoms & Cold Turkey Risks",
     metaDescription: "Learn the hour-by-hour alcohol withdrawal timeline, which symptoms signal danger, and why quitting cold turkey without medical supervision can be life-threatening.",
+    reviewer: "nguyen",
+    lastReviewed: "2026-07-02",
     content: `<p>You stopped drinking, or you're thinking about stopping, and something feels wrong. Maybe you're shaking. Maybe you can't sleep, your heart is racing, and you're sweating through your clothes. Or maybe you haven't stopped yet but you know you need to, and you're terrified of what your body might do. You're searching at 2am because some part of you knows this could be serious.</p>
 
 <p>You're right to take it seriously. What you're feeling is real, it's well documented, and it is treatable. But alcohol withdrawal is one of the few withdrawal syndromes that can become a medical emergency, and the gap between "uncomfortable" and "dangerous" can close faster than most people expect. Here is what you need to know.</p>
@@ -663,6 +677,8 @@ export const blogPosts: BlogPost[] = [
     tags: ["weed withdrawal symptoms","how long does weed withdrawal last","how long does cannabis withdrawal last","cannabis withdrawal timeline","weed withdrawal timeline"],
     metaTitle: "Weed Withdrawal Symptoms & Timeline Explained",
     metaDescription: "Weed withdrawal symptoms are real and documented. Learn the full cannabis withdrawal timeline, what to expect each week, and when to seek clinical help.",
+    reviewer: "nguyen",
+    lastReviewed: "2026-06-29",
     content: `<p>You stopped smoking a few days ago and now you feel worse than you did before. Your sleep is wrecked, you're irritable at everyone around you, your stomach is off, and this creeping anxiety won't quit. You're starting to wonder if something is actually wrong with you, or if quitting was even a good idea. Maybe you're Googling at 2am because you can't sleep at all.</p>
 
 <p>Here is the direct answer: what you are feeling is real, it is well-documented, and it has a name. Cannabis withdrawal is a clinically recognized syndrome, listed in the DSM-5 under its own diagnostic code. It is not "just in your head," and it is not permanent. Understanding what is happening inside your body right now, and what the next few weeks actually look like, can make the difference between pushing through and giving up.</p>
