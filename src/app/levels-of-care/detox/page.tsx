@@ -348,7 +348,7 @@ export default function DetoxPage() {
                 One of the most significant advantages of choosing DRC for
                 detox is the seamless transition into{" "}
                 <Link
-                  href="/levels-of-care/residential-treatment/"
+                  href="/levels-of-care/residential-treatment"
                   className="text-gold hover:text-gold-dark font-semibold"
                 >
                   residential treatment
@@ -367,7 +367,7 @@ export default function DetoxPage() {
                 To learn more about the full scope of treatment options at
                 DRC, visit our{" "}
                 <Link
-                  href="/addiction-treatment/"
+                  href="/addiction-treatment"
                   className="text-gold hover:text-gold-dark font-semibold"
                 >
                   addiction treatment
@@ -381,7 +381,7 @@ export default function DetoxPage() {
                 </a>{" "}
                 to speak with our admissions team. You can also begin by{" "}
                 <Link
-                  href="/insurance-verification/"
+                  href="/insurance"
                   className="text-gold hover:text-gold-dark font-semibold"
                 >
                   verifying your insurance

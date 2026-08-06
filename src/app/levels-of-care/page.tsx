@@ -76,7 +76,7 @@ const levels = [
   },
   {
     title: "Residential Treatment",
-    href: "/levels-of-care/residential-treatment/",
+    href: "/levels-of-care/residential-treatment",
     description:
       "The most immersive level of therapeutic care. You live at the facility full-time, participating in a structured daily schedule of individual therapy, group counseling, psychiatric care, experiential therapies, and holistic wellness. DRC's residential facilities are each limited to 10 beds, ensuring deeply individualized attention from doctoral-level clinicians. Residential treatment removes you from the triggers of daily life and provides the focused, intensive environment that early recovery demands.",
     who: "Individuals with moderate to severe substance use disorders, those with co-occurring mental health conditions, people who have not responded to outpatient treatment, or anyone who needs a complete break from their environment to begin recovery.",
@@ -84,7 +84,7 @@ const levels = [
   },
   {
     title: "Partial Hospitalization Program (PHP)",
-    href: "/levels-of-care/php/",
+    href: "/levels-of-care/php",
     description:
       "PHP provides intensive, full-day clinical programming (typically 5 to 6 hours per day, five to six days per week) while allowing you to return home or to supportive housing each evening. The therapeutic content mirrors residential treatment: individual therapy, group work, psychiatric care, and experiential modalities. PHP bridges the gap between the total immersion of residential treatment and the greater independence of outpatient care.",
     who: "Clients stepping down from residential treatment who are not yet ready for the reduced structure of IOP, or individuals who need intensive daily programming but have a stable living environment and do not require 24-hour supervision.",
@@ -92,7 +92,7 @@ const levels = [
   },
   {
     title: "Intensive Outpatient Program (IOP)",
-    href: "/levels-of-care/iop/",
+    href: "/levels-of-care/iop",
     description:
       "IOP provides structured clinical treatment (3 to 4 hours per day, three to five days per week) designed to fit around your work, school, and family responsibilities. Programming includes individual therapy, group counseling, psychiatric care, relapse prevention, and life skills development. IOP at DRC uses the same evidence-based modalities as our residential and PHP programs, adapted for the outpatient setting.",
     who: "Individuals stepping down from PHP, those with mild to moderate substance use disorders and a stable home environment, or people who need more support than weekly therapy but cannot commit to full-day programming.",
@@ -100,7 +100,7 @@ const levels = [
   },
   {
     title: "Outpatient Therapy",
-    href: "/addiction-treatment/",
+    href: "/addiction-treatment",
     description:
       "Standard outpatient therapy provides ongoing clinical support through weekly individual sessions and, where appropriate, group therapy. At this level, you are managing your daily life independently while maintaining a therapeutic relationship that supports long-term recovery. Outpatient sessions focus on relapse prevention, continued skill development, processing life challenges, and monitoring mental health and medication needs.",
     who: "Individuals who have completed higher levels of care and are transitioning to independent recovery, or those whose clinical needs are appropriately addressed by weekly therapeutic engagement.",
@@ -108,7 +108,7 @@ const levels = [
   },
   {
     title: "Aftercare and Alumni Support",
-    href: "/addiction-treatment/",
+    href: "/addiction-treatment",
     description:
       "Recovery does not end when formal treatment concludes. DRC provides aftercare planning, alumni programming, and ongoing connections to community recovery resources. Your aftercare plan is developed during treatment and includes therapy referrals, recovery community connections, relapse prevention strategies, and access to DRC alumni events and support networks. Aftercare is the long-term safety net that protects the progress you make in treatment.",
     who: "All DRC alumni who have completed formal treatment and are transitioning to independent recovery. Aftercare support is available to every client who completes our program.",
@@ -386,7 +386,7 @@ export default function LevelsOfCarePage() {
                 to speak with our admissions team today. You can also begin
                 the process by completing our online{" "}
                 <Link
-                  href="/insurance-verification/"
+                  href="/insurance"
                   className="text-gold hover:text-gold-dark font-semibold"
                 >
                   insurance verification form

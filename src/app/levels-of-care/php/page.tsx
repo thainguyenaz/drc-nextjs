@@ -130,7 +130,7 @@ export default function PHPPage() {
               <p className="text-gray-600 leading-relaxed text-lg mb-4">
                 At Desert Recovery Centers, our PHP operates out of our{" "}
                 <Link
-                  href="/locations/phoenix-php-iop/"
+                  href="/locations/phoenix-php-iop"
                   className="text-gold hover:text-gold-dark font-semibold"
                 >
                   Phoenix location
@@ -330,7 +330,7 @@ export default function PHPPage() {
               <p className="text-gray-600 leading-relaxed text-lg">
                 When you are ready, the typical next step is our{" "}
                 <Link
-                  href="/levels-of-care/iop/"
+                  href="/levels-of-care/iop"
                   className="text-gold hover:text-gold-dark font-semibold"
                 >
                   Intensive Outpatient Program (IOP)
@@ -363,7 +363,7 @@ export default function PHPPage() {
               <p className="text-gray-600 leading-relaxed text-lg mb-4">
                 If you are currently in{" "}
                 <Link
-                  href="/levels-of-care/residential-treatment/"
+                  href="/levels-of-care/residential-treatment"
                   className="text-gold hover:text-gold-dark font-semibold"
                 >
                   residential treatment
