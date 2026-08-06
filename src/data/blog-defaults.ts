@@ -1,12 +1,12 @@
 export const defaultAuthor = {
   name: "Desert Recovery Centers Clinical Team",
-  url: "/our-team/",
+  url: "/our-team",
 };
 
 export const defaultReviewer = {
   name: "Dr. An Nguyen",
   credentials: "Licensed Clinical Psychologist, Clinical Director",
-  url: "/team/dr-an-nguyen/",
+  url: "/team/dr-an-nguyen",
 };
 
 export const publisher = {

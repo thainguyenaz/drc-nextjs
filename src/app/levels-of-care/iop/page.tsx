@@ -130,7 +130,7 @@ export default function IOPPage() {
               <p className="text-gray-600 leading-relaxed text-lg mb-4">
                 At Desert Recovery Centers, our IOP operates from our{" "}
                 <Link
-                  href="/locations/phoenix-php-iop/"
+                  href="/locations/phoenix-php-iop"
                   className="text-gold hover:text-gold-dark font-semibold"
                 >
                   Phoenix location
@@ -309,7 +309,7 @@ export default function IOPPage() {
                 may be a good candidate for IOP if you are stepping down
                 from{" "}
                 <Link
-                  href="/levels-of-care/php/"
+                  href="/levels-of-care/php"
                   className="text-gold hover:text-gold-dark font-semibold"
                 >
                   PHP
@@ -382,7 +382,7 @@ export default function IOPPage() {
                 to ensure continuity when you complete the program. To learn
                 about{" "}
                 <Link
-                  href="/insurance-verification/"
+                  href="/insurance"
                   className="text-gold hover:text-gold-dark font-semibold"
                 >
                   verifying your insurance

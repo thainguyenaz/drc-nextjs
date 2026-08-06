@@ -194,14 +194,14 @@ export default function ResidentialTreatmentPage() {
             <p className="text-gray-600 leading-relaxed text-lg">
               We operate luxury facilities in both{" "}
               <Link
-                href="/locations/glendale/"
+                href="/locations/glendale"
                 className="text-gold hover:text-gold-dark font-semibold"
               >
                 Glendale
               </Link>{" "}
               and{" "}
               <Link
-                href="/locations/scottsdale/"
+                href="/locations/scottsdale"
                 className="text-gold hover:text-gold-dark font-semibold"
               >
                 Scottsdale
@@ -419,7 +419,7 @@ export default function ResidentialTreatmentPage() {
               </a>{" "}
               or complete our online{" "}
               <Link
-                href="/insurance-verification/"
+                href="/insurance"
                 className="text-gold hover:text-gold-dark font-semibold"
               >
                 insurance verification form
@@ -504,7 +504,7 @@ export default function ResidentialTreatmentPage() {
               recommend the next appropriate level of care based on your
               progress. For many clients, this means stepping down to our{" "}
               <Link
-                href="/levels-of-care/php/"
+                href="/levels-of-care/php"
                 className="text-gold hover:text-gold-dark font-semibold"
               >
                 Partial Hospitalization Program (PHP)

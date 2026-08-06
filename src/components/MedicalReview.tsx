@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function MedicalReview({
   reviewer = "Dr. An Nguyen",
   credentials = "Licensed Clinical Psychologist, Clinical Director",
-  reviewerUrl = "/team/dr-an-nguyen/",
+  reviewerUrl = "/team/dr-an-nguyen",
   lastUpdated = new Date().toLocaleDateString("en-US", {
     month: "long",
     year: "numeric",
