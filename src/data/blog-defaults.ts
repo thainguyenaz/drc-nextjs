@@ -1,8 +1,3 @@
-export const defaultReviewer = {
-  name: "Dr. An Nguyen",
-  credentials: "Licensed Clinical Psychologist, Clinical Director",
-  url: "/team/dr-an-nguyen",
-};
 
 export const publisher = {
   name: "Desert Recovery Centers",

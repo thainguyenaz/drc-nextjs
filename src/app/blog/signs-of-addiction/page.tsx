@@ -8,7 +8,7 @@ import MedicalReview from "@/components/MedicalReview";
 import Breadcrumb from "@/components/Breadcrumb";
 import Citations from "@/components/Citations";
 import { getArticleSchema, getBreadcrumbSchema } from "@/lib/schema";
-import { defaultReviewer } from "@/data/blog-defaults";
+
 import { buildMetadata } from "@/lib/seo";
 
 const SITE_URL = "https://desertrecoverycenters.com";
@@ -126,9 +126,9 @@ export default function SignsOfAddictionPage() {
               })}
             </p>
             <MedicalReview
-              reviewer={defaultReviewer.name}
-              credentials={defaultReviewer.credentials}
-              reviewerUrl={defaultReviewer.url}
+              reviewer="Dr. An Nguyen"
+              credentials="Licensed Clinical Psychologist, Clinical Director"
+              reviewerUrl="/team/dr-an-nguyen"
             />
           </div>
         </div>

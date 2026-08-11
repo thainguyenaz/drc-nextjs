@@ -1,17 +1,18 @@
 import Link from "next/link";
 
+// No defaults: a reviewer credit must be stated explicitly by the page, and a
+// review date renders only when a real one is supplied. The old
+// `lastUpdated = new Date()` default stamped every deploy's date as a claimed
+// review date — a false freshness signal (removed 2026-08-11).
 export default function MedicalReview({
-  reviewer = "Dr. An Nguyen",
-  credentials = "Licensed Clinical Psychologist, Clinical Director",
-  reviewerUrl = "/team/dr-an-nguyen",
-  lastUpdated = new Date().toLocaleDateString("en-US", {
-    month: "long",
-    year: "numeric",
-  }),
+  reviewer,
+  credentials,
+  reviewerUrl,
+  lastUpdated,
 }: {
-  reviewer?: string;
-  credentials?: string;
-  reviewerUrl?: string;
+  reviewer: string;
+  credentials: string;
+  reviewerUrl: string;
   lastUpdated?: string;
 }) {
   return (
@@ -41,7 +42,9 @@ export default function MedicalReview({
           </Link>
           , {credentials}
         </p>
-        <p className="m-0 text-gray-500 mt-1">Last Updated: {lastUpdated}</p>
+        {lastUpdated ? (
+          <p className="m-0 text-gray-500 mt-1">Last Updated: {lastUpdated}</p>
+        ) : null}
       </div>
     </div>
   );
