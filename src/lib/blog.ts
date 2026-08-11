@@ -136,7 +136,7 @@ export const blogPosts: BlogPost[] = [
 
 <p>TRICARE does not automatically approve treatment just because you have a diagnosis. Every level of care, residential, PHP, or IOP, has to be authorized based on <strong>medical necessity.</strong> That means a DSM-5 diagnosis has to support the admission, and the clinical documentation has to explain clearly why you need that specific level of care rather than something less intensive.</p>
 
-<p>Authorization decisions are made by managed care support contractors, either Humana Military or Health Net Federal Services, depending on your region in Arizona. These contractors conduct utilization reviews, and for residential stays especially, they typically authorize in short windows of 7 to 14 days at a time, requiring updated documentation for each renewal. Stays beyond 30 days require detailed evidence of ongoing clinical need.</p>
+<p>Authorization decisions are made by TRICARE's managed care support contractor for your region. The contractor conducts utilization reviews, and for residential stays especially, they typically authorize in short windows of 7 to 14 days at a time, requiring updated documentation for each renewal. Stays beyond 30 days require detailed evidence of ongoing clinical need.</p>
 
 <p>This is where many people run into problems. Not because coverage does not exist, but because the documentation burden is real and the reviews do not stop once you are admitted.</p>
 
