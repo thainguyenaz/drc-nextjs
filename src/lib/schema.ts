@@ -2,6 +2,7 @@
 // Each function returns a plain object ready to be passed to <SchemaScript />.
 
 import { DRC_REVIEWERS, type Reviewer } from "@/lib/seo";
+import { siteData } from "@/lib/site-data";
 
 const SITE_URL = "https://desertrecoverycenters.com";
 const SITE_NAME = "Desert Recovery Centers";
@@ -26,6 +27,12 @@ export function getMedicalOrganizationSchema() {
     ],
     medicalSpecialty: ["Psychiatric", "Toxicologic"],
     areaServed: { "@type": "State", name: "Arizona" },
+    // The first three siteData locations are the licensed clinics whose
+    // LocalBusiness+MedicalClinic nodes carry these @ids (see
+    // AllLocalBusinessSchemas in seo.tsx, indexes 0-2).
+    subOrganization: siteData.locations
+      .slice(0, 3)
+      .map((loc) => ({ "@id": `${SITE_URL}${loc.href}` })),
     address: [
       { "@type": "PostalAddress", streetAddress: "8105 W Frier Dr", addressLocality: "Glendale", addressRegion: "AZ", postalCode: "85303", addressCountry: "US" },
       { "@type": "PostalAddress", streetAddress: "23222 N Church Rd", addressLocality: "Scottsdale", addressRegion: "AZ", postalCode: "85255", addressCountry: "US" },
@@ -110,7 +117,11 @@ export function getPersonSchema(person: {
 }) {
   return {
     "@context": "https://schema.org",
-    "@type": "Person",
+    // MDs are typed Physician as well; the gate is the credential data
+    // itself, never a name or slug list.
+    "@type": person.credentials?.includes("MD")
+      ? ["Person", "Physician"]
+      : "Person",
     "@id": person.url,
     name: person.name,
     // Empty/missing optional fields are omitted entirely: an absent field

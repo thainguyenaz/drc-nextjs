@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { siteData, type SiteLocation } from "./site-data";
+import { teamMembers } from "@/data/team-data";
 import { videoData } from "@/data/video-data";
 import { videoTranscripts } from "@/data/video-transcripts";
 import { getYouTubeVideoSchema } from "./schema";
@@ -178,6 +179,7 @@ export function MedicalWebPageSchema({
   url,
   name,
   dateModified,
+  datePublished,
   reviewer = "nguyen",
   specialty = "Psychiatric",
   about,
@@ -186,6 +188,9 @@ export function MedicalWebPageSchema({
   url: string;
   name: string;
   dateModified: string;
+  // Original publication date. Only emitted when supplied — no fallback and
+  // no default, so absent data stays absent rather than becoming a claim.
+  datePublished?: string;
   reviewer?: Reviewer;
   specialty?: string;
   about?: Record<string, unknown>;
@@ -209,6 +214,7 @@ export function MedicalWebPageSchema({
     } : {}),
     ...(about ? { about } : {}),
     ...(reviewer !== "none" ? { reviewedBy: DRC_REVIEWERS[reviewer] } : {}),
+    ...(datePublished ? { datePublished } : {}),
     dateModified,
     publisher: { "@id": `${SITE_URL}/#organization` },
   });
@@ -276,9 +282,14 @@ export function PersonSchema({
   description?: string;
   slug?: string;
 }) {
+  // Same MD gate as getPersonSchema in schema.ts, resolved from team-data by
+  // slug so both builders always agree without duplicating credentials here.
+  const isPhysician = slug
+    ? teamMembers.find((m) => m.slug === slug)?.credentials.includes("MD") ?? false
+    : false;
   return ld({
     "@context": "https://schema.org",
-    "@type": "Person",
+    "@type": isPhysician ? ["Person", "Physician"] : "Person",
     ...(slug ? { "@id": `${SITE_URL}/our-team#${slug}` } : {}),
     name,
     jobTitle,
