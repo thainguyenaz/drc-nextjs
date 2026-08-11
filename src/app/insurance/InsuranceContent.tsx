@@ -1,16 +1,20 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 import InsuranceVerificationForm from "@/components/forms/InsuranceVerificationForm";
 import YouTubeEmbed from "@/components/YouTubeEmbed";
 import VideoTranscript from "@/components/VideoTranscript";
 
+// slug is the logo filename only; href is the route. They differ for
+// Blue Cross (bcbs vs /insurance/blue-cross) and UnitedHealthcare
+// (uhc vs /insurance/united).
 const insurers = [
-  { name: "Cigna", slug: "cigna", desc: "Out-of-network coverage available." },
-  { name: "Aetna", slug: "aetna", desc: "Out-of-network coverage available." },
-  { name: "Blue Cross Blue Shield", slug: "bcbs", desc: "Out-of-network coverage available, including PPO and select HMO plans." },
-  { name: "UnitedHealthcare", slug: "uhc", desc: "Out-of-network coverage available for all levels of care." },
-  { name: "TRICARE", slug: "tricare", desc: "In-network through TriWest Healthcare Alliance, the TRICARE West Region contractor. Covers active duty service members, retirees, National Guard and Reserve members, and their families." },
+  { name: "Cigna", slug: "cigna", href: "/insurance/cigna", desc: "Out-of-network coverage available." },
+  { name: "Aetna", slug: "aetna", href: "/insurance/aetna", desc: "Out-of-network coverage available." },
+  { name: "Blue Cross Blue Shield", slug: "bcbs", href: "/insurance/blue-cross", desc: "Out-of-network coverage available, including PPO and select HMO plans." },
+  { name: "UnitedHealthcare", slug: "uhc", href: "/insurance/united", desc: "Out-of-network coverage available for all levels of care." },
+  { name: "TRICARE", slug: "tricare", href: "/resources/blog/tricare-coverage-for-rehab-in-arizona", desc: "In-network through TriWest Healthcare Alliance, the TRICARE West Region contractor. Covers active duty service members, retirees, National Guard and Reserve members, and their families." },
 ];
 
 const steps = [
@@ -120,22 +124,32 @@ export default function InsuranceContent() {
                 transition={{ duration: 0.4, delay: i * 0.08 }}
                 className="bg-white rounded-xl p-6 border-t-[3px] border-t-transparent hover:border-t-gold hover:shadow-xl transition-all duration-[250ms]"
               >
-                <img
-                  src={`/images/insurance-logos/${insurer.slug}.png`}
-                  alt={insurer.name}
-                  className="h-12 w-auto mb-3"
-                />
-                <h3 className="font-display text-lg text-forest font-semibold mb-2">
-                  {insurer.name}
-                </h3>
-                <p className="text-gray-500 text-sm leading-relaxed">
-                  {insurer.desc}
-                </p>
+                <Link href={insurer.href} className="block">
+                  {/* logo is decorative inside the card link; h3 provides the accessible name */}
+                  <img
+                    src={`/images/insurance-logos/${insurer.slug}.png`}
+                    alt=""
+                    className="h-12 w-auto mb-3"
+                  />
+                  <h3 className="font-display text-lg text-forest font-semibold mb-2">
+                    {insurer.name}
+                  </h3>
+                  <p className="text-gray-500 text-sm leading-relaxed">
+                    {insurer.desc}
+                  </p>
+                </Link>
               </motion.div>
             ))}
           </div>
           <p className="text-center text-gray-600 text-xs mt-8 max-w-3xl mx-auto leading-relaxed">
             Logos shown are trademarks of their respective owners and do not imply endorsement, partnership, or in-network status. Desert Recovery Centers is in-network with TRICARE through TriWest only; commercial insurance is processed on an out-of-network basis. Our admissions team will verify your specific benefits at no cost.
+          </p>
+          <p className="text-center text-gray-600 text-sm mt-6 max-w-3xl mx-auto leading-relaxed">
+            Coverage rules differ by carrier. For a plan-specific breakdown of what your insurance covers for rehab in Arizona, see our guides for{" "}
+            <Link href="/insurance/aetna" className="text-sage font-medium hover:underline">Aetna</Link>,{" "}
+            <Link href="/insurance/cigna" className="text-sage font-medium hover:underline">Cigna</Link>,{" "}
+            <Link href="/insurance/blue-cross" className="text-sage font-medium hover:underline">Blue Cross Blue Shield</Link>, and{" "}
+            <Link href="/insurance/united" className="text-sage font-medium hover:underline">UnitedHealthcare</Link>.
           </p>
           <p className="text-center text-gray-500 text-sm mt-4">
             Don&apos;t see your insurance listed? Call us, we may still be able to work with your plan.
