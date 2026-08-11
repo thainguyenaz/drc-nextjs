@@ -32,6 +32,24 @@ export const siteData = {
       licenseNumber: "BH9449",
       lat: 33.548686,
       lng: -112.233823,
+      // 24/7 residential facility — confirmed 2026-08-11, stated explicitly
+      // rather than relying on the schema fallback.
+      hours: {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        opens: "00:00",
+        closes: "23:59",
+      },
+      paymentAccepted: ["Insurance", "Private Pay"],
+      medicalSpecialty: ["Psychiatric"],
+      availableService: [
+        {
+          "@type": "MedicalTherapy",
+          name: "Residential Treatment",
+          description: "10-bed men's residential treatment with 24/7 clinical support in a luxury home-like setting.",
+        },
+      ],
+      areaServed: ["Phoenix, AZ"],
     },
     {
       name: "Scottsdale",
@@ -49,6 +67,24 @@ export const siteData = {
       licenseNumber: "BH10131",
       lat: 33.697135,
       lng: -111.867225,
+      // 24/7 residential facility — confirmed 2026-08-11, stated explicitly
+      // rather than relying on the schema fallback.
+      hours: {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        opens: "00:00",
+        closes: "23:59",
+      },
+      paymentAccepted: ["Insurance", "Private Pay"],
+      medicalSpecialty: ["Psychiatric"],
+      availableService: [
+        {
+          "@type": "MedicalTherapy",
+          name: "Residential Treatment",
+          description: "10-bed women's residential treatment with 24/7 clinical support in a luxury desert setting.",
+        },
+      ],
+      areaServed: ["Phoenix, AZ"],
     },
     {
       name: "Phoenix PHP/IOP",
@@ -212,7 +248,7 @@ export const siteData = {
 export type SiteLocation = (typeof siteData.locations)[number] & {
   lat?: number;
   lng?: number;
-  paymentAccepted?: string;
+  paymentAccepted?: string | readonly string[];
   medicalSpecialty?: readonly string[];
   availableService?: ReadonlyArray<{ "@type": string; name: string; description: string }>;
   hasCredential?: { "@type": string; name: string };
