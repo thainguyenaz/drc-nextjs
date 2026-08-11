@@ -10,6 +10,30 @@ import type { BlogPost } from "@/lib/blog";
 
 const ISO_DATE = /^\d{4}-\d{2}-\d{2}$/;
 
+// ── Rule 11 (topical): payer/network content gate ──────────────────────────
+// ANY payer name OR network-status/acceptance phrasing in a post's content
+// fails validation, unless the post's slug is allowlisted below. Rationale:
+// generated posts must not make payer claims at all; posts that legitimately
+// discuss payers require a human review before they ship. To pass this gate,
+// fix the content or (after manual review) add the slug — never widen the
+// regexes to admit a phrasing. Mirrored pre-splice in blog-runtime's
+// publisher.js (validateEntry); this file is the source of truth.
+const PAYER_NAMES =
+  /\b(?:AHCCCS|Medicaid|Medicare|TRICARE|TriWest|Humana|Magellan|Beacon|Cigna|Aetna|UnitedHealthcare|United\s*Health|UHC|BCBS|Blue\s*Cross|Blue\s*Shield|Health\s*Net|Optum|Anthem|Carelon)\b/i;
+const NETWORK_CLAIMS =
+  /\b(?:in-?\s?network|out-?\s?of-?\s?network|we\s+(?:accept|take|welcome)|accepts?\s+(?:insurance|coverage|most|all)|works?\s+(?:directly\s+)?with\s+(?:most|all|major)|partner(?:s|ed)?\s+with|contracted\s+with|credentialed\s+with|covered\s+by\s+(?:most|all|your)|insurance\s+(?:is|are)\s+(?:accepted|welcome))\b/i;
+
+// Slugs exempt from Rule 11 ONLY (all other rules still apply). Each entry
+// was manually reviewed for payer-claim compliance on the date noted.
+// Do NOT add generated posts here as a shortcut — fix the content instead.
+const PAYER_REVIEWED_SLUGS = new Set([
+  "how-insurance-covers-addiction-mental-health-treatment", // reviewed 2026-07-16 (3ace90c, 825f6eb corrections applied)
+  "what-is-partial-hospitalization-php-program", // reviewed 2026-07-15 (3ace90c correction applied)
+  "neurostar-tms-vs-antidepressants", // reviewed 2026-07-15 (032e64f; Medicare/Medicaid not-accepted disclosure)
+  "how-insurance-covers-residential-treatment-in-arizona", // reviewed 2026-08-11 (in-network implication removed, 6923224)
+  "tricare-coverage-for-rehab-in-arizona", // reviewed 2026-08-11 (contractor claim neutralized, eadd2d3)
+]);
+
 function parseIsoDate(value: string): number | null {
   if (!ISO_DATE.test(value)) return null;
   const ms = Date.parse(`${value}T00:00:00Z`);
@@ -79,6 +103,23 @@ export function validateBlogPosts(posts: BlogPost[]): void {
     // that reintroduces it — e.g. from the Jarvis blog generator.
     if ("authorTitle" in post) {
       errors.push(`[${slug}] authorTitle: field is forbidden — remove it`);
+    }
+
+    // Rule 11: payer/network topical gate (see data block above).
+    if (!PAYER_REVIEWED_SLUGS.has(post.slug)) {
+      const haystack = `${post.content}\n${post.excerpt}\n${post.metaDescription}`;
+      const payerHit = haystack.match(PAYER_NAMES);
+      const claimHit = haystack.match(NETWORK_CLAIMS);
+      if (payerHit) {
+        errors.push(
+          `[${slug}] payer name "${payerHit[0]}" in unreviewed post — payer content requires manual review (Rule 11)`
+        );
+      }
+      if (claimHit) {
+        errors.push(
+          `[${slug}] network/acceptance phrasing "${claimHit[0]}" in unreviewed post — payer content requires manual review (Rule 11)`
+        );
+      }
     }
 
     // Rules 8–10: lastReviewed. Same runtime posture as Rule 5 — blog-runtime
