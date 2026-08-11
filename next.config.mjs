@@ -77,6 +77,15 @@ const nextConfig = {
     return [
       // Team bio slug typo fix (2026-07): old misspelled URL was live in the sitemap
       { source: "/team/craig-hutchmacher", destination: "/team/craig-huthmacher", permanent: true },
+      // Former staff removed 2026-08-10 → team hub (non-slash source only;
+      // trailingSlash:false 308-normalizes the slash form before these match)
+      { source: "/team/job-elliot", destination: "/our-team", permanent: true },
+      { source: "/team/karson-kolovos", destination: "/our-team", permanent: true },
+      { source: "/team/laurel-fullmer", destination: "/our-team", permanent: true },
+      { source: "/team/moe-daghlawi", destination: "/our-team", permanent: true },
+      { source: "/team/selena-nguyen", destination: "/our-team", permanent: true },
+      { source: "/team/theresa-glasgow", destination: "/our-team", permanent: true },
+      { source: "/team/jeremy-stewart", destination: "/our-team", permanent: true },
       // Deleted fake location pages → nearest real facility (East Valley → Phoenix PHP/IOP, NW Valley → Glendale, Scottsdale-area → Scottsdale)
       { source: "/locations/chandler", destination: "/locations/phoenix-php-iop", permanent: true },
       { source: "/locations/gilbert", destination: "/locations/phoenix-php-iop", permanent: true },
@@ -96,7 +105,7 @@ const nextConfig = {
       { source: "/phoenix", destination: "/locations/phoenix-php-iop", permanent: true },
       { source: "/phoenix/", destination: "/locations/phoenix-php-iop", permanent: true },
       // Old broken paths fixed in href audit
-      { source: "/about/luxury-vs-standard", destination: "/resources/luxury-vs-standard-rehab", permanent: true },
+      { source: "/about/luxury-vs-standard", destination: "/resources/luxury-vs-traditional-rehab", permanent: true }, // re-targeted 2026-08-10: old destination now 301s to traditional
       { source: "/about/our-team", destination: "/our-team", permanent: true },
       // /facilities now has its own page.tsx — redirect removed
       // Phoenix TMS 404 fix
@@ -172,8 +181,8 @@ const nextConfig = {
       { source: "/mental-health-2/", destination: "/mental-health", permanent: true },
       { source: "/ter", destination: "/terms-of-service", permanent: true }, // 0
       { source: "/ter/", destination: "/terms-of-service", permanent: true },
-      { source: "/about-desert-recovery-centers", destination: "/about-us", permanent: true }, // 0
-      { source: "/about-desert-recovery-centers/", destination: "/about-us", permanent: true },
+      { source: "/about-desert-recovery-centers", destination: "/about", permanent: true }, // 0 (chain-collapsed 2026-08-10: /about-us itself 308s to /about)
+      { source: "/about-desert-recovery-centers/", destination: "/about", permanent: true },
       { source: "/our-podcast", destination: "/resources", permanent: true }, // 0 (chain-collapsed: /resources/our-podcast retired → /resources)
       { source: "/our-podcast/", destination: "/resources", permanent: true },
       { source: "/webinars-lp", destination: "/resources", permanent: true }, // 0 (chain-collapsed: /resources/access-webinars retired → /resources)
@@ -211,13 +220,15 @@ const nextConfig = {
       { source: "/resources/aftercare", destination: "/levels-of-care/residential-treatment", permanent: true },
       // SEO redirects — renamed content pages
       { source: "/insurance/humana", destination: "/insurance", permanent: true }, // Humana page retired 2026-07-10, was in sitemap so likely indexed
-      { source: "/addiction/understanding-gambling-addiction/", destination: "/addiction/gambling-addiction-treatment/", permanent: true },
-      { source: "/addiction/understanding-sex-addiction/", destination: "/addiction/sex-addiction-treatment/", permanent: true },
+      { source: "/addiction/understanding-gambling-addiction", destination: "/addiction/gambling-addiction-treatment", permanent: true },
+      { source: "/addiction/understanding-sex-addiction", destination: "/addiction/sex-addiction-treatment", permanent: true },
       { source: "/treatments/alternative-therapy", destination: "/treatments/holistic-therapies", permanent: true }, // destination reconciled to redirects-final.json + matches 22 other holistic-* consolidations 2026-05-16
-      { source: "/treatments/understanding-cbt-cognitive-behavioral-therapy/", destination: "/treatments/cbt-cognitive-behavioral-therapy", permanent: true }, // fix: was 404 (cognitive-behavioral-therapy-cbt route does not exist)
-      { source: "/treatments/understanding-dbt-dialectic-behavior-therapy/", destination: "/treatments/dbt-dialectical-behavior-therapy", permanent: true }, // fix: was 404 (dialectical-behavior-therapy-dbt route does not exist)
+      { source: "/treatments/understanding-cbt-cognitive-behavioral-therapy", destination: "/treatments/cbt-cognitive-behavioral-therapy", permanent: true }, // fix: was 404 (cognitive-behavioral-therapy-cbt route does not exist); source de-slashed 2026-08-10 (Next normalizes slash sources at build; non-slash form matches both variants — verified locally)
+      { source: "/treatments/understanding-dbt-dialectic-behavior-therapy", destination: "/treatments/dbt-dialectical-behavior-therapy", permanent: true }, // fix: was 404 (dialectical-behavior-therapy-dbt route does not exist); source de-slashed 2026-08-10 (Next normalizes slash sources at build; non-slash form matches both variants — verified locally)
       { source: "/treatments/emdr-eye-movement-desensitization-and-reprocessing", destination: "/treatments/emdr-therapy", permanent: true },
       { source: "/treatments/emdr-eye-movement-desensitization-and-reprocessing/", destination: "/treatments/emdr-therapy", permanent: true },
+      // Near-duplicate consolidation 2026-08-10: standard-rehab page deleted, traditional is canonical
+      { source: "/resources/luxury-vs-standard-rehab", destination: "/resources/luxury-vs-traditional-rehab", permanent: true },
       // Insurance-verification consolidation (/get-help kept as standalone admissions page)
       { source: "/insurance-verification", destination: "/insurance", permanent: true },
       { source: "/insurance-verification/", destination: "/insurance", permanent: true },
@@ -428,12 +439,6 @@ const nextConfig = {
       { source: "/webinar/how-does-alcohol-affect-mental-health/", destination: "/resources/blog/how-does-alcohol-abuse-impact-mental-and-physical-health", permanent: true },
       { source: "/webinar/what-to-say-to-someone-with-a-mental-health-disorder", destination: "/resources/blog/how-to-talk-to-someone-about-going-to-rehab", permanent: true },
       { source: "/webinar/what-to-say-to-someone-with-a-mental-health-disorder/", destination: "/resources/blog/how-to-talk-to-someone-about-going-to-rehab", permanent: true },
-
-      // --- Non-trailing-slash variants (trailing-slash counterparts handled by existing entries above) ---
-      { source: "/addiction/understanding-gambling-addiction", destination: "/addiction/gambling-addiction-treatment", permanent: true },
-      { source: "/addiction/understanding-sex-addiction", destination: "/addiction/sex-addiction-treatment", permanent: true },
-      { source: "/treatments/understanding-cbt-cognitive-behavioral-therapy", destination: "/treatments/cbt-cognitive-behavioral-therapy", permanent: true },
-      { source: "/treatments/understanding-dbt-dialectic-behavior-therapy", destination: "/treatments/dbt-dialectical-behavior-therapy", permanent: true },
 
       // --- TMS assessment (NeuroStar PHQ-10) ---
       { source: "/tms-assessment", destination: "https://phq9web.azurewebsites.net/PHQ9/Survey/90664", permanent: false },

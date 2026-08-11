@@ -180,7 +180,7 @@ const linkMap: Record<string, RelatedLink[]> = {
     { label: "SoftWave Therapy", href: "/treatments/softwave-therapy" },
     { label: "Trauma Therapy", href: "/treatments/trauma-therapy" },
     { label: "DBT Therapy", href: "/treatments/dbt-dialectical-behavior-therapy" },
-    { label: "Luxury vs Standard Rehab", href: "/resources/luxury-vs-standard-rehab" },
+    { label: "Luxury vs Traditional Rehab", href: "/resources/luxury-vs-traditional-rehab" },
   ],
   "/treatments/softwave-therapy": [
     { label: "Holistic Therapies", href: "/treatments/holistic-therapies" },
