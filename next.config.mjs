@@ -77,6 +77,15 @@ const nextConfig = {
     return [
       // Team bio slug typo fix (2026-07): old misspelled URL was live in the sitemap
       { source: "/team/craig-hutchmacher", destination: "/team/craig-huthmacher", permanent: true },
+      // Former staff removed 2026-08-10 → team hub (non-slash source only;
+      // trailingSlash:false 308-normalizes the slash form before these match)
+      { source: "/team/job-elliot", destination: "/our-team", permanent: true },
+      { source: "/team/karson-kolovos", destination: "/our-team", permanent: true },
+      { source: "/team/laurel-fullmer", destination: "/our-team", permanent: true },
+      { source: "/team/moe-daghlawi", destination: "/our-team", permanent: true },
+      { source: "/team/selena-nguyen", destination: "/our-team", permanent: true },
+      { source: "/team/theresa-glasgow", destination: "/our-team", permanent: true },
+      { source: "/team/jeremy-stewart", destination: "/our-team", permanent: true },
       // Deleted fake location pages → nearest real facility (East Valley → Phoenix PHP/IOP, NW Valley → Glendale, Scottsdale-area → Scottsdale)
       { source: "/locations/chandler", destination: "/locations/phoenix-php-iop", permanent: true },
       { source: "/locations/gilbert", destination: "/locations/phoenix-php-iop", permanent: true },

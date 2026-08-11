@@ -101,8 +101,8 @@ export function getFAQSchema(faqs: Array<{ question: string; answer: string }>) 
 
 export function getPersonSchema(person: {
   name: string;
-  jobTitle: string;
-  description: string;
+  jobTitle?: string;
+  description?: string;
   image?: string;
   url: string;
   credentials?: string[];
@@ -113,8 +113,10 @@ export function getPersonSchema(person: {
     "@type": "Person",
     "@id": person.url,
     name: person.name,
-    jobTitle: person.jobTitle,
-    description: person.description,
+    // Empty/missing optional fields are omitted entirely: an absent field
+    // means not applicable, an empty string means broken data.
+    ...(person.jobTitle ? { jobTitle: person.jobTitle } : {}),
+    ...(person.description ? { description: person.description } : {}),
     ...(person.image ? { image: person.image } : {}),
     url: person.url,
     ...(person.credentials?.length
