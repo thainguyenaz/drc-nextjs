@@ -92,7 +92,7 @@ export const blogPosts: BlogPost[] = [
 
 <h2>What Desert Recovery Centers Does on Your Behalf</h2>
 
-<p>Desert Recovery Centers (DRC) works directly with most major commercial insurers operating in Arizona. The admissions team verifies benefits before intake, handles prior authorization requests, submits concurrent review documentation throughout a stay, and manages appeals when authorization is denied or reduced. If you are uninsured or underinsured, the team can also walk through alternative financing and payment options. The goal is to get the clinical question answered first, then remove the financial barriers as efficiently as possible.</p>
+<p>Desert Recovery Centers is out-of-network with all commercial insurance carriers. The admissions team verifies benefits before intake, handles prior authorization requests, submits concurrent review documentation throughout a stay, and manages appeals when authorization is denied or reduced. If you are uninsured or underinsured, the team can also walk through alternative financing and payment options. The goal is to get the clinical question answered first, then remove the financial barriers as efficiently as possible.</p>
 
 <p>You do not have to figure out the insurance side of this alone. Most people who call are surprised by how much coverage they actually have once someone walks through the policy with them.</p>
 
