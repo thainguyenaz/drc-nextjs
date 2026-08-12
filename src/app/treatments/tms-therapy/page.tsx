@@ -93,16 +93,16 @@ const differentiators = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
       </svg>
     ),
-    body: "FDA-cleared for MDD, anxious depression, and adult OCD (add-on), with over 6.6 million treatments delivered",
+    body: "FDA-cleared for MDD, anxious depression, and adult OCD (add-on). NeuroStar reports more than 8.5 million treatments performed (neurostar.com, retrieved August 2026)",
   },
   {
-    title: "Largest Clinical Dataset",
+    title: "Extensively Studied",
     icon: (
       <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
       </svg>
     ),
-    body: "Backed by over 65 peer-reviewed studies and the world's largest depression outcomes registry with data from over 17,700 patients",
+    body: "Backed by over 65 peer-reviewed studies and an outcomes registry with data from over 17,700 patients, according to NeuroStar (neurostar.com, retrieved August 2026)",
   },
   {
     title: "Drug-Free",
@@ -153,7 +153,7 @@ const faqs = [
   },
   {
     q: "How long does a TMS treatment course take?",
-    a: "A standard TMS treatment course consists of sessions 5 days per week over 4 to 6 weeks. Each session takes as little as 19 minutes, and you can return to your normal activities immediately afterward.",
+    a: "A standard NeuroStar TMS treatment course consists of sessions 5 days per week over 4 to 6 weeks, with each session taking as little as 19 minutes, per NeuroStar's treatment protocol. You can return to your normal activities immediately afterward.",
   },
   {
     q: "Can TMS be combined with my current therapy or medication?",
@@ -165,7 +165,7 @@ const faqs = [
   },
   {
     q: "Is TMS safe?",
-    a: "NeuroStar TMS has been delivered in over 6.6 million treatments worldwide, according to NeuroStar. The most common side effect is mild scalp discomfort or headache during treatment that typically resolves quickly. Serious side effects are rare. Our clinical team will evaluate your full medical history before recommending TMS.",
+    a: "NeuroStar reports more than 8.5 million treatments performed in over 230,000 patients (neurostar.com, retrieved August 2026). The most common side effect is mild scalp discomfort or headache during treatment that typically resolves quickly. Serious side effects are rare. Our clinical team will evaluate your full medical history before recommending TMS.",
   },
   {
     q: "Is NeuroStar TMS therapy available now at Desert Recovery Centers?",
@@ -279,8 +279,7 @@ export default function TMSTherapyPage() {
           "legalStatus": "FDA Cleared",
           "relevantSpecialty": "Psychiatric",
           "study": [
-            { "@type": "MedicalStudy", "name": "NeuroStar Outcomes Registry", "description": "83% of patients experienced measurable improvement, 62% achieved full remission in real-world outcomes study." },
-            { "@type": "MedicalStudy", "name": "NIMH-Funded Randomized Controlled Trial", "description": "Patients treated with NeuroStar were 4 times more likely to achieve remission compared to sham treatment." },
+            { "@type": "MedicalStudy", "name": "NeuroStar Outcomes Registry", "description": "NeuroStar reports that in real-world outcomes, by clinician rating (CGI-S), 83% of patients responded to an acute course and 62% achieved remission (neurostar.com, retrieved 2026-08-11)." },
           ],
           "availableAtOrFrom": {
             "@type": "MedicalClinic",
@@ -596,32 +595,26 @@ export default function TMSTherapyPage() {
               hidden: {},
               visible: { transition: { staggerChildren: 0.12, delayChildren: 0.1 } },
             }}
-            className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8"
+            className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8"
           >
             {[
               {
                 value: 83,
                 suffix: "%",
                 label:
-                  "of patients who completed a full NeuroStar treatment cycle experienced measurable improvement in depression symptoms",
+                  "of patients responded to an acute course of NeuroStar in real-world outcomes, by clinician rating, as reported by NeuroStar (retrieved 2026-08-11)",
               },
               {
                 value: 62,
                 suffix: "%",
                 label:
-                  "achieved full remission, meaning their depression effectively went away",
+                  "achieved remission in the same clinician-rated, real-world outcomes reporting, as reported by NeuroStar (retrieved 2026-08-11)",
               },
               {
-                value: 4,
-                suffix: "x",
-                label:
-                  "more likely to achieve remission compared to sham treatment in NIMH-funded independent clinical trial",
-              },
-              {
-                value: 8,
+                value: 8.5,
                 suffix: "M+",
                 label:
-                  "NeuroStar treatments delivered worldwide, backed by the largest clinical dataset of any TMS system",
+                  "treatments performed in over 230,000 patients, as reported by NeuroStar (neurostar.com, retrieved August 2026)",
               },
             ].map((stat, i) => (
               <motion.div
@@ -644,8 +637,8 @@ export default function TMSTherapyPage() {
           </motion.div>
 
           <p className="text-cream/40 text-xs text-center mt-12 font-body">
-            Source: NeuroStar Outcomes Registry, NIMH-funded randomized controlled
-            trial, real-world outcomes study
+            Source: NeuroStar Outcomes Registry, real-world outcomes by clinician
+            rating, as reported by NeuroStar (neurostar.com, retrieved August 2026)
           </p>
         </div>
       </section>
