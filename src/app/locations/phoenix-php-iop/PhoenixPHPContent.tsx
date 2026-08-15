@@ -92,7 +92,7 @@ const programs = [
     tag: "TMS",
     title: "Transcranial Magnetic Stimulation",
     schedule: "FDA Cleared. Non-Invasive. No Medication Required.",
-    body: "One in three people with depression do not get better with antidepressants. If that is you, you have not failed treatment. Treatment has failed you. NeuroStar TMS is different. It uses precise magnetic pulses to stimulate the specific regions of the brain that regulate mood, with no sedation, no systemic side effects, and no downtime. Sessions take about 19 minutes. Most clients start feeling a difference within two to four weeks. The on-site Phoenix TMS suite, operated by Desert TMS LLC, is integrated directly into a full outpatient clinical program, so your TMS treatment works alongside your therapy, not in isolation.",
+    body: "Many people with depression do not get better with antidepressants alone. If that is you, you have not failed treatment. Treatment has failed you. NeuroStar TMS is different. It uses precise magnetic pulses to stimulate the specific regions of the brain that regulate mood, with no sedation, no systemic side effects, and no downtime. Sessions take about 19 minutes. The on-site Phoenix TMS suite, operated by Desert TMS LLC, is integrated directly into a full outpatient clinical program, so your TMS treatment works alongside your therapy, not in isolation.",
     features: [
       "FDA cleared for depression, anxious depression, and OCD (add-on)",
       "Typically 36 sessions over 7 to 9 weeks",
@@ -619,7 +619,7 @@ export default function PhoenixPHPContent() {
                 When Medication Has Not Been Enough
               </h2>
               <p className="text-gray-600 leading-relaxed mb-4">
-                If you have tried antidepressant after antidepressant and still do not feel like yourself, you are not alone. Approximately one in three people with major depression do not respond adequately to medication. That does not mean recovery is out of reach. It means the treatment needs to change.
+                If you have tried antidepressant after antidepressant and still do not feel like yourself, you are not alone. Many people with major depression do not respond adequately to medication. That does not mean recovery is out of reach. It means the treatment needs to change.
               </p>
               <p className="text-gray-600 leading-relaxed mb-4">
                 NeuroStar TMS uses targeted magnetic pulses to stimulate the areas of the brain responsible for mood regulation. It is the same technology used in MRI machines, applied with precision to specific neural pathways. There is no sedation. No anesthesia. No recovery period. You sit in a chair, complete your session in about 19 minutes, and go about your day.
