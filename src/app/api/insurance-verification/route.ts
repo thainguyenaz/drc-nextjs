@@ -138,6 +138,11 @@ export async function POST(request: NextRequest) {
     const relaySource = "website_insurance_verification";
     let filesAttached = 0;
     const fieldsAttempted = 9;
+    const utmSource = request.cookies.get("_dr_utm_source")?.value ?? null;
+    const utmMedium = request.cookies.get("_dr_utm_medium")?.value ?? null;
+    const utmCampaign = request.cookies.get("_dr_utm_campaign")?.value ?? null;
+    const utmTerm = request.cookies.get("_dr_utm_term")?.value ?? null;
+    const utmContent = request.cookies.get("_dr_utm_content")?.value ?? null;
     try {
       const relayBody = new FormData();
       relayBody.append("firstname", firstName);
@@ -149,6 +154,11 @@ export async function POST(request: NextRequest) {
       relayBody.append("date_of_birth", dateOfBirth);
       relayBody.append("how_did_you_hear", howDidYouHear || "");
       relayBody.append("source", relaySource);
+      relayBody.append("utm_source", utmSource ?? "");
+      relayBody.append("utm_medium", utmMedium ?? "");
+      relayBody.append("utm_campaign", utmCampaign ?? "");
+      relayBody.append("utm_term", utmTerm ?? "");
+      relayBody.append("utm_content", utmContent ?? "");
 
       if (frontCard && frontCard.size > 0) {
         relayBody.append("front_card", frontCard);

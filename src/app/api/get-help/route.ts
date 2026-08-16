@@ -167,6 +167,11 @@ export async function POST(request: NextRequest) {
   // termination on preview/non-production where the tracking
   // Promise.allSettled below resolves instantly via env-gate denial.
   // Never blocks the user's success response beyond its own latency.
+  const utmSource = request.cookies.get("_dr_utm_source")?.value ?? null;
+  const utmMedium = request.cookies.get("_dr_utm_medium")?.value ?? null;
+  const utmCampaign = request.cookies.get("_dr_utm_campaign")?.value ?? null;
+  const utmTerm = request.cookies.get("_dr_utm_term")?.value ?? null;
+  const utmContent = request.cookies.get("_dr_utm_content")?.value ?? null;
   try {
     const notifyRes = await fetch(LEAD_NOTIFY_URL, {
       method: "POST",
@@ -181,6 +186,12 @@ export async function POST(request: NextRequest) {
         seekingFor,
         message: situation,
         source: "website_get_help_form",
+        // snake_case: the jarvis-api /lead handler reads req.body.utm_* keys.
+        utm_source: utmSource,
+        utm_medium: utmMedium,
+        utm_campaign: utmCampaign,
+        utm_term: utmTerm,
+        utm_content: utmContent,
       }),
     });
     if (!notifyRes.ok) {
