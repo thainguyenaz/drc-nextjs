@@ -69,7 +69,7 @@ export default function DBTPage() {
       <Breadcrumb items={getBreadcrumbsFromPathname("/treatments/dbt-dialectical-behavior-therapy")} />
       <PageHero
         eyebrow="Treatment Modality"
-        title="Dialectical Behavior Therapy (DBT)"
+        title="Dialectical Behavior Therapy (DBT) in Arizona"
         description="Balancing acceptance and change, building the skills to navigate intense emotions without self-destruction."
         bgImage="/images/general/DRC-Treatment-Therapies-BG-Fade.jpg"
       />

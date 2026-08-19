@@ -45,7 +45,7 @@ export default function SchizophreniaTreatmentPage() {
       <Breadcrumb items={getBreadcrumbsFromPathname("/mental-health/schizophrenia-treatment")} />
       <PageHero
         eyebrow="Mental Health Treatment"
-        title="Schizophrenia Treatment"
+        title="Schizophrenia Treatment in Arizona"
         description="A diagnosis is not a destiny. Integrated psychiatric care that helps you build a stable, meaningful life."
         bgImage="/images/general/DRC-MENTAL-HEALTH.jpg"
       />

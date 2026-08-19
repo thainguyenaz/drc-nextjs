@@ -49,7 +49,7 @@ export default function PTSDTreatmentPage() {
       <Breadcrumb items={getBreadcrumbsFromPathname("/mental-health/ptsd-treatment")} />
       <PageHero
         eyebrow="Mental Health Treatment"
-        title="PTSD & Trauma Treatment"
+        title="PTSD & Trauma Treatment in Arizona"
         description="What happened to you doesn't have to define you. Specialized trauma therapy that helps you heal at the deepest level."
         bgImage="/images/general/DRC-MENTAL-HEALTH.jpg"
       />

@@ -40,7 +40,7 @@ export default function MentalHealthPage() {
       <Breadcrumb items={getBreadcrumbsFromPathname("/mental-health")} />
       <PageHero
         eyebrow="Mental Health"
-        title="Mental Health Treatment"
+        title="Mental Health Treatment in Arizona"
         description="Comprehensive, evidence-based care for a wide range of mental health conditions, delivered with compassion in a luxury setting."
         bgImage="/images/general/DRC-MENTAL-HEALTH.jpg"
       />

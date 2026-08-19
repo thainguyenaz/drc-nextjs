@@ -59,7 +59,7 @@ export default function EMDRPage() {
       <Breadcrumb items={getBreadcrumbsFromPathname("/treatments/emdr-therapy")} />
       <PageHero
         eyebrow="Treatment Modality"
-        title="EMDR Therapy"
+        title="EMDR Therapy in Arizona"
         description="Eye Movement Desensitization and Reprocessing, unlocking the brain's natural ability to heal from trauma."
         bgImage="/images/general/DRC-Treatment-Therapies-BG-Fade.jpg"
       />

@@ -80,7 +80,7 @@ export default function TraumaTherapyPage() {
       <Breadcrumb items={getBreadcrumbsFromPathname("/treatments/trauma-therapy")} />
       <PageHero
         eyebrow="Treatment Specialization"
-        title="Trauma Therapy"
+        title="Trauma Therapy in Arizona"
         description="Trauma doesn't disappear on its own. Our specialized trauma program helps you process what happened, so it stops controlling what happens next."
         bgImage="/images/general/DRC-Treatment-Therapies-BG-Fade.jpg"
       />

@@ -46,7 +46,7 @@ export default function AnxietyTreatmentPage() {
       <Breadcrumb items={getBreadcrumbsFromPathname("/mental-health/anxiety-treatment")} />
       <PageHero
         eyebrow="Mental Health Treatment"
-        title="Anxiety Treatment"
+        title="Anxiety Treatment in Arizona"
         description="You don't have to live controlled by fear. Evidence-based anxiety treatment in a setting designed for deep, lasting healing."
         bgImage="/images/general/DRC-MENTAL-HEALTH.jpg"
       />

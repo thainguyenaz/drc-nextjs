@@ -368,7 +368,7 @@ export default function TMSTherapyPage() {
                 transition={{ duration: 0.65, delay: 0.45 }}
                 className="block text-gold/90 mt-2 text-3xl md:text-4xl lg:text-5xl font-semibold"
               >
-                at Desert Recovery Centers
+                at Desert Recovery Centers in Arizona
               </motion.span>
             </h1>
             <motion.p

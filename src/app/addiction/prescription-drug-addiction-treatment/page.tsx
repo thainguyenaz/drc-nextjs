@@ -47,7 +47,7 @@ export default function PrescriptionDrugAddictionPage() {
       <Breadcrumb items={getBreadcrumbsFromPathname("/addiction/prescription-drug-addiction-treatment")} />
       <PageHero
         eyebrow="Addiction Treatment"
-        title="Prescription Drug Addiction Treatment"
+        title="Prescription Drug Addiction Treatment in Arizona"
         description="It started with a prescription. That doesn't make the addiction any less real, or any less treatable."
         bgImage="/images/general/DRC-ADDICTION.jpg"
       />

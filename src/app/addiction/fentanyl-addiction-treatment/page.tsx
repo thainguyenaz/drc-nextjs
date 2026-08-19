@@ -48,7 +48,7 @@ export default function FentanylAddictionPage() {
       <Breadcrumb items={getBreadcrumbsFromPathname("/addiction/fentanyl-addiction-treatment")} />
       <PageHero
         eyebrow="Addiction Treatment"
-        title="Fentanyl Addiction Treatment"
+        title="Fentanyl Addiction Treatment in Arizona"
         description="Fentanyl is unforgiving. Getting off it safely requires medical expertise, not just determination. We provide both."
         bgImage="/images/general/DRC-ADDICTION.jpg"
       />

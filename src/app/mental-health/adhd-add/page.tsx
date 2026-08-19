@@ -45,7 +45,7 @@ export default function ADHDTreatmentPage() {
       <Breadcrumb items={getBreadcrumbsFromPathname("/mental-health/adhd-add")} />
       <PageHero
         eyebrow="Mental Health Treatment"
-        title="ADHD Treatment"
+        title="ADHD Treatment in Arizona"
         description="It's not a lack of willpower. Comprehensive ADHD treatment that finally gives your brain what it needs to thrive."
         bgImage="/images/general/DRC-MENTAL-HEALTH.jpg"
       />

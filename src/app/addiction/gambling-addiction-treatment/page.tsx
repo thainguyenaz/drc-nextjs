@@ -47,7 +47,7 @@ export default function GamblingAddictionPage() {
       <Breadcrumb items={getBreadcrumbsFromPathname("/addiction/gambling-addiction-treatment")} />
       <PageHero
         eyebrow="Addiction Treatment"
-        title="Gambling Addiction Treatment"
+        title="Gambling Addiction Treatment in Arizona"
         description="The next bet won't fix what gambling has broken. But the right treatment can help you rebuild what matters most."
         bgImage="/images/general/DRC-ADDICTION.jpg"
       />

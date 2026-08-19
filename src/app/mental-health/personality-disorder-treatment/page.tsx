@@ -45,7 +45,7 @@ export default function PersonalityDisorderTreatmentPage() {
       <Breadcrumb items={getBreadcrumbsFromPathname("/mental-health/personality-disorder-treatment")} />
       <PageHero
         eyebrow="Mental Health Treatment"
-        title="Personality Disorder Treatment"
+        title="Personality Disorder Treatment in Arizona"
         description="You are not your diagnosis. Compassionate, evidence-based treatment that helps you build the stable, connected life you deserve."
         bgImage="/images/general/DRC-MENTAL-HEALTH.jpg"
       />

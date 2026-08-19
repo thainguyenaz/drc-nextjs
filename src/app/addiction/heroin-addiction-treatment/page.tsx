@@ -48,7 +48,7 @@ export default function HeroinAddictionPage() {
       <Breadcrumb items={getBreadcrumbsFromPathname("/addiction/heroin-addiction-treatment")} />
       <PageHero
         eyebrow="Addiction Treatment"
-        title="Heroin Addiction Treatment"
+        title="Heroin Addiction Treatment in Arizona"
         description="Heroin takes everything, your health, your relationships, your sense of self. Treatment gives you a real path back."
         bgImage="/images/general/DRC-ADDICTION.jpg"
       />

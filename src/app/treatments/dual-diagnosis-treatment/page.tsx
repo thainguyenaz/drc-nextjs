@@ -80,7 +80,7 @@ export default function DualDiagnosisPage() {
       <Breadcrumb items={getBreadcrumbsFromPathname("/treatments/dual-diagnosis-treatment")} />
       <PageHero
         eyebrow="Treatment Approach"
-        title="Dual Diagnosis Treatment"
+        title="Dual Diagnosis Treatment in Arizona"
         description="When mental health and addiction collide, treating one without the other is a recipe for relapse. We treat both, together."
         bgImage="/images/general/DRC-Treatment-Therapies-BG-Fade.jpg"
       />

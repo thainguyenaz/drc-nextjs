@@ -47,7 +47,7 @@ export default function BipolarTreatmentPage() {
       <Breadcrumb items={getBreadcrumbsFromPathname("/mental-health/bipolar-disorder-treatment")} />
       <PageHero
         eyebrow="Mental Health Treatment"
-        title="Bipolar Disorder Treatment"
+        title="Bipolar Disorder Treatment in Arizona"
         description="Stability isn't just possible, it's within reach. Expert bipolar disorder treatment that brings balance back to your life."
         bgImage="/images/general/DRC-MENTAL-HEALTH.jpg"
       />

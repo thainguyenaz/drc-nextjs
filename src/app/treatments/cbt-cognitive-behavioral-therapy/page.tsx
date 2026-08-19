@@ -59,7 +59,7 @@ export default function CBTPage() {
       <Breadcrumb items={getBreadcrumbsFromPathname("/treatments/cbt-cognitive-behavioral-therapy")} />
       <PageHero
         eyebrow="Treatment Modality"
-        title="Cognitive Behavioral Therapy (CBT)"
+        title="Cognitive Behavioral Therapy (CBT) in Arizona"
         description="The gold standard in evidence-based psychotherapy, restructuring thought patterns to create lasting behavioral change."
         bgImage="/images/general/DRC-Treatment-Therapies-BG-Fade.jpg"
       />

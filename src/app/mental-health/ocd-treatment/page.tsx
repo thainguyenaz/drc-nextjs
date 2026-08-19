@@ -45,7 +45,7 @@ export default function OCDTreatmentPage() {
       <Breadcrumb items={getBreadcrumbsFromPathname("/mental-health/ocd-treatment")} />
       <PageHero
         eyebrow="Mental Health Treatment"
-        title="OCD Treatment"
+        title="OCD Treatment in Arizona"
         description="The thoughts don't define you. Specialized OCD treatment that breaks the cycle and gives you your life back."
         bgImage="/images/general/DRC-MENTAL-HEALTH.jpg"
       />

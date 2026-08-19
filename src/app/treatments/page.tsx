@@ -82,7 +82,7 @@ export default function TreatmentsPage() {
       <Breadcrumb items={getBreadcrumbsFromPathname("/treatments")} />
       <PageHero
         eyebrow="Our Treatments"
-        title="Evidence-Based Treatment Therapies"
+        title="Evidence-Based Treatment Therapies in Arizona"
         description="Every protocol is grounded in peer-reviewed clinical research. Our therapeutic modalities address the whole person, mind, body, and spirit."
         bgImage="/images/general/DRC-TREATMENTS.jpg"
       />

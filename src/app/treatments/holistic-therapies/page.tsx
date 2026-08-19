@@ -74,7 +74,7 @@ export default function HolisticPage() {
       <Breadcrumb items={getBreadcrumbsFromPathname("/treatments/holistic-therapies")} />
       <PageHero
         eyebrow="Whole-Person Care"
-        title="Holistic Therapies"
+        title="Holistic Therapies in Arizona"
         description="Healing the whole person, mind, body, and spirit, through evidence-informed complementary therapies that support clinical treatment."
         bgImage="/images/general/DRC-Treatment-Therapies-BG-Fade.jpg"
       />

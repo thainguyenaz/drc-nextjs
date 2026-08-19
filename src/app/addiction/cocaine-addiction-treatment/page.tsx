@@ -48,7 +48,7 @@ export default function CocaineAddictionPage() {
       <Breadcrumb items={getBreadcrumbsFromPathname("/addiction/cocaine-addiction-treatment")} />
       <PageHero
         eyebrow="Addiction Treatment"
-        title="Cocaine Addiction Treatment"
+        title="Cocaine Addiction Treatment in Arizona"
         description="Breaking free from cocaine means rebuilding the reward system your brain has learned to depend on. We can help."
         bgImage="/images/general/DRC-ADDICTION.jpg"
       />

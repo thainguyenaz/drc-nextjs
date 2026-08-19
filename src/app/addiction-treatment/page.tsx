@@ -42,7 +42,7 @@ export default function AddictionTreatmentPage() {
       <Breadcrumb items={getBreadcrumbsFromPathname("/addiction-treatment")} />
       <PageHero
         eyebrow="Addiction Treatment"
-        title="Addiction Treatment Programs"
+        title="Addiction Treatment Programs in Arizona"
         description="From detox coordination through long-term recovery support, our addiction programs are built on science, guided by compassion."
         bgImage="/images/general/DRC-ADDICTION.jpg"
       />

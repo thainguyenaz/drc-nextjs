@@ -48,7 +48,7 @@ export default function MarijuanaAddictionPage() {
       <Breadcrumb items={getBreadcrumbsFromPathname("/addiction/marijuana-addiction-treatment")} />
       <PageHero
         eyebrow="Addiction Treatment"
-        title="Marijuana Addiction Treatment"
+        title="Marijuana Addiction Treatment in Arizona"
         description="When cannabis stops being a choice and starts being a need, it's time to look at what's underneath. We can help you get there."
         bgImage="/images/general/DRC-ADDICTION.jpg"
       />

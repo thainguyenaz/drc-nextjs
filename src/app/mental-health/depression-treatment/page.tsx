@@ -49,7 +49,7 @@ export default function DepressionTreatmentPage() {
       <Breadcrumb items={getBreadcrumbsFromPathname("/mental-health/depression-treatment")} />
       <PageHero
         eyebrow="Mental Health Treatment"
-        title="Depression Treatment"
+        title="Depression Treatment in Arizona"
         description="You deserve more than just getting through the day. Compassionate, clinical depression treatment that helps you feel like yourself again."
         bgImage="/images/general/DRC-MENTAL-HEALTH.jpg"
       />

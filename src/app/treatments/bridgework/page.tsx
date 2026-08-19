@@ -65,7 +65,7 @@ export default function BridgeWorkPage() {
       <Breadcrumb items={getBreadcrumbsFromPathname("/treatments/bridgework")} />
       <PageHero
         eyebrow="Proprietary Program"
-        title={`BridgeWork™`}
+        title={`BridgeWork™ in Arizona`}
         description="Clinical psychologist-led skill integration, where therapeutic insight becomes real-world action. Exclusive to Desert Recovery Centers."
         bgImage="/images/general/DRC-Treatment-Therapies-BG-Fade.jpg"
       />

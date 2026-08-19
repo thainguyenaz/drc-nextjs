@@ -48,7 +48,7 @@ export default function MethAddictionPage() {
       <Breadcrumb items={getBreadcrumbsFromPathname("/addiction/meth-addiction-treatment")} />
       <PageHero
         eyebrow="Addiction Treatment"
-        title="Meth Addiction Treatment"
+        title="Meth Addiction Treatment in Arizona"
         description="Meth rewires your brain faster than almost any other substance. Recovery is possible, but it takes the right kind of help."
         bgImage="/images/general/DRC-ADDICTION.jpg"
       />
