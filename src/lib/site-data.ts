@@ -64,7 +64,7 @@ export const siteData = {
         opens: "08:00",
         closes: "17:00",
       },
-      paymentAccepted: "Out-of-network commercial insurance, In-network TRICARE (through TriWest), Private Pay",
+      paymentAccepted: "Out-of-network commercial insurance, Private Pay",
       medicalSpecialty: ["Psychiatric"],
       availableService: [
         {
