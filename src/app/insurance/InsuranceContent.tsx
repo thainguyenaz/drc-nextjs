@@ -14,7 +14,7 @@ const insurers = [
   { name: "Aetna", slug: "aetna", href: "/insurance/aetna", desc: "Out-of-network coverage available." },
   { name: "Blue Cross Blue Shield", slug: "bcbs", href: "/insurance/blue-cross", desc: "Out-of-network coverage available, including PPO and select HMO plans." },
   { name: "UnitedHealthcare", slug: "uhc", href: "/insurance/united", desc: "Out-of-network coverage available for all levels of care." },
-  { name: "TRICARE", slug: "tricare", href: "/resources/blog/tricare-coverage-for-rehab-in-arizona", desc: "In-network through TriWest Healthcare Alliance, the TRICARE West Region contractor. Covers active duty service members, retirees, National Guard and Reserve members, and their families." },
+  { name: "TRICARE", slug: "tricare", href: "/resources/blog/tricare-coverage-for-rehab-in-arizona", desc: "In-network for residential treatment through TriWest. Covers active duty service members, retirees, National Guard and Reserve members, and their families." },
 ];
 
 const steps = [
@@ -52,7 +52,7 @@ export default function InsuranceContent() {
                 Insurance at Desert Recovery Centers
               </h2>
               <p className="text-gray-600 leading-relaxed text-lg mb-4">
-                Desert Recovery Centers works with most major commercial insurance plans on an out-of-network basis, many of which provide significant coverage for our level of care. We are also in-network with TRICARE through TriWest, and offer cash-pay options.
+                Desert Recovery Centers works with most major commercial insurance plans on an out-of-network basis, many of which provide significant coverage for our level of care. We are also in-network for residential treatment with TRICARE through TriWest, and offer cash-pay options.
               </p>
               <p className="text-gray-600 leading-relaxed text-lg mb-4">
                 We do not accept Medicare, Medicaid, or other state-funded insurance.
@@ -142,7 +142,7 @@ export default function InsuranceContent() {
             ))}
           </div>
           <p className="text-center text-gray-600 text-xs mt-8 max-w-3xl mx-auto leading-relaxed">
-            Logos shown are trademarks of their respective owners and do not imply endorsement, partnership, or in-network status. Desert Recovery Centers is in-network with TRICARE through TriWest only; commercial insurance is processed on an out-of-network basis. Our admissions team will verify your specific benefits at no cost.
+            Logos shown are trademarks of their respective owners and do not imply endorsement, partnership, or in-network status. TRICARE in-network status applies to residential treatment only, through TriWest. All other plans are out-of-network. Our admissions team will verify your specific benefits at no cost.
           </p>
           <p className="text-center text-gray-600 text-sm mt-6 max-w-3xl mx-auto leading-relaxed">
             Coverage rules differ by carrier. For a plan-specific breakdown of what your insurance covers for rehab in Arizona, see our guides for{" "}
