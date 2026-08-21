@@ -23,6 +23,73 @@ const DISCLAIMER = `<p><em>This article is for informational purposes only and d
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "how-to-choose-a-residential-program-7-questions-to-ask",
+    title: "How to Choose a Residential Program: 7 Questions to Ask",
+    excerpt: "Choosing a residential addiction program is one of the hardest decisions a family makes. These 7 specific questions help you cut through marketing and find a program that is clinically sound.",
+    category: "family",
+    author: "Desert Recovery Centers Clinical Team",
+    datePublished: "2026-08-21",
+    dateModified: "2026-08-21",
+    readTime: 7,
+    featuredImage: "/images/glendale/Glendale-Front.jpg",
+    featuredImageAlt: "How to Choose a Residential Program: 7 Questions to Ask - Desert Recovery Centers",
+    tags: ["how to choose rehab","questions to ask treatment center","evaluating rehab"],
+    metaTitle: "7 Questions to Ask Before Choosing a Rehab Program",
+    metaDescription: "Overwhelmed by rehab options? These 7 clinical questions help families evaluate residential programs, spot red flags, and choose care that actually works.",
+    content: `<p>You found a program. Maybe two or three. They all sound good on the website, and you have no idea how to tell which one is actually safe for the person you love. That feeling, that mix of urgency and confusion and quiet dread that you might choose wrong, is one of the hardest parts of this whole thing. You are not being unreasonable. The market for residential addiction treatment is genuinely uneven, and programs are not required to lead with their weaknesses. The good news: there are specific questions that cut through the marketing fast, and knowing them puts you back in control of this decision.</p>
+
+<h2>Why This Decision Is Harder Than It Should Be</h2>
+<p>Most families walk into this search without a clinical background, and most programs know that. What gets advertised first are amenities: private rooms, chef-prepared meals, scenic settings. None of that is wrong to want, but none of it predicts whether your family member will still be sober a year from now. Accreditation by a recognized body like The Joint Commission or CARF signals that a program meets real operational and clinical standards. A beautiful pool does not. Learning to separate those two things is the first and most important step.</p>
+
+<h2>Question 1: Are You Accredited, and by Whom?</h2>
+<p>This is the baseline. Ask specifically whether the program holds accreditation from The Joint Commission or CARF International, and ask to see it. Accreditation means a program has been reviewed against documented clinical and operational standards, not just licensed to operate. SAMHSA listing is another signal worth checking. A program that hedges or deflects on this question warrants real caution before you go further.</p>
+
+<h2>Question 2: Who Actually Provides the Clinical Care?</h2>
+<p>Ask for the credentials of the people who will be running groups, conducting individual therapy, and overseeing the treatment plan. Licensed clinical social workers, licensed professional counselors, licensed psychologists, and psychiatrists are the credentials that matter. Find out how much direct, face-to-face clinical time a patient receives each week, not just total hours on a schedule that includes meals and recreation. The ratio of licensed clinicians to patients tells you a lot about the actual depth of care.</p>
+
+<blockquote class="clinical-callout"><p><strong>Clinical perspective from Dr. Nguyen:</strong> In practice, I see families become overwhelmed by admissions language, marketing, and amenities, when the most important questions are often much simpler: What is the clinical rationale for this level of care, who is providing the treatment, and how are co-occurring mental health needs being addressed? The research gets it right that individualized treatment and continuity of care matter, but I also see the importance of looking beyond a specific length of stay and asking whether the patient is actually ready to safely step down based on their progress, functioning, and ongoing clinical needs.</p></blockquote>
+
+<h2>Question 3: How Do You Assess and Treat Co-Occurring Mental Health Conditions?</h2>
+<p>A large portion of people entering residential treatment are dealing with depression, anxiety, trauma, or other mental health conditions alongside the substance use. Ask whether a full psychiatric evaluation is conducted at intake, whether co-occurring disorders are treated on-site by licensed clinicians, and whether the treatment plan is adjusted based on those findings. A program that routes psychiatric care off-site or that does not screen for it at all is missing something clinically significant.</p>
+
+<h2>Question 4: What Is the Recommended Length of Stay, and Why?</h2>
+<p>Ninety days represents a meaningful clinical minimum for residential care in moderate-to-severe cases. That does not mean every person needs exactly 90 days, but it means you should be skeptical of any program that pushes a 28- or 30-day stay without a clear clinical rationale tied to that specific person's history and severity. Ask: what would lead you to recommend a longer stay? What would lead you to recommend stepping down sooner? The answers should be grounded in clinical progress, not a billing cycle.</p>
+
+<h2>Question 5: What Does Your Medication-Assisted Treatment Protocol Look Like?</h2>
+<p>For opioid and alcohol use disorders especially, medication-assisted treatment is one of the most effective tools available. Ask whether the program uses FDA-approved medications as part of treatment, who prescribes and monitors them, and whether patients who arrive on medications are allowed to continue them. Programs that refuse to use or discuss medication-assisted treatment as a matter of philosophy, rather than clinical assessment, are working against the evidence on what actually helps people stay well.</p>
+
+<h2>Question 6: How Is Family Involved, and What Does Aftercare Look Like?</h2>
+<p>Recovery does not end at discharge. Ask specifically what the continuing care plan looks like: outpatient step-down, sober living referrals, connection to community support, follow-up contact after discharge. Ask how the family is involved during treatment, whether there is psychoeducation for loved ones, and whether family therapy is offered. Programs with no real answer to aftercare planning are treating the acute phase and leaving the rest to chance. That is a significant gap.</p>
+
+<h2>Question 7: Can You Share Any Outcome Data?</h2>
+<p>This question separates programs quickly. You do not need a glossy outcomes report, just a willingness to engage honestly. Ask what percentage of patients complete the program. Ask what follow-up they do at 30, 60, or 90 days post-discharge. Reputable programs welcome this question. A program that treats it as intrusive or that cannot produce any answer at all is telling you something important about how it thinks about results.</p>
+
+<h2>The Real Stakes of Getting This Wrong</h2>
+<p>Choosing a program without asking these questions does not just risk money. It risks time, and for someone with a serious substance use disorder, time is not abstract. A program that skips psychiatric evaluation may send someone home with untreated depression that drives relapse within weeks. A program with no aftercare plan leaves a person at their most vulnerable point without a net. A short stay sold as sufficient when the clinical picture calls for longer care sets up a return to the same crisis, often faster and harder than the first time.</p>
+<p>You deserve honest answers to every one of these questions before anyone signs anything. If a program makes you feel pushy for asking, that is information too.</p>
+
+<p><strong>You do not have to figure this out alone.</strong> Desert Recovery Centers is here 24 hours a day, 7 days a week. Call <a href="tel:+16026357207">(602) 635-7207</a> to talk with our admissions team, or <a href="/insurance">verify your insurance</a> online in a few minutes.</p>
+
+<h2>When to Seek Professional Guidance Before Choosing</h2>
+<p>Consider reaching out to a clinical professional before committing to a program if any of the following apply:</p>
+<ul>
+  <li>The person has a history of multiple treatment attempts without lasting results</li>
+  <li>There are known or suspected co-occurring mental health conditions that have not been fully treated</li>
+  <li>The program you are considering cannot answer questions about staff credentials or aftercare</li>
+  <li>Medical detox is needed and the program does not have on-site medical supervision</li>
+  <li>The admissions process feels high-pressure or does not include any clinical assessment before placement</li>
+  <li>You are being asked to decide within hours, without time to ask questions or compare options</li>
+</ul>
+<p>A brief clinical consultation can help you evaluate what you are hearing from admissions staff and match the level of care to what the situation actually requires.</p>
+
+<h2>How Desert Recovery Centers Approaches These Questions</h2>
+<p>At Desert Recovery Centers, every one of these questions has a real answer. Psychiatric evaluation happens at intake. Co-occurring mental health conditions are treated on-site. Medication-assisted treatment is available and clinically supervised. Aftercare planning begins before discharge, not on the last day. If you want to know how DRC would answer any of the seven questions above for your specific situation, the best next step is a direct conversation with someone on the clinical team. No sales pitch, just clinical answers.</p>
+
+<p>You have already done something hard by asking the right questions. Now let someone help you find the right answers.</p>
+
+<p><strong>You do not have to figure this out alone.</strong> Desert Recovery Centers is here 24 hours a day, 7 days a week. Call <a href="tel:+16026357207">(602) 635-7207</a> to talk with our admissions team, or <a href="/insurance">verify your insurance</a> online in a few minutes.</p>`,
+  },
+  {
     slug: "30-60-or-90-days-of-treatment-how-length-of-stay-affects-outcomes",
     title: "30, 60, or 90 Days of Treatment: How Length of Stay Affects Outcomes",
     excerpt: "Choosing between 30, 60, or 90 days of rehab is one of the hardest decisions families face. Here is what the clinical evidence actually says about how treatment length affects recovery outcomes.",
@@ -534,7 +601,7 @@ Yes. Residential stays beyond six months show diminishing returns for many peopl
 
 <h2>You Don't Have to Be Taking "a Lot" for This to Happen</h2>
 
-<p>Physical dependence can develop within weeks of daily therapeutic use. This is not about misuse or addiction, though those are real concerns too. People who took Xanax exactly as prescribed, at a normal dose, for a few months can experience significant withdrawal when they stop. NIDA identifies benzodiazepines as carrying a substantial physical dependence liability, and NIH-supported research confirms that seizure risk exists even at therapeutic doses after relatively short periods of use.</p>
+<p>Physical dependence can develop within weeks of daily therapeutic use. This is not about misuse or addiction, though those are real concerns too. People who took Xanax exactly as prescribed, at a normal dose, for a few months can experience significant withdrawal when they stop. Physical dependence can occur with benzodiazepines, and withdrawal seizures have been reported after abrupt discontinuation, including in some patients taking therapeutic doses and after relatively short periods of use. Risk varies based on dose, duration, medication half-life, concurrent substances, and other patient factors.</p>
 
 <blockquote class="clinical-callout"><p><strong>Clinical perspective from Dr. Nguyen:</strong> In my clinical experience, one of the greatest challenges is that patients often do not recognize they are experiencing benzodiazepine withdrawal. Many believe their anxiety disorder has suddenly become “out of control,” when in reality they are experiencing rebound anxiety and physiologic dependence. I have also observed that withdrawal severity does not always correlate with dose; individuals taking therapeutic doses for months can experience significant distress, while others with higher doses may have a less severe course. This variability reinforces the importance of individualized tapering, close follow-up, and ongoing reassessment rather than relying on a standardized timeline.</p></blockquote>
 
@@ -1483,9 +1550,9 @@ ${DISCLAIMER}`
 <p>During the tapering phase, sessions decrease in frequency while the brain consolidates the neurological changes that have occurred. This gradual step down helps ensure that the improvements are durable and reduces the likelihood of symptom return.</p>
 
 <h2>Outcome Expectations and Who Responds Best</h2>
-<p>Clinical research shows the majority of patients with treatment-resistant depression experience clinically meaningful improvement with TMS therapy, with a significant subset achieving full remission (<a href="https://www.nimh.nih.gov/health/topics/brain-stimulation-therapies/brain-stimulation-therapies" target="_blank" rel="noopener">NIMH — Brain Stimulation Therapies</a>). These results are remarkable, particularly considering that TMS is typically used in patients who have already failed one or more medication trials.</p>
+<p>Clinical evidence supports TMS as an effective treatment option for treatment-resistant depression, with some patients experiencing clinically meaningful improvement or remission (<a href="https://www.nimh.nih.gov/health/topics/brain-stimulation-therapies/brain-stimulation-therapies" target="_blank" rel="noopener">NIMH — Brain Stimulation Therapies</a>). TMS is typically used in patients who have not responded to one or more medication trials.</p>
 <p>The best responders to TMS tend to be individuals with moderate to severe depression who have not responded to one or two medication trials but who do not have treatment resistance across many medication classes. However, significant improvement is seen across a wide range of clinical presentations, and many people who have struggled with depression for years experience their first meaningful relief through TMS.</p>
-<p>It is important to note that TMS is not a cure for depression. Some clients maintain their improvement indefinitely, while others may benefit from periodic maintenance sessions. TMS can also be combined with psychotherapy and, in some cases, medication to optimize outcomes. TMS is provided by Desert TMS LLC, an affiliated licensed provider on-site at Desert Recovery Centers, as part of a comprehensive treatment approach that addresses the full complexity of each client's condition.</p>
+<p>TMS is not a cure for depression. Some clients maintain their improvement indefinitely, while others may benefit from periodic maintenance sessions. TMS can also be combined with psychotherapy and, in some cases, medication to optimize outcomes. TMS is provided by Desert TMS LLC, an affiliated licensed provider on-site at Desert Recovery Centers.</p>
 
 ${DISCLAIMER}`
   },
@@ -1557,7 +1624,7 @@ ${DISCLAIMER}`
     metaTitle: "What Is Dual Diagnosis Treatment? | Desert Recovery Centers Arizona",
     metaDescription: "Up to 50% of people with addiction also have a mental health disorder. Treating only one condition without the other leads to relapse. Learn how integrated dual diagnosis treatment works.",
     content: `<h2>What Is Dual Diagnosis?</h2>
-<p>Dual diagnosis, also known as co occurring disorders, refers to the presence of both a substance use disorder and a mental health disorder in the same individual at the same time. This is not a rare clinical scenario. Research from the 2023 National Survey on Drug Use and Health (NSDUH) estimates that approximately 21.5 million American adults have a co-occurring substance use disorder and mental illness (<a href="https://www.samhsa.gov/data/data-we-collect/nsduh-national-survey-drug-use-and-health/national-releases/2023" target="_blank" rel="noopener">SAMHSA — 2023 NSDUH National Releases</a>). Among people seeking treatment for addiction, rates of co occurring mental health disorders are even higher, with some studies estimating that up to 50 percent or more of people in addiction treatment also meet criteria for at least one psychiatric diagnosis (<a href="https://nida.nih.gov/research-topics/co-occurring-disorders-health-conditions" target="_blank" rel="noopener">NIDA — Co-Occurring Disorders</a>).</p>
+<p>Dual diagnosis, also known as co occurring disorders, refers to the presence of both a substance use disorder and a mental health disorder in the same individual at the same time. This is not a rare clinical scenario. SAMHSA's 2023 National Survey on Drug Use and Health (NSDUH) reports that approximately 20.4 million American adults have a co-occurring substance use disorder and mental illness (<a href="https://www.samhsa.gov/data/data-we-collect/nsduh-national-survey-drug-use-and-health/national-releases/2023" target="_blank" rel="noopener">SAMHSA — 2023 NSDUH National Releases</a>). Among people seeking treatment for addiction, rates of co occurring mental health disorders are even higher, with some studies estimating that up to 50 percent or more of people in addiction treatment also meet criteria for at least one psychiatric diagnosis (<a href="https://nida.nih.gov/research-topics/co-occurring-disorders-health-conditions" target="_blank" rel="noopener">NIDA — Co-Occurring Disorders</a>).</p>
 <p>The most common co occurring conditions include major depressive disorder, generalized anxiety disorder, post traumatic stress disorder (PTSD), bipolar disorder, attention deficit hyperactivity disorder (ADHD), and personality disorders (<a href="https://nida.nih.gov/research-topics/trends-statistics/infographics/comorbidity-substance-use-other-mental-disorders" target="_blank" rel="noopener">NIDA — Comorbidity Infographic</a>). These conditions do not simply coexist with addiction. They interact with it, each one making the other more severe, more treatment resistant, and more likely to result in relapse.</p>
 
 <h2>How Mental Health and Addiction Make Each Other Worse</h2>
@@ -1843,7 +1910,7 @@ ${DISCLAIMER}`
 <p>One of the first questions people ask when considering <a href="/levels-of-care/residential-treatment">residential treatment</a> is how long it will take. The answer depends on a number of clinical factors, and the honest truth is that there is no single "right" length of stay that applies to everyone. What the research does tell us, consistently and clearly, is that longer treatment durations are associated with better outcomes. Understanding why this is the case, and what each treatment duration offers, can help you make an informed decision about the level of commitment your recovery requires.</p>
 
 <h2>What the Research Says About Treatment Duration</h2>
-<p>The National Institute on Drug Abuse (NIDA) has stated that research shows most patients need at least 90 days of treatment to significantly reduce or stop their drug use and that treatment lasting shorter periods of time is of limited effectiveness. This does not mean that shorter programs are useless, but it does mean that the common expectation of a 28 or 30 day "cure" is not supported by the clinical evidence.</p>
+<p>NIDA has reported that adequate treatment duration is associated with better outcomes and that, generally, participation of less than 90 days in residential or outpatient treatment has shown limited effectiveness. Treatment length should still be individualized based on clinical need, progress, level of care, and continuing-care planning. This does not mean that shorter programs are useless, but it does mean that the common expectation of a 28 or 30 day "cure" is not supported by the clinical evidence.</p>
 <p>A landmark study published in the Archives of General Psychiatry found that patients who stayed in treatment for 90 days or more were significantly more likely to be abstinent at follow up than those who left before 90 days. The study also found that the benefits of longer treatment were not simply a reflection of greater motivation among those who stayed longer. Even when controlling for motivation and other factors, longer treatment duration independently predicted better outcomes.</p>
 
 <h2>30 Day Programs</h2>
@@ -1909,7 +1976,7 @@ ${DISCLAIMER}`
 <p>TMS may not be appropriate for everyone. People with metallic implants in or near the head, a history of seizures, or certain neurological conditions may not be candidates. A thorough clinical evaluation is conducted before treatment begins to ensure that TMS is safe and appropriate for each individual.</p>
 
 <h2>Combining TMS With Other Treatments</h2>
-<p>TMS does not have to be an either or choice with medication. Many clients continue their antidepressant medication while receiving TMS, and the combination can be more effective than either treatment alone. TMS can also be combined with psychotherapy to optimize outcomes. TMS is provided by Desert TMS LLC, an affiliated licensed provider on-site at Desert Recovery Centers, as part of a comprehensive treatment approach that may include individual therapy, group therapy, psychiatric medication management, and holistic wellness programming.</p>
+<p>TMS does not have to be an either or choice with medication. Many clients continue their antidepressant medication while receiving TMS, and the combination can be more effective than either treatment alone. TMS can also be combined with psychotherapy to optimize outcomes. TMS is provided by Desert TMS LLC, an affiliated licensed provider on-site at Desert Recovery Centers.</p>
 
 <h2>Cost and Payment Options</h2>
 <p>TMS at the Phoenix campus is currently offered on a private-pay basis while Desert TMS LLC, the affiliated licensed provider that delivers TMS on-site at Desert Recovery Centers, completes credentialing with insurance payers. Medicare and Medicaid are not accepted. Call (623) 305-0496 and the team will walk you through cost and payment options before beginning treatment.</p>
