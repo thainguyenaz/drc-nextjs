@@ -75,14 +75,8 @@ export default function RootLayout({
           gtag('js', new Date());
           gtag('set', 'linker', {"domains":["desertrecoverycenters.com"]});
           gtag('set', 'developer_id.dZTNiMT', true);
-          gtag('config', 'G-0MSPF0DPVK');`}
-        </Script>
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=AW-16468277860"
-          strategy="afterInteractive"
-        />
-        <Script id="gads-init" strategy="afterInteractive">
-          {`gtag('config', 'AW-16468277860');`}
+          gtag('config', 'G-0MSPF0DPVK');
+          gtag('config', 'AW-16468277860');`}
         </Script>
         <Script
           src="//517993.tctm.co/t.js"
