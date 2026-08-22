@@ -5,6 +5,7 @@ import "./globals.css";
 import SchemaScript from "@/components/SchemaScript";
 import { getMedicalOrganizationSchema } from "@/lib/schema";
 import LiveChatLoader from "@/components/LiveChatLoader";
+import WebVitals from "@/components/WebVitals";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -99,6 +100,7 @@ export default function RootLayout({
       <body className="font-body antialiased bg-white">
         <main>{children}</main>
         <LiveChatLoader />
+        <WebVitals />
       </body>
     </html>
   );
