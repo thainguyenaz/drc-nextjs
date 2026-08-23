@@ -53,6 +53,15 @@ export async function verifyTurnstile(
     if (!data.success) {
       console.warn("Turnstile verify rejected:", data["error-codes"]);
     }
+    if (data.success === true) {
+      console.log(
+        JSON.stringify({
+          type: "turnstile_verified",
+          hostname: data.hostname,
+          challenge_ts: data.challenge_ts,
+        })
+      );
+    }
     return data.success === true;
   } catch (e) {
     console.error("Turnstile siteverify exception:", e);
