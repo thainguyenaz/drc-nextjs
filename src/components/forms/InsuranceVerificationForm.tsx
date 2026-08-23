@@ -62,19 +62,32 @@ export default function InsuranceVerificationForm() {
         onInsuranceTurnstileError?: () => void;
       };
     const w = window as W;
+    let expiredRearmTimer: ReturnType<typeof setTimeout> | undefined;
     w.onInsuranceTurnstileSuccess = () => {
+      if (expiredRearmTimer) {
+        clearTimeout(expiredRearmTimer);
+        expiredRearmTimer = undefined;
+      }
       setTurnstileReady(true);
       setTurnstileDegraded(false);
     };
     w.onInsuranceTurnstileExpired = () => {
+      // Auto-refresh (data-refresh-expired="auto") should re-fire the success
+      // callback shortly. Do not mark degraded here; instead re-arm a 12s
+      // fallback so the button can never stay disabled indefinitely if the
+      // refresh silently fails.
       setTurnstileReady(false);
-      setTurnstileDegraded(true);
+      if (expiredRearmTimer) clearTimeout(expiredRearmTimer);
+      expiredRearmTimer = setTimeout(() => {
+        setTurnstileDegraded(true);
+      }, 12_000);
     };
     w.onInsuranceTurnstileError = () => {
       setTurnstileReady(false);
       setTurnstileDegraded(true);
     };
     return () => {
+      if (expiredRearmTimer) clearTimeout(expiredRearmTimer);
       delete w.onInsuranceTurnstileSuccess;
       delete w.onInsuranceTurnstileExpired;
       delete w.onInsuranceTurnstileError;
@@ -495,6 +508,7 @@ export default function InsuranceVerificationForm() {
           data-sitekey={TURNSTILE_SITE_KEY}
           data-theme="light"
           data-size="flexible"
+          data-refresh-expired="auto"
           data-callback="onInsuranceTurnstileSuccess"
           data-expired-callback="onInsuranceTurnstileExpired"
           data-error-callback="onInsuranceTurnstileError"

@@ -55,19 +55,32 @@ export default function GetHelpForm({ variant = "lp" }: GetHelpFormProps) {
         onGetHelpTurnstileError?: () => void;
       };
     const w = window as W;
+    let expiredRearmTimer: ReturnType<typeof setTimeout> | undefined;
     w.onGetHelpTurnstileSuccess = () => {
+      if (expiredRearmTimer) {
+        clearTimeout(expiredRearmTimer);
+        expiredRearmTimer = undefined;
+      }
       setTurnstileReady(true);
       setTurnstileDegraded(false);
     };
     w.onGetHelpTurnstileExpired = () => {
+      // Auto-refresh (data-refresh-expired="auto") should re-fire the success
+      // callback shortly. Do not mark degraded here; instead re-arm a 12s
+      // fallback so the button can never stay disabled indefinitely if the
+      // refresh silently fails.
       setTurnstileReady(false);
-      setTurnstileDegraded(true);
+      if (expiredRearmTimer) clearTimeout(expiredRearmTimer);
+      expiredRearmTimer = setTimeout(() => {
+        setTurnstileDegraded(true);
+      }, 12_000);
     };
     w.onGetHelpTurnstileError = () => {
       setTurnstileReady(false);
       setTurnstileDegraded(true);
     };
     return () => {
+      if (expiredRearmTimer) clearTimeout(expiredRearmTimer);
       delete w.onGetHelpTurnstileSuccess;
       delete w.onGetHelpTurnstileExpired;
       delete w.onGetHelpTurnstileError;
@@ -372,6 +385,7 @@ export default function GetHelpForm({ variant = "lp" }: GetHelpFormProps) {
             data-sitekey={TURNSTILE_SITE_KEY}
             data-theme="light"
             data-size="flexible"
+            data-refresh-expired="auto"
             data-callback="onGetHelpTurnstileSuccess"
             data-expired-callback="onGetHelpTurnstileExpired"
             data-error-callback="onGetHelpTurnstileError"
