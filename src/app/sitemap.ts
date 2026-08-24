@@ -1,16 +1,17 @@
 import { MetadataRoute } from "next";
 import { teamMembers } from "@/data/team-data";
-import { getAllSlugs } from "@/lib/blog";
+import { blogPosts } from "@/lib/blog";
 
 const SITE_URL = "https://desertrecoverycenters.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date();
-
   const routes: {
     path: string;
     priority: number;
     changeFrequency: "daily" | "weekly" | "monthly" | "yearly";
+    // Only blog entries carry a real content date; static and team
+    // routes omit lastModified rather than claim build-time freshness.
+    lastModified?: Date;
   }[] = [
     // Homepage
     { path: "/", priority: 1.0, changeFrequency: "daily" },
@@ -128,17 +129,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }
 
   // Blog article pages — generated from blogPosts so new posts auto-appear
-  for (const slug of getAllSlugs()) {
+  for (const post of blogPosts) {
     routes.push({
-      path: `/resources/blog/${slug}`,
+      path: `/resources/blog/${post.slug}`,
       priority: 0.6,
       changeFrequency: "monthly",
+      lastModified: new Date(post.dateModified),
     });
   }
 
   return routes.map((route) => ({
     url: `${SITE_URL}${route.path}`,
-    lastModified: now,
+    ...(route.lastModified ? { lastModified: route.lastModified } : {}),
     changeFrequency: route.changeFrequency,
     priority: route.priority,
   }));

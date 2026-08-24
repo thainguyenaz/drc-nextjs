@@ -26,7 +26,6 @@ export const metadata: Metadata = {
     "Luxury addiction and mental health treatment in Arizona. Joint Commission accredited, dual diagnosis care. Verify insurance today. Call (623) 305-0496.",
   alternates: {
     canonical: "https://desertrecoverycenters.com",
-    languages: { "en-US": "https://desertrecoverycenters.com" },
   },
   openGraph: {
     type: "website",
