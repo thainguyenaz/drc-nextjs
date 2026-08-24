@@ -95,8 +95,21 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     dateModified: post.dateModified,
     author: { "@id": `${SITE_URL}/#organization` },
     publisher: { "@id": `${SITE_URL}/#organization` },
-    medicalAudience: { "@type": "MedicalAudience", audienceType: "Patient" },
+  };
+
+  // reviewedBy and medicalAudience are WebPage properties, not Article
+  // properties. They live on a MedicalWebPage node whose mainEntity points
+  // back at the Article.
+  const medicalWebPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "MedicalWebPage",
+    "@id": `${SITE_URL}/resources/blog/${post.slug}#webpage`,
+    url: `${SITE_URL}/resources/blog/${post.slug}`,
+    name: post.title,
     reviewedBy: DRC_REVIEWERS.nguyen,
+    lastReviewed: post.dateModified,
+    medicalAudience: { "@type": "MedicalAudience", audienceType: "Patient" },
+    mainEntity: { "@id": `${SITE_URL}/resources/blog/${post.slug}#article` },
   };
 
   const breadcrumbSchema = {
@@ -112,7 +125,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
   return (
     <>
-      <SchemaScript schema={[articleSchema, breadcrumbSchema]} />
+      <SchemaScript schema={[articleSchema, medicalWebPageSchema, breadcrumbSchema]} />
       <Navigation />
       <Breadcrumb
         items={[

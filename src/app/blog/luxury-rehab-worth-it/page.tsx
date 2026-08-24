@@ -27,6 +27,7 @@ export const metadata: Metadata = buildMetadata({
 export default function LuxuryRehabWorthItPage() {
   const articleSchema = getArticleSchema({
     headline: POST_TITLE,
+    url: "/blog/luxury-rehab-worth-it",
     datePublished: DATE_PUBLISHED,
     dateModified: DATE_MODIFIED,
     image:
@@ -45,7 +46,7 @@ export default function LuxuryRehabWorthItPage() {
 
   return (
     <>
-      <SchemaScript schema={[articleSchema, breadcrumbSchema]} />
+      <SchemaScript schema={[...articleSchema, breadcrumbSchema]} />
       <Navigation />
 
       <div className="bg-white">
