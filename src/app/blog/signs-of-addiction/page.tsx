@@ -80,6 +80,7 @@ const signs = [
 export default function SignsOfAddictionPage() {
   const articleSchema = getArticleSchema({
     headline: POST_TITLE,
+    url: "/blog/signs-of-addiction",
     datePublished: DATE_PUBLISHED,
     dateModified: DATE_MODIFIED,
     image:
@@ -98,7 +99,7 @@ export default function SignsOfAddictionPage() {
 
   return (
     <>
-      <SchemaScript schema={[articleSchema, breadcrumbSchema]} />
+      <SchemaScript schema={[...articleSchema, breadcrumbSchema]} />
       <Navigation />
 
       <div className="bg-white">

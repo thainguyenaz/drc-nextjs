@@ -27,6 +27,7 @@ export const metadata: Metadata = buildMetadata({
 export default function DualDiagnosisExplainedPage() {
   const articleSchema = getArticleSchema({
     headline: POST_TITLE,
+    url: "/blog/dual-diagnosis-explained",
     datePublished: DATE_PUBLISHED,
     dateModified: DATE_MODIFIED,
     image: "https://desertrecoverycenters.com/images/scottsdale/DRC-DRONE-SCOTTSDALE-08-01-2024-August-01-202400006-2.jpg",
@@ -44,7 +45,7 @@ export default function DualDiagnosisExplainedPage() {
 
   return (
     <>
-      <SchemaScript schema={[articleSchema, breadcrumbSchema]} />
+      <SchemaScript schema={[...articleSchema, breadcrumbSchema]} />
       <Navigation />
 
       <div className="bg-white">

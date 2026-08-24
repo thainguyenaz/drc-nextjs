@@ -195,34 +195,53 @@ export function getBreadcrumbSchema(items: Array<{ name: string; url: string }>)
 
 export function getArticleSchema(article: {
   headline: string;
+  url: string;
   datePublished: string;
   dateModified: string;
   image: string;
   description: string;
   reviewer?: Reviewer;
+  lastReviewed?: string;
 }) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: article.headline,
-    author: { "@id": `${SITE_URL}/#organization` },
-    datePublished: article.datePublished,
-    dateModified: article.dateModified,
-    image: article.image,
-    description: article.description,
-    ...(article.reviewer && article.reviewer !== "none"
-      ? { reviewedBy: DRC_REVIEWERS[article.reviewer] }
-      : {}),
-    publisher: {
-      "@type": "Organization",
-      name: SITE_NAME,
-      url: SITE_URL,
-      logo: {
-        "@type": "ImageObject",
-        url: `${SITE_URL}/images/branding/desert-recovery-centers-logo-black-2x.png`,
+  // reviewedBy is a WebPage property, not an Article property. Returns an
+  // [Article, MedicalWebPage] pair; the MedicalWebPage carries reviewedBy
+  // and points at the Article via mainEntity.
+  const fullUrl = `${SITE_URL}${article.url}`;
+  return [
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "@id": `${fullUrl}#article`,
+      headline: article.headline,
+      url: fullUrl,
+      author: { "@id": `${SITE_URL}/#organization` },
+      datePublished: article.datePublished,
+      dateModified: article.dateModified,
+      image: article.image,
+      description: article.description,
+      publisher: {
+        "@type": "Organization",
+        name: SITE_NAME,
+        url: SITE_URL,
+        logo: {
+          "@type": "ImageObject",
+          url: `${SITE_URL}/images/branding/desert-recovery-centers-logo-black-2x.png`,
+        },
       },
     },
-  };
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalWebPage",
+      "@id": `${fullUrl}#webpage`,
+      url: fullUrl,
+      name: article.headline,
+      ...(article.reviewer && article.reviewer !== "none"
+        ? { reviewedBy: DRC_REVIEWERS[article.reviewer] }
+        : {}),
+      ...(article.lastReviewed ? { lastReviewed: article.lastReviewed } : {}),
+      mainEntity: { "@id": `${fullUrl}#article` },
+    },
+  ];
 }
 
 export function getWebSiteSchema() {
