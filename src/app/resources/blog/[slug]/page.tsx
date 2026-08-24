@@ -7,7 +7,7 @@ import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import Breadcrumb from "@/components/Breadcrumb";
 import SchemaScript from "@/components/SchemaScript";
-import { DRC_REVIEWERS } from "@/lib/seo";
+import { DRC_REVIEWERS, type Reviewer } from "@/lib/seo";
 import { getPostBySlug, getAllSlugs, getPostsByCategory } from "@/lib/blog";
 import BlogPostBody from "./BlogPostBody";
 import PreferredSourceButton from "@/components/PreferredSourceButton";
@@ -69,16 +69,20 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   const post = getPostBySlug(slug);
   if (!post) notFound();
 
-  // Single source of truth: the visible reviewer credit reads from the same
-  // DRC_REVIEWERS.nguyen object that drives the reviewedBy JSON-LD below, so
-  // visible text and structured data can never drift apart.
-  const reviewer = DRC_REVIEWERS.nguyen as {
-    name: string;
-    jobTitle: string;
-    url: string;
-    hasCredential: { credentialCategory: string };
-  };
-  const reviewerHref = reviewer.url.replace(SITE_URL, "");
+  // Single source of truth: the visible reviewer credit and the reviewedBy
+  // JSON-LD below both derive from post.reviewer, so visible text and
+  // structured data can never drift apart. No reviewer record, no credit
+  // in either place.
+  const reviewer =
+    post.reviewer && post.reviewer !== "none"
+      ? (DRC_REVIEWERS[post.reviewer as Exclude<Reviewer, "none">] as {
+          name: string;
+          jobTitle: string;
+          url: string;
+          hasCredential: { credentialCategory: string };
+        })
+      : null;
+  const reviewerHref = reviewer ? reviewer.url.replace(SITE_URL, "") : "";
 
   const related = getPostsByCategory(post.category)
     .filter((p) => p.slug !== post.slug)
@@ -106,8 +110,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     "@id": `${SITE_URL}/resources/blog/${post.slug}#webpage`,
     url: `${SITE_URL}/resources/blog/${post.slug}`,
     name: post.title,
-    reviewedBy: DRC_REVIEWERS.nguyen,
-    lastReviewed: post.dateModified,
+    ...(reviewer ? { reviewedBy: reviewer } : {}),
+    ...(post.lastReviewed ? { lastReviewed: post.lastReviewed } : {}),
     medicalAudience: { "@type": "MedicalAudience", audienceType: "Patient" },
     mainEntity: { "@id": `${SITE_URL}/resources/blog/${post.slug}#article` },
   };
@@ -162,12 +166,14 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               <span className="w-1 h-1 bg-white/40 rounded-full" />
               <span>{post.readTime} min read</span>
             </div>
-            <p className="mt-3 text-white/70 text-sm">
-              Medically reviewed by{" "}
-              <Link href={reviewerHref} className="text-gold hover:underline font-medium">
-                {reviewer.name}, {reviewer.hasCredential.credentialCategory}
-              </Link>
-            </p>
+            {reviewer && (
+              <p className="mt-3 text-white/70 text-sm">
+                Medically reviewed by{" "}
+                <Link href={reviewerHref} className="text-gold hover:underline font-medium">
+                  {reviewer.name}, {reviewer.hasCredential.credentialCategory}
+                </Link>
+              </p>
+            )}
           </div>
         </div>
       </section>
@@ -192,13 +198,17 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                 <div className="bg-cream rounded-xl p-6 border border-gold/10">
                   <p className="text-xs text-sage uppercase tracking-widest font-semibold mb-2">Written By</p>
                   <p className="font-display text-forest font-semibold">{post.author}</p>
-                  <p className="text-xs text-sage uppercase tracking-widest font-semibold mt-4 mb-2">Medically Reviewed By</p>
-                  <p className="font-display text-forest font-semibold">
-                    <Link href={reviewerHref} className="hover:text-gold transition-colors">
-                      {reviewer.name}, {reviewer.hasCredential.credentialCategory}
-                    </Link>
-                  </p>
-                  <p className="text-sm text-sage mt-1">{reviewer.jobTitle}</p>
+                  {reviewer && (
+                    <>
+                      <p className="text-xs text-sage uppercase tracking-widest font-semibold mt-4 mb-2">Medically Reviewed By</p>
+                      <p className="font-display text-forest font-semibold">
+                        <Link href={reviewerHref} className="hover:text-gold transition-colors">
+                          {reviewer.name}, {reviewer.hasCredential.credentialCategory}
+                        </Link>
+                      </p>
+                      <p className="text-sm text-sage mt-1">{reviewer.jobTitle}</p>
+                    </>
+                  )}
                 </div>
 
                 {/* CTA */}

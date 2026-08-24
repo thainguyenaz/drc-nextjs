@@ -201,6 +201,7 @@ export function getArticleSchema(article: {
   image: string;
   description: string;
   reviewer?: Reviewer;
+  lastReviewed?: string;
 }) {
   // reviewedBy is a WebPage property, not an Article property. Returns an
   // [Article, MedicalWebPage] pair; the MedicalWebPage carries reviewedBy
@@ -237,7 +238,7 @@ export function getArticleSchema(article: {
       ...(article.reviewer && article.reviewer !== "none"
         ? { reviewedBy: DRC_REVIEWERS[article.reviewer] }
         : {}),
-      lastReviewed: article.dateModified,
+      ...(article.lastReviewed ? { lastReviewed: article.lastReviewed } : {}),
       mainEntity: { "@id": `${fullUrl}#article` },
     },
   ];

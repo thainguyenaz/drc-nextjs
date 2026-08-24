@@ -19,7 +19,10 @@ export interface BlogPost {
   lastReviewed?: string
 }
 
-const DISCLAIMER = `<p><em>This article is for informational purposes only and does not constitute medical advice. The content has been reviewed by Dr. An Nguyen, Licensed Clinical Psychologist and Clinical Director at Desert Recovery Centers. If you or a loved one is struggling with addiction or a mental health condition, please contact a qualified healthcare professional. Desert Recovery Centers can be reached 24 hours a day at (623) 305-0496.</em></p>`
+// Named-reviewer sentence removed 2026-08-24: this constant is embedded in
+// 25 posts that have no reviewer record. Review credit must come from
+// post.reviewer/post.lastReviewed, never from a template constant.
+const DISCLAIMER = `<p><em>This article is for informational purposes only and does not constitute medical advice. If you or a loved one is struggling with addiction or a mental health condition, please contact a qualified healthcare professional. Desert Recovery Centers can be reached 24 hours a day at (623) 305-0496.</em></p>`
 
 export const blogPosts: BlogPost[] = [
   {
