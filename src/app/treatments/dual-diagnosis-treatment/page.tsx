@@ -346,7 +346,7 @@ export default function DualDiagnosisPage() {
             </article>
             <article className="border-l-2 border-gold/30 pl-5">
               <h3 className="text-forest font-semibold text-sm mb-1">Who delivers dual diagnosis treatment at Desert Recovery Centers?</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">Dual diagnosis treatment at Desert Recovery Centers is delivered by a multidisciplinary team of doctoral-level clinicians including licensed clinical psychologists, a board-certified psychiatrist, and registered nurses. With small client-to-clinician ratios, the team collaborates daily to ensure medication management, therapy protocols, and holistic programming are aligned for each client.</p>
+              <p className="text-gray-600 text-sm leading-relaxed">Dual diagnosis treatment at Desert Recovery Centers is delivered by a multidisciplinary team of doctoral-level clinicians including licensed clinical psychologists, a psychiatrist, and registered nurses. With small client-to-clinician ratios, the team collaborates daily to ensure medication management, therapy protocols, and holistic programming are aligned for each client.</p>
             </article>
           </div>
         </div>

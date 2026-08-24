@@ -144,7 +144,7 @@ export default function CostOfRehabPage() {
                 "Level of care, residential costs more than outpatient because it includes housing, meals, and 24/7 clinical support",
                 "Detox requirements, medical detox adds to the cost due to the need for medical monitoring and potential medication-assisted treatment",
                 "Dual diagnosis treatment, treating co-occurring mental health conditions requires additional psychiatric and therapeutic resources",
-                "Staff credentials, programs staffed by doctoral-level clinicians and board-certified psychiatrists cost more but provide a higher level of clinical care",
+                "Staff credentials, programs staffed by doctoral-level clinicians and psychiatrists cost more but provide a higher level of clinical care",
                 "Amenities and environment, private rooms, fitness facilities, and specialized programming all factor into cost but often serve clinical purposes",
                 "Location, treatment centers in metropolitan areas like Phoenix typically cost more than those in rural settings",
                 "Aftercare services, programs that include comprehensive discharge planning, alumni support, and follow-up care may have higher upfront costs but can reduce the risk of relapse",

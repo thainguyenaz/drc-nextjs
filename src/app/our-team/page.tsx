@@ -46,7 +46,7 @@ export default function OurTeamPage() {
         name="Dr. Greg Carr, MD"
         jobTitle="Medical Director"
         image="/images/team/Dr-Greg-Carr.jpg"
-        description="Medical Director at Desert Recovery Centers, a board-certified psychiatrist overseeing medical care and medication management across all DRC programs."
+        description="Medical Director at Desert Recovery Centers, overseeing medical care and medication management across all DRC programs."
       />
       <PersonSchema
         slug="ian-dy"
@@ -102,7 +102,7 @@ export default function OurTeamPage() {
       <PageHero
         eyebrow="Our Team"
         title="The People Behind Your Recovery"
-        description="Doctoral-level clinicians, board-certified physicians, and compassionate professionals, every member of our team is here because they believe in the work."
+        description="Doctoral-level clinicians, physicians, and compassionate professionals, every member of our team is here because they believe in the work."
         bgImage="/images/general/DRC-OUR-TEAM.jpg"
       />
 
@@ -146,7 +146,7 @@ export default function OurTeamPage() {
                   desc: "Our Clinical Director and psychology staff hold doctoral degrees with specialized training in addiction, trauma, and co-occurring disorders. Your treatment plan is designed by the most qualified clinicians in the field.",
                 },
                 {
-                  title: "Board-Certified Medical Director",
+                  title: "Medical Director",
                   desc: "Our Medical Director oversees all psychiatric care and medication management, ensuring your physical and mental health are addressed with equal rigor.",
                 },
                 {

@@ -19,10 +19,11 @@ export const DRC_REVIEWERS: Record<Exclude<Reviewer, "none">, Record<string, unk
     "@id": `${SITE_URL}/our-team#dr-greg-carr-md`,
     name: "Dr. Greg Carr, MD",
     jobTitle: "Medical Director",
+    // educationalLevel deleted 2026-08-23: board-certification claim
+    // unverified against azmd.gov/ABPN. Property removed, not emptied.
     hasCredential: {
       "@type": "EducationalOccupationalCredential",
       credentialCategory: "MD",
-      educationalLevel: "Board Certified in Psychiatry",
     },
     worksFor: { "@id": `${SITE_URL}/#organization` },
   },
@@ -46,6 +47,8 @@ export const DRC_REVIEWERS: Record<Exclude<Reviewer, "none">, Record<string, unk
     hasCredential: {
       "@type": "EducationalOccupationalCredential",
       credentialCategory: "Master's Degree",
+      // KEPT by directive 2026-08-23: "-BC" is part of the ANCC credential
+      // name itself, not a separate claim. FLAG: pending ANCC verification.
       educationalLevel: "Psychiatric Mental Health Nurse Practitioner, Board Certified (PMHNP-BC)",
     },
     worksFor: { "@id": `${SITE_URL}/#organization` },
@@ -55,10 +58,14 @@ export const DRC_REVIEWERS: Record<Exclude<Reviewer, "none">, Record<string, unk
     "@id": `${SITE_URL}/our-team#dr-reyes-topete-md`,
     name: "Dr. Reyes Topete, MD, FASAM",
     jobTitle: "Attending Physician",
+    // educationalLevel deleted 2026-08-23: "Board Certified in Addiction
+    // Medicine through ASAM" is not a board certification (ASAM is a
+    // professional society; addiction medicine certification comes from
+    // ABPM/legacy ABAM). Property removed, not emptied. FASAM stays in the
+    // name field — it is part of how Dr. Topete styles his name.
     hasCredential: {
       "@type": "EducationalOccupationalCredential",
       credentialCategory: "MD",
-      educationalLevel: "Board Certified in Addiction Medicine, FASAM",
     },
     worksFor: { "@id": `${SITE_URL}/#organization` },
   },

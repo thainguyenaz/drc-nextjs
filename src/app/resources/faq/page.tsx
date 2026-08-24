@@ -99,7 +99,7 @@ const categories = [
       },
       {
         q: "What credentials do your therapists have?",
-        a: "Our clinical team is led by licensed clinical psychologists (doctoral-level clinicians), supported by a board-certified psychiatrist serving as medical director, licensed professional counselors, registered nurses, and behavioral health professionals. Every primary therapist holds at minimum a master's degree in a clinical discipline, and all clinical work is supervised by doctoral-level psychologists, a level of oversight that is rare in residential treatment.",
+        a: "Our clinical team is led by licensed clinical psychologists (doctoral-level clinicians), supported by a psychiatrist serving as medical director, licensed professional counselors, registered nurses, and behavioral health professionals. Every primary therapist holds at minimum a master's degree in a clinical discipline, and all clinical work is supervised by doctoral-level psychologists, a level of oversight that is rare in residential treatment.",
       },
       {
         q: "Do you offer gender-specific groups?",

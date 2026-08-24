@@ -178,7 +178,7 @@ export default function LuxuryRehabWorthItPage() {
                 },
                 {
                   title: "Higher Clinical Qualifications",
-                  desc: "Many standard programs rely primarily on master's-level therapists and peer counselors for the majority of direct clinical care. The best luxury programs employ doctoral-level psychologists, board-certified psychiatrists, and clinicians with specialized training in evidence-based modalities like EMDR, DBT, and trauma-focused CBT. The difference in clinical expertise translates directly into more accurate diagnoses, more effective treatment plans, and better outcomes, particularly for clients with complex presentations like dual diagnosis or treatment-resistant conditions.",
+                  desc: "Many standard programs rely primarily on master's-level therapists and peer counselors for the majority of direct clinical care. The best luxury programs employ doctoral-level psychologists, psychiatrists, and clinicians with specialized training in evidence-based modalities like EMDR, DBT, and trauma-focused CBT. The difference in clinical expertise translates directly into more accurate diagnoses, more effective treatment plans, and better outcomes, particularly for clients with complex presentations like dual diagnosis or treatment-resistant conditions.",
                 },
                 {
                   title: "Comfort Reduces Dropout Rates",
@@ -256,7 +256,7 @@ export default function LuxuryRehabWorthItPage() {
               {[
                 {
                   title: "10-Bed Maximum Per Facility",
-                  desc: "Our intentionally small program sizes mean you are never lost in a crowd. Every client receives deeply personalized attention from licensed clinical psychologists, a board-certified psychiatrist, and a dedicated care team.",
+                  desc: "Our intentionally small program sizes mean you are never lost in a crowd. Every client receives deeply personalized attention from licensed clinical psychologists, a psychiatrist, and a dedicated care team.",
                 },
                 {
                   title: "Doctoral-Level Clinical Staff",

@@ -98,7 +98,7 @@ export default function GlendaleLocationPage() {
               Our Glendale facility is where Desert Recovery Centers began, and it remains the heart of our mission. At 7,500 square feet, it&apos;s our largest residential center, providing 24/7 immersive care for adult men. Clients who step down to outpatient programming transition to our Phoenix center.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              What you&apos;ll find here is a program built on clinical depth, not marketing promises. Licensed psychologists, a board-certified psychiatrist, and registered nurses deliver evidence-based treatment around the clock, in a luxury home-like setting with amenities that rival a resort. Basketball court, tennis court, pool, massage room, gourmet meals, because we believe that healing the whole person requires treating the whole person.
+              What you&apos;ll find here is a program built on clinical depth, not marketing promises. Licensed psychologists, a psychiatrist, and registered nurses deliver evidence-based treatment around the clock, in a luxury home-like setting with amenities that rival a resort. Basketball court, tennis court, pool, massage room, gourmet meals, because we believe that healing the whole person requires treating the whole person.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg">
               Our Glendale center serves the entire West Valley, Peoria, Surprise, Avondale, Goodyear, Buckeye, and beyond. If you or someone you love is ready for treatment that actually works, this is where it starts.
@@ -309,7 +309,7 @@ export default function GlendaleLocationPage() {
               {[
                 {
                   title: "Doctoral-Level Clinical Team",
-                  desc: "Your treatment is directed by licensed clinical psychologists with doctoral degrees, not counselors or paraprofessionals. A board-certified psychiatrist provides medication management, and registered nurses offer 24/7 medical monitoring.",
+                  desc: "Your treatment is directed by licensed clinical psychologists with doctoral degrees, not counselors or paraprofessionals. A psychiatrist provides medication management, and registered nurses offer 24/7 medical monitoring.",
                 },
                 {
                   title: "Individualized Treatment Plans",
@@ -353,7 +353,7 @@ export default function GlendaleLocationPage() {
         },
         {
           question: "What addiction treatment is available in Glendale, Arizona?",
-          answer: "Desert Recovery Centers offers addiction and mental health treatment at our flagship Glendale facility. As a Joint Commission accredited luxury treatment center in Arizona, we provide evidence-based dual diagnosis treatment using CBT, DBT, EMDR, and holistic therapies, delivered by licensed psychologists and a board-certified psychiatrist with resort-level amenities including a basketball court, tennis court, and pool.",
+          answer: "Desert Recovery Centers offers addiction and mental health treatment at our flagship Glendale facility. As a Joint Commission accredited luxury treatment center in Arizona, we provide evidence-based dual diagnosis treatment using CBT, DBT, EMDR, and holistic therapies, delivered by licensed psychologists and a psychiatrist with resort-level amenities including a basketball court, tennis court, and pool.",
         },
         {
           question: "Does Desert Recovery Centers accept insurance for Glendale residents?",

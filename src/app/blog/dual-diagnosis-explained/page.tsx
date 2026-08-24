@@ -236,7 +236,7 @@ export default function DualDiagnosisExplainedPage() {
               Dual diagnosis is not a death sentence. It is a treatable medical condition that responds well to comprehensive, evidence-based care. But it requires the right kind of treatment, integrated, clinically sophisticated, and delivered by providers who understand the complex interplay between mental health and addiction.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg mb-8">
-              Desert Recovery Centers is one of Arizona&apos;s leading dual diagnosis treatment providers. Our clinical team, led by doctoral-level psychologists and a board-certified psychiatrist, treats both conditions from the same treatment plan, in the same clinical setting, with the same team. No fragmented care. No gaps. No falling through the cracks.
+              Desert Recovery Centers is one of Arizona&apos;s leading dual diagnosis treatment providers. Our clinical team, led by doctoral-level psychologists and a psychiatrist, treats both conditions from the same treatment plan, in the same clinical setting, with the same team. No fragmented care. No gaps. No falling through the cracks.
             </p>
             <div className="flex flex-wrap gap-4">
               <a href="tel:+16233050496" className="bg-gold hover:bg-gold-dark text-white font-semibold text-sm px-6 py-3 rounded-xl transition-colors cursor-pointer">

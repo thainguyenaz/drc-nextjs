@@ -56,7 +56,7 @@ const programs = [
     body: "PHP is the most intensive level of outpatient care we offer, and for good reason. When someone is in active crisis or has just completed a residential stay, they need more than a weekly check in. PHP gives you a full clinical day, group therapy, individual therapy, psychiatric care, and medication management, while letting you sleep in your own bed. It is the clinical intensity of inpatient care, without the inpatient price tag or the loss of your daily life.",
     features: [
       "Group therapy and individual therapy every week",
-      "Board certified psychiatric care and medication management",
+      "Psychiatric care and medication management",
       "Evidence based modalities: CBT, DBT, and EMDR",
       "Dual diagnosis treatment for co-occurring mental health and addiction",
       "Case management and discharge planning from day one",
@@ -119,7 +119,7 @@ const differentiators = [
       </svg>
     ),
     title: "Doctoral Level Clinical Team",
-    body: "Your care is directed by licensed clinical psychologists, not paraprofessionals or counselors working beyond their scope. Our psychiatrist is board certified. Our therapists are specifically trained in CBT, DBT, and EMDR. When you are here, you are working with the best.",
+    body: "Your care is directed by licensed clinical psychologists, not paraprofessionals or counselors working beyond their scope. Our therapists are specifically trained in CBT, DBT, and EMDR. When you are here, you are working with the best.",
   },
   {
     icon: (

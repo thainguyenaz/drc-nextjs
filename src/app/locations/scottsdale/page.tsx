@@ -99,7 +99,7 @@ export default function ScottsdaleLocationPage() {
               Our Scottsdale center sits between stunning mountain ranges in one of Arizona&apos;s most beautiful neighborhoods. But what happens inside these walls matters far more than the views outside them. This is where people come to face the hardest challenges of their lives, and where our doctoral-level clinical team helps them do exactly that.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
-              Licensed psychologists, a board-certified psychiatrist, and a dedicated nursing staff deliver evidence-based treatment for women in a residential setting designed for comfort, privacy, and deep personal transformation. Every treatment plan is individualized. Every client receives the attention they deserve.
+              Licensed psychologists, a psychiatrist, and a dedicated nursing staff deliver evidence-based treatment for women in a residential setting designed for comfort, privacy, and deep personal transformation. Every treatment plan is individualized. Every client receives the attention they deserve.
             </p>
             <p className="text-gray-600 leading-relaxed text-lg">
               If you or someone you love is ready for help, our Scottsdale facility offers the clinical excellence of a top-tier treatment program in a luxury environment you have to see to believe.
@@ -318,7 +318,7 @@ export default function ScottsdaleLocationPage() {
               {[
                 {
                   title: "Doctoral-Level Clinical Team",
-                  desc: "Your treatment is led by licensed clinical psychologists and overseen by a board-certified psychiatrist. This isn't a counselor-driven program, it's the highest standard of clinical care available in residential treatment.",
+                  desc: "Your treatment is led by licensed clinical psychologists and overseen by a psychiatrist. This isn't a counselor-driven program, it's the highest standard of clinical care available in residential treatment.",
                 },
                 {
                   title: "Individualized Treatment Plans",
@@ -362,7 +362,7 @@ export default function ScottsdaleLocationPage() {
         },
         {
           question: "What addiction treatment is available in Scottsdale, Arizona?",
-          answer: "Desert Recovery Centers offers addiction and mental health treatment in Scottsdale. As a Joint Commission accredited luxury treatment center in Arizona, we provide evidence-based dual diagnosis treatment using CBT, DBT, EMDR, gender-specific group therapy, and holistic therapies, delivered by licensed psychologists and a board-certified psychiatrist.",
+          answer: "Desert Recovery Centers offers addiction and mental health treatment in Scottsdale. As a Joint Commission accredited luxury treatment center in Arizona, we provide evidence-based dual diagnosis treatment using CBT, DBT, EMDR, gender-specific group therapy, and holistic therapies, delivered by licensed psychologists and a psychiatrist.",
         },
         {
           question: "Does Desert Recovery Centers accept insurance for Scottsdale residents?",

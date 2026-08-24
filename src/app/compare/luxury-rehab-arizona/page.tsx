@@ -86,7 +86,7 @@ export default function LuxuryRehabArizonaPage() {
               {[
                 {
                   title: "1. Clinical Team Credentials",
-                  desc: "Who is leading your treatment? Licensed psychologists and board-certified psychiatrists provide a fundamentally different level of care than facilities staffed primarily by master's-level counselors. Ask about the credentials of the clinicians who will actually be directing your treatment.",
+                  desc: "Who is leading your treatment? Licensed psychologists and psychiatrists provide a fundamentally different level of care than facilities staffed primarily by master's-level counselors. Ask about the credentials of the clinicians who will actually be directing your treatment.",
                 },
                 {
                   title: "2. Client-to-Staff Ratio",
@@ -145,7 +145,7 @@ export default function LuxuryRehabArizonaPage() {
               {[
                 {
                   title: "Doctoral-Level Clinical Team",
-                  desc: "Treatment directed by licensed clinical psychologists and overseen by a board-certified psychiatrist. Clinical Director Dr. An Nguyen leads a team of doctoral-level clinicians across three facilities.",
+                  desc: "Treatment directed by licensed clinical psychologists and overseen by a psychiatrist. Clinical Director Dr. An Nguyen leads a team of doctoral-level clinicians across three facilities.",
                 },
                 {
                   title: "10 Beds Per Residential Facility",
