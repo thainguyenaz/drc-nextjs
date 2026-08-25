@@ -1,0 +1,29 @@
+{
+  "url": "https://desertrecoverycenters.com/insurance",
+  "metaDescription": "Verify your insurance for addiction and mental health treatment at Desert Recovery Centers. Out-of-network commercial coverage and in-network with TRICARE through TriWest. Call (623) 305-0496.",
+  "cards": [
+    { "name": "Cigna", "href": "/insurance/cigna" },
+    { "name": "Aetna", "href": "/insurance/aetna" },
+    { "name": "Blue Cross Blue Shield", "href": "/insurance/blue-cross" },
+    { "name": "UnitedHealthcare", "href": "/insurance/united" },
+    { "name": "TRICARE", "href": "/resources/blog/tricare-coverage-for-rehab-in-arizona" }
+  ],
+  "formFields": [
+    "firstName", "lastName", "email", "phone", "insuranceCarrier",
+    "memberId", "dateOfBirth", "iv-front", "iv-back", "howDidYouHear",
+    "smsConsent", "hp_check", "cf-turnstile-response"
+  ],
+  "requiredCookies": ["hubspotutk"],
+  "requiredBeacons": {
+    "gtagLoader": ["googletagmanager.com/gtag/js"],
+    "ga4Collect": ["/g/collect"],
+    "awBeacon": ["googleads.g.doubleclick.net", "google.com/pagead"],
+    "ctm": ["tctm.co", "calltrackingmetrics"],
+    "turnstile": ["challenges.cloudflare.com"]
+  },
+  "dataLayerIds": ["G-0MSPF0DPVK", "AW-16468277860"],
+  "turnstileTokenTimeoutMs": 30000,
+  "knownIssues": [
+    "Pinned metaDescription contains an unscoped 'in-network with TRICARE through TriWest' claim; pending contract confirmation and legal review. This baseline is expected to change when the scoped wording lands — the resulting check failure is the intended alert."
+  ]
+}

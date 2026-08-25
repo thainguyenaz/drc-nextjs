@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build && node scripts/check-confirm.mjs",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "check:live": "node scripts/check-insurance-live.mjs"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.19",
