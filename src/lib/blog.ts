@@ -1411,8 +1411,8 @@ ${DISCLAIMER}`
     featuredImage: "/images/glendale/Glendale-Front.jpg",
     featuredImageAlt: "Desert Recovery Centers Glendale facility for cannabis addiction treatment",
     tags: ["marijuana", "cannabis withdrawal", "anxiety", "THC", "weed addiction", "detox"],
-    metaTitle: "Can Quitting Marijuana Cause Anxiety? Cannabis Withdrawal Explained | DRC",
-    metaDescription: "Quitting weed can cause anxiety, irritability, insomnia, and other withdrawal symptoms. See the full symptom list, withdrawal timeline, and when to get help.",
+    metaTitle: "Can Quitting Weed Cause Anxiety? Yes, Here's Why | DRC",
+    metaDescription: "Yes. Anxiety peaks in the first one to two weeks of cannabis withdrawal and eases over three to four. See the timeline and when symptoms last longer.",
     content: `<h2>Cannabis Withdrawal Is Real</h2>
 <p>For years, marijuana was widely considered non addictive. Cultural narratives portrayed it as harmless, and many people believed that quitting would involve no withdrawal symptoms at all. The clinical reality is quite different. Cannabis withdrawal syndrome is a recognized medical condition, and one of its most common and distressing symptoms is anxiety. If you have recently quit marijuana and are experiencing anxiety, irritability, insomnia, or other uncomfortable symptoms, what you are going through is real, well documented, and treatable.</p>
 
@@ -2180,7 +2180,7 @@ ${DISCLAIMER}`
     featuredImageAlt: "How Do Prescription Drugs Affect Your Brain? - Desert Recovery Centers",
     tags: ["prescription drug addiction", "opioids", "benzodiazepines", "stimulants", "antidepressants", "neurotransmitters", "brain health"],
     metaTitle: "How Do Prescription Drugs Affect Your Brain? | DRC",
-    metaDescription: "Learn how prescription drugs affect the brain, from mechanisms of action to side effects like cognitive impairment, and how high doses raise addiction risks.",
+    metaDescription: "Prescription drugs alter brain chemistry by mimicking or blocking natural signals. Here is how that works and when use becomes dependence.",
     content: `<p>The brain is a precision instrument. Every thought, mood shift, memory, and movement is the product of chemical signals firing across roughly 86 billion neurons. Prescription medications work because they can step into that signaling system and change it, deliberately, for therapeutic benefit. The same property that makes them effective for treating pain, anxiety, depression, ADHD, or psychosis is what makes them powerful enough to alter brain function in ways that are not always intended, and not always reversible.</p>
 
 <p>At Desert Recovery Centers, we treat patients every week who started a legitimate prescription, took it as directed, and ended up dependent on it. We also treat patients whose use escalated outside the prescription, and patients whose underlying mental health condition was made worse by the medication intended to treat it. Understanding how each class of prescription drug acts on the brain is the first step in recognizing when treatment is helping, when it is harming, and when it is time to ask for a different kind of help.</p>
