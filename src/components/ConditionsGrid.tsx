@@ -91,7 +91,7 @@ function ConditionCard({
   condition,
   index,
 }: {
-  condition: { name: string; href: string; description: string };
+  condition: { name: string; href: string; description: string; ariaLabel?: string };
   index: number;
 }) {
   const { ref, visible } = useScrollReveal<HTMLDivElement>({ rootMargin: "-50px" });
@@ -106,6 +106,7 @@ function ConditionCard({
     >
       <Link
         href={condition.href}
+        aria-label={condition.ariaLabel ?? `${condition.name} treatment`}
         className="group block bg-white rounded-xl p-6 shadow-sm border-t-[3px] border-t-transparent hover:border-t-gold hover:shadow-xl transition-all duration-[250ms] ease-out h-full cursor-pointer overflow-hidden"
       >
         {/* Icon square */}

@@ -1,3 +1,11 @@
+export type TreatmentCard = {
+  name: string;
+  href: string;
+  description: string;
+  /** Set only where the component's aria-label template reads badly for this name. */
+  ariaLabel?: string;
+};
+
 export const siteData = {
   name: "Desert Recovery Centers",
   email: "contact@desertrecoverycenters.com",
@@ -178,13 +186,13 @@ export const siteData = {
     { name: "Anxiety Disorders", href: "/mental-health/anxiety-treatment", description: "Generalized anxiety, panic disorder, social anxiety, and phobias treated with proven therapeutic approaches." },
     { name: "Depression", href: "/mental-health/depression-treatment", description: "Major depressive disorder, persistent depression, and seasonal affective disorder addressed through integrated care." },
     { name: "PTSD", href: "/mental-health/ptsd-treatment", description: "Treatment for flashbacks, nightmares, hypervigilance, and avoidance, helping your nervous system process traumatic memories so they no longer control daily life." },
-    { name: "Trauma Therapy", href: "/treatments/trauma-therapy", description: "Specialized trauma therapy using EMDR, somatic experiencing, and trauma-focused CBT to process and heal from traumatic experiences." },
+    { name: "Trauma Therapy", href: "/treatments/trauma-therapy", description: "Specialized trauma therapy using EMDR, somatic experiencing, and trauma-focused CBT to process and heal from traumatic experiences.", ariaLabel: "Trauma therapy" },
     { name: "Bipolar Disorder", href: "/mental-health/bipolar-disorder-treatment", description: "Mood stabilization, medication management, and psychotherapy for bipolar I and bipolar II disorders." },
     { name: "OCD", href: "/mental-health/ocd-treatment", description: "Exposure and response prevention (ERP) and cognitive therapy for obsessive-compulsive disorder." },
     { name: "Personality Disorders", href: "/mental-health/personality-disorder-treatment", description: "DBT-based treatment for borderline personality disorder and other personality conditions." },
     { name: "ADHD", href: "/mental-health/adhd-add", description: "Comprehensive assessment, medication management, and behavioral strategies for attention-deficit disorders." },
     { name: "Schizophrenia", href: "/mental-health/schizophrenia-treatment", description: "Integrated psychiatric care and therapeutic support for schizophrenia spectrum disorders." },
-  ],
+  ] as readonly TreatmentCard[],
   addictionPrograms: [
     { name: "Alcohol", href: "/addiction/alcoholism-treatment", description: "Medical detox coordination and comprehensive alcohol use disorder treatment." },
     { name: "Opioids", href: "/addiction/heroin-addiction-treatment", description: "MAT-supported treatment for heroin, fentanyl, and prescription opioid addiction." },
@@ -194,9 +202,9 @@ export const siteData = {
     { name: "Prescription Drugs", href: "/addiction/prescription-drug-addiction-treatment", description: "Treatment for prescription drug dependencies including opioids, benzos, and stimulants." },
     { name: "Marijuana", href: "/addiction/marijuana-addiction-treatment", description: "Cannabis use disorder treatment addressing psychological dependence." },
     { name: "Gambling", href: "/addiction/gambling-addiction-treatment", description: "Behavioral addiction treatment for compulsive gambling." },
-    { name: "Sex Addiction", href: "/addiction/sex-addiction-treatment", description: "Compassionate treatment for compulsive sexual behavior." },
+    { name: "Sex Addiction", href: "/addiction/sex-addiction-treatment", description: "Compassionate treatment for compulsive sexual behavior.", ariaLabel: "Sex addiction treatment" },
     { name: "Stimulants", href: "/addiction/stimulant-addiction-treatment", description: "Treatment for cocaine, meth, and other stimulant addictions." },
-  ],
+  ] as readonly TreatmentCard[],
 } as const;
 
 // Location union with schema-only fields optional — only locations with a live

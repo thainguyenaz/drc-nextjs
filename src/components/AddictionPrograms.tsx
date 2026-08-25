@@ -148,6 +148,7 @@ export default function AddictionPrograms() {
             >
               <Link
                 href={program.href}
+                aria-label={program.ariaLabel ?? `${program.name} addiction treatment`}
                 className="group block bg-cream rounded-xl p-5 border-t-[3px] border-t-transparent hover:border-t-gold hover:shadow-xl transition-all duration-[250ms] ease-out h-full cursor-pointer overflow-hidden"
               >
                 {/* Icon square */}
