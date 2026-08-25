@@ -46,6 +46,33 @@ import { join, extname } from "node:path";
 const CREDENTIAL_CLAIM_WORDS =
   /board[ -]certified(?! \(PMHNP-BC\))|board[ -]eligible|\bdiplomate\b/i;
 
+// Unscoped payer-network claim gate (2026-08-25, TRICARE Block 3 ruling):
+// encode the patterns, not the memory. Every census in the Block 2 session
+// missed at least one claim variant — the landing-page badge sublabel read
+// "In-Network Through TriWest" with no TRICARE token on the line, and the
+// prozac/zoloft pages scope AFTER TriWest ("through TriWest for residential
+// treatment"). A token-list grep cannot enumerate orderings, so this checks
+// co-occurrence instead: any "in-network" within WINDOW chars of a
+// TRICARE/TriWest token must have "residential" inside the same window.
+// Both compliant orderings pass; every unscoped variant, with or without
+// the TRICARE word on the line, fails.
+const IN_NETWORK = /in[ -]network/gi;
+const PAYER_TOKEN = /tricare|triwest/i;
+const SCOPE_TOKEN = /residential/i;
+const CLAIM_WINDOW = 120;
+
+function unscopedNetworkClaims(content) {
+  const hits = [];
+  for (const m of content.matchAll(IN_NETWORK)) {
+    const start = Math.max(0, m.index - CLAIM_WINDOW);
+    const windowText = content.slice(start, m.index + m[0].length + CLAIM_WINDOW);
+    if (PAYER_TOKEN.test(windowText) && !SCOPE_TOKEN.test(windowText)) {
+      hits.push(windowText.replace(/\s+/g, " ").trim().slice(0, 140));
+    }
+  }
+  return hits;
+}
+
 const RENDERED_ONLY_DIRS = [".next/server/app"];
 const RENDERED_EXTS = new Set([".html", ".rsc", ".body"]);
 
@@ -69,33 +96,43 @@ function* walk(dir, exts) {
 }
 
 const credentialHits = [];
+const networkHits = [];
 for (const dir of RENDERED_ONLY_DIRS) {
   for (const file of walk(dir, RENDERED_EXTS)) {
     const content = readFileSync(file, "utf8");
     const c = content.match(CREDENTIAL_CLAIM_WORDS);
     if (c) credentialHits.push({ file, word: c[0] });
+    for (const w of unscopedNetworkClaims(content)) {
+      networkHits.push({ file, word: w });
+    }
   }
 }
 
-if (credentialHits.length === 0) {
-  console.log("check-confirm: no credential-claim words in build output.");
+if (credentialHits.length === 0 && networkHits.length === 0) {
+  console.log(
+    "check-confirm: no credential-claim words, no unscoped payer-network claims in build output."
+  );
   process.exit(0);
 }
 
-const summary = new Map();
-for (const hit of credentialHits) {
-  if (!summary.has(hit.word)) summary.set(hit.word, new Set());
-  summary.get(hit.word).add(hit.file);
+function report(hits, kind) {
+  const summary = new Map();
+  for (const hit of hits) {
+    if (!summary.has(hit.word)) summary.set(hit.word, new Set());
+    summary.get(hit.word).add(hit.file);
+  }
+  for (const [word, files] of summary) {
+    console.error(`\n${kind} "${word}" found in ${files.size} build file(s):`);
+    for (const f of [...files].slice(0, 8)) console.error(`  ${f}`);
+    if (files.size > 8) console.error(`  ...and ${files.size - 8} more`);
+  }
 }
-for (const [word, files] of summary) {
-  console.error(`\nCREDENTIAL-CLAIM WORD "${word}" found in ${files.size} build file(s):`);
-  for (const f of [...files].slice(0, 8)) console.error(`  ${f}`);
-  if (files.size > 8) console.error(`  ...and ${files.size - 8} more`);
-}
+report(credentialHits, "CREDENTIAL-CLAIM WORD");
+report(networkHits, "UNSCOPED PAYER-NETWORK CLAIM");
 
 if (strict) {
   console.error(
-    "\ncheck-confirm: FAILING build (production/main/strict). A credential or accreditation claim is in rendered output without a verified source on record. Remove it or record the source and add a documented exception."
+    "\ncheck-confirm: FAILING build (production/main/strict). A credential claim or an unscoped payer-network claim is in rendered output. Remove it, scope it to residential treatment, or record the source and add a documented exception."
   );
   process.exit(1);
 }
