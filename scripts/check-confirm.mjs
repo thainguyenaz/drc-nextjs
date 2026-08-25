@@ -35,6 +35,7 @@
 
 import { readdirSync, readFileSync, statSync } from "node:fs";
 import { join, extname } from "node:path";
+import { pathToFileURL } from "node:url";
 
 // Credential-claim words (narrowed 2026-08-24): specialty-certification
 // phrasing only — "board certified"/"board-certified"/"board eligible"/
@@ -46,28 +47,94 @@ import { join, extname } from "node:path";
 const CREDENTIAL_CLAIM_WORDS =
   /board[ -]certified(?! \(PMHNP-BC\))|board[ -]eligible|\bdiplomate\b/i;
 
-// Unscoped payer-network claim gate (2026-08-25, TRICARE Block 3 ruling):
-// encode the patterns, not the memory. Every census in the Block 2 session
-// missed at least one claim variant — the landing-page badge sublabel read
-// "In-Network Through TriWest" with no TRICARE token on the line, and the
-// prozac/zoloft pages scope AFTER TriWest ("through TriWest for residential
-// treatment"). A token-list grep cannot enumerate orderings, so this checks
-// co-occurrence instead: any "in-network" within WINDOW chars of a
-// TRICARE/TriWest token must have "residential" inside the same window.
-// Both compliant orderings pass; every unscoped variant, with or without
-// the TRICARE word on the line, fails.
+// Unscoped payer-network claim gate (2026-08-25, TRICARE Block 3 ruling;
+// hardened same day after adversarial review): encode the patterns, not the
+// memory. Every census in the Block 2 session missed at least one claim
+// variant — the landing-page badge sublabel read "In-Network Through
+// TriWest" with no TRICARE token on the line, and the prozac/zoloft pages
+// scope AFTER TriWest ("through TriWest for residential treatment").
+//
+// Rule A (TRICARE/TriWest): any "in-network" whose SENTENCE contains a
+// TRICARE/TriWest token must also contain "residential" in that sentence.
+// The window is trimmed at sentence boundaries because raw proximity is
+// spoofable: "Our residential program is beautiful. We are in-network with
+// TRICARE through TriWest." passed the naive +/-120 window on the strength
+// of the unrelated prior sentence. The qualifier must live in the claim's
+// own sentence. Where no sentence punctuation exists (badge labels, table
+// cells), the raw window applies — that is the lp:280 class.
+//
+// Rule B (all other payers): DRC is out-of-network with every commercial
+// carrier and does not accept Medicare/Medicaid/AHCCCS, so a first-person
+// "in-network <payer>" adjacency is always a false claim — no scope saves
+// it. Payer list mirrors PAYER_NAMES in src/lib/blog-validate.ts minus
+// TRICARE/TriWest. Two narrowing conditions, both earned by false
+// positives on real pages:
+// - Adjacency (not co-occurrence): compliant copy lists commercial payers
+//   in the same sentence as the scoped TRICARE claim ("...(Aetna, Cigna),
+//   is in-network with TRICARE for residential treatment...").
+// - First-person subject (we/our/DRC/Desert Recovery) required before the
+//   match: the insurance explainer pages use "whether the treatment
+//   facility is in-network or out-of-network with your Cigna plan" —
+//   educational third-person copy, not a claim about DRC. Cost: a
+//   subject-free false claim ("now in-network for Cigna members") slips
+//   Rule B; acceptable because a gate that fails on true educational
+//   statements gets switched off, and then catches nothing.
 const IN_NETWORK = /in[ -]network/gi;
-const PAYER_TOKEN = /tricare|triwest/i;
+const TRICARE_TOKEN = /tricare|triwest/i;
 const SCOPE_TOKEN = /residential/i;
-const CLAIM_WINDOW = 120;
+const NON_TRICARE_PAYER =
+  /\b(?:AHCCCS|Medicaid|Medicare|Humana|Magellan|Beacon|Cigna|Aetna|UnitedHealthcare|United\s*Health|UHC|BCBS|Blue\s*Cross|Blue\s*Shield|Health\s*Net|Optum|Anthem|Carelon)\b/i;
+const FIRST_PERSON_SUBJECT = /\b(?:we|our|DRC|Desert\s+Recovery)\b/i;
+const CLAIM_WINDOW = 200;
 
-function unscopedNetworkClaims(content) {
+// Block-level closers become sentence boundaries BEFORE tags are stripped:
+// a heading has no period, so "Residential Treatment</h2><p>DRC is
+// in-network with TRICARE..." would otherwise smear the heading's
+// "Residential" into the claim's window (adversarial case A3). Inline
+// closers (span, a, strong) are NOT boundaries — the lp:280 badge class
+// spans sibling inline elements and must stay in one segment.
+function stripTags(s) {
+  return s
+    .replace(/<\/(?:h[1-6]|p|li|td|th|div|section|article|figcaption)>|<br\s*\/?>/gi, ". ")
+    .replace(/<[^>]*>/g, " ");
+}
+
+// +/-CLAIM_WINDOW around the match, then trimmed to the nearest sentence
+// boundary on each side. No boundary in range -> raw window stands.
+function sentenceWindow(text, idx, len) {
+  let start = Math.max(0, idx - CLAIM_WINDOW);
+  let end = Math.min(text.length, idx + len + CLAIM_WINDOW);
+  const left = text.slice(start, idx);
+  const lb = Math.max(left.lastIndexOf("."), left.lastIndexOf("!"), left.lastIndexOf("?"));
+  if (lb !== -1) start = start + lb + 1;
+  const right = text.slice(idx + len, end);
+  const rb = right.search(/[.!?]/);
+  if (rb !== -1) end = idx + len + rb + 1;
+  return { window: text.slice(start, end), start };
+}
+
+export function unscopedNetworkClaims(content) {
+  const text = stripTags(content);
   const hits = [];
-  for (const m of content.matchAll(IN_NETWORK)) {
-    const start = Math.max(0, m.index - CLAIM_WINDOW);
-    const windowText = content.slice(start, m.index + m[0].length + CLAIM_WINDOW);
-    if (PAYER_TOKEN.test(windowText) && !SCOPE_TOKEN.test(windowText)) {
-      hits.push(windowText.replace(/\s+/g, " ").trim().slice(0, 140));
+  for (const m of text.matchAll(IN_NETWORK)) {
+    const { window: w, start } = sentenceWindow(text, m.index, m[0].length);
+    // Rule A: TRICARE claim missing its residential scope
+    if (TRICARE_TOKEN.test(w) && !SCOPE_TOKEN.test(w)) {
+      hits.push(w.replace(/\s+/g, " ").trim().slice(0, 140));
+      continue;
+    }
+    // Rule B: first-person in-network claim adjacent to a payer we are
+    // never in-network with. Skip when a TRICARE token sits between (that
+    // is Rule A territory).
+    const after = text.slice(m.index, m.index + m[0].length + 60);
+    const adj = after.match(NON_TRICARE_PAYER);
+    const before = text.slice(start, m.index);
+    if (
+      adj &&
+      !TRICARE_TOKEN.test(after.slice(0, adj.index)) &&
+      FIRST_PERSON_SUBJECT.test(before)
+    ) {
+      hits.push(after.replace(/\s+/g, " ").trim().slice(0, 140));
     }
   }
   return hits;
@@ -76,7 +143,12 @@ function unscopedNetworkClaims(content) {
 const RENDERED_ONLY_DIRS = [".next/server/app"];
 const RENDERED_EXTS = new Set([".html", ".rsc", ".body"]);
 
+// Strict on EVERY Vercel build — production AND PR/branch previews — so a
+// reviewer looking at a preview deploy gets the compliance signal before
+// merge (Block 5 PR-gated publishing depends on this). Local builds warn
+// unless CHECK_PLACEHOLDERS=strict.
 const strict =
+  !!process.env.VERCEL ||
   process.env.VERCEL_ENV === "production" ||
   process.env.VERCEL_GIT_COMMIT_REF === "main" ||
   process.env.CHECK_PLACEHOLDERS === "strict";
@@ -94,6 +166,14 @@ function* walk(dir, exts) {
     else if (exts.has(extname(p))) yield p;
   }
 }
+
+// Importable for scripts/check-confirm.test.mjs; the scan below only runs
+// when this file is executed directly (the build chain does that).
+const isMain =
+  process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href;
+if (!isMain) {
+  /* imported for tests — no scan */
+} else {
 
 const credentialHits = [];
 const networkHits = [];
@@ -137,5 +217,7 @@ if (strict) {
   process.exit(1);
 }
 console.warn(
-  "\ncheck-confirm: issues present (allowed on local/branch-preview builds). Production and main-branch builds will fail until resolved."
+  "\ncheck-confirm: issues present (allowed on non-Vercel local builds). Vercel builds — production, main, and PR previews — will fail until resolved."
 );
+
+}
