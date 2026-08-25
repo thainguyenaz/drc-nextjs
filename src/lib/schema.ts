@@ -91,6 +91,37 @@ export function getLocalBusinessSchema(location: {
   };
 }
 
+// Extracts FAQ pairs from post HTML for FAQPage emission on blog posts.
+// Q = an H2/H3 ending in "?", A = the section up to the next heading,
+// stripped to plain text. Answers under 40 words (thin) or over 300
+// (a section, not an answer) are skipped. Extraction only — the schema
+// must match visible page content; never author or reword text here.
+export function extractFAQsFromContent(
+  html: string
+): Array<{ question: string; answer: string }> {
+  const faqs: Array<{ question: string; answer: string }> = [];
+  const parts = html.split(/(<h[23]>[^<]*<\/h[23]>)/);
+  for (let i = 1; i < parts.length; i += 2) {
+    const qm = parts[i].match(/^<h[23]>([^<]*\?)\s*<\/h[23]>$/);
+    if (!qm) continue;
+    const question = qm[1].trim();
+    const answer = (parts[i + 1] || "")
+      .replace(/<a\b[^>]*>([\s\S]*?)<\/a>/g, "$1")
+      .replace(/<[^>]+>/g, " ")
+      .replace(/&amp;/g, "&")
+      .replace(/&#x27;|&apos;|&rsquo;/g, "'")
+      .replace(/&quot;/g, '"')
+      .replace(/&[a-z#0-9]+;/gi, " ")
+      .replace(/This article is for informational purposes only[\s\S]*?\(623\) 305-0496\.?/, "")
+      .replace(/\s+/g, " ")
+      .trim();
+    const wordCount = answer.split(/\s+/).filter(Boolean).length;
+    if (wordCount < 40 || wordCount > 300) continue;
+    faqs.push({ question, answer });
+  }
+  return faqs;
+}
+
 export function getFAQSchema(faqs: Array<{ question: string; answer: string }>) {
   return {
     "@context": "https://schema.org",

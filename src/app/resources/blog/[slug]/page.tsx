@@ -8,6 +8,7 @@ import Footer from "@/components/Footer";
 import Breadcrumb from "@/components/Breadcrumb";
 import SchemaScript from "@/components/SchemaScript";
 import { DRC_REVIEWERS, type Reviewer } from "@/lib/seo";
+import { extractFAQsFromContent, getFAQSchema } from "@/lib/schema";
 import { getPostBySlug, getAllSlugs, getPostsByCategory } from "@/lib/blog";
 import BlogPostBody from "./BlogPostBody";
 import PreferredSourceButton from "@/components/PreferredSourceButton";
@@ -127,9 +128,15 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     ],
   };
 
+  // FAQPage from visible question headings. Google retired FAQ rich results
+  // (May 2026); this is machine-readable Q&A for AI answer engines only.
+  // Emit only with 2+ pairs — a single-question FAQPage is not worth the node.
+  const faqs = extractFAQsFromContent(post.content);
+  const faqSchema = faqs.length >= 2 ? [getFAQSchema(faqs)] : [];
+
   return (
     <>
-      <SchemaScript schema={[articleSchema, medicalWebPageSchema, breadcrumbSchema]} />
+      <SchemaScript schema={[articleSchema, medicalWebPageSchema, breadcrumbSchema, ...faqSchema]} />
       <Navigation />
       <Breadcrumb
         items={[
