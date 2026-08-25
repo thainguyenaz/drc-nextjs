@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { siteData } from "@/lib/site-data";
 import { useScrollReveal } from "@/lib/useScrollReveal";
 
@@ -30,9 +31,14 @@ function TeamCard({ member, i, onSelect }: { member: TeamMember; i: number; onSe
         <div className="absolute inset-0 bg-forest/85 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out flex flex-col items-center justify-end pb-8 px-4">
           <h3 className="font-display text-base text-white font-semibold text-center">{member.name}</h3>
           <p className="text-white/70 text-xs mt-1 text-center">{member.title}</p>
-          <span className="mt-4 text-gold text-xs font-semibold border border-gold/50 rounded-lg px-4 py-1.5 hover:bg-gold hover:text-white transition-colors">
+          <Link
+            href={`/team/${member.slug}`}
+            aria-label={`View bio for ${member.name}`}
+            onClick={(e) => e.stopPropagation()}
+            className="mt-4 text-gold text-xs font-semibold border border-gold/50 rounded-lg px-4 py-1.5 hover:bg-gold hover:text-white transition-colors"
+          >
             View Bio
-          </span>
+          </Link>
         </div>
       </div>
       <h3 className="font-display text-base text-forest font-semibold text-center">{member.name}</h3>
