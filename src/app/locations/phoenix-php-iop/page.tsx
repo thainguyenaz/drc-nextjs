@@ -84,7 +84,7 @@ export default function PhoenixPhpIopPage() {
           {
             question: "Is there a Desert Recovery Centers PHP / IOP center in Phoenix?",
             answer:
-              "Yes. Desert Recovery Centers operates a dedicated outpatient treatment center at 4160 N. 108th Ave, Phoenix, AZ 85037. This location offers Partial Hospitalization (PHP), Intensive Outpatient (IOP), and Outpatient (OP). NeuroStar TMS therapy is also available on-site, provided by Desert TMS LLC, an affiliated licensed provider. It is Joint Commission accredited. Desert Recovery Centers accepts out-of-network coverage from most major commercial insurance plans, is in-network with TRICARE through TriWest, and offers cash-pay options. Call (623) 305-0496 for admissions.",
+              "Yes. Desert Recovery Centers operates a dedicated outpatient treatment center at 4160 N. 108th Ave, Phoenix, AZ 85037. This location offers Partial Hospitalization (PHP), Intensive Outpatient (IOP), and Outpatient (OP). NeuroStar TMS therapy is also available on-site, provided by Desert TMS LLC, an affiliated licensed provider. It is Joint Commission accredited. Desert Recovery Centers accepts out-of-network coverage from most major commercial insurance plans and offers cash-pay options; TRICARE is in-network for residential treatment, through TriWest. Contact admissions to verify TRICARE benefits for outpatient care. Call (623) 305-0496 for admissions.",
           },
           {
             question: "What outpatient mental health treatment is available in Phoenix, Arizona?",
@@ -94,7 +94,7 @@ export default function PhoenixPhpIopPage() {
           {
             question: "Does Desert Recovery Centers Phoenix accept insurance?",
             answer:
-              "Desert Recovery Centers accepts out-of-network coverage from most major commercial insurance plans (Aetna, Blue Cross Blue Shield, Cigna, and UnitedHealthcare), is in-network with TRICARE through TriWest, and offers cash-pay options. Benefits are verified at no cost before treatment begins. Call (623) 305-0496 for a free insurance check.",
+              "Desert Recovery Centers accepts out-of-network coverage from most major commercial insurance plans (Aetna, Blue Cross Blue Shield, Cigna, and UnitedHealthcare) and offers cash-pay options; TRICARE is in-network for residential treatment, through TriWest. Benefits are verified at no cost before treatment begins. Call (623) 305-0496 for a free insurance check.",
           },
         ]}
       />
