@@ -10,7 +10,7 @@ import Footer from "@/components/Footer";
 import { buildMetadata, InlineFAQSchema, SpeakableSchema, AllLocalBusinessSchemas } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Rehab Centers Near Me in Arizona | DRC",
+  title: "Rehab Centers Near Me in Arizona | Desert Recovery Centers",
   description:
     "Find rehab near you in Arizona. Two residential facilities (Glendale, Scottsdale) plus Phoenix outpatient. Call (623) 305-0496.",
   path: "/rehab-near-me",

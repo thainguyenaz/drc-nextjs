@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 import { buildMetadata, BreadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Does Cigna Cover Drug & Alcohol Rehab in Arizona?, Desert Recovery Centers",
+  title: "Does Cigna Cover Drug & Alcohol Rehab in Arizona? | DRC",
   description:
     "Find out if Cigna insurance covers addiction treatment and rehab in Arizona. Learn about in-network benefits, levels of care, and how to verify your coverage.",
   path: "/insurance/cigna",

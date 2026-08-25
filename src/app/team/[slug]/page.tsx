@@ -35,8 +35,8 @@ export function generateMetadata({
   if (!member) return {};
   return buildMetadata({
     title: member.jobTitle
-      ? `${member.name} — ${member.jobTitle} | Desert Recovery Centers`
-      : `${member.name} | Desert Recovery Centers`,
+      ? `${member.name}, ${member.jobTitle} | DRC`
+      : `${member.name} | DRC`,
     description: member.jobTitle
       ? `Meet ${member.name}, ${member.jobTitle.toLowerCase()} at Desert Recovery Centers. Part of Arizona's leading luxury addiction and mental health treatment team.`
       : `Meet ${member.name} at Desert Recovery Centers. Part of Arizona's leading luxury addiction and mental health treatment team.`,

@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 import { buildMetadata, BreadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "What to Bring to Rehab: A Complete Packing Guide, Desert Recovery Centers",
+  title: "What to Bring to Rehab: A Complete Packing Guide | DRC",
   description:
     "Complete packing checklist for rehab, what to bring, what to leave at home, and practical tips for your first day at a treatment center in Arizona.",
   path: "/resources/what-to-bring",

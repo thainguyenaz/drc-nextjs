@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 import { buildMetadata, BreadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Does Blue Cross Blue Shield Cover Rehab in Arizona?, Desert Recovery Centers",
+  title: "Does Blue Cross Blue Shield Cover Rehab in Arizona? | DRC",
   description:
     "Learn if BCBS covers drug and alcohol rehab in Arizona. Understand PPO vs HMO plans, BCBS of Arizona benefits, and how to verify your coverage for treatment.",
   path: "/insurance/blue-cross",

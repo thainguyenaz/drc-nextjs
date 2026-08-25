@@ -8,7 +8,7 @@ const CANONICAL = "https://desertrecoverycenters.com/resources/luxury-vs-traditi
 const SITE_NAME = "Desert Recovery Centers";
 const OG_IMAGE = "https://desertrecoverycenters.com/logo.png";
 const PAGE_TITLE =
-  "Luxury Rehab vs Traditional Rehab: Key Differences | Desert Recovery Centers";
+  "Luxury Rehab vs Traditional Rehab: Key Differences | DRC";
 const PAGE_DESCRIPTION =
   "Discover the clinical and experiential differences between luxury rehab and traditional treatment centers in Arizona. Learn why environment matters in recovery.";
 

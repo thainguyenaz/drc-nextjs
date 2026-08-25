@@ -25,7 +25,7 @@ const categoryVideos: Record<string, { youtubeId: string; title: string; caption
 };
 
 export const metadata: Metadata = buildMetadata({
-  title: "Rehab FAQ, Desert Recovery Centers",
+  title: "Rehab FAQ | DRC",
   description:
     "Answers to 30+ questions about rehab in Arizona, admissions, insurance, treatment, facilities, family involvement, and aftercare.",
   path: "/resources/faq",

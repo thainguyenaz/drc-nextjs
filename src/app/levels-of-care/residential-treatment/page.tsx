@@ -19,7 +19,7 @@ const Footer = dynamic(() => import("@/components/Footer"));
 
 export const metadata: Metadata = {
   title:
-    "Residential Addiction Treatment in Arizona | Desert Recovery Centers",
+    "Residential Addiction Treatment in Arizona | DRC",
   description:
     "Luxury residential addiction and mental health treatment in Arizona. 10-bed max facilities, individualized care, evidence-based therapies at Desert Recovery Centers.",
   alternates: {

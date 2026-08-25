@@ -16,7 +16,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title:
-    "Partial Hospitalization Program (PHP) in Arizona | Desert Recovery Centers",
+    "Partial Hospitalization Program (PHP) in Arizona | DRC",
   description:
     "Structured partial hospitalization program (PHP) for addiction and mental health in Arizona. Full-day clinical programming with the flexibility to return home each evening.",
   alternates: {

@@ -64,7 +64,7 @@ const faqSchema = {
 
 export const metadata: Metadata = {
   title:
-    "Get Help for Addiction & Mental Health Today | Desert Recovery Centers",
+    "Get Help for Addiction & Mental Health Today | DRC",
   description:
     "Ready to start your recovery? Contact Desert Recovery Centers today. Luxury addiction and mental health treatment in Arizona. Call (623) 305-0496.",
   alternates: {

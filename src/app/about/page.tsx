@@ -12,7 +12,7 @@ import VideoTranscript from "@/components/VideoTranscript";
 const GoogleReviews = dynamic(() => import("@/components/GoogleReviews"), { ssr: false });
 
 export const metadata: Metadata = buildMetadata({
-  title: "About Us, Desert Recovery Centers",
+  title: "About Us | Desert Recovery Centers",
   description:
     "Learn about Desert Recovery Centers, Joint Commission-accredited luxury behavioral health treatment in Arizona. Dual diagnosis specialists with a 10-bed maximum for personalized care.",
   path: "/about",

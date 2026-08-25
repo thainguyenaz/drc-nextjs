@@ -11,7 +11,7 @@ import LeaveAReviewCTA from "@/components/LeaveAReviewCTA";
 const PhotoGallery = dynamic(() => import("@/components/PhotoGallery"), { ssr: false, loading: () => null });
 
 export const metadata: Metadata = buildMetadata({
-  title: "Phoenix PHP Sober Living, Desert Recovery Centers",
+  title: "Phoenix PHP Sober Living | Desert Recovery Centers",
   description:
     "Structured sober living housing for clients enrolled in DRC PHP programs. 1623 W Moody Trail, Phoenix, AZ 85041. Call (623) 305-0496.",
   path: "/locations/phoenix-living",

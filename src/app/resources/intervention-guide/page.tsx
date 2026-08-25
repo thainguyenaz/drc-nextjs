@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 import { buildMetadata, BreadcrumbSchema, MedicalWebPageSchema } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "How to Stage an Intervention, DRC",
+  title: "How to Stage an Intervention | DRC",
   description:
     "Step-by-step family guide to staging an intervention in Arizona. Learn ARISE, Johnson Model, and CRAFT approaches. Free consultation at Desert Recovery Centers.",
   path: "/resources/intervention-guide",

@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 import { buildMetadata, BreadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Does United Healthcare Cover Rehab in Arizona?, Desert Recovery Centers",
+  title: "Does United Healthcare Cover Rehab in Arizona? | DRC",
   description:
     "Find out if UHC covers drug and alcohol rehab in Arizona. Learn about Optum behavioral health, medical necessity criteria, and how to verify your UHC benefits.",
   path: "/insurance/united",

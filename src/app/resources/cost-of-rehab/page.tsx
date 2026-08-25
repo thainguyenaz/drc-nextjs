@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 import { buildMetadata, BreadcrumbSchema, MedicalWebPageSchema } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "How Much Does Rehab Cost in Arizona?, Desert Recovery Centers",
+  title: "How Much Does Rehab Cost in Arizona? | DRC",
   description:
     "Honest breakdown of rehab costs in Arizona, from outpatient to luxury residential. Learn about insurance coverage, financing options, and what affects pricing.",
   path: "/resources/cost-of-rehab",

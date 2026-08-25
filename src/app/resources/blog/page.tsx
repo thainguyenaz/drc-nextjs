@@ -9,7 +9,7 @@ import { blogPosts } from "@/lib/blog";
 import BlogCategoryFilter from "./BlogCategoryFilter";
 
 export const metadata: Metadata = {
-  title: "Addiction and Mental Health Recovery Blog | Desert Recovery Centers",
+  title: "Addiction and Mental Health Recovery Blog | DRC",
   description:
     "Expert articles on addiction recovery, mental health treatment, holistic therapies, and family support. Written and reviewed by licensed clinicians at Desert Recovery Centers Arizona.",
   alternates: { canonical: "/resources/blog" },

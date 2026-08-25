@@ -7,7 +7,7 @@ import ResourcesContent from "./ResourcesContent";
 import YouTubeEmbed from "@/components/YouTubeEmbed";
 
 export const metadata: Metadata = {
-  title: "Recovery Resources, Desert Recovery Centers",
+  title: "Recovery Resources | DRC",
   description:
     "Free resources for addiction and mental health recovery. Detox guides, mental health assessments, blog articles, podcast episodes, and treatment comparisons.",
   alternates: { canonical: "https://desertrecoverycenters.com/resources" },

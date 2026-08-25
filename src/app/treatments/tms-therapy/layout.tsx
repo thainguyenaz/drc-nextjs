@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "NeuroStar TMS Therapy in Phoenix, AZ | Desert Recovery Centers",
+  title: "NeuroStar TMS Therapy in Phoenix, AZ | DRC",
   description:
     "NeuroStar TMS in Phoenix: FDA-cleared for depression, anxious depression, and OCD (add-on) in adults; add-on for adolescents 15-21. Call (623) 305-0496.",
   alternates: { canonical: "/treatments/tms-therapy" },

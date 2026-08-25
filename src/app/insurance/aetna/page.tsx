@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 import { buildMetadata, BreadcrumbSchema } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Does Aetna Cover Drug & Alcohol Rehab in Arizona?, Desert Recovery Centers",
+  title: "Does Aetna Cover Drug & Alcohol Rehab in Arizona? | DRC",
   description:
     "Learn if Aetna insurance covers addiction treatment in Arizona. Understand behavioral health benefits, prior authorization, and how to verify your Aetna coverage.",
   path: "/insurance/aetna",

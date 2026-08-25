@@ -17,7 +17,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "Contact Us: Phone, Locations & Directions | Desert Recovery Centers",
+  title: "Contact Us: Phone, Locations & Directions | DRC",
   description:
     "Contact Desert Recovery Centers. Call (623) 305-0496 or visit our Glendale, Scottsdale, and Phoenix, Arizona locations. Admissions answer 24/7.",
   alternates: { canonical: "https://desertrecoverycenters.com/contact" },
