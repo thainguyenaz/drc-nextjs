@@ -1709,7 +1709,7 @@ ${DISCLAIMER}`
     category: "clinical",
     author: "Desert Recovery Centers Clinical Team",
     datePublished: "2025-12-28",
-    dateModified: "2025-12-28",
+    dateModified: "2026-08-25",
     readTime: 8,
     featuredImage: "/images/locations/phoenix/phoenix-lobby-2.jpg",
     featuredImageAlt: "Desert Recovery Centers Phoenix clinical treatment facility for dual diagnosis",
@@ -1717,7 +1717,7 @@ ${DISCLAIMER}`
     metaTitle: "What Is Dual Diagnosis Treatment? | Desert Recovery Centers Arizona",
     metaDescription: "Up to 50% of people with addiction also have a mental health disorder. Treating only one condition without the other leads to relapse. Learn how integrated dual diagnosis treatment works.",
     content: `<h2>What Is Dual Diagnosis?</h2>
-<p>Dual diagnosis, also known as co occurring disorders, refers to the presence of both a substance use disorder and a mental health disorder in the same individual at the same time. This is not a rare clinical scenario. SAMHSA's 2023 National Survey on Drug Use and Health (NSDUH) reports that approximately 20.4 million American adults have a co-occurring substance use disorder and mental illness (<a href="https://www.samhsa.gov/data/data-we-collect/nsduh-national-survey-drug-use-and-health/national-releases/2023" target="_blank" rel="noopener">SAMHSA — 2023 NSDUH National Releases</a>). Among people seeking treatment for addiction, rates of co occurring mental health disorders are even higher, with some studies estimating that up to 50 percent or more of people in addiction treatment also meet criteria for at least one psychiatric diagnosis (<a href="https://nida.nih.gov/research-topics/co-occurring-disorders-health-conditions" target="_blank" rel="noopener">NIDA — Co-Occurring Disorders</a>).</p>
+<p>Dual diagnosis, also known as co occurring disorders, refers to the presence of both a substance use disorder and a mental health disorder in the same individual at the same time. This is not a rare clinical scenario. SAMHSA's 2024 National Survey on Drug Use and Health (NSDUH) reports that approximately 21.2 million American adults have a co-occurring substance use disorder and mental illness (<a href="https://www.samhsa.gov/substance-use/treatment/co-occurring-disorders" target="_blank" rel="noopener">SAMHSA: Co-Occurring Disorders</a>). Among people seeking treatment for addiction, rates of co occurring mental health disorders are even higher, with some studies estimating that up to 50 percent or more of people in addiction treatment also meet criteria for at least one psychiatric diagnosis (<a href="https://nida.nih.gov/research-topics/co-occurring-disorders-health-conditions" target="_blank" rel="noopener">NIDA — Co-Occurring Disorders</a>).</p>
 <p>The most common co occurring conditions include major depressive disorder, generalized anxiety disorder, post traumatic stress disorder (PTSD), bipolar disorder, attention deficit hyperactivity disorder (ADHD), and personality disorders (<a href="https://nida.nih.gov/research-topics/trends-statistics/infographics/comorbidity-substance-use-other-mental-disorders" target="_blank" rel="noopener">NIDA — Comorbidity Infographic</a>). These conditions do not simply coexist with addiction. They interact with it, each one making the other more severe, more treatment resistant, and more likely to result in relapse.</p>
 
 <h2>How Mental Health and Addiction Make Each Other Worse</h2>
