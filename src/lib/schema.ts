@@ -134,11 +134,7 @@ export function getPersonSchema(person: {
       ? { hasCredential: person.credentials }
       : {}),
     ...(person.linkedIn ? { sameAs: [person.linkedIn] } : {}),
-    worksFor: {
-      "@type": "MedicalOrganization",
-      name: SITE_NAME,
-      url: SITE_URL,
-    },
+    worksFor: { "@id": `${SITE_URL}/#organization` },
   };
 }
 

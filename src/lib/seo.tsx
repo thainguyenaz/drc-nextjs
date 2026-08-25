@@ -301,11 +301,7 @@ export function PersonSchema({
     name,
     jobTitle,
     ...(image ? { image: `${SITE_URL}${image}` } : {}),
-    worksFor: {
-      "@type": "Organization",
-      name: SITE_NAME,
-      url: SITE_URL,
-    },
+    worksFor: { "@id": `${SITE_URL}/#organization` },
     ...(description ? { description } : {}),
   });
 }
