@@ -2,20 +2,16 @@
 
 import Script from "next/script";
 import { usePathname } from "next/navigation";
+import { isUntrackedPath } from "@/lib/untrackedPaths";
 
-// Paths that must load with ZERO third-party tracking. /assessment-unavailable
-// is reached only by clicking the depression-assessment CTA or scanning its
-// printed QR code; firing GA4 / Ads remarketing / CTM / HubSpot there records
-// health-condition-suggestive intent against an identifiable visitor (counsel
-// directive 2026-08-26). The old edge redirect fired zero tags on that hop;
-// this preserves that property. If a visitor navigates from the interstitial
-// to any other page, this component re-renders with the new pathname and the
-// tags load normally.
-const UNTRACKED_PATHS = ["/assessment-unavailable"];
-
+// Skips GA4 / Ads / CTM / HubSpot entirely on untracked paths — see
+// src/lib/untrackedPaths.ts for the list and the counsel rationale
+// (including the permanent CTM exclusion). If a visitor navigates from an
+// untracked page to any other page, this component re-renders with the new
+// pathname and the tags load normally.
 export default function TrackingScripts() {
-  const pathname = usePathname() ?? "";
-  if (UNTRACKED_PATHS.some((p) => pathname === p || pathname.startsWith(`${p}/`))) {
+  const pathname = usePathname();
+  if (isUntrackedPath(pathname)) {
     return null;
   }
 

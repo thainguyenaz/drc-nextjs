@@ -1,14 +1,27 @@
 "use client";
 
 import { useEffect } from "react";
+import { usePathname } from "next/navigation";
+import { isUntrackedPath } from "@/lib/untrackedPaths";
+
+// Module-level, not effect-local: the effect re-runs on every pathname
+// change (untracked-path check below), and the widget must only ever be
+// injected once per full page load.
+let injected = false;
 
 export default function LiveChatLoader() {
+  const pathname = usePathname();
+
   useEffect(() => {
-    let loaded = false;
+    // No LiveChat on untracked paths (see src/lib/untrackedPaths.ts) — the
+    // widget's tracking.js reports pageviews to livechatinc.com. If the
+    // visitor navigates on to a tracked page, this effect re-runs and the
+    // widget loads normally.
+    if (isUntrackedPath(pathname) || injected) return;
 
     const load = () => {
-      if (loaded) return;
-      loaded = true;
+      if (injected) return;
+      injected = true;
 
       const w = window as unknown as {
         __lc?: Record<string, unknown>;
@@ -45,7 +58,7 @@ export default function LiveChatLoader() {
       cleanup();
       window.clearTimeout(fallback);
     };
-  }, []);
+  }, [pathname]);
 
   return null;
 }
