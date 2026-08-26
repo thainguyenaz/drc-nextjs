@@ -1093,7 +1093,7 @@ export default function TMSTherapyPage() {
               Take the Depression Assessment
             </h2>
             <p className="text-gray-500 font-body leading-relaxed mb-10">
-              The NeuroStar PHQ-10 is a short questionnaire that helps our team understand your symptoms before your first visit. It takes about five minutes.
+              The NeuroStar PHQ-10 is a short questionnaire. It takes about five minutes.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-10">
               <a
@@ -1107,7 +1107,7 @@ export default function TMSTherapyPage() {
               <div className="flex flex-col items-center">
                 <Image
                   src="/images/tms/phq10-qr.png"
-                  alt="QR code to open the NeuroStar PHQ-10 depression assessment"
+                  alt="QR code to open the depression assessment page"
                   width={180}
                   height={180}
                   unoptimized
@@ -1116,9 +1116,6 @@ export default function TMSTherapyPage() {
                 <p className="text-gray-500 text-sm mt-2">Or scan to complete on your phone</p>
               </div>
             </div>
-            <p className="text-gray-400 text-sm mt-8">
-              Hosted by Neuronetics. Your responses go to the Desert TMS care team.
-            </p>
           </motion.div>
         </div>
       </section>

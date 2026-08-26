@@ -440,9 +440,13 @@ const nextConfig = {
       { source: "/webinar/what-to-say-to-someone-with-a-mental-health-disorder", destination: "/resources/blog/how-to-talk-to-someone-about-going-to-rehab", permanent: true },
       { source: "/webinar/what-to-say-to-someone-with-a-mental-health-disorder/", destination: "/resources/blog/how-to-talk-to-someone-about-going-to-rehab", permanent: true },
 
-      // --- TMS assessment (NeuroStar PHQ-10) ---
-      { source: "/tms-assessment", destination: "https://phq9web.azurewebsites.net/PHQ9/Survey/90664", permanent: false },
-      { source: "/tms-assessment/", destination: "https://phq9web.azurewebsites.net/PHQ9/Survey/90664", permanent: false },
+      // --- TMS assessment ---
+      // Counsel directive 2026-08-26 (option A): route to the DRC-hosted
+      // interstitial, NOT the Neuronetics PHQ-10 platform, until the
+      // DRC–Desert TMS BAA is executed. Keep the redirect itself: printed
+      // collateral QR codes encode /tms-assessment on the DRC domain.
+      { source: "/tms-assessment", destination: "/assessment-unavailable", permanent: false },
+      { source: "/tms-assessment/", destination: "/assessment-unavailable", permanent: false },
     ];
   },
 };
