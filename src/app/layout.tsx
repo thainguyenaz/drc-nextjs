@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import SchemaScript from "@/components/SchemaScript";
 import { getMedicalOrganizationSchema } from "@/lib/schema";
 import LiveChatLoader from "@/components/LiveChatLoader";
+import TrackingScripts from "@/components/TrackingScripts";
 import WebVitals from "@/components/WebVitals";
 
 const inter = Inter({
@@ -64,46 +64,12 @@ export default function RootLayout({
           <style>{`.reveal-fade-up,.reveal-fade-left,.reveal-fade-right,.reveal-fade{opacity:1!important;transform:none!important;animation:none!important;}`}</style>
         </noscript>
         <SchemaScript schema={[getMedicalOrganizationSchema()]} />
-        {/* TRACKING SCRIPT LOADING ORDER — conversion-critical, not
-            perf-cosmetic. Constraints, learned the hard way:
-            - gtag (GA4 + AW) must load before form conversion events fire.
-              lazyOnload dropped conversions when submitters fired the
-              thank-you page_view before gtag existed; reverted in 0bf825a
-              (Aug 1 2026).
-            - CTM t.js re-configures AW-16468277860 at runtime for call
-              conversion attribution, so the Ads tag must exist before CTM
-              initializes.
-            - CTM must not be beforeInteractive: tried in 5eb2d54, reverted
-              within hours in 9f29f05 (Jul 29 2026).
-            Verify any strategy change against the form-submit baseline in
-            tracking-inventory-2026-08-11 before shipping. */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-0MSPF0DPVK"
-          strategy="afterInteractive"
-        />
-        <Script id="ga4-init" strategy="afterInteractive">
-          {`window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('set', 'linker', {"domains":["desertrecoverycenters.com"]});
-          gtag('set', 'developer_id.dZTNiMT', true);
-          gtag('config', 'G-0MSPF0DPVK');
-          gtag('config', 'AW-16468277860');`}
-        </Script>
-        <Script
-          src="//517993.tctm.co/t.js"
-          strategy="afterInteractive"
-          async
-        />
-        <Script
-          id="hs-script-loader"
-          src="//js-na2.hs-scripts.com/48050688.js"
-          strategy="lazyOnload"
-          async
-          defer
-        />
+        {/* GA4/Ads/CTM/HubSpot moved to TrackingScripts (client component in
+            <body>), which skips them entirely on untracked paths — see the
+            load-order constraints documented there before touching. */}
       </head>
       <body className="font-body antialiased bg-white">
+        <TrackingScripts />
         <main>{children}</main>
         <LiveChatLoader />
         <WebVitals />
