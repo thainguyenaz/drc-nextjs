@@ -26,6 +26,111 @@ const DISCLAIMER = `<p><em>This article is for informational purposes only and d
 
 export const blogPosts: BlogPost[] = [
   {
+    reviewer: "nguyen",
+    lastReviewed: "2026-08-27",
+    slug: "how-long-does-detox-take-a-substance-by-substance-guide",
+    title: "How Long Does Detox Take? A Substance-by-Substance Guide",
+    excerpt: "Detox length depends on the substance, history of use, and individual health. This guide gives you honest, substance-by-substance withdrawal timelines so you know what to expect and when to get help.",
+    category: "clinical",
+    author: "Desert Recovery Centers Clinical Team",
+    datePublished: "2026-08-27",
+    dateModified: "2026-08-27",
+    readTime: 6,
+    featuredImage: "/images/glendale/Glendale-Front.jpg",
+    featuredImageAlt: "How Long Does Detox Take? A Substance-by-Substance Guide - Desert Recovery Centers",
+    tags: ["how long is detox","detox duration","withdrawal timeline"],
+    metaTitle: "How Long Does Detox Take? A Substance-by-Substance Guide",
+    metaDescription: "Wondering how long detox takes? Get honest withdrawal timelines for alcohol, opioids, benzos, stimulants, and cannabis, plus when to seek medical help.",
+    content: `<p>You or someone you love is about to go through detox, or maybe you're already in it, and you need to know: <strong>how long is this going to last?</strong> You've probably seen wildly different answers online. Some say a few days. Some say months. And when you're scared, that uncertainty feels unbearable.</p>
+
+<p>Here is the honest answer: detox length depends on which substance is involved, how long and how heavily it was used, and whether other substances or health conditions are in the picture. There is no single number that fits everyone. But there are well-established clinical timelines for each substance, and knowing them can help you prepare, not panic.</p>
+
+<h2>Why "Detox" Means Different Things for Different Substances</h2>
+
+<p>Withdrawal happens because the brain has physically adapted to the presence of a substance. When that substance is removed, the nervous system has to rebalance, and that process takes time. Each substance class disrupts the brain in a different way, so each one produces a different withdrawal pattern with its own onset, peak, and resolution.</p>
+
+<p>What complicates things further is that many people are not dealing with one substance. Polysubstance use, combined with any underlying mental health conditions, can extend and intensify every phase of the process. A timeline that sounds simple on paper can look quite different in a real clinical setting.</p>
+
+<h2>Alcohol: The Most Medically Serious Withdrawal</h2>
+
+<p>Alcohol withdrawal can be life-threatening, which is why it requires medical supervision. Here is what the timeline generally looks like:</p>
+
+<ul>
+  <li><strong>6–24 hours after last drink:</strong> Symptoms begin. Anxiety, shaking, sweating, elevated heart rate.</li>
+  <li><strong>24–72 hours:</strong> This is the danger window. Seizure risk is highest here. Hallucinations can occur.</li>
+  <li><strong>72 hours and beyond:</strong> For most people, acute symptoms begin to ease. A small percentage experience delirium tremens, a severe and potentially fatal complication.</li>
+  <li><strong>4–8 weeks:</strong> Post-acute withdrawal syndrome (PAWS) can keep producing mood instability, sleep problems, and cravings long after the acute phase ends.</li>
+</ul>
+
+<p>Do not attempt alcohol detox alone. The seizure and cardiac risk in that first 72-hour window is real and requires clinical monitoring.</p>
+
+<h2>Opioids: Short-Acting vs. Long-Acting Makes a Big Difference</h2>
+
+<p>Opioid withdrawal is rarely fatal on its own, but it is intensely uncomfortable, and the timeline shifts depending on whether the opioid was short-acting (heroin, oxycodone, hydrocodone) or long-acting (methadone, extended-release formulations).</p>
+
+<ul>
+  <li><strong>Short-acting opioids:</strong> Symptoms start 8–24 hours after last use, peak around 36–72 hours, and the acute phase typically resolves within 5–7 days.</li>
+  <li><strong>Long-acting opioids:</strong> Onset can be delayed to 36–48 hours, symptoms peak at 72–96 hours, and the acute phase can stretch to 2–3 weeks.</li>
+  <li><strong>Protracted withdrawal:</strong> Cravings, sleep disruption, and low mood can persist for months after the acute phase ends.</li>
+</ul>
+
+<p>Medications like buprenorphine and methadone can significantly reduce the severity of opioid withdrawal and are part of evidence-based treatment, not a shortcut or a substitute for real recovery.</p>
+
+<h2>Benzodiazepines: The Slowest and Most Unpredictable Timeline</h2>
+
+<p>Benzodiazepine withdrawal is, alongside alcohol, one of the most medically serious withdrawal syndromes. The timeline varies sharply depending on whether the drug was short-acting (lorazepam, alprazolam) or long-acting (diazepam, clonazepam).</p>
+
+<ul>
+  <li><strong>Short-acting benzodiazepines:</strong> Symptoms can appear within 24 hours of last use.</li>
+  <li><strong>Long-acting benzodiazepines:</strong> Onset may not occur for 5–7 days, which catches many people off guard.</li>
+  <li><strong>Seizure risk:</strong> Present throughout the acute phase, not just at the start.</li>
+  <li><strong>Full resolution:</strong> Can take weeks to months, particularly with long-term, high-dose use.</li>
+</ul>
+
+<p>This is not a withdrawal to manage at home. Medically supervised tapering under clinical oversight is the standard of care.</p>
+
+<h2>Stimulants and Cannabis: Less Dangerous, Still Real</h2>
+
+<p>Stimulant withdrawal (cocaine, methamphetamine, prescription amphetamines) does not produce the seizure risk of alcohol or benzodiazepines, but it carries serious psychiatric risk.</p>
+
+<ul>
+  <li><strong>Days 1–3 (the crash):</strong> Extreme fatigue, sleep, increased appetite.</li>
+  <li><strong>Weeks 1–4:</strong> A prolonged dysphoric period marked by depression, low energy, anhedonia, and strong cravings. Suicidal thinking can emerge during this phase and requires clinical monitoring.</li>
+</ul>
+
+<p>Cannabis withdrawal is now formally recognized as a clinical condition. Symptoms, including irritability, insomnia, anxiety, and appetite changes, typically begin 24–72 hours after stopping and resolve within 1–2 weeks for most people. It is not trivial, but it is manageable.</p>
+
+<p><strong>You do not have to figure this out alone.</strong> Desert Recovery Centers is here 24 hours a day, 7 days a week. Call <a href="tel:+16026357207">(602) 635-7207</a> to talk with our admissions team, or <a href="/insurance">verify your insurance</a> online in a few minutes.</p>
+
+<h2>The Part Nobody Warns You About: PAWS</h2>
+
+<p>Post-acute withdrawal syndrome is one of the most misunderstood parts of early recovery. After the acute phase of detox ends, many people expect to feel normal again quickly. When they don't, they assume something is permanently wrong, or that treatment failed.</p>
+
+<p>It didn't fail. The brain takes time to rebalance its chemistry after sustained substance use. PAWS produces mood swings, sleep disruption, difficulty concentrating, and cravings that can come and go for weeks or months. This is not relapse. It is neurology. But it does mean that finishing detox is not the same as finishing treatment.</p>
+
+<blockquote class="clinical-callout"><p><strong>Clinical perspective from Dr. Nguyen:</strong> One thing I emphasize with families is that detox is the beginning of recovery, not the end, and getting through the acute withdrawal period does not mean the person is immediately back to baseline. In practice, the biggest factors that can extend or complicate the recovery timeline are polysubstance use, co-occurring mental health conditions, severity and duration of use, and the person’s history of previous withdrawals. I also prepare families for the possibility of lingering sleep, mood, cravings, and emotional regulation difficulties after detox so they understand that these symptoms do not necessarily mean treatment has failed, they may indicate that continued clinical support is still needed.</p></blockquote>
+
+<h2>When to Seek Professional Help</h2>
+
+<p>Some situations call for medical supervision, not a wait-and-see approach. Seek professional support if any of the following apply:</p>
+
+<ul>
+  <li>The substance involved is alcohol, benzodiazepines, or a combination of substances.</li>
+  <li>There is a history of seizures during previous withdrawal attempts.</li>
+  <li>The person has a co-occurring mental health condition such as depression, anxiety, or a history of psychosis.</li>
+  <li>Withdrawal symptoms are intensifying rather than improving after the first day or two.</li>
+  <li>There are signs of confusion, hallucinations, or cardiac irregularity.</li>
+  <li>Suicidal thoughts are present during the stimulant crash or any other withdrawal phase.</li>
+  <li>Previous attempts to detox at home have not held.</li>
+</ul>
+
+<p>The discomfort of withdrawal is not a moral test. It is a medical event, and treating it as one is not weakness. It is the most practical thing you can do to give recovery a real chance.</p>
+
+<p>At Desert Recovery Centers, medically supervised detox is designed around clinical presentation, not a fixed schedule. The goal is to get the acute phase managed safely and then build the structure that makes what comes after detox actually work. If you are trying to figure out what the next step looks like for you or someone you care about, a real conversation is more useful than more searching at 2am.</p>
+
+<p><strong>You do not have to figure this out alone.</strong> Desert Recovery Centers is here 24 hours a day, 7 days a week. Call <a href="tel:+16026357207">(602) 635-7207</a> to talk with our admissions team, or <a href="/insurance">verify your insurance</a> online in a few minutes.</p>`,
+  },
+  {
     slug: "outpatient-phpiop-after-residential-whats-the-difference",
     title: "Outpatient (PHP/IOP) After Residential: What's the Difference?",
     excerpt: "PHP and IOP are not interchangeable. Learn the real clinical differences between these two step-down levels, how placement decisions are made, and why getting this wrong raises relapse risk.",
