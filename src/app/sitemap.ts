@@ -2,6 +2,7 @@ import { MetadataRoute } from "next";
 import { teamMembers } from "@/data/team-data";
 import { blogPosts } from "@/lib/blog";
 import routeLastmodJson from "@/data/route-lastmod.json";
+import { locationServices } from "@/data/location-services";
 
 const SITE_URL = "https://desertrecoverycenters.com";
 
@@ -124,6 +125,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/terms-of-service", priority: 0.3, changeFrequency: "yearly" },
     { path: "/hipaa-notice", priority: 0.3, changeFrequency: "yearly" },
   ];
+
+  // Location Service pages (/locations/{city}/{service}) — generated from
+  // the data module so each monthly batch appears automatically once its
+  // entry exists.
+  for (const service of locationServices) {
+    routes.push({
+      path: service.path,
+      priority: 0.7,
+      changeFrequency: "weekly",
+      lastModified: new Date(service.dateModified),
+    });
+  }
 
   // Team member pages — generated from teamMembers so future additions auto-appear
   for (const member of teamMembers) {

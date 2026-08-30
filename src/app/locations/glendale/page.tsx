@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Navigation from "@/components/Navigation";
 import PageHero from "@/components/PageHero";
+import CityServicesHub from "@/components/seo-template/CityServicesHub";
 import LocationCollision from "@/components/LocationCollision";
 import VideoLightbox from "@/components/VideoLightbox";
 import CTASection from "@/components/CTASection";
@@ -86,6 +87,7 @@ export default function GlendaleLocationPage() {
         description="Our flagship 7,500 sq ft residential treatment center, where evidence-based clinical care meets resort-level comfort."
         bgImage="/images/glendale/Glendale-Front.jpg"
       />
+      <CityServicesHub citySlug="glendale" />
 
       {/* Overview */}
       <section className="py-16 md:py-24 bg-white">

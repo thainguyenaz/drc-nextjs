@@ -1,0 +1,158 @@
+import Image from "next/image";
+import RichText from "./RichText";
+import type { HeroCopy } from "./types";
+
+/**
+ * Copy-driven twin of the home page hero (src/components/Hero.tsx): same
+ * full-bleed forest treatment, left-aligned stack, gold eyebrow rule, trust
+ * badges, dual CTAs, tagline and scroll cue — with the eyebrow, H1, subtext
+ * and background image supplied per page.
+ *
+ * Kept as a separate component rather than parameterizing Hero.tsx: Hero is
+ * the LCP element on the home page and carries its own performance
+ * decisions (disabled desktop video, quality={50}), which should not shift
+ * because an SEO page needed a new prop.
+ */
+
+const DEFAULT_HERO_IMAGE =
+  "/images/scottsdale/DRC-DRONE-SCOTTSDALE-08-01-2024-August-01-202400006-2.jpg";
+
+const DEFAULT_TAGLINE =
+  "Most clients begin treatment within 48 hours of their first call.";
+
+export default function SeoHero({ hero }: { hero: HeroCopy }) {
+  return (
+    <section className="relative h-screen min-h-[700px] flex items-end overflow-hidden">
+      {/* Background */}
+      <div className="absolute inset-0 bg-forest">
+        <div className="absolute inset-0">
+          <Image
+            src={hero.image ?? DEFAULT_HERO_IMAGE}
+            alt={hero.imageAlt ?? ""}
+            fill
+            priority
+            sizes="100vw"
+            quality={50}
+            className="object-cover opacity-60"
+          />
+        </div>
+      </div>
+
+      {/* Overlay */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(180deg, rgba(28,43,30,0.25) 0%, rgba(28,43,30,0.50) 35%, rgba(28,43,30,0.85) 75%, rgba(28,43,30,0.95) 100%)",
+        }}
+      />
+
+      {/* Content, left-aligned */}
+      <div className="relative z-10 max-w-container mx-auto px-6 pb-24 w-full">
+        <div className="max-w-3xl">
+          {/* Eyebrow */}
+          <div className="flex items-center gap-3 mb-6">
+            <span
+              className="text-gold font-body uppercase font-semibold"
+              style={{ fontSize: 13, letterSpacing: 6 }}
+            >
+              {hero.eyebrow}
+            </span>
+            <span className="flex-1 h-px bg-gold/30 max-w-[80px]" />
+          </div>
+
+          {/* Headline */}
+          <h1
+            className="text-white font-display font-bold leading-[1.1] mb-6"
+            style={{ fontSize: "clamp(32px, 5vw, 52px)" }}
+          >
+            {hero.headline}
+          </h1>
+
+          {/* Subhead — LCP element */}
+          <RichText className="text-white/75 font-body text-lg md:text-xl max-w-2xl mb-10 leading-relaxed">
+            {hero.subtext}
+          </RichText>
+
+          {/* Trust badges */}
+          <div className="flex flex-wrap items-center gap-4 mb-10 hero-anim-badges">
+            <a
+              href="https://www.jointcommission.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/15 rounded-xl px-4 py-2.5 hover:bg-white/15 transition-colors"
+            >
+              <Image
+                src="/images/branding/JointCommission_GoldSeal_National.png"
+                alt="Joint Commission Gold Seal of Approval, Desert Recovery Centers is accredited"
+                width={28}
+                height={28}
+                className="flex-shrink-0"
+              />
+              <span className="text-white/90 text-sm font-medium">
+                Joint Commission Accredited
+              </span>
+            </a>
+            <a
+              href="https://www.legitscript.com/websites/?checker_keywords=desertrecoverycenters.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/15 rounded-xl px-4 py-2.5 hover:bg-white/15 transition-colors"
+              aria-label="Verify LegitScript Approval for www.desertrecoverycenters.com"
+            >
+              <Image
+                src="/images/branding/legitscript-seal-25653576.png"
+                alt="Verify Approval for www.desertrecoverycenters.com - LegitScript Certified"
+                width={28}
+                height={30}
+                unoptimized
+                className="flex-shrink-0"
+              />
+              <span className="text-white/90 text-sm font-medium">
+                LegitScript Certified
+              </span>
+            </a>
+          </div>
+
+          {/* CTAs */}
+          <div className="flex flex-col sm:flex-row items-start gap-4 hero-anim-ctas">
+            <a
+              href="/insurance"
+              className="bg-gold hover:bg-gold-dark text-white font-semibold text-base px-8 py-4 rounded-xl transition-all shadow-lg shadow-gold/25 cursor-pointer"
+            >
+              Verify Insurance Today
+            </a>
+            <a
+              href="tel:+16233050496"
+              className="bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/30 text-white font-semibold text-base px-8 py-4 rounded-xl transition-all cursor-pointer"
+            >
+              Call (623) 305-0496
+            </a>
+          </div>
+
+          <p className="text-cream/50 text-sm italic mt-5 hero-anim-tagline">
+            {hero.tagline ?? DEFAULT_TAGLINE}
+          </p>
+        </div>
+      </div>
+
+      {/* Scroll indicator */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 motion-safe:animate-bounce">
+        <svg
+          className="w-6 h-6 text-white/40"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M19 14l-7 7m0 0l-7-7m7 7V3"
+          />
+        </svg>
+      </div>
+    </section>
+  );
+}

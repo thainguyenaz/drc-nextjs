@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Navigation from "@/components/Navigation";
 import PageHero from "@/components/PageHero";
+import CityServicesHub from "@/components/seo-template/CityServicesHub";
 import LocationCollision from "@/components/LocationCollision";
 import VideoLightbox from "@/components/VideoLightbox";
 import CTASection from "@/components/CTASection";
@@ -86,6 +87,7 @@ export default function ScottsdaleLocationPage() {
         description="Residential mental health and addiction treatment nestled in north Scottsdale, where mountain views meet doctoral-level care."
         bgImage="/images/scottsdale/DRC-DRONE-SCOTTSDALE-08-01-2024-0068August-01-202400009-2.jpg"
       />
+      <CityServicesHub citySlug="scottsdale" />
 
       {/* Overview */}
       <section className="py-16 md:py-24 bg-white">

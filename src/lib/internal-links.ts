@@ -196,6 +196,77 @@ const linkMap: Record<string, RelatedLink[]> = {
     { label: "Dual Diagnosis Treatment", href: "/treatments/dual-diagnosis-treatment" },
     { label: "Our Clinical Team", href: "/our-team" },
   ],
+
+  // ─── Location Service pages (city-scoped conditions) ───
+  "/locations/phoenix-php-iop/anxiety-treatment": [
+    { label: "Anxiety Treatment", href: "/mental-health/anxiety-treatment" },
+    { label: "Our Phoenix Center", href: "/locations/phoenix-php-iop" },
+    { label: "Anxiety Treatment in Glendale", href: "/locations/glendale/anxiety-treatment" },
+    { label: "Anxiety Treatment in Scottsdale", href: "/locations/scottsdale/anxiety-treatment" },
+    { label: "Cognitive Behavioral Therapy", href: "/treatments/cbt-cognitive-behavioral-therapy" },
+  ],
+  "/locations/glendale/anxiety-treatment": [
+    { label: "Anxiety Treatment", href: "/mental-health/anxiety-treatment" },
+    { label: "Our Glendale Facility", href: "/locations/glendale" },
+    { label: "Anxiety Treatment in Phoenix", href: "/locations/phoenix-php-iop/anxiety-treatment" },
+    { label: "Anxiety Treatment in Scottsdale", href: "/locations/scottsdale/anxiety-treatment" },
+    { label: "Cognitive Behavioral Therapy", href: "/treatments/cbt-cognitive-behavioral-therapy" },
+  ],
+  "/locations/scottsdale/anxiety-treatment": [
+    { label: "Anxiety Treatment", href: "/mental-health/anxiety-treatment" },
+    { label: "Our Scottsdale Facility", href: "/locations/scottsdale" },
+    { label: "Anxiety Treatment in Phoenix", href: "/locations/phoenix-php-iop/anxiety-treatment" },
+    { label: "Anxiety Treatment in Glendale", href: "/locations/glendale/anxiety-treatment" },
+    { label: "Cognitive Behavioral Therapy", href: "/treatments/cbt-cognitive-behavioral-therapy" },
+  ],
+  "/locations/phoenix-php-iop/depression-treatment": [
+    { label: "Depression Treatment", href: "/mental-health/depression-treatment" },
+    { label: "Our Phoenix Center", href: "/locations/phoenix-php-iop" },
+    { label: "Depression Treatment in Glendale", href: "/locations/glendale/depression-treatment" },
+    { label: "Depression Treatment in Scottsdale", href: "/locations/scottsdale/depression-treatment" },
+    { label: "TMS Therapy", href: "/treatments/tms-therapy" },
+  ],
+  "/locations/glendale/depression-treatment": [
+    { label: "Depression Treatment", href: "/mental-health/depression-treatment" },
+    { label: "Our Glendale Facility", href: "/locations/glendale" },
+    { label: "Depression Treatment in Phoenix", href: "/locations/phoenix-php-iop/depression-treatment" },
+    { label: "Depression Treatment in Scottsdale", href: "/locations/scottsdale/depression-treatment" },
+    { label: "TMS Therapy", href: "/treatments/tms-therapy" },
+  ],
+  "/locations/scottsdale/depression-treatment": [
+    { label: "Depression Treatment", href: "/mental-health/depression-treatment" },
+    { label: "Our Scottsdale Facility", href: "/locations/scottsdale" },
+    { label: "Depression Treatment in Phoenix", href: "/locations/phoenix-php-iop/depression-treatment" },
+    { label: "Depression Treatment in Glendale", href: "/locations/glendale/depression-treatment" },
+    { label: "TMS Therapy", href: "/treatments/tms-therapy" },
+  ],
+  "/locations/phoenix-php-iop/ptsd-trauma-treatment": [
+    { label: "PTSD & Trauma Treatment", href: "/mental-health/ptsd-treatment" },
+    { label: "Our Phoenix Center", href: "/locations/phoenix-php-iop" },
+    { label: "PTSD and Trauma Treatment in Glendale", href: "/locations/glendale/ptsd-trauma-treatment" },
+    { label: "PTSD and Trauma Treatment in Scottsdale", href: "/locations/scottsdale/ptsd-trauma-treatment" },
+    { label: "EMDR Therapy", href: "/treatments/emdr-therapy" },
+  ],
+  "/locations/glendale/ptsd-trauma-treatment": [
+    { label: "PTSD & Trauma Treatment", href: "/mental-health/ptsd-treatment" },
+    { label: "Our Glendale Facility", href: "/locations/glendale" },
+    { label: "PTSD and Trauma Treatment in Phoenix", href: "/locations/phoenix-php-iop/ptsd-trauma-treatment" },
+    { label: "PTSD and Trauma Treatment in Scottsdale", href: "/locations/scottsdale/ptsd-trauma-treatment" },
+    { label: "EMDR Therapy", href: "/treatments/emdr-therapy" },
+  ],
+  "/locations/scottsdale/ptsd-trauma-treatment": [
+    { label: "PTSD & Trauma Treatment", href: "/mental-health/ptsd-treatment" },
+    { label: "Our Scottsdale Facility", href: "/locations/scottsdale" },
+    { label: "PTSD and Trauma Treatment in Phoenix", href: "/locations/phoenix-php-iop/ptsd-trauma-treatment" },
+    { label: "PTSD and Trauma Treatment in Glendale", href: "/locations/glendale/ptsd-trauma-treatment" },
+    { label: "EMDR Therapy", href: "/treatments/emdr-therapy" },
+  ],
+  "/locations/phoenix-php-iop/bipolar-disorder-treatment": [
+    { label: "Bipolar Disorder Treatment", href: "/mental-health/bipolar-disorder-treatment" },
+    { label: "Our Phoenix Center", href: "/locations/phoenix-php-iop" },
+    { label: "DBT Therapy", href: "/treatments/dbt-dialectical-behavior-therapy" },
+    { label: "Dual Diagnosis Treatment", href: "/treatments/dual-diagnosis-treatment" },
+  ],
 };
 
 export function getRelatedLinks(path: string): RelatedLink[] {
