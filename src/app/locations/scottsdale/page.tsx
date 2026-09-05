@@ -87,8 +87,6 @@ export default function ScottsdaleLocationPage() {
         description="Residential mental health and addiction treatment nestled in north Scottsdale, where mountain views meet doctoral-level care."
         bgImage="/images/scottsdale/DRC-DRONE-SCOTTSDALE-08-01-2024-0068August-01-202400009-2.jpg"
       />
-      <CityServicesHub citySlug="scottsdale" />
-
       {/* Overview */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-container mx-auto px-6">
@@ -348,6 +346,10 @@ export default function ScottsdaleLocationPage() {
           </div>
         </div>
       </section>
+
+      {/* Services hub sits after "Our Approach" so the facility's own
+          content leads the page. */}
+      <CityServicesHub citySlug="scottsdale" />
 
       <PhotoGallery photos={gallery} title="Scottsdale Facility Gallery" />
 

@@ -87,8 +87,6 @@ export default function GlendaleLocationPage() {
         description="Our flagship 7,500 sq ft residential treatment center, where evidence-based clinical care meets resort-level comfort."
         bgImage="/images/glendale/Glendale-Front.jpg"
       />
-      <CityServicesHub citySlug="glendale" />
-
       {/* Overview */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-container mx-auto px-6">
@@ -339,6 +337,10 @@ export default function GlendaleLocationPage() {
           </div>
         </div>
       </section>
+
+      {/* Services hub sits after "Our Approach" so the facility's own
+          content leads the page. */}
+      <CityServicesHub citySlug="glendale" />
 
       <PhotoGallery photos={gallery} title="Glendale Facility Gallery" />
 

@@ -69,10 +69,13 @@ export default function PhoenixPhpIopPage() {
         description="Most people cannot put their life on hold. You still have a job, a family, responsibilities that do not stop because you are struggling. Our Phoenix center was built for exactly that, delivering the same clinical depth as residential treatment, structured around the life you still have to live."
         bgImage="/images/locations/php-iop/php-iop-reception-1.jpg"
       />
-      <CityServicesHub citySlug="phoenix-php-iop" />
-
       {/* All animated content sections */}
       <PhoenixPHPContent />
+
+      {/* Services hub after the main content block — this page has no
+          "Our Approach" section, so the equivalent position is the end of
+          PhoenixPHPContent. */}
+      <CityServicesHub citySlug="phoenix-php-iop" />
 
       <LeaveAReviewCTA
         reviewUrl="https://g.page/r/CVuiBewYiKlAEBM/review"
