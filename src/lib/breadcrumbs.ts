@@ -24,6 +24,7 @@ const SEGMENT_LABELS: Record<string, string> = {
   "php": "PHP",
   "iop": "IOP",
   "adhd-add": "ADHD & ADD",
+  "adhd-treatment": "ADHD Treatment",
   "ocd-treatment": "OCD Treatment",
   "tms-therapy": "TMS Therapy",
   "emdr-therapy": "EMDR Therapy",

@@ -53,8 +53,18 @@ export const LOCATION_SERVICE_CITIES: Record<string, LocationServiceCity> = {
   },
 };
 
-/** Batch date, emitted as dateModified in each page's MedicalWebPage schema. */
-export const BATCH_DATE = "2026-08-26";
+/**
+ * Batch dates, emitted as dateModified in each page's MedicalWebPage schema.
+ *
+ * One date per monthly batch. A page keeps the date of the batch that
+ * shipped it, so adding a new batch never re-dates the pages already live.
+ */
+export const BATCH_DATES = {
+  august2026: "2026-08-26",
+  september2026: "2026-09-17",
+} as const;
+
+export type BatchDate = (typeof BATCH_DATES)[keyof typeof BATCH_DATES];
 
 export interface LocationService {
   citySlug: string;
@@ -142,29 +152,81 @@ export const SERVICE_CARD_IMAGES: Record<string, string> = {
   // Family session — the only card not showing a clinical dyad, which keeps
   // the four cards visually distinct from one another.
   "bipolar-disorder-treatment": "/images/conditions/bipolar-disorder-treatment-06.webp",
+  // September '26 batch. No OCD, personality disorder, or ADHD photography
+  // exists, so these three cards are reserved out of the existing pools and
+  // are deliberately used on NO page — a card therefore never lands the
+  // reader on its own artwork. See the image plan in location-service-copy.ts.
+  "ocd-treatment": "/images/conditions/anxiety-treatment-10.webp",
+  "personality-disorder-treatment": "/images/conditions/bipolar-disorder-treatment-09.webp",
+  "adhd-treatment": "/images/conditions/depression-treatment-10.webp",
 };
 
-/** The batch matrix: which conditions get pages in which cities. */
-const BATCH: Array<{ serviceSlug: string; serviceName: string; cities: string[] }> = [
+/**
+ * The batch matrix: which conditions get pages in which cities, and which
+ * monthly batch shipped them.
+ *
+ * Bipolar appears twice — Phoenix shipped in August, Glendale and Scottsdale
+ * in September — because each city's pages carry that batch's dateModified.
+ */
+const BATCH: Array<{
+  serviceSlug: string;
+  serviceName: string;
+  cities: string[];
+  batchDate: BatchDate;
+}> = [
+  // ─── August '26 ────────────────────────────────────────────────
   {
     serviceSlug: "anxiety-treatment",
     serviceName: "Anxiety Treatment",
     cities: ["phoenix-php-iop", "glendale", "scottsdale"],
+    batchDate: BATCH_DATES.august2026,
   },
   {
     serviceSlug: "depression-treatment",
     serviceName: "Depression Treatment",
     cities: ["phoenix-php-iop", "glendale", "scottsdale"],
+    batchDate: BATCH_DATES.august2026,
   },
   {
     serviceSlug: "ptsd-trauma-treatment",
     serviceName: "PTSD and Trauma Treatment",
     cities: ["phoenix-php-iop", "glendale", "scottsdale"],
+    batchDate: BATCH_DATES.august2026,
   },
   {
     serviceSlug: "bipolar-disorder-treatment",
     serviceName: "Bipolar Disorder Treatment",
     cities: ["phoenix-php-iop"],
+    batchDate: BATCH_DATES.august2026,
+  },
+
+  // ─── September '26 ─────────────────────────────────────────────
+  // Completes bipolar across the two residential cities, then adds three
+  // new conditions. ADHD covers Phoenix and Glendale only; Scottsdale ADHD
+  // was not scoped for this batch.
+  {
+    serviceSlug: "bipolar-disorder-treatment",
+    serviceName: "Bipolar Disorder Treatment",
+    cities: ["glendale", "scottsdale"],
+    batchDate: BATCH_DATES.september2026,
+  },
+  {
+    serviceSlug: "ocd-treatment",
+    serviceName: "OCD Treatment",
+    cities: ["phoenix-php-iop", "glendale", "scottsdale"],
+    batchDate: BATCH_DATES.september2026,
+  },
+  {
+    serviceSlug: "personality-disorder-treatment",
+    serviceName: "Personality Disorder Treatment",
+    cities: ["phoenix-php-iop", "glendale", "scottsdale"],
+    batchDate: BATCH_DATES.september2026,
+  },
+  {
+    serviceSlug: "adhd-treatment",
+    serviceName: "ADHD Treatment",
+    cities: ["phoenix-php-iop", "glendale"],
+    batchDate: BATCH_DATES.september2026,
   },
 ];
 
@@ -184,7 +246,7 @@ export const locationServices: LocationService[] = BATCH.flatMap((entry) =>
         `TODO COPY: ${entry.serviceName} in ${city.shortName} | Desert Recovery Centers`,
       metaDescription:
         written?.metaDescription ?? "TODO COPY: meta description pending.",
-      dateModified: BATCH_DATE,
+      dateModified: entry.batchDate,
       copy: written?.copy ?? placeholderCopy(city, entry.serviceName, path),
     };
   })

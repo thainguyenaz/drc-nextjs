@@ -18,6 +18,11 @@
  * four unavoidable repeats are placed in DIFFERENT cities, so no image ever
  * appears twice within one city's pages, and every hub card is distinct.
  * Replace with a genuine PTSD set when one is available.
+ *
+ * The September '26 batch adds OCD, personality disorder, and ADHD pages,
+ * for which no photography exists at all. They draw from the same three
+ * pools under the same rule (no repeat within a city). The reserved
+ * allocation is listed in the September block at the foot of this file.
  */
 
 import type { SeoPageCopy } from "@/components/seo-template/types";
@@ -955,4 +960,961 @@ export const locationServiceCopy: Record<string, LocationServiceCopy> = {
       },
     },
   },
+
+  // ─── September '26 batch — images ─────────────────────────────
+  //
+  // No OCD, personality disorder, or ADHD photography exists, so these ten
+  // pages draw from the anxiety, depression, and bipolar pools under the
+  // same rule as August: no image repeats within a single city. Each page's
+  // images sit on its own entry below; that is the source of truth.
+  //
+  // Three frames are reserved for the new hub cards in location-services.ts
+  // (anxiety-10, bipolar-09, depression-10) and appear on NO page, so a card
+  // never lands the reader on its own artwork.
+  //
+  // Where the pool allowed it, gendered subjects were matched to the
+  // gendered locations: bipolar-02 (male client) sits on a Glendale page,
+  // and the two-woman frames (bipolar-04, bipolar-10) sit on Scottsdale.
+
+  // ─── Bipolar Disorder Treatment (September '26) ─────────────────
+
+  "/locations/glendale/bipolar-disorder-treatment": {
+    metaTitle: "Structured Bipolar Disorder Treatment in Glendale, AZ | DRC",
+    metaDescription:
+      "Desert Recovery Centers offers structured bipolar disorder treatment in Glendale, AZ in a residential recovery setting for men. Call Now!",
+    copy: {
+      path: "/locations/glendale/bipolar-disorder-treatment",
+      hero: {
+        eyebrow: "Glendale, AZ",
+        headline: "Structured Bipolar Disorder Treatment in Glendale, AZ",
+        subtext:
+          "[Desert Recovery Centers](https://desertrecoverycenters.com/) provides structured bipolar disorder treatment in Glendale, AZ within a residential recovery center specifically for men. Male clients stay in a dedicated treatment environment where they can focus on mood-related concerns, daily stability, and recovery while temporarily stepping away from outside responsibilities and distractions that can compete with treatment.",
+        image:
+          "/images/glendale/Glendale-Living-Room.jpg",
+      },
+      benefits: {
+        heading:
+          "Benefits of Structured Bipolar Disorder Treatment in Glendale, AZ at Desert Recovery Centers",
+        subheading: "Consistent Residential Support for Men",
+        items: [
+          {
+            title: "Residential Care Specifically for Male Clients",
+            text: "Desert Recovery Centers provides a residential recovery setting in Glendale specifically for men. Instead of attending daytime programming and returning home afterward, male clients stay within the treatment environment, creating dedicated space to focus on bipolar disorder concerns and participate consistently in the recovery process.",
+          },
+          {
+            title: "Greater Continuity Throughout Daily Treatment",
+            text: "Changes in mood, energy, concentration, and activity can make ordinary routines challenging to navigate. Residential care keeps recovery integrated into the client’s daily environment, reducing transitions between treatment and home and giving men receiving structured bipolar disorder treatment in Glendale, AZ a consistent setting for therapeutic participation.",
+          },
+          {
+            title: "A Focused Process Away From Competing Demands",
+            text: "Work, household responsibilities, relationships, and other obligations can compete for attention when someone is trying to address behavioral health concerns. Desert Recovery Centers provides an environment where men can temporarily reduce some of these outside demands and direct more attention toward treatment, personal patterns, and recovery-related needs.",
+          },
+        ],
+        image: "/images/conditions/bipolar-disorder-treatment-07.webp",
+        imageAlt:
+          "Clients seated in a circle during a guided mindfulness session",
+      },
+      why: {
+        heading:
+          "Why Structured Bipolar Disorder Treatment in Glendale, AZ Matters",
+        subheading: "Support for Mood and Stability",
+        items: [
+          {
+            title: "Mood Changes Can Affect Everyday Responsibilities",
+            text: "Bipolar disorder can involve significant changes in mood, energy, activity, and concentration that may disrupt work, relationships, routines, or decision-making. When these changes become difficult to navigate in everyday life, structured treatment can provide dedicated opportunities to address their impact within a recovery-focused environment.",
+          },
+          {
+            title: "Residential Care Can Create Distance From Daily Pressures",
+            text: "Familiar responsibilities and stressors may make sustained attention to behavioral health treatment more difficult. For men living in or around [Glendale, AZ](https://www.glendaleaz.com/), a residential setting can provide temporary separation from some outside demands while keeping treatment and recovery at the center of the daily environment.",
+          },
+          {
+            title: "Consistent Structure Can Support the Treatment Process",
+            text: "Maintaining predictable routines can become challenging when mood and energy fluctuate. A residential recovery environment provides a more structured setting in which treatment participation does not have to compete with the same schedule changes, household demands, or outside responsibilities that a person may encounter while living at home.",
+          },
+        ],
+        image: "/images/conditions/bipolar-disorder-treatment-08.webp",
+        imageAlt:
+          "Residential common area with armchairs arranged for conversation",
+      },
+      faq: {
+        title:
+          "Frequently Asked Questions About Bipolar Disorder Treatment in Glendale, AZ",
+        items: [
+          {
+            question:
+              "Is bipolar disorder treatment in Glendale, AZ residential for men?",
+            answer:
+              "Yes. The Glendale recovery center is a residential setting specifically for male clients, so men stay within the treatment environment rather than returning home each evening. Desert Recovery Centers provides structured bipolar disorder treatment in Glendale, AZ for men who may benefit from dedicated space and greater continuity while participating in behavioral health care.",
+          },
+          {
+            question:
+              "When might a man consider residential bipolar disorder care in Glendale, AZ?",
+            answer:
+              "Residential treatment may be considered when mood-related concerns significantly interfere with daily functioning or when greater structure is appropriate for an individual’s treatment needs. Desert Recovery Centers provides men with a dedicated Glendale recovery environment where outside responsibilities can temporarily take less attention while treatment becomes a more consistent part of daily life.",
+          },
+          {
+            question:
+              "What is the difference between Glendale and Phoenix bipolar disorder treatment settings?",
+            answer:
+              "Glendale provides residential recovery care specifically for men, while Phoenix provides PHP and outpatient programming for both men and women without overnight stays. Desert Recovery Centers uses these distinct settings to provide different treatment environments, so the appropriate program depends on the individual’s circumstances, treatment needs, and recommended level of care.",
+          },
+        ],
+      },
+      map: {
+        variant: "gbp",
+        gbpLocationIndex: 0,
+        heading:
+          "Residential Bipolar Disorder Treatment in Glendale, AZ – Local Service Coverage",
+        subtext:
+          "Desert Recovery Centers provides residential bipolar disorder care in Glendale, AZ specifically for men seeking a structured recovery environment. Male clients stay within the residential setting while participating in treatment rather than returning home after daytime programming. This local residential model creates dedicated space for addressing mood-related challenges while temporarily reducing many of the distractions and responsibilities associated with everyday routines.",
+      },
+    },
+  },
+
+  "/locations/scottsdale/bipolar-disorder-treatment": {
+    metaTitle: "Supportive Bipolar Disorder Treatment in Scottsdale, AZ | DRC",
+    metaDescription:
+      "Desert Recovery Centers offers supportive bipolar disorder treatment in Scottsdale, AZ with residential recovery care for women. Call Now!",
+    copy: {
+      path: "/locations/scottsdale/bipolar-disorder-treatment",
+      hero: {
+        eyebrow: "Scottsdale, AZ",
+        headline: "Supportive Bipolar Disorder Treatment in Scottsdale, AZ",
+        subtext:
+          "Desert Recovery Centers provides supportive bipolar disorder treatment in Scottsdale, AZ within a residential recovery center specifically for women. Female clients stay in a structured environment where treatment can remain a consistent daily priority. This residential setting provides dedicated space to address mood-related concerns while stepping away from many routines and responsibilities that may compete with recovery.",
+        image:
+          "/images/scottsdale/DRC-LIVING-ROOMS-NORTH-SCOTTSDALE-08-01-2024-1317August-01-202400007-2.jpg",
+      },
+      benefits: {
+        heading:
+          "Benefits of Supportive Bipolar Disorder Treatment in Scottsdale, AZ at Desert Recovery Centers",
+        subheading: "Residential Care Centered on Women",
+        items: [
+          {
+            title: "Dedicated Residential Support for Women",
+            text: "Desert Recovery Centers provides a Scottsdale residential setting specifically for female clients. Women remain within the recovery environment during treatment instead of attending programming and returning home each evening, providing continuity and dedicated space to focus on bipolar disorder concerns, therapeutic participation, and individual recovery needs.",
+          },
+          {
+            title: "Consistent Attention to Individual Mood Patterns",
+            text: "Bipolar disorder can affect mood, energy, concentration, activity, and everyday functioning differently for each person. Desert Recovery Centers provides an environment where women receiving supportive bipolar disorder treatment in Scottsdale, AZ can devote focused attention to their individual concerns without treatment continually competing with normal household or outside obligations.",
+          },
+          {
+            title: "Reliable Structure Throughout the Residential Experience",
+            text: "A consistent environment can be valuable when changes in mood or energy make everyday routines difficult to maintain. Residential care keeps women connected to a recovery-focused setting throughout their stay, supporting regular participation in treatment while reducing many of the transitions and distractions associated with balancing care and life at home.",
+          },
+        ],
+        image: "/images/conditions/bipolar-disorder-treatment-01.webp",
+        imageAlt:
+          "Client talking with a therapist who is taking notes during a session",
+      },
+      why: {
+        heading:
+          "Why Supportive Bipolar Disorder Treatment in Scottsdale, AZ Matters",
+        subheading: "Focused Support for Daily Stability",
+        items: [
+          {
+            title: "Mood Changes Can Affect Personal Relationships",
+            text: "Significant shifts in mood, energy, activity, or concentration may influence communication, relationships, responsibilities, and participation in everyday life. When these patterns become disruptive, structured treatment provides dedicated opportunities to examine their impact and focus on behavioral health needs within an environment centered on recovery.",
+          },
+          {
+            title: "Busy Lifestyles Can Compete With Recovery",
+            text: "Professional demands, family responsibilities, social commitments, and household routines can leave limited space for focused behavioral health care. Residential treatment gives women an opportunity to temporarily step away from many competing demands, allowing treatment to take a more central role when ordinary routines make sustained recovery work difficult.",
+          },
+          {
+            title: "Local Conditions Can Shape Everyday Routines",
+            text: "Scottsdale’s desert climate, including periods of intense heat, can influence outdoor activities and how residents organize daily schedules. Women in [Scottsdale, AZ](https://www.scottsdaleaz.gov/) who are also navigating significant mood-related concerns may benefit from access to structured behavioral health care when those concerns interfere with everyday functioning.",
+          },
+        ],
+        image: "/images/conditions/bipolar-disorder-treatment-05.webp",
+        imageAlt:
+          "Client sitting quietly with a warm drink in a residential lounge",
+      },
+      faq: {
+        title:
+          "Frequently Asked Questions About Bipolar Disorder Treatment in Scottsdale, AZ",
+        items: [
+          {
+            question:
+              "Can women receive residential bipolar disorder treatment in Scottsdale, AZ?",
+            answer:
+              "Yes. The Scottsdale recovery center provides residential behavioral health care specifically for women, so female clients stay within the treatment environment while participating in care. Desert Recovery Centers provides supportive bipolar disorder treatment in Scottsdale, AZ for women whose individual circumstances and treatment needs are suited to a structured residential setting.",
+          },
+          {
+            question:
+              "What can women expect from a residential bipolar disorder recovery setting in Scottsdale, AZ?",
+            answer:
+              "Women can expect a residential environment where treatment remains part of daily life rather than requiring them to return home after scheduled programming. [Desert Recovery Centers](https://desertrecoverycenters.com/) provides female clients with dedicated space to participate in care while temporarily reducing many outside responsibilities and distractions that could compete with recovery.",
+          },
+          {
+            question:
+              "When may residential bipolar disorder care in Scottsdale be considered instead of outpatient treatment?",
+            answer:
+              "Residential care may be considered when an individual’s needs call for greater treatment structure or when managing significant mood-related concerns alongside everyday responsibilities has become difficult. Desert Recovery Centers provides Scottsdale residential care specifically for women, while the appropriate treatment setting should depend on each client’s circumstances and recommended level of care.",
+          },
+        ],
+      },
+      map: {
+        variant: "gbp",
+        gbpLocationIndex: 1,
+        heading:
+          "Residential Bipolar Disorder Treatment in Scottsdale, AZ – Local Service Coverage",
+        subtext:
+          "Desert Recovery Centers provides residential bipolar disorder care in Scottsdale, AZ specifically for women seeking a structured recovery environment. Female clients stay within the residential setting while participating in treatment, creating continuity between daily living and behavioral health care. This residential model provides dedicated space to focus on mood-related concerns while temporarily stepping away from many ordinary outside pressures and responsibilities.",
+      },
+    },
+  },
+
+
+  // ─── OCD Treatment (September '26) ──────────────────────────────
+
+  "/locations/phoenix-php-iop/ocd-treatment": {
+    metaTitle: "Personalized OCD Treatment in Phoenix, AZ | DRC",
+    metaDescription:
+      "Desert Recovery Centers offers personalized OCD treatment in Phoenix, AZ through structured PHP and outpatient care. Call Now!",
+    copy: {
+      path: "/locations/phoenix-php-iop/ocd-treatment",
+      hero: {
+        eyebrow: "Phoenix, AZ",
+        headline: "Personalized OCD Treatment in Phoenix, AZ",
+        subtext:
+          "Desert Recovery Centers provides personalized OCD treatment in Phoenix, AZ through structured PHP and outpatient programming for both men and women. Clients participate in scheduled daytime care and return home afterward rather than staying overnight. This non-residential approach provides meaningful treatment structure while allowing individuals to remain connected to their homes, responsibilities, and everyday environments.",
+        image:
+          "/images/locations/php-iop/php-iop-therapy-office-1.jpg",
+      },
+      benefits: {
+        heading:
+          "Benefits of Personalized OCD Treatment in Phoenix, AZ at Desert Recovery Centers",
+        subheading: "Structured Support for Everyday Life",
+        items: [
+          {
+            title: "Daytime Care While Continuing to Live at Home",
+            text: "Desert Recovery Centers provides PHP and outpatient treatment in Phoenix rather than an overnight residential program. Men and women can participate in structured behavioral health care during scheduled daytime hours before returning home, allowing treatment to remain connected to the routines and environments clients navigate outside programming.",
+          },
+          {
+            title: "Different Programming Options for Individual Needs",
+            text: "The amount of structure someone needs can vary according to individual circumstances and treatment needs. Desert Recovery Centers offers different outpatient program options, including programming that may involve approximately five to six hours per day, five days per week, providing substantial daytime support without requiring clients to move into a residential center.",
+          },
+          {
+            title: "Opportunities to Navigate Everyday Challenges",
+            text: "Obsessive thoughts and compulsive behaviors can arise in ordinary situations at home, work, or elsewhere in the community. Receiving personalized OCD treatment in Phoenix, AZ while continuing to live at home allows clients to remain connected to real-world routines while regularly participating in structured behavioral health programming.",
+          },
+        ],
+        image: "/images/conditions/anxiety-treatment-09.webp",
+        imageAlt:
+          "Client journaling while a clinician listens during a session",
+      },
+      why: {
+        heading:
+          "Why Personalized OCD Treatment in Phoenix, AZ Matters",
+        subheading: "Support for Disruptive OCD Patterns",
+        items: [
+          {
+            title: "Obsessions and Compulsions Can Consume Daily Attention",
+            text: "Recurrent unwanted thoughts and repetitive behaviors can interfere with concentration, responsibilities, relationships, and ordinary activities. When these patterns become disruptive or time-consuming, structured behavioral health treatment can provide dedicated opportunities to address their effects instead of allowing them to continually shape a person’s daily routines.",
+          },
+          {
+            title: "Everyday Environments May Bring Difficult Situations",
+            text: "OCD-related concerns can become connected with household routines, work responsibilities, social situations, or other parts of daily life. For people throughout [Phoenix, AZ](https://www.phoenix.gov/), having access to non-residential treatment can provide structured support while clients continue navigating the environments where these challenges may occur.",
+          },
+          {
+            title: "Outpatient Care Can Preserve Important Responsibilities",
+            text: "Some people need a meaningful level of behavioral health structure without an overnight residential stay. PHP and outpatient programming allows clients to receive scheduled daytime treatment while continuing to live at home, making it possible to remain connected to family and personal responsibilities outside treatment hours when clinically appropriate.",
+          },
+        ],
+        image: "/images/conditions/anxiety-treatment-06.webp",
+        imageAlt:
+          "Quiet room with floor cushions used for grounding and mindfulness work",
+      },
+      faq: {
+        title:
+          "Frequently Asked Questions About OCD Treatment in Phoenix, AZ",
+        items: [
+          {
+            question:
+              "Is OCD treatment in Phoenix, AZ available without staying overnight at a recovery center?",
+            answer:
+              "Yes. Phoenix uses a PHP and outpatient treatment model rather than residential overnight care. Both men and women can attend structured daytime programming before returning home. Desert Recovery Centers provides personalized OCD treatment in Phoenix, AZ for clients whose individual treatment needs are suited to this type of non-residential behavioral health care.",
+          },
+          {
+            question:
+              "How much time can PHP or outpatient OCD treatment in Phoenix involve?",
+            answer:
+              "Scheduling can vary depending on the program and individual treatment needs. Some Phoenix programming may involve approximately five to six hours per day, five days per week. Desert Recovery Centers offers different PHP and outpatient options, providing structured daytime care while clients continue living at home instead of staying overnight at a residential facility.",
+          },
+          {
+            question:
+              "Can Phoenix OCD treatment support people whose symptoms affect routines at home or work?",
+            answer:
+              "Structured treatment can provide dedicated time to address obsessive thoughts, compulsive patterns, and the ways they interfere with ordinary functioning. Because Phoenix care is non-residential, clients continue encountering their normal environments outside programming. [Desert Recovery Centers](https://desertrecoverycenters.com/) provides PHP and outpatient care for both men and women seeking behavioral health support.",
+          },
+        ],
+      },
+      map: {
+        variant: "gbp",
+        gbpLocationIndex: 2,
+        heading:
+          "Outpatient OCD Treatment in Phoenix, AZ – Local Service Coverage",
+        subtext:
+          "Desert Recovery Centers provides outpatient OCD care in Phoenix, AZ for both men and women seeking structured behavioral health treatment while continuing to live at home. PHP and outpatient programming provides scheduled daytime support without an overnight stay, allowing clients to remain connected to family life, personal responsibilities, work routines, and everyday experiences throughout the Phoenix community.",
+      },
+    },
+  },
+
+  "/locations/glendale/ocd-treatment": {
+    metaTitle: "Focused OCD Treatment in Glendale, AZ | DRC",
+    metaDescription:
+      "Desert Recovery Centers offers focused OCD treatment in Glendale, AZ within a structured residential recovery setting for men. Call Now!",
+    copy: {
+      path: "/locations/glendale/ocd-treatment",
+      hero: {
+        eyebrow: "Glendale, AZ",
+        headline: "Focused OCD Treatment in Glendale, AZ",
+        subtext:
+          "Desert Recovery Centers provides focused OCD treatment in Glendale, AZ within a residential recovery center specifically for men. Male clients stay in the treatment environment, creating dedicated space to address obsessive thoughts, compulsive patterns, and related behavioral health concerns. Residential care allows men to concentrate on recovery while temporarily stepping away from many outside routines and responsibilities.",
+        image:
+          "/images/glendale/Glendale-Therapy-Room.jpg",
+      },
+      benefits: {
+        heading:
+          "Benefits of Focused OCD Treatment in Glendale, AZ at Desert Recovery Centers",
+        subheading: "Residential Support Designed for Men",
+        items: [
+          {
+            title: "Consistent Care Within a Residential Setting",
+            text: "Desert Recovery Centers provides men with an environment where treatment remains integrated into daily life rather than being limited to scheduled visits. Staying within the Glendale recovery setting reduces transitions between treatment and home, giving male clients greater continuity while addressing OCD-related concerns and participating in the recovery process.",
+          },
+          {
+            title: "Focused Attention on Individual OCD Patterns",
+            text: "Obsessive thoughts and compulsive behaviors can vary significantly in their form and effect on everyday life. Men receiving focused OCD treatment in Glendale, AZ have dedicated space to concentrate on the patterns affecting their own routines, relationships, responsibilities, and functioning without continually balancing treatment against the demands of living at home.",
+          },
+          {
+            title: "Residential Care Specifically for Male Clients",
+            text: "The Glendale recovery center serves men rather than operating as a mixed-gender outpatient setting. For male clients throughout [Glendale, AZ](https://www.glendaleaz.com/), Desert Recovery Centers provides a residential environment where they stay during treatment and can place greater attention on behavioral health care away from many ordinary outside distractions.",
+          },
+        ],
+        image: "/images/conditions/anxiety-treatment-03.webp",
+        imageAlt:
+          "Calm counseling room with two armchairs and a window",
+      },
+      why: {
+        heading:
+          "Why Focused OCD Treatment in Glendale, AZ Matters",
+        subheading: "Addressing Patterns That Disrupt Life",
+        items: [
+          {
+            title: "Compulsive Routines Can Become Increasingly Disruptive",
+            text: "Repetitive behaviors or mental rituals may begin taking substantial time or interfering with ordinary responsibilities. When OCD-related patterns repeatedly disrupt work, relationships, household activities, or other parts of daily functioning, structured treatment can provide dedicated opportunities to address how those patterns are affecting everyday life.",
+          },
+          {
+            title: "Home Environments May Contain Persistent Triggers",
+            text: "OCD-related distress can become connected with specific objects, routines, situations, or responsibilities in familiar surroundings. Temporarily staying in a residential treatment setting can provide a different environment in which men can focus more consistently on recovery rather than managing treatment alongside the same daily circumstances and pressures.",
+          },
+          {
+            title: "Greater Structure May Help When Daily Life Feels Overwhelming",
+            text: "Managing significant obsessive thoughts or compulsive behaviors while keeping up with ordinary responsibilities can become difficult. Residential care creates an environment centered on treatment, allowing men to temporarily reduce competing demands and devote more of their daily attention to behavioral health needs and recovery-focused participation.",
+          },
+        ],
+        image: "/images/conditions/anxiety-treatment-07.webp",
+        imageAlt:
+          "Therapist guiding a client through a breathing exercise",
+      },
+      faq: {
+        title:
+          "Frequently Asked Questions About OCD Treatment in Glendale, AZ",
+        items: [
+          {
+            question:
+              "Is OCD treatment in Glendale, AZ provided in a residential setting for men?",
+            answer:
+              "Yes. Glendale provides residential recovery care specifically for male clients, meaning men stay within the treatment environment rather than returning home after daytime programming. Desert Recovery Centers provides focused OCD treatment in Glendale, AZ for men whose individual circumstances and treatment needs are suited to a structured residential level of care.",
+          },
+          {
+            question:
+              "Can residential OCD care in Glendale help when compulsive routines interfere with everyday responsibilities?",
+            answer:
+              "Residential treatment provides dedicated space away from many ordinary demands, which can allow greater attention to OCD-related concerns when compulsive patterns significantly disrupt everyday functioning. [Desert Recovery Centers](https://desertrecoverycenters.com/) provides men with a structured Glendale recovery environment where treatment remains a consistent part of daily life.",
+          },
+          {
+            question:
+              "How does OCD treatment in Glendale, AZ differ from the Phoenix program?",
+            answer:
+              "Glendale is a residential recovery setting specifically for men, so clients stay within the treatment environment. Phoenix instead provides PHP and outpatient programming for both men and women without overnight stays. Desert Recovery Centers uses these distinct program settings to accommodate different populations and levels of behavioral health care.",
+          },
+        ],
+      },
+      map: {
+        variant: "gbp",
+        gbpLocationIndex: 0,
+        heading:
+          "Residential OCD Treatment in Glendale, AZ – Local Service Coverage",
+        subtext:
+          "Desert Recovery Centers provides residential OCD care in Glendale, AZ specifically for men seeking a structured recovery environment. Male clients stay within the residential setting while addressing obsessive thoughts, compulsive patterns, and related concerns. This local residential model provides dedicated space for behavioral health treatment while temporarily reducing many everyday responsibilities and distractions that can compete with recovery.",
+      },
+    },
+  },
+
+  "/locations/scottsdale/ocd-treatment": {
+    metaTitle: "Compassionate OCD Treatment in Scottsdale, AZ | DRC",
+    metaDescription:
+      "Desert Recovery Centers offers compassionate OCD treatment in Scottsdale, AZ within a residential recovery setting for women. Call Now!",
+    copy: {
+      path: "/locations/scottsdale/ocd-treatment",
+      hero: {
+        eyebrow: "Scottsdale, AZ",
+        headline: "Compassionate OCD Treatment in Scottsdale, AZ",
+        subtext:
+          "Desert Recovery Centers provides compassionate OCD treatment in Scottsdale, AZ within a residential recovery center specifically for women. Female clients stay in the treatment environment while focusing on obsessive thoughts, compulsive behaviors, and related concerns. This residential setting provides dedicated space for therapeutic participation while reducing many everyday responsibilities and distractions that can compete with recovery.",
+        image:
+          "/images/scottsdale/DRC-SERANITY-NORTH-SCOTTSDALE-08-01-2024-August-01-202400001-2.jpg",
+      },
+      benefits: {
+        heading:
+          "Benefits of Compassionate OCD Treatment in Scottsdale, AZ at Desert Recovery Centers",
+        subheading: "Focused Residential Support for Women",
+        items: [
+          {
+            title: "Dedicated Care in a Women’s Residential Setting",
+            text: "Desert Recovery Centers provides residential recovery care specifically for women at the Scottsdale location. Female clients stay within the treatment environment instead of returning home after scheduled programming, providing greater continuity while they focus on OCD-related concerns and participate consistently in their individual treatment process.",
+          },
+          {
+            title: "Attention to Patterns That Affect Everyday Life",
+            text: "OCD may involve intrusive thoughts, repetitive behaviors, mental rituals, or patterns that interfere with ordinary routines. Women receiving compassionate OCD treatment in Scottsdale, AZ have dedicated space to focus on how these concerns affect their individual lives without simultaneously managing the full range of household, professional, and social responsibilities.",
+          },
+          {
+            title: "Residential Structure That Supports Consistency",
+            text: "Maintaining treatment participation alongside disruptive obsessive or compulsive patterns can be challenging. Desert Recovery Centers provides a structured residential environment where recovery remains a daily priority, reducing repeated transitions between treatment and home while giving women a consistent setting in which to focus on behavioral health concerns.",
+          },
+        ],
+        image: "/images/conditions/anxiety-treatment-04.webp",
+        imageAlt:
+          "Open lounge area in a residential treatment setting",
+      },
+      why: {
+        heading:
+          "Why Compassionate OCD Treatment in Scottsdale, AZ Matters",
+        subheading: "Support Beyond Everyday Disruptions",
+        items: [
+          {
+            title: "OCD Can Affect More Than a Single Routine",
+            text: "Obsessive thoughts and compulsive behaviors can influence work, relationships, household activities, social situations, and personal routines. When these patterns consume significant attention or make ordinary activities difficult, structured treatment can provide dedicated time to address their impact and focus more consistently on behavioral health needs.",
+          },
+          {
+            title: "Everyday Demands Can Compete With Treatment",
+            text: "Professional schedules, family responsibilities, social obligations, and household demands may make it difficult to give recovery sustained attention. Women in [Scottsdale, AZ](https://www.scottsdaleaz.gov/) may benefit from residential care when stepping away from those competing responsibilities provides needed space to focus more closely on OCD-related concerns.",
+          },
+          {
+            title: "Familiar Settings May Reinforce Difficult Patterns",
+            text: "Obsessive or compulsive patterns can become closely connected with particular routines, spaces, objects, or situations encountered at home. A residential recovery environment temporarily changes that everyday context, providing women with structured space where treatment can become the primary focus instead of continually competing with established routines and familiar pressures.",
+          },
+        ],
+        image: "/images/conditions/anxiety-treatment-05.webp",
+        imageAlt:
+          "Therapist and client in an individual counseling session",
+      },
+      faq: {
+        title:
+          "Frequently Asked Questions About OCD Treatment in Scottsdale, AZ",
+        items: [
+          {
+            question:
+              "Can women receive residential OCD treatment in Scottsdale, AZ?",
+            answer:
+              "Yes. The Scottsdale recovery center provides residential behavioral health care specifically for women, meaning female clients stay within the treatment environment while participating in care. Desert Recovery Centers provides compassionate OCD treatment in Scottsdale, AZ for women whose circumstances and treatment needs are appropriate for a structured residential recovery setting.",
+          },
+          {
+            question:
+              "When might a woman consider residential OCD care in Scottsdale, AZ?",
+            answer:
+              "Residential care may be considered when obsessive thoughts or compulsive patterns significantly interfere with everyday functioning and an individual needs greater treatment structure. Desert Recovery Centers provides women with a dedicated Scottsdale residential environment where they can temporarily step away from many outside demands and devote more consistent attention to recovery.",
+          },
+          {
+            question:
+              "What should women expect when preparing for OCD treatment in Scottsdale, AZ?",
+            answer:
+              "Women should understand that Scottsdale provides residential rather than daytime-only outpatient care, so clients stay within the recovery setting during treatment. Specific preparation needs depend on individual circumstances and program guidance. [Desert Recovery Centers](https://desertrecoverycenters.com/) can provide relevant information about what applies before a female client begins residential care.",
+          },
+        ],
+      },
+      map: {
+        variant: "gbp",
+        gbpLocationIndex: 1,
+        heading:
+          "Residential OCD Treatment in Scottsdale, AZ – Local Service Coverage",
+        subtext:
+          "Desert Recovery Centers provides residential OCD care in Scottsdale, AZ specifically for women seeking a structured environment for recovery. Female clients stay within the residential setting while addressing obsessive thoughts, compulsive patterns, and related behavioral health concerns. This local treatment model provides dedicated space away from many everyday demands while keeping therapeutic participation and recovery at the center of daily life.",
+      },
+    },
+  },
+
+
+  // ─── Personality Disorder Treatment (September '26) ──────────────
+
+  "/locations/phoenix-php-iop/personality-disorder-treatment": {
+    metaTitle: "Comprehensive Personality Disorder Treatment in Phoenix, AZ | DRC",
+    metaDescription:
+      "Desert Recovery Centers offers comprehensive personality disorder treatment in Phoenix, AZ through structured outpatient care. Call Now!",
+    copy: {
+      path: "/locations/phoenix-php-iop/personality-disorder-treatment",
+      hero: {
+        eyebrow: "Phoenix, AZ",
+        headline: "Comprehensive Personality Disorder Treatment in Phoenix, AZ",
+        subtext:
+          "Desert Recovery Centers provides comprehensive personality disorder treatment in Phoenix, AZ through PHP and outpatient programming for both men and women. Clients attend structured daytime care and return home afterward rather than staying overnight. This non-residential model provides meaningful behavioral health support while allowing individuals to remain connected to their homes, relationships, responsibilities, and everyday routines.",
+        image:
+          "/images/locations/php-iop/php-iop-group-therapy-1.jpg",
+      },
+      benefits: {
+        heading:
+          "Benefits of Comprehensive Personality Disorder Treatment in Phoenix, AZ at Desert Recovery Centers",
+        subheading: "Structured Care for Daily Progress",
+        items: [
+          {
+            title: "Different Levels of Structured Daytime Programming",
+            text: "Individual behavioral health needs can require different levels of support. Desert Recovery Centers offers PHP and outpatient program options in Phoenix, including programming that may involve approximately five to six hours per day, five days per week, providing substantial treatment structure while clients continue living at home rather than staying overnight.",
+          },
+          {
+            title: "Support Connected to Everyday Relationships and Routines",
+            text: "Personality-related concerns can affect communication, relationships, emotional responses, and recurring patterns in daily life. Receiving comprehensive personality disorder treatment in Phoenix, AZ while living at home allows clients to remain connected to everyday experiences while participating consistently in scheduled behavioral health programming.",
+          },
+          {
+            title: "Non-Residential Care for Men and Women",
+            text: "Desert Recovery Centers serves both male and female clients through the Phoenix PHP and outpatient setting. Clients attend daytime programming before returning home, providing a treatment option for individuals who need structured behavioral health support without the residential stay associated with the gender-specific Glendale and Scottsdale recovery centers.",
+          },
+        ],
+        image: "/images/conditions/bipolar-disorder-treatment-05.webp",
+        imageAlt:
+          "Client sitting quietly with a warm drink in a treatment lounge",
+      },
+      why: {
+        heading:
+          "Why Comprehensive Personality Disorder Treatment in Phoenix, AZ Matters",
+        subheading: "Support for Lasting Behavioral Patterns",
+        items: [
+          {
+            title: "Recurring Patterns Can Affect Relationships",
+            text: "Personality-related difficulties may influence communication, emotional responses, boundaries, conflict, and interactions with other people. When recurring patterns repeatedly disrupt relationships or everyday functioning, structured behavioral health treatment provides dedicated opportunities to examine these concerns and focus on healthier ways of navigating situations that have become difficult.",
+          },
+          {
+            title: "Everyday Situations Can Reveal Ongoing Challenges",
+            text: "Workplaces, family interactions, friendships, and other routine situations may highlight patterns that are difficult to recognize outside their real-world context. For adults throughout [Phoenix, AZ](https://www.phoenix.gov/), outpatient treatment allows behavioral health care to remain connected to the environments and relationships clients continue navigating between scheduled treatment sessions.",
+          },
+          {
+            title: "Structured Support Does Not Always Require Residential Care",
+            text: "Some individuals can benefit from meaningful treatment structure while continuing to live safely at home. PHP and outpatient programming provides scheduled behavioral health care without an overnight stay, allowing clients to work on persistent interpersonal or emotional patterns while remaining connected to important responsibilities outside treatment hours.",
+          },
+        ],
+        image: "/images/conditions/anxiety-treatment-08.webp",
+        imageAlt:
+          "Client talking with a therapist in a one-to-one session",
+      },
+      faq: {
+        title:
+          "Frequently Asked Questions About Personality Disorder Treatment in Phoenix, AZ",
+        items: [
+          {
+            question:
+              "Is personality disorder treatment in Phoenix, AZ available without an overnight stay?",
+            answer:
+              "Yes. Phoenix provides PHP and outpatient behavioral health programming rather than residential overnight care. Both men and women attend structured daytime treatment and return home afterward. Desert Recovery Centers provides comprehensive personality disorder treatment in Phoenix, AZ for clients whose individual circumstances and treatment needs are appropriate for a non-residential level of care.",
+          },
+          {
+            question:
+              "Can outpatient personality disorder treatment in Phoenix help with recurring relationship difficulties?",
+            answer:
+              "Structured behavioral health treatment can provide dedicated opportunities to address persistent emotional, interpersonal, or behavioral patterns that affect relationships and daily functioning. [Desert Recovery Centers](https://desertrecoverycenters.com/) provides PHP and outpatient care for men and women in Phoenix while clients continue navigating their relationships and everyday environments outside scheduled programming.",
+          },
+          {
+            question:
+              "How intensive can PHP for personality disorder treatment in Phoenix, AZ be?",
+            answer:
+              "The amount of care depends on the program and individual treatment needs. Some Phoenix programming may involve approximately five to six hours per day, five days per week. Desert Recovery Centers offers different PHP and outpatient options, providing structured daytime behavioral health support while clients continue living at home rather than entering residential care.",
+          },
+        ],
+      },
+      map: {
+        variant: "gbp",
+        gbpLocationIndex: 2,
+        heading:
+          "Outpatient Personality Disorder Treatment in Phoenix, AZ – Local Service Coverage",
+        subtext:
+          "Desert Recovery Centers provides outpatient personality disorder care in Phoenix, AZ for both men and women seeking structured behavioral health support without an overnight stay. Through PHP and outpatient programming, clients attend scheduled daytime treatment while continuing to live at home, keeping care connected to personal relationships, family responsibilities, work obligations, and everyday experiences throughout the Phoenix community.",
+      },
+    },
+  },
+
+  "/locations/glendale/personality-disorder-treatment": {
+    metaTitle: "Specialized Personality Disorder Treatment in Glendale, AZ | DRC",
+    metaDescription:
+      "Desert Recovery Centers offers specialized personality disorder treatment in Glendale, AZ in a residential recovery setting for men. Call Now!",
+    copy: {
+      path: "/locations/glendale/personality-disorder-treatment",
+      hero: {
+        eyebrow: "Glendale, AZ",
+        headline: "Specialized Personality Disorder Treatment in Glendale, AZ",
+        subtext:
+          "Desert Recovery Centers provides specialized personality disorder treatment in Glendale, AZ within a residential recovery center specifically for men. Male clients stay in a structured environment where behavioral health treatment remains a consistent daily focus. This residential model creates dedicated space to address emotional, interpersonal, and behavioral patterns while temporarily stepping away from many outside pressures and responsibilities.",
+        image:
+          "/images/glendale/Glendale-Group-Room.jpg",
+      },
+      benefits: {
+        heading:
+          "Benefits of Specialized Personality Disorder Treatment in Glendale, AZ at Desert Recovery Centers",
+        subheading: "Focused Residential Support for Men",
+        items: [
+          {
+            title: "Residential Care Centered on Male Clients",
+            text: "Desert Recovery Centers provides a residential recovery environment specifically for men at the Glendale location. Male clients stay within the treatment setting instead of returning home after scheduled programming, creating greater continuity and dedicated space for addressing persistent behavioral health concerns without the same transitions between treatment and everyday life.",
+          },
+          {
+            title: "Consistent Attention to Individual Patterns",
+            text: "Personality-related concerns can affect emotional responses, communication, relationships, and behavior in different ways. Men receiving specialized personality disorder treatment in Glendale, AZ have a structured setting where they can focus on their individual patterns and treatment needs while temporarily reducing many competing responsibilities and distractions from outside the recovery environment.",
+          },
+          {
+            title: "A Reliable Environment for Ongoing Participation",
+            text: "Maintaining consistent treatment engagement can become challenging when everyday pressures compete for attention. Desert Recovery Centers provides a residential environment where recovery remains integrated into daily life, allowing men to participate in behavioral health care without repeatedly shifting between a treatment setting and the routines or demands of living at home.",
+          },
+        ],
+        image: "/images/conditions/bipolar-disorder-treatment-02.webp",
+        imageAlt:
+          "Client talking with a therapist in an individual session",
+      },
+      why: {
+        heading:
+          "Why Specialized Personality Disorder Treatment in Glendale, AZ Matters",
+        subheading: "Addressing Patterns Affecting Daily Life",
+        items: [
+          {
+            title: "Interpersonal Difficulties Can Affect Multiple Relationships",
+            text: "Persistent patterns involving communication, emotional responses, boundaries, or conflict can influence family relationships, friendships, work interactions, and other areas of life. Structured behavioral health care creates dedicated opportunities to examine concerns that repeatedly interfere with relationships and make everyday interactions more difficult to navigate.",
+          },
+          {
+            title: "Outside Pressures Can Make Focused Treatment Difficult",
+            text: "Employment, household responsibilities, relationship demands, and other obligations can compete with sustained attention to recovery. For men in and around [Glendale, AZ](https://www.glendaleaz.com/), residential treatment provides an environment where some outside pressures can temporarily recede while behavioral health care becomes a more consistent daily priority.",
+          },
+          {
+            title: "Greater Structure Can Help When Patterns Disrupt Functioning",
+            text: "When recurring emotional or behavioral patterns interfere significantly with routines and relationships, managing treatment alongside ordinary responsibilities may become challenging. A residential setting provides men with greater daily structure and dedicated recovery space, reducing some of the competing demands that can make consistent participation more difficult.",
+          },
+        ],
+        image: "/images/conditions/bipolar-disorder-treatment-03.webp",
+        imageAlt:
+          "Group therapy session with a clinician leading the discussion",
+      },
+      faq: {
+        title:
+          "Frequently Asked Questions About Personality Disorder Treatment in Glendale, AZ",
+        items: [
+          {
+            question:
+              "Is personality disorder treatment in Glendale, AZ residential and specifically for men?",
+            answer:
+              "Yes. The Glendale recovery center provides residential behavioral health care specifically for male clients. Men stay within the treatment environment rather than returning home after daytime programming. Desert Recovery Centers provides specialized personality disorder treatment in Glendale, AZ for men whose individual needs are suited to a structured residential recovery setting.",
+          },
+          {
+            question:
+              "Can residential personality disorder treatment in Glendale help when relationship patterns keep causing problems?",
+            answer:
+              "Structured treatment can provide dedicated opportunities to address recurring emotional, interpersonal, and behavioral patterns that affect relationships and everyday functioning. Desert Recovery Centers provides men with a residential Glendale environment where treatment remains part of daily life, allowing greater focus on these concerns while temporarily reducing many outside responsibilities and distractions.",
+          },
+          {
+            question:
+              "What should a man expect when entering personality disorder treatment in Glendale, AZ?",
+            answer:
+              "Clients should expect a residential rather than daytime-only treatment environment, meaning men stay within the recovery setting during care. Specific treatment needs vary by individual. [Desert Recovery Centers](https://desertrecoverycenters.com/) provides the Glendale residential setting specifically for men who may benefit from greater structure and dedicated behavioral health support.",
+          },
+        ],
+      },
+      map: {
+        variant: "gbp",
+        gbpLocationIndex: 0,
+        heading:
+          "Residential Personality Disorder Treatment in Glendale, AZ – Local Service Coverage",
+        subtext:
+          "Desert Recovery Centers provides residential personality disorder care in Glendale, AZ specifically for men seeking structured behavioral health support. Male clients stay within the recovery environment while addressing emotional, interpersonal, and behavioral patterns that may affect everyday functioning. This residential treatment model creates dedicated recovery space while temporarily reducing many outside demands that can compete with consistent therapeutic participation.",
+      },
+    },
+  },
+
+  "/locations/scottsdale/personality-disorder-treatment": {
+    metaTitle: "Individualized Personality Disorder Treatment in Scottsdale, AZ | DRC",
+    metaDescription:
+      "Desert Recovery Centers offers individualized personality disorder treatment in Scottsdale, AZ with residential care for women. Call Now!",
+    copy: {
+      path: "/locations/scottsdale/personality-disorder-treatment",
+      hero: {
+        eyebrow: "Scottsdale, AZ",
+        headline: "Individualized Personality Disorder Treatment in Scottsdale, AZ",
+        subtext:
+          "Desert Recovery Centers provides individualized personality disorder treatment in Scottsdale, AZ within a residential recovery center specifically for women. Female clients stay in a structured treatment environment where they can focus on emotional, interpersonal, and behavioral patterns affecting daily life. Residential care creates dedicated recovery space while reducing many outside demands that can compete with consistent therapeutic participation.",
+        image:
+          "/images/scottsdale/DRC-VHARMONY-ROOM-NORTH-SCOTTSDALE-08-01-2024-0631August-01-202400010-2.jpg",
+      },
+      benefits: {
+        heading:
+          "Benefits of Individualized Personality Disorder Treatment in Scottsdale, AZ at Desert Recovery Centers",
+        subheading: "Residential Care Focused on Women",
+        items: [
+          {
+            title: "Individual Attention Within a Women’s Residential Setting",
+            text: "Desert Recovery Centers provides residential behavioral health care specifically for women at the Scottsdale location. Female clients stay within the recovery environment throughout treatment, creating dedicated space to focus on individual emotional and interpersonal concerns without repeatedly transitioning between scheduled care and the demands of their usual home routines.",
+          },
+          {
+            title: "A Structured Process for Recurring Behavioral Patterns",
+            text: "Personality-related concerns can appear through repeated reactions, relationship difficulties, communication patterns, or challenges managing emotions. Women receiving individualized personality disorder treatment in Scottsdale, AZ can participate in a structured recovery process where these concerns receive focused attention while treatment remains a consistent part of daily life.",
+          },
+          {
+            title: "Continuity Without Daily Transitions Home",
+            text: "Residential treatment allows women to remain in a recovery-focused environment rather than leaving after each day of programming. Desert Recovery Centers provides this continuity so female clients can devote more attention to behavioral health care while temporarily reducing the household, professional, social, and other responsibilities that may otherwise compete with treatment.",
+          },
+        ],
+        image: "/images/conditions/bipolar-disorder-treatment-04.webp",
+        imageAlt:
+          "Clinician taking notes while a client speaks during a session",
+      },
+      why: {
+        heading:
+          "Why Individualized Personality Disorder Treatment in Scottsdale, AZ Matters",
+        subheading: "Support for Complex Daily Patterns",
+        items: [
+          {
+            title: "Recurring Emotional Patterns Can Disrupt Daily Life",
+            text: "Persistent difficulties involving emotions, reactions, relationships, or behavior may affect multiple areas of everyday functioning. When the same challenges continue appearing across different situations, structured behavioral health treatment can provide dedicated time and space to examine those patterns rather than repeatedly managing their consequences within ordinary routines.",
+          },
+          {
+            title: "Relationship Challenges Can Create Ongoing Stress",
+            text: "Difficulties with communication, boundaries, trust, conflict, or emotional responses can affect family relationships, friendships, and professional interactions. When these concerns become persistent, focused treatment can provide women with an environment centered on understanding behavioral patterns and addressing the ways they influence important relationships and everyday experiences.",
+          },
+          {
+            title: "Stepping Away From Busy Routines Can Create Recovery Space",
+            text: "Professional obligations, family responsibilities, and social commitments can compete with focused behavioral health care. For women living in or around [Scottsdale, AZ](https://www.scottsdaleaz.gov/), residential treatment can provide temporary distance from those demands while creating dedicated time for therapeutic participation and recovery.",
+          },
+        ],
+        image: "/images/conditions/bipolar-disorder-treatment-10.webp",
+        imageAlt:
+          "Client writing in a workbook beside a clinician during a session",
+      },
+      faq: {
+        title:
+          "Frequently Asked Questions About Personality Disorder Treatment in Scottsdale, AZ",
+        items: [
+          {
+            question:
+              "Can women receive residential personality disorder treatment in Scottsdale, AZ?",
+            answer:
+              "Yes. Scottsdale provides residential behavioral health care specifically for women, meaning female clients stay within the recovery environment during treatment. Desert Recovery Centers provides individualized personality disorder treatment in Scottsdale, AZ for women whose circumstances and treatment needs are suited to a structured setting with greater separation from everyday outside responsibilities.",
+          },
+          {
+            question:
+              "Can personality disorder treatment in Scottsdale help women experiencing recurring relationship conflicts?",
+            answer:
+              "Structured behavioral health care can provide dedicated opportunities to address emotional, interpersonal, and behavioral patterns that repeatedly affect relationships or daily functioning. [Desert Recovery Centers](https://desertrecoverycenters.com/) provides women with a residential Scottsdale setting where they can focus on these concerns while temporarily stepping away from many competing routines and responsibilities.",
+          },
+          {
+            question:
+              "How does residential personality disorder care in Scottsdale, AZ differ from Phoenix treatment?",
+            answer:
+              "Scottsdale provides residential recovery care specifically for women, so clients stay within the treatment environment. Phoenix instead provides PHP and outpatient programming for both men and women without overnight stays. Desert Recovery Centers uses these distinct settings to provide different treatment environments based on location, population, and the appropriate level of care.",
+          },
+        ],
+      },
+      map: {
+        variant: "gbp",
+        gbpLocationIndex: 1,
+        heading:
+          "Residential Personality Disorder Treatment in Scottsdale, AZ – Local Service Coverage",
+        subtext:
+          "Desert Recovery Centers provides residential personality disorder care in Scottsdale, AZ specifically for women seeking a structured behavioral health environment. Female clients stay within the recovery setting while focusing on emotional, interpersonal, and behavioral concerns. This women-focused residential model provides dedicated space for treatment while temporarily reducing many everyday responsibilities, distractions, and outside pressures that can compete with recovery.",
+      },
+    },
+  },
+
+
+  // ─── ADHD Treatment (September '26) ─────────────────────────────
+
+  "/locations/phoenix-php-iop/adhd-treatment": {
+    metaTitle: "Professional ADHD Treatment in Phoenix, AZ | DRC",
+    metaDescription:
+      "Desert Recovery Centers offers professional ADHD treatment in Phoenix, AZ through structured PHP and outpatient care. Call Now!",
+    copy: {
+      path: "/locations/phoenix-php-iop/adhd-treatment",
+      hero: {
+        eyebrow: "Phoenix, AZ",
+        headline: "Professional ADHD Treatment in Phoenix, AZ",
+        subtext:
+          "Desert Recovery Centers provides professional ADHD treatment in Phoenix, AZ through PHP and outpatient programming for both men and women. Clients participate in structured daytime care without staying overnight, allowing them to return home after programming. Different treatment options provide support while keeping clients connected to everyday responsibilities, relationships, and routines outside scheduled care.",
+        image:
+          "/images/locations/php-iop/php-iop-classroom-1.jpg",
+      },
+      benefits: {
+        heading:
+          "Benefits of Professional ADHD Treatment in Phoenix, AZ at Desert Recovery Centers",
+        subheading: "Structured Support for Daily Challenges",
+        items: [
+          {
+            title: "Daytime Programming Without an Overnight Stay",
+            text: "Desert Recovery Centers provides PHP and outpatient behavioral health care at the Phoenix location, allowing men and women to participate in structured programming before returning home. This approach provides dedicated treatment time without requiring clients to move into a residential recovery environment or remain at the center overnight.",
+          },
+          {
+            title: "Programming With Different Levels of Structure",
+            text: "Individual treatment needs can differ, so Desert Recovery Centers offers different outpatient program options in Phoenix. Some programming may involve approximately five to six hours per day, five days per week, providing substantial daytime structure for clients who need more support while still continuing to live within their own homes.",
+          },
+          {
+            title: "Care That Remains Connected to Everyday Responsibilities",
+            text: "Attention, organization, concentration, and related difficulties can become particularly noticeable while managing work, education, household responsibilities, or relationships. Professional ADHD treatment in Phoenix, AZ allows clients to participate in structured care while continuing to encounter and navigate their regular responsibilities outside scheduled programming.",
+          },
+        ],
+        image: "/images/conditions/anxiety-treatment-01.webp",
+        imageAlt:
+          "Quiet seating area beside a window in an outpatient setting",
+      },
+      why: {
+        heading:
+          "Why Professional ADHD Treatment in Phoenix, AZ Matters",
+        subheading: "Support for Everyday Functioning",
+        items: [
+          {
+            title: "Attention Difficulties Can Affect Important Responsibilities",
+            text: "Challenges with attention, organization, task completion, or concentration may interfere with work, education, household responsibilities, and personal commitments. When these difficulties repeatedly affect everyday functioning, structured behavioral health treatment can provide dedicated opportunities to address concerns and better understand patterns that make daily responsibilities harder to navigate.",
+          },
+          {
+            title: "Busy Schedules Can Magnify Organizational Challenges",
+            text: "Managing commuting, appointments, family obligations, work schedules, or education can require consistent organization and attention. For adults throughout [Phoenix, AZ](https://www.phoenix.gov/), behavioral health support can be valuable when attention-related difficulties repeatedly interfere with managing the responsibilities and routines associated with everyday life.",
+          },
+          {
+            title: "Non-Residential Care Can Preserve Daily Connections",
+            text: "Not every person seeking structured ADHD support needs an overnight residential environment. PHP and outpatient programming allows appropriate clients to participate in scheduled daytime treatment while continuing to live at home, providing a way to receive consistent behavioral health care without completely separating from family life and everyday routines.",
+          },
+        ],
+        image: "/images/conditions/depression-treatment-07.webp",
+        imageAlt:
+          "Client speaking with a clinician during an outpatient session",
+      },
+      faq: {
+        title:
+          "Frequently Asked Questions About ADHD Treatment in Phoenix, AZ",
+        items: [
+          {
+            question:
+              "Can adults receive ADHD treatment in Phoenix, AZ without staying overnight?",
+            answer:
+              "Yes. The Phoenix location provides PHP and outpatient programming rather than residential overnight care. Both men and women can attend structured daytime treatment and return home afterward. Desert Recovery Centers provides professional ADHD treatment in Phoenix, AZ for clients whose individual circumstances and treatment needs are appropriate for this non-residential level of care.",
+          },
+          {
+            question:
+              "Can Phoenix ADHD treatment help when attention problems interfere with work or everyday responsibilities?",
+            answer:
+              "Structured behavioral health treatment can provide dedicated time to address attention, organization, concentration, and related concerns affecting everyday functioning. Desert Recovery Centers provides PHP and outpatient programming in Phoenix, allowing clients to receive support while continuing to encounter work, household, relationship, and other real-world responsibilities outside their scheduled treatment hours.",
+          },
+          {
+            question:
+              "How much time can PHP for ADHD treatment in Phoenix, AZ involve?",
+            answer:
+              "The schedule depends on the program and individual treatment needs. Some Phoenix programming may involve approximately five to six hours per day, five days per week. Desert Recovery Centers offers different PHP and outpatient options, providing structured daytime care while clients continue living at home instead of entering an overnight residential setting.",
+          },
+        ],
+      },
+      map: {
+        variant: "gbp",
+        gbpLocationIndex: 2,
+        heading:
+          "Outpatient ADHD Treatment in Phoenix, AZ – Local Service Coverage",
+        subtext:
+          "[Desert Recovery Centers](https://desertrecoverycenters.com/) provides outpatient ADHD care in Phoenix, AZ for both men and women seeking structured behavioral health support while continuing to live at home. Through PHP and outpatient programming, clients attend daytime care without an overnight stay, keeping treatment connected to work, family responsibilities, personal routines, and everyday experiences throughout the Phoenix community.",
+      },
+    },
+  },
+
+  "/locations/glendale/adhd-treatment": {
+    metaTitle: "Dedicated ADHD Treatment in Glendale, AZ | DRC",
+    metaDescription:
+      "Desert Recovery Centers offers dedicated ADHD treatment in Glendale, AZ within a structured residential recovery setting for men. Call Now!",
+    copy: {
+      path: "/locations/glendale/adhd-treatment",
+      hero: {
+        eyebrow: "Glendale, AZ",
+        headline: "Dedicated ADHD Treatment in Glendale, AZ",
+        subtext:
+          "Desert Recovery Centers provides dedicated ADHD treatment in Glendale, AZ within a residential recovery center specifically for men. Male clients stay in a structured treatment environment where they can focus on attention, organization, behavioral patterns, and related concerns. Residential care creates dedicated recovery space while temporarily reducing many outside responsibilities and distractions that can compete with consistent treatment participation.",
+        image:
+          "/images/glendale/Glendale-Workspace.jpg",
+      },
+      benefits: {
+        heading:
+          "Benefits of Dedicated ADHD Treatment in Glendale, AZ at Desert Recovery Centers",
+        subheading: "Structured Residential Support for Men",
+        items: [
+          {
+            title: "A Consistent Environment for Daily Participation",
+            text: "Desert Recovery Centers provides men with residential care that keeps treatment integrated into their daily environment. Instead of moving between scheduled programming and home each day, male clients remain within the recovery setting, creating greater continuity while addressing attention-related difficulties and other behavioral health concerns affecting everyday functioning.",
+          },
+          {
+            title: "Focused Support for Individual Attention Challenges",
+            text: "ADHD-related difficulties can affect organization, concentration, task completion, time management, and other aspects of daily life differently for each person. Men receiving dedicated ADHD treatment in Glendale, AZ have structured space to focus on their individual concerns without simultaneously managing the full range of work, household, and social responsibilities.",
+          },
+          {
+            title: "Residential Care Designed Specifically for Men",
+            text: "The Glendale recovery center serves male clients in a residential setting rather than operating as a mixed-gender outpatient program. Desert Recovery Centers provides an environment where men can temporarily step away from many outside demands, allowing behavioral health treatment and recovery-focused participation to become a more consistent part of daily life.",
+          },
+        ],
+        image: "/images/conditions/depression-treatment-06.webp",
+        imageAlt:
+          "Therapist guiding a client through a grounding exercise",
+      },
+      why: {
+        heading:
+          "Why Dedicated ADHD Treatment in Glendale, AZ Matters",
+        subheading: "Support for Everyday Attention Challenges",
+        items: [
+          {
+            title: "Organization Difficulties Can Affect Daily Responsibilities",
+            text: "Challenges with planning, concentration, task completion, or managing time can interfere with work, household routines, appointments, and other responsibilities. When attention-related concerns repeatedly disrupt everyday functioning, structured behavioral health treatment can provide dedicated opportunities to address those difficulties within an environment centered on recovery.",
+          },
+          {
+            title: "Competing Responsibilities Can Make Focus Difficult",
+            text: "Employment, family obligations, appointments, and household demands can create a complicated daily schedule for anyone already struggling with attention or organization. For men in [Glendale, AZ](https://www.glendaleaz.com/), residential care can temporarily reduce some of those competing pressures while creating dedicated space for treatment.",
+          },
+          {
+            title: "A Structured Setting Can Reduce Everyday Distractions",
+            text: "Familiar environments may contain numerous responsibilities, interruptions, and distractions that make sustained treatment participation challenging. Residential care gives men an opportunity to step away from many of these competing demands, allowing behavioral health concerns to receive greater attention within a consistent setting rather than fitting recovery around an already demanding routine.",
+          },
+        ],
+        image: "/images/conditions/depression-treatment-02.webp",
+        imageAlt:
+          "Group therapy session with participants seated in a circle",
+      },
+      faq: {
+        title:
+          "Frequently Asked Questions About ADHD Treatment in Glendale, AZ",
+        items: [
+          {
+            question:
+              "Is ADHD treatment in Glendale, AZ provided in a residential setting for men?",
+            answer:
+              "Yes. The Glendale recovery center provides residential behavioral health care specifically for male clients, so men stay within the treatment environment during care. Desert Recovery Centers provides dedicated ADHD treatment in Glendale, AZ for men whose individual circumstances and treatment needs are suited to a structured residential recovery setting.",
+          },
+          {
+            question:
+              "When might a man consider residential ADHD care in Glendale, AZ?",
+            answer:
+              "Residential care may be considered when attention, organization, or related behavioral health concerns significantly interfere with everyday functioning and greater treatment structure is appropriate. Desert Recovery Centers provides male clients with a Glendale residential environment where they can temporarily reduce outside demands and devote more consistent attention to treatment and recovery.",
+          },
+          {
+            question:
+              "How is ADHD treatment in Glendale, AZ different from the Phoenix program?",
+            answer:
+              "Glendale provides residential recovery care specifically for men, meaning clients stay within the treatment environment. Phoenix provides PHP and outpatient programming for both men and women without overnight stays. [Desert Recovery Centers](https://desertrecoverycenters.com/) uses these distinct settings to provide different treatment environments based on location and level of care.",
+          },
+        ],
+      },
+      map: {
+        variant: "gbp",
+        gbpLocationIndex: 0,
+        heading:
+          "Residential ADHD Treatment in Glendale, AZ – Local Service Coverage",
+        subtext:
+          "Desert Recovery Centers provides residential ADHD care in Glendale, AZ specifically for men seeking a structured behavioral health environment. Male clients stay within the residential recovery setting while focusing on attention, organization, and related concerns. This local treatment model provides dedicated space for recovery while temporarily reducing many everyday responsibilities, distractions, and outside pressures that can compete with consistent treatment participation.",
+      },
+    },
+  },
+
 };
