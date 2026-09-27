@@ -9,7 +9,7 @@ import YouTubeEmbed from "@/components/YouTubeEmbed";
 import VideoTranscript from "@/components/VideoTranscript";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Free Mental Health Assessment | DRC",
+  title: "Free Mental Health Assessment | Desert Recovery Centers",
   description:
     "Take a free, confidential mental health self-assessment. 10 questions to help you understand your symptoms and explore treatment options in Arizona.",
   path: "/resources/mental-health-assessment",
@@ -18,7 +18,7 @@ export const metadata: Metadata = buildMetadata({
 export default function MentalHealthAssessmentPage() {
   return (
     <>
-      <MedicalWebPageSchema url="/resources/mental-health-assessment" name="Free Mental Health Assessment, DRC" dateModified="2026-04-08" />
+      <MedicalWebPageSchema url="/resources/mental-health-assessment" name="Free Mental Health Assessment, Desert Recovery Centers" dateModified="2026-04-08" />
       <VideoSchemas path="/resources/mental-health-assessment/" />
       <BreadcrumbSchema
         items={[

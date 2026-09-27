@@ -76,7 +76,7 @@ export default function TreatmentsPage() {
   return (
     <>
       <SchemaScript schema={[getFAQSchema(faqData["treatments"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/treatments"))]} />
-      <MedicalWebPageSchema url="/treatments" name="Evidence-Based Addiction & Mental Health Treatment Services | DRC" dateModified="2026-04-29" reviewer="carr" />
+      <MedicalWebPageSchema url="/treatments" name="Evidence-Based Addiction & Mental Health Treatment Services | Desert Recovery Centers" dateModified="2026-04-29" reviewer="carr" />
       <VideoSchemas path="/treatments/" />
       <Navigation />
       <Breadcrumb items={getBreadcrumbsFromPathname("/treatments")} />

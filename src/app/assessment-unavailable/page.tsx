@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 // domain, so this page must keep resolving for as long as that collateral
 // circulates. Not in sitemap.ts; noindex below.
 export const metadata: Metadata = {
-  title: "Assessment Temporarily Unavailable | DRC",
+  title: "Assessment Temporarily Unavailable | Desert Recovery Centers",
   description:
     "The depression assessment is temporarily unavailable. Call Desert Recovery Centers admissions at (623) 305-0496 for help.",
   robots: { index: false, follow: false },

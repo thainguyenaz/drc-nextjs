@@ -95,7 +95,7 @@ const facilities = [
 
 export const metadata: Metadata = {
   title:
-    "Our Luxury Addiction & Mental Health Treatment Facilities | DRC",
+    "Our Luxury Addiction & Mental Health Treatment Facilities | Desert Recovery Centers",
   description:
     "Desert Recovery Centers operates luxury residential treatment facilities in Glendale and Scottsdale, Arizona, and outpatient services in Phoenix. Tour our facilities today.",
   alternates: {

@@ -37,7 +37,7 @@ export const locationServiceCopy: Record<string, LocationServiceCopy> = {
   // ─── Anxiety Treatment ──────────────────────────────────────────
 
   "/locations/phoenix-php-iop/anxiety-treatment": {
-    metaTitle: "Compassionate Anxiety Treatment in Phoenix, AZ | DRC",
+    metaTitle: "Compassionate Anxiety Treatment in Phoenix, AZ | Desert Recovery Centers",
     metaDescription:
       "Desert Recovery Centers offers compassionate anxiety treatment in Phoenix, AZ with structured outpatient support. Call Now!",
     copy: {
@@ -128,7 +128,7 @@ export const locationServiceCopy: Record<string, LocationServiceCopy> = {
   },
 
   "/locations/glendale/anxiety-treatment": {
-    metaTitle: "Personalized Anxiety Treatment in Glendale, AZ | DRC",
+    metaTitle: "Personalized Anxiety Treatment in Glendale, AZ | Desert Recovery Centers",
     metaDescription:
       "Desert Recovery Centers offers personalized anxiety treatment in Glendale, AZ with residential care designed for men. Call Now!",
     copy: {
@@ -219,7 +219,7 @@ export const locationServiceCopy: Record<string, LocationServiceCopy> = {
   },
 
   "/locations/scottsdale/anxiety-treatment": {
-    metaTitle: "Supportive Anxiety Treatment in Scottsdale, AZ | DRC",
+    metaTitle: "Supportive Anxiety Treatment in Scottsdale, AZ | Desert Recovery Centers",
     metaDescription:
       "Desert Recovery Centers offers supportive anxiety treatment in Scottsdale, AZ with residential care specifically for women. Call Now!",
     copy: {
@@ -313,7 +313,7 @@ export const locationServiceCopy: Record<string, LocationServiceCopy> = {
   // ─── Depression Treatment ───────────────────────────────────────
 
   "/locations/phoenix-php-iop/depression-treatment": {
-    metaTitle: "Comprehensive Depression Treatment in Phoenix, AZ | DRC",
+    metaTitle: "Comprehensive Depression Treatment in Phoenix, AZ | Desert Recovery Centers",
     metaDescription:
       "Desert Recovery Centers offers comprehensive depression treatment in Phoenix, AZ through structured PHP and outpatient care. Call Now!",
     copy: {
@@ -404,7 +404,7 @@ export const locationServiceCopy: Record<string, LocationServiceCopy> = {
   },
 
   "/locations/glendale/depression-treatment": {
-    metaTitle: "Professional Depression Treatment in Glendale, AZ | DRC",
+    metaTitle: "Professional Depression Treatment in Glendale, AZ | Desert Recovery Centers",
     metaDescription:
       "Desert Recovery Centers offers professional depression treatment in Glendale, AZ in a residential recovery setting for men. Call Now!",
     copy: {
@@ -495,7 +495,7 @@ export const locationServiceCopy: Record<string, LocationServiceCopy> = {
   },
 
   "/locations/scottsdale/depression-treatment": {
-    metaTitle: "Specialized Depression Treatment in Scottsdale, AZ | DRC",
+    metaTitle: "Specialized Depression Treatment in Scottsdale, AZ | Desert Recovery Centers",
     metaDescription:
       "Desert Recovery Centers offers specialized depression treatment in Scottsdale, AZ with residential recovery care for women. Call Now!",
     copy: {
@@ -590,7 +590,7 @@ export const locationServiceCopy: Record<string, LocationServiceCopy> = {
 
   "/locations/phoenix-php-iop/ptsd-trauma-treatment": {
     metaTitle:
-      "Trauma-Informed PTSD and Trauma Treatment in Phoenix, AZ | DRC",
+      "Trauma-Informed PTSD and Trauma Treatment in Phoenix, AZ | Desert Recovery Centers",
     metaDescription:
       "Desert Recovery Centers offers trauma-informed PTSD and trauma treatment in Phoenix, AZ through structured outpatient care. Call Now!",
     copy: {
@@ -683,7 +683,7 @@ export const locationServiceCopy: Record<string, LocationServiceCopy> = {
 
   "/locations/glendale/ptsd-trauma-treatment": {
     metaTitle:
-      "Compassionate PTSD and Trauma Treatment in Glendale, AZ | DRC",
+      "Compassionate PTSD and Trauma Treatment in Glendale, AZ | Desert Recovery Centers",
     metaDescription:
       "Desert Recovery Centers offers compassionate PTSD and trauma treatment in Glendale, AZ with residential care for men. Call Now!",
     copy: {
@@ -775,7 +775,7 @@ export const locationServiceCopy: Record<string, LocationServiceCopy> = {
 
   "/locations/scottsdale/ptsd-trauma-treatment": {
     metaTitle:
-      "Individualized PTSD and Trauma Treatment in Scottsdale, AZ | DRC",
+      "Individualized PTSD and Trauma Treatment in Scottsdale, AZ | Desert Recovery Centers",
     metaDescription:
       "Desert Recovery Centers offers individualized PTSD and trauma treatment in Scottsdale, AZ with residential care for women. Call Now!",
     copy: {
@@ -870,7 +870,7 @@ export const locationServiceCopy: Record<string, LocationServiceCopy> = {
   // ─── Bipolar Disorder Treatment ─────────────────────────────────
 
   "/locations/phoenix-php-iop/bipolar-disorder-treatment": {
-    metaTitle: "Personalized Bipolar Disorder Treatment in Phoenix, AZ | DRC",
+    metaTitle: "Personalized Bipolar Disorder Treatment in Phoenix, AZ | Desert Recovery Centers",
     metaDescription:
       "Desert Recovery Centers offers personalized bipolar disorder treatment in Phoenix, AZ through structured PHP and outpatient care. Call Now!",
     copy: {
@@ -979,7 +979,7 @@ export const locationServiceCopy: Record<string, LocationServiceCopy> = {
   // ─── Bipolar Disorder Treatment (September '26) ─────────────────
 
   "/locations/glendale/bipolar-disorder-treatment": {
-    metaTitle: "Structured Bipolar Disorder Treatment in Glendale, AZ | DRC",
+    metaTitle: "Structured Bipolar Disorder Treatment in Glendale, AZ | Desert Recovery Centers",
     metaDescription:
       "Desert Recovery Centers offers structured bipolar disorder treatment in Glendale, AZ in a residential recovery setting for men. Call Now!",
     copy: {
@@ -1072,7 +1072,7 @@ export const locationServiceCopy: Record<string, LocationServiceCopy> = {
   },
 
   "/locations/scottsdale/bipolar-disorder-treatment": {
-    metaTitle: "Supportive Bipolar Disorder Treatment in Scottsdale, AZ | DRC",
+    metaTitle: "Supportive Bipolar Disorder Treatment in Scottsdale, AZ | Desert Recovery Centers",
     metaDescription:
       "Desert Recovery Centers offers supportive bipolar disorder treatment in Scottsdale, AZ with residential recovery care for women. Call Now!",
     copy: {
@@ -1168,7 +1168,7 @@ export const locationServiceCopy: Record<string, LocationServiceCopy> = {
   // ─── OCD Treatment (September '26) ──────────────────────────────
 
   "/locations/phoenix-php-iop/ocd-treatment": {
-    metaTitle: "Personalized OCD Treatment in Phoenix, AZ | DRC",
+    metaTitle: "Personalized OCD Treatment in Phoenix, AZ | Desert Recovery Centers",
     metaDescription:
       "Desert Recovery Centers offers personalized OCD treatment in Phoenix, AZ through structured PHP and outpatient care. Call Now!",
     copy: {
@@ -1261,7 +1261,7 @@ export const locationServiceCopy: Record<string, LocationServiceCopy> = {
   },
 
   "/locations/glendale/ocd-treatment": {
-    metaTitle: "Focused OCD Treatment in Glendale, AZ | DRC",
+    metaTitle: "Focused OCD Treatment in Glendale, AZ | Desert Recovery Centers",
     metaDescription:
       "Desert Recovery Centers offers focused OCD treatment in Glendale, AZ within a structured residential recovery setting for men. Call Now!",
     copy: {
@@ -1354,7 +1354,7 @@ export const locationServiceCopy: Record<string, LocationServiceCopy> = {
   },
 
   "/locations/scottsdale/ocd-treatment": {
-    metaTitle: "Compassionate OCD Treatment in Scottsdale, AZ | DRC",
+    metaTitle: "Compassionate OCD Treatment in Scottsdale, AZ | Desert Recovery Centers",
     metaDescription:
       "Desert Recovery Centers offers compassionate OCD treatment in Scottsdale, AZ within a residential recovery setting for women. Call Now!",
     copy: {
@@ -1450,7 +1450,7 @@ export const locationServiceCopy: Record<string, LocationServiceCopy> = {
   // ─── Personality Disorder Treatment (September '26) ──────────────
 
   "/locations/phoenix-php-iop/personality-disorder-treatment": {
-    metaTitle: "Comprehensive Personality Disorder Treatment in Phoenix, AZ | DRC",
+    metaTitle: "Comprehensive Personality Disorder Treatment in Phoenix, AZ | Desert Recovery Centers",
     metaDescription:
       "Desert Recovery Centers offers comprehensive personality disorder treatment in Phoenix, AZ through structured outpatient care. Call Now!",
     copy: {
@@ -1543,7 +1543,7 @@ export const locationServiceCopy: Record<string, LocationServiceCopy> = {
   },
 
   "/locations/glendale/personality-disorder-treatment": {
-    metaTitle: "Specialized Personality Disorder Treatment in Glendale, AZ | DRC",
+    metaTitle: "Specialized Personality Disorder Treatment in Glendale, AZ | Desert Recovery Centers",
     metaDescription:
       "Desert Recovery Centers offers specialized personality disorder treatment in Glendale, AZ in a residential recovery setting for men. Call Now!",
     copy: {
@@ -1636,7 +1636,7 @@ export const locationServiceCopy: Record<string, LocationServiceCopy> = {
   },
 
   "/locations/scottsdale/personality-disorder-treatment": {
-    metaTitle: "Individualized Personality Disorder Treatment in Scottsdale, AZ | DRC",
+    metaTitle: "Individualized Personality Disorder Treatment in Scottsdale, AZ | Desert Recovery Centers",
     metaDescription:
       "Desert Recovery Centers offers individualized personality disorder treatment in Scottsdale, AZ with residential care for women. Call Now!",
     copy: {
@@ -1732,7 +1732,7 @@ export const locationServiceCopy: Record<string, LocationServiceCopy> = {
   // ─── ADHD Treatment (September '26) ─────────────────────────────
 
   "/locations/phoenix-php-iop/adhd-treatment": {
-    metaTitle: "Professional ADHD Treatment in Phoenix, AZ | DRC",
+    metaTitle: "Professional ADHD Treatment in Phoenix, AZ | Desert Recovery Centers",
     metaDescription:
       "Desert Recovery Centers offers professional ADHD treatment in Phoenix, AZ through structured PHP and outpatient care. Call Now!",
     copy: {
@@ -1825,7 +1825,7 @@ export const locationServiceCopy: Record<string, LocationServiceCopy> = {
   },
 
   "/locations/glendale/adhd-treatment": {
-    metaTitle: "Dedicated ADHD Treatment in Glendale, AZ | DRC",
+    metaTitle: "Dedicated ADHD Treatment in Glendale, AZ | Desert Recovery Centers",
     metaDescription:
       "Desert Recovery Centers offers dedicated ADHD treatment in Glendale, AZ within a structured residential recovery setting for men. Call Now!",
     copy: {

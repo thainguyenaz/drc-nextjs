@@ -48,7 +48,7 @@ export default function CBTPage() {
   return (
     <>
       <SchemaScript schema={[getFAQSchema(faqData["cbt-therapy"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/treatments/cbt-cognitive-behavioral-therapy"))]} />
-      <MedicalWebPageSchema url="/treatments/cbt-cognitive-behavioral-therapy" name="Cognitive Behavioral Therapy (CBT) for Addiction & Mental Health | DRC" dateModified="2026-04-08" />
+      <MedicalWebPageSchema url="/treatments/cbt-cognitive-behavioral-therapy" name="Cognitive Behavioral Therapy (CBT) for Addiction & Mental Health | Desert Recovery Centers" dateModified="2026-04-08" />
       <MedicalTherapySchema
         name="Cognitive Behavioral Therapy (CBT)"
         description="Evidence-based psychotherapy that restructures thought patterns to create lasting behavioral change for addiction and mental health recovery."

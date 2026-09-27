@@ -19,7 +19,7 @@ const POST_DESCRIPTION =
   "Understand co-occurring disorders: when mental health and addiction overlap. Learn why integrated dual diagnosis treatment leads to better outcomes.";
 
 export const metadata: Metadata = buildMetadata({
-  title: "What Is Dual Diagnosis?, DRC",
+  title: "What Is Dual Diagnosis?, Desert Recovery Centers",
   description: POST_DESCRIPTION,
   path: "/blog/dual-diagnosis-explained",
 });

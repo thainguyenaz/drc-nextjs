@@ -19,7 +19,7 @@ const POST_DESCRIPTION =
   "Recognize the 10 most common warning signs of addiction. Learn when casual use becomes dependence and how to get help in Arizona.";
 
 export const metadata: Metadata = buildMetadata({
-  title: "10 Warning Signs of Addiction, DRC",
+  title: "10 Warning Signs of Addiction, Desert Recovery Centers",
   description: POST_DESCRIPTION,
   path: "/blog/signs-of-addiction",
 });

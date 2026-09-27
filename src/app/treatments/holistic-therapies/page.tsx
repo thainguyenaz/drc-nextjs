@@ -63,7 +63,7 @@ export default function HolisticPage() {
   return (
     <>
       <SchemaScript schema={[getFAQSchema(faqData["holistic-therapy"]), getBreadcrumbSchema(getBreadcrumbsFromPathname("/treatments/holistic-therapies"))]} />
-      <MedicalWebPageSchema url="/treatments/holistic-therapies" name="Holistic Addiction & Mental Health Therapies in Arizona | DRC" dateModified="2026-04-28" />
+      <MedicalWebPageSchema url="/treatments/holistic-therapies" name="Holistic Addiction & Mental Health Therapies in Arizona | Desert Recovery Centers" dateModified="2026-04-28" />
       <MedicalTherapySchema
         name="Holistic Therapies"
         description="Evidence-informed complementary therapies including yoga, mindfulness, art therapy, and nutrition counseling that support clinical treatment for whole-person recovery."

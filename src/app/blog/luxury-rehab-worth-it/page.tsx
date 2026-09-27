@@ -19,7 +19,7 @@ const POST_DESCRIPTION =
   "Honest analysis of luxury rehab costs vs outcomes. Learn what separates genuine clinical excellence from resort amenities and marketing.";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Is Luxury Rehab Worth It?, DRC",
+  title: "Is Luxury Rehab Worth It?, Desert Recovery Centers",
   description: POST_DESCRIPTION,
   path: "/blog/luxury-rehab-worth-it",
 });

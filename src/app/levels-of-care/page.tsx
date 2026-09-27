@@ -15,7 +15,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title:
-    "Levels of Care: Addiction & Mental Health Treatment in Arizona | DRC",
+    "Levels of Care: Addiction & Mental Health Treatment in Arizona | Desert Recovery Centers",
   description:
     "Explore every level of addiction and mental health treatment at Desert Recovery Centers: medical detox, residential, PHP, IOP, outpatient, and aftercare in Arizona.",
   alternates: {
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title:
-      "Levels of Care: Addiction & Mental Health Treatment in Arizona | DRC",
+      "Levels of Care: Addiction & Mental Health Treatment in Arizona | Desert Recovery Centers",
     description:
       "Explore every level of addiction and mental health treatment at Desert Recovery Centers: medical detox, residential, PHP, IOP, outpatient, and aftercare in Arizona.",
     url: "https://desertrecoverycenters.com/levels-of-care",
@@ -129,7 +129,7 @@ export default function LevelsOfCarePage() {
       />
       <MedicalWebPageSchema
         url="/levels-of-care"
-        name="Levels of Care: Addiction & Mental Health Treatment in Arizona | DRC"
+        name="Levels of Care: Addiction & Mental Health Treatment in Arizona | Desert Recovery Centers"
         dateModified="2026-04-07"
         reviewer="carr"
         about={{

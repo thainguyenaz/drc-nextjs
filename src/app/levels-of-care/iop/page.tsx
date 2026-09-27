@@ -16,7 +16,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title:
-    "Intensive Outpatient Program (IOP) in Arizona | DRC",
+    "Intensive Outpatient Program (IOP) in Arizona | Desert Recovery Centers",
   description:
     "Flexible intensive outpatient program (IOP) for addiction and mental health in Arizona. 3-4 hours of daily programming that fits around work, school, and family.",
   alternates: {

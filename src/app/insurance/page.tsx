@@ -38,7 +38,7 @@ const insuranceFaqSchema = {
 };
 
 export const metadata: Metadata = {
-  title: "Verify Insurance for Addiction & Mental Health Treatment | DRC",
+  title: "Verify Insurance for Addiction & Mental Health Treatment | Desert Recovery Centers",
   description:
     "Verify your insurance for addiction and mental health treatment at Desert Recovery Centers. Out-of-network commercial coverage and in-network with TRICARE for residential treatment through TriWest. Call (623) 305-0496.",
   alternates: { canonical: "https://desertrecoverycenters.com/insurance" },
