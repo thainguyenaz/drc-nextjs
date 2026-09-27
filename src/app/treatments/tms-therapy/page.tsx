@@ -1086,6 +1086,14 @@ export default function TMSTherapyPage() {
               >
                 Schedule a Consultation
               </a>
+              <a
+                href="https://deserttms.com/cost?utm_source=desertrecoverycenters.com&utm_medium=referral&utm_campaign=drc_tms_cta"
+                target="_blank"
+                rel="noopener"
+                className="bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/30 text-white font-semibold text-base px-8 py-4 rounded-xl transition-all w-full sm:w-auto text-center"
+              >
+                See Pricing and Payment Plans
+              </a>
             </div>
           </motion.div>
         </div>
