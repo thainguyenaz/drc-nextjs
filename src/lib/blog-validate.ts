@@ -29,7 +29,7 @@ const NETWORK_CLAIMS =
 const PAYER_REVIEWED_SLUGS = new Set([
   "how-insurance-covers-addiction-mental-health-treatment", // reviewed 2026-07-16 (3ace90c, 825f6eb corrections applied)
   "what-is-partial-hospitalization-php-program", // reviewed 2026-07-15 (3ace90c correction applied)
-  "neurostar-tms-vs-antidepressants", // reviewed 2026-07-15 (032e64f; Medicare/Medicaid not-accepted disclosure)
+  "neurostar-tms-vs-antidepressants", // reviewed 2026-09-27, counsel-approved OON language (Justin Byan)
   "how-insurance-covers-residential-treatment-in-arizona", // reviewed 2026-08-11 (in-network implication removed, 6923224)
   "tricare-coverage-for-rehab-in-arizona", // reviewed 2026-08-11 (contractor claim neutralized, eadd2d3)
 ]);

@@ -75,8 +75,8 @@ const keyFacts = [
       </svg>
     ),
   },
-  { label: "Cost", value: "Currently private pay while Desert TMS LLC completes payer credentialing; Medicare and Medicaid not accepted; call for cost and options", kind: "disclosure" },
-  { label: "Phone", value: "(623) 305-0496", kind: "disclosure" },
+  { label: "Cost", value: "Desert TMS LLC offers private pay and may bill certain commercial insurance plans as an out-of-network provider. Coverage varies by plan, and prior authorization may be required. Verification of benefits or authorization does not guarantee payment. You may be responsible for applicable deductible, coinsurance, and other patient responsibility under your plan. We do not accept Medicare or Medicaid. Call (602) 600-0325 and we can verify your benefits before treatment.", kind: "disclosure" },
+  { label: "Phone", value: "(602) 600-0325", kind: "disclosure" },
 ];
 
 const notCandidate = [
@@ -132,7 +132,7 @@ const differentiators = [
     body: "Sessions take as little as 19 minutes. Patients return to normal activities immediately after each session",
   },
   {
-    title: "Straightforward Private Pay",
+    title: "Cost and Coverage",
     icon: (
       <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z" />
@@ -140,7 +140,7 @@ const differentiators = [
     ),
     body: (
       <>
-        TMS at the Phoenix campus is currently offered on a private-pay basis while Desert TMS LLC completes payer credentialing. Call us and we will walk you through cost and options.{" "}
+        Desert TMS LLC offers private pay and may bill certain commercial insurance plans as an out-of-network provider. Coverage varies by plan, and prior authorization may be required. Verification of benefits or authorization does not guarantee payment. You may be responsible for applicable deductible, coinsurance, and other patient responsibility under your plan. We do not accept Medicare or Medicaid. Call (602) 600-0325 and we can verify your benefits before treatment.{" "}
         <a
           className="text-gold hover:underline"
           href="https://deserttms.com/cost?utm_source=desertrecoverycenters.com&utm_medium=referral&utm_campaign=drc_tms_page"
@@ -161,7 +161,7 @@ const faqs = [
   },
   {
     q: "Is TMS covered by insurance?",
-    a: "TMS at the Phoenix campus is currently offered on a private-pay basis while Desert TMS LLC completes credentialing with insurance payers. We do not accept Medicare or Medicaid. Call (623) 305-0496 and we will walk you through cost and payment options.",
+    a: "Desert TMS LLC offers private pay and may bill certain commercial insurance plans as an out-of-network provider. Coverage varies by plan, and prior authorization may be required. Verification of benefits or authorization does not guarantee payment. You may be responsible for applicable deductible, coinsurance, and other patient responsibility under your plan. We do not accept Medicare or Medicaid. Call (602) 600-0325 and we can verify your benefits before treatment.",
   },
   {
     q: "How long does a TMS treatment course take?",
@@ -181,7 +181,7 @@ const faqs = [
   },
   {
     q: "Is NeuroStar TMS therapy available now at Desert Recovery Centers?",
-    a: "Yes. NeuroStar TMS therapy is available now at 4160 N. 108th Ave, Phoenix, AZ 85037, provided by Desert TMS LLC, an affiliated licensed provider on-site at Desert Recovery Centers. Call (623) 305-0496 to schedule your initial consultation. Most patients begin treatment within one to two weeks of their first call.",
+    a: "Yes. NeuroStar TMS therapy is available now at 4160 N. 108th Ave, Phoenix, AZ 85037, provided by Desert TMS LLC, an affiliated licensed provider on-site at Desert Recovery Centers. Call (602) 600-0325 to schedule your initial consultation. Most patients begin treatment within one to two weeks of their first call.",
   },
 ] as const;
 
@@ -297,7 +297,7 @@ export default function TMSTherapyPage() {
             "@type": "MedicalClinic",
             "name": "Desert TMS LLC",
             "address": { "@type": "PostalAddress", "streetAddress": "4160 N 108th Ave", "addressLocality": "Phoenix", "addressRegion": "AZ", "postalCode": "85037" },
-            "telephone": "+16233050496",
+            "telephone": "+16026000325",
           },
         },
         {
@@ -389,7 +389,7 @@ export default function TMSTherapyPage() {
               transition={{ duration: 0.65, delay: 0.5 }}
               className="text-white/70 font-body text-lg md:text-xl max-w-3xl mx-auto leading-relaxed mb-4"
             >
-              FDA-cleared, drug free, non invasive treatment for depression, anxious depression, and OCD (add-on). Now available at our Phoenix outpatient center. Private pay available while payer credentialing is completed. Sessions as short as 19 minutes.
+              FDA-cleared, drug free, non invasive treatment for depression, anxious depression, and OCD (add-on). Now available at our Phoenix outpatient center. Sessions as short as 19 minutes.
             </motion.p>
 
             {/* Certified NeuroStar Provider Badge */}
@@ -409,7 +409,7 @@ export default function TMSTherapyPage() {
           {/* Hero CTAs */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <motion.a
-              href="tel:+16233050496"
+              href="tel:+16026000325"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.65 }}
@@ -417,7 +417,7 @@ export default function TMSTherapyPage() {
               whileTap={{ scale: 0.97 }}
               className="bg-gold hover:bg-gold-dark text-white font-semibold text-base px-8 py-4 rounded-xl transition-colors shadow-lg shadow-gold/25 w-full sm:w-auto text-center cursor-pointer"
             >
-              Call (623) 305-0496
+              Call (602) 600-0325
             </motion.a>
             <motion.a
               href="/contact"
@@ -1031,26 +1031,19 @@ export default function TMSTherapyPage() {
             <div className="flex items-center justify-center gap-3 mb-4">
               <span className="w-8 h-px bg-gold" />
               <span className="text-sage font-body text-xs tracking-[0.2em] uppercase font-medium">
-                Integrated Care
+                Separate Provider
               </span>
               <span className="w-8 h-px bg-gold" />
             </div>
             <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold mb-6">
-              TMS as Part of Your Complete Recovery
+              TMS and DRC Treatment
             </h2>
             <p className="text-forest/70 font-body leading-relaxed mb-6">
-              At Desert Recovery Centers, we have always believed that lasting
-              recovery requires treating the whole person. TMS therapy, provided
-              on-site by Desert TMS LLC, integrates with
-              DRC&apos;s clinical programs, including
-              CBT, DBT, EMDR, BridgeWork&trade;, and dual diagnosis treatment. For
-              clients whose depression has not fully responded to therapy alone, TMS
-              offers a powerful neurological complement to the clinical work already
-              underway.
-            </p>
-            <p className="text-forest font-body font-medium italic">
-              This is not a replacement for therapy. It is what makes therapy more
-              accessible when the brain&apos;s circuitry has been holding you back.
+              TMS services are provided on-site by Desert TMS LLC, a separate
+              provider. When clinically appropriate, TMS may be provided alongside
+              treatment a patient receives through Desert Recovery Centers. TMS
+              requires a separate clinical evaluation, treatment order, and
+              treatment plan.
             </p>
           </motion.div>
         </div>
@@ -1071,14 +1064,14 @@ export default function TMSTherapyPage() {
               TMS Is Available Now at Our Phoenix Center
             </h2>
             <p className="text-white/60 font-body leading-relaxed mb-10">
-              The NeuroStar TMS suite at the Phoenix campus is open and accepting new patients. Call us today to schedule your initial consultation, talk through private-pay cost and options, and find out if TMS is right for you. Most patients begin treatment within one to two weeks of their first call.
+              The NeuroStar TMS suite at the Phoenix campus is open and accepting new patients. Call us today to schedule your initial consultation, talk through cost and coverage options, and find out if TMS is right for you. Most patients begin treatment within one to two weeks of their first call.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
-                href="tel:+16233050496"
+                href="tel:+16026000325"
                 className="bg-gold hover:bg-gold-dark text-white font-semibold text-base px-8 py-4 rounded-xl transition-colors shadow-lg shadow-gold/25 w-full sm:w-auto text-center"
               >
-                Call (623) 305-0496
+                Call (602) 600-0325
               </a>
               <a
                 href="/contact"

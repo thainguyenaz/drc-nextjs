@@ -163,8 +163,8 @@ export const siteData = {
       name: "Desert TMS",
       href: "/treatments/tms-therapy",
       address: "4160 N. 108th Ave, Phoenix, AZ 85037",
-      phone: "(623) 305-0496",
-      phoneTel: "+16233050496",
+      phone: "(602) 600-0325",
+      phoneTel: "+16026000325",
       gbpPhone: "(602) 905-8070",
       description:
         "Dedicated NeuroStar TMS therapy center for depression, anxious depression, and OCD (add-on) treatment. TMS is provided by Desert TMS LLC, an affiliated licensed provider on-site at Desert Recovery Centers.",

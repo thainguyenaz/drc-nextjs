@@ -2477,7 +2477,7 @@ ${DISCLAIMER}`
 <p>TMS does not have to be an either or choice with medication. Many clients continue their antidepressant medication while receiving TMS, and the combination can be more effective than either treatment alone. TMS can also be combined with psychotherapy to optimize outcomes. TMS is provided by Desert TMS LLC, an affiliated licensed provider on-site at Desert Recovery Centers.</p>
 
 <h2>Cost and Payment Options</h2>
-<p>TMS at the Phoenix campus is currently offered on a private-pay basis while Desert TMS LLC, the affiliated licensed provider that delivers TMS on-site at Desert Recovery Centers, completes credentialing with insurance payers. Medicare and Medicaid are not accepted. Call (623) 305-0496 and the team will walk you through cost and payment options before beginning treatment.</p>
+<p>Desert TMS LLC offers private pay and may bill certain commercial insurance plans as an out-of-network provider. Coverage varies by plan, and prior authorization may be required. Verification of benefits or authorization does not guarantee payment. You may be responsible for applicable deductible, coinsurance, and other patient responsibility under your plan. We do not accept Medicare or Medicaid. Call (602) 600-0325 and we can verify your benefits before treatment.</p>
 <p>For people who have been struggling with depression and have not found relief from medication, TMS offers a clinically proven, drug free alternative that can produce meaningful, lasting improvement. If you are interested in learning whether TMS is right for you, contact Desert Recovery Centers for a consultation.</p>
 
 ${DISCLAIMER}`
