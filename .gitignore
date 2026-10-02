@@ -40,3 +40,4 @@ build-output.txt
 
 # Internal agent guardrails — kept on disk, never in the public repo (2026-08-11)
 CLAUDE.md
+.gstack/
