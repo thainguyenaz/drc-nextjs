@@ -288,7 +288,7 @@ export default function DetoxGuidePage() {
               Our Approach
             </span>
             <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4 mb-8">
-              How DRC Coordinates Your Detox Care
+              Planning Your Next Step After Detox
             </h2>
             <div className="space-y-4">
               {[

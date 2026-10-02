@@ -119,13 +119,13 @@ export const pageMetadata: Record<string, PageMeta> = {
   },
   "/addiction/alcoholism-treatment/": {
     title: "Alcohol Addiction Treatment & Rehab in Arizona | Desert Recovery Centers",
-    description: "Residential alcohol addiction treatment in Arizona. Medical detox, dual diagnosis, luxury setting. Joint Commission accredited. Call (623) 305-0496.",
+    description: "Residential alcohol addiction treatment in Arizona. Dual diagnosis, luxury setting. Joint Commission accredited. Call (623) 305-0496.",
     canonical: "https://desertrecoverycenters.com/addiction/alcoholism-treatment",
     ogImage: DEFAULT_OG_IMAGE,
   },
   "/addiction/heroin-addiction-treatment/": {
     title: "Heroin Addiction Treatment Center in Arizona | Desert Recovery Centers",
-    description: "Residential heroin addiction treatment in Arizona. Medical detox, MAT support, evidence-based therapies. Call (623) 305-0496 today.",
+    description: "Residential heroin addiction treatment in Arizona. MAT support, evidence-based therapies. Call (623) 305-0496 today.",
     canonical: "https://desertrecoverycenters.com/addiction/heroin-addiction-treatment",
     ogImage: DEFAULT_OG_IMAGE,
   },
@@ -137,7 +137,7 @@ export const pageMetadata: Record<string, PageMeta> = {
   },
   "/addiction/fentanyl-addiction-treatment/": {
     title: "Fentanyl Addiction Treatment Center in Arizona | Desert Recovery Centers",
-    description: "Fentanyl addiction treatment in Arizona. Safe medical detox, dual diagnosis, luxury residential care. Call (623) 305-0496 to start today.",
+    description: "Fentanyl addiction treatment in Arizona. Dual diagnosis, luxury residential care. Call (623) 305-0496 to start today.",
     canonical: "https://desertrecoverycenters.com/addiction/fentanyl-addiction-treatment",
     ogImage: DEFAULT_OG_IMAGE,
   },

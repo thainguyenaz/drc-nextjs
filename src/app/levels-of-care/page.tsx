@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   title:
     "Levels of Care: Addiction & Mental Health Treatment in Arizona | Desert Recovery Centers",
   description:
-    "Explore every level of addiction and mental health treatment at Desert Recovery Centers: medical detox, residential, PHP, IOP, outpatient, and aftercare in Arizona.",
+    "Explore addiction and mental health treatment at Desert Recovery Centers in Arizona: residential, PHP, IOP, outpatient, and aftercare, plus help finding detox.",
   alternates: {
     canonical:
       "https://desertrecoverycenters.com/levels-of-care",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     title:
       "Levels of Care: Addiction & Mental Health Treatment in Arizona | Desert Recovery Centers",
     description:
-      "Explore every level of addiction and mental health treatment at Desert Recovery Centers: medical detox, residential, PHP, IOP, outpatient, and aftercare in Arizona.",
+      "Explore addiction and mental health treatment at Desert Recovery Centers in Arizona: residential, PHP, IOP, outpatient, and aftercare, plus help finding detox.",
     url: "https://desertrecoverycenters.com/levels-of-care",
     images: [
       {
@@ -56,7 +56,7 @@ const faqs = [
   },
   {
     q: "Does insurance cover all levels of care?",
-    a: "Most major insurance plans in Arizona cover all medically necessary levels of addiction and mental health treatment, including detox, residential, PHP, IOP, and outpatient services. The Mental Health Parity and Addiction Equity Act requires insurers to provide equal coverage for behavioral health and medical conditions. Coverage specifics (including deductibles, copays, and length-of-stay authorizations) vary by plan. Note: Desert Recovery Centers works with commercial carriers on an out-of-network basis; we are in-network with TRICARE for residential treatment through TriWest, and offer cash-pay options. Our admissions team verifies your insurance benefits across all levels of care and explains your coverage before treatment begins. Call (623) 305-0496 for a free benefits check.",
+    a: "Most major insurance plans in Arizona cover all medically necessary levels of addiction and mental health treatment, including detox, residential, PHP, IOP, and outpatient services. DRC does not provide detox; our admissions team helps people find medically supervised detox and plans the transition into DRC's residential, PHP, or IOP care. The Mental Health Parity and Addiction Equity Act requires insurers to provide equal coverage for behavioral health and medical conditions. Coverage specifics (including deductibles, copays, and length-of-stay authorizations) vary by plan. Note: Desert Recovery Centers works with commercial carriers on an out-of-network basis; we are in-network with TRICARE for residential treatment through TriWest, and offer cash-pay options. Our admissions team verifies your insurance benefits across all levels of care and explains your coverage before treatment begins. Call (623) 305-0496 for a free benefits check.",
   },
 ];
 
@@ -66,14 +66,6 @@ const faqSchemaItems = faqs.map((f) => ({
 }));
 
 const levels = [
-  {
-    title: "Medical Detox",
-    href: "/levels-of-care/detox",
-    description:
-      "The first step for individuals with physical dependence on drugs or alcohol. Medical detox provides 24/7 physician oversight and nursing care to manage withdrawal symptoms safely and comfortably. DRC coordinates detox at trusted partner facilities. It is the entry point into a seamless continuum of care that continues at our DRC residential program. Our medical team designs individualized protocols for alcohol, opioid, benzodiazepine, stimulant, and polysubstance withdrawal, using FDA-approved medications and continuous monitoring to keep you safe throughout the process.",
-    who: "Individuals with physical dependence on alcohol, opioids, benzodiazepines, or other substances who need medically supervised withdrawal management before beginning therapeutic treatment.",
-    duration: "3 to 14 days depending on substance and severity",
-  },
   {
     title: "Residential Treatment",
     href: "/levels-of-care/residential-treatment",
@@ -299,6 +291,18 @@ export default function LevelsOfCarePage() {
                 </AnimatedSection>
               ))}
             </div>
+            <p className="text-gray-600 text-sm leading-relaxed mt-8">
+              DRC does not provide detox. Our admissions team helps people
+              find{" "}
+              <Link
+                href="/levels-of-care/detox"
+                className="text-gold hover:text-gold-dark font-semibold"
+              >
+                medically supervised detox
+              </Link>{" "}
+              and plans the transition into DRC&apos;s residential, PHP, or
+              IOP care.
+            </p>
           </div>
         </div>
       </section>
@@ -417,7 +421,7 @@ export default function LevelsOfCarePage() {
             question:
               "Does insurance cover all levels of addiction treatment at DRC?",
             answer:
-              "Most major insurance plans in Arizona cover medically necessary addiction treatment at all levels of care, including detox, residential, PHP, IOP, and outpatient services. The Mental Health Parity and Addiction Equity Act requires equal coverage for behavioral health and medical conditions. Note: DRC works with commercial carriers on an out-of-network basis; we are in-network with TRICARE for residential treatment through TriWest, and offer cash-pay options. DRC's admissions team verifies benefits across all levels before treatment begins. Call (623) 305-0496 for a free insurance check.",
+              "Most major insurance plans in Arizona cover medically necessary addiction treatment at all levels of care, including detox, residential, PHP, IOP, and outpatient services. DRC does not provide detox; our admissions team helps people find medically supervised detox and plans the transition into DRC's residential, PHP, or IOP care. The Mental Health Parity and Addiction Equity Act requires equal coverage for behavioral health and medical conditions. Note: DRC works with commercial carriers on an out-of-network basis; we are in-network with TRICARE for residential treatment through TriWest, and offer cash-pay options. DRC's admissions team verifies benefits across all levels before treatment begins. Call (623) 305-0496 for a free insurance check.",
           },
         ]}
       />

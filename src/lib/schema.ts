@@ -25,7 +25,7 @@ export function getMedicalOrganizationSchema() {
       { "@type": "EducationalOccupationalCredential", name: "Joint Commission Accreditation" },
       { "@type": "EducationalOccupationalCredential", name: "LegitScript Certification" },
     ],
-    medicalSpecialty: ["Psychiatric", "Toxicologic"],
+    medicalSpecialty: ["Psychiatric"],
     areaServed: { "@type": "State", name: "Arizona" },
     // The first three siteData locations are the licensed clinics whose
     // LocalBusiness+MedicalClinic nodes carry these @ids (see

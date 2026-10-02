@@ -79,7 +79,6 @@ export default function DetoxPage() {
         name="Drug & Alcohol Detox in Arizona | Desert Recovery Centers"
         dateModified="2026-04-07"
         reviewer="topete"
-        specialty="Toxicologic"
       />
       <Navigation />
       <Breadcrumb
@@ -110,6 +109,11 @@ export default function DetoxPage() {
               <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mb-6">
                 Why Medical Detox Matters
               </h2>
+              <p className="text-forest leading-relaxed text-lg mb-4">
+                <strong>DRC does not provide detox.</strong> Our admissions
+                team helps people find medically supervised detox and plans
+                the transition into DRC&apos;s residential, PHP, or IOP care.
+              </p>
               <p className="text-gray-600 leading-relaxed text-lg mb-4">
                 Medical detox is the safest path to begin recovery from alcohol, opioid, or benzodiazepine dependence. Withdrawal from these substances can produce seizures, dangerous blood-pressure changes, and life-threatening complications when attempted without supervision.
               </p>
@@ -129,7 +133,7 @@ export default function DetoxPage() {
         <div className="max-w-container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
             <span className="text-sage font-body text-sm tracking-[0.2em] uppercase font-medium">
-              Your Detox Experience
+              Before You Start
             </span>
             <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4 mb-8">
               What to Expect During Medical Detox
@@ -175,7 +179,7 @@ export default function DetoxPage() {
                 Substance-Specific Detox
               </span>
               <h2 className="font-display text-2xl md:text-3xl text-forest font-semibold mt-4 mb-8">
-                Substances We Help With During Detox
+                What Detox Involves for Each Substance
               </h2>
               <p className="text-gray-600 leading-relaxed text-lg mb-6">
                 Every substance has a unique withdrawal profile. The medical
@@ -340,28 +344,25 @@ export default function DetoxPage() {
                 Detox addresses the physical dimension of addiction, but
                 lasting recovery requires addressing the psychological,
                 emotional, and behavioral patterns that drive substance use.
-                That is why detox at Desert Recovery Centers is designed as
-                the first step in a continuum of care, not a standalone
-                service.
+                That is why detox is only the first step.
               </p>
               <p className="text-gray-600 leading-relaxed text-lg mb-4">
-                One of the most significant advantages of choosing DRC for
-                detox is the seamless transition into{" "}
+                Once detox is complete, our admissions team plans your
+                move into{" "}
                 <Link
                   href="/levels-of-care/residential-treatment"
                   className="text-gold hover:text-gold-dark font-semibold"
                 >
                   residential treatment
                 </Link>
-                . Our DRC clinical team coordinates with your detox partner&apos;s care team to plan your residential treatment so the transition into DRC is seamless. You move from medical stabilization to active therapy without missing a day.
+                {" "}at DRC. Our DRC clinical team coordinates with your detox partner&apos;s care team to plan your residential treatment so the transition into DRC is seamless. You move from medical stabilization to active therapy without missing a day.
               </p>
               <p className="text-gray-600 leading-relaxed text-lg mb-4">
                 In residential treatment, you will engage in individual
                 therapy, group counseling, psychiatric care, experiential
-                therapies, and holistic wellness programming — all within
-                the same luxury environment where you completed detox. This
-                continuity of care and environment supports the trust and
-                momentum you build during those critical first days.
+                therapies, and holistic wellness programming. This
+                continuity of care supports the trust and momentum you build
+                during those critical first days.
               </p>
               <p className="text-gray-600 leading-relaxed text-lg">
                 To learn more about the full scope of treatment options at

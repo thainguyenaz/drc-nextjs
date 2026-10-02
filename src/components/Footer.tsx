@@ -22,7 +22,7 @@ const footerLinks = {
   ],
   "Levels of Care": [
     { label: "Overview", href: "/levels-of-care" },
-    { label: "Medical Detox", href: "/levels-of-care/detox" },
+    { label: "Detox Guidance", href: "/levels-of-care/detox" },
     { label: "Residential", href: "/levels-of-care/residential-treatment" },
     { label: "PHP", href: "/levels-of-care/php" },
     { label: "IOP", href: "/levels-of-care/iop" },

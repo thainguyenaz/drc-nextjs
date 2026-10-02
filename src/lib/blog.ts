@@ -944,7 +944,7 @@ Yes. Residential stays beyond six months show diminishing returns for many peopl
     category: "addiction",
     author: "Desert Recovery Centers Clinical Team",
     datePublished: "2026-07-16",
-    dateModified: "2026-07-16",
+    dateModified: "2026-10-02",
     readTime: 7,
     featuredImage: "/images/glendale/Glendale-Front.jpg",
     featuredImageAlt: "Desert Recovery Centers Glendale facility front entrance",
@@ -1035,7 +1035,7 @@ Yes. Residential stays beyond six months show diminishing returns for many peopl
 
 <p>If you are reading this at 2am, shaking or scared or watching someone you love go through this, here is what is true: fentanyl withdrawal is treatable. The timeline ends. The medications work. The psychological weight lifts with the right support. None of that requires suffering through it alone to count as real recovery.</p>
 
-<p>Desert Recovery Centers offers medically supervised detox and care that continues past the acute phase, because that is where the real work of staying well begins. If you are not sure whether you need help or just want to talk through what you're facing, that conversation is available right now.</p>
+<p>Desert Recovery Centers does not provide detox; our admissions team helps people find medically supervised detox and plans the transition into DRC's residential, PHP, or IOP care, because care that continues past the acute phase is where the real work of staying well begins. If you are not sure whether you need help or just want to talk through what you're facing, that conversation is available right now.</p>
 
 <p><strong>You do not have to figure this out alone.</strong> Desert Recovery Centers is here 24 hours a day, 7 days a week. Call <a href="tel:+16026357207">(602) 635-7207</a> to talk with our admissions team, or <a href="/insurance">verify your insurance</a> online in a few minutes.</p>`,
   },
@@ -2534,7 +2534,7 @@ ${DISCLAIMER}`
     category: "addiction",
     author: "Desert Recovery Centers Clinical Team",
     datePublished: "2026-03-01",
-    dateModified: "2026-03-01",
+    dateModified: "2026-10-02",
     readTime: 9,
     featuredImage: "/images/glendale/Glendale-Front.jpg",
     featuredImageAlt: "Desert Recovery Centers Glendale Arizona facility for fentanyl addiction treatment",
@@ -2567,7 +2567,7 @@ ${DISCLAIMER}`
 
 <h2>Medication Assisted Treatment and Residential Care</h2>
 <p>Medication assisted treatment (MAT) is the evidence based standard of care for opioid use disorder, including fentanyl addiction. Medications like buprenorphine (Suboxone) and naltrexone (Vivitrol) stabilize brain chemistry, reduce cravings, and block the euphoric effects of opioids, dramatically reducing the risk of relapse and fatal overdose (<a href="https://nida.nih.gov/research-topics/medications-opioid-use-disorder" target="_blank" rel="noopener">NIDA — Medications for Opioid Use Disorder</a>). MAT is not "substituting one drug for another." It is a clinically proven treatment that saves lives.</p>
-<p><a href="/levels-of-care/residential-treatment">Residential treatment</a> provides the structured, supervised environment that is often necessary for safe fentanyl detox and the intensive therapeutic work that follows. At Desert Recovery Centers, clients with fentanyl addiction receive medically supervised withdrawal management, MAT when clinically indicated, individual and group therapy, treatment for co occurring mental health conditions, and comprehensive aftercare planning.</p>
+<p><a href="/levels-of-care/residential-treatment">Residential treatment</a> provides the structured, supervised environment for the intensive therapeutic work that follows detox. At Desert Recovery Centers, clients with fentanyl addiction receive MAT when clinically indicated, individual and group therapy, treatment for co occurring mental health conditions, and comprehensive aftercare planning. DRC does not provide detox; our admissions team helps people find medically supervised detox and plans the transition into DRC's residential, PHP, or IOP care.</p>
 <p>If someone you love is struggling with fentanyl addiction, the urgency cannot be overstated. Every day of continued use carries the risk of fatal overdose. Treatment works, recovery is possible, and reaching out for help today could save their life. Contact Desert Recovery Centers 24 hours a day at (623) 305-0496.</p>
 
 ${DISCLAIMER}`

@@ -31,7 +31,7 @@ const faqs = [
   {
     question: "What does the admissions process look like?",
     answer:
-      "Admission is a three-step process: (1) a free, confidential phone call where our admissions specialist listens to your situation, (2) a complimentary insurance verification and clinical pre-screen, and (3) a warm hand-off to the treatment team at the level of care that fits: detox, residential, PHP, or IOP.",
+      "Admission is a three-step process: (1) a free, confidential phone call where our admissions specialist listens to your situation, (2) a complimentary insurance verification and clinical pre-screen, and (3) a warm hand-off to the treatment team at the level of care that fits: residential, PHP, or IOP. DRC does not provide detox; our admissions team helps people find medically supervised detox and plans the transition into DRC's residential, PHP, or IOP care.",
   },
   {
     question: "What insurance plans do you accept?",

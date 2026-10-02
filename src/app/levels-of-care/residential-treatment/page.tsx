@@ -470,7 +470,7 @@ export default function ResidentialTreatmentPage() {
                 },
                 {
                   title: "Continuum of Care",
-                  desc: "Residential treatment at DRC connects to every other level of care we offer, from detox through PHP, IOP, and aftercare. Your recovery pathway is continuous, not fragmented.",
+                  desc: "Residential treatment at DRC connects to every other level of care we offer: PHP, IOP, and aftercare. Your recovery pathway is continuous, not fragmented.",
                 },
               ].map((item, i) => (
                 <div
