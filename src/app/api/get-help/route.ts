@@ -3,6 +3,7 @@ import { rateLimit, getClientIp } from "@/lib/rate-limit";
 import { verifyTurnstile } from "@/lib/turnstile";
 import { uploadFormConversion } from "@/lib/tracking/google-ads";
 import { fireGa4Lead } from "@/lib/tracking/ga4-mp";
+import { buildMarketingConsents, parseConsentValue } from "@/lib/consent";
 
 export const runtime = "nodejs";
 
@@ -28,6 +29,7 @@ interface Payload {
   variant?: string;
   pageUri?: string;
   pageName?: string;
+  smsConsent?: boolean; // marketing consent checkbox value (SMS + email)
   hp_check?: string; // honeypot
   turnstileToken?: string;
 }
@@ -172,6 +174,20 @@ export async function POST(request: NextRequest) {
   const utmCampaign = request.cookies.get("_dr_utm_campaign")?.value ?? null;
   const utmTerm = request.cookies.get("_dr_utm_term")?.value ?? null;
   const utmContent = request.cookies.get("_dr_utm_content")?.value ?? null;
+
+  // Record the actual consent the visitor gave, as structured records (one per
+  // channel), instead of discarding the checkbox value. HubSpot submission
+  // above is unchanged; this only adds the consent to the lead-notify relay and
+  // the logs. captured_at is stamped server-side here.
+  const consents = buildMarketingConsents(parseConsentValue(body.smsConsent));
+  console.log(
+    "[get-help] consent:",
+    JSON.stringify({
+      granted: consents[0]?.granted ?? false,
+      types: consents.map((c) => c.consent_type),
+      version: consents[0]?.consent_text_version,
+    })
+  );
   try {
     const notifyRes = await fetch(LEAD_NOTIFY_URL, {
       method: "POST",
@@ -186,6 +202,7 @@ export async function POST(request: NextRequest) {
         seekingFor,
         message: situation,
         source: "website_get_help_form",
+        consents,
         // snake_case: the jarvis-api /lead handler reads req.body.utm_* keys.
         utm_source: utmSource,
         utm_medium: utmMedium,

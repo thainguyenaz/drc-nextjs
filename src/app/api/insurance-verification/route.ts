@@ -3,6 +3,7 @@ import { rateLimit, getClientIp } from "@/lib/rate-limit";
 import { verifyTurnstile } from "@/lib/turnstile";
 import { uploadFormConversion } from "@/lib/tracking/google-ads";
 import { fireGa4Lead } from "@/lib/tracking/ga4-mp";
+import { buildMarketingConsents, parseConsentValue } from "@/lib/consent";
 
 export const runtime = "nodejs";
 
@@ -60,6 +61,7 @@ export async function POST(request: NextRequest) {
     const howDidYouHear = formData.get("how_did_you_hear") as string;
     const frontCard = formData.get("front_card") as File | null;
     const backCard = formData.get("back_card") as File | null;
+    const smsConsent = parseConsentValue(formData.get("smsConsent"));
 
     // Member ID is now required server-side (card uploads are optional).
     if (!memberId || memberId.trim() === "") {
@@ -143,6 +145,20 @@ export async function POST(request: NextRequest) {
     const utmCampaign = request.cookies.get("_dr_utm_campaign")?.value ?? null;
     const utmTerm = request.cookies.get("_dr_utm_term")?.value ?? null;
     const utmContent = request.cookies.get("_dr_utm_content")?.value ?? null;
+
+    // Record the actual consent the visitor gave, as structured records (one
+    // per channel), instead of discarding the checkbox value. HubSpot
+    // submission above is unchanged; this only adds the consent to the
+    // notify relay and the logs. captured_at is stamped server-side here.
+    const consents = buildMarketingConsents(smsConsent);
+    console.log(
+      "[insurance-verification] consent:",
+      JSON.stringify({
+        granted: consents[0]?.granted ?? false,
+        types: consents.map((c) => c.consent_type),
+        version: consents[0]?.consent_text_version,
+      })
+    );
     try {
       const relayBody = new FormData();
       relayBody.append("firstname", firstName);
@@ -153,6 +169,7 @@ export async function POST(request: NextRequest) {
       relayBody.append("member_id", memberId || "");
       relayBody.append("date_of_birth", dateOfBirth);
       relayBody.append("how_did_you_hear", howDidYouHear || "");
+      relayBody.append("consents", JSON.stringify(consents));
       relayBody.append("source", relaySource);
       relayBody.append("utm_source", utmSource ?? "");
       relayBody.append("utm_medium", utmMedium ?? "");

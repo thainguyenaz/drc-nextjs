@@ -7,7 +7,9 @@
     "build": "next build && node scripts/check-confirm.mjs",
     "start": "next start",
     "lint": "next lint",
-    "check:live": "node scripts/check-insurance-live.mjs"
+    "check:live": "node scripts/check-insurance-live.mjs",
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.19",
@@ -34,6 +36,7 @@
     "postcss": "^8",
     "sharp": "^0.34.5",
     "tailwindcss": "^3.4.1",
-    "typescript": "^5"
+    "typescript": "^5",
+    "vitest": "^2.1.9"
   }
 }

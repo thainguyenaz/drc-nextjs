@@ -139,6 +139,7 @@ export default function GetHelpForm({ variant = "lp" }: GetHelpFormProps) {
           seekingFor: formData.seekingFor,
           insuranceProvider: formData.insuranceProvider,
           situation: formData.situation,
+          smsConsent: formData.smsConsent,
           variant,
           pageUri: typeof window !== "undefined" ? window.location.href : "",
           pageName: typeof window !== "undefined" ? document.title : "Get Help Today",

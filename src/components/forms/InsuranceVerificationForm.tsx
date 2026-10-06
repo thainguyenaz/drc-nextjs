@@ -158,6 +158,7 @@ export default function InsuranceVerificationForm() {
       body.append("member_id", formData.memberId);
       body.append("date_of_birth", formData.dateOfBirth);
       body.append("how_did_you_hear", formData.howDidYouHear);
+      body.append("smsConsent", String(formData.smsConsent));
       body.append("hp_check", honeypot);
       body.append("turnstileToken", turnstileToken);
       if (formData.frontCard) body.append("front_card", formData.frontCard);
