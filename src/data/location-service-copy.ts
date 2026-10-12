@@ -23,6 +23,10 @@
  * for which no photography exists at all. They draw from the same three
  * pools under the same rule (no repeat within a city). The reserved
  * allocation is listed in the September block at the foot of this file.
+ *
+ * The October '26 batch adds Scottsdale ADHD plus schizophrenia, addiction,
+ * and alcohol pages, again with no dedicated photography. Its allocation
+ * note opens the October block.
  */
 
 import type { SeoPageCopy } from "@/components/seo-template/types";
@@ -1164,7 +1168,6 @@ export const locationServiceCopy: Record<string, LocationServiceCopy> = {
     },
   },
 
-
   // ─── OCD Treatment (September '26) ──────────────────────────────
 
   "/locations/phoenix-php-iop/ocd-treatment": {
@@ -1445,7 +1448,6 @@ export const locationServiceCopy: Record<string, LocationServiceCopy> = {
       },
     },
   },
-
 
   // ─── Personality Disorder Treatment (September '26) ──────────────
 
@@ -1728,7 +1730,6 @@ export const locationServiceCopy: Record<string, LocationServiceCopy> = {
     },
   },
 
-
   // ─── ADHD Treatment (September '26) ─────────────────────────────
 
   "/locations/phoenix-php-iop/adhd-treatment": {
@@ -1917,4 +1918,956 @@ export const locationServiceCopy: Record<string, LocationServiceCopy> = {
     },
   },
 
+  // ─── October '26 batch — images ───────────────────────────────
+  //
+  // No ADHD, schizophrenia, addiction, or alcohol photography exists, so
+  // these ten pages draw from the same three pools under the same rule: no
+  // image repeats within a single city. Each page's images sit on its own
+  // entry below; that is the source of truth.
+  //
+  // Three frames serve as the October hub cards in location-services.ts
+  // and appear on NO October page: depression-01 (schizophrenia card),
+  // bipolar-07 (addiction card), anxiety-09 (alcohol card).
+  //
+  // The pools ran short of suitable frames in the two residential cities,
+  // where subjects are matched to the gendered locations (Glendale men,
+  // Scottsdale women). Those slots use real facility photography instead.
+
+  // ─── ADHD Treatment (October '26) ──────────────────────────────────
+
+  "/locations/scottsdale/adhd-treatment": {
+    metaTitle: "Compassionate ADHD Treatment in Scottsdale, AZ | DRC",
+    metaDescription:
+      "Desert Recovery Centers offers compassionate ADHD treatment in Scottsdale, AZ through residential behavioral health care for women. Call Now!",
+    copy: {
+      path: "/locations/scottsdale/adhd-treatment",
+      hero: {
+        eyebrow: "Scottsdale, AZ",
+        headline: "Compassionate ADHD Treatment in Scottsdale, AZ",
+        subtext:
+          "Desert Recovery Centers provides compassionate ADHD treatment in Scottsdale, AZ within a residential recovery environment specifically for women. Female clients stay at the center while participating in behavioral health treatment suited to their individual needs. This setting provides consistent structure and dedicated time to address attention difficulties, organization challenges, emotional regulation, and concerns that may affect everyday functioning.",
+        image:
+          "/images/scottsdale/DRC-LIVING-ROOMS-NORTH-SCOTTSDALE-08-01-2024-0553August-01-202400015-2.jpg",
+      },
+      benefits: {
+        heading:
+          "Benefits of Compassionate ADHD Treatment in Scottsdale, AZ at Desert Recovery Centers",
+        subheading: "Personalized Support in Residential Care",
+        items: [
+          {
+            title: "Attention to Individual Behavioral Health Needs",
+            text: "ADHD can affect women differently, with concerns involving concentration, organization, emotional regulation, or completing everyday responsibilities. Desert Recovery Centers provides a residential setting where female clients can focus on their individual challenges and participate in behavioral health treatment without simultaneously managing the full range of outside obligations.",
+          },
+          {
+            title: "Residential Convenience Without Daily Travel",
+            text: "Traveling between home and treatment can introduce additional planning demands for someone already experiencing organizational or time-management difficulties. At the Scottsdale residential center, women stay within the recovery environment, removing the need for daily trips between scheduled treatment and home while maintaining consistent access to their treatment setting.",
+          },
+          {
+            title: "A Consistent Environment for Treatment Participation",
+            text: "Maintaining routines can be difficult when distractions, changing schedules, and competing responsibilities interfere with attention. Desert Recovery Centers provides a structured residential environment where women can concentrate on treatment participation, develop greater awareness of their individual challenges, and devote time to recovery within a setting centered on behavioral health care.",
+          },
+        ],
+        image: "/images/conditions/depression-treatment-04.webp",
+        imageAlt:
+          "Therapy room with armchairs arranged for a session",
+      },
+      why: {
+        heading:
+          "Why Compassionate ADHD Treatment in Scottsdale, AZ Matters",
+        subheading: "Addressing Challenges Beyond Concentration",
+        items: [
+          {
+            title: "Executive Function Difficulties Affect Everyday Responsibilities",
+            text: "ADHD can involve more than difficulty paying attention. Challenges with planning, prioritizing, remembering appointments, and completing tasks may interfere with household management, professional obligations, and personal goals. When these patterns cause significant disruption, behavioral health treatment can help individuals address the concerns affecting their daily functioning.",
+          },
+          {
+            title: "Busy Local Lifestyles Can Increase Mental Demands",
+            text: "Women balancing employment, commuting, family commitments, and other responsibilities throughout [Scottsdale, AZ](https://www.scottsdaleaz.gov/) may face substantial organizational demands. When ADHD-related difficulties make these responsibilities harder to manage, dedicated treatment can provide an opportunity to focus on attention-related concerns away from some everyday pressures.",
+          },
+          {
+            title: "Emotional Challenges May Accompany Attention Difficulties",
+            text: "Some women with ADHD experience frustration, difficulty regulating emotional responses, or stress related to repeated organizational struggles. These concerns can affect relationships and self-confidence as well as productivity. Recognizing the broader effects of attention-related symptoms can help individuals understand why comprehensive behavioral health support may be valuable.",
+          },
+        ],
+        image: "/images/conditions/anxiety-treatment-08.webp",
+        imageAlt:
+          "Client talking with a therapist in a one-to-one session",
+      },
+      faq: {
+        title:
+          "Frequently Asked Questions About ADHD Treatment in Scottsdale, AZ",
+        items: [
+          {
+            question:
+              "Can adult women receive residential ADHD treatment in Scottsdale, AZ?",
+            answer:
+              "Yes. The Scottsdale location provides residential behavioral health care specifically for women. Female clients stay within the recovery setting rather than returning home after daytime programming. Desert Recovery Centers offers compassionate ADHD treatment in Scottsdale, AZ for women whose individual clinical needs are appropriate for the residential treatment environment.",
+          },
+          {
+            question:
+              "Can ADHD treatment in Scottsdale, AZ help women struggling with organization and emotional overwhelm?",
+            answer:
+              "ADHD treatment may address difficulties involving organization, concentration, emotional regulation, and managing everyday responsibilities. The appropriate approach depends on each person's symptoms and clinical needs. Desert Recovery Centers provides a structured residential setting for women seeking behavioral health support when these challenges interfere with daily functioning.",
+          },
+          {
+            question:
+              "What should women prepare for before entering residential ADHD treatment in Scottsdale, AZ?",
+            answer:
+              "Women considering residential care should discuss their symptoms, current medications, treatment history, and practical needs before admission. Residential treatment involves staying at the center rather than attending only daytime appointments. [Desert Recovery Centers](https://desertrecoverycenters.com/) can provide information about the Scottsdale setting and help prospective clients understand whether the available care matches their circumstances.",
+          },
+        ],
+      },
+      map: {
+        variant: "gbp",
+        gbpLocationIndex: 1,
+        heading:
+          "Residential ADHD Treatment in Scottsdale, AZ – Local Service Coverage",
+        subtext:
+          "Desert Recovery Centers provides residential ADHD care in Scottsdale, AZ for women seeking a structured behavioral health treatment environment. The Scottsdale location serves female clients who stay at the recovery center during care. For women experiencing attention, organization, or emotional regulation difficulties, this residential setting offers dedicated treatment space away from many competing everyday demands and responsibilities.",
+      },
+    },
+  },
+
+  // ─── Schizophrenia Treatment (October '26) ─────────────────────────
+
+  "/locations/phoenix-php-iop/schizophrenia-treatment": {
+    metaTitle: "Specialized Schizophrenia Treatment in Phoenix, AZ | DRC",
+    metaDescription:
+      "Desert Recovery Centers offers specialized schizophrenia treatment in Phoenix, AZ through PHP and outpatient behavioral health care. Call Now!",
+    copy: {
+      path: "/locations/phoenix-php-iop/schizophrenia-treatment",
+      hero: {
+        eyebrow: "Phoenix, AZ",
+        headline: "Specialized Schizophrenia Treatment in Phoenix, AZ",
+        subtext:
+          "Desert Recovery Centers provides specialized schizophrenia treatment in Phoenix, AZ through PHP and outpatient programming for men and women whose clinical needs are appropriate for non-residential care. Clients attend structured daytime treatment and return home afterward. This approach supports ongoing behavioral health needs while allowing individuals to maintain connections with their families, living environments, and everyday responsibilities.",
+        image:
+          "/images/locations/php-iop/php-iop-waiting-1.jpg",
+      },
+      benefits: {
+        heading:
+          "Benefits of Specialized Schizophrenia Treatment in Phoenix, AZ at Desert Recovery Centers",
+        subheading: "Structured Care Without Overnight Stays",
+        items: [
+          {
+            title: "Daytime Treatment for Men and Women",
+            text: "Desert Recovery Centers provides PHP and outpatient behavioral health programming for both men and women at the Phoenix location. Clients participate in scheduled treatment without staying overnight, allowing individuals whose symptoms are sufficiently stable for non-residential care to receive structured support while continuing to live at home.",
+          },
+          {
+            title: "Programming Matched to Individual Needs",
+            text: "Schizophrenia can affect perception, thinking, communication, motivation, and daily functioning in different ways. Desert Recovery Centers offers different outpatient programming options, including schedules that may involve approximately five to six hours per day, five days per week. The appropriate program depends on each client's clinical needs and circumstances.",
+          },
+          {
+            title: "Continuity Between Treatment and Home Life",
+            text: "Returning home after scheduled programming allows clients to remain connected to familiar living arrangements and everyday relationships. Desert Recovery Centers provides a non-residential treatment environment where eligible individuals can receive behavioral health support while continuing to navigate household responsibilities, community activities, and other aspects of daily life outside treatment hours.",
+          },
+        ],
+        image: "/images/conditions/bipolar-disorder-treatment-08.webp",
+        imageAlt:
+          "Common area with armchairs arranged for conversation",
+      },
+      why: {
+        heading:
+          "Why Specialized Schizophrenia Treatment in Phoenix, AZ Matters",
+        subheading: "Supporting Stability and Daily Functioning",
+        items: [
+          {
+            title: "Symptoms Can Interfere With Everyday Activities",
+            text: "Schizophrenia may involve hallucinations, delusions, disorganized thinking, or difficulties with motivation and concentration. These experiences can affect communication, relationships, and the ability to manage daily responsibilities. Appropriate treatment is important for addressing symptoms, supporting functioning, and identifying when a more intensive level of care may be necessary.",
+          },
+          {
+            title: "Community Living Requires Ongoing Support",
+            text: "Managing appointments, transportation, household routines, and other responsibilities can become more challenging when psychiatric symptoms affect daily functioning. For individuals living throughout [Phoenix, AZ](https://www.phoenix.gov/), access to structured outpatient behavioral health care may help support treatment participation while maintaining connections to familiar community environments.",
+          },
+          {
+            title: "Changes in Symptoms Deserve Timely Attention",
+            text: "Schizophrenia symptoms and support needs can change over time. Increased confusion, disrupted routines, difficulty communicating, or changes in behavior may indicate a need for clinical reassessment. Recognizing these changes matters because some situations can be addressed through outpatient care, while others require urgent evaluation or more intensive treatment.",
+          },
+        ],
+        image: "/images/conditions/bipolar-disorder-treatment-04.webp",
+        imageAlt:
+          "Clinician taking notes while a client speaks during a session",
+      },
+      faq: {
+        title:
+          "Frequently Asked Questions About Schizophrenia Treatment in Phoenix, AZ",
+        items: [
+          {
+            question:
+              "Can someone receive schizophrenia treatment in Phoenix, AZ without staying overnight?",
+            answer:
+              "Yes, when their symptoms and circumstances make outpatient care clinically appropriate. The Phoenix location offers PHP and outpatient programming for both men and women, without overnight accommodation. Desert Recovery Centers provides structured daytime behavioral health treatment, although individuals experiencing severe instability or immediate safety concerns may require a higher level of care.",
+          },
+          {
+            question:
+              "What if schizophrenia symptoms become worse while someone is receiving outpatient care in Phoenix, AZ?",
+            answer:
+              "Worsening hallucinations, confusion, disorganized behavior, or difficulty maintaining safety should prompt timely clinical evaluation. Severe symptoms or immediate danger may require emergency services rather than routine outpatient appointments. Desert Recovery Centers provides non-residential behavioral health programming in Phoenix, where suitability for continued outpatient participation depends on individual clinical needs.",
+          },
+          {
+            question:
+              "How does PHP for schizophrenia treatment in Phoenix, AZ differ from regular outpatient appointments?",
+            answer:
+              "PHP generally involves more structured treatment hours than standard outpatient appointments while allowing clients to return home afterward. Some Phoenix programming may involve five to six hours daily, five days weekly, depending on the program. [Desert Recovery Centers](https://desertrecoverycenters.com/) offers different non-residential options for individuals whose clinical needs fit the available level of care.",
+          },
+        ],
+      },
+      map: {
+        variant: "gbp",
+        gbpLocationIndex: 2,
+        heading:
+          "PHP and Outpatient Schizophrenia Treatment in Phoenix, AZ – Local Service Coverage",
+        subtext:
+          "Desert Recovery Centers provides outpatient schizophrenia care in Phoenix, AZ for men and women seeking structured daytime behavioral health programming. The Phoenix location offers PHP and outpatient options without overnight stays, allowing eligible clients to return home after treatment. This non-residential approach serves individuals whose clinical needs are appropriate for community-based care while maintaining connections to everyday life in Phoenix.",
+      },
+    },
+  },
+
+  "/locations/glendale/schizophrenia-treatment": {
+    metaTitle: "Structured Schizophrenia Treatment in Glendale, AZ | DRC",
+    metaDescription:
+      "Desert Recovery Centers offers structured schizophrenia treatment in Glendale, AZ within a residential recovery setting for men. Call Now!",
+    copy: {
+      path: "/locations/glendale/schizophrenia-treatment",
+      hero: {
+        eyebrow: "Glendale, AZ",
+        headline: "Structured Schizophrenia Treatment in Glendale, AZ",
+        subtext:
+          "Desert Recovery Centers provides structured schizophrenia treatment in Glendale, AZ within a residential recovery environment specifically for men whose clinical needs are appropriate for this setting. Male clients stay at the center while participating in behavioral health care. This residential approach provides greater daily structure and dedicated treatment space for addressing psychiatric symptoms, functional challenges, and ongoing recovery needs.",
+        image:
+          "/images/glendale/Glendale-Game-Room.jpg",
+      },
+      benefits: {
+        heading:
+          "Benefits of Structured Schizophrenia Treatment in Glendale, AZ at Desert Recovery Centers",
+        subheading: "Consistent Residential Care for Men",
+        items: [
+          {
+            title: "Residential Support With Daily Continuity",
+            text: "Desert Recovery Centers provides a residential recovery setting specifically for men at the Glendale location. Rather than traveling between home and scheduled treatment each day, male clients remain within the care environment. This arrangement offers continuity and dedicated time for addressing behavioral health concerns while reducing some outside demands that may interfere with participation.",
+          },
+          {
+            title: "A Treatment Environment Focused on Individual Needs",
+            text: "Schizophrenia can affect perception, communication, thinking, motivation, and everyday functioning in different ways. Desert Recovery Centers provides residential behavioral health care where individual concerns can receive focused attention. The appropriate treatment approach depends on each man's symptoms, current stability, clinical history, and need for additional psychiatric services.",
+          },
+          {
+            title: "Reliable Structure Away From Competing Responsibilities",
+            text: "Maintaining treatment participation can be difficult when psychiatric symptoms interfere with organization, routines, or daily responsibilities. Structured schizophrenia treatment in Glendale, AZ provides eligible male clients with a residential environment where treatment remains a consistent priority. Staying at the center reduces the need to manage daily transportation and repeated transitions between treatment and home.",
+          },
+        ],
+        image: "/images/conditions/anxiety-treatment-04.webp",
+        imageAlt:
+          "Open lounge area in a residential treatment setting",
+      },
+      why: {
+        heading:
+          "Why Structured Schizophrenia Treatment in Glendale, AZ Matters",
+        subheading: "Addressing Complex Psychiatric Care Needs",
+        items: [
+          {
+            title: "Disrupted Thinking Can Affect Personal Safety and Functioning",
+            text: "Schizophrenia may involve hallucinations, delusions, disorganized thinking, and changes in behavior that interfere with everyday activities. These symptoms can make communication, decision-making, and maintaining routines more difficult. Appropriate psychiatric assessment and treatment are important for determining the level of support needed and recognizing situations requiring urgent care.",
+          },
+          {
+            title: "Consistent Routines Can Be Difficult to Maintain",
+            text: "Symptoms affecting concentration, motivation, or organization may complicate medication management, appointments, personal responsibilities, and daily activities. For men living in and around [Glendale, AZ](https://www.glendaleaz.com/), access to an appropriate residential treatment setting can provide temporary separation from competing obligations while creating dedicated space for behavioral health care.",
+          },
+          {
+            title: "Different Symptom Levels Require Different Care Settings",
+            text: "Not everyone experiencing schizophrenia-related symptoms needs the same treatment intensity. Some individuals may be appropriate for structured residential recovery care, while acute psychosis, severe instability, or immediate safety concerns may require hospital-based assessment. Understanding these distinctions matters when choosing a setting that matches current clinical needs.",
+          },
+        ],
+        image: "/images/conditions/depression-treatment-03.webp",
+        imageAlt:
+          "Client speaking with a therapist in a private session",
+      },
+      faq: {
+        title:
+          "Frequently Asked Questions About Schizophrenia Treatment in Glendale, AZ",
+        items: [
+          {
+            question:
+              "When should a man consider residential schizophrenia treatment in Glendale, AZ?",
+            answer:
+              "Residential treatment may be considered when a man needs greater daily structure and his psychiatric symptoms are sufficiently stable for that level of care. Desert Recovery Centers provides a men-only residential recovery setting in Glendale. An appropriate clinical evaluation is important because acute psychiatric instability may require hospital-based treatment instead.",
+          },
+          {
+            question:
+              "Can men with schizophrenia and difficulty maintaining daily routines receive residential care in Glendale, AZ?",
+            answer:
+              "Men experiencing difficulties with organization, motivation, or everyday routines may benefit from a structured treatment environment when residential care is clinically appropriate. Desert Recovery Centers provides a Glendale residential setting specifically for men, allowing eligible clients to stay within the recovery environment while focusing on behavioral health concerns and treatment participation.",
+          },
+          {
+            question:
+              "What happens if schizophrenia symptoms become severe during residential treatment in Glendale, AZ?",
+            answer:
+              "Severe confusion, escalating psychosis, or immediate safety concerns require prompt clinical evaluation and may require emergency psychiatric services or hospitalization. Residential recovery care is not a substitute for acute inpatient stabilization. Desert Recovery Centers provides structured schizophrenia treatment in Glendale, AZ for men whose needs are appropriate for the residential setting.",
+          },
+        ],
+      },
+      map: {
+        variant: "gbp",
+        gbpLocationIndex: 0,
+        heading:
+          "Residential Schizophrenia Treatment in Glendale, AZ – Local Service Coverage",
+        subtext:
+          "[Desert Recovery Centers](https://desertrecoverycenters.com/) provides residential schizophrenia care in Glendale, AZ specifically for men whose clinical needs are appropriate for a structured recovery environment. Male clients stay at the center while focusing on behavioral health treatment and daily functioning. This residential setting offers dedicated recovery space for men seeking care in the Glendale area without requiring daily travel between home and treatment.",
+      },
+    },
+  },
+
+  "/locations/scottsdale/schizophrenia-treatment": {
+    metaTitle: "Personalized Schizophrenia Treatment in Scottsdale, AZ | DRC",
+    metaDescription:
+      "Desert Recovery Centers offers personalized schizophrenia treatment in Scottsdale, AZ through residential behavioral health care for women. Call Now!",
+    copy: {
+      path: "/locations/scottsdale/schizophrenia-treatment",
+      hero: {
+        eyebrow: "Scottsdale, AZ",
+        headline: "Personalized Schizophrenia Treatment in Scottsdale, AZ",
+        subtext:
+          "Desert Recovery Centers provides personalized schizophrenia treatment in Scottsdale, AZ within a residential recovery setting specifically for women whose clinical needs are appropriate for this level of care. Female clients stay at the center while receiving structured behavioral health support. This environment creates dedicated space to address psychiatric symptoms, daily functioning, and recovery needs without managing every outside responsibility simultaneously.",
+        image:
+          "/images/scottsdale/DRC-LDINNING-NORTH-SCOTTSDALE-08-01-2024-1185August-01-202400001-2.jpg",
+      },
+      benefits: {
+        heading:
+          "Benefits of Personalized Schizophrenia Treatment in Scottsdale, AZ at Desert Recovery Centers",
+        subheading: "Thoughtful Residential Support for Women",
+        items: [
+          {
+            title: "Individual Attention to Psychiatric and Daily Needs",
+            text: "Schizophrenia can affect women through different combinations of perceptual changes, disrupted thinking, communication difficulties, and challenges with everyday functioning. Desert Recovery Centers provides a residential recovery environment where eligible female clients can focus on their individual behavioral health needs while maintaining consistent participation in treatment activities.",
+          },
+          {
+            title: "A Women-Focused Residential Recovery Environment",
+            text: "Desert Recovery Centers operates the Scottsdale residential setting specifically for women. Female clients stay within the treatment environment rather than returning home after daytime appointments. This arrangement provides dedicated recovery space and reduces the repeated transitions that may become difficult when psychiatric symptoms interfere with concentration, organization, or everyday routines.",
+          },
+          {
+            title: "Greater Continuity Throughout the Treatment Experience",
+            text: "Consistency can be especially important when psychiatric concerns make daily planning and participation challenging. Women receiving personalized schizophrenia treatment in Scottsdale, AZ have a residential environment where behavioral health care remains a central focus. Staying at the center allows clients to devote attention to treatment while temporarily reducing many competing household, transportation, and social demands.",
+          },
+        ],
+        image: "/images/conditions/bipolar-disorder-treatment-08.webp",
+        imageAlt:
+          "Residential common area with armchairs arranged for conversation",
+      },
+      why: {
+        heading:
+          "Why Personalized Schizophrenia Treatment in Scottsdale, AZ Matters",
+        subheading: "Recognizing Individual Mental Health Needs",
+        items: [
+          {
+            title: "Psychiatric Symptoms Can Affect Relationships and Independence",
+            text: "Schizophrenia may involve hallucinations, delusions, disorganized thinking, reduced motivation, or difficulty communicating. These experiences can influence relationships, self-care, decision-making, and everyday responsibilities. Appropriate treatment is important for addressing symptoms and determining what level of support may help an individual maintain safety and daily functioning.",
+          },
+          {
+            title: "Daily Responsibilities Can Become Overwhelming During Symptom Changes",
+            text: "Managing appointments, household tasks, transportation, and personal commitments can become difficult when psychiatric symptoms interfere with concentration or organization. For women living in [Scottsdale, AZ](https://www.scottsdaleaz.gov/), residential behavioral health care may provide an appropriate setting to focus on recovery when greater structure is needed and acute hospitalization is not indicated.",
+          },
+          {
+            title: "Early Recognition of Worsening Symptoms Matters",
+            text: "Changes in sleep, communication, perception, or behavior may signal that psychiatric symptoms need reassessment. When symptoms worsen, the appropriate response depends on severity and safety concerns. Some individuals may benefit from structured ongoing treatment, while acute psychosis or immediate danger requires urgent psychiatric evaluation and potentially hospital-based care.",
+          },
+        ],
+        image: "/images/conditions/depression-treatment-06.webp",
+        imageAlt:
+          "Therapist guiding a client through a grounding exercise",
+      },
+      faq: {
+        title:
+          "Frequently Asked Questions About Schizophrenia Treatment in Scottsdale, AZ",
+        items: [
+          {
+            question:
+              "Is residential schizophrenia treatment in Scottsdale, AZ available specifically for women?",
+            answer:
+              "Yes. The Scottsdale location provides residential behavioral health care specifically for women whose clinical needs are appropriate for this setting. Female clients stay at the recovery center during treatment. Desert Recovery Centers offers personalized schizophrenia treatment in Scottsdale, AZ within a structured environment rather than a daytime-only outpatient program.",
+          },
+          {
+            question:
+              "Can women with schizophrenia receive residential care in Scottsdale, AZ if daily routines have become difficult?",
+            answer:
+              "Residential care may be appropriate when psychiatric symptoms interfere with everyday routines and greater structure is needed without requiring acute hospitalization. Desert Recovery Centers provides a women-only residential recovery setting in Scottsdale. Clinical assessment remains important because the severity of symptoms, safety considerations, and individual support needs determine the appropriate treatment level.",
+          },
+          {
+            question:
+              "How can families prepare when a woman is considering schizophrenia treatment in Scottsdale, AZ?",
+            answer:
+              "Families can gather information about current symptoms, medications, previous treatment, daily functioning, and any recent changes in behavior. They should also discuss safety concerns with qualified clinicians. [Desert Recovery Centers](https://desertrecoverycenters.com/) provides residential behavioral health care for women in Scottsdale, where suitability depends on individual clinical needs and the level of support required.",
+          },
+        ],
+      },
+      map: {
+        variant: "gbp",
+        gbpLocationIndex: 1,
+        heading:
+          "Residential Schizophrenia Treatment in Scottsdale, AZ – Local Service Coverage",
+        subtext:
+          "Desert Recovery Centers provides residential schizophrenia care in Scottsdale, AZ specifically for women seeking structured behavioral health support. Female clients stay within the recovery setting while focusing on psychiatric concerns and everyday functioning. This residential model offers dedicated treatment space for women in the Scottsdale area whose needs are appropriate for non-hospital residential care rather than acute inpatient psychiatric stabilization.",
+      },
+    },
+  },
+
+  // ─── Addiction Treatment (October '26) ─────────────────────────────
+
+  "/locations/phoenix-php-iop/addiction-treatment": {
+    metaTitle: "Comprehensive Addiction Treatment in Phoenix, AZ | DRC",
+    metaDescription:
+      "Desert Recovery Centers offers comprehensive addiction treatment in Phoenix, AZ through structured PHP and outpatient care. Call Now!",
+    copy: {
+      path: "/locations/phoenix-php-iop/addiction-treatment",
+      hero: {
+        eyebrow: "Phoenix, AZ",
+        headline: "Comprehensive Addiction Treatment in Phoenix, AZ",
+        subtext:
+          "Desert Recovery Centers provides comprehensive addiction treatment in Phoenix, AZ through PHP and outpatient programming for both men and women. Clients attend structured daytime care and return home afterward rather than staying overnight. This non-residential approach provides dedicated time to address substance use concerns, recovery challenges, and behavioral patterns while maintaining connections to everyday life and responsibilities.",
+        image:
+          "/images/locations/php-iop/php-iop-reception-1.jpg",
+      },
+      benefits: {
+        heading:
+          "Benefits of Comprehensive Addiction Treatment in Phoenix, AZ at Desert Recovery Centers",
+        subheading: "Flexible Support for Lasting Recovery",
+        items: [
+          {
+            title: "Structured Programming Without Residential Stays",
+            text: "Desert Recovery Centers provides PHP and outpatient addiction care at the Phoenix location, allowing men and women to participate in scheduled treatment while continuing to live at home. This approach creates dedicated time for recovery without requiring an overnight stay, making it suitable for individuals whose clinical needs can be addressed through non-residential programming.",
+          },
+          {
+            title: "Different Program Options for Individual Needs",
+            text: "Recovery needs can vary depending on substance use history, current stability, personal circumstances, and behavioral health concerns. Desert Recovery Centers offers different PHP and outpatient programming options in Phoenix, including schedules that may involve approximately five to six hours per day, five days per week. Appropriate placement depends on individual clinical needs.",
+          },
+          {
+            title: "Recovery Support Connected to Everyday Life",
+            text: "Outpatient treatment allows clients to remain connected to their living environments while participating in structured addiction care. Individuals receiving comprehensive addiction treatment in Phoenix, AZ can continue encountering everyday responsibilities and situations outside programming, providing opportunities to recognize challenges that may affect recovery while maintaining consistent engagement with treatment.",
+          },
+        ],
+        image: "/images/conditions/depression-treatment-08.webp",
+        imageAlt:
+          "Quiet room with floor cushions for mindfulness work",
+      },
+      why: {
+        heading:
+          "Why Comprehensive Addiction Treatment in Phoenix, AZ Matters",
+        subheading: "Addressing Substance Use and Recovery",
+        items: [
+          {
+            title: "Substance Use Can Affect Multiple Areas of Life",
+            text: "Addiction may interfere with physical health, emotional well-being, relationships, employment, finances, and everyday responsibilities. These effects can develop gradually or become more noticeable as substance use patterns change. Appropriate treatment provides an opportunity to address the underlying concerns and behaviors associated with substance use rather than focusing only on immediate consequences.",
+          },
+          {
+            title: "Everyday Environments May Contain Recovery Triggers",
+            text: "Familiar routines, social situations, work pressures, and personal stressors can influence substance use patterns. For individuals living throughout [Phoenix, AZ](https://www.phoenix.gov/), structured outpatient care can support recovery while clients continue navigating their communities. Identifying triggers and recognizing situations that increase relapse risk are important parts of understanding ongoing recovery needs.",
+          },
+          {
+            title: "Early Treatment Can Help Address Escalating Concerns",
+            text: "Increasing substance use, difficulty reducing consumption, strained relationships, or repeated disruptions to daily responsibilities may indicate a need for professional assessment. Some individuals can participate safely in outpatient treatment, while others may require medically supervised withdrawal management or a more intensive setting before entering non-residential addiction care.",
+          },
+        ],
+        image: "/images/conditions/bipolar-disorder-treatment-10.webp",
+        imageAlt:
+          "Client writing in a workbook beside a clinician during a session",
+      },
+      faq: {
+        title:
+          "Frequently Asked Questions About Addiction Treatment in Phoenix, AZ",
+        items: [
+          {
+            question:
+              "Can adults receive addiction treatment in Phoenix, AZ without entering a residential facility?",
+            answer:
+              "Yes. The Phoenix location provides PHP and outpatient addiction programming for both men and women, allowing clients to return home after scheduled treatment. Desert Recovery Centers offers comprehensive addiction treatment in Phoenix, AZ for individuals whose clinical needs are appropriate for non-residential care. Some people may require medical detoxification or more intensive treatment first.",
+          },
+          {
+            question:
+              "How much time does outpatient addiction treatment in Phoenix, AZ require each week?",
+            answer:
+              "The schedule depends on the program and the individual's treatment needs. Some Phoenix programming may involve approximately five to six hours per day, five days per week, while other outpatient options differ. Desert Recovery Centers provides different levels of daytime structure without overnight accommodation, allowing appropriate clients to continue living at home.",
+          },
+          {
+            question:
+              "Is outpatient addiction treatment in Phoenix, AZ appropriate for someone concerned about relapse?",
+            answer:
+              "Outpatient care may be appropriate when a person can participate safely while living at home and has needs suited to non-residential treatment. Relapse risk, withdrawal concerns, and environmental triggers should be considered during clinical assessment. [Desert Recovery Centers](https://desertrecoverycenters.com/) provides structured PHP and outpatient options in Phoenix, with suitability depending on individual circumstances.",
+          },
+        ],
+      },
+      map: {
+        variant: "gbp",
+        gbpLocationIndex: 2,
+        heading:
+          "PHP and Outpatient Addiction Treatment in Phoenix, AZ – Local Service Coverage",
+        subtext:
+          "Desert Recovery Centers provides outpatient addiction care in Phoenix, AZ for men and women seeking structured support for substance use concerns. The Phoenix location offers PHP and outpatient programming without overnight stays, allowing eligible clients to return home after treatment. This community-based recovery approach helps individuals remain connected to everyday responsibilities while participating in scheduled behavioral health care.",
+      },
+    },
+  },
+
+  "/locations/glendale/addiction-treatment": {
+    metaTitle: "Dedicated Addiction Treatment in Glendale, AZ | DRC",
+    metaDescription:
+      "Desert Recovery Centers offers dedicated addiction treatment in Glendale, AZ through structured residential recovery care for men. Call Now!",
+    copy: {
+      path: "/locations/glendale/addiction-treatment",
+      hero: {
+        eyebrow: "Glendale, AZ",
+        headline: "Dedicated Addiction Treatment in Glendale, AZ",
+        subtext:
+          "Desert Recovery Centers provides dedicated addiction treatment in Glendale, AZ within a residential recovery center specifically for men. Male clients stay in a structured environment where they can focus on substance use concerns, behavioral patterns, and recovery needs. This residential approach provides dedicated treatment space while temporarily reducing exposure to everyday pressures and situations that may interfere with recovery.",
+        image:
+          "/images/glendale/Glendale-Dining-Room.jpg",
+      },
+      benefits: {
+        heading:
+          "Benefits of Dedicated Addiction Treatment in Glendale, AZ at Desert Recovery Centers",
+        subheading: "Focused Residential Recovery for Men",
+        items: [
+          {
+            title: "A Residential Environment Dedicated to Recovery",
+            text: "Desert Recovery Centers provides a residential treatment setting specifically for men at the Glendale location. Male clients stay within the recovery environment rather than returning home after scheduled programming. This arrangement creates continuity and dedicated space for addressing substance use concerns while reducing some of the outside demands that may interfere with treatment participation.",
+          },
+          {
+            title: "Focused Attention to Individual Substance Use Patterns",
+            text: "Addiction can involve different substances, triggers, behaviors, and personal circumstances. Desert Recovery Centers provides an environment where men can focus on their individual recovery concerns without simultaneously managing the full range of everyday obligations. This residential approach supports consistent treatment engagement while allowing attention to remain centered on behavioral health and recovery needs.",
+          },
+          {
+            title: "Consistent Participation Without Daily Travel",
+            text: "Traveling between home and treatment can create additional scheduling challenges, particularly when someone is managing recovery alongside work, family responsibilities, or transportation limitations. Men receiving dedicated addiction treatment in Glendale, AZ stay within the residential setting, reducing daily transitions and creating greater continuity throughout their treatment experience.",
+          },
+        ],
+        image: "/images/glendale/Glendale-Room-1.jpg",
+        imageAlt:
+          "Shared residential bedroom at the Glendale facility",
+      },
+      why: {
+        heading:
+          "Why Dedicated Addiction Treatment in Glendale, AZ Matters",
+        subheading: "Building Space for Meaningful Recovery",
+        items: [
+          {
+            title: "Familiar Environments May Reinforce Substance Use Patterns",
+            text: "Certain social situations, locations, relationships, or routines can become associated with substance use. Remaining in the same environment may make it difficult for some individuals to distance themselves from recurring triggers. Residential treatment provides temporary separation from these influences while creating dedicated time to address recovery needs.",
+          },
+          {
+            title: "Daily Pressures Can Complicate Recovery Efforts",
+            text: "Employment responsibilities, household demands, financial stress, and relationship challenges can compete with attention to recovery. For men living in and around [Glendale, AZ](https://www.glendaleaz.com/), an appropriate residential treatment environment can provide a structured setting where substance use concerns receive focused attention away from some everyday pressures.",
+          },
+          {
+            title: "Substance Use Can Affect Health and Personal Safety",
+            text: "Ongoing substance use may contribute to physical health problems, emotional distress, impaired judgment, and difficulties maintaining relationships or responsibilities. Withdrawal from certain substances can also involve serious medical risks. Recognizing these concerns is important because some individuals require medically supervised withdrawal management or hospital-based care before entering residential recovery treatment.",
+          },
+        ],
+        image: "/images/conditions/anxiety-treatment-01.webp",
+        imageAlt:
+          "Quiet seating area beside a window in a residential setting",
+      },
+      faq: {
+        title:
+          "Frequently Asked Questions About Addiction Treatment in Glendale, AZ",
+        items: [
+          {
+            question:
+              "When should a man consider residential addiction treatment in Glendale, AZ?",
+            answer:
+              "Residential care may be appropriate when substance use concerns require greater structure or when everyday environments make consistent recovery participation difficult. Desert Recovery Centers provides a men-only residential setting in Glendale. Clinical assessment is important because individuals experiencing dangerous withdrawal symptoms or severe medical instability may require specialized medical care first.",
+          },
+          {
+            question:
+              "Can residential addiction treatment in Glendale, AZ help men struggling with repeated relapse?",
+            answer:
+              "Residential treatment may provide a more structured environment for men experiencing recurring substance use patterns or difficulty maintaining recovery in their usual surroundings. Desert Recovery Centers offers residential addiction care specifically for men in Glendale, creating dedicated space to address recovery concerns while temporarily reducing exposure to some familiar triggers and competing responsibilities.",
+          },
+          {
+            question:
+              "What should men prepare before entering residential addiction treatment in Glendale, AZ?",
+            answer:
+              "Men considering residential care should gather information about substance use history, current medications, previous treatment, medical conditions, and potential withdrawal concerns. They should also discuss practical needs associated with staying at a treatment center. [Desert Recovery Centers](https://desertrecoverycenters.com/) provides residential recovery care for men in Glendale, with admission suitability depending on individual clinical needs.",
+          },
+        ],
+      },
+      map: {
+        variant: "gbp",
+        gbpLocationIndex: 0,
+        heading:
+          "Residential Addiction Treatment in Glendale, AZ – Local Service Coverage",
+        subtext:
+          "Desert Recovery Centers provides residential addiction care in Glendale, AZ specifically for men seeking structured support for substance use concerns. Male clients stay within the recovery environment while focusing on behavioral health and recovery needs. This residential setting offers dedicated treatment space for men in the Glendale area who may benefit from temporary separation from everyday pressures and familiar substance use triggers.",
+      },
+    },
+  },
+
+  "/locations/scottsdale/addiction-treatment": {
+    metaTitle: "Supportive Addiction Treatment in Scottsdale, AZ | DRC",
+    metaDescription:
+      "Desert Recovery Centers offers supportive addiction treatment in Scottsdale, AZ through residential recovery care for women. Call Now!",
+    copy: {
+      path: "/locations/scottsdale/addiction-treatment",
+      hero: {
+        eyebrow: "Scottsdale, AZ",
+        headline: "Supportive Addiction Treatment in Scottsdale, AZ",
+        subtext:
+          "Desert Recovery Centers provides supportive addiction treatment in Scottsdale, AZ within a residential recovery center specifically for women. Female clients stay in a structured environment where they can focus on substance use concerns, emotional well-being, and recovery-related challenges. This residential setting offers dedicated treatment space while reducing exposure to some everyday pressures, distractions, and situations associated with substance use.",
+        image:
+          "/images/scottsdale/DRC-GAME-ROOM-NORTH-SCOTTSDALE-08-01-2024-1388August-01-202400004-2.jpg",
+      },
+      benefits: {
+        heading:
+          "Benefits of Supportive Addiction Treatment in Scottsdale, AZ at Desert Recovery Centers",
+        subheading: "Residential Recovery Centered on Women",
+        items: [
+          {
+            title: "A Women-Focused Residential Recovery Setting",
+            text: "Desert Recovery Centers provides residential addiction care specifically for women at the Scottsdale location. Female clients stay within the recovery environment rather than returning home after scheduled programming. This arrangement creates dedicated space for treatment participation while temporarily reducing many outside responsibilities and circumstances that can make recovery more challenging.",
+          },
+          {
+            title: "Attention to Personal Recovery Challenges",
+            text: "Substance use concerns can involve different triggers, emotional experiences, relationship difficulties, and behavioral patterns. Desert Recovery Centers provides a residential environment where women can focus on their individual recovery needs. Treatment participation remains a consistent priority without requiring clients to manage every household, professional, or social responsibility during their stay.",
+          },
+          {
+            title: "Greater Continuity Throughout Residential Care",
+            text: "Women receiving supportive addiction treatment in Scottsdale, AZ remain within the residential setting during care, eliminating daily travel between home and treatment. Desert Recovery Centers provides a consistent recovery-focused environment where clients can devote attention to behavioral health concerns while maintaining separation from some familiar situations that may contribute to substance use.",
+          },
+        ],
+        image: "/images/conditions/anxiety-treatment-06.webp",
+        imageAlt:
+          "Quiet room with floor cushions used for grounding and mindfulness work",
+      },
+      why: {
+        heading:
+          "Why Supportive Addiction Treatment in Scottsdale, AZ Matters",
+        subheading: "Creating Opportunities for Recovery",
+        items: [
+          {
+            title: "Emotional Stress Can Influence Substance Use Patterns",
+            text: "Stress, difficult emotions, relationship conflicts, and other personal challenges may contribute to substance use or complicate recovery efforts. When substances become a recurring way of responding to these experiences, professional treatment can provide an opportunity to examine underlying concerns and develop a clearer understanding of individual recovery needs.",
+          },
+          {
+            title: "Familiar Social Environments May Present Challenges",
+            text: "Certain relationships, routines, and social settings can become associated with drinking or drug use. For women living in and around [Scottsdale, AZ](https://www.scottsdaleaz.gov/), residential treatment may offer temporary distance from these influences while providing a structured environment where recovery receives greater attention than everyday social demands.",
+          },
+          {
+            title: "Recovery Needs May Extend Beyond Stopping Substance Use",
+            text: "Addiction can affect sleep, emotional well-being, family relationships, financial responsibilities, and everyday functioning. Addressing substance use alone may not resolve every related difficulty. Appropriate treatment considers the broader challenges associated with recovery, including the importance of ongoing support and determining whether medical withdrawal management is necessary before residential care.",
+          },
+        ],
+        image: "/images/scottsdale/DRC-UPSTAIRS-MASTER-BEDROOM-NORTH-SCOTTSDALE-08-01-2024-0658August-01-202400014-2.jpg",
+        imageAlt:
+          "Residential bedroom at the Scottsdale facility",
+      },
+      faq: {
+        title:
+          "Frequently Asked Questions About Addiction Treatment in Scottsdale, AZ",
+        items: [
+          {
+            question:
+              "Is residential addiction treatment in Scottsdale, AZ available specifically for women?",
+            answer:
+              "Yes. The Scottsdale location provides residential recovery care specifically for women, meaning female clients stay at the center during treatment. Desert Recovery Centers offers supportive addiction treatment in Scottsdale, AZ for women whose substance use concerns and individual clinical needs are appropriate for a structured residential environment rather than daytime-only outpatient programming.",
+          },
+          {
+            question:
+              "Can women seek addiction treatment in Scottsdale, AZ when family responsibilities make recovery difficult?",
+            answer:
+              "Yes. Women balancing caregiving, household responsibilities, or family pressures may consider residential treatment when greater separation from everyday demands is clinically appropriate. Desert Recovery Centers provides a women-only residential setting in Scottsdale where clients can focus on substance use concerns. Practical arrangements for dependents and other responsibilities should be considered before admission.",
+          },
+          {
+            question:
+              "Does residential addiction treatment in Scottsdale, AZ include medical detoxification?",
+            answer:
+              "Residential addiction treatment does not automatically mean medically supervised detoxification is available. Withdrawal risks depend on the substance involved, usage history, and individual health conditions. [Desert Recovery Centers](https://desertrecoverycenters.com/) provides residential recovery care for women in Scottsdale, but clients should confirm available medical services and whether withdrawal management is needed before entering treatment.",
+          },
+        ],
+      },
+      map: {
+        variant: "gbp",
+        gbpLocationIndex: 1,
+        heading:
+          "Residential Addiction Treatment in Scottsdale, AZ – Local Service Coverage",
+        subtext:
+          "Desert Recovery Centers provides residential addiction care in Scottsdale, AZ specifically for women seeking a structured environment for substance use recovery. Female clients stay at the recovery center while focusing on behavioral health concerns and personal recovery needs. This women-focused residential setting offers dedicated treatment space for individuals in the Scottsdale area who may benefit from separation from familiar triggers and competing responsibilities.",
+      },
+    },
+  },
+
+  // ─── Alcohol Treatment (October '26) ───────────────────────────────
+
+  "/locations/phoenix-php-iop/alcohol-treatment": {
+    metaTitle: "Professional Alcohol Treatment in Phoenix, AZ | DRC",
+    metaDescription:
+      "Desert Recovery Centers offers professional alcohol treatment in Phoenix, AZ through structured PHP and outpatient care. Call Now!",
+    copy: {
+      path: "/locations/phoenix-php-iop/alcohol-treatment",
+      hero: {
+        eyebrow: "Phoenix, AZ",
+        headline: "Professional Alcohol Treatment in Phoenix, AZ",
+        subtext:
+          "Desert Recovery Centers provides professional alcohol treatment in Phoenix, AZ through PHP and outpatient programming for both men and women. Clients attend structured daytime care without staying overnight, allowing them to return home after scheduled treatment. This approach supports individuals addressing problematic drinking patterns, emotional concerns, and recovery challenges while maintaining connections to their families and everyday responsibilities.",
+        image:
+          "/images/locations/php-iop/php-iop-waiting-2.jpg",
+      },
+      benefits: {
+        heading:
+          "Benefits of Professional Alcohol Treatment in Phoenix, AZ at Desert Recovery Centers",
+        subheading: "Structured Support for Alcohol Recovery",
+        items: [
+          {
+            title: "Daytime Programming That Supports Home Living",
+            text: "Desert Recovery Centers provides PHP and outpatient alcohol recovery care for both men and women at the Phoenix location. Clients attend scheduled treatment and return home afterward rather than staying at a residential center. This arrangement allows individuals whose needs are appropriate for outpatient care to receive structured support while maintaining their usual living arrangements.",
+          },
+          {
+            title: "Different Programming Options for Recovery Needs",
+            text: "Alcohol-related concerns vary according to drinking history, physical health, emotional well-being, and individual circumstances. Desert Recovery Centers offers different PHP and outpatient programming options, including schedules that may involve approximately five to six hours daily, five days per week. Program suitability depends on clinical assessment and whether medical withdrawal management is necessary beforehand.",
+          },
+          {
+            title: "Consistent Care While Navigating Everyday Responsibilities",
+            text: "Professional alcohol treatment in Phoenix, AZ allows eligible clients to participate in structured recovery programming while continuing to encounter everyday responsibilities outside scheduled treatment. Desert Recovery Centers provides a non-residential environment where men and women can focus on alcohol-related concerns without completely separating from their households, personal relationships, and community routines.",
+          },
+        ],
+        image: "/images/conditions/anxiety-treatment-03.webp",
+        imageAlt:
+          "Calm counseling room with two armchairs and a window",
+      },
+      why: {
+        heading:
+          "Why Professional Alcohol Treatment in Phoenix, AZ Matters",
+        subheading: "Addressing Drinking and Daily Challenges",
+        items: [
+          {
+            title: "Alcohol Use Can Affect Physical and Emotional Health",
+            text: "Excessive or persistent drinking may contribute to sleep difficulties, mood changes, impaired judgment, and other health concerns. Alcohol-related problems can also affect relationships, employment, and personal responsibilities. Recognizing these consequences is important because professional assessment can help determine whether outpatient treatment, medically supervised withdrawal, or more intensive care is appropriate.",
+          },
+          {
+            title: "Social Drinking Environments May Complicate Recovery",
+            text: "Restaurants, celebrations, professional gatherings, and familiar social routines can involve alcohol, creating challenges for individuals trying to change drinking patterns. Throughout [Phoenix, AZ](https://www.phoenix.gov/), maintaining recovery may involve navigating everyday situations where alcohol is available. Structured treatment can help individuals address personal triggers and recognize circumstances associated with returning to drinking.",
+          },
+          {
+            title: "Withdrawal Risks Make Appropriate Assessment Essential",
+            text: "People who drink heavily or regularly may experience withdrawal symptoms when reducing or stopping alcohol use. In some cases, withdrawal can cause seizures, severe confusion, or other dangerous complications. Medical assessment is important before abruptly stopping alcohol, particularly for individuals with previous withdrawal symptoms or a history of prolonged heavy drinking.",
+          },
+        ],
+        image: "/images/conditions/anxiety-treatment-07.webp",
+        imageAlt:
+          "Therapist guiding a client through a breathing exercise",
+      },
+      faq: {
+        title:
+          "Frequently Asked Questions About Alcohol Treatment in Phoenix, AZ",
+        items: [
+          {
+            question:
+              "Can adults receive alcohol treatment in Phoenix, AZ while continuing to live at home?",
+            answer:
+              "Yes. The Phoenix location offers PHP and outpatient programming for men and women, allowing clients to return home after daytime treatment. Desert Recovery Centers provides professional alcohol treatment in Phoenix, AZ for individuals whose recovery needs are appropriate for non-residential care. People at risk of dangerous alcohol withdrawal may require medical stabilization first.",
+          },
+          {
+            question:
+              "Is outpatient alcohol treatment in Phoenix, AZ appropriate for someone who drinks heavily every day?",
+            answer:
+              "It depends on drinking history, withdrawal risk, medical conditions, and current stability. Daily heavy drinking can create a risk of dangerous withdrawal, making medical assessment essential before stopping alcohol. Desert Recovery Centers offers PHP and outpatient recovery programming in Phoenix, but some individuals need medically supervised detoxification before beginning non-residential treatment.",
+          },
+          {
+            question:
+              "How does PHP for alcohol treatment in Phoenix, AZ fit around work and family responsibilities?",
+            answer:
+              "PHP provides structured daytime treatment while allowing clients to return home afterward. Some Phoenix programming may involve five to six hours per day, five days weekly, so scheduling requires planning. [Desert Recovery Centers](https://desertrecoverycenters.com/) offers different outpatient options, although program availability and individual treatment needs determine which schedule may be appropriate.",
+          },
+        ],
+      },
+      map: {
+        variant: "gbp",
+        gbpLocationIndex: 2,
+        heading:
+          "PHP and Outpatient Alcohol Treatment in Phoenix, AZ – Local Service Coverage",
+        subtext:
+          "Desert Recovery Centers provides outpatient alcohol recovery care in Phoenix, AZ for men and women seeking structured support for problematic drinking. The Phoenix location offers PHP and outpatient programming without overnight accommodation, allowing eligible clients to return home after scheduled treatment. This non-residential approach supports recovery participation while maintaining connections to family life, household responsibilities, and the wider Phoenix community.",
+      },
+    },
+  },
+
+  "/locations/glendale/alcohol-treatment": {
+    metaTitle: "Individualized Alcohol Treatment in Glendale, AZ | DRC",
+    metaDescription:
+      "Desert Recovery Centers offers individualized alcohol treatment in Glendale, AZ through structured residential recovery care for men. Call Now!",
+    copy: {
+      path: "/locations/glendale/alcohol-treatment",
+      hero: {
+        eyebrow: "Glendale, AZ",
+        headline: "Individualized Alcohol Treatment in Glendale, AZ",
+        subtext:
+          "Desert Recovery Centers provides individualized alcohol treatment in Glendale, AZ within a residential recovery center specifically for men. Male clients stay in a structured environment where they can focus on problematic drinking, personal triggers, and recovery challenges. This residential approach offers dedicated treatment space while temporarily reducing exposure to familiar drinking environments and everyday pressures that may interfere with recovery.",
+        image:
+          "/images/glendale/Glendale-Recreation-Room-1.jpg",
+      },
+      benefits: {
+        heading:
+          "Benefits of Individualized Alcohol Treatment in Glendale, AZ at Desert Recovery Centers",
+        subheading: "Focused Residential Recovery for Men",
+        items: [
+          {
+            title: "Residential Care Designed for Male Clients",
+            text: "Desert Recovery Centers provides a residential recovery environment specifically for men at the Glendale location. Male clients stay at the center rather than returning home after scheduled programming. This arrangement creates dedicated time for addressing alcohol-related concerns while reducing the distractions and competing responsibilities that can make consistent treatment participation difficult.",
+          },
+          {
+            title: "Attention to Personal Drinking Patterns",
+            text: "Alcohol use concerns can develop through different combinations of stress, habits, emotional challenges, and social influences. Desert Recovery Centers provides a setting where men can focus on their individual recovery needs while temporarily stepping away from some familiar drinking situations. The residential environment supports sustained attention to behavioral health and substance use concerns.",
+          },
+          {
+            title: "Consistent Treatment Without Daily Travel",
+            text: "Men receiving individualized alcohol treatment in Glendale, AZ remain within the residential recovery environment throughout their stay. This eliminates daily travel between home and treatment while creating greater continuity in the recovery experience. Desert Recovery Centers provides structured surroundings where clients can prioritize treatment participation without repeatedly navigating outside obligations.",
+          },
+        ],
+        image: "/images/glendale/Glendale-Kitchen.jpg",
+        imageAlt:
+          "Residential kitchen at the Glendale facility",
+      },
+      why: {
+        heading:
+          "Why Individualized Alcohol Treatment in Glendale, AZ Matters",
+        subheading: "Understanding Alcohol Recovery Challenges",
+        items: [
+          {
+            title: "Long-Term Drinking Can Affect Overall Health",
+            text: "Frequent or excessive alcohol consumption may contribute to sleep disturbances, liver problems, mood changes, and difficulties with concentration or decision-making. These effects can influence work performance, relationships, and everyday functioning. Recognizing the physical and behavioral consequences of alcohol use is an important reason to seek appropriate professional assessment and treatment.",
+          },
+          {
+            title: "Familiar Social Routines Can Reinforce Drinking",
+            text: "Alcohol may become associated with gatherings, celebrations, stressful workdays, or established social habits. For men living in and around [Glendale, AZ](https://www.glendaleaz.com/), stepping away from familiar drinking environments may create an opportunity to examine these patterns without repeatedly encountering the same situations during residential treatment.",
+          },
+          {
+            title: "Alcohol Withdrawal Requires Careful Medical Consideration",
+            text: "Suddenly stopping alcohol after prolonged heavy drinking can cause withdrawal symptoms ranging from anxiety and tremors to seizures or severe confusion. These complications may require medically supervised withdrawal management before residential recovery care is appropriate. Understanding withdrawal risk helps individuals seek the right level of medical support rather than attempting potentially dangerous withdrawal alone.",
+          },
+        ],
+        image: "/images/glendale/Glendale-Room-2.jpg",
+        imageAlt:
+          "Two-bed residential room at the Glendale facility",
+      },
+      faq: {
+        title:
+          "Frequently Asked Questions About Alcohol Treatment in Glendale, AZ",
+        items: [
+          {
+            question:
+              "Is residential alcohol treatment in Glendale, AZ available specifically for men?",
+            answer:
+              "Yes. The Glendale location provides residential recovery care specifically for men, allowing male clients to stay within the treatment environment. Desert Recovery Centers offers individualized alcohol treatment in Glendale, AZ for men whose clinical needs are appropriate for structured residential care. Individuals experiencing significant withdrawal risks may need medical stabilization before admission.",
+          },
+          {
+            question:
+              "Can men seek alcohol treatment in Glendale, AZ after repeated attempts to stop drinking?",
+            answer:
+              "Yes. Repeated difficulty reducing or stopping alcohol use may indicate a need for professional assessment and a more structured recovery environment. Desert Recovery Centers provides residential alcohol recovery care for men in Glendale, offering dedicated treatment space away from some familiar drinking triggers. The appropriate level of care depends on individual medical and behavioral health needs.",
+          },
+          {
+            question:
+              "Should a man complete alcohol detox before entering residential treatment in Glendale, AZ?",
+            answer:
+              "That depends on drinking history, withdrawal symptoms, medical conditions, and current alcohol use. Heavy or prolonged drinking can create dangerous withdrawal risks that require medical supervision. [Desert Recovery Centers](https://desertrecoverycenters.com/) provides residential recovery care for men in Glendale, but prospective clients should confirm whether separate medical withdrawal management is necessary before entering treatment.",
+          },
+        ],
+      },
+      map: {
+        variant: "gbp",
+        gbpLocationIndex: 0,
+        heading:
+          "Residential Alcohol Treatment in Glendale, AZ – Local Service Coverage",
+        subtext:
+          "Desert Recovery Centers provides residential alcohol recovery care in Glendale, AZ specifically for men seeking structured support for problematic drinking. Male clients stay within the treatment environment while focusing on substance use concerns and personal recovery needs. This residential setting offers dedicated space for men in the Glendale area who may benefit from temporary separation from familiar drinking environments and everyday pressures.",
+      },
+    },
+  },
+
+  "/locations/scottsdale/alcohol-treatment": {
+    metaTitle: "Holistic Alcohol Treatment in Scottsdale, AZ | DRC",
+    metaDescription:
+      "Desert Recovery Centers offers holistic alcohol treatment in Scottsdale, AZ through structured residential recovery care for women. Call Now!",
+    copy: {
+      path: "/locations/scottsdale/alcohol-treatment",
+      hero: {
+        eyebrow: "Scottsdale, AZ",
+        headline: "Holistic Alcohol Treatment in Scottsdale, AZ",
+        subtext:
+          "Desert Recovery Centers provides holistic alcohol treatment in Scottsdale, AZ within a residential recovery center specifically for women. Female clients stay in a structured environment where they can focus on problematic drinking, emotional well-being, and personal recovery needs. This residential approach creates dedicated space to address alcohol-related concerns while temporarily reducing everyday responsibilities and exposure to familiar drinking triggers.",
+        image:
+          "/images/scottsdale/DRC-KITCHEN-NORTH-SCOTTSDALE-08-01-2024-1292August-01-202400001-2.jpg",
+      },
+      benefits: {
+        heading:
+          "Benefits of Holistic Alcohol Treatment in Scottsdale, AZ at Desert Recovery Centers",
+        subheading: "Women-Focused Residential Recovery Support",
+        items: [
+          {
+            title: "A Residential Setting Dedicated to Women",
+            text: "Desert Recovery Centers provides residential alcohol recovery care specifically for women at the Scottsdale location. Female clients stay within the treatment environment rather than returning home after scheduled programming. This arrangement offers dedicated recovery space while reducing some of the outside responsibilities and familiar situations that can interfere with treatment participation.",
+          },
+          {
+            title: "Attention to the Broader Recovery Experience",
+            text: "Alcohol-related difficulties may involve emotional stress, relationship concerns, disrupted routines, and challenges with everyday functioning. Desert Recovery Centers provides a residential environment where women can focus on their individual substance use concerns within a broader behavioral health context, rather than treating drinking patterns as entirely separate from daily life.",
+          },
+          {
+            title: "Consistent Support Without Daily Transitions",
+            text: "Women receiving holistic alcohol treatment in Scottsdale, AZ remain within the residential recovery environment throughout their stay. This reduces the need to coordinate daily transportation or move between treatment and home responsibilities. Desert Recovery Centers provides structured surroundings where clients can devote sustained attention to recovery while temporarily stepping away from competing demands.",
+          },
+        ],
+        image: "/images/scottsdale/DRC-MASSAGE-ROOM-NORTH-SCOTTSDALE-08-01-2024-August-01-202400003-2.jpg",
+        imageAlt:
+          "Candlelit massage room at the Scottsdale facility",
+      },
+      why: {
+        heading:
+          "Why Holistic Alcohol Treatment in Scottsdale, AZ Matters",
+        subheading: "Supporting Recovery Beyond Drinking Patterns",
+        items: [
+          {
+            title: "Alcohol Use Can Affect Emotional and Physical Well-Being",
+            text: "Persistent or excessive drinking may contribute to sleep disturbances, mood changes, physical health concerns, and difficulties managing stress. These effects can influence relationships, work responsibilities, and personal routines. Addressing alcohol-related problems requires attention to the broader ways drinking may be affecting an individual's health and everyday functioning.",
+          },
+          {
+            title: "Social Expectations Can Complicate Drinking Decisions",
+            text: "Celebrations, professional gatherings, restaurants, and established social routines may involve alcohol. For women living in and around [Scottsdale, AZ](https://www.scottsdaleaz.gov/), familiar social situations can create challenges when attempting to change drinking habits. Recognizing personal triggers and understanding how social environments influence alcohol use are important considerations during recovery.",
+          },
+          {
+            title: "Withdrawal Safety Matters Before Residential Admission",
+            text: "Women who have been drinking heavily or regularly may experience withdrawal symptoms when reducing or stopping alcohol. Some symptoms can become medically dangerous, including seizures or severe confusion. Professional medical assessment helps determine whether supervised withdrawal management is needed before entering a residential recovery setting that is not designed for acute medical stabilization.",
+          },
+        ],
+        image: "/images/conditions/anxiety-treatment-01.webp",
+        imageAlt:
+          "Quiet seating area beside a window in a residential setting",
+      },
+      faq: {
+        title:
+          "Frequently Asked Questions About Alcohol Treatment in Scottsdale, AZ",
+        items: [
+          {
+            question:
+              "Can women receive residential alcohol treatment in Scottsdale, AZ while addressing emotional health concerns?",
+            answer:
+              "Yes. The Scottsdale location provides residential behavioral health and addiction recovery care specifically for women. Alcohol-related concerns may occur alongside emotional difficulties that deserve clinical attention. Desert Recovery Centers offers holistic alcohol treatment in Scottsdale, AZ within a structured residential environment, with the appropriate treatment approach depending on each woman's individual needs.",
+          },
+          {
+            question:
+              "Is residential alcohol treatment in Scottsdale, AZ appropriate for women whose social routines involve frequent drinking?",
+            answer:
+              "Residential treatment may be appropriate when recurring drinking patterns are difficult to manage within familiar social environments and greater structure is clinically indicated. Desert Recovery Centers provides women with a Scottsdale residential setting that offers temporary distance from everyday drinking triggers while creating dedicated space to focus on substance use concerns and recovery.",
+          },
+          {
+            question:
+              "What should women know about alcohol withdrawal before entering residential treatment in Scottsdale, AZ?",
+            answer:
+              "Alcohol withdrawal can be dangerous for individuals with prolonged or heavy drinking histories. Women should discuss their alcohol use, previous withdrawal symptoms, medications, and medical conditions with a qualified clinician before admission. Desert Recovery Centers provides residential recovery care in Scottsdale, but medically supervised withdrawal management may be necessary before treatment begins.",
+          },
+        ],
+      },
+      map: {
+        variant: "gbp",
+        gbpLocationIndex: 1,
+        heading:
+          "Residential Alcohol Treatment in Scottsdale, AZ – Local Service Coverage",
+        subtext:
+          "[Desert Recovery Centers](https://desertrecoverycenters.com/) provides residential alcohol recovery care in Scottsdale, AZ specifically for women seeking a structured treatment environment. Female clients stay at the recovery center while focusing on problematic drinking and related behavioral health concerns. This women-focused residential setting offers dedicated recovery space for individuals in the Scottsdale area who may benefit from separation from familiar drinking triggers.",
+      },
+    },
+  },
 };

@@ -62,6 +62,7 @@ export const LOCATION_SERVICE_CITIES: Record<string, LocationServiceCity> = {
 export const BATCH_DATES = {
   august2026: "2026-08-26",
   september2026: "2026-09-17",
+  october2026: "2026-10-12",
 } as const;
 
 export type BatchDate = (typeof BATCH_DATES)[keyof typeof BATCH_DATES];
@@ -159,6 +160,14 @@ export const SERVICE_CARD_IMAGES: Record<string, string> = {
   "ocd-treatment": "/images/conditions/anxiety-treatment-10.webp",
   "personality-disorder-treatment": "/images/conditions/bipolar-disorder-treatment-09.webp",
   "adhd-treatment": "/images/conditions/depression-treatment-10.webp",
+  // October '26 batch. No schizophrenia, addiction, or alcohol photography
+  // exists and every pool frame is already on a page, so these cards reuse
+  // frames that appear only on pages of a DIFFERENT service — a card still
+  // never lands the reader on its own artwork. October pages must not use
+  // these three frames; see the October block in location-service-copy.ts.
+  "schizophrenia-treatment": "/images/conditions/depression-treatment-01.webp",
+  "addiction-treatment": "/images/conditions/bipolar-disorder-treatment-07.webp",
+  "alcohol-treatment": "/images/conditions/anxiety-treatment-09.webp",
 };
 
 /**
@@ -167,6 +176,7 @@ export const SERVICE_CARD_IMAGES: Record<string, string> = {
  *
  * Bipolar appears twice — Phoenix shipped in August, Glendale and Scottsdale
  * in September — because each city's pages carry that batch's dateModified.
+ * ADHD likewise: Phoenix and Glendale in September, Scottsdale in October.
  */
 const BATCH: Array<{
   serviceSlug: string;
@@ -227,6 +237,34 @@ const BATCH: Array<{
     serviceName: "ADHD Treatment",
     cities: ["phoenix-php-iop", "glendale"],
     batchDate: BATCH_DATES.september2026,
+  },
+
+  // ─── October '26 ───────────────────────────────────────────────
+  // Completes ADHD with Scottsdale, then adds schizophrenia and the first
+  // two substance-use services across all three cities.
+  {
+    serviceSlug: "adhd-treatment",
+    serviceName: "ADHD Treatment",
+    cities: ["scottsdale"],
+    batchDate: BATCH_DATES.october2026,
+  },
+  {
+    serviceSlug: "schizophrenia-treatment",
+    serviceName: "Schizophrenia Treatment",
+    cities: ["phoenix-php-iop", "glendale", "scottsdale"],
+    batchDate: BATCH_DATES.october2026,
+  },
+  {
+    serviceSlug: "addiction-treatment",
+    serviceName: "Addiction Treatment",
+    cities: ["phoenix-php-iop", "glendale", "scottsdale"],
+    batchDate: BATCH_DATES.october2026,
+  },
+  {
+    serviceSlug: "alcohol-treatment",
+    serviceName: "Alcohol Treatment",
+    cities: ["phoenix-php-iop", "glendale", "scottsdale"],
+    batchDate: BATCH_DATES.october2026,
   },
 ];
 
