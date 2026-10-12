@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
@@ -376,7 +376,16 @@ function OverviewImage() {
   );
 }
 
-export default function PhoenixPHPContent() {
+/**
+ * `servicesHub` is the server-rendered CityServicesHub, passed in from the
+ * page as a slot so its data stays out of this client bundle. It renders
+ * directly above the Programs section.
+ */
+export default function PhoenixPHPContent({
+  servicesHub,
+}: {
+  servicesHub?: ReactNode;
+}) {
   return (
     <>
       {/* ── SECTION 3: Overview ─────────────────────────────── */}
@@ -463,6 +472,8 @@ export default function PhoenixPHPContent() {
 
       {/* Photo Gallery, full facility gallery */}
       <PhotoGallery photos={gallery} title="See the Space" eyebrow="Our Facility" aspect="aspect-[3/2]" />
+
+      {servicesHub}
 
       {/* ── SECTION 4: Programs — Tabbed Panel ────────────── */}
       <motion.div
