@@ -12,21 +12,28 @@
  * answers, which stay live for readers and are flattened to plain text only
  * for the FAQPage JSON-LD.
  *
- * IMAGES: the supplied PTSD set was a byte-for-byte duplicate of the
- * depression set (verified by checksum, 2026-08-28), so 20 unique images
- * cover 21 slots. PTSD pages therefore reference depression-set files. The
- * four unavoidable repeats are placed in DIFFERENT cities, so no image ever
- * appears twice within one city's pages, and every hub card is distinct.
- * Replace with a genuine PTSD set when one is available.
+ * IMAGES: every condition has its own set in /images/conditions. Anxiety,
+ * depression, and bipolar arrived first; PTSD, OCD, personality disorder,
+ * ADHD, schizophrenia, addiction, and alcohol sets arrived 2026-10-12 and
+ * replaced the borrowed frames those pages used until then.
  *
- * The September '26 batch adds OCD, personality disorder, and ADHD pages,
- * for which no photography exists at all. They draw from the same three
- * pools under the same rule (no repeat within a city). The reserved
- * allocation is listed in the September block at the foot of this file.
+ * Rules, checked across all pages before each batch ships:
+ *  - No image repeats within a single city's pages (cross-city is fine).
+ *  - A hub card never uses a frame from that service's own pages.
+ *  - Subjects match the location: Glendale is men-only residential,
+ *    Scottsdale women-only residential, Phoenix mixed outpatient.
  *
- * The October '26 batch adds Scottsdale ADHD plus schizophrenia, addiction,
- * and alcohol pages, again with no dedicated photography. Its allocation
- * note opens the October block.
+ * Known gaps in the new sets, handled per page below:
+ *  - schizophrenia-03..06 are byte-identical to ocd-05 and
+ *    personality-disorder-02, -04, -09; never place both copies in one city.
+ *  - adhd-05, -06, -09, -10 show children or a teen; unused, as the pages
+ *    describe adult care.
+ *  - addiction-07, alcohol-01, -08 show online sessions; unused, as the
+ *    pages describe in-person care.
+ *  - No women-only addiction or alcohol frames exist, so the Scottsdale
+ *    pages use women-only PTSD frames; Scottsdale ADHD keeps anxiety-08 for
+ *    its second slot for the same reason.
+ * Unused frames stay in the folder for future pages.
  */
 
 import type { SeoPageCopy } from "@/components/seo-template/types";
@@ -624,9 +631,9 @@ export const locationServiceCopy: Record<string, LocationServiceCopy> = {
             text: "Returning home after programming means clients can remain connected to the environments where everyday challenges may occur. For adults navigating family life, work, commuting, and other responsibilities throughout Phoenix, outpatient trauma care can provide opportunities to continue participating in normal routines while engaging consistently with a structured treatment program.",
           },
         ],
-        image: "/images/conditions/depression-treatment-09.webp",
+        image: "/images/conditions/ptsd-trauma-treatment-10.webp",
         imageAlt:
-          "Client in conversation with a therapist",
+          "Group therapy session with participants seated in a circle",
       },
       why: {
         heading:
@@ -646,9 +653,9 @@ export const locationServiceCopy: Record<string, LocationServiceCopy> = {
             text: "Some people need meaningful structure while still being able to live safely at home and participate in their community. PHP and outpatient treatment offers a non-residential option, providing scheduled behavioral health programming without requiring clients to relocate temporarily or remain within a treatment center overnight.",
           },
         ],
-        image: "/images/conditions/depression-treatment-06.webp",
+        image: "/images/conditions/ptsd-trauma-treatment-02.webp",
         imageAlt:
-          "Therapist guiding a client through a grounding exercise",
+          "Client wiping away tears while a therapist listens during a session",
       },
       faq: {
         title:
@@ -717,9 +724,9 @@ export const locationServiceCopy: Record<string, LocationServiceCopy> = {
             text: "Everyday environments may include situations, responsibilities, or reminders that make it difficult to concentrate fully on trauma recovery. Desert Recovery Centers gives male clients a residential setting where some outside pressures can temporarily be reduced, allowing more focused attention on therapeutic participation and concerns affecting emotional well-being and daily functioning.",
           },
         ],
-        image: "/images/conditions/depression-treatment-08.webp",
+        image: "/images/conditions/ptsd-trauma-treatment-05.webp",
         imageAlt:
-          "Quiet room with floor cushions for grounding work",
+          "Client talking with a therapist who is taking notes",
       },
       why: {
         heading:
@@ -739,9 +746,9 @@ export const locationServiceCopy: Record<string, LocationServiceCopy> = {
             text: "Trauma-related concerns may disrupt work, relationships, sleep patterns, or ordinary responsibilities enough that maintaining a consistent recovery routine becomes difficult. A residential setting provides an organized treatment environment where men can temporarily place everyday demands aside and give greater attention to behavioral health care and personal recovery needs.",
           },
         ],
-        image: "/images/conditions/depression-treatment-05.webp",
+        image: "/images/conditions/ptsd-trauma-treatment-07.webp",
         imageAlt:
-          "Client journaling during a therapy session",
+          "Therapist taking notes while a client speaks in a counseling session",
       },
       faq: {
         title:
@@ -810,9 +817,9 @@ export const locationServiceCopy: Record<string, LocationServiceCopy> = {
             text: "Some responses to trauma may become embedded in everyday habits, avoidance patterns, or reactions to particular situations. Desert Recovery Centers provides a residential environment where women can devote focused attention to these concerns, including patterns that may be harder to recognize or address while managing the distractions and demands of ordinary life.",
           },
         ],
-        image: "/images/conditions/depression-treatment-02.webp",
+        image: "/images/conditions/ptsd-trauma-treatment-04.webp",
         imageAlt:
-          "Group therapy session with participants seated in a circle",
+          "Client arranging stones during a calming grounding activity",
       },
       why: {
         heading:
@@ -832,9 +839,9 @@ export const locationServiceCopy: Record<string, LocationServiceCopy> = {
             text: "When trauma-related concerns continue despite efforts to manage them within everyday life, a more structured environment may provide a different level of focus. Residential treatment allows women to temporarily place some outside responsibilities aside while dedicating more of their daily environment to therapeutic participation and recovery-focused work.",
           },
         ],
-        image: "/images/conditions/depression-treatment-03.webp",
+        image: "/images/conditions/ptsd-trauma-treatment-02.webp",
         imageAlt:
-          "Client speaking with a therapist in a private session",
+          "Client wiping away tears while a therapist listens during a session",
       },
       faq: {
         title:
@@ -964,21 +971,6 @@ export const locationServiceCopy: Record<string, LocationServiceCopy> = {
       },
     },
   },
-
-  // ─── September '26 batch — images ─────────────────────────────
-  //
-  // No OCD, personality disorder, or ADHD photography exists, so these ten
-  // pages draw from the anxiety, depression, and bipolar pools under the
-  // same rule as August: no image repeats within a single city. Each page's
-  // images sit on its own entry below; that is the source of truth.
-  //
-  // Three frames are reserved for the new hub cards in location-services.ts
-  // (anxiety-10, bipolar-09, depression-10) and appear on NO page, so a card
-  // never lands the reader on its own artwork.
-  //
-  // Where the pool allowed it, gendered subjects were matched to the
-  // gendered locations: bipolar-02 (male client) sits on a Glendale page,
-  // and the two-woman frames (bipolar-04, bipolar-10) sit on Scottsdale.
 
   // ─── Bipolar Disorder Treatment (September '26) ─────────────────
 
@@ -1202,9 +1194,9 @@ export const locationServiceCopy: Record<string, LocationServiceCopy> = {
             text: "Obsessive thoughts and compulsive behaviors can arise in ordinary situations at home, work, or elsewhere in the community. Receiving personalized OCD treatment in Phoenix, AZ while continuing to live at home allows clients to remain connected to real-world routines while regularly participating in structured behavioral health programming.",
           },
         ],
-        image: "/images/conditions/anxiety-treatment-09.webp",
+        image: "/images/conditions/ocd-treatment-03.webp",
         imageAlt:
-          "Client journaling while a clinician listens during a session",
+          "Clients talking together in a relaxed common area",
       },
       why: {
         heading:
@@ -1224,9 +1216,9 @@ export const locationServiceCopy: Record<string, LocationServiceCopy> = {
             text: "Some people need a meaningful level of behavioral health structure without an overnight residential stay. PHP and outpatient programming allows clients to receive scheduled daytime treatment while continuing to live at home, making it possible to remain connected to family and personal responsibilities outside treatment hours when clinically appropriate.",
           },
         ],
-        image: "/images/conditions/anxiety-treatment-06.webp",
+        image: "/images/conditions/ocd-treatment-06.webp",
         imageAlt:
-          "Quiet room with floor cushions used for grounding and mindfulness work",
+          "Client repeatedly checking a locked door",
       },
       faq: {
         title:
@@ -1295,9 +1287,9 @@ export const locationServiceCopy: Record<string, LocationServiceCopy> = {
             text: "The Glendale recovery center serves men rather than operating as a mixed-gender outpatient setting. For male clients throughout [Glendale, AZ](https://www.glendaleaz.com/), Desert Recovery Centers provides a residential environment where they stay during treatment and can place greater attention on behavioral health care away from many ordinary outside distractions.",
           },
         ],
-        image: "/images/conditions/anxiety-treatment-03.webp",
+        image: "/images/conditions/ocd-treatment-01.webp",
         imageAlt:
-          "Calm counseling room with two armchairs and a window",
+          "Staff member welcoming a client into a treatment lounge",
       },
       why: {
         heading:
@@ -1317,9 +1309,9 @@ export const locationServiceCopy: Record<string, LocationServiceCopy> = {
             text: "Managing significant obsessive thoughts or compulsive behaviors while keeping up with ordinary responsibilities can become difficult. Residential care creates an environment centered on treatment, allowing men to temporarily reduce competing demands and devote more of their daily attention to behavioral health needs and recovery-focused participation.",
           },
         ],
-        image: "/images/conditions/anxiety-treatment-07.webp",
+        image: "/images/conditions/ocd-treatment-02.webp",
         imageAlt:
-          "Therapist guiding a client through a breathing exercise",
+          "Clinician taking notes while a client speaks in a session",
       },
       faq: {
         title:
@@ -1388,9 +1380,9 @@ export const locationServiceCopy: Record<string, LocationServiceCopy> = {
             text: "Maintaining treatment participation alongside disruptive obsessive or compulsive patterns can be challenging. Desert Recovery Centers provides a structured residential environment where recovery remains a daily priority, reducing repeated transitions between treatment and home while giving women a consistent setting in which to focus on behavioral health concerns.",
           },
         ],
-        image: "/images/conditions/anxiety-treatment-04.webp",
+        image: "/images/conditions/ocd-treatment-08.webp",
         imageAlt:
-          "Open lounge area in a residential treatment setting",
+          "Client arranging objects on a table into precise rows",
       },
       why: {
         heading:
@@ -1410,9 +1402,9 @@ export const locationServiceCopy: Record<string, LocationServiceCopy> = {
             text: "Obsessive or compulsive patterns can become closely connected with particular routines, spaces, objects, or situations encountered at home. A residential recovery environment temporarily changes that everyday context, providing women with structured space where treatment can become the primary focus instead of continually competing with established routines and familiar pressures.",
           },
         ],
-        image: "/images/conditions/anxiety-treatment-05.webp",
+        image: "/images/conditions/ocd-treatment-05.webp",
         imageAlt:
-          "Therapist and client in an individual counseling session",
+          "Client talking with a therapist who is taking notes",
       },
       faq: {
         title:
@@ -1483,9 +1475,9 @@ export const locationServiceCopy: Record<string, LocationServiceCopy> = {
             text: "Desert Recovery Centers serves both male and female clients through the Phoenix PHP and outpatient setting. Clients attend daytime programming before returning home, providing a treatment option for individuals who need structured behavioral health support without the residential stay associated with the gender-specific Glendale and Scottsdale recovery centers.",
           },
         ],
-        image: "/images/conditions/bipolar-disorder-treatment-05.webp",
+        image: "/images/conditions/personality-disorder-treatment-10.webp",
         imageAlt:
-          "Client sitting quietly with a warm drink in a treatment lounge",
+          "Group therapy session with participants seated in a circle",
       },
       why: {
         heading:
@@ -1505,9 +1497,9 @@ export const locationServiceCopy: Record<string, LocationServiceCopy> = {
             text: "Some individuals can benefit from meaningful treatment structure while continuing to live safely at home. PHP and outpatient programming provides scheduled behavioral health care without an overnight stay, allowing clients to work on persistent interpersonal or emotional patterns while remaining connected to important responsibilities outside treatment hours.",
           },
         ],
-        image: "/images/conditions/anxiety-treatment-08.webp",
+        image: "/images/conditions/personality-disorder-treatment-09.webp",
         imageAlt:
-          "Client talking with a therapist in a one-to-one session",
+          "Couple meeting with a therapist during a session",
       },
       faq: {
         title:
@@ -1576,9 +1568,9 @@ export const locationServiceCopy: Record<string, LocationServiceCopy> = {
             text: "Maintaining consistent treatment engagement can become challenging when everyday pressures compete for attention. Desert Recovery Centers provides a residential environment where recovery remains integrated into daily life, allowing men to participate in behavioral health care without repeatedly shifting between a treatment setting and the routines or demands of living at home.",
           },
         ],
-        image: "/images/conditions/bipolar-disorder-treatment-02.webp",
+        image: "/images/conditions/personality-disorder-treatment-01.webp",
         imageAlt:
-          "Client talking with a therapist in an individual session",
+          "Client writing in a notebook during a conversation in a lounge",
       },
       why: {
         heading:
@@ -1598,9 +1590,9 @@ export const locationServiceCopy: Record<string, LocationServiceCopy> = {
             text: "When recurring emotional or behavioral patterns interfere significantly with routines and relationships, managing treatment alongside ordinary responsibilities may become challenging. A residential setting provides men with greater daily structure and dedicated recovery space, reducing some of the competing demands that can make consistent participation more difficult.",
           },
         ],
-        image: "/images/conditions/bipolar-disorder-treatment-03.webp",
+        image: "/images/conditions/personality-disorder-treatment-06.webp",
         imageAlt:
-          "Group therapy session with a clinician leading the discussion",
+          "Client speaking with a therapist who is taking notes",
       },
       faq: {
         title:
@@ -1669,9 +1661,9 @@ export const locationServiceCopy: Record<string, LocationServiceCopy> = {
             text: "Residential treatment allows women to remain in a recovery-focused environment rather than leaving after each day of programming. Desert Recovery Centers provides this continuity so female clients can devote more attention to behavioral health care while temporarily reducing the household, professional, social, and other responsibilities that may otherwise compete with treatment.",
           },
         ],
-        image: "/images/conditions/bipolar-disorder-treatment-04.webp",
+        image: "/images/conditions/personality-disorder-treatment-07.webp",
         imageAlt:
-          "Clinician taking notes while a client speaks during a session",
+          "Client writing in a journal beside a window",
       },
       why: {
         heading:
@@ -1691,9 +1683,9 @@ export const locationServiceCopy: Record<string, LocationServiceCopy> = {
             text: "Professional obligations, family responsibilities, and social commitments can compete with focused behavioral health care. For women living in or around [Scottsdale, AZ](https://www.scottsdaleaz.gov/), residential treatment can provide temporary distance from those demands while creating dedicated time for therapeutic participation and recovery.",
           },
         ],
-        image: "/images/conditions/bipolar-disorder-treatment-10.webp",
+        image: "/images/conditions/personality-disorder-treatment-08.webp",
         imageAlt:
-          "Client writing in a workbook beside a clinician during a session",
+          "Client practicing a calming breath during a session with a therapist",
       },
       faq: {
         title:
@@ -1764,9 +1756,9 @@ export const locationServiceCopy: Record<string, LocationServiceCopy> = {
             text: "Attention, organization, concentration, and related difficulties can become particularly noticeable while managing work, education, household responsibilities, or relationships. Professional ADHD treatment in Phoenix, AZ allows clients to participate in structured care while continuing to encounter and navigate their regular responsibilities outside scheduled programming.",
           },
         ],
-        image: "/images/conditions/anxiety-treatment-01.webp",
+        image: "/images/conditions/adhd-treatment-08.webp",
         imageAlt:
-          "Quiet seating area beside a window in an outpatient setting",
+          "Group therapy session with adults seated in a circle",
       },
       why: {
         heading:
@@ -1786,9 +1778,9 @@ export const locationServiceCopy: Record<string, LocationServiceCopy> = {
             text: "Not every person seeking structured ADHD support needs an overnight residential environment. PHP and outpatient programming allows appropriate clients to participate in scheduled daytime treatment while continuing to live at home, providing a way to receive consistent behavioral health care without completely separating from family life and everyday routines.",
           },
         ],
-        image: "/images/conditions/depression-treatment-07.webp",
+        image: "/images/conditions/adhd-treatment-07.webp",
         imageAlt:
-          "Client speaking with a clinician during an outpatient session",
+          "Client talking with a therapist during an individual session",
       },
       faq: {
         title:
@@ -1857,9 +1849,9 @@ export const locationServiceCopy: Record<string, LocationServiceCopy> = {
             text: "The Glendale recovery center serves male clients in a residential setting rather than operating as a mixed-gender outpatient program. Desert Recovery Centers provides an environment where men can temporarily step away from many outside demands, allowing behavioral health treatment and recovery-focused participation to become a more consistent part of daily life.",
           },
         ],
-        image: "/images/conditions/depression-treatment-06.webp",
+        image: "/images/conditions/adhd-treatment-07.webp",
         imageAlt:
-          "Therapist guiding a client through a grounding exercise",
+          "Client talking with a therapist during an individual session",
       },
       why: {
         heading:
@@ -1879,9 +1871,9 @@ export const locationServiceCopy: Record<string, LocationServiceCopy> = {
             text: "Familiar environments may contain numerous responsibilities, interruptions, and distractions that make sustained treatment participation challenging. Residential care gives men an opportunity to step away from many of these competing demands, allowing behavioral health concerns to receive greater attention within a consistent setting rather than fitting recovery around an already demanding routine.",
           },
         ],
-        image: "/images/conditions/depression-treatment-02.webp",
+        image: "/images/conditions/adhd-treatment-03.webp",
         imageAlt:
-          "Group therapy session with participants seated in a circle",
+          "Therapist taking notes while a client talks in a counseling session",
       },
       faq: {
         title:
@@ -1918,21 +1910,6 @@ export const locationServiceCopy: Record<string, LocationServiceCopy> = {
     },
   },
 
-  // ─── October '26 batch — images ───────────────────────────────
-  //
-  // No ADHD, schizophrenia, addiction, or alcohol photography exists, so
-  // these ten pages draw from the same three pools under the same rule: no
-  // image repeats within a single city. Each page's images sit on its own
-  // entry below; that is the source of truth.
-  //
-  // Three frames serve as the October hub cards in location-services.ts
-  // and appear on NO October page: depression-01 (schizophrenia card),
-  // bipolar-07 (addiction card), anxiety-09 (alcohol card).
-  //
-  // The pools ran short of suitable frames in the two residential cities,
-  // where subjects are matched to the gendered locations (Glendale men,
-  // Scottsdale women). Those slots use real facility photography instead.
-
   // ─── ADHD Treatment (October '26) ──────────────────────────────────
 
   "/locations/scottsdale/adhd-treatment": {
@@ -1967,9 +1944,9 @@ export const locationServiceCopy: Record<string, LocationServiceCopy> = {
             text: "Maintaining routines can be difficult when distractions, changing schedules, and competing responsibilities interfere with attention. Desert Recovery Centers provides a structured residential environment where women can concentrate on treatment participation, develop greater awareness of their individual challenges, and devote time to recovery within a setting centered on behavioral health care.",
           },
         ],
-        image: "/images/conditions/depression-treatment-04.webp",
+        image: "/images/conditions/adhd-treatment-04.webp",
         imageAlt:
-          "Therapy room with armchairs arranged for a session",
+          "Client working through a planner with a clinician at a table",
       },
       why: {
         heading:
@@ -2062,9 +2039,9 @@ export const locationServiceCopy: Record<string, LocationServiceCopy> = {
             text: "Returning home after scheduled programming allows clients to remain connected to familiar living arrangements and everyday relationships. Desert Recovery Centers provides a non-residential treatment environment where eligible individuals can receive behavioral health support while continuing to navigate household responsibilities, community activities, and other aspects of daily life outside treatment hours.",
           },
         ],
-        image: "/images/conditions/bipolar-disorder-treatment-08.webp",
+        image: "/images/conditions/schizophrenia-treatment-10.webp",
         imageAlt:
-          "Common area with armchairs arranged for conversation",
+          "Family session with a client and relatives beside a clinician",
       },
       why: {
         heading:
@@ -2084,9 +2061,9 @@ export const locationServiceCopy: Record<string, LocationServiceCopy> = {
             text: "Schizophrenia symptoms and support needs can change over time. Increased confusion, disrupted routines, difficulty communicating, or changes in behavior may indicate a need for clinical reassessment. Recognizing these changes matters because some situations can be addressed through outpatient care, while others require urgent evaluation or more intensive treatment.",
           },
         ],
-        image: "/images/conditions/bipolar-disorder-treatment-04.webp",
+        image: "/images/conditions/schizophrenia-treatment-02.webp",
         imageAlt:
-          "Clinician taking notes while a client speaks during a session",
+          "Clinician taking notes while a client talks during a session",
       },
       faq: {
         title:
@@ -2155,9 +2132,9 @@ export const locationServiceCopy: Record<string, LocationServiceCopy> = {
             text: "Maintaining treatment participation can be difficult when psychiatric symptoms interfere with organization, routines, or daily responsibilities. Structured schizophrenia treatment in Glendale, AZ provides eligible male clients with a residential environment where treatment remains a consistent priority. Staying at the center reduces the need to manage daily transportation and repeated transitions between treatment and home.",
           },
         ],
-        image: "/images/conditions/anxiety-treatment-04.webp",
+        image: "/images/conditions/schizophrenia-treatment-09.webp",
         imageAlt:
-          "Open lounge area in a residential treatment setting",
+          "Client meeting with a clinician at a desk",
       },
       why: {
         heading:
@@ -2177,9 +2154,9 @@ export const locationServiceCopy: Record<string, LocationServiceCopy> = {
             text: "Not everyone experiencing schizophrenia-related symptoms needs the same treatment intensity. Some individuals may be appropriate for structured residential recovery care, while acute psychosis, severe instability, or immediate safety concerns may require hospital-based assessment. Understanding these distinctions matters when choosing a setting that matches current clinical needs.",
           },
         ],
-        image: "/images/conditions/depression-treatment-03.webp",
+        image: "/images/conditions/schizophrenia-treatment-08.webp",
         imageAlt:
-          "Client speaking with a therapist in a private session",
+          "Client speaking with a clinician during an individual session",
       },
       faq: {
         title:
@@ -2248,9 +2225,9 @@ export const locationServiceCopy: Record<string, LocationServiceCopy> = {
             text: "Consistency can be especially important when psychiatric concerns make daily planning and participation challenging. Women receiving personalized schizophrenia treatment in Scottsdale, AZ have a residential environment where behavioral health care remains a central focus. Staying at the center allows clients to devote attention to treatment while temporarily reducing many competing household, transportation, and social demands.",
           },
         ],
-        image: "/images/conditions/bipolar-disorder-treatment-08.webp",
+        image: "/images/conditions/schizophrenia-treatment-04.webp",
         imageAlt:
-          "Residential common area with armchairs arranged for conversation",
+          "Client and therapist talking during a walk through a garden",
       },
       why: {
         heading:
@@ -2270,9 +2247,9 @@ export const locationServiceCopy: Record<string, LocationServiceCopy> = {
             text: "Changes in sleep, communication, perception, or behavior may signal that psychiatric symptoms need reassessment. When symptoms worsen, the appropriate response depends on severity and safety concerns. Some individuals may benefit from structured ongoing treatment, while acute psychosis or immediate danger requires urgent psychiatric evaluation and potentially hospital-based care.",
           },
         ],
-        image: "/images/conditions/depression-treatment-06.webp",
+        image: "/images/conditions/schizophrenia-treatment-01.webp",
         imageAlt:
-          "Therapist guiding a client through a grounding exercise",
+          "Therapist offering tissues to a client during a session",
       },
       faq: {
         title:
@@ -2343,9 +2320,9 @@ export const locationServiceCopy: Record<string, LocationServiceCopy> = {
             text: "Outpatient treatment allows clients to remain connected to their living environments while participating in structured addiction care. Individuals receiving comprehensive addiction treatment in Phoenix, AZ can continue encountering everyday responsibilities and situations outside programming, providing opportunities to recognize challenges that may affect recovery while maintaining consistent engagement with treatment.",
           },
         ],
-        image: "/images/conditions/depression-treatment-08.webp",
+        image: "/images/conditions/addiction-treatment-03.webp",
         imageAlt:
-          "Quiet room with floor cushions for mindfulness work",
+          "Group therapy session with participants seated in a circle",
       },
       why: {
         heading:
@@ -2365,9 +2342,9 @@ export const locationServiceCopy: Record<string, LocationServiceCopy> = {
             text: "Increasing substance use, difficulty reducing consumption, strained relationships, or repeated disruptions to daily responsibilities may indicate a need for professional assessment. Some individuals can participate safely in outpatient treatment, while others may require medically supervised withdrawal management or a more intensive setting before entering non-residential addiction care.",
           },
         ],
-        image: "/images/conditions/bipolar-disorder-treatment-10.webp",
+        image: "/images/conditions/addiction-treatment-05.webp",
         imageAlt:
-          "Client writing in a workbook beside a clinician during a session",
+          "Client writing in a notebook during a counseling session",
       },
       faq: {
         title:
@@ -2436,9 +2413,9 @@ export const locationServiceCopy: Record<string, LocationServiceCopy> = {
             text: "Traveling between home and treatment can create additional scheduling challenges, particularly when someone is managing recovery alongside work, family responsibilities, or transportation limitations. Men receiving dedicated addiction treatment in Glendale, AZ stay within the residential setting, reducing daily transitions and creating greater continuity throughout their treatment experience.",
           },
         ],
-        image: "/images/glendale/Glendale-Room-1.jpg",
+        image: "/images/conditions/addiction-treatment-10.webp",
         imageAlt:
-          "Shared residential bedroom at the Glendale facility",
+          "Client practicing a breathing exercise with a therapist",
       },
       why: {
         heading:
@@ -2458,9 +2435,9 @@ export const locationServiceCopy: Record<string, LocationServiceCopy> = {
             text: "Ongoing substance use may contribute to physical health problems, emotional distress, impaired judgment, and difficulties maintaining relationships or responsibilities. Withdrawal from certain substances can also involve serious medical risks. Recognizing these concerns is important because some individuals require medically supervised withdrawal management or hospital-based care before entering residential recovery treatment.",
           },
         ],
-        image: "/images/conditions/anxiety-treatment-01.webp",
+        image: "/images/conditions/addiction-treatment-08.webp",
         imageAlt:
-          "Quiet seating area beside a window in a residential setting",
+          "Client talking with a therapist who is taking notes",
       },
       faq: {
         title:
@@ -2529,9 +2506,9 @@ export const locationServiceCopy: Record<string, LocationServiceCopy> = {
             text: "Women receiving supportive addiction treatment in Scottsdale, AZ remain within the residential setting during care, eliminating daily travel between home and treatment. Desert Recovery Centers provides a consistent recovery-focused environment where clients can devote attention to behavioral health concerns while maintaining separation from some familiar situations that may contribute to substance use.",
           },
         ],
-        image: "/images/conditions/anxiety-treatment-06.webp",
+        image: "/images/conditions/ptsd-trauma-treatment-09.webp",
         imageAlt:
-          "Quiet room with floor cushions used for grounding and mindfulness work",
+          "Client writing in a journal while a therapist listens",
       },
       why: {
         heading:
@@ -2551,9 +2528,9 @@ export const locationServiceCopy: Record<string, LocationServiceCopy> = {
             text: "Addiction can affect sleep, emotional well-being, family relationships, financial responsibilities, and everyday functioning. Addressing substance use alone may not resolve every related difficulty. Appropriate treatment considers the broader challenges associated with recovery, including the importance of ongoing support and determining whether medical withdrawal management is necessary before residential care.",
           },
         ],
-        image: "/images/scottsdale/DRC-UPSTAIRS-MASTER-BEDROOM-NORTH-SCOTTSDALE-08-01-2024-0658August-01-202400014-2.jpg",
+        image: "/images/conditions/ptsd-trauma-treatment-08.webp",
         imageAlt:
-          "Residential bedroom at the Scottsdale facility",
+          "Client resting with a warm drink in a quiet lounge",
       },
       faq: {
         title:
@@ -2624,9 +2601,9 @@ export const locationServiceCopy: Record<string, LocationServiceCopy> = {
             text: "Professional alcohol treatment in Phoenix, AZ allows eligible clients to participate in structured recovery programming while continuing to encounter everyday responsibilities outside scheduled treatment. Desert Recovery Centers provides a non-residential environment where men and women can focus on alcohol-related concerns without completely separating from their households, personal relationships, and community routines.",
           },
         ],
-        image: "/images/conditions/anxiety-treatment-03.webp",
+        image: "/images/conditions/alcohol-treatment-05.webp",
         imageAlt:
-          "Calm counseling room with two armchairs and a window",
+          "Group therapy session with participants seated in a circle",
       },
       why: {
         heading:
@@ -2646,9 +2623,9 @@ export const locationServiceCopy: Record<string, LocationServiceCopy> = {
             text: "People who drink heavily or regularly may experience withdrawal symptoms when reducing or stopping alcohol use. In some cases, withdrawal can cause seizures, severe confusion, or other dangerous complications. Medical assessment is important before abruptly stopping alcohol, particularly for individuals with previous withdrawal symptoms or a history of prolonged heavy drinking.",
           },
         ],
-        image: "/images/conditions/anxiety-treatment-07.webp",
+        image: "/images/conditions/alcohol-treatment-02.webp",
         imageAlt:
-          "Therapist guiding a client through a breathing exercise",
+          "Client writing in a workbook while a staff member stands nearby",
       },
       faq: {
         title:
@@ -2717,9 +2694,9 @@ export const locationServiceCopy: Record<string, LocationServiceCopy> = {
             text: "Men receiving individualized alcohol treatment in Glendale, AZ remain within the residential recovery environment throughout their stay. This eliminates daily travel between home and treatment while creating greater continuity in the recovery experience. Desert Recovery Centers provides structured surroundings where clients can prioritize treatment participation without repeatedly navigating outside obligations.",
           },
         ],
-        image: "/images/glendale/Glendale-Kitchen.jpg",
+        image: "/images/conditions/alcohol-treatment-06.webp",
         imageAlt:
-          "Residential kitchen at the Glendale facility",
+          "Therapist taking notes while a client talks at a table",
       },
       why: {
         heading:
@@ -2739,9 +2716,9 @@ export const locationServiceCopy: Record<string, LocationServiceCopy> = {
             text: "Suddenly stopping alcohol after prolonged heavy drinking can cause withdrawal symptoms ranging from anxiety and tremors to seizures or severe confusion. These complications may require medically supervised withdrawal management before residential recovery care is appropriate. Understanding withdrawal risk helps individuals seek the right level of medical support rather than attempting potentially dangerous withdrawal alone.",
           },
         ],
-        image: "/images/glendale/Glendale-Room-2.jpg",
+        image: "/images/conditions/alcohol-treatment-09.webp",
         imageAlt:
-          "Two-bed residential room at the Glendale facility",
+          "Client writing in a notebook during a session",
       },
       faq: {
         title:
@@ -2810,9 +2787,9 @@ export const locationServiceCopy: Record<string, LocationServiceCopy> = {
             text: "Women receiving holistic alcohol treatment in Scottsdale, AZ remain within the residential recovery environment throughout their stay. This reduces the need to coordinate daily transportation or move between treatment and home responsibilities. Desert Recovery Centers provides structured surroundings where clients can devote sustained attention to recovery while temporarily stepping away from competing demands.",
           },
         ],
-        image: "/images/scottsdale/DRC-MASSAGE-ROOM-NORTH-SCOTTSDALE-08-01-2024-August-01-202400003-2.jpg",
+        image: "/images/conditions/ptsd-trauma-treatment-03.webp",
         imageAlt:
-          "Candlelit massage room at the Scottsdale facility",
+          "Client and therapist talking during a walk through a garden",
       },
       why: {
         heading:
@@ -2832,9 +2809,9 @@ export const locationServiceCopy: Record<string, LocationServiceCopy> = {
             text: "Women who have been drinking heavily or regularly may experience withdrawal symptoms when reducing or stopping alcohol. Some symptoms can become medically dangerous, including seizures or severe confusion. Professional medical assessment helps determine whether supervised withdrawal management is needed before entering a residential recovery setting that is not designed for acute medical stabilization.",
           },
         ],
-        image: "/images/conditions/anxiety-treatment-01.webp",
+        image: "/images/conditions/ptsd-trauma-treatment-01.webp",
         imageAlt:
-          "Quiet seating area beside a window in a residential setting",
+          "Client wrapped in a blanket holding a warm drink in a quiet lounge",
       },
       faq: {
         title:

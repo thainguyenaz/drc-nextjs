@@ -137,37 +137,29 @@ function placeholderCopy(
  * Card image for each service, used by the Services hub on the City Pages.
  *
  * Keyed by SERVICE, not by page, so the "Anxiety Treatment" card looks the
- * same on every city page. Deliberately drawn from images not used inside
- * any page's Benefits or Why section, so a card never duplicates the
- * artwork on the page it links to.
+ * same on every city page. Deliberately drawn from images not used in the
+ * Benefits or Why section of that service's pages, so a card never
+ * duplicates the artwork on the page it links to.
  */
 export const SERVICE_CARD_IMAGES: Record<string, string> = {
   "anxiety-treatment": "/images/conditions/anxiety-treatment-02.webp",
   // -09 rather than the unused -10: -10 is an empty room and looked out of
-  // place beside the other two cards, which show people. -09 appears only on
-  // the Phoenix PTSD page, so clicking this card never lands on the same photo.
+  // place beside the other cards, which show people.
   "depression-treatment": "/images/conditions/depression-treatment-09.webp",
-  // The supplied PTSD images duplicated the depression set, so this card
-  // draws from that shared pool. Distinct from the depression card above.
-  "ptsd-trauma-treatment": "/images/conditions/depression-treatment-07.webp",
   // Family session — the only card not showing a clinical dyad, which keeps
-  // the four cards visually distinct from one another.
+  // the original cards visually distinct from one another.
   "bipolar-disorder-treatment": "/images/conditions/bipolar-disorder-treatment-06.webp",
-  // September '26 batch. No OCD, personality disorder, or ADHD photography
-  // exists, so these three cards are reserved out of the existing pools and
-  // are deliberately used on NO page — a card therefore never lands the
-  // reader on its own artwork. See the image plan in location-service-copy.ts.
-  "ocd-treatment": "/images/conditions/anxiety-treatment-10.webp",
-  "personality-disorder-treatment": "/images/conditions/bipolar-disorder-treatment-09.webp",
-  "adhd-treatment": "/images/conditions/depression-treatment-10.webp",
-  // October '26 batch. No schizophrenia, addiction, or alcohol photography
-  // exists and every pool frame is already on a page, so these cards reuse
-  // frames that appear only on pages of a DIFFERENT service — a card still
-  // never lands the reader on its own artwork. October pages must not use
-  // these three frames; see the October block in location-service-copy.ts.
-  "schizophrenia-treatment": "/images/conditions/depression-treatment-01.webp",
-  "addiction-treatment": "/images/conditions/bipolar-disorder-treatment-07.webp",
-  "alcohol-treatment": "/images/conditions/anxiety-treatment-09.webp",
+  // Dedicated sets for the remaining conditions arrived 2026-10-12. Each card
+  // is a frame from its own set that appears on none of that service's pages.
+  // The PTSD frames are all on pages, so its card repeats the one used on the
+  // Scottsdale addiction page — never a PTSD page.
+  "ptsd-trauma-treatment": "/images/conditions/ptsd-trauma-treatment-08.webp",
+  "ocd-treatment": "/images/conditions/ocd-treatment-09.webp",
+  "personality-disorder-treatment": "/images/conditions/personality-disorder-treatment-03.webp",
+  "adhd-treatment": "/images/conditions/adhd-treatment-01.webp",
+  "schizophrenia-treatment": "/images/conditions/schizophrenia-treatment-05.webp",
+  "addiction-treatment": "/images/conditions/addiction-treatment-06.webp",
+  "alcohol-treatment": "/images/conditions/alcohol-treatment-04.webp",
 };
 
 /**
