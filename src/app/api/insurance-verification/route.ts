@@ -102,8 +102,6 @@ export async function POST(request: NextRequest) {
               { name: "email", value: email },
               { name: "phone", value: phone },
               { name: "insurance_carrier", value: insuranceCarrier },
-              { name: "member_id", value: memberId || "" },
-              { name: "date_of_birth", value: dateOfBirth },
               { name: "how_did_you_hear", value: howDidYouHear || "" },
             ],
             context: {
