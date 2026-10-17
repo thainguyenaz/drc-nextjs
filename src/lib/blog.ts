@@ -27,6 +27,89 @@ const DISCLAIMER = `<p><em>This article is for informational purposes only and d
 export const blogPosts: BlogPost[] = [
   {
     reviewer: "nguyen",
+    lastReviewed: "2026-10-16",
+    slug: "anxiety-disorders-and-alcohol-use-disorder-a-common-pairing",
+    title: "Anxiety Disorders and Alcohol Use Disorder: A Common Pairing",
+    excerpt: "Anxiety and Alcohol Use Disorder fuel each other in ways most people don't recognize until both feel out of control. Here's what's happening, why it progresses, and what treating both at once actually looks like.",
+    category: "mental-health",
+    author: "Desert Recovery Centers Clinical Team",
+    datePublished: "2026-10-17",
+    dateModified: "2026-10-17",
+    readTime: 7,
+    featuredImage: "/images/glendale/Glendale-Front.jpg",
+    featuredImageAlt: "Anxiety Disorders and Alcohol Use Disorder: A Common Pairing - Desert Recovery Centers",
+    tags: ["anxiety and alcohol","drinking to cope with anxiety","dual diagnosis anxiety"],
+    metaTitle: "Anxiety and Alcohol Use Disorder: Why They Occur Together",
+    metaDescription: "Drinking to cope with anxiety can make both conditions worse over time. Learn how anxiety and AUD interact, and why dual diagnosis treatment works best.",
+    content: `<p>You've been using alcohol to take the edge off for a while now, and lately you've noticed something uncomfortable: the anxiety is getting worse, not better. Maybe you've tried to cut back and felt your heart racing, your thoughts spiraling. Maybe you're wondering whether something is genuinely wrong with you, or whether you're just weak, or whether quitting is even possible when the anxiety feels this unbearable without a drink. You're not imagining any of it. What you're experiencing is one of the most well-documented, and most undertreated, combinations in mental health: anxiety disorder and Alcohol Use Disorder running together, each one feeding the other.</p>
+
+<p>This is real. It has a name. And it responds to treatment when both conditions are addressed at the same time.</p>
+
+<h2>Why Anxiety and Alcohol End Up Together So Often</h2>
+
+<p>Alcohol works fast on anxiety. It activates the brain's calming system, dropping physiological arousal within minutes. For someone living with constant dread, a social phobia, or panic attacks, that relief feels like medicine. In the short term, it is relief. The problem is what happens next.</p>
+
+<p>Repeated drinking rewires the brain's stress response. The same system that was temporarily quieted starts to compensate by running hotter when alcohol isn't present. Over time, baseline anxiety rises. The drinker needs more alcohol to get the same calming effect, and the anxiety between drinks becomes sharper than it ever was before. Roughly one in five people with an anxiety disorder also meets the clinical threshold for Alcohol Use Disorder. That number is not a coincidence. It reflects a biological feedback loop that develops gradually, often without the person realizing it's happening.</p>
+
+<h2>The Withdrawal Problem Nobody Warns You About</h2>
+
+<p>If you've tried to stop drinking and felt a terrifying spike in anxiety, racing heart, sweating, or something that felt like a panic attack, that is your nervous system in rebound. When alcohol is removed, the brain doesn't return to baseline quietly. It overshoots into a hyperactive state, producing symptoms that are nearly identical to severe anxiety or panic disorder.</p>
+
+<p>This withdrawal-related anxiety is biological. It is not evidence that you need alcohol to function. For most people, it improves substantially within the first few weeks of abstinence, once the nervous system stabilizes. But getting through that window safely often requires medical support. Withdrawal from alcohol can be medically serious, and a supervised detox through a partner facility is the safest way to manage it before continuing into longer-term care.</p>
+
+<h2>Which Anxiety Disorders Are Most Commonly Involved</h2>
+
+<p>Any anxiety disorder can pair with Alcohol Use Disorder, but some show up more often than others. Generalized Anxiety Disorder and Social Anxiety Disorder carry the highest rates of comorbidity. Social anxiety in particular tends to come first, sometimes by years, with drinking starting as a way to get through situations that feel unbearable otherwise. By the time the pattern becomes a problem, the two conditions are difficult to separate.</p>
+
+<h2>What Happens If Only One Is Treated</h2>
+
+<p>This is where the stakes get real. Treating AUD without addressing the anxiety leaves the primary trigger for drinking completely active. The person achieves sobriety and then runs directly back into the anxiety that made alcohol appealing in the first place. Relapse becomes almost predictable. On the other side, managing anxiety without addressing the drinking means the alcohol keeps disrupting the brain chemistry that any anxiety treatment depends on. Neither approach works well alone. The clinical evidence on this is clear: treating both conditions at the same time produces better outcomes for sobriety and for anxiety than treating them one after the other.</p>
+
+<blockquote class="clinical-callout"><p><strong>Clinical perspective from Dr. Nguyen:</strong> In my clinical experience, anxiety and alcohol use often become intertwined, making it difficult to determine where one ends and the other begins; I emphasize assessing symptoms over time while treating both concurrently rather than assuming everything will resolve with sobriety. I tell families that alcohol may temporarily relieve anxiety, but it ultimately reinforces the cycle and can intensify the very symptoms the person is trying to escape. Recovery requires more than stopping alcohol use—it requires helping individuals learn to tolerate distress, regulate their emotions, and develop healthier ways to cope with the underlying anxiety.</p></blockquote>
+
+<p>If you've been white-knuckling anxiety without the tools to actually manage it, sobriety can feel worse than drinking did, at least at first. That's not a sign treatment won't work. It's a sign you need more support than willpower alone.</p>
+
+<p><strong>You do not have to figure this out alone.</strong> Desert Recovery Centers is here 24 hours a day, 7 days a week. Call <a href="tel:+16026357207">(602) 635-7207</a> to talk with our admissions team, or <a href="/insurance">verify your insurance</a> online in a few minutes.</p>
+
+<h2>A Realistic Timeline: What to Expect Early On</h2>
+
+<ul>
+<li><strong>Hours 6–12 after the last drink:</strong> Withdrawal symptoms may begin, including elevated heart rate, sweating, and sharp anxiety. Medical oversight matters here.</li>
+<li><strong>Days 1–3:</strong> Symptoms typically peak. This is the period of highest medical risk and the most intense anxiety rebound.</li>
+<li><strong>Days 4–7:</strong> Physical withdrawal symptoms begin to ease for most people. Anxiety often remains elevated.</li>
+<li><strong>Weeks 2–4:</strong> A meaningful portion of anxiety that appeared in early recovery begins to lift as the brain recalibrates. What remains after this window is more likely to reflect a true, pre-existing anxiety disorder that needs its own treatment.</li>
+<li><strong>Weeks 4 and beyond:</strong> With both conditions being treated, most people see real improvement in anxiety and a reduced pull toward drinking.</li>
+</ul>
+
+<h2>Common Questions, Answered Plainly</h2>
+
+<p><strong>If alcohol calms me down, why is my anxiety worse since I stopped?</strong> Because chronic alcohol use suppresses your nervous system, and when it's removed, the nervous system overshoots into a hyperactive state. The anxiety you feel right now is largely biological withdrawal, not proof that you need alcohol to cope.</p>
+
+<p><strong>Do I have to treat both at once?</strong> Yes, if at all possible. Leaving anxiety untreated while addressing AUD keeps the trigger for drinking fully in place. Concurrent treatment is the standard that produces the best results.</p>
+
+<p><strong>Will I need anxiety medication forever?</strong> Not necessarily. Some people do benefit from ongoing medication. Others find that anxiety decreases significantly with sustained sobriety, therapy, and lifestyle changes. That decision is made individually with your prescribing clinician after acute withdrawal has passed, not during it.</p>
+
+<h2>When to Seek Professional Help</h2>
+
+<p>Some people can reduce their drinking with outpatient support and self-management. Others need a more structured level of care. Consider reaching out to a professional if:</p>
+
+<ul>
+<li>You've tried to cut back or stop and found you physically couldn't</li>
+<li>You're drinking specifically to manage panic attacks, social fear, or constant dread</li>
+<li>Anxiety symptoms have gotten significantly worse since you reduced or stopped drinking</li>
+<li>You've relapsed after a period of sobriety, especially during a period of high stress</li>
+<li>You're using alcohol daily or near-daily to get through normal life</li>
+<li>You're having thoughts of harming yourself (if this is you right now, call 988 or go to your nearest emergency room)</li>
+</ul>
+
+<p>A dual diagnosis program, one that treats the anxiety disorder and the Alcohol Use Disorder together rather than in sequence, gives you the best shot at lasting improvement. At Desert Recovery Centers, the clinical team evaluates both conditions from the start and builds treatment around what's actually driving the pattern, not just the drinking on the surface. For anyone who needs medical detox first, Desert Recovery Centers coordinates that through partner facilities and continues care from there.</p>
+
+<p>You don't have to figure out which problem came first before you can ask for help. You just have to make the call.</p>
+
+<p><strong>You do not have to figure this out alone.</strong> Desert Recovery Centers is here 24 hours a day, 7 days a week. Call <a href="tel:+16026357207">(602) 635-7207</a> to talk with our admissions team, or <a href="/insurance">verify your insurance</a> online in a few minutes.</p>`,
+  },
+  {
+    reviewer: "nguyen",
     lastReviewed: "2026-10-13",
     slug: "depression-and-substance-use-which-came-first",
     title: "Depression and Substance Use: Which Came First?",
