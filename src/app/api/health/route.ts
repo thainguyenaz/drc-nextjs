@@ -35,6 +35,8 @@ const REPORTED_ENV_VARS = [
   "GOOGLE_ADS_CONVERSION_ACTION_PARTNER_REFERRAL",
   "NEXT_PUBLIC_TURNSTILE_SITE_KEY",
   "TURNSTILE_SECRET_KEY",
+  "DRIP_INTAKE_URL",
+  "DRIP_INTAKE_HMAC_SECRET",
 ] as const;
 
 // Subset of reported vars whose absence flips status to "degraded".

@@ -4,6 +4,7 @@ import { verifyTurnstile } from "@/lib/turnstile";
 import { uploadFormConversion } from "@/lib/tracking/google-ads";
 import { fireGa4Lead } from "@/lib/tracking/ga4-mp";
 import { buildMarketingConsents, parseConsentValue } from "@/lib/consent";
+import { classifyPayer, enrollInDrip } from "@/lib/drip-intake";
 
 export const runtime = "nodejs";
 
@@ -225,6 +226,37 @@ export async function POST(request: NextRequest) {
     const err = e as Error;
     console.error(
       "[get-help] notification exception:",
+      err.message?.slice(0, 200)
+    );
+  }
+
+  try {
+    const dripResult = await enrollInDrip({
+      formId: "drc-website-get-help",
+      firstName,
+      lastName,
+      email,
+      phone,
+      relationshipToPatient:
+        seekingFor === "A Loved One" ? "other" : "self",
+      payerCategory: classifyPayer(insuranceProvider),
+      message: situation || undefined,
+      pageUrl: str(body.pageUri) || undefined,
+      utm: {
+        source: utmSource,
+        medium: utmMedium,
+        campaign: utmCampaign,
+        term: utmTerm,
+        content: utmContent,
+      },
+      gclid: request.cookies.get("_dr_gclid")?.value ?? null,
+      consents,
+    });
+    console.log("[get-help] drip intake:", JSON.stringify(dripResult));
+  } catch (e: unknown) {
+    const err = e as Error;
+    console.error(
+      "[get-help] drip intake exception:",
       err.message?.slice(0, 200)
     );
   }
