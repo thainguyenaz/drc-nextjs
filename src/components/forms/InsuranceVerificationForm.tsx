@@ -6,6 +6,12 @@ import { useTurnstile } from "./useTurnstile";
 
 const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
 
+// Insurance card uploads are hidden until the AWS card flow is live: the
+// current upload path fails (the VPS relay rejects the request with 413) and
+// those leads never reach admissions. Set NEXT_PUBLIC_CARD_UPLOAD_ENABLED=true
+// to show the fields again. Off by default.
+const CARD_UPLOAD_ENABLED = process.env.NEXT_PUBLIC_CARD_UPLOAD_ENABLED === "true";
+
 interface FormData {
   firstName: string;
   lastName: string;
@@ -111,8 +117,8 @@ export default function InsuranceVerificationForm() {
       body.append("turnstileMs", String(turnstileInfo.turnstileMs));
       body.append("turnstilePreloaded", String(turnstileInfo.turnstilePreloaded));
       body.append("turnstileErrors", String(turnstileInfo.turnstileErrors));
-      if (formData.frontCard) body.append("front_card", formData.frontCard);
-      if (formData.backCard) body.append("back_card", formData.backCard);
+      if (CARD_UPLOAD_ENABLED && formData.frontCard) body.append("front_card", formData.frontCard);
+      if (CARD_UPLOAD_ENABLED && formData.backCard) body.append("back_card", formData.backCard);
 
       const response = await fetch("/api/insurance-verification", {
         method: "POST",
@@ -354,43 +360,47 @@ export default function InsuranceVerificationForm() {
         />
       </div>
 
-      <div>
-        <label htmlFor="iv-front" className="block text-sm font-medium text-forest mb-1.5">
-          Front of Insurance Card <span className="text-gray-600 text-xs font-normal">(optional)</span>
-        </label>
-        <input
-          id="iv-front"
-          type="file"
-          accept={ACCEPTED_FILE_TYPES}
-          onChange={(e) => handleFileChange(e, "frontCard")}
-          className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-sage/50 focus:border-sage file:mr-4 file:py-1 file:px-3 file:rounded-lg file:border-0 file:text-sm file:font-medium file:bg-sage/10 file:text-sage"
-        />
-        {formData.frontCard && (
-          <p className="text-xs text-gray-500 mt-1">{formData.frontCard.name}</p>
-        )}
-        {fileErrors.front && (
-          <p className="text-xs text-red-500 mt-1">{fileErrors.front}</p>
-        )}
-      </div>
+      {CARD_UPLOAD_ENABLED && (
+        <>
+          <div>
+            <label htmlFor="iv-front" className="block text-sm font-medium text-forest mb-1.5">
+              Front of Insurance Card <span className="text-gray-600 text-xs font-normal">(optional)</span>
+            </label>
+            <input
+              id="iv-front"
+              type="file"
+              accept={ACCEPTED_FILE_TYPES}
+              onChange={(e) => handleFileChange(e, "frontCard")}
+              className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-sage/50 focus:border-sage file:mr-4 file:py-1 file:px-3 file:rounded-lg file:border-0 file:text-sm file:font-medium file:bg-sage/10 file:text-sage"
+            />
+            {formData.frontCard && (
+              <p className="text-xs text-gray-500 mt-1">{formData.frontCard.name}</p>
+            )}
+            {fileErrors.front && (
+              <p className="text-xs text-red-500 mt-1">{fileErrors.front}</p>
+            )}
+          </div>
 
-      <div>
-        <label htmlFor="iv-back" className="block text-sm font-medium text-forest mb-1.5">
-          Back of Insurance Card <span className="text-gray-600 text-xs font-normal">(optional)</span>
-        </label>
-        <input
-          id="iv-back"
-          type="file"
-          accept={ACCEPTED_FILE_TYPES}
-          onChange={(e) => handleFileChange(e, "backCard")}
-          className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-sage/50 focus:border-sage file:mr-4 file:py-1 file:px-3 file:rounded-lg file:border-0 file:text-sm file:font-medium file:bg-sage/10 file:text-sage"
-        />
-        {formData.backCard && (
-          <p className="text-xs text-gray-500 mt-1">{formData.backCard.name}</p>
-        )}
-        {fileErrors.back && (
-          <p className="text-xs text-red-500 mt-1">{fileErrors.back}</p>
-        )}
-      </div>
+          <div>
+            <label htmlFor="iv-back" className="block text-sm font-medium text-forest mb-1.5">
+              Back of Insurance Card <span className="text-gray-600 text-xs font-normal">(optional)</span>
+            </label>
+            <input
+              id="iv-back"
+              type="file"
+              accept={ACCEPTED_FILE_TYPES}
+              onChange={(e) => handleFileChange(e, "backCard")}
+              className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-sage/50 focus:border-sage file:mr-4 file:py-1 file:px-3 file:rounded-lg file:border-0 file:text-sm file:font-medium file:bg-sage/10 file:text-sage"
+            />
+            {formData.backCard && (
+              <p className="text-xs text-gray-500 mt-1">{formData.backCard.name}</p>
+            )}
+            {fileErrors.back && (
+              <p className="text-xs text-red-500 mt-1">{fileErrors.back}</p>
+            )}
+          </div>
+        </>
+      )}
 
       <div>
         <label htmlFor="iv-hear" className="block text-sm font-medium text-forest mb-1.5">
