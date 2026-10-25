@@ -5,6 +5,7 @@ import {
   fetchAttribution,
   readCookie,
   resolveFormsBackend,
+  submitGetHelpToAws,
   submitInsuranceToAws,
   uploadCard,
   type PreparedCard,
@@ -120,6 +121,20 @@ describe("AWS insurance submit", () => {
     const { fn, calls } = fakeFetch([]);
     expect(await uploadCard(fn, { url: "http://evil.example.test/", fields: {} }, card("front"))).toBe(false);
     expect(calls).toHaveLength(0);
+  });
+});
+
+describe("AWS Get Help submit", () => {
+  it("posts the JSON body to the AWS API only and reports 2xx as captured", async () => {
+    const ok = fakeFetch([[/\/v1\/forms\/get-help$/, () => ({ status: 200, json: { success: true } })]]);
+    expect(await submitGetHelpToAws(ok.fn, BASE, { firstName: "Testfirst" })).toBe(true);
+    expect(ok.calls.map((c) => c.url)).toEqual([`${BASE}/v1/forms/get-help`]);
+    expect(JSON.parse(String(ok.calls[0]!.body))).toEqual({ firstName: "Testfirst" });
+    const partial = fakeFetch([[/get-help$/, () => ({ status: 207 })]]);
+    expect(await submitGetHelpToAws(partial.fn, BASE, {})).toBe(true);
+    const bad = fakeFetch([[/get-help$/, () => ({ status: 429 })]]);
+    expect(await submitGetHelpToAws(bad.fn, BASE, {})).toBe(false);
+    expect(await submitGetHelpToAws(fakeFetch([]).fn, BASE, {})).toBe(false);
   });
 });
 

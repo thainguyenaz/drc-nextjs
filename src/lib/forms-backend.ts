@@ -240,6 +240,29 @@ export async function submitInsuranceToAws(input: InsuranceSubmitInput): Promise
   return { status: "success" };
 }
 
+// --- Get Help submit (AWS mode) ------------------------------------------------
+
+export const GET_HELP_SUBMIT_PATH = "/v1/forms/get-help";
+
+// One JSON POST to the AWS API (it sends the admissions email and does the
+// fan-out). 2xx = lead captured; anything else is an error, as today.
+export async function submitGetHelpToAws(
+  fetchFn: FetchLike,
+  apiBase: string,
+  fields: Record<string, unknown>
+): Promise<boolean> {
+  try {
+    const res = await fetchFn(formsApiUrl(apiBase, GET_HELP_SUBMIT_PATH), {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(fields),
+    });
+    return res.ok;
+  } catch {
+    return false;
+  }
+}
+
 export const PARTIAL_DEFAULT_WARNING =
   "We got your information but had trouble notifying our team. Please call (623) 305-0496 so we can help right away.";
 
