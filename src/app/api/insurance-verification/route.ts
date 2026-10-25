@@ -5,6 +5,10 @@ import {
   turnstileAllowsDrip,
   turnstileRejects,
 } from "@/lib/turnstile";
+import {
+  parseTurnstileTelemetry,
+  turnstileClientLogLine,
+} from "@/lib/turnstile-client-state";
 import { uploadFormConversion } from "@/lib/tracking/google-ads";
 import { fireGa4Lead } from "@/lib/tracking/ga4-mp";
 import { buildMarketingConsents, parseConsentValue } from "@/lib/consent";
@@ -42,6 +46,20 @@ export async function POST(request: NextRequest) {
       (formData.get("turnstileToken") as string | null) ||
       (formData.get("cf-turnstile-response") as string | null);
     const turnstile = await checkTurnstile(turnstileToken, ip);
+    // Client widget state at submit (non-PII enum + timings) for diagnosing
+    // token-less submissions. Logged for every verdict; never affects it.
+    console.log(
+      turnstileClientLogLine(
+        "insurance-verification",
+        turnstile,
+        parseTurnstileTelemetry({
+          turnstileState: formData.get("turnstileState"),
+          turnstileMs: formData.get("turnstileMs"),
+          turnstilePreloaded: formData.get("turnstilePreloaded"),
+          turnstileErrors: formData.get("turnstileErrors"),
+        })
+      )
+    );
     if (turnstileRejects(turnstile)) {
       console.warn(
         "[insurance-verification] 400:",

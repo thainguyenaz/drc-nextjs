@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
-import Script from "next/script";
+import { useTurnstile } from "./useTurnstile";
 
 interface FormData {
   firstName: string;
@@ -35,8 +35,9 @@ const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
 export default function GetHelpForm({ variant = "lp" }: GetHelpFormProps) {
   const [formData, setFormData] = useState<FormData>(initialFormData);
   const [submitting, setSubmitting] = useState(false);
-  const [turnstileReady, setTurnstileReady] = useState(false);
-  const [turnstileDegraded, setTurnstileDegraded] = useState(false);
+  const turnstile = useTurnstile(TURNSTILE_SITE_KEY);
+  const turnstileReady = turnstile.ready;
+  const turnstileDegraded = turnstile.degraded;
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
   const formRef = useRef<HTMLFormElement>(null);
   const thankYouRef = useRef<HTMLDivElement>(null);
@@ -46,61 +47,6 @@ export default function GetHelpForm({ variant = "lp" }: GetHelpFormProps) {
       thankYouRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   }, [status]);
-
-  useEffect(() => {
-    type W = Window &
-      typeof globalThis & {
-        onGetHelpTurnstileSuccess?: () => void;
-        onGetHelpTurnstileExpired?: () => void;
-        onGetHelpTurnstileError?: () => void;
-      };
-    const w = window as W;
-    let expiredRearmTimer: ReturnType<typeof setTimeout> | undefined;
-    w.onGetHelpTurnstileSuccess = () => {
-      if (expiredRearmTimer) {
-        clearTimeout(expiredRearmTimer);
-        expiredRearmTimer = undefined;
-      }
-      setTurnstileReady(true);
-      setTurnstileDegraded(false);
-    };
-    w.onGetHelpTurnstileExpired = () => {
-      // Auto-refresh (data-refresh-expired="auto") should re-fire the success
-      // callback shortly. Do not mark degraded here; instead re-arm a 12s
-      // fallback so the button can never stay disabled indefinitely if the
-      // refresh silently fails.
-      setTurnstileReady(false);
-      if (expiredRearmTimer) clearTimeout(expiredRearmTimer);
-      expiredRearmTimer = setTimeout(() => {
-        setTurnstileDegraded(true);
-      }, 12_000);
-    };
-    w.onGetHelpTurnstileError = () => {
-      setTurnstileReady(false);
-      setTurnstileDegraded(true);
-    };
-    return () => {
-      if (expiredRearmTimer) clearTimeout(expiredRearmTimer);
-      delete w.onGetHelpTurnstileSuccess;
-      delete w.onGetHelpTurnstileExpired;
-      delete w.onGetHelpTurnstileError;
-    };
-  }, []);
-
-  useEffect(() => {
-    // Graceful degradation: if Turnstile has not signaled success within 12s
-    // (script blocked, network failure, or no callback ever fires), enable the
-    // button anyway. The server accepts token-less submissions in degraded
-    // mode; a present token is still verified strictly.
-    if (!TURNSTILE_SITE_KEY) return;
-    const timer = setTimeout(() => {
-      setTurnstileReady((ready) => {
-        if (!ready) setTurnstileDegraded(true);
-        return ready;
-      });
-    }, 12_000);
-    return () => clearTimeout(timer);
-  }, []);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
@@ -118,10 +64,10 @@ export default function GetHelpForm({ variant = "lp" }: GetHelpFormProps) {
     setStatus("idle");
 
     const form = formRef.current;
-    const tokenInput = form?.querySelector<HTMLInputElement>(
-      'input[name="cf-turnstile-response"]'
-    );
-    const turnstileToken = tokenInput?.value || "";
+    // Read via the widget API (waits briefly for an in-flight solve) rather
+    // than the hidden input, then capture the non-PII widget state.
+    const turnstileToken = await turnstile.getToken();
+    const turnstileInfo = turnstile.telemetry();
     const honeypotInput = form?.querySelector<HTMLInputElement>(
       'input[name="hp_check"]'
     );
@@ -145,6 +91,7 @@ export default function GetHelpForm({ variant = "lp" }: GetHelpFormProps) {
           pageName: typeof window !== "undefined" ? document.title : "Get Help Today",
           hp_check: honeypot,
           turnstileToken,
+          ...turnstileInfo,
         }),
       });
 
@@ -160,9 +107,11 @@ export default function GetHelpForm({ variant = "lp" }: GetHelpFormProps) {
         setFormData(initialFormData);
       } else {
         setStatus("error");
+        turnstile.reset();
       }
     } catch {
       setStatus("error");
+      turnstile.reset();
     } finally {
       setSubmitting(false);
     }
@@ -197,15 +146,6 @@ export default function GetHelpForm({ variant = "lp" }: GetHelpFormProps) {
 
   return (
     <>
-      {TURNSTILE_SITE_KEY && (
-        <Script
-          id="cf-turnstile-script"
-          src="https://challenges.cloudflare.com/turnstile/v0/api.js"
-          strategy="afterInteractive"
-          async
-          defer
-        />
-      )}
       <form
         ref={formRef}
         onSubmit={handleSubmit}
@@ -381,16 +321,7 @@ export default function GetHelpForm({ variant = "lp" }: GetHelpFormProps) {
         </div>
 
         {TURNSTILE_SITE_KEY && (
-          <div
-            className="cf-turnstile"
-            data-sitekey={TURNSTILE_SITE_KEY}
-            data-theme="light"
-            data-size="flexible"
-            data-refresh-expired="auto"
-            data-callback="onGetHelpTurnstileSuccess"
-            data-expired-callback="onGetHelpTurnstileExpired"
-            data-error-callback="onGetHelpTurnstileError"
-          />
+          <div ref={turnstile.containerRef} />
         )}
 
         <button
