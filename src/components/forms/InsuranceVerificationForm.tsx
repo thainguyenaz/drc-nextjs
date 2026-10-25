@@ -3,14 +3,34 @@
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { useTurnstile } from "./useTurnstile";
+import { prepareCard } from "./cardImage";
+import {
+  AWS_CARD_ACCEPT,
+  CARD_MAX_BYTES,
+  FORMS_API_BASE,
+  FORMS_BACKEND,
+  cardContentType,
+  fetchAttribution,
+  readCookie,
+  submitInsuranceToAws,
+  type PreparedCard,
+} from "@/lib/forms-backend";
 
 const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
 
-// Insurance card uploads are hidden until the AWS card flow is live: the
-// current upload path fails (the VPS relay rejects the request with 413) and
-// those leads never reach admissions. Set NEXT_PUBLIC_CARD_UPLOAD_ENABLED=true
-// to show the fields again. Off by default.
+// Insurance card uploads on the legacy (Vercel/VPS) path are hidden until the
+// AWS card flow is live: that path fails (the VPS relay rejects the request
+// with 413) and those leads never reach admissions. Set
+// NEXT_PUBLIC_CARD_UPLOAD_ENABLED=true to show them again. Off by default.
 const CARD_UPLOAD_ENABLED = process.env.NEXT_PUBLIC_CARD_UPLOAD_ENABLED === "true";
+
+// AWS mode: JPEG/PNG are re-encoded in the browser before upload, so larger
+// originals are fine; the 5 MB limit applies to what is uploaded.
+const AWS_MAX_ORIGINAL_BYTES = 25 * 1024 * 1024;
+
+// The AWS card flow (NEXT_PUBLIC_FORMS_BACKEND=aws) always shows the card
+// fields; the legacy path shows them only behind CARD_UPLOAD_ENABLED.
+const SHOW_CARD_FIELDS = FORMS_BACKEND === "aws" || CARD_UPLOAD_ENABLED;
 
 interface FormData {
   firstName: string;
@@ -75,6 +95,24 @@ export default function InsuranceVerificationForm() {
     const file = e.target.files?.[0] || null;
     const errorField = field === "frontCard" ? "front" : "back";
 
+    if (FORMS_BACKEND === "aws" && file) {
+      const type = cardContentType(file.type, file.name);
+      const reencodable = type === "image/jpeg" || type === "image/png";
+      const error = !type
+        ? "Please choose a JPG, PNG or HEIC image"
+        : file.size > (reencodable ? AWS_MAX_ORIGINAL_BYTES : CARD_MAX_BYTES)
+          ? `File must be under ${reencodable ? 25 : 5}MB`
+          : undefined;
+      if (error) {
+        setFileErrors((prev) => ({ ...prev, [errorField]: error }));
+        e.target.value = "";
+        return;
+      }
+      setFileErrors((prev) => ({ ...prev, [errorField]: undefined }));
+      setFormData((prev) => ({ ...prev, [field]: file }));
+      return;
+    }
+
     if (file && file.size > MAX_FILE_SIZE) {
       setFileErrors((prev) => ({ ...prev, [errorField]: "File must be under 5MB" }));
       e.target.value = "";
@@ -99,6 +137,75 @@ export default function InsuranceVerificationForm() {
       'input[name="hp_check"]'
     );
     const honeypot = honeypotInput?.value || "";
+
+    if (FORMS_BACKEND === "aws") {
+      // AWS forms API: form JSON to the API, card bytes straight to S3.
+      // Nothing is sent to a Vercel route.
+      try {
+        const cards: PreparedCard[] = [];
+        for (const [side, file] of [
+          ["front", formData.frontCard],
+          ["back", formData.backCard],
+        ] as const) {
+          if (!file) continue;
+          const prepared = await prepareCard(side, file);
+          if (prepared) cards.push(prepared);
+        }
+        const attribution = await fetchAttribution((url, init) => fetch(url, init));
+        const cookies = typeof document !== "undefined" ? document.cookie : "";
+        const outcome = await submitInsuranceToAws({
+          fetchFn: (url, init) => fetch(url, init),
+          apiBase: FORMS_API_BASE,
+          cards,
+          fields: {
+            firstName: formData.firstName,
+            lastName: formData.lastName,
+            email: formData.email,
+            phone: formData.phone,
+            insuranceCarrier: formData.insuranceCarrier,
+            memberId: formData.memberId,
+            dateOfBirth: formData.dateOfBirth,
+            howDidYouHear: formData.howDidYouHear,
+            smsConsent: formData.smsConsent,
+            hp_check: honeypot,
+            turnstileToken,
+            ...turnstileInfo,
+            attribution,
+            hutk: readCookie(cookies, "hubspotutk"),
+            gaCookie: readCookie(cookies, "_ga"),
+            pageUri: "https://desertrecoverycenters.com/insurance",
+            pageName: "Insurance Verification",
+            referrer: typeof document !== "undefined" ? document.referrer : "",
+          },
+        });
+        if (outcome.status === "error") {
+          setStatus("error");
+          turnstile.reset();
+          return;
+        }
+        if (typeof window !== "undefined") {
+          const ty = window.location.pathname.replace(/\/$/, "") + "/thank-you/";
+          window.gtag?.("event", "page_view", {
+            page_path: ty,
+            page_location: window.location.origin + ty,
+            page_title: "Thank You",
+          });
+        }
+        if (outcome.status === "partial") {
+          setWarningMessage(outcome.warning);
+          setStatus("partial");
+        } else {
+          setStatus("success");
+        }
+        setFormData(initialFormData);
+      } catch {
+        setStatus("error");
+        turnstile.reset();
+      } finally {
+        setSubmitting(false);
+      }
+      return;
+    }
 
     try {
       const body = new FormData();
@@ -360,7 +467,7 @@ export default function InsuranceVerificationForm() {
         />
       </div>
 
-      {CARD_UPLOAD_ENABLED && (
+      {SHOW_CARD_FIELDS && (
         <>
           <div>
             <label htmlFor="iv-front" className="block text-sm font-medium text-forest mb-1.5">
@@ -369,7 +476,7 @@ export default function InsuranceVerificationForm() {
             <input
               id="iv-front"
               type="file"
-              accept={ACCEPTED_FILE_TYPES}
+              accept={FORMS_BACKEND === "aws" ? AWS_CARD_ACCEPT : ACCEPTED_FILE_TYPES}
               onChange={(e) => handleFileChange(e, "frontCard")}
               className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-sage/50 focus:border-sage file:mr-4 file:py-1 file:px-3 file:rounded-lg file:border-0 file:text-sm file:font-medium file:bg-sage/10 file:text-sage"
             />
@@ -388,7 +495,7 @@ export default function InsuranceVerificationForm() {
             <input
               id="iv-back"
               type="file"
-              accept={ACCEPTED_FILE_TYPES}
+              accept={FORMS_BACKEND === "aws" ? AWS_CARD_ACCEPT : ACCEPTED_FILE_TYPES}
               onChange={(e) => handleFileChange(e, "backCard")}
               className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-sage/50 focus:border-sage file:mr-4 file:py-1 file:px-3 file:rounded-lg file:border-0 file:text-sm file:font-medium file:bg-sage/10 file:text-sage"
             />
