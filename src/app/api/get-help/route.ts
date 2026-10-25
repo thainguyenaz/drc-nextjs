@@ -16,16 +16,12 @@ import { classifyPayer, enrollInDrip } from "@/lib/drip-intake";
 
 export const runtime = "nodejs";
 
-const HUBSPOT_PORTAL_ID = "48050688";
-const FORM_GUIDS = {
-  lp: "0babced4-b58c-4981-a2ba-a7d8bfca6fa5",
-  contact: "e17b3a1d-6052-499e-8092-c1859c452c31",
-} as const;
-
+// Website forms no longer submit to HubSpot (Vercel PHI remediation; DRC
+// is exiting HubSpot and data already there is under review, so nothing in
+// HubSpot is touched). The lead reaches admissions, CTM and Dazos through
+// the jarvis-api relay below, and the drip through enrollInDrip.
 const LEAD_NOTIFY_URL =
   "https://api.desertrecoverycenters.com/api/notifications/lead";
-
-type Variant = keyof typeof FORM_GUIDS;
 
 interface Payload {
   firstName?: string;
@@ -99,8 +95,6 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: "Verification failed" }, { status: 400 });
   }
 
-  const variant: Variant = body.variant === "contact" ? "contact" : "lp";
-  const formGuid = FORM_GUIDS[variant];
 
   const firstName = str(body.firstName).trim();
   const lastName = str(body.lastName).trim();
@@ -129,66 +123,10 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  // Primary: HubSpot submission. Mirrors the payload the form used to send
-  // directly from the browser.
-  const hutk = request.cookies.get("hubspotutk")?.value;
-  let hubspotOk = false;
-  try {
-    const hsRes = await fetch(
-      `https://api.hsforms.com/submissions/v3/integration/submit/${HUBSPOT_PORTAL_ID}/${formGuid}`,
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          fields: [
-            { name: "firstname", value: firstName },
-            { name: "lastname", value: lastName },
-            { name: "email", value: email },
-            { name: "phone", value: phone },
-            { name: "seeking_recovery_for", value: seekingFor },
-            { name: "insurance_provider", value: insuranceProvider },
-            { name: "message", value: situation },
-          ],
-          context: {
-            ...(hutk ? { hutk } : {}),
-            pageUri: str(body.pageUri),
-            pageName: str(body.pageName) || "Get Help Today",
-          },
-          legalConsentOptions: {
-            consent: {
-              consentToProcess: true,
-              text: "I agree to allow Desert Recovery Centers to store and process my personal data.",
-              communications: [
-                {
-                  value: true,
-                  subscriptionTypeId: 457126657,
-                  text: "I agree to receive marketing communications.",
-                },
-              ],
-            },
-          },
-        }),
-      }
-    );
-    hubspotOk = hsRes.ok;
-    if (!hsRes.ok) {
-      const errText = await hsRes.text();
-      console.error("HubSpot error:", hsRes.status, errText);
-    }
-  } catch (e) {
-    console.error("HubSpot exception:", e);
-  }
-
-  if (!hubspotOk) {
-    return NextResponse.json({ error: "Submission failed" }, { status: 500 });
-  }
-
-  // Secondary: lead notify via jarvis-api (email + Telegram). Awaited so
-  // the serverless function stays alive long enough for the fetch to
-  // complete — previously fire-and-forget, which was killed by fast
-  // termination on preview/non-production where the tracking
-  // Promise.allSettled below resolves instantly via env-gate denial.
-  // Never blocks the user's success response beyond its own latency.
+  // Lead notify via jarvis-api: the admissions email plus the CTM and Dazos
+  // fan-out. With HubSpot gone this is the lead's only path to admissions,
+  // so it decides success (a failure returns an error and the visitor is
+  // asked to call, instead of the lead being silently lost).
   const utmSource = request.cookies.get("_dr_utm_source")?.value ?? null;
   const utmMedium = request.cookies.get("_dr_utm_medium")?.value ?? null;
   const utmCampaign = request.cookies.get("_dr_utm_campaign")?.value ?? null;
@@ -196,9 +134,8 @@ export async function POST(request: NextRequest) {
   const utmContent = request.cookies.get("_dr_utm_content")?.value ?? null;
 
   // Record the actual consent the visitor gave, as structured records (one per
-  // channel), instead of discarding the checkbox value. HubSpot submission
-  // above is unchanged; this only adds the consent to the lead-notify relay and
-  // the logs. captured_at is stamped server-side here.
+  // channel), instead of discarding the checkbox value. Goes to the
+  // lead-notify relay and the logs. captured_at is stamped server-side here.
   const consents = buildMarketingConsents(parseConsentValue(body.smsConsent));
   console.log(
     "[get-help] consent:",
@@ -208,6 +145,7 @@ export async function POST(request: NextRequest) {
       version: consents[0]?.consent_text_version,
     })
   );
+  let notifyOk = false;
   try {
     const notifyRes = await fetch(LEAD_NOTIFY_URL, {
       method: "POST",
@@ -239,6 +177,7 @@ export async function POST(request: NextRequest) {
         errText.slice(0, 200)
       );
     } else {
+      notifyOk = true;
       console.log("[get-help] notification delivered");
     }
   } catch (e: unknown) {
@@ -250,7 +189,7 @@ export async function POST(request: NextRequest) {
   }
 
   // Marketing drip only for Turnstile-verified submissions. Token-less
-  // (degraded-mode) leads still reached HubSpot and the admissions alert above.
+  // (degraded-mode) leads still reached the admissions alert above.
   if (!turnstileAllowsDrip(turnstile)) {
     console.log(
       "[get-help] drip intake:",
@@ -287,6 +226,12 @@ export async function POST(request: NextRequest) {
         err.message?.slice(0, 200)
       );
     }
+  }
+
+  // Admissions never got this lead: tell the visitor (the form asks them to
+  // call) and don't count a conversion.
+  if (!notifyOk) {
+    return NextResponse.json({ error: "Submission failed" }, { status: 500 });
   }
 
   const gclid = request.cookies.get("_dr_gclid")?.value ?? null;
