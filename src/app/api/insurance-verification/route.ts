@@ -29,7 +29,7 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  const results = { hubspot: false, email: false };
+  const results = { email: false };
   let relayError: string | null = null;
 
   try {
@@ -111,54 +111,12 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // STEP 1: HubSpot submission (primary)
-    const hutk = request.cookies.get("hubspotutk")?.value;
-    try {
-      const hubspotRes = await fetch(
-        "https://api.hsforms.com/submissions/v3/integration/submit/48050688/5fc5394d-3806-4291-a308-da475add5c6c",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            fields: [
-              { name: "firstname", value: firstName },
-              { name: "lastname", value: lastName },
-              { name: "email", value: email },
-              { name: "phone", value: phone },
-              { name: "insurance_carrier", value: insuranceCarrier },
-              { name: "how_did_you_hear", value: howDidYouHear || "" },
-            ],
-            context: {
-              ...(hutk ? { hutk } : {}),
-              pageUri: "https://desertrecoverycenters.com/insurance",
-              pageName: "Insurance Verification",
-            },
-            legalConsentOptions: {
-              consent: {
-                consentToProcess: true,
-                text: "I agree to allow Desert Recovery Centers to store and process my personal data.",
-                communications: [
-                  {
-                    value: true,
-                    subscriptionTypeId: 457126657,
-                    text: "I agree to receive marketing communications.",
-                  },
-                ],
-              },
-            },
-          }),
-        }
-      );
-      results.hubspot = hubspotRes.ok;
-      if (!hubspotRes.ok) {
-        const err = await hubspotRes.text();
-        console.error("HubSpot error:", hubspotRes.status, err);
-      }
-    } catch (e) {
-      console.error("HubSpot exception:", e);
-    }
+    // No HubSpot submission (Vercel PHI remediation; DRC is exiting HubSpot
+    // and data already there is under review, so nothing there is touched).
+    // The jarvis-api relay below is the lead's path to admissions, CTM and
+    // Dazos, and its result decides success.
 
-    // STEP 2: Email + Telegram via jarvis-api notifications (secondary, never blocks)
+    // Admissions email + CTM + Dazos via the jarvis-api notifications relay
     const relaySource = "website_insurance_verification";
     let filesAttached = 0;
     const fieldsAttempted = 9;
@@ -169,8 +127,7 @@ export async function POST(request: NextRequest) {
     const utmContent = request.cookies.get("_dr_utm_content")?.value ?? null;
 
     // Record the actual consent the visitor gave, as structured records (one
-    // per channel), instead of discarding the checkbox value. HubSpot
-    // submission above is unchanged; this only adds the consent to the
+    // per channel), instead of discarding the checkbox value. Goes to the
     // notify relay and the logs. captured_at is stamped server-side here.
     const consents = buildMarketingConsents(smsConsent);
     console.log(
@@ -240,7 +197,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Marketing drip only for Turnstile-verified submissions. Token-less
-    // (degraded-mode) leads still reached HubSpot and the admissions relay above.
+    // (degraded-mode) leads still reached the admissions relay above.
     if (!turnstileAllowsDrip(turnstile)) {
       console.log(
         "[insurance-verification] drip intake:",
@@ -282,7 +239,7 @@ export async function POST(request: NextRequest) {
 
     console.log("Submission results:", results);
 
-    if (results.hubspot) {
+    if (results.email) {
       const gclid = request.cookies.get("_dr_gclid")?.value ?? null;
       const gaCookie = request.cookies.get("_ga")?.value ?? null;
       const [adsResult, ga4Result] = await Promise.allSettled([
@@ -312,27 +269,25 @@ export async function POST(request: NextRequest) {
         })
       );
 
-      if (results.email) {
-        return NextResponse.json({
-          success: true,
-          emailSent: true,
-        });
-      }
-
-      return NextResponse.json(
-        {
-          success: true,
-          hubspotSubmitted: true,
-          emailSent: false,
-          warning:
-            "We got your insurance info but had trouble notifying our team. Please call (623) 305-0496 so we can verify your benefits right away.",
-          relayError,
-        },
-        { status: 207 }
-      );
+      return NextResponse.json({
+        success: true,
+        emailSent: true,
+      });
     }
 
-    return NextResponse.json({ error: "Submission failed" }, { status: 500 });
+    // The relay failed, so admissions never got this lead. Same visitor
+    // message as before (the form shows it and asks them to call); no
+    // conversion is counted.
+    return NextResponse.json(
+      {
+        success: true,
+        emailSent: false,
+        warning:
+          "We got your insurance info but had trouble notifying our team. Please call (623) 305-0496 so we can verify your benefits right away.",
+        relayError,
+      },
+      { status: 207 }
+    );
   } catch (error) {
     console.error("Insurance verification error:", error);
     return NextResponse.json({ error: "Submission failed" }, { status: 500 });
