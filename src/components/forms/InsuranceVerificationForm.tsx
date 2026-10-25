@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
-import Script from "next/script";
+import { useTurnstile } from "./useTurnstile";
 
 const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
 
@@ -40,8 +40,9 @@ const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB
 export default function InsuranceVerificationForm() {
   const [formData, setFormData] = useState<FormData>(initialFormData);
   const [submitting, setSubmitting] = useState(false);
-  const [turnstileReady, setTurnstileReady] = useState(false);
-  const [turnstileDegraded, setTurnstileDegraded] = useState(false);
+  const turnstile = useTurnstile(TURNSTILE_SITE_KEY);
+  const turnstileReady = turnstile.ready;
+  const turnstileDegraded = turnstile.degraded;
   const [status, setStatus] = useState<"idle" | "success" | "partial" | "error">("idle");
   const [warningMessage, setWarningMessage] = useState<string>("");
   const [fileErrors, setFileErrors] = useState<{ front?: string; back?: string }>({});
@@ -53,61 +54,6 @@ export default function InsuranceVerificationForm() {
       thankYouRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   }, [status]);
-
-  useEffect(() => {
-    type W = Window &
-      typeof globalThis & {
-        onInsuranceTurnstileSuccess?: () => void;
-        onInsuranceTurnstileExpired?: () => void;
-        onInsuranceTurnstileError?: () => void;
-      };
-    const w = window as W;
-    let expiredRearmTimer: ReturnType<typeof setTimeout> | undefined;
-    w.onInsuranceTurnstileSuccess = () => {
-      if (expiredRearmTimer) {
-        clearTimeout(expiredRearmTimer);
-        expiredRearmTimer = undefined;
-      }
-      setTurnstileReady(true);
-      setTurnstileDegraded(false);
-    };
-    w.onInsuranceTurnstileExpired = () => {
-      // Auto-refresh (data-refresh-expired="auto") should re-fire the success
-      // callback shortly. Do not mark degraded here; instead re-arm a 12s
-      // fallback so the button can never stay disabled indefinitely if the
-      // refresh silently fails.
-      setTurnstileReady(false);
-      if (expiredRearmTimer) clearTimeout(expiredRearmTimer);
-      expiredRearmTimer = setTimeout(() => {
-        setTurnstileDegraded(true);
-      }, 12_000);
-    };
-    w.onInsuranceTurnstileError = () => {
-      setTurnstileReady(false);
-      setTurnstileDegraded(true);
-    };
-    return () => {
-      if (expiredRearmTimer) clearTimeout(expiredRearmTimer);
-      delete w.onInsuranceTurnstileSuccess;
-      delete w.onInsuranceTurnstileExpired;
-      delete w.onInsuranceTurnstileError;
-    };
-  }, []);
-
-  useEffect(() => {
-    // Graceful degradation: if Turnstile has not signaled success within 12s
-    // (script blocked, network failure, or no callback ever fires), enable the
-    // button anyway. The server accepts token-less submissions in degraded
-    // mode; a present token is still verified strictly.
-    if (!TURNSTILE_SITE_KEY) return;
-    const timer = setTimeout(() => {
-      setTurnstileReady((ready) => {
-        if (!ready) setTurnstileDegraded(true);
-        return ready;
-      });
-    }, 12_000);
-    return () => clearTimeout(timer);
-  }, []);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -139,10 +85,10 @@ export default function InsuranceVerificationForm() {
     setStatus("idle");
 
     const form = formRef.current;
-    const tokenInput = form?.querySelector<HTMLInputElement>(
-      'input[name="cf-turnstile-response"]'
-    );
-    const turnstileToken = tokenInput?.value || "";
+    // Read via the widget API (waits briefly for an in-flight solve) rather
+    // than the hidden input, then capture the non-PII widget state.
+    const turnstileToken = await turnstile.getToken();
+    const turnstileInfo = turnstile.telemetry();
     const honeypotInput = form?.querySelector<HTMLInputElement>(
       'input[name="hp_check"]'
     );
@@ -161,6 +107,10 @@ export default function InsuranceVerificationForm() {
       body.append("smsConsent", String(formData.smsConsent));
       body.append("hp_check", honeypot);
       body.append("turnstileToken", turnstileToken);
+      body.append("turnstileState", turnstileInfo.turnstileState);
+      body.append("turnstileMs", String(turnstileInfo.turnstileMs));
+      body.append("turnstilePreloaded", String(turnstileInfo.turnstilePreloaded));
+      body.append("turnstileErrors", String(turnstileInfo.turnstileErrors));
       if (formData.frontCard) body.append("front_card", formData.frontCard);
       if (formData.backCard) body.append("back_card", formData.backCard);
 
@@ -202,9 +152,11 @@ export default function InsuranceVerificationForm() {
         setFormData(initialFormData);
       } else {
         setStatus("error");
+        turnstile.reset();
       }
     } catch {
       setStatus("error");
+      turnstile.reset();
     } finally {
       setSubmitting(false);
     }
@@ -276,15 +228,6 @@ export default function InsuranceVerificationForm() {
 
   return (
     <>
-      {TURNSTILE_SITE_KEY && (
-        <Script
-          id="cf-turnstile-script"
-          src="https://challenges.cloudflare.com/turnstile/v0/api.js"
-          strategy="afterInteractive"
-          async
-          defer
-        />
-      )}
       <form
         ref={formRef}
         onSubmit={handleSubmit}
@@ -504,16 +447,7 @@ export default function InsuranceVerificationForm() {
       </div>
 
       {TURNSTILE_SITE_KEY && (
-        <div
-          className="cf-turnstile"
-          data-sitekey={TURNSTILE_SITE_KEY}
-          data-theme="light"
-          data-size="flexible"
-          data-refresh-expired="auto"
-          data-callback="onInsuranceTurnstileSuccess"
-          data-expired-callback="onInsuranceTurnstileExpired"
-          data-error-callback="onInsuranceTurnstileError"
-        />
+        <div ref={turnstile.containerRef} />
       )}
 
       <button

@@ -5,6 +5,10 @@ import {
   turnstileAllowsDrip,
   turnstileRejects,
 } from "@/lib/turnstile";
+import {
+  parseTurnstileTelemetry,
+  turnstileClientLogLine,
+} from "@/lib/turnstile-client-state";
 import { uploadFormConversion } from "@/lib/tracking/google-ads";
 import { fireGa4Lead } from "@/lib/tracking/ga4-mp";
 import { buildMarketingConsents, parseConsentValue } from "@/lib/consent";
@@ -37,6 +41,11 @@ interface Payload {
   smsConsent?: boolean; // marketing consent checkbox value (SMS + email)
   hp_check?: string; // honeypot
   turnstileToken?: string;
+  // Non-PII widget telemetry (see src/lib/turnstile-client-state.ts)
+  turnstileState?: unknown;
+  turnstileMs?: unknown;
+  turnstilePreloaded?: unknown;
+  turnstileErrors?: unknown;
 }
 
 function str(v: unknown): string {
@@ -73,6 +82,11 @@ export async function POST(request: NextRequest) {
   }
 
   const turnstile = await checkTurnstile(body.turnstileToken, ip);
+  // Client widget state at submit (non-PII enum + timings) for diagnosing
+  // token-less submissions. Logged for every verdict; never affects it.
+  console.log(
+    turnstileClientLogLine("get-help", turnstile, parseTurnstileTelemetry(body))
+  );
   if (turnstileRejects(turnstile)) {
     console.warn(
       "[get-help] 400:",
