@@ -1,6 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
 import { rateLimit, getClientIp } from "@/lib/rate-limit";
-import { verifyTurnstile } from "@/lib/turnstile";
+import {
+  checkTurnstile,
+  turnstileAllowsDrip,
+  turnstileRejects,
+} from "@/lib/turnstile";
 import { uploadFormConversion } from "@/lib/tracking/google-ads";
 import { fireGa4Lead } from "@/lib/tracking/ga4-mp";
 import { buildMarketingConsents, parseConsentValue } from "@/lib/consent";
@@ -37,12 +41,13 @@ export async function POST(request: NextRequest) {
     const turnstileToken =
       (formData.get("turnstileToken") as string | null) ||
       (formData.get("cf-turnstile-response") as string | null);
-    const turnstileOk = await verifyTurnstile(turnstileToken, ip);
-    if (!turnstileOk) {
+    const turnstile = await checkTurnstile(turnstileToken, ip);
+    if (turnstileRejects(turnstile)) {
       console.warn(
         "[insurance-verification] 400:",
         JSON.stringify({
           reason: "turnstile_failed",
+          verdict: turnstile,
           tokenPresent: Boolean(turnstileToken),
         })
       );
@@ -216,36 +221,45 @@ export async function POST(request: NextRequest) {
       });
     }
 
-    try {
-      const dripResult = await enrollInDrip({
-        formId: "drc-website-insurance-verification",
-        firstName,
-        lastName,
-        email,
-        phone,
-        relationshipToPatient: "self",
-        payerCategory: classifyPayer(insuranceCarrier),
-        pageUrl: "https://desertrecoverycenters.com/insurance",
-        utm: {
-          source: utmSource,
-          medium: utmMedium,
-          campaign: utmCampaign,
-          term: utmTerm,
-          content: utmContent,
-        },
-        gclid: request.cookies.get("_dr_gclid")?.value ?? null,
-        consents,
-      });
+    // Marketing drip only for Turnstile-verified submissions. Token-less
+    // (degraded-mode) leads still reached HubSpot and the admissions relay above.
+    if (!turnstileAllowsDrip(turnstile)) {
       console.log(
         "[insurance-verification] drip intake:",
-        JSON.stringify(dripResult)
+        JSON.stringify({ skipped: true, reason: `turnstile_${turnstile}` })
       );
-    } catch (e: unknown) {
-      const err = e as Error;
-      console.error(
-        "[insurance-verification] drip intake exception:",
-        err.message?.slice(0, 200)
-      );
+    } else {
+      try {
+        const dripResult = await enrollInDrip({
+          formId: "drc-website-insurance-verification",
+          firstName,
+          lastName,
+          email,
+          phone,
+          relationshipToPatient: "self",
+          payerCategory: classifyPayer(insuranceCarrier),
+          pageUrl: "https://desertrecoverycenters.com/insurance",
+          utm: {
+            source: utmSource,
+            medium: utmMedium,
+            campaign: utmCampaign,
+            term: utmTerm,
+            content: utmContent,
+          },
+          gclid: request.cookies.get("_dr_gclid")?.value ?? null,
+          consents,
+        });
+        console.log(
+          "[insurance-verification] drip intake:",
+          JSON.stringify(dripResult)
+        );
+      } catch (e: unknown) {
+        const err = e as Error;
+        console.error(
+          "[insurance-verification] drip intake exception:",
+          err.message?.slice(0, 200)
+        );
+      }
     }
 
     console.log("Submission results:", results);

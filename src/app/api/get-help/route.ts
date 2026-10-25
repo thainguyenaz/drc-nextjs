@@ -1,6 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
 import { rateLimit, getClientIp } from "@/lib/rate-limit";
-import { verifyTurnstile } from "@/lib/turnstile";
+import {
+  checkTurnstile,
+  turnstileAllowsDrip,
+  turnstileRejects,
+} from "@/lib/turnstile";
 import { uploadFormConversion } from "@/lib/tracking/google-ads";
 import { fireGa4Lead } from "@/lib/tracking/ga4-mp";
 import { buildMarketingConsents, parseConsentValue } from "@/lib/consent";
@@ -68,12 +72,13 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ success: true });
   }
 
-  const turnstileOk = await verifyTurnstile(body.turnstileToken, ip);
-  if (!turnstileOk) {
+  const turnstile = await checkTurnstile(body.turnstileToken, ip);
+  if (turnstileRejects(turnstile)) {
     console.warn(
       "[get-help] 400:",
       JSON.stringify({
         reason: "turnstile_failed",
+        verdict: turnstile,
         tokenPresent: Boolean(body.turnstileToken),
       })
     );
@@ -230,35 +235,44 @@ export async function POST(request: NextRequest) {
     );
   }
 
-  try {
-    const dripResult = await enrollInDrip({
-      formId: "drc-website-get-help",
-      firstName,
-      lastName,
-      email,
-      phone,
-      relationshipToPatient:
-        seekingFor === "A Loved One" ? "other" : "self",
-      payerCategory: classifyPayer(insuranceProvider),
-      message: situation || undefined,
-      pageUrl: str(body.pageUri) || undefined,
-      utm: {
-        source: utmSource,
-        medium: utmMedium,
-        campaign: utmCampaign,
-        term: utmTerm,
-        content: utmContent,
-      },
-      gclid: request.cookies.get("_dr_gclid")?.value ?? null,
-      consents,
-    });
-    console.log("[get-help] drip intake:", JSON.stringify(dripResult));
-  } catch (e: unknown) {
-    const err = e as Error;
-    console.error(
-      "[get-help] drip intake exception:",
-      err.message?.slice(0, 200)
+  // Marketing drip only for Turnstile-verified submissions. Token-less
+  // (degraded-mode) leads still reached HubSpot and the admissions alert above.
+  if (!turnstileAllowsDrip(turnstile)) {
+    console.log(
+      "[get-help] drip intake:",
+      JSON.stringify({ skipped: true, reason: `turnstile_${turnstile}` })
     );
+  } else {
+    try {
+      const dripResult = await enrollInDrip({
+        formId: "drc-website-get-help",
+        firstName,
+        lastName,
+        email,
+        phone,
+        relationshipToPatient:
+          seekingFor === "A Loved One" ? "other" : "self",
+        payerCategory: classifyPayer(insuranceProvider),
+        message: situation || undefined,
+        pageUrl: str(body.pageUri) || undefined,
+        utm: {
+          source: utmSource,
+          medium: utmMedium,
+          campaign: utmCampaign,
+          term: utmTerm,
+          content: utmContent,
+        },
+        gclid: request.cookies.get("_dr_gclid")?.value ?? null,
+        consents,
+      });
+      console.log("[get-help] drip intake:", JSON.stringify(dripResult));
+    } catch (e: unknown) {
+      const err = e as Error;
+      console.error(
+        "[get-help] drip intake exception:",
+        err.message?.slice(0, 200)
+      );
+    }
   }
 
   const gclid = request.cookies.get("_dr_gclid")?.value ?? null;
