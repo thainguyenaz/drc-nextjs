@@ -3,6 +3,13 @@
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { useTurnstile } from "./useTurnstile";
+import {
+  FORMS_API_BASE,
+  FORMS_BACKEND,
+  fetchAttribution,
+  readCookie,
+  submitGetHelpToAws,
+} from "@/lib/forms-backend";
 
 interface FormData {
   firstName: string;
@@ -72,6 +79,55 @@ export default function GetHelpForm({ variant = "lp" }: GetHelpFormProps) {
       'input[name="hp_check"]'
     );
     const honeypot = honeypotInput?.value || "";
+
+    if (FORMS_BACKEND === "aws") {
+      // AWS forms API: the form JSON goes straight to AWS, never to a
+      // Vercel route. The body matches today's route body, plus the
+      // attribution values and JS cookies the cross-origin API cannot read.
+      try {
+        const attribution = await fetchAttribution((url, init) => fetch(url, init));
+        const cookies = typeof document !== "undefined" ? document.cookie : "";
+        const ok = await submitGetHelpToAws((url, init) => fetch(url, init), FORMS_API_BASE, {
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+          email: formData.email,
+          phone: formData.phone,
+          seekingFor: formData.seekingFor,
+          insuranceProvider: formData.insuranceProvider,
+          situation: formData.situation,
+          smsConsent: formData.smsConsent,
+          variant,
+          pageUri: typeof window !== "undefined" ? window.location.href : "",
+          pageName: typeof window !== "undefined" ? document.title : "Get Help Today",
+          hp_check: honeypot,
+          turnstileToken,
+          ...turnstileInfo,
+          attribution,
+          hutk: readCookie(cookies, "hubspotutk"),
+          gaCookie: readCookie(cookies, "_ga"),
+        });
+        if (ok) {
+          setStatus("success");
+          if (typeof window !== "undefined" && variant === "lp") {
+            window.gtag?.("event", "page_view", {
+              page_path: "/get-help/thank-you/",
+              page_location: window.location.origin + "/get-help/thank-you/",
+              page_title: "Thank You - Get Help",
+            });
+          }
+          setFormData(initialFormData);
+        } else {
+          setStatus("error");
+          turnstile.reset();
+        }
+      } catch {
+        setStatus("error");
+        turnstile.reset();
+      } finally {
+        setSubmitting(false);
+      }
+      return;
+    }
 
     try {
       const response = await fetch("/api/get-help", {
