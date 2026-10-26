@@ -4,6 +4,14 @@ const withBundleAnalyzer = bundleAnalyzer({
   enabled: process.env.ANALYZE === "true",
 });
 
+// AWS forms API + card upload hosts for CSP connect-src (build time), e.g.
+// "https://forms.desertrecoverycenters.com https://<bucket>.s3.us-west-2.amazonaws.com".
+// Only bare https origins are accepted; unset leaves the CSP unchanged.
+const FORMS_CSP_HOSTS = (process.env.NEXT_PUBLIC_FORMS_CSP_HOSTS ?? "")
+  .split(/\s+/)
+  .filter((h) => /^https:\/\/[a-z0-9.-]+\.[a-z]{2,}$/.test(h));
+const FORMS_CONNECT_SRC = FORMS_CSP_HOSTS.length ? ` ${FORMS_CSP_HOSTS.join(" ")}` : "";
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   compress: true,
@@ -53,7 +61,7 @@ const nextConfig = {
               "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
               "img-src 'self' data: https: blob:",
               "font-src 'self' https://fonts.gstatic.com data:",
-              "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.google.com https://www.googleadservices.com https://api.desertrecoverycenters.com https://challenges.cloudflare.com https://api.livechatinc.com https://cdn.livechatinc.com wss://*.livechatinc.com https://*.tctm.co https://*.calltrackingmetrics.com https://*.hubspot.com https://*.hubapi.com https://js.hscta.net https://js-eu1.hscta.net https://*.hs-banner.com https://*.hsforms.com https://*.hscollectedforms.net https://*.hsadspixel.net https://*.hs-analytics.net https://stats.g.doubleclick.net https://ad.doubleclick.net https://*.hsappstatic.net",
+              "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.google.com https://www.googleadservices.com https://api.desertrecoverycenters.com https://challenges.cloudflare.com https://api.livechatinc.com https://cdn.livechatinc.com wss://*.livechatinc.com https://*.tctm.co https://*.calltrackingmetrics.com https://*.hubspot.com https://*.hubapi.com https://js.hscta.net https://js-eu1.hscta.net https://*.hs-banner.com https://*.hsforms.com https://*.hscollectedforms.net https://*.hsadspixel.net https://*.hs-analytics.net https://stats.g.doubleclick.net https://ad.doubleclick.net https://*.hsappstatic.net" + FORMS_CONNECT_SRC,
               "frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com https://challenges.cloudflare.com https://secure.livechatinc.com https://maps.google.com https://www.google.com",
               "object-src 'none'",
               "base-uri 'self'",
