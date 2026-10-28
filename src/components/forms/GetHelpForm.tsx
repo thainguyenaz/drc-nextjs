@@ -10,6 +10,7 @@ import {
   readCookie,
   submitGetHelpToAws,
 } from "@/lib/forms-backend";
+import { GET_HELP_INSURANCE_OPTIONS } from "@/lib/get-help-insurance-options";
 
 interface FormData {
   firstName: string;
@@ -313,12 +314,11 @@ export default function GetHelpForm({ variant = "lp" }: GetHelpFormProps) {
             className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-sage/50 focus:border-sage bg-white"
           >
             <option value="">Select your insurance</option>
-            <option value="Private Insurance">Private Insurance</option>
-            <option value="Commercial Insurance">Commercial Insurance</option>
-            <option value="Medicaid">Medicaid</option>
-            <option value="Medicare">Medicare</option>
-            <option value="Marketplace">Marketplace</option>
-            <option value="Private Pay">Private Pay</option>
+            {GET_HELP_INSURANCE_OPTIONS.map((o) => (
+              <option key={o.value} value={o.value}>
+                {o.label}
+              </option>
+            ))}
           </select>
         </div>
 
