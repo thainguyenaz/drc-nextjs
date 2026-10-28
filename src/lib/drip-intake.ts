@@ -19,9 +19,26 @@ type InquirerRelationship =
   | "professional"
   | "other";
 
+// Arizona AHCCCS Complete Care plans are sold under brand names that say
+// neither AHCCCS nor Medicaid, so each brand phrase maps to "ahcccs"
+// (wrong-fit). Medicaid-specific phrases only: bare "banner" and "united"
+// would catch Banner Aetna and UHC commercial plans, which are commercial.
+// Checked before the commercial pattern, which matches "bcbs" and "united".
+// Same list as drc-lead-drip services/intake/src/forms/fanout/drip.ts.
+const AHCCCS_PLAN_PATTERNS: RegExp[] = [
+  /mercy\s*care/i,
+  /banner[\s-]*university|university\s+family\s+care|\buahp\b/i,
+  /arizona\s+complete\s+health|complete\s+care\s+plan/i,
+  /care\s*1st/i,
+  /health\s*choice/i,
+  /molina/i,
+  /united[\s-]*health[\s-]*care[\s-]+community[\s-]+plan|\buhc[\s-]+community[\s-]+plan|arizona\s+physicians\s+ipa|\bapipa\b/i,
+];
+
 const PAYER_PATTERNS: [RegExp, PayerCategory][] = [
   [/medicaid/i, "medicaid"],
   [/ahcccs/i, "ahcccs"],
+  ...AHCCCS_PLAN_PATTERNS.map((re): [RegExp, PayerCategory] => [re, "ahcccs"]),
   [/medicare/i, "medicare"],
   [/tricare/i, "tricare"],
   [/self[- ]?pay|cash|no insurance|^none$/i, "self_pay"],
