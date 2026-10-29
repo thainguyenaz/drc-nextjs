@@ -187,7 +187,7 @@ export function MedicalWebPageSchema({
   name,
   dateModified,
   datePublished,
-  reviewer = "nguyen",
+  reviewer = "none",
   specialty = "Psychiatric",
   about,
   audience,
