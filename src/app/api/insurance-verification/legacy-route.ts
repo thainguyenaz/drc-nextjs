@@ -1,0 +1,340 @@
+import { NextRequest, NextResponse } from "next/server";
+import { rateLimit, getClientIp } from "@/lib/rate-limit";
+import {
+  checkTurnstile,
+  turnstileAllowsDrip,
+  turnstileRejects,
+} from "@/lib/turnstile";
+import {
+  parseTurnstileTelemetry,
+  turnstileClientLogLine,
+} from "@/lib/turnstile-client-state";
+import { uploadFormConversion } from "@/lib/tracking/google-ads";
+import { fireGa4Lead } from "@/lib/tracking/ga4-mp";
+import { buildMarketingConsents, parseConsentValue } from "@/lib/consent";
+import { classifyPayer, enrollInDrip } from "@/lib/drip-intake";
+
+export const runtime = "nodejs";
+
+const INSURANCE_NOTIFY_URL =
+  "https://api.desertrecoverycenters.com/api/notifications/insurance";
+
+export async function POST(request: NextRequest) {
+  const ip = getClientIp(request);
+  const rl = rateLimit(`insurance:${ip}`, 5, 60_000);
+  if (!rl.allowed) {
+    return NextResponse.json(
+      { error: "Too many requests" },
+      { status: 429, headers: { "Retry-After": String(rl.retryAfterSec) } }
+    );
+  }
+
+  const results = { hubspot: false, email: false };
+  let relayError: string | null = null;
+
+  try {
+    const formData = await request.formData();
+
+    // Honeypot: silently "succeed" so bots don't learn to adapt.
+    const honeypot = (formData.get("hp_check") as string | null) ?? "";
+    if (honeypot.trim() !== "") {
+      console.warn("Honeypot triggered on /api/insurance-verification from ip=" + ip);
+      return NextResponse.json({ success: true, emailSent: false });
+    }
+
+    const turnstileToken =
+      (formData.get("turnstileToken") as string | null) ||
+      (formData.get("cf-turnstile-response") as string | null);
+    const turnstile = await checkTurnstile(turnstileToken, ip);
+    // Client widget state at submit (non-PII enum + timings) for diagnosing
+    // token-less submissions. Logged for every verdict; never affects it.
+    console.log(
+      turnstileClientLogLine(
+        "insurance-verification",
+        turnstile,
+        parseTurnstileTelemetry({
+          turnstileState: formData.get("turnstileState"),
+          turnstileMs: formData.get("turnstileMs"),
+          turnstilePreloaded: formData.get("turnstilePreloaded"),
+          turnstileErrors: formData.get("turnstileErrors"),
+        })
+      )
+    );
+    if (turnstileRejects(turnstile)) {
+      console.warn(
+        "[insurance-verification] 400:",
+        JSON.stringify({
+          reason: "turnstile_failed",
+          verdict: turnstile,
+          tokenPresent: Boolean(turnstileToken),
+        })
+      );
+      return NextResponse.json(
+        { error: "Verification failed" },
+        { status: 400 }
+      );
+    }
+
+    const firstName = formData.get("firstname") as string;
+    const lastName = formData.get("lastname") as string;
+    const email = formData.get("email") as string;
+    const phone = formData.get("phone") as string;
+    const insuranceCarrier = formData.get("insurance_carrier") as string;
+    const memberId = formData.get("member_id") as string;
+    const dateOfBirth = formData.get("date_of_birth") as string;
+    const howDidYouHear = formData.get("how_did_you_hear") as string;
+    const frontCard = formData.get("front_card") as File | null;
+    const backCard = formData.get("back_card") as File | null;
+    const smsConsent = parseConsentValue(formData.get("smsConsent"));
+
+    // Member ID is now required server-side (card uploads are optional).
+    if (!memberId || memberId.trim() === "") {
+      console.warn(
+        "[insurance-verification] 400:",
+        JSON.stringify({ reason: "missing_member_id" })
+      );
+      return NextResponse.json(
+        { error: "Member ID is required" },
+        { status: 400 }
+      );
+    }
+
+    // Date of Birth is required server-side, mirroring Member ID.
+    if (!dateOfBirth || dateOfBirth.trim() === "") {
+      console.warn(
+        "[insurance-verification] 400:",
+        JSON.stringify({ reason: "missing_date_of_birth" })
+      );
+      return NextResponse.json(
+        { error: "Date of Birth is required" },
+        { status: 400 }
+      );
+    }
+
+    // STEP 1: HubSpot submission (primary)
+    const hutk = request.cookies.get("hubspotutk")?.value;
+    try {
+      const hubspotRes = await fetch(
+        "https://api.hsforms.com/submissions/v3/integration/submit/48050688/5fc5394d-3806-4291-a308-da475add5c6c",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            fields: [
+              { name: "firstname", value: firstName },
+              { name: "lastname", value: lastName },
+              { name: "email", value: email },
+              { name: "phone", value: phone },
+              { name: "insurance_carrier", value: insuranceCarrier },
+              { name: "how_did_you_hear", value: howDidYouHear || "" },
+            ],
+            context: {
+              ...(hutk ? { hutk } : {}),
+              pageUri: "https://desertrecoverycenters.com/insurance",
+              pageName: "Insurance Verification",
+            },
+            legalConsentOptions: {
+              consent: {
+                consentToProcess: true,
+                text: "I agree to allow Desert Recovery Centers to store and process my personal data.",
+                communications: [
+                  {
+                    value: true,
+                    subscriptionTypeId: 457126657,
+                    text: "I agree to receive marketing communications.",
+                  },
+                ],
+              },
+            },
+          }),
+        }
+      );
+      results.hubspot = hubspotRes.ok;
+      if (!hubspotRes.ok) {
+        const err = await hubspotRes.text();
+        console.error("HubSpot error:", hubspotRes.status, err);
+      }
+    } catch (e) {
+      console.error("HubSpot exception:", e);
+    }
+
+    // STEP 2: Email + Telegram via jarvis-api notifications (secondary, never blocks)
+    const relaySource = "website_insurance_verification";
+    let filesAttached = 0;
+    const fieldsAttempted = 9;
+    const utmSource = request.cookies.get("_dr_utm_source")?.value ?? null;
+    const utmMedium = request.cookies.get("_dr_utm_medium")?.value ?? null;
+    const utmCampaign = request.cookies.get("_dr_utm_campaign")?.value ?? null;
+    const utmTerm = request.cookies.get("_dr_utm_term")?.value ?? null;
+    const utmContent = request.cookies.get("_dr_utm_content")?.value ?? null;
+
+    // Record the actual consent the visitor gave, as structured records (one
+    // per channel), instead of discarding the checkbox value. HubSpot
+    // submission above is unchanged; this only adds the consent to the
+    // notify relay and the logs. captured_at is stamped server-side here.
+    const consents = buildMarketingConsents(smsConsent);
+    console.log(
+      "[insurance-verification] consent:",
+      JSON.stringify({
+        granted: consents[0]?.granted ?? false,
+        types: consents.map((c) => c.consent_type),
+        version: consents[0]?.consent_text_version,
+      })
+    );
+    try {
+      const relayBody = new FormData();
+      relayBody.append("firstname", firstName);
+      relayBody.append("lastname", lastName);
+      relayBody.append("email", email);
+      relayBody.append("phone", phone);
+      relayBody.append("insurance_carrier", insuranceCarrier);
+      relayBody.append("member_id", memberId || "");
+      relayBody.append("date_of_birth", dateOfBirth);
+      relayBody.append("how_did_you_hear", howDidYouHear || "");
+      relayBody.append("consents", JSON.stringify(consents));
+      relayBody.append("source", relaySource);
+      relayBody.append("utm_source", utmSource ?? "");
+      relayBody.append("utm_medium", utmMedium ?? "");
+      relayBody.append("utm_campaign", utmCampaign ?? "");
+      relayBody.append("utm_term", utmTerm ?? "");
+      relayBody.append("utm_content", utmContent ?? "");
+
+      if (frontCard && frontCard.size > 0) {
+        relayBody.append("front_card", frontCard);
+        filesAttached += 1;
+      }
+      if (backCard && backCard.size > 0) {
+        relayBody.append("back_card", backCard);
+        filesAttached += 1;
+      }
+
+      const relayRes = await fetch(INSURANCE_NOTIFY_URL, {
+        method: "POST",
+        body: relayBody,
+      });
+
+      results.email = relayRes.ok;
+      if (!relayRes.ok) {
+        const errText = await relayRes.text();
+        relayError = `HTTP ${relayRes.status}: ${errText.slice(0, 300)}`;
+        console.error("[insurance-verification] relay failed:", {
+          error: relayError,
+          source: relaySource,
+          fields_attempted: fieldsAttempted,
+        });
+      } else {
+        console.log("[insurance-verification] relay delivered:", {
+          emailOk: true,
+          filesAttached,
+          source: relaySource,
+        });
+      }
+    } catch (e: unknown) {
+      const err = e as Error;
+      relayError = err.message;
+      console.error("[insurance-verification] relay failed:", {
+        error: err.message,
+        source: relaySource,
+        fields_attempted: fieldsAttempted,
+      });
+    }
+
+    // Marketing drip only for Turnstile-verified submissions. Token-less
+    // (degraded-mode) leads still reached HubSpot and the admissions relay above.
+    if (!turnstileAllowsDrip(turnstile)) {
+      console.log(
+        "[insurance-verification] drip intake:",
+        JSON.stringify({ skipped: true, reason: `turnstile_${turnstile}` })
+      );
+    } else {
+      try {
+        const dripResult = await enrollInDrip({
+          formId: "drc-website-insurance-verification",
+          firstName,
+          lastName,
+          email,
+          phone,
+          relationshipToPatient: "self",
+          payerCategory: classifyPayer(insuranceCarrier),
+          pageUrl: "https://desertrecoverycenters.com/insurance",
+          utm: {
+            source: utmSource,
+            medium: utmMedium,
+            campaign: utmCampaign,
+            term: utmTerm,
+            content: utmContent,
+          },
+          gclid: request.cookies.get("_dr_gclid")?.value ?? null,
+          consents,
+        });
+        console.log(
+          "[insurance-verification] drip intake:",
+          JSON.stringify(dripResult)
+        );
+      } catch (e: unknown) {
+        const err = e as Error;
+        console.error(
+          "[insurance-verification] drip intake exception:",
+          err.message?.slice(0, 200)
+        );
+      }
+    }
+
+    console.log("Submission results:", results);
+
+    if (results.hubspot) {
+      const gclid = request.cookies.get("_dr_gclid")?.value ?? null;
+      const gaCookie = request.cookies.get("_ga")?.value ?? null;
+      const [adsResult, ga4Result] = await Promise.allSettled([
+        uploadFormConversion({
+          formType: "insurance_verification",
+          email,
+          phone,
+          gclid,
+        }),
+        fireGa4Lead({
+          formType: "insurance_verification",
+          gaCookie,
+          landingPage: "https://desertrecoverycenters.com/insurance",
+        }),
+      ]);
+      console.log(
+        "[insurance-verification] conversion-fire:",
+        JSON.stringify({
+          ads:
+            adsResult.status === "fulfilled"
+              ? adsResult.value
+              : { error: String(adsResult.reason).slice(0, 200) },
+          ga4:
+            ga4Result.status === "fulfilled"
+              ? ga4Result.value
+              : { error: String(ga4Result.reason).slice(0, 200) },
+        })
+      );
+
+      if (results.email) {
+        return NextResponse.json({
+          success: true,
+          emailSent: true,
+        });
+      }
+
+      return NextResponse.json(
+        {
+          success: true,
+          hubspotSubmitted: true,
+          emailSent: false,
+          warning:
+            "We got your insurance info but had trouble notifying our team. Please call (623) 305-0496 so we can verify your benefits right away.",
+          relayError,
+        },
+        { status: 207 }
+      );
+    }
+
+    return NextResponse.json({ error: "Submission failed" }, { status: 500 });
+  } catch (error) {
+    console.error("Insurance verification error:", error);
+    return NextResponse.json({ error: "Submission failed" }, { status: 500 });
+  }
+}
