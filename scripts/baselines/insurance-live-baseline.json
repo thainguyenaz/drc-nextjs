@@ -1,6 +1,6 @@
 {
   "url": "https://desertrecoverycenters.com/insurance",
-  "metaDescription": "Verify your insurance for addiction and mental health treatment at Desert Recovery Centers. Out-of-network commercial coverage and in-network with TRICARE through TriWest. Call (623) 305-0496.",
+  "metaDescription": "Verify your insurance for addiction and mental health treatment at Desert Recovery Centers. Out-of-network commercial coverage and in-network with TRICARE for residential treatment through TriWest. Call (623) 305-0496.",
   "cards": [
     { "name": "Cigna", "href": "/insurance/cigna" },
     { "name": "Aetna", "href": "/insurance/aetna" },
@@ -25,7 +25,5 @@
   },
   "dataLayerIds": ["G-0MSPF0DPVK", "AW-16468277860"],
   "turnstileTokenTimeoutMs": 30000,
-  "knownIssues": [
-    "Pinned metaDescription contains an unscoped 'in-network with TRICARE through TriWest' claim; pending contract confirmation and legal review. This baseline is expected to change when the scoped wording lands — the resulting check failure is the intended alert."
-  ]
+  "knownIssues": []
 }
