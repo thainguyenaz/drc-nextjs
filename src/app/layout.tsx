@@ -64,7 +64,7 @@ export default function RootLayout({
           <style>{`.reveal-fade-up,.reveal-fade-left,.reveal-fade-right,.reveal-fade{opacity:1!important;transform:none!important;animation:none!important;}`}</style>
         </noscript>
         <SchemaScript schema={[getMedicalOrganizationSchema()]} />
-        {/* GA4/Ads/CTM/HubSpot moved to TrackingScripts (client component in
+        {/* GA4/Ads/CTM moved to TrackingScripts (client component in
             <body>), which skips them entirely on untracked paths — see the
             load-order constraints documented there before touching. */}
       </head>

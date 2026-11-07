@@ -145,7 +145,7 @@ describe("attribution and cookies", () => {
   });
 
   it("reads JS cookies", () => {
-    expect(readCookie("a=1; hubspotutk=abc123; _ga=GA1.1.2.3", "hubspotutk")).toBe("abc123");
+    expect(readCookie("a=1; b=abc123; _ga=GA1.1.2.3", "_ga")).toBe("GA1.1.2.3");
     expect(readCookie("a=1", "_ga")).toBeNull();
   });
 });

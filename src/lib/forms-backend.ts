@@ -10,7 +10,7 @@
 //   NEXT_PUBLIC_FORMS_API_BASE  https origin of the AWS forms API.
 //
 // Both are read at build time. With the flag unset, nothing here runs and the
-// forms behave exactly as before (Vercel routes, HubSpot, relay).
+// forms post to the retired Vercel routes, which answer 410.
 //
 // Framework-free and unit-tested (fetch is injected).
 
@@ -148,8 +148,8 @@ export async function fetchAttribution(fetchFn: FetchLike): Promise<FormAttribut
   }
 }
 
-// JS-readable cookies the old same-origin routes read server-side: the
-// HubSpot hutk and the GA cookie. Sent explicitly because the AWS API is
+// JS-readable cookies the old same-origin routes read server-side: the GA
+// cookie. Sent explicitly because the AWS API is
 // cross-origin and receives no site cookies.
 export function readCookie(cookieHeader: string, name: string): string | null {
   for (const part of cookieHeader.split(";")) {
@@ -179,7 +179,7 @@ export type SubmitOutcome =
 export interface InsuranceSubmitInput {
   fetchFn: FetchLike;
   apiBase: string;
-  // Text fields, honeypot, Turnstile token/telemetry, attribution, hutk etc.
+  // Text fields, honeypot, Turnstile token/telemetry, attribution etc.
   // Posted as JSON to the AWS API only.
   fields: Record<string, unknown>;
   cards: PreparedCard[];

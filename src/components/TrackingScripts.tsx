@@ -4,7 +4,7 @@ import Script from "next/script";
 import { usePathname } from "next/navigation";
 import { isUntrackedPath } from "@/lib/untrackedPaths";
 
-// Skips GA4 / Ads / CTM / HubSpot entirely on untracked paths — see
+// Skips GA4 / Ads / CTM entirely on untracked paths — see
 // src/lib/untrackedPaths.ts for the list and the counsel rationale
 // (including the permanent CTM exclusion). If a visitor navigates from an
 // untracked page to any other page, this component re-renders with the new
@@ -29,7 +29,10 @@ export default function TrackingScripts() {
           - CTM must not be beforeInteractive: tried in 5eb2d54, reverted
             within hours in 9f29f05 (Jul 29 2026).
           Verify any strategy change against the form-submit baseline in
-          tracking-inventory-2026-08-11 before shipping. */}
+          tracking-inventory-2026-08-11 before shipping.
+          HubSpot was removed for the HubSpot cancellation (2026-11): no
+          HubSpot script, chat widget or collected-forms tag may be added
+          back, and the CSP no longer allows HubSpot domains. */}
       <Script
         src="https://www.googletagmanager.com/gtag/js?id=G-0MSPF0DPVK"
         strategy="afterInteractive"
@@ -47,13 +50,6 @@ export default function TrackingScripts() {
         src="//517993.tctm.co/t.js"
         strategy="afterInteractive"
         async
-      />
-      <Script
-        id="hs-script-loader"
-        src="//js-na2.hs-scripts.com/48050688.js"
-        strategy="lazyOnload"
-        async
-        defer
       />
     </>
   );

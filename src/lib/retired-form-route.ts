@@ -7,9 +7,9 @@
 // and do nothing else: the request body is never read, and there is no
 // HubSpot, jarvis-api relay, Dazos, CTM, drip, GA4 or Google Ads call.
 //
-// The previous handlers are kept unchanged next to each route as
-// legacy-route.ts (not routed). Rollback: rename legacy-route.ts back to
-// route.ts.
+// The previous handlers (legacy-route.ts, which posted to HubSpot) were
+// deleted for the HubSpot cancellation (2026-11). There is no rollback to
+// them; they remain in git history only.
 //
 // Framework-free so it is unit-tested without Next.
 

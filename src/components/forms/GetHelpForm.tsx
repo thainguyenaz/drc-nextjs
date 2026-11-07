@@ -104,7 +104,6 @@ export default function GetHelpForm({ variant = "lp" }: GetHelpFormProps) {
           turnstileToken,
           ...turnstileInfo,
           attribution,
-          hutk: readCookie(cookies, "hubspotutk"),
           gaCookie: readCookie(cookies, "_ga"),
         });
         if (ok) {
