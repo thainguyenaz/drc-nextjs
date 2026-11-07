@@ -13,7 +13,9 @@
     "memberId", "dateOfBirth", "iv-front", "iv-back", "howDidYouHear",
     "smsConsent", "hp_check", "cf-turnstile-response"
   ],
-  "requiredCookies": ["hubspotutk"],
+  "requiredCookies": [],
+  "forbiddenCookies": ["hubspotutk", "__hstc", "__hssc", "__hssrc", "messagesUtk"],
+  "forbiddenRequests": ["hs-scripts.com", "hs-analytics.net", "hsforms", "hscollectedforms.net", "usemessages.com", "hubspot.com", "hubapi.com", "hs-banner.com", "hsadspixel.net"],
   "requiredBeacons": {
     "gtagLoader": ["googletagmanager.com/gtag/js"],
     "ga4Collect": ["/g/collect"],

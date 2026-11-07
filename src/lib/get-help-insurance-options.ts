@@ -1,6 +1,6 @@
 // Options for the Get Help form's "My insurance provider is" dropdown.
-// `value` is what the form submits (to HubSpot, CTM, Dazos and the drip):
-// never change a value without a reviewed HubSpot change. `label` is the
+// `value` is what the form submits (to CTM, Dazos and the drip): never
+// change a value without checking the drip payer classifier. `label` is the
 // visible text only.
 export interface InsuranceOption {
   value: string;

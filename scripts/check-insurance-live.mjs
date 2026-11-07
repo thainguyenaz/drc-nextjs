@@ -7,7 +7,7 @@
 // it is deliberately not part of `npm run build`.
 //
 // It NEVER submits the insurance verification form. A real submit creates a
-// fake lead in HubSpot and pollutes the conversion counts this baseline
+// fake lead and pollutes the conversion counts this baseline
 // exists to protect (see tracking-inventory-2026-08-11). Endpoint liveness
 // is asserted via a HEAD probe (405 = POST-only route mounted).
 //
@@ -144,6 +144,12 @@ try {
   const cookieNames = (await page.cookies()).map((c) => c.name);
   for (const c of baseline.requiredCookies)
     if (!cookieNames.includes(c)) fail(`required cookie not set: ${c}`);
+  // HubSpot was removed (2026-11 cancellation): any HubSpot request or cookie
+  // means a tracker came back.
+  for (const c of baseline.forbiddenCookies ?? [])
+    if (cookieNames.includes(c)) fail(`forbidden cookie set: ${c}`);
+  for (const n of baseline.forbiddenRequests ?? [])
+    if (requests.some((u) => u.includes(n))) fail(`forbidden request observed: ${n}`);
 
   if (STRICT_TURNSTILE) {
     const deadline = Date.now() + baseline.turnstileTokenTimeoutMs;

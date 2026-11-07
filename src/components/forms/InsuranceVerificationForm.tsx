@@ -171,7 +171,6 @@ export default function InsuranceVerificationForm() {
             turnstileToken,
             ...turnstileInfo,
             attribution,
-            hutk: readCookie(cookies, "hubspotutk"),
             gaCookie: readCookie(cookies, "_ga"),
             pageUri: "https://desertrecoverycenters.com/insurance",
             pageName: "Insurance Verification",
@@ -243,7 +242,7 @@ export default function InsuranceVerificationForm() {
           // body wasn't JSON; treat as plain success
         }
         // Lead is captured whenever the API returns 2xx — 200 clean success
-        // OR 207 partial (HubSpot saved, notify relay failed). Fire the
+        // OR 207 partial (lead saved, notify relay failed). Fire the
         // thank-you page_view in both cases. The true error branch (non-2xx)
         // and the network/throw branch never reach here, so a lost lead
         // still fires nothing.
