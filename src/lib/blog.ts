@@ -27,6 +27,78 @@ const DISCLAIMER = `<p><em>This article is for informational purposes only and d
 export const blogPosts: BlogPost[] = [
   {
     reviewer: "nguyen",
+    lastReviewed: "2026-11-08",
+    slug: "treating-ptsd-alongside-addiction",
+    title: "Treating PTSD Alongside Addiction",
+    excerpt: "PTSD and addiction feed each other in a documented cycle. Learn why integrated, trauma-informed treatment addresses both at once and what that care actually looks like.",
+    category: "mental-health",
+    author: "Desert Recovery Centers Clinical Team",
+    datePublished: "2026-11-08",
+    dateModified: "2026-11-08",
+    readTime: 7,
+    featuredImage: "/images/glendale/Glendale-Front.jpg",
+    featuredImageAlt: "Treating PTSD Alongside Addiction - Desert Recovery Centers",
+    tags: ["ptsd and addiction treatment","trauma informed rehab","ptsd substance use"],
+    metaTitle: "Treating PTSD and Addiction at the Same Time",
+    metaDescription: "PTSD and addiction fuel each other. Learn why concurrent treatment works better than treating one at a time, and what trauma-informed rehab actually involves.",
+    content: `<p>You already know the drinking or the pills are a problem. What you might not be saying out loud is <em>why</em> they started, or why stopping feels impossible when certain memories keep coming back. If that is where you are right now, this is the thing you need to hear: you are not weak, and you are not broken. What you are dealing with has a name, it is well understood, and there is a way through it that addresses both sides at once.</p>
+
+<p>PTSD and addiction feed each other in a specific, documented way. Trauma symptoms, the nightmares, the hypervigilance, the feeling of being constantly on edge, become unbearable. Substances quiet them, at least for a little while. Then withdrawal or craving turns the volume back up, often louder than before. Many people spend years caught in that loop, not because they lack willpower, but because only half the problem was ever being treated.</p>
+
+<h2>How Common Is This, Really?</h2>
+
+<p>Very common. Roughly one in three people entering substance use treatment meet the clinical criteria for PTSD. People who have experienced trauma are two to four times more likely to develop a substance use disorder than those who have not. The connection is not coincidental. It is biological, psychological, and deeply personal all at once. If you have been wondering whether your trauma and your substance use are connected, the answer is almost certainly yes.</p>
+
+<h2>Why Treating Only One Side Does Not Work</h2>
+
+<p>For a long time, the standard approach was sequential: get sober first, deal with trauma later. That model has been seriously challenged. When only the addiction is treated and the trauma underneath it goes untouched, relapse rates are high. People return to substances because the original pain is still there. When only trauma is treated without addressing the substance use, the physiological pull of addiction undermines the therapy.</p>
+
+<p>Concurrent treatment, addressing both PTSD and addiction at the same time within a stabilizing clinical environment, produces better outcomes: better retention in treatment programs, lower rates of relapse, and meaningful reduction in PTSD symptom severity. This is not a fringe position. It is where the clinical field has moved.</p>
+
+<h2>What Trauma-Informed Rehab Actually Looks Like</h2>
+
+<p>Trauma-informed treatment is not one specific technique. It is an orientation that shapes everything: how staff communicate, how groups are structured, how individual therapy is sequenced, and how much control a patient has over their own care. Inside that framework, several specific approaches have strong clinical track records:</p>
+
+<ul>
+  <li><strong>Seeking Safety:</strong> A present-focused therapy developed specifically for people dealing with both PTSD and substance use. It does not require processing traumatic memories directly. Instead, it builds coping skills and safety in daily life, making it appropriate even in early recovery.</li>
+  <li><strong>Prolonged Exposure (PE):</strong> A structured therapy that gradually reduces the power traumatic memories hold by working through them in a controlled, supported way. When adapted for patients in recovery, it has shown measurable reductions in both PTSD symptoms and substance use.</li>
+  <li><strong>EMDR (Eye Movement Desensitization and Reprocessing):</strong> A therapy that helps the brain reprocess traumatic memories so they lose their emotional charge. It is gaining real traction in dual-diagnosis settings, and many patients find it more tolerable than traditional talk-based trauma work.</li>
+  <li><strong>Medication support:</strong> Appropriate pharmacological support can reduce physiological noise enough to make trauma therapy more accessible. For opioid use disorder, buprenorphine can stabilize a patient so they are genuinely able to engage in therapy rather than fighting withdrawal and craving every hour.</li>
+</ul>
+
+<blockquote class="clinical-callout"><p><strong>Clinical perspective from Dr. Nguyen:</strong> In practice, I find that delaying trauma work until a patient reaches an arbitrary sobriety milestone can sometimes reinforce avoidance and leave patients feeling that a significant part of their experience is not being addressed. I believe the approach should be individualized based on clinical stability, readiness, and the patient’s ability to tolerate and integrate the work; trauma treatment does not have to mean immediately processing traumatic memories, and modalities such as Seeking Safety, EMDR, and other trauma-informed interventions can be incorporated at different stages of recovery. With families, I emphasize that recovery is not simply about stopping substance use, but also understanding and treating the underlying experiences that may contribute to it, while recognizing that family involvement must be guided by the patient’s safety, boundaries, and treatment needs.</p></blockquote>
+
+<h2>The Myth That Trauma Work Has to Wait</h2>
+
+<p>One of the most damaging ideas still floating around is that you have to earn a fixed number of sober days before anyone will touch the trauma. The clinical reality is that stability matters, but stability is a clinical assessment, not a date on a calendar. A skilled clinician evaluates readiness based on where you actually are: your symptom levels, your support system, your capacity to tolerate the work. For many people, waiting to address trauma is what keeps them from staying stable in the first place.</p>
+
+<p>This matters enormously. Left untreated, the PTSD-addiction cycle tends to deepen. Each relapse can reinforce shame, which is itself a trauma response. Each trauma symptom spike increases craving. The window in which a person is willing to try treatment does not stay open indefinitely. Waiting for the "right time" that never arrives has real consequences.</p>
+
+<p><strong>You do not have to figure this out alone.</strong> Desert Recovery Centers is here 24 hours a day, 7 days a week. Call <a href="tel:+16026357207">(602) 635-7207</a> to talk with our admissions team, or <a href="/insurance">verify your insurance</a> online in a few minutes.</p>
+
+<h2>What About Detox First?</h2>
+
+<p>If physical dependence is part of the picture, medical detox is a necessary first step and it needs to happen at a facility equipped to manage it safely. Withdrawal from alcohol, benzodiazepines, or opioids can be medically serious. Cold-turkey or at-home withdrawal carries real risk and should not be attempted without medical supervision. Once a person is medically stable, that is when structured addiction and trauma treatment begins.</p>
+
+<h2>When to Seek Help</h2>
+
+<p>Some signs that professional, integrated treatment would genuinely help you or someone you care about:</p>
+
+<ul>
+  <li>You have tried to cut back or stop using and found that trauma symptoms, flashbacks, nightmares, panic, intense irritability, got worse or unbearable</li>
+  <li>You are using substances specifically to sleep, to stop intrusive memories, or to get through situations that trigger fear or shame</li>
+  <li>You have been through treatment before but the trauma was never directly addressed</li>
+  <li>Your relationships, your work, or your basic daily functioning are deteriorating</li>
+  <li>You are having thoughts of harming yourself: if that is happening right now, call 911 or 988 or go to the nearest emergency room</li>
+  <li>You feel like the substance use and the trauma are so tangled together that you cannot imagine treating one without the other</li>
+</ul>
+
+<p>That last feeling is not a sign that you are beyond help. It is a sign that you need a program built to hold both things at once. That kind of care exists. Desert Recovery Centers works with adults at the residential, PHP, and IOP levels to treat addiction and co-occurring trauma together, in a clinical environment designed from the ground up to handle both. If you want to understand what that looks like for your specific situation, or how to check whether your insurance covers it, the <a href="/insurance">insurance page</a> is a good place to start.</p>
+
+<p><strong>You do not have to figure this out alone.</strong> Desert Recovery Centers is here 24 hours a day, 7 days a week. Call <a href="tel:+16026357207">(602) 635-7207</a> to talk with our admissions team, or <a href="/insurance">verify your insurance</a> online in a few minutes.</p>`,
+  },
+  {
+    reviewer: "nguyen",
     lastReviewed: "2026-11-03",
     slug: "what-is-dual-diagnosis-treatment-and-why-it-matters",
     title: "What Is Dual Diagnosis Treatment and Why It Matters",
