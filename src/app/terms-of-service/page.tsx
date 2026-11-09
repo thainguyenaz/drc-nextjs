@@ -54,6 +54,14 @@ export default function TermsOfServicePage() {
               Desert Recovery Centers makes no warranties or representations about the accuracy or completeness of the content on this website. We are not liable for any damages arising from your use of or inability to use this website.
             </p>
 
+            <h2>Text Messaging Program</h2>
+            <p>
+              Desert Recovery Centers admissions messages: by providing your mobile number on our website forms and consenting, you may receive text messages from Desert Recovery Centers in reply to your inquiries about treatment, insurance, and scheduling.
+            </p>
+            <p>
+              Message frequency varies. Message and data rates may apply. Reply STOP to opt out, HELP for help. Consent is not a condition of purchase. Carriers are not liable for delayed or undelivered messages.
+            </p>
+
             <h2>Changes to These Terms</h2>
             <p>
               We reserve the right to modify these Terms of Service at any time. Changes will be effective immediately upon posting to this website. Your continued use of the website after any changes constitutes acceptance of the updated terms.

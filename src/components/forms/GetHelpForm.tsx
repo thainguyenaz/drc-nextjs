@@ -139,6 +139,7 @@ export default function GetHelpForm({ variant = "lp" }: GetHelpFormProps) {
           seekingFor: formData.seekingFor,
           insuranceProvider: formData.insuranceProvider,
           situation: formData.situation,
+          smsConsent: formData.smsConsent,
           variant,
           pageUri: typeof window !== "undefined" ? window.location.href : "",
           pageName: typeof window !== "undefined" ? document.title : "Get Help Today",
@@ -362,21 +363,28 @@ export default function GetHelpForm({ variant = "lp" }: GetHelpFormProps) {
             <input
               type="checkbox"
               name="smsConsent"
-              required
               checked={formData.smsConsent}
               onChange={handleChange}
               className="mt-1 w-4 h-4 text-sage focus:ring-sage border-gray-300 rounded"
             />
             <span className="text-xs text-gray-500 leading-relaxed">
-              By providing your phone number and email, you agree to receive marketing text messages
-              and/or emails from Desert Recovery Centers. Message frequency varies. Reply STOP to
-              unsubscribe. Message and data rates may apply.{" "}
-              <Link href="/privacy-policy" className="text-sage underline">
-                Privacy Policy
-              </Link>
-              .
+              By checking this box, you consent to receive text messages from Desert Recovery Centers
+              about your inquiry, including replies about treatment, insurance, and scheduling.
+              Message frequency varies. Message and data rates may apply. Reply HELP for help or
+              STOP to opt out. Consent is not a condition of purchase.
             </span>
           </label>
+          <p className="text-xs text-gray-500 mt-2">
+            By submitting, you accept our{" "}
+            <Link href="/terms-of-service" className="text-sage underline">
+              Terms of Service
+            </Link>
+            {" "}and{" "}
+            <Link href="/privacy-policy" className="text-sage underline">
+              Privacy Policy
+            </Link>
+            .
+          </p>
         </div>
 
         {TURNSTILE_SITE_KEY && (

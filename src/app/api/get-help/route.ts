@@ -30,6 +30,7 @@ interface Payload {
   pageName?: string;
   hp_check?: string; // honeypot
   turnstileToken?: string;
+  smsConsent?: boolean;
 }
 
 function str(v: unknown): string {
@@ -87,6 +88,7 @@ export async function POST(request: NextRequest) {
   const seekingFor = str(body.seekingFor);
   const insuranceProvider = str(body.insuranceProvider);
   const situation = str(body.situation);
+  const smsConsent = body.smsConsent === true;
 
   if (!firstName || !lastName || !email || !phone) {
     console.warn(
@@ -138,7 +140,7 @@ export async function POST(request: NextRequest) {
               text: "I agree to allow Desert Recovery Centers to store and process my personal data.",
               communications: [
                 {
-                  value: true,
+                  value: smsConsent,
                   subscriptionTypeId: 457126657,
                   text: "I agree to receive marketing communications.",
                 },
@@ -186,6 +188,7 @@ export async function POST(request: NextRequest) {
         seekingFor,
         message: situation,
         source: "website_get_help_form",
+        sms_consent: smsConsent,
         // snake_case: the jarvis-api /lead handler reads req.body.utm_* keys.
         utm_source: utmSource,
         utm_medium: utmMedium,

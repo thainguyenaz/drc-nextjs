@@ -58,6 +58,7 @@ export async function POST(request: NextRequest) {
     const memberId = formData.get("member_id") as string;
     const dateOfBirth = formData.get("date_of_birth") as string;
     const howDidYouHear = formData.get("how_did_you_hear") as string;
+    const smsConsent = (formData.get("sms_consent") as string | null) === "true";
     const frontCard = formData.get("front_card") as File | null;
     const backCard = formData.get("back_card") as File | null;
 
@@ -115,7 +116,7 @@ export async function POST(request: NextRequest) {
                 text: "I agree to allow Desert Recovery Centers to store and process my personal data.",
                 communications: [
                   {
-                    value: true,
+                    value: smsConsent,
                     subscriptionTypeId: 457126657,
                     text: "I agree to receive marketing communications.",
                   },
@@ -154,6 +155,7 @@ export async function POST(request: NextRequest) {
       relayBody.append("date_of_birth", dateOfBirth);
       relayBody.append("how_did_you_hear", howDidYouHear || "");
       relayBody.append("source", relaySource);
+      relayBody.append("sms_consent", String(smsConsent));
       relayBody.append("utm_source", utmSource ?? "");
       relayBody.append("utm_medium", utmMedium ?? "");
       relayBody.append("utm_campaign", utmCampaign ?? "");

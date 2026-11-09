@@ -84,6 +84,15 @@ export default function Footer({
                 {siteData.email}
               </a>
             </div>
+            <p className="text-white/50 text-xs leading-relaxed mt-3 max-w-[220px]">
+              Text us at <a href="tel:+16233050496" className="text-gold">(623) 305-0496</a>.
+              By texting Desert Recovery Centers, you agree to receive replies about your inquiry.
+              Message frequency varies. Message and data rates may apply. Reply STOP to opt out or
+              HELP for help. Consent is not a condition of purchase. See our{" "}
+              <Link href="/terms-of-service" className="underline hover:text-white">Terms of Service</Link>
+              {" "}and{" "}
+              <Link href="/privacy-policy" className="underline hover:text-white">Privacy Policy</Link>.
+            </p>
             {/* Social */}
             <div className="flex gap-3 mt-4">
               <a href={siteData.social.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="w-9 h-9 bg-white/10 hover:bg-white/20 rounded-lg flex items-center justify-center transition-colors">

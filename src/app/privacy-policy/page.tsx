@@ -59,6 +59,11 @@ export default function PrivacyPolicyPage() {
               Desert Recovery Centers may send SMS (text message) communications to phone numbers provided through our website forms, including the Insurance Verification form, Get Help form, and Contact form. By providing your phone number on any of our forms, you expressly consent to receive SMS messages from Desert Recovery Centers under the Telephone Consumer Protection Act (TCPA).
             </p>
 
+            <h3>Third-Party Sharing</h3>
+            <p>
+              We use your mobile number only to respond to messages you send us. We do not sell or share mobile numbers or text messaging opt-in data or consent with third parties or affiliates for marketing or promotional purposes. Message frequency varies. Message and data rates may apply. Reply STOP to opt out at any time, or HELP for help.
+            </p>
+
             <h3>Types of Messages</h3>
             <p>You may receive the following types of SMS communications:</p>
             <ul>
