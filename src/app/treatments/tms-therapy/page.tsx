@@ -1092,7 +1092,7 @@ export default function TMSTherapyPage() {
         </div>
       </section>
 
-      {/* ── PHQ-10 Assessment ─────────────────────────────────── */}
+      {/* ── Desert TMS link ──────────────────────────────────── */}
       <section className="py-20 md:py-28 bg-white">
         <div className="max-w-container mx-auto px-6">
           <motion.div
@@ -1103,31 +1103,22 @@ export default function TMSTherapyPage() {
             className="max-w-2xl mx-auto text-center"
           >
             <h2 className="font-display text-3xl md:text-4xl text-forest font-semibold mb-4">
-              Take the Depression Assessment
+              Learn More at Desert TMS
             </h2>
             <p className="text-gray-500 font-body leading-relaxed mb-10">
-              The NeuroStar PHQ-10 is a short questionnaire. It takes about five minutes.
+              Desert TMS LLC is a separate licensed provider affiliated with Desert
+              Recovery Centers. Its TMS suite is on-site at our Phoenix center. Visit
+              the Desert TMS site for treatment details, cost, and scheduling.
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-10">
+            <div className="flex items-center justify-center">
               <a
-                href="/tms-assessment"
+                href="https://deserttms.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-gold hover:bg-gold-dark text-white font-semibold text-base px-8 py-4 rounded-xl transition-colors shadow-lg shadow-gold/25 w-full sm:w-auto text-center"
               >
-                Start the Assessment
+                Visit Desert TMS
               </a>
-              <div className="flex flex-col items-center">
-                <Image
-                  src="/images/tms/phq10-qr.png"
-                  alt="QR code to open the depression assessment page"
-                  width={180}
-                  height={180}
-                  unoptimized
-                  className="rounded-lg"
-                />
-                <p className="text-gray-500 text-sm mt-2">Or scan to complete on your phone</p>
-              </div>
             </div>
           </motion.div>
         </div>

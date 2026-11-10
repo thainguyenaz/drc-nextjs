@@ -449,12 +449,13 @@ const nextConfig = {
       { source: "/webinar/what-to-say-to-someone-with-a-mental-health-disorder/", destination: "/resources/blog/how-to-talk-to-someone-about-going-to-rehab", permanent: true },
 
       // --- TMS assessment ---
-      // Counsel directive 2026-08-26 (option A): route to the DRC-hosted
-      // interstitial, NOT the Neuronetics PHQ-10 platform, until the
-      // DRC–Desert TMS BAA is executed. Keep the redirect itself: printed
-      // collateral QR codes encode /tms-assessment on the DRC domain.
-      { source: "/tms-assessment", destination: "/assessment-unavailable", permanent: false },
-      { source: "/tms-assessment/", destination: "/assessment-unavailable", permanent: false },
+      // Counsel directive 2026-11 (supersedes 2026-08-26 option A): route to the
+      // Desert TMS homepage. Direct PHQ-10 survey link stays OFF until counsel
+      // confirms in writing: Neuronetics vendor/privacy arrangement, public-facing
+      // form, result access and retention, and the clinical escalation protocol.
+      // A signed BAA alone does NOT clear this.
+      { source: "/tms-assessment", destination: "https://deserttms.com", permanent: false },
+      { source: "/tms-assessment/", destination: "https://deserttms.com", permanent: false },
     ];
   },
 };
