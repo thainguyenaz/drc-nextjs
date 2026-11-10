@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && node scripts/check-confirm.mjs",
+    "build": "node scripts/check-forms-env.mjs && next build && node scripts/check-confirm.mjs",
     "start": "next start",
     "lint": "next lint",
     "check:live": "node scripts/check-insurance-live.mjs",
