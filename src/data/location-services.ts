@@ -63,6 +63,7 @@ export const BATCH_DATES = {
   august2026: "2026-08-26",
   september2026: "2026-09-17",
   october2026: "2026-10-12",
+  november2026: "2026-11-12",
 } as const;
 
 export type BatchDate = (typeof BATCH_DATES)[keyof typeof BATCH_DATES];
@@ -160,6 +161,12 @@ export const SERVICE_CARD_IMAGES: Record<string, string> = {
   "schizophrenia-treatment": "/images/conditions/schizophrenia-treatment-05.webp",
   "addiction-treatment": "/images/conditions/addiction-treatment-06.webp",
   "alcohol-treatment": "/images/conditions/alcohol-treatment-04.webp",
+  // November '26 batch: dedicated sets, each card a frame used on none of
+  // that service's pages.
+  "opioids-heroin-treatment": "/images/conditions/opioids-heroin-treatment-07.webp",
+  "fentanyl-addiction-treatment": "/images/conditions/fentanyl-addiction-treatment-03.webp",
+  "cocaine-addiction-treatment": "/images/conditions/cocaine-addiction-treatment-07.webp",
+  "meth-addiction-treatment": "/images/conditions/meth-addiction-treatment-03.webp",
 };
 
 /**
@@ -169,6 +176,7 @@ export const SERVICE_CARD_IMAGES: Record<string, string> = {
  * Bipolar appears twice — Phoenix shipped in August, Glendale and Scottsdale
  * in September — because each city's pages carry that batch's dateModified.
  * ADHD likewise: Phoenix and Glendale in September, Scottsdale in October.
+ * Meth starts with Phoenix only in November.
  */
 const BATCH: Array<{
   serviceSlug: string;
@@ -257,6 +265,34 @@ const BATCH: Array<{
     serviceName: "Alcohol Treatment",
     cities: ["phoenix-php-iop", "glendale", "scottsdale"],
     batchDate: BATCH_DATES.october2026,
+  },
+
+  // ─── November '26 ──────────────────────────────────────────────
+  // Substance-specific services. Opioids, fentanyl, and cocaine cover all
+  // three cities; meth covers Phoenix only this month.
+  {
+    serviceSlug: "opioids-heroin-treatment",
+    serviceName: "Opioids & Heroin Treatment",
+    cities: ["phoenix-php-iop", "glendale", "scottsdale"],
+    batchDate: BATCH_DATES.november2026,
+  },
+  {
+    serviceSlug: "fentanyl-addiction-treatment",
+    serviceName: "Fentanyl Addiction Treatment",
+    cities: ["phoenix-php-iop", "glendale", "scottsdale"],
+    batchDate: BATCH_DATES.november2026,
+  },
+  {
+    serviceSlug: "cocaine-addiction-treatment",
+    serviceName: "Cocaine Addiction Treatment",
+    cities: ["phoenix-php-iop", "glendale", "scottsdale"],
+    batchDate: BATCH_DATES.november2026,
+  },
+  {
+    serviceSlug: "meth-addiction-treatment",
+    serviceName: "Meth Addiction Treatment",
+    cities: ["phoenix-php-iop"],
+    batchDate: BATCH_DATES.november2026,
   },
 ];
 

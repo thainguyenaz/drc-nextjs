@@ -412,6 +412,77 @@ const linkMap: Record<string, RelatedLink[]> = {
     { label: "Alcohol Treatment in Glendale", href: "/locations/glendale/alcohol-treatment" },
     { label: "Addiction Treatment", href: "/addiction-treatment" },
   ],
+
+  // ─── November '26 batch ────────────────────────────────
+  "/locations/phoenix-php-iop/opioids-heroin-treatment": [
+    { label: "Opioid Addiction Treatment", href: "/addiction/heroin-addiction-treatment" },
+    { label: "Our Phoenix Center", href: "/locations/phoenix-php-iop" },
+    { label: "Opioids & Heroin Treatment in Glendale", href: "/locations/glendale/opioids-heroin-treatment" },
+    { label: "Opioids & Heroin Treatment in Scottsdale", href: "/locations/scottsdale/opioids-heroin-treatment" },
+    { label: "Fentanyl Addiction Treatment", href: "/addiction/fentanyl-addiction-treatment" },
+  ],
+  "/locations/glendale/opioids-heroin-treatment": [
+    { label: "Opioid Addiction Treatment", href: "/addiction/heroin-addiction-treatment" },
+    { label: "Our Glendale Facility", href: "/locations/glendale" },
+    { label: "Opioids & Heroin Treatment in Phoenix", href: "/locations/phoenix-php-iop/opioids-heroin-treatment" },
+    { label: "Opioids & Heroin Treatment in Scottsdale", href: "/locations/scottsdale/opioids-heroin-treatment" },
+    { label: "Fentanyl Addiction Treatment", href: "/addiction/fentanyl-addiction-treatment" },
+  ],
+  "/locations/scottsdale/opioids-heroin-treatment": [
+    { label: "Opioid Addiction Treatment", href: "/addiction/heroin-addiction-treatment" },
+    { label: "Our Scottsdale Facility", href: "/locations/scottsdale" },
+    { label: "Opioids & Heroin Treatment in Phoenix", href: "/locations/phoenix-php-iop/opioids-heroin-treatment" },
+    { label: "Opioids & Heroin Treatment in Glendale", href: "/locations/glendale/opioids-heroin-treatment" },
+    { label: "Fentanyl Addiction Treatment", href: "/addiction/fentanyl-addiction-treatment" },
+  ],
+  "/locations/phoenix-php-iop/fentanyl-addiction-treatment": [
+    { label: "Fentanyl Addiction Treatment", href: "/addiction/fentanyl-addiction-treatment" },
+    { label: "Our Phoenix Center", href: "/locations/phoenix-php-iop" },
+    { label: "Fentanyl Addiction Treatment in Glendale", href: "/locations/glendale/fentanyl-addiction-treatment" },
+    { label: "Fentanyl Addiction Treatment in Scottsdale", href: "/locations/scottsdale/fentanyl-addiction-treatment" },
+    { label: "Opioid Addiction Treatment", href: "/addiction/heroin-addiction-treatment" },
+  ],
+  "/locations/glendale/fentanyl-addiction-treatment": [
+    { label: "Fentanyl Addiction Treatment", href: "/addiction/fentanyl-addiction-treatment" },
+    { label: "Our Glendale Facility", href: "/locations/glendale" },
+    { label: "Fentanyl Addiction Treatment in Phoenix", href: "/locations/phoenix-php-iop/fentanyl-addiction-treatment" },
+    { label: "Fentanyl Addiction Treatment in Scottsdale", href: "/locations/scottsdale/fentanyl-addiction-treatment" },
+    { label: "Opioid Addiction Treatment", href: "/addiction/heroin-addiction-treatment" },
+  ],
+  "/locations/scottsdale/fentanyl-addiction-treatment": [
+    { label: "Fentanyl Addiction Treatment", href: "/addiction/fentanyl-addiction-treatment" },
+    { label: "Our Scottsdale Facility", href: "/locations/scottsdale" },
+    { label: "Fentanyl Addiction Treatment in Phoenix", href: "/locations/phoenix-php-iop/fentanyl-addiction-treatment" },
+    { label: "Fentanyl Addiction Treatment in Glendale", href: "/locations/glendale/fentanyl-addiction-treatment" },
+    { label: "Opioid Addiction Treatment", href: "/addiction/heroin-addiction-treatment" },
+  ],
+  "/locations/phoenix-php-iop/cocaine-addiction-treatment": [
+    { label: "Cocaine Addiction Treatment", href: "/addiction/cocaine-addiction-treatment" },
+    { label: "Our Phoenix Center", href: "/locations/phoenix-php-iop" },
+    { label: "Cocaine Addiction Treatment in Glendale", href: "/locations/glendale/cocaine-addiction-treatment" },
+    { label: "Cocaine Addiction Treatment in Scottsdale", href: "/locations/scottsdale/cocaine-addiction-treatment" },
+    { label: "Stimulant Addiction Treatment", href: "/addiction/stimulant-addiction-treatment" },
+  ],
+  "/locations/glendale/cocaine-addiction-treatment": [
+    { label: "Cocaine Addiction Treatment", href: "/addiction/cocaine-addiction-treatment" },
+    { label: "Our Glendale Facility", href: "/locations/glendale" },
+    { label: "Cocaine Addiction Treatment in Phoenix", href: "/locations/phoenix-php-iop/cocaine-addiction-treatment" },
+    { label: "Cocaine Addiction Treatment in Scottsdale", href: "/locations/scottsdale/cocaine-addiction-treatment" },
+    { label: "Stimulant Addiction Treatment", href: "/addiction/stimulant-addiction-treatment" },
+  ],
+  "/locations/scottsdale/cocaine-addiction-treatment": [
+    { label: "Cocaine Addiction Treatment", href: "/addiction/cocaine-addiction-treatment" },
+    { label: "Our Scottsdale Facility", href: "/locations/scottsdale" },
+    { label: "Cocaine Addiction Treatment in Phoenix", href: "/locations/phoenix-php-iop/cocaine-addiction-treatment" },
+    { label: "Cocaine Addiction Treatment in Glendale", href: "/locations/glendale/cocaine-addiction-treatment" },
+    { label: "Stimulant Addiction Treatment", href: "/addiction/stimulant-addiction-treatment" },
+  ],
+  "/locations/phoenix-php-iop/meth-addiction-treatment": [
+    { label: "Meth Addiction Treatment", href: "/addiction/meth-addiction-treatment" },
+    { label: "Our Phoenix Center", href: "/locations/phoenix-php-iop" },
+    { label: "Stimulant Addiction Treatment", href: "/addiction/stimulant-addiction-treatment" },
+    { label: "Addiction Treatment in Phoenix", href: "/locations/phoenix-php-iop/addiction-treatment" },
+  ],
 };
 
 export function getRelatedLinks(path: string): RelatedLink[] {

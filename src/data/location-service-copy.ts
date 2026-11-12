@@ -15,7 +15,8 @@
  * IMAGES: every condition has its own set in /images/conditions. Anxiety,
  * depression, and bipolar arrived first; PTSD, OCD, personality disorder,
  * ADHD, schizophrenia, addiction, and alcohol sets arrived 2026-10-12 and
- * replaced the borrowed frames those pages used until then.
+ * replaced the borrowed frames those pages used until then. Opioid, fentanyl,
+ * cocaine, and meth sets arrived 2026-11-12 with the November batch.
  *
  * Rules, checked across all pages before each batch ships:
  *  - No image repeats within a single city's pages (cross-city is fine).
@@ -2847,4 +2848,967 @@ export const locationServiceCopy: Record<string, LocationServiceCopy> = {
       },
     },
   },
+
+  // Images: dedicated November sets; see the image plan at the end of this object.
+
+  // ─── Opioids & Heroin Treatment (November '26) ─────────────────────
+
+  "/locations/phoenix-php-iop/opioids-heroin-treatment": {
+    metaTitle: "Comprehensive Opioid and Heroin Treatment in Phoenix, AZ | DRC",
+    metaDescription:
+      "Desert Recovery Centers offers comprehensive opioid and heroin treatment in Phoenix, AZ through PHP and outpatient care. Call Now!",
+    copy: {
+      path: "/locations/phoenix-php-iop/opioids-heroin-treatment",
+      hero: {
+        eyebrow: "Phoenix, AZ",
+        headline: "Comprehensive Opioid and Heroin Treatment in Phoenix, AZ",
+        subtext:
+          "Desert Recovery Centers provides comprehensive opioid and heroin treatment in Phoenix, AZ through PHP and outpatient programming for both men and women. Clients attend structured daytime treatment without staying overnight, allowing them to return home afterward. This approach offers recovery-focused support for opioid use concerns while helping eligible individuals maintain connections to their households, relationships, and everyday responsibilities.",
+        image:
+          "/images/locations/php-iop/php-iop-therapy-office-2.jpg",
+      },
+      benefits: {
+        heading:
+          "Benefits of Comprehensive Opioid and Heroin Treatment in Phoenix, AZ at Desert Recovery Centers",
+        subheading: "Structured Support for Opioid Recovery",
+        items: [
+          {
+            title: "Daytime Treatment Without Residential Admission",
+            text: "Desert Recovery Centers provides PHP and outpatient addiction care for men and women at the Phoenix location. Clients participate in scheduled programming and return home afterward, allowing individuals whose clinical needs are appropriate for non-residential treatment to receive structured support without moving into an overnight recovery facility.",
+          },
+          {
+            title: "Programming Options for Different Recovery Needs",
+            text: "Opioid use concerns can vary according to substance use history, withdrawal risk, physical health, and individual circumstances. Desert Recovery Centers offers different PHP and outpatient programming options, including schedules that may involve approximately five to six hours daily, five days per week. Clinical assessment helps determine whether non-residential care is appropriate.",
+          },
+          {
+            title: "Continued Connection to Everyday Responsibilities",
+            text: "Comprehensive opioid and heroin treatment in Phoenix, AZ allows eligible clients to participate in structured recovery programming while continuing to live at home. Desert Recovery Centers provides a treatment environment where individuals can focus on substance use concerns while remaining connected to family responsibilities, personal relationships, and community routines outside scheduled treatment hours.",
+          },
+        ],
+        image: "/images/conditions/opioids-heroin-treatment-01.webp",
+        imageAlt:
+          "Counselor with a clipboard leading a mixed outpatient group session",
+      },
+      why: {
+        heading:
+          "Why Comprehensive Opioid and Heroin Treatment in Phoenix, AZ Matters",
+        subheading: "Addressing Opioid Risks and Recovery",
+        items: [
+          {
+            title: "Opioid Use Carries Serious Overdose Risks",
+            text: "Heroin and other opioids can suppress breathing, creating life-threatening overdose risks. Exposure to unexpectedly potent substances, including fentanyl, can increase danger. Professional assessment and appropriate addiction treatment are important for addressing opioid dependence, understanding overdose prevention, and determining whether additional medical services or medication-based treatment may be needed.",
+          },
+          {
+            title: "Community Environments Can Present Recovery Challenges",
+            text: "Familiar social connections, stressors, and locations associated with substance use can complicate recovery efforts. For individuals living throughout [Phoenix, AZ](https://www.phoenix.gov/), outpatient treatment may provide structured recovery support while they continue navigating everyday environments. Recognizing personal triggers and planning for high-risk situations remain important considerations.",
+          },
+          {
+            title: "Withdrawal and Relapse Require Medical Consideration",
+            text: "Opioid withdrawal can cause significant physical discomfort, and returning to opioid use after a period of reduced tolerance can increase overdose risk. Treatment planning should consider withdrawal management, evidence-based medications for opioid use disorder, and appropriate ongoing care. Some individuals may require medical stabilization or more intensive treatment before outpatient participation.",
+          },
+        ],
+        image: "/images/conditions/opioids-heroin-treatment-02.webp",
+        imageAlt:
+          "Client and counselor reviewing a printed recovery plan at a table",
+      },
+      faq: {
+        title:
+          "Frequently Asked Questions About Opioid and Heroin Treatment in Phoenix, AZ",
+        items: [
+          {
+            question:
+              "Can adults receive opioid and heroin treatment in Phoenix, AZ without staying overnight?",
+            answer:
+              "Yes. The Phoenix location provides PHP and outpatient addiction programming for men and women without overnight accommodation. Desert Recovery Centers offers comprehensive opioid and heroin treatment in Phoenix, AZ for individuals whose clinical needs are appropriate for non-residential care. Medical assessment remains important when withdrawal, overdose risk, or other health concerns are present.",
+          },
+          {
+            question:
+              "What should someone in Phoenix, AZ do if heroin or opioid use has created a risk of overdose?",
+            answer:
+              "An overdose is a medical emergency. If someone is unresponsive or breathing abnormally, call 911 immediately, administer naloxone if available, and follow emergency instructions. After urgent medical needs are addressed, Desert Recovery Centers can be contacted about its Phoenix PHP and outpatient addiction programming and whether that setting is appropriate.",
+          },
+          {
+            question:
+              "Does outpatient opioid treatment in Phoenix, AZ replace medication-assisted treatment?",
+            answer:
+              "No. Medications for opioid use disorder, such as buprenorphine or methadone, are evidence-based treatments and may be important components of recovery. Outpatient counseling or behavioral health programming should not automatically replace indicated medication. [Desert Recovery Centers](https://desertrecoverycenters.com/) provides PHP and outpatient addiction care in Phoenix; specific medication services should be confirmed directly.",
+          },
+        ],
+      },
+      map: {
+        variant: "gbp",
+        gbpLocationIndex: 2,
+        heading:
+          "PHP and Outpatient Opioid Treatment in Phoenix, AZ – Local Service Coverage",
+        subtext:
+          "Desert Recovery Centers provides outpatient opioid and heroin recovery care in Phoenix, AZ for men and women seeking structured addiction support. The Phoenix location offers PHP and outpatient programming without overnight stays, allowing eligible clients to return home after treatment. This non-residential approach supports individuals addressing opioid use concerns while maintaining connections to daily responsibilities and the wider Phoenix community.",
+      },
+    },
+  },
+
+  "/locations/glendale/opioids-heroin-treatment": {
+    metaTitle: "Structured Opioid and Heroin Treatment in Glendale, AZ | DRC",
+    metaDescription:
+      "Desert Recovery Centers offers structured opioid and heroin treatment in Glendale, AZ through residential recovery care for men. Call Now!",
+    copy: {
+      path: "/locations/glendale/opioids-heroin-treatment",
+      hero: {
+        eyebrow: "Glendale, AZ",
+        headline: "Structured Opioid and Heroin Treatment in Glendale, AZ",
+        subtext:
+          "Desert Recovery Centers provides structured opioid and heroin treatment in Glendale, AZ within a residential recovery center specifically for men. Male clients stay in a treatment-focused environment where they can address opioid dependence, substance use patterns, and recovery challenges. Residential care offers dedicated space away from some familiar triggers while supporting consistent participation in behavioral health treatment.",
+        image:
+          "/images/glendale/Glendale-Kitchen.jpg",
+      },
+      benefits: {
+        heading:
+          "Benefits of Structured Opioid and Heroin Treatment in Glendale, AZ at Desert Recovery Centers",
+        subheading: "Residential Recovery Support for Men",
+        items: [
+          {
+            title: "Consistent Residential Treatment Participation",
+            text: "Desert Recovery Centers provides a residential recovery environment specifically for men at the Glendale location. Clients stay within the treatment setting instead of returning home after scheduled programming, allowing recovery to remain a daily priority while reducing some of the outside demands that can interfere with participation.",
+          },
+          {
+            title: "Attention to Individual Opioid Use Patterns",
+            text: "Heroin and other opioid use concerns can involve different triggers, substance use histories, and behavioral health needs. Desert Recovery Centers provides a structured setting where men can focus on these individual challenges. Clinical assessment remains important for identifying withdrawal risks and determining whether additional medical services are needed before residential admission.",
+          },
+          {
+            title: "Reduced Exposure to Familiar Substance Use Environments",
+            text: "Men receiving structured opioid and heroin treatment in Glendale, AZ remain within a residential recovery setting during care. This arrangement can provide temporary distance from locations, routines, and social situations associated with opioid use, creating dedicated time to address recovery concerns without repeatedly returning to those environments each day.",
+          },
+        ],
+        image: "/images/conditions/opioids-heroin-treatment-04.webp",
+        imageAlt:
+          "Male counselor leading a small men's group in a residential lounge",
+      },
+      why: {
+        heading:
+          "Why Structured Opioid and Heroin Treatment in Glendale, AZ Matters",
+        subheading: "Recognizing Risks and Recovery Needs",
+        items: [
+          {
+            title: "Opioid Overdose Can Become Life-Threatening",
+            text: "Heroin and other opioids can slow or stop breathing during an overdose. Illicit drug supplies may also contain fentanyl or other unexpectedly potent substances, increasing the danger. Understanding overdose risks, naloxone access, and the importance of evidence-based treatment is essential when addressing opioid dependence.",
+          },
+          {
+            title: "Familiar Routines Can Reinforce Substance Use",
+            text: "Certain relationships, locations, and daily activities may become associated with opioid use. For men living in and around [Glendale, AZ](https://www.glendaleaz.com/), residential treatment can provide temporary separation from these influences while creating space to examine recurring patterns and focus on recovery-related needs.",
+          },
+          {
+            title: "Reduced Tolerance Can Increase Overdose Danger",
+            text: "After a period without opioids, tolerance may decrease, making a return to previous amounts especially dangerous. This risk is important during recovery and following treatment transitions. Appropriate planning may involve overdose prevention education, naloxone, medications for opioid use disorder, and ongoing medical or behavioral health support.",
+          },
+        ],
+        image: "/images/conditions/opioids-heroin-treatment-03.webp",
+        imageAlt:
+          "Male client talking with a therapist in a residential living room",
+      },
+      faq: {
+        title:
+          "Frequently Asked Questions About Opioid and Heroin Treatment in Glendale, AZ",
+        items: [
+          {
+            question:
+              "Is residential opioid and heroin treatment in Glendale, AZ available specifically for men?",
+            answer:
+              "Yes. The Glendale location provides residential addiction recovery care specifically for men. Male clients stay within the treatment environment rather than returning home after daytime programming. Desert Recovery Centers offers structured opioid and heroin treatment in Glendale, AZ for individuals whose clinical needs are appropriate for residential recovery care.",
+          },
+          {
+            question:
+              "Should men complete opioid withdrawal management before entering residential treatment in Glendale, AZ?",
+            answer:
+              "The need for withdrawal management depends on current opioid use, physical health, symptoms, and other clinical considerations. Some individuals may require medical stabilization or medication-based treatment before residential admission. Desert Recovery Centers provides men's residential recovery care in Glendale, but prospective clients should confirm which medical services are available.",
+          },
+          {
+            question:
+              "Can residential opioid treatment in Glendale, AZ help men concerned about returning to heroin use?",
+            answer:
+              "Residential care can provide temporary distance from familiar triggers and a structured environment for addressing substance use patterns. However, relapse and overdose prevention may also require medications for opioid use disorder and continued care. Desert Recovery Centers provides residential addiction recovery support for men in Glendale, with treatment suitability determined individually.",
+          },
+        ],
+      },
+      map: {
+        variant: "gbp",
+        gbpLocationIndex: 0,
+        heading:
+          "Residential Opioid and Heroin Treatment in Glendale, AZ – Local Service Coverage",
+        subtext:
+          "[Desert Recovery Centers](https://desertrecoverycenters.com/) provides residential opioid and heroin recovery care in Glendale, AZ specifically for men seeking structured addiction support. Male clients stay within the treatment environment while focusing on substance use concerns and recovery needs. This residential setting offers dedicated space for men in the Glendale area who may benefit from temporary separation from familiar opioid use triggers.",
+      },
+    },
+  },
+
+  "/locations/scottsdale/opioids-heroin-treatment": {
+    metaTitle: "Compassionate Opioid and Heroin Treatment in Scottsdale, AZ | DRC",
+    metaDescription:
+      "Desert Recovery Centers offers compassionate opioid and heroin treatment in Scottsdale, AZ through residential recovery care for women. Call Now!",
+    copy: {
+      path: "/locations/scottsdale/opioids-heroin-treatment",
+      hero: {
+        eyebrow: "Scottsdale, AZ",
+        headline: "Compassionate Opioid and Heroin Treatment in Scottsdale, AZ",
+        subtext:
+          "Desert Recovery Centers provides compassionate opioid and heroin treatment in Scottsdale, AZ within a residential recovery center specifically for women. Female clients stay in a structured environment where they can focus on opioid use concerns, emotional well-being, and recovery challenges. Residential care offers dedicated treatment space while temporarily reducing exposure to some everyday pressures and familiar substance use triggers.",
+        image:
+          "/images/scottsdale/DRC-MASSAGE-ROOM-NORTH-SCOTTSDALE-08-01-2024-August-01-202400003-2.jpg",
+      },
+      benefits: {
+        heading:
+          "Benefits of Compassionate Opioid and Heroin Treatment in Scottsdale, AZ at Desert Recovery Centers",
+        subheading: "Women-Focused Residential Recovery Support",
+        items: [
+          {
+            title: "A Residential Environment Specifically for Women",
+            text: "Desert Recovery Centers provides residential addiction recovery care specifically for women at the Scottsdale location. Female clients stay within the treatment environment rather than returning home after scheduled programming. This arrangement offers continuity and dedicated recovery space while reducing some of the outside responsibilities that may interfere with consistent participation.",
+          },
+          {
+            title: "Individual Attention to Recovery Challenges",
+            text: "Opioid dependence may involve physical withdrawal concerns, emotional stress, relationship difficulties, and recurring substance use patterns. Desert Recovery Centers provides a residential environment where women can focus on their individual behavioral health needs while temporarily stepping away from competing household, professional, and social obligations.",
+          },
+          {
+            title: "Consistent Care Without Daily Travel",
+            text: "Women receiving compassionate opioid and heroin treatment in Scottsdale, AZ remain within the residential setting throughout their stay. This eliminates daily travel between home and treatment while creating a more consistent recovery environment. Desert Recovery Centers provides dedicated space where female clients can prioritize treatment participation and address concerns associated with opioid use.",
+          },
+        ],
+        image: "/images/conditions/opioids-heroin-treatment-06.webp",
+        imageAlt:
+          "Women's support group with a female counselor in a sunlit room",
+      },
+      why: {
+        heading:
+          "Why Compassionate Opioid and Heroin Treatment in Scottsdale, AZ Matters",
+        subheading: "Understanding Women's Opioid Recovery Needs",
+        items: [
+          {
+            title: "Opioid Dependence Can Affect Multiple Areas of Health",
+            text: "Heroin and other opioids can cause physical dependence, impaired functioning, and serious overdose risks. Substance use may also affect emotional well-being, relationships, employment, and personal responsibilities. Appropriate clinical assessment helps determine whether withdrawal management, medications for opioid use disorder, or additional behavioral health services are needed.",
+          },
+          {
+            title: "Social and Emotional Pressures Can Complicate Recovery",
+            text: "Relationship difficulties, stress, and familiar social environments may contribute to recurring opioid use. For women living in and around [Scottsdale, AZ](https://www.scottsdaleaz.gov/), residential treatment may provide temporary distance from some of these pressures while creating dedicated space to focus on recovery and personal behavioral health needs.",
+          },
+          {
+            title: "Overdose Prevention Remains Important During Recovery",
+            text: "Returning to opioid use after a period of abstinence can be especially dangerous because tolerance may decrease. Naloxone availability, overdose education, and access to evidence-based medications are important considerations. Women seeking treatment should understand that residential behavioral health care does not automatically replace indicated medical treatment for opioid use disorder.",
+          },
+        ],
+        image: "/images/conditions/opioids-heroin-treatment-05.webp",
+        imageAlt:
+          "Woman talking with a female therapist who is taking notes",
+      },
+      faq: {
+        title:
+          "Frequently Asked Questions About Opioid and Heroin Treatment in Scottsdale, AZ",
+        items: [
+          {
+            question:
+              "Can women receive residential opioid and heroin treatment in Scottsdale, AZ?",
+            answer:
+              "Yes. The Scottsdale location provides residential addiction recovery care specifically for women. Female clients stay within the treatment environment during care. Desert Recovery Centers offers compassionate opioid and heroin treatment in Scottsdale, AZ for women whose individual clinical needs are appropriate for residential treatment rather than daytime-only outpatient programming.",
+          },
+          {
+            question:
+              "What should women in Scottsdale, AZ know about medications for opioid use disorder?",
+            answer:
+              "Medications such as buprenorphine and methadone are evidence-based treatments that can reduce opioid use and overdose risk. Their availability varies by provider and program. [Desert Recovery Centers](https://desertrecoverycenters.com/) provides residential addiction recovery care for women in Scottsdale, but specific medication services should be confirmed before admission.",
+          },
+          {
+            question:
+              "Is residential heroin treatment in Scottsdale, AZ appropriate when someone has experienced an overdose?",
+            answer:
+              "A previous overdose is an important reason to seek prompt medical assessment and evidence-based opioid treatment. Residential care may be appropriate after immediate medical needs are addressed, depending on clinical stability. Desert Recovery Centers provides women's residential recovery care in Scottsdale, but emergency symptoms require immediate medical attention rather than routine admission arrangements.",
+          },
+        ],
+      },
+      map: {
+        variant: "gbp",
+        gbpLocationIndex: 1,
+        heading:
+          "Residential Opioid and Heroin Treatment in Scottsdale, AZ – Local Service Coverage",
+        subtext:
+          "Desert Recovery Centers provides residential opioid and heroin recovery care in Scottsdale, AZ specifically for women seeking structured addiction support. Female clients stay at the recovery center while addressing substance use patterns and related behavioral health concerns. This women-focused residential setting offers dedicated treatment space for individuals in the Scottsdale area who may benefit from separation from familiar opioid use environments.",
+      },
+    },
+  },
+
+  // ─── Fentanyl Addiction Treatment (November '26) ───────────────────
+
+  "/locations/phoenix-php-iop/fentanyl-addiction-treatment": {
+    metaTitle: "Personalized Fentanyl Addiction Treatment in Phoenix, AZ | DRC",
+    metaDescription:
+      "Desert Recovery Centers offers personalized fentanyl addiction treatment in Phoenix, AZ through PHP and outpatient recovery care. Call Now!",
+    copy: {
+      path: "/locations/phoenix-php-iop/fentanyl-addiction-treatment",
+      hero: {
+        eyebrow: "Phoenix, AZ",
+        headline: "Personalized Fentanyl Addiction Treatment in Phoenix, AZ",
+        subtext:
+          "Desert Recovery Centers provides personalized fentanyl addiction treatment in Phoenix, AZ through PHP and outpatient programming for both men and women. Clients attend structured daytime care and return home afterward without staying overnight. This non-residential approach supports individuals addressing fentanyl use, opioid dependence, and recovery challenges when their medical stability and treatment needs are appropriate for outpatient participation.",
+        image:
+          "/images/locations/php-iop/php-iop-medical-room-1.jpg",
+      },
+      benefits: {
+        heading:
+          "Benefits of Personalized Fentanyl Addiction Treatment in Phoenix, AZ at Desert Recovery Centers",
+        subheading: "Structured Outpatient Recovery for Adults",
+        items: [
+          {
+            title: "Daytime Care for Men and Women",
+            text: "Desert Recovery Centers provides PHP and outpatient addiction programming for both men and women at the Phoenix location. Clients participate in scheduled treatment without staying overnight, allowing eligible individuals to receive structured behavioral health support while continuing to live at home and maintain connections with their everyday environments.",
+          },
+          {
+            title: "Programming Options Based on Recovery Needs",
+            text: "Fentanyl dependence can involve significant withdrawal symptoms, overdose risks, and complex recovery considerations. Desert Recovery Centers offers different outpatient programming options, including schedules that may involve approximately five to six hours daily, five days per week. Appropriate placement depends on clinical assessment, medical stability, and whether additional services are required.",
+          },
+          {
+            title: "Support While Maintaining Community Connections",
+            text: "Personalized fentanyl addiction treatment in Phoenix, AZ allows eligible clients to participate in structured recovery programming while remaining connected to their households and personal relationships. Desert Recovery Centers provides non-residential care where individuals can address substance use concerns without completely separating from everyday responsibilities outside scheduled treatment hours.",
+          },
+        ],
+        image: "/images/conditions/fentanyl-addiction-treatment-02.webp",
+        imageAlt:
+          "Counselor leading a mixed outpatient group in a bright classroom",
+      },
+      why: {
+        heading:
+          "Why Personalized Fentanyl Addiction Treatment in Phoenix, AZ Matters",
+        subheading: "Addressing Serious Fentanyl Recovery Risks",
+        items: [
+          {
+            title: "Fentanyl Exposure Can Cause Rapid Overdose",
+            text: "Fentanyl is a highly potent synthetic opioid that can cause life-threatening respiratory depression. Illicitly manufactured fentanyl may also be present in counterfeit pills or other drugs without a person's knowledge. Understanding overdose warning signs, naloxone use, and emergency response is essential for individuals affected by fentanyl use.",
+          },
+          {
+            title: "Community Recovery Requires Awareness of Triggers",
+            text: "Familiar locations, social relationships, and daily stressors can contribute to recurring substance use. For individuals living throughout [Phoenix, AZ](https://www.phoenix.gov/), outpatient recovery care may provide structured treatment while clients continue navigating their usual environments. Recognizing high-risk situations is particularly important when fentanyl exposure creates substantial overdose danger.",
+          },
+          {
+            title: "Withdrawal and Treatment Planning Require Medical Input",
+            text: "Fentanyl dependence can involve difficult withdrawal symptoms and an elevated risk of overdose if use resumes after tolerance decreases. Evidence-based medications for opioid use disorder can play an important role in treatment. Some individuals require medical stabilization or a more intensive setting before participating safely in outpatient programming.",
+          },
+        ],
+        image: "/images/conditions/fentanyl-addiction-treatment-01.webp",
+        imageAlt:
+          "Nurse checking in with a client at a consultation desk",
+      },
+      faq: {
+        title:
+          "Frequently Asked Questions About Fentanyl Addiction Treatment in Phoenix, AZ",
+        items: [
+          {
+            question:
+              "Can someone receive fentanyl addiction treatment in Phoenix, AZ without staying overnight?",
+            answer:
+              "Yes, when medical stability and individual circumstances make outpatient treatment appropriate. The Phoenix location offers PHP and outpatient programming for both men and women without overnight stays. Desert Recovery Centers provides personalized fentanyl addiction treatment in Phoenix, AZ for eligible clients, although some individuals require medical stabilization or more intensive care first.",
+          },
+          {
+            question:
+              "What should someone in Phoenix, AZ do after a suspected fentanyl overdose?",
+            answer:
+              "Call 911 immediately if a person is unresponsive, breathing slowly, or showing other overdose warning signs. Administer naloxone if available and follow emergency instructions. Once immediate medical needs are addressed, Desert Recovery Centers can provide information about its Phoenix outpatient addiction programming and whether that level of care is appropriate.",
+          },
+          {
+            question:
+              "Does fentanyl addiction treatment in Phoenix, AZ include medications such as buprenorphine?",
+            answer:
+              "Buprenorphine and methadone are evidence-based medications for opioid use disorder, but their availability must be confirmed with the treatment provider. Fentanyl exposure can also affect medication initiation planning, making clinical guidance important. Desert Recovery Centers provides PHP and outpatient addiction care in Phoenix; prospective clients should ask directly about medication services and coordination.",
+          },
+        ],
+      },
+      map: {
+        variant: "gbp",
+        gbpLocationIndex: 2,
+        heading:
+          "PHP and Outpatient Fentanyl Addiction Treatment in Phoenix, AZ – Local Service Coverage",
+        subtext:
+          "[Desert Recovery Centers](https://desertrecoverycenters.com/) provides outpatient fentanyl addiction recovery care in Phoenix, AZ for men and women seeking structured behavioral health support. The Phoenix location offers PHP and outpatient programming without overnight stays, allowing eligible clients to return home after scheduled treatment. This non-residential approach supports recovery participation while maintaining connections to everyday life in the Phoenix community.",
+      },
+    },
+  },
+
+  "/locations/glendale/fentanyl-addiction-treatment": {
+    metaTitle: "Focused Fentanyl Addiction Treatment in Glendale, AZ | DRC",
+    metaDescription:
+      "Desert Recovery Centers offers focused fentanyl addiction treatment in Glendale, AZ through residential recovery care for men. Call Now!",
+    copy: {
+      path: "/locations/glendale/fentanyl-addiction-treatment",
+      hero: {
+        eyebrow: "Glendale, AZ",
+        headline: "Focused Fentanyl Addiction Treatment in Glendale, AZ",
+        subtext:
+          "Desert Recovery Centers provides focused fentanyl addiction treatment in Glendale, AZ within a residential recovery center specifically for men. Male clients stay in a structured environment where they can address opioid dependence, substance use patterns, and recovery challenges. Residential care creates dedicated treatment space away from some familiar triggers while supporting consistent participation in behavioral health programming and recovery-focused activities.",
+        image:
+          "/images/glendale/Glendale-Room-1.jpg",
+      },
+      benefits: {
+        heading:
+          "Benefits of Focused Fentanyl Addiction Treatment in Glendale, AZ at Desert Recovery Centers",
+        subheading: "Dedicated Residential Recovery for Men",
+        items: [
+          {
+            title: "Residential Care Centered on Male Clients",
+            text: "Desert Recovery Centers provides a residential addiction recovery environment specifically for men at the Glendale location. Male clients stay within the treatment setting rather than returning home after daytime programming. This arrangement creates dedicated recovery space while reducing some of the competing responsibilities that may interfere with consistent participation.",
+          },
+          {
+            title: "Attention to Individual Fentanyl Use Concerns",
+            text: "Fentanyl dependence may involve different patterns of use, withdrawal experiences, emotional challenges, and personal circumstances. Desert Recovery Centers provides a structured residential environment where men can focus on their individual recovery needs. Clinical assessment remains essential for determining whether medical stabilization or additional opioid treatment services are necessary.",
+          },
+          {
+            title: "Consistent Treatment Without Daily Transitions",
+            text: "Men receiving focused fentanyl addiction treatment in Glendale, AZ remain within the residential setting throughout their stay. This eliminates daily travel between home and treatment while creating greater continuity. Desert Recovery Centers provides an environment where recovery remains a central priority, allowing clients to temporarily step away from familiar substance use situations.",
+          },
+        ],
+        image: "/images/conditions/fentanyl-addiction-treatment-04.webp",
+        imageAlt:
+          "Male counselor talking with two men at a shaded patio table",
+      },
+      why: {
+        heading:
+          "Why Focused Fentanyl Addiction Treatment in Glendale, AZ Matters",
+        subheading: "Understanding Fentanyl Risks and Recovery",
+        items: [
+          {
+            title: "Fentanyl Overdose Can Develop Rapidly",
+            text: "Fentanyl is a highly potent synthetic opioid capable of causing severe respiratory depression and life-threatening overdose. Illicitly manufactured fentanyl may also appear in counterfeit pills or other substances. Recognizing overdose symptoms, keeping naloxone accessible, and understanding emergency response are important considerations for individuals affected by fentanyl use.",
+          },
+          {
+            title: "Familiar Environments May Increase Relapse Exposure",
+            text: "Social relationships, established routines, and locations associated with opioid use can create challenges during recovery. For men living in and around [Glendale, AZ](https://www.glendaleaz.com/), residential care may provide temporary separation from some of these influences while creating dedicated time to address recovery needs and recurring substance use patterns.",
+          },
+          {
+            title: "Medical Treatment May Be Necessary Alongside Recovery Care",
+            text: "Fentanyl dependence can involve significant withdrawal symptoms and substantial overdose risk if opioid use resumes after tolerance decreases. Medications for opioid use disorder, including buprenorphine and methadone, are evidence-based treatment options. Appropriate care may also require medical stabilization or a higher level of clinical support before residential admission.",
+          },
+        ],
+        image: "/images/conditions/fentanyl-addiction-treatment-07.webp",
+        imageAlt:
+          "Male client writing in a journal while a counselor listens",
+      },
+      faq: {
+        title:
+          "Frequently Asked Questions About Fentanyl Addiction Treatment in Glendale, AZ",
+        items: [
+          {
+            question:
+              "Can men enter residential fentanyl addiction treatment in Glendale, AZ after repeated opioid use?",
+            answer:
+              "Residential treatment may be appropriate for men experiencing recurring fentanyl use when their clinical needs fit a structured recovery setting. Desert Recovery Centers provides residential addiction care specifically for men in Glendale. Medical assessment is important because withdrawal risks, current substance use, and other health concerns may require additional services before admission.",
+          },
+          {
+            question:
+              "Is medical detoxification required before fentanyl addiction treatment in Glendale, AZ?",
+            answer:
+              "Not everyone requires the same withdrawal management approach. The appropriate plan depends on opioid use history, withdrawal symptoms, medical conditions, and medication treatment needs. Desert Recovery Centers provides residential recovery care for men in Glendale, but prospective clients should confirm available medical services and whether stabilization is necessary before entering treatment.",
+          },
+          {
+            question:
+              "What should families know about fentanyl overdose risks during recovery in Glendale, AZ?",
+            answer:
+              "Overdose risk can increase when someone returns to opioid use after tolerance has decreased. Families should understand overdose warning signs, naloxone administration, and the need to call 911 during emergencies. [Desert Recovery Centers](https://desertrecoverycenters.com/) provides men's residential addiction recovery care in Glendale, where appropriate treatment planning should account for individual medical needs.",
+          },
+        ],
+      },
+      map: {
+        variant: "gbp",
+        gbpLocationIndex: 0,
+        heading:
+          "Residential Fentanyl Addiction Treatment in Glendale, AZ – Local Service Coverage",
+        subtext:
+          "Desert Recovery Centers provides residential fentanyl addiction recovery care in Glendale, AZ specifically for men seeking structured substance use support. Male clients stay within the recovery environment while focusing on opioid dependence and related behavioral health concerns. This residential setting offers dedicated treatment space for men in the Glendale area who may benefit from temporary separation from familiar substance use triggers.",
+      },
+    },
+  },
+
+  "/locations/scottsdale/fentanyl-addiction-treatment": {
+    metaTitle: "Compassionate Fentanyl Addiction Treatment in Scottsdale, AZ | DRC",
+    metaDescription:
+      "Desert Recovery Centers offers compassionate fentanyl addiction treatment in Scottsdale, AZ through residential recovery care for women. Call Now!",
+    copy: {
+      path: "/locations/scottsdale/fentanyl-addiction-treatment",
+      hero: {
+        eyebrow: "Scottsdale, AZ",
+        headline: "Compassionate Fentanyl Addiction Treatment in Scottsdale, AZ",
+        subtext:
+          "Desert Recovery Centers provides compassionate fentanyl addiction treatment in Scottsdale, AZ within a residential recovery center specifically for women. Female clients stay in a structured setting where they can focus on opioid dependence, personal recovery challenges, and related behavioral health concerns. Residential care provides dedicated treatment space while temporarily reducing exposure to familiar substance use environments and competing everyday responsibilities.",
+        image:
+          "/images/scottsdale/DRC-GYM-SCOTTSDALE-08-01-2024-August-07-202400003-2.jpg",
+      },
+      benefits: {
+        heading:
+          "Benefits of Compassionate Fentanyl Addiction Treatment in Scottsdale, AZ at Desert Recovery Centers",
+        subheading: "Women-Focused Residential Recovery Care",
+        items: [
+          {
+            title: "A Residential Environment for Women's Recovery",
+            text: "Desert Recovery Centers provides residential addiction care specifically for women at the Scottsdale location. Female clients stay within the treatment environment rather than returning home after scheduled programming. This arrangement offers continuity and dedicated space for addressing substance use concerns while reducing some everyday demands that may interfere with treatment participation.",
+          },
+          {
+            title: "Attention to Personal Recovery Circumstances",
+            text: "Fentanyl use concerns may involve emotional stress, relationship difficulties, physical dependence, and different patterns of substance use. Desert Recovery Centers provides a structured residential setting where women can focus on their individual recovery needs. Appropriate clinical assessment helps identify whether withdrawal management or additional medical treatment is required.",
+          },
+          {
+            title: "Greater Continuity Throughout Residential Care",
+            text: "Women receiving compassionate fentanyl addiction treatment in Scottsdale, AZ remain within the recovery environment during their stay. This reduces daily transitions between treatment and home while creating consistent opportunities to focus on behavioral health concerns. Desert Recovery Centers provides dedicated recovery space away from some familiar situations associated with opioid use.",
+          },
+        ],
+        image: "/images/conditions/fentanyl-addiction-treatment-05.webp",
+        imageAlt:
+          "Female therapist listening to a client beside a large window",
+      },
+      why: {
+        heading:
+          "Why Compassionate Fentanyl Addiction Treatment in Scottsdale, AZ Matters",
+        subheading: "Addressing Serious Opioid Recovery Concerns",
+        items: [
+          {
+            title: "Fentanyl Exposure Creates Significant Overdose Danger",
+            text: "Fentanyl is a potent synthetic opioid that can cause life-threatening respiratory depression. Illicit fentanyl may also be present in counterfeit medications or other drugs without a person's knowledge. Overdose prevention education, naloxone availability, and timely access to evidence-based treatment are important considerations for women affected by fentanyl use.",
+          },
+          {
+            title: "Personal Responsibilities Can Complicate Recovery Planning",
+            text: "Household obligations, caregiving demands, employment, and relationship concerns may compete with treatment participation. For women living in and around [Scottsdale, AZ](https://www.scottsdaleaz.gov/), residential recovery care may provide temporary separation from some responsibilities while creating dedicated time to address substance use concerns and individual behavioral health needs.",
+          },
+          {
+            title: "Recovery May Require Ongoing Medical Support",
+            text: "Fentanyl dependence can involve difficult withdrawal symptoms and a heightened risk of overdose if use resumes after tolerance decreases. Medications for opioid use disorder can reduce important risks and support recovery. Residential behavioral health treatment should be considered alongside appropriate medical assessment rather than assumed to replace medication-based opioid care.",
+          },
+        ],
+        image: "/images/conditions/fentanyl-addiction-treatment-06.webp",
+        imageAlt:
+          "Two women talking over tea in a residential kitchen",
+      },
+      faq: {
+        title:
+          "Frequently Asked Questions About Fentanyl Addiction Treatment in Scottsdale, AZ",
+        items: [
+          {
+            question:
+              "Is residential fentanyl addiction treatment in Scottsdale, AZ available specifically for women?",
+            answer:
+              "Yes. The Scottsdale location provides residential addiction recovery care specifically for women. Female clients stay within the treatment environment during care. Desert Recovery Centers offers compassionate fentanyl addiction treatment in Scottsdale, AZ for women whose individual clinical needs are appropriate for structured residential recovery rather than daytime-only outpatient programming.",
+          },
+          {
+            question:
+              "Can women seek fentanyl addiction treatment in Scottsdale, AZ while managing family responsibilities?",
+            answer:
+              "Yes. Women balancing caregiving or household responsibilities may consider residential care when greater treatment structure is appropriate. Desert Recovery Centers provides a women-only recovery setting in Scottsdale, allowing clients to focus on substance use concerns while temporarily stepping away from everyday demands. Arrangements for dependents and other obligations should be considered before admission.",
+          },
+          {
+            question:
+              "What should women ask about medication options before fentanyl addiction treatment in Scottsdale, AZ?",
+            answer:
+              "Women should ask whether medications for opioid use disorder, including buprenorphine or methadone, are available or can be coordinated with another provider. These medications are evidence-based treatments for opioid dependence. Desert Recovery Centers provides residential recovery care in Scottsdale, but specific medication services and withdrawal management arrangements should be confirmed directly.",
+          },
+        ],
+      },
+      map: {
+        variant: "gbp",
+        gbpLocationIndex: 1,
+        heading:
+          "Residential Fentanyl Addiction Treatment in Scottsdale, AZ – Local Service Coverage",
+        subtext:
+          "[Desert Recovery Centers](https://desertrecoverycenters.com/) provides residential fentanyl addiction recovery care in Scottsdale, AZ specifically for women seeking structured behavioral health support. Female clients stay within the recovery environment while addressing opioid use concerns and personal recovery needs. This women-focused residential setting offers dedicated treatment space for individuals in the Scottsdale area who may benefit from separation from familiar substance use triggers.",
+      },
+    },
+  },
+
+  // ─── Cocaine Addiction Treatment (November '26) ────────────────────
+
+  "/locations/phoenix-php-iop/cocaine-addiction-treatment": {
+    metaTitle: "Specialized Cocaine Addiction Treatment in Phoenix, AZ | DRC",
+    metaDescription:
+      "Desert Recovery Centers offers specialized cocaine addiction treatment in Phoenix, AZ through structured PHP and outpatient care. Call Now!",
+    copy: {
+      path: "/locations/phoenix-php-iop/cocaine-addiction-treatment",
+      hero: {
+        eyebrow: "Phoenix, AZ",
+        headline: "Specialized Cocaine Addiction Treatment in Phoenix, AZ",
+        subtext:
+          "Desert Recovery Centers provides specialized cocaine addiction treatment in Phoenix, AZ through PHP and outpatient programming for both men and women. Clients attend structured daytime treatment without staying overnight, allowing them to return home afterward. This non-residential approach supports individuals addressing stimulant use, recurring cravings, emotional concerns, and recovery challenges while maintaining connections to everyday responsibilities.",
+        image:
+          "/images/locations/php-iop/php-iop-game-room-1.jpg",
+      },
+      benefits: {
+        heading:
+          "Benefits of Specialized Cocaine Addiction Treatment in Phoenix, AZ at Desert Recovery Centers",
+        subheading: "Structured Support for Stimulant Recovery",
+        items: [
+          {
+            title: "Non-Residential Care for Men and Women",
+            text: "Desert Recovery Centers provides PHP and outpatient addiction programming for both men and women at the Phoenix location. Clients participate in scheduled treatment and return home afterward rather than staying overnight. This arrangement allows individuals whose clinical needs are appropriate for outpatient care to receive structured recovery support while maintaining their usual living arrangements.",
+          },
+          {
+            title: "Programming Options for Different Recovery Needs",
+            text: "Cocaine use concerns may involve cravings, disrupted sleep, emotional changes, and difficulties maintaining daily responsibilities. Desert Recovery Centers offers different outpatient programming options, including schedules that may involve approximately five to six hours daily, five days per week. Appropriate treatment intensity depends on individual clinical needs and current stability.",
+          },
+          {
+            title: "Continued Connection to Everyday Life",
+            text: "Specialized cocaine addiction treatment in Phoenix, AZ allows eligible clients to participate in structured behavioral health programming while continuing to live at home. Desert Recovery Centers provides a non-residential environment where individuals can address stimulant use patterns while remaining connected to family responsibilities, personal relationships, and community routines outside scheduled treatment hours.",
+          },
+        ],
+        image: "/images/conditions/cocaine-addiction-treatment-01.webp",
+        imageAlt:
+          "Counselor chatting with a mixed group around a kitchen island",
+      },
+      why: {
+        heading:
+          "Why Specialized Cocaine Addiction Treatment in Phoenix, AZ Matters",
+        subheading: "Understanding Stimulant Use and Recovery",
+        items: [
+          {
+            title: "Cocaine Use Can Affect Physical and Mental Health",
+            text: "Cocaine is a powerful stimulant that can increase heart rate and blood pressure while contributing to anxiety, sleep disruption, and other health concerns. Serious complications may include heart attack, stroke, or dangerous changes in behavior. Recognizing these risks is important when determining whether immediate medical evaluation or addiction treatment is needed.",
+          },
+          {
+            title: "Familiar Social Situations May Reinforce Stimulant Use",
+            text: "Parties, certain relationships, work-related pressures, and established routines can become associated with cocaine use. For individuals living throughout [Phoenix, AZ](https://www.phoenix.gov/), outpatient treatment can provide structured recovery support while they continue navigating familiar environments. Understanding personal triggers is important for addressing recurring stimulant use patterns.",
+          },
+          {
+            title: "Cravings and Emotional Changes Can Complicate Recovery",
+            text: "People reducing or stopping cocaine use may experience fatigue, low mood, sleep changes, or strong cravings. These symptoms can affect motivation and daily functioning. Severe depression, suicidal thoughts, chest pain, or other urgent symptoms require prompt medical attention rather than waiting for a routine outpatient treatment appointment.",
+          },
+        ],
+        image: "/images/conditions/cocaine-addiction-treatment-02.webp",
+        imageAlt:
+          "Client talking with a counselor who is taking notes",
+      },
+      faq: {
+        title:
+          "Frequently Asked Questions About Cocaine Addiction Treatment in Phoenix, AZ",
+        items: [
+          {
+            question:
+              "Can adults receive cocaine addiction treatment in Phoenix, AZ without entering residential care?",
+            answer:
+              "Yes. The Phoenix location provides PHP and outpatient addiction programming for men and women without overnight stays. Desert Recovery Centers offers specialized cocaine addiction treatment in Phoenix, AZ for individuals whose clinical needs are appropriate for non-residential care. Medical or psychiatric instability may require a more intensive treatment setting.",
+          },
+          {
+            question:
+              "Can outpatient cocaine treatment in Phoenix, AZ help someone experiencing recurring stimulant cravings?",
+            answer:
+              "Structured addiction treatment can help individuals address cocaine use patterns, recognize triggers, and work on recovery-related concerns. The appropriate level of care depends on craving severity, mental health symptoms, and personal circumstances. Desert Recovery Centers provides PHP and outpatient programming in Phoenix for eligible clients seeking non-residential behavioral health support.",
+          },
+          {
+            question:
+              "What if someone seeking cocaine addiction treatment in Phoenix, AZ experiences chest pain or severe anxiety?",
+            answer:
+              "Chest pain, severe agitation, confusion, or other concerning symptoms following cocaine use may require emergency medical evaluation. Individuals should not wait for a routine addiction appointment when serious symptoms occur. [Desert Recovery Centers](https://desertrecoverycenters.com/) provides outpatient addiction recovery care in Phoenix for clients whose medical and behavioral health needs are appropriate for that setting.",
+          },
+        ],
+      },
+      map: {
+        variant: "gbp",
+        gbpLocationIndex: 2,
+        heading:
+          "PHP and Outpatient Cocaine Addiction Treatment in Phoenix, AZ – Local Service Coverage",
+        subtext:
+          "Desert Recovery Centers provides outpatient cocaine addiction recovery care in Phoenix, AZ for men and women seeking structured support for stimulant use concerns. The Phoenix location offers PHP and outpatient programming without overnight accommodation, allowing eligible clients to return home after scheduled treatment. This non-residential approach supports recovery participation while maintaining connections to daily responsibilities and the wider Phoenix community.",
+      },
+    },
+  },
+
+  "/locations/glendale/cocaine-addiction-treatment": {
+    metaTitle: "Individualized Cocaine Addiction Treatment in Glendale, AZ | DRC",
+    metaDescription:
+      "Desert Recovery Centers offers individualized cocaine addiction treatment in Glendale, AZ through residential recovery care for men. Call Now!",
+    copy: {
+      path: "/locations/glendale/cocaine-addiction-treatment",
+      hero: {
+        eyebrow: "Glendale, AZ",
+        headline: "Individualized Cocaine Addiction Treatment in Glendale, AZ",
+        subtext:
+          "Desert Recovery Centers provides individualized cocaine addiction treatment in Glendale, AZ within a residential recovery center specifically for men. Male clients stay in a structured environment where they can focus on stimulant use patterns, cravings, and related behavioral health concerns. Residential care creates dedicated recovery space while temporarily reducing exposure to familiar substance use situations and competing everyday responsibilities.",
+        image:
+          "/images/glendale/Glendale-Gym.jpg",
+      },
+      benefits: {
+        heading:
+          "Benefits of Individualized Cocaine Addiction Treatment in Glendale, AZ at Desert Recovery Centers",
+        subheading: "Focused Residential Support for Men",
+        items: [
+          {
+            title: "Individual Attention to Stimulant Use Patterns",
+            text: "Desert Recovery Centers provides residential addiction recovery care where men can focus on their personal substance use history and behavioral health concerns. Cocaine-related challenges may involve cravings, disrupted routines, emotional changes, or recurring triggers. The residential environment creates dedicated space to address these concerns without managing every outside responsibility simultaneously.",
+          },
+          {
+            title: "A Consistent Residential Treatment Environment",
+            text: "Male clients stay within the Glendale recovery center rather than traveling between home and scheduled treatment each day. Desert Recovery Centers provides a structured setting where recovery remains a daily priority. This arrangement reduces repeated transitions and helps clients maintain consistent participation while temporarily stepping away from familiar substance use environments.",
+          },
+          {
+            title: "Care Designed for Men's Residential Recovery",
+            text: "Men receiving individualized cocaine addiction treatment in Glendale, AZ participate in a residential recovery setting specifically for male clients. Desert Recovery Centers provides dedicated treatment space where men can concentrate on behavioral health concerns, recovery-related challenges, and personal circumstances while reducing some of the distractions associated with ordinary routines.",
+          },
+        ],
+        image: "/images/conditions/cocaine-addiction-treatment-03.webp",
+        imageAlt:
+          "Male client doing a guided mindfulness exercise on a mat",
+      },
+      why: {
+        heading:
+          "Why Individualized Cocaine Addiction Treatment in Glendale, AZ Matters",
+        subheading: "Recognizing Stimulant Recovery Challenges",
+        items: [
+          {
+            title: "Repeated Cocaine Use Can Disrupt Daily Functioning",
+            text: "Cocaine use may contribute to sleep disturbances, mood changes, financial difficulties, relationship conflicts, and problems maintaining responsibilities. These effects can become more disruptive when substance use continues despite negative consequences. Professional assessment can help determine the appropriate level of care and identify additional medical or psychiatric concerns.",
+          },
+          {
+            // Source copy has "Glendale, AZ" as plain text here (no city link) — transcribed as given.
+            title: "Familiar Triggers Can Make Recovery Difficult",
+            text: "Certain social relationships, locations, and established routines may become associated with stimulant use. For men living in and around Glendale, AZ, residential treatment can provide temporary separation from some of these influences. This distance may create opportunities to focus on recovery without repeatedly encountering familiar substance use situations.",
+          },
+          {
+            title: "Stimulant Use Can Create Serious Health Risks",
+            text: "Cocaine can increase blood pressure and heart rate, sometimes contributing to heart attack, stroke, or other dangerous complications. Severe agitation, chest pain, or confusion following stimulant use requires urgent medical attention. Understanding these risks is important when deciding whether residential recovery care is appropriate or immediate medical stabilization is necessary.",
+          },
+        ],
+        image: "/images/conditions/cocaine-addiction-treatment-04.webp",
+        imageAlt:
+          "Two men talking over a game of pool in a residential game room",
+      },
+      faq: {
+        title:
+          "Frequently Asked Questions About Cocaine Addiction Treatment in Glendale, AZ",
+        items: [
+          {
+            question:
+              "Can men receive residential cocaine addiction treatment in Glendale, AZ after repeated relapse?",
+            answer:
+              "Yes, residential treatment may be appropriate when recurring cocaine use and familiar triggers make recovery difficult to maintain. Desert Recovery Centers provides individualized cocaine addiction treatment in Glendale, AZ within a residential setting specifically for men. Clinical assessment helps determine whether this environment matches the individual's medical and behavioral health needs.",
+          },
+          {
+            question:
+              "What should men expect from residential cocaine addiction treatment in Glendale, AZ?",
+            answer:
+              "Men should expect to stay within a structured recovery environment rather than return home after daytime programming. Desert Recovery Centers provides residential addiction care specifically for male clients in Glendale. Individual treatment needs vary, and prospective clients should discuss their substance use history, mental health concerns, and current stability before admission.",
+          },
+          {
+            question:
+              "Can residential cocaine treatment in Glendale, AZ address sleep problems and emotional changes?",
+            answer:
+              "Cocaine use and withdrawal may involve sleep disruption, fatigue, low mood, or changes in emotional functioning. These concerns deserve clinical assessment, particularly when symptoms become severe. Desert Recovery Centers provides men's residential addiction recovery care in Glendale, where treatment suitability depends on individual needs and any additional medical or psychiatric support required.",
+          },
+        ],
+      },
+      map: {
+        variant: "gbp",
+        gbpLocationIndex: 0,
+        heading:
+          "Residential Cocaine Addiction Treatment in Glendale, AZ – Local Service Coverage",
+        subtext:
+          "[Desert Recovery Centers](https://desertrecoverycenters.com/) provides residential cocaine addiction recovery care in Glendale, AZ specifically for men seeking structured support for stimulant use concerns. Male clients stay within the treatment environment while focusing on substance use patterns and behavioral health needs. This residential setting serves men in the Glendale area who may benefit from dedicated recovery space away from familiar triggers and competing responsibilities.",
+      },
+    },
+  },
+
+  "/locations/scottsdale/cocaine-addiction-treatment": {
+    metaTitle: "Supportive Cocaine Addiction Treatment in Scottsdale, AZ | DRC",
+    metaDescription:
+      "Desert Recovery Centers offers supportive cocaine addiction treatment in Scottsdale, AZ through residential recovery care for women. Call Now!",
+    copy: {
+      path: "/locations/scottsdale/cocaine-addiction-treatment",
+      hero: {
+        eyebrow: "Scottsdale, AZ",
+        headline: "Supportive Cocaine Addiction Treatment in Scottsdale, AZ",
+        subtext:
+          "Desert Recovery Centers provides supportive cocaine addiction treatment in Scottsdale, AZ within a residential recovery center specifically for women. Female clients stay in a structured setting where they can focus on stimulant use concerns, emotional well-being, and personal recovery challenges. Residential care provides dedicated treatment space while temporarily reducing exposure to familiar substance use environments and everyday pressures.",
+        image:
+          "/images/scottsdale/DRC-DRONE-SCOTTSDALE-08-01-2024-August-01-202400006-2.jpg",
+      },
+      benefits: {
+        heading:
+          "Benefits of Supportive Cocaine Addiction Treatment in Scottsdale, AZ at Desert Recovery Centers",
+        subheading: "Women-Focused Residential Recovery Support",
+        items: [
+          {
+            title: "A Recovery Environment Specifically for Women",
+            text: "Desert Recovery Centers provides residential addiction care specifically for women at the Scottsdale location. Female clients stay within the treatment environment instead of returning home after scheduled programming. This arrangement creates dedicated recovery space while temporarily reducing some household, professional, and social responsibilities that can compete with consistent treatment participation.",
+          },
+          {
+            title: "Attention to Emotional and Behavioral Concerns",
+            text: "Cocaine use may involve recurring cravings, emotional stress, disrupted sleep, and difficulties maintaining everyday routines. Desert Recovery Centers provides a residential setting where women can focus on individual substance use patterns and related behavioral health concerns. Appropriate clinical assessment helps identify additional needs that may affect treatment planning.",
+          },
+          {
+            title: "Greater Continuity During Residential Recovery",
+            text: "Women receiving supportive cocaine addiction treatment in Scottsdale, AZ remain within the recovery environment during care. This reduces daily transitions between home and treatment while allowing recovery to remain a consistent priority. Desert Recovery Centers provides dedicated space where clients can focus on behavioral health concerns without repeatedly returning to familiar substance use situations.",
+          },
+        ],
+        image: "/images/conditions/cocaine-addiction-treatment-06.webp",
+        imageAlt:
+          "Women taking a gentle yoga class in a bright studio",
+      },
+      why: {
+        heading:
+          "Why Supportive Cocaine Addiction Treatment in Scottsdale, AZ Matters",
+        subheading: "Understanding Women's Stimulant Recovery Needs",
+        items: [
+          {
+            title: "Stimulant Use Can Affect Emotional Well-Being",
+            text: "Cocaine use may contribute to anxiety, irritability, sleep disturbances, and changes in mood. Some individuals also experience fatigue or low mood when reducing or stopping stimulant use. These effects can influence relationships, work responsibilities, and daily functioning, making appropriate behavioral health assessment an important part of recovery planning.",
+          },
+          {
+            title: "Social Situations May Reinforce Cocaine Use",
+            text: "Certain gatherings, relationships, and established routines can become associated with stimulant use. For women living in and around [Scottsdale, AZ](https://www.scottsdaleaz.gov/), residential care may provide temporary distance from familiar triggers while creating dedicated space to examine substance use patterns and focus on recovery.",
+          },
+          {
+            title: "Physical Health Risks Should Not Be Overlooked",
+            text: "Cocaine can increase heart rate and blood pressure, potentially contributing to serious cardiovascular or neurological complications. Chest pain, severe confusion, or other concerning symptoms require immediate medical evaluation. Recognizing these risks is essential because some individuals may need emergency treatment or medical stabilization before entering residential addiction recovery care.",
+          },
+        ],
+        image: "/images/conditions/cocaine-addiction-treatment-05.webp",
+        imageAlt:
+          "Woman and a female counselor walking through a residential courtyard",
+      },
+      faq: {
+        title:
+          "Frequently Asked Questions About Cocaine Addiction Treatment in Scottsdale, AZ",
+        items: [
+          {
+            question:
+              "Is residential cocaine addiction treatment in Scottsdale, AZ available specifically for women?",
+            answer:
+              "Yes. The Scottsdale location provides residential addiction recovery care specifically for women. Female clients stay within the treatment environment during care. Desert Recovery Centers offers supportive cocaine addiction treatment in Scottsdale, AZ for women whose clinical needs are appropriate for structured residential recovery rather than daytime-only outpatient programming.",
+          },
+          {
+            question:
+              "Can women seek cocaine addiction treatment in Scottsdale, AZ when stress and social situations trigger substance use?",
+            answer:
+              "Yes. Stress, social influences, and familiar routines may contribute to recurring cocaine use. Residential treatment can provide temporary separation from some of these circumstances. [Desert Recovery Centers](https://desertrecoverycenters.com/) provides a women-only residential recovery setting in Scottsdale where eligible clients can focus on individual substance use concerns and behavioral health needs.",
+          },
+          {
+            question:
+              "What should women prepare before entering residential cocaine addiction treatment in Scottsdale, AZ?",
+            answer:
+              "Women should gather information about substance use history, medications, medical conditions, previous treatment, and current mental health symptoms. Practical arrangements for work, caregiving, and other responsibilities may also be necessary. Desert Recovery Centers provides residential recovery care for women in Scottsdale, with admission suitability depending on individual clinical needs.",
+          },
+        ],
+      },
+      map: {
+        variant: "gbp",
+        gbpLocationIndex: 1,
+        heading:
+          "Residential Cocaine Addiction Treatment in Scottsdale, AZ – Local Service Coverage",
+        subtext:
+          "Desert Recovery Centers provides residential cocaine addiction recovery care in Scottsdale, AZ specifically for women seeking structured behavioral health support. Female clients stay within the recovery environment while addressing stimulant use concerns and personal recovery needs. This women-focused residential setting offers dedicated treatment space for individuals in the Scottsdale area who may benefit from temporary separation from familiar substance use triggers.",
+      },
+    },
+  },
+
+  // ─── Meth Addiction Treatment (November '26) ───────────────────────
+
+  "/locations/phoenix-php-iop/meth-addiction-treatment": {
+    metaTitle: "Comprehensive Meth Addiction Treatment in Phoenix, AZ | DRC",
+    metaDescription:
+      "Desert Recovery Centers offers comprehensive meth addiction treatment in Phoenix, AZ through PHP and outpatient recovery care. Call Now!",
+    copy: {
+      path: "/locations/phoenix-php-iop/meth-addiction-treatment",
+      hero: {
+        eyebrow: "Phoenix, AZ",
+        headline: "Comprehensive Meth Addiction Treatment in Phoenix, AZ",
+        subtext:
+          "Desert Recovery Centers provides comprehensive meth addiction treatment in Phoenix, AZ through PHP and outpatient programming for both men and women. Clients attend structured daytime care without staying overnight, allowing them to return home afterward. This approach supports individuals addressing methamphetamine use, stimulant cravings, and related behavioral health concerns while maintaining connections to everyday responsibilities when outpatient care is clinically appropriate.",
+        image:
+          "/images/locations/php-iop/php-iop-classroom-2.jpg",
+      },
+      benefits: {
+        heading:
+          "Benefits of Comprehensive Meth Addiction Treatment in Phoenix, AZ at Desert Recovery Centers",
+        subheading: "Structured Outpatient Support for Recovery",
+        items: [
+          {
+            title: "Daytime Programming for Men and Women",
+            text: "Desert Recovery Centers provides PHP and outpatient addiction recovery care for both men and women at the Phoenix location. Clients participate in scheduled treatment and return home afterward rather than staying overnight. This arrangement supports eligible individuals seeking structured behavioral health care while continuing to live within their usual communities.",
+          },
+          {
+            title: "Different Program Options for Individual Needs",
+            text: "Methamphetamine use concerns can involve recurring cravings, disrupted sleep, emotional changes, and difficulties maintaining daily responsibilities. Desert Recovery Centers offers different outpatient programming options, including schedules that may involve approximately five to six hours daily, five days per week. Appropriate placement depends on individual clinical needs and current medical or psychiatric stability.",
+          },
+          {
+            title: "Recovery Support Connected to Daily Life",
+            text: "Comprehensive meth addiction treatment in Phoenix, AZ allows eligible clients to participate in structured addiction programming while continuing to live at home. Desert Recovery Centers provides a non-residential treatment environment where individuals can address stimulant use patterns while remaining connected to family responsibilities, personal relationships, and community routines outside scheduled programming.",
+          },
+        ],
+        image: "/images/conditions/meth-addiction-treatment-02.webp",
+        imageAlt:
+          "Coach leading a mixed group in outdoor stretching with mountains behind",
+      },
+      why: {
+        heading:
+          "Why Comprehensive Meth Addiction Treatment in Phoenix, AZ Matters",
+        subheading: "Addressing Methamphetamine Recovery Challenges",
+        items: [
+          {
+            title: "Methamphetamine Use Can Affect Physical and Mental Health",
+            text: "Methamphetamine is a powerful stimulant that can contribute to sleep disruption, anxiety, elevated heart rate, and changes in behavior. Prolonged or heavy use may also be associated with paranoia, psychosis, and serious cardiovascular complications. Recognizing these risks is important when determining whether outpatient treatment or more intensive medical care is needed.",
+          },
+          {
+            title: "Everyday Triggers Can Influence Continued Stimulant Use",
+            text: "Stressful routines, familiar relationships, and environments associated with methamphetamine use may complicate recovery. For individuals living throughout [Phoenix, AZ](https://www.phoenix.gov/), outpatient programming can provide structured recovery support while they continue navigating their usual surroundings. Identifying personal triggers and high-risk situations remains an important consideration.",
+          },
+          {
+            title: "Emotional Changes May Require Additional Clinical Attention",
+            text: "People reducing or stopping methamphetamine use may experience fatigue, sleep changes, depression, or strong cravings. Some individuals also experience severe paranoia or psychotic symptoms that require urgent assessment. Appropriate treatment planning should account for these concerns because significant psychiatric instability may make routine outpatient participation unsuitable.",
+          },
+        ],
+        image: "/images/conditions/meth-addiction-treatment-01.webp",
+        imageAlt:
+          "Male client in a one-on-one session with a clinician",
+      },
+      faq: {
+        title:
+          "Frequently Asked Questions About Meth Addiction Treatment in Phoenix, AZ",
+        items: [
+          {
+            question:
+              "Can adults receive meth addiction treatment in Phoenix, AZ without staying overnight?",
+            answer:
+              "Yes. The Phoenix location provides PHP and outpatient addiction programming for both men and women without overnight accommodation. Desert Recovery Centers offers comprehensive meth addiction treatment in Phoenix, AZ for individuals whose medical and behavioral health needs are appropriate for non-residential care. Severe psychiatric symptoms or medical instability may require a higher level of treatment.",
+          },
+          {
+            question:
+              "How can outpatient methamphetamine treatment in Phoenix, AZ address recurring stimulant cravings?",
+            answer:
+              "Structured addiction treatment can provide opportunities to examine substance use patterns, identify triggers, and address recovery-related concerns. The appropriate treatment approach depends on individual symptoms and circumstances. Desert Recovery Centers provides PHP and outpatient programming in Phoenix for eligible clients who can participate safely while continuing to live at home.",
+          },
+          {
+            question:
+              "What if someone seeking meth addiction treatment in Phoenix, AZ experiences paranoia or hallucinations?",
+            answer:
+              "Paranoia, hallucinations, severe agitation, or confusion following methamphetamine use may require urgent psychiatric or medical evaluation. Immediate safety concerns should be addressed through emergency services rather than routine outpatient appointments. Desert Recovery Centers provides non-residential addiction care in Phoenix for individuals whose clinical stability is appropriate for PHP or outpatient programming.",
+          },
+        ],
+      },
+      map: {
+        variant: "gbp",
+        gbpLocationIndex: 2,
+        heading:
+          "PHP and Outpatient Meth Addiction Treatment in Phoenix, AZ – Local Service Coverage",
+        subtext:
+          "[Desert Recovery Centers](https://desertrecoverycenters.com/) provides outpatient methamphetamine addiction recovery care in Phoenix, AZ for men and women seeking structured support for stimulant use concerns. The Phoenix location offers PHP and outpatient programming without overnight stays, allowing eligible clients to return home after treatment. This non-residential approach supports recovery participation while maintaining connections to everyday responsibilities throughout the Phoenix community.",
+      },
+    },
+  },
+
+  // ─── November '26 — image plan ─────────────────────────────────────
+  // Dedicated sets (opioids-heroin, fentanyl-addiction, cocaine-addiction,
+  // meth-addiction -treatment-NN.webp) arrived 2026-11-12. Per page as
+  // hero / benefits / why. Glendale uses men-only frames, Scottsdale
+  // women-only frames, and no frame repeats within a city. Hub cards:
+  // opioids-07, fentanyl-03, cocaine-07, meth-03 (none on their own pages).
+  //
+  //  Phoenix (php-iop)
+  //   opioids-heroin   php-iop-therapy-office-2 / opioids-01  / opioids-02
+  //   fentanyl         php-iop-medical-room-1   / fentanyl-02 / fentanyl-01
+  //   cocaine          php-iop-game-room-1      / cocaine-01  / cocaine-02
+  //   meth             php-iop-classroom-2      / meth-02     / meth-01
+  //  Glendale
+  //   opioids-heroin   Glendale-Kitchen         / opioids-04  / opioids-03
+  //   fentanyl         Glendale-Room-1          / fentanyl-04 / fentanyl-07
+  //   cocaine          Glendale-Gym             / cocaine-03  / cocaine-04
+  //  Scottsdale
+  //   opioids-heroin   DRC-MASSAGE-ROOM         / opioids-06  / opioids-05
+  //   fentanyl         DRC-GYM                  / fentanyl-05 / fentanyl-06
+  //   cocaine          DRC-DRONE-...-00006      / cocaine-06  / cocaine-05
+
 };
