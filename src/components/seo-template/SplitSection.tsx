@@ -31,7 +31,9 @@ export default function SplitSection({
   background,
 }: SplitSectionProps) {
   return (
-    <section className={`py-20 md:py-28 ${background ? "bg-cream" : "bg-white"}`}>
+    // overflow-x-clip: ScrollReveal starts the image 40px off to the side until
+    // it scrolls into view, which made phones and tablets scroll sideways.
+    <section className={`py-20 md:py-28 overflow-x-clip ${background ? "bg-cream" : "bg-white"}`}>
       <div className="max-w-container mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {image && (

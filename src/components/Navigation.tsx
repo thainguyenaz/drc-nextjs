@@ -109,9 +109,11 @@ export default function Navigation() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-md">
-      <div className="max-w-container mx-auto px-6 flex items-center justify-between h-14">
+      {/* Wider than max-w-container: logo + 10 links + CTAs need ~1390px, more
+          than the 1200px page column, so the row gets up to 1440px. */}
+      <div className="max-w-[1440px] mx-auto px-6 flex items-center justify-between h-14">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3 flex-shrink-0 mr-8">
+        <Link href="/" className="flex items-center gap-3 flex-shrink-0 mr-6">
           <Image
             src="/images/branding/drc-logo-black.png"
             alt="Desert Recovery Centers logo, luxury addiction and mental health treatment in Arizona"
@@ -123,7 +125,7 @@ export default function Navigation() {
         </Link>
 
         {/* Desktop Nav */}
-        <div className="hidden lg:flex items-center gap-5">
+        <div className="hidden xl:flex items-center gap-3.5 2xl:gap-5">
           {navLinks.map((link) => (
             <div
               key={link.label}
@@ -133,7 +135,7 @@ export default function Navigation() {
             >
               <Link
                 href={link.href}
-                className="text-sm font-medium transition-colors py-6 block text-gray-900 hover:text-gold"
+                className="text-sm font-medium whitespace-nowrap transition-colors py-6 block text-gray-900 hover:text-gold"
               >
                 {link.label}
               </Link>
@@ -177,16 +179,16 @@ export default function Navigation() {
         </div>
 
         {/* Desktop CTA */}
-        <div className="hidden lg:flex items-center gap-4 flex-shrink-0 ml-8">
+        <div className="hidden xl:flex items-center gap-4 flex-shrink-0 ml-6">
           <a
             href="tel:+16233050496"
-            className="font-semibold text-sm transition-colors text-gray-900"
+            className="hidden 2xl:inline font-semibold text-sm whitespace-nowrap transition-colors text-gray-900"
           >
             (623) 305-0496
           </a>
           <Link
             href="/insurance"
-            className="bg-gold hover:bg-gold-dark text-white font-semibold text-sm px-5 py-2.5 rounded-xl transition-colors"
+            className="bg-gold hover:bg-gold-dark text-white font-semibold text-sm whitespace-nowrap px-5 py-2.5 rounded-xl transition-colors"
           >
             Verify Insurance
           </Link>
@@ -195,7 +197,7 @@ export default function Navigation() {
         {/* Mobile Hamburger */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="lg:hidden p-2 text-gray-900"
+          className="xl:hidden p-2 text-gray-900"
           aria-label={mobileOpen ? "Close menu" : "Open menu"}
         >
           <div className="space-y-1.5">
@@ -210,7 +212,7 @@ export default function Navigation() {
       <div
         ref={mobileMenu.ref}
         style={mobileMenu.style}
-        className="lg:hidden bg-forest border-t border-white/10 transition-all duration-300 ease-out"
+        className="xl:hidden bg-forest border-t border-white/10 transition-all duration-300 ease-out"
       >
         <div className="px-6 py-6 space-y-4">
           {navLinks.map((link) => (

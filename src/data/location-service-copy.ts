@@ -3554,9 +3554,9 @@ export const locationServiceCopy: Record<string, LocationServiceCopy> = {
             text: "Cocaine use may contribute to sleep disturbances, mood changes, financial difficulties, relationship conflicts, and problems maintaining responsibilities. These effects can become more disruptive when substance use continues despite negative consequences. Professional assessment can help determine the appropriate level of care and identify additional medical or psychiatric concerns.",
           },
           {
-            // Source copy has "Glendale, AZ" as plain text here (no city link) — transcribed as given.
+            // Source copy omitted the city link here; added per QA to match the other Glendale pages.
             title: "Familiar Triggers Can Make Recovery Difficult",
-            text: "Certain social relationships, locations, and established routines may become associated with stimulant use. For men living in and around Glendale, AZ, residential treatment can provide temporary separation from some of these influences. This distance may create opportunities to focus on recovery without repeatedly encountering familiar substance use situations.",
+            text: "Certain social relationships, locations, and established routines may become associated with stimulant use. For men living in and around [Glendale, AZ](https://www.glendaleaz.com/), residential treatment can provide temporary separation from some of these influences. This distance may create opportunities to focus on recovery without repeatedly encountering familiar substance use situations.",
           },
           {
             title: "Stimulant Use Can Create Serious Health Risks",

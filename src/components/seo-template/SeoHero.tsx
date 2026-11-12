@@ -22,7 +22,10 @@ const DEFAULT_TAGLINE =
 
 export default function SeoHero({ hero }: { hero: HeroCopy }) {
   return (
-    <section className="relative h-screen min-h-[700px] flex items-end overflow-hidden">
+    // min-h, not h: on short phone screens the copy is taller than the
+    // viewport, and a fixed height pushed the H1 up under the nav. The top
+    // padding clears the fixed nav plus the absolutely positioned breadcrumb.
+    <section className="relative min-h-[max(100vh,700px)] flex items-end overflow-hidden pt-44 md:pt-40">
       {/* Background */}
       <div className="absolute inset-0 bg-forest">
         <div className="absolute inset-0">
