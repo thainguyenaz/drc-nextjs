@@ -9,11 +9,13 @@ export default function MedicalReview({
   credentials,
   reviewerUrl,
   lastUpdated,
+  label = "Medically Reviewed by",
 }: {
   reviewer: string;
   credentials: string;
   reviewerUrl: string;
   lastUpdated?: string;
+  label?: string;
 }) {
   return (
     <div className="flex items-start gap-3 bg-blue-50 border border-blue-200 rounded-lg px-5 py-4 my-8">
@@ -33,7 +35,7 @@ export default function MedicalReview({
       </svg>
       <div className="text-sm leading-relaxed">
         <p className="m-0">
-          Medically Reviewed by{" "}
+          {label}{" "}
           <Link
             href={reviewerUrl}
             className="font-semibold text-blue-700 hover:underline"
