@@ -100,9 +100,6 @@ export const videoData: Record<string, VideoEntry[]> = {
   "/mental-health/ocd-treatment/": [
     { youtubeId: "W8WKhAAhPM0", title: "How Is Treatment Individualized Rather Than One Size Fits All?", description: "How Desert Recovery Centers creates individualized treatment plans for OCD and co-occurring conditions.", uploadDate: "2025-03-01T00:00:00+00:00" },
   ],
-  "/mental-health/personality-disorder-treatment/": [
-    { youtubeId: "Q05B4qCyK-w", title: "What to Say to Someone Struggling With a Mental Health Disorder", description: "Guidance for supporting someone with a personality disorder or mental health condition.", uploadDate: "2024-10-01T00:00:00+00:00" },
-  ],
   "/mental-health/schizophrenia-treatment/": [
     { youtubeId: "rH2AgymLCh8", title: "Can Alcohol Consumption Lead to Psychosis?", description: "The link between alcohol use and psychosis, and treatment approaches for co-occurring psychotic disorders.", uploadDate: "2025-02-01T00:00:00+00:00" },
   ],
@@ -156,9 +153,6 @@ export const videoData: Record<string, VideoEntry[]> = {
     { youtubeId: "CrJz9g0ssZQ", title: "NeuroStar TMS Therapy Patient Experience", description: "A NeuroStar TMS patient shares their experience with the therapy and how it changed their life. Video courtesy of NeuroStar. Individual results may vary; featured patients are not necessarily patients of Desert Recovery Centers.", uploadDate: "2021-04-26T00:00:00+00:00" },
     { youtubeId: "rcj4Tzbc34g", title: "NeuroStar TMS Therapy Results, Patient Testimonial", description: "Hear how NeuroStar TMS therapy helped a patient when medication alone was not enough. Video courtesy of NeuroStar. Individual results may vary; featured patients are not necessarily patients of Desert Recovery Centers.", uploadDate: "2021-08-05T00:00:00+00:00" },
     { youtubeId: "1Bed8b5DQBQ", title: "Life After NeuroStar TMS Therapy, Patient Experience", description: "A NeuroStar TMS patient describes their experience with treatment and the impact on their daily life. Video courtesy of NeuroStar. Individual results may vary; featured patients are not necessarily patients of Desert Recovery Centers.", uploadDate: "2021-04-24T00:00:00+00:00" },
-  ],
-  "/treatments/softwave-therapy/": [
-    { youtubeId: "PkH82oa6HkA", title: "How Does SoftWave Therapy Work for Addiction?", description: "SoftWave tissue regeneration therapy for addiction recovery support.", uploadDate: "2024-10-01T00:00:00+00:00" },
   ],
   "/treatments/bridgework/": [
     { youtubeId: "xlS4ux4JNT8", title: "What Is BridgeWork Therapy? | Desert Recovery Centers", description: "BridgeWork therapy connects what clients learn in session to real life, with a coach walking clients through the skills at Desert Recovery Centers in Arizona.", uploadDate: "2026-07-15T18:11:57+00:00" },
