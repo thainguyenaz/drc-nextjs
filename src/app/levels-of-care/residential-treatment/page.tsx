@@ -259,6 +259,14 @@ export default function ResidentialTreatmentPage() {
               This balance of structure and flexibility is designed to help
               you develop healthy routines while giving you space to process
               what you are learning in therapy.
+              To see how many hours of therapy that adds up to each week, read{" "}
+              <Link
+                href="/levels-of-care/residential-treatment/therapy-hours"
+                className="text-gold hover:text-gold-dark font-semibold"
+              >
+                our residential therapy hours
+              </Link>
+              .
             </p>
             </div>
             <div className="w-full md:w-[380px] md:flex-shrink-0">

@@ -199,6 +199,16 @@ export default function PHPPage() {
                 </div>
               ))}
             </div>
+            <p className="text-gray-600 text-sm leading-relaxed mt-6">
+              Wondering how residential compares hour for hour? See{" "}
+              <Link
+                href="/levels-of-care/residential-treatment/therapy-hours"
+                className="text-gold hover:text-gold-dark font-semibold"
+              >
+                our residential therapy hours
+              </Link>
+              .
+            </p>
           </div>
         </div>
       </section>

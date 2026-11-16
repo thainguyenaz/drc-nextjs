@@ -178,6 +178,14 @@ export default function LevelsOfCarePage() {
                 residential and outpatient stages within a single treatment
                 system, with the same DRC clinical team guiding your care
                 across every level beyond detox.
+                For residential care, we publish{" "}
+                <Link
+                  href="/levels-of-care/residential-treatment/therapy-hours"
+                  className="text-gold hover:text-gold-dark font-semibold"
+                >
+                  the therapy hours we schedule each week
+                </Link>{" "}
+                next to the national minimums.
               </p>
               <p className="text-gray-600 leading-relaxed text-lg">
                 The right level of care for you depends on your specific

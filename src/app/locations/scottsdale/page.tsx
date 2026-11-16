@@ -100,6 +100,14 @@ export default function ScottsdaleLocationPage() {
             </p>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
               Licensed psychologists, a psychiatrist, and a dedicated nursing staff deliver evidence-based treatment for women in a residential setting designed for comfort, privacy, and deep personal transformation. Every treatment plan is individualized. Every client receives the attention they deserve.
+              We also publish{" "}
+              <Link
+                href="/levels-of-care/residential-treatment/therapy-hours"
+                className="text-gold hover:text-gold-dark font-semibold"
+              >
+                the hours of therapy scheduled in our residential program each week
+              </Link>
+              .
             </p>
             <p className="text-gray-600 leading-relaxed text-lg">
               If you or someone you love is ready for help, our Scottsdale facility offers the clinical excellence of a top-tier treatment program in a luxury environment you have to see to believe.
