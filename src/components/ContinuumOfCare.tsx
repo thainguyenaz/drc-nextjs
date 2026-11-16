@@ -13,7 +13,7 @@ const phases = [
   {
     step: "02",
     title: "30-Day Residential Treatment (RTC)",
-    desc: "24/7 immersive care in a luxury 10-bed facility with doctoral-level clinicians and Bridge Work individual therapy.",
+    desc: "24/7 immersive care in a luxury 10-bed facility with doctoral-level clinicians, individual therapy and BridgeWork™ coaching.",
     href: "/levels-of-care/residential-treatment",
   },
   {
@@ -25,7 +25,7 @@ const phases = [
   {
     step: "04",
     title: "Intensive Outpatient Program (IOP)",
-    desc: "4 to 8 weeks stepping down from 5 to 3 days per week. Bridge Work continues with group therapy, relapse prevention, and peer support.",
+    desc: "4 to 8 weeks stepping down from 5 to 3 days per week. Treatment continues with group therapy, relapse prevention, and peer support.",
     href: "/locations/phoenix-php-iop",
   },
   {
