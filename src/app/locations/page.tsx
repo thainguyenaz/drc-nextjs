@@ -31,7 +31,7 @@ const locations = [
     amenities: ["Basketball Court", "Tennis Court", "Pool", "Gym", "Massage Room", "Gourmet Kitchen"],
     image: "/images/glendale/Glendale-Front.jpg",
     href: "/locations/glendale",
-    videoId: "00ZDcQjXoE8",
+    videoId: "m0tguw4EjWI",
   },
   {
     name: "Scottsdale",

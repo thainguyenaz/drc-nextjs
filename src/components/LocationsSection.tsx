@@ -6,7 +6,7 @@ import { siteData } from "@/lib/site-data";
 import VideoLightbox from "./VideoLightbox";
 
 const locationVideos: Record<string, string> = {
-  Glendale: "00ZDcQjXoE8",
+  Glendale: "m0tguw4EjWI",
   Scottsdale: "7qvyphmKNxg",
   Phoenix: "rMkEYhoW-kE",
 };
