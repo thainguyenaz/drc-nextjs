@@ -108,7 +108,7 @@ export default function GlendaleLocationPage() {
       </section>
 
       <FacilityVideoSection
-        youtubeId="00ZDcQjXoE8"
+        youtubeId="m0tguw4EjWI"
         title="Desert Recovery Centers Glendale Facility Tour"
         videoTitle="Glendale Recovery Center Tour"
         location="Glendale, Arizona"
@@ -178,7 +178,7 @@ export default function GlendaleLocationPage() {
             </div>
             <div>
               <h3 className="font-display text-xl text-forest font-semibold mb-4">Take a Virtual Tour</h3>
-              <VideoLightbox videoId="00ZDcQjXoE8">
+              <VideoLightbox videoId="m0tguw4EjWI">
                 <div className="relative aspect-video rounded-xl overflow-hidden shadow-xl">
                   <Image
                     src="/images/glendale/Glendale-Front.jpg"

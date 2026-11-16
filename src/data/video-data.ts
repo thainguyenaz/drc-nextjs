@@ -48,7 +48,7 @@ export const videoData: Record<string, VideoEntry[]> = {
 
   // ── LOCATION PAGES — 1 facility tour each ──
   "/locations/glendale/": [
-    { youtubeId: "00ZDcQjXoE8", title: "Desert Recovery Centers Glendale Facility Tour", description: "Tour the Desert Recovery Centers Glendale Arizona luxury residential treatment facility.", uploadDate: "2024-10-01T00:00:00+00:00" },
+    { youtubeId: "m0tguw4EjWI", title: "Luxury Addiction Recovery and Mental Health Center - Desert Recovery Centers - Glendale", description: "A look inside the Desert Recovery Centers residential treatment facility in Glendale, Arizona.", uploadDate: "2026-10-30" },
     { youtubeId: "vdI4QnsxAJQ", title: "Dylan's Story: Recovery After Grief, Homelessness, and Addiction | Desert Recovery Centers", description: "From living in his car to helping others. This is Dylan's story. Connection is the opposite of addiction.", uploadDate: "2026-07-15T00:00:00-07:00" },
     { youtubeId: "5OMQUlfAcKk", title: "A Veteran's Recovery: Chris Herrera's Story | Desert Recovery Centers", description: "A service injury. Ten years on pills. Profound loss. This is veteran Chris Herrera's story of rebuilding his life.", uploadDate: "2026-07-15T00:00:00-07:00" },
   ],
