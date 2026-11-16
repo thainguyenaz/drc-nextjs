@@ -99,6 +99,14 @@ export default function GlendaleLocationPage() {
             </p>
             <p className="text-gray-600 leading-relaxed text-lg mb-4">
               What you&apos;ll find here is a program built on clinical depth, not marketing promises. Licensed psychologists, a psychiatrist, and registered nurses deliver evidence-based treatment around the clock, in a luxury home-like setting with amenities that rival a resort. Basketball court, tennis court, pool, massage room, gourmet meals, because we believe that healing the whole person requires treating the whole person.
+              Before you call, you can see{" "}
+              <Link
+                href="/levels-of-care/residential-treatment/therapy-hours"
+                className="text-gold hover:text-gold-dark font-semibold"
+              >
+                how many hours of therapy our residential clients are scheduled for each week
+              </Link>
+              .
             </p>
             <p className="text-gray-600 leading-relaxed text-lg">
               Our Glendale center serves the entire West Valley, Peoria, Surprise, Avondale, Goodyear, Buckeye, and beyond. If you or someone you love is ready for treatment that actually works, this is where it starts.
