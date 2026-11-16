@@ -5,7 +5,8 @@ import PageHero from "@/components/PageHero";
 import Breadcrumb from "@/components/Breadcrumb";
 import SchemaScript from "@/components/SchemaScript";
 import Footer from "@/components/Footer";
-import { buildMetadata } from "@/lib/seo";
+import MedicalReview from "@/components/MedicalReview";
+import { buildMetadata, DRC_REVIEWERS } from "@/lib/seo";
 import { getBreadcrumbSchema } from "@/lib/schema";
 import { getBreadcrumbsFromPathname } from "@/lib/breadcrumbs";
 
@@ -18,6 +19,10 @@ const PAGE_URL = `${SITE_URL}${PATH}`;
 // publish so redeploys do not move it.
 const PAGE_DATE = "2026-11-15";
 const PAGE_DATE_DISPLAY = "Nov 15, 2026";
+
+// Clinical review: Dr. An Nguyen agreed to be listed as reviewer, relayed by
+// Thai Nguyen on 2026-11-15.
+const REVIEW_DATE = "2026-11-15";
 
 const TITLE =
   "How Many Hours of Therapy in Residential Treatment? | Desert Recovery Centers";
@@ -79,6 +84,8 @@ const webPageSchema = {
   description: DESCRIPTION,
   datePublished: PAGE_DATE,
   dateModified: PAGE_DATE,
+  lastReviewed: REVIEW_DATE,
+  reviewedBy: DRC_REVIEWERS.nguyen,
   publisher: { "@id": `${SITE_URL}/#organization` },
   citation: Object.values(SOURCES),
 };
@@ -446,6 +453,12 @@ export default function ResidentialTherapyHoursPage() {
       {/* Footnote */}
       <section className="py-8 bg-white">
         <div className="max-w-3xl mx-auto px-6">
+          <MedicalReview
+            reviewer="Dr. An Nguyen"
+            credentials="Licensed Clinical Psychologist, Clinical Director"
+            reviewerUrl="/team/dr-an-nguyen"
+            label="Clinically Reviewed by"
+          />
           <p className="text-xs text-gray-500 leading-relaxed">
             Hours are scheduled group hours per client from our scheduling
             system for the week of Nov 3 to 9, 2026. Residential totals ran
