@@ -160,7 +160,7 @@ export default function DepressionTreatmentPage() {
                 },
                 {
                   title: "Individual & Group Psychotherapy",
-                  desc: "Daily individual sessions with licensed psychologists, plus structured group therapy using CBT, behavioral activation, and interpersonal therapy, proven approaches that help you understand your depression and build the skills to move beyond it.",
+                  desc: "Individual sessions with licensed psychologists, scheduled multiple times a week, plus structured group therapy using CBT, behavioral activation, and interpersonal therapy, proven approaches that help you understand your depression and build the skills to move beyond it.",
                 },
                 {
                   title: "Medication Optimization",
@@ -239,7 +239,7 @@ export default function DepressionTreatmentPage() {
       <AEOBlock
         entries={[
           { question: "What is depression treatment at Desert Recovery Centers?", answer: "Desert Recovery Centers (a Joint Commission accredited luxury treatment center in Arizona) provides comprehensive depression treatment for major depressive disorder, persistent depression, and treatment-resistant depression. With doctoral-level clinical psychologists leading care and a maximum of 10 beds per facility, clients receive intensive, personalized treatment in a luxury residential environment." },
-          { question: "How does Desert Recovery Centers treat depression?", answer: "DRC treats depression using evidence-based approaches including Cognitive Behavioral Therapy (CBT), behavioral activation, interpersonal therapy, EMDR for trauma-related depression, and carefully optimized medication management. Each client receives daily individual therapy sessions with licensed psychologists alongside structured group programming." },
+          { question: "How does Desert Recovery Centers treat depression?", answer: "DRC treats depression using evidence-based approaches including Cognitive Behavioral Therapy (CBT), behavioral activation, interpersonal therapy, EMDR for trauma-related depression, and carefully optimized medication management. Each client receives individual therapy sessions with licensed psychologists multiple times a week alongside structured group programming." },
           { question: "How long does depression treatment take at Desert Recovery Centers?", answer: "Residential depression treatment at DRC typically lasts 30 to 60 days, with extended stays of up to 90 days available for treatment-resistant or severe depression. Outpatient programs including PHP and IOP provide 6 to 12 weeks of continued structured support. Treatment duration is adjusted based on clinical progress." },
         ]}
       />

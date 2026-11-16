@@ -4,7 +4,7 @@ import { useScrollReveal } from "@/lib/useScrollReveal";
 import Image from "next/image";
 
 const includes = [
-  "Brief structured sessions between formal therapy",
+  "Brief coaching between formal therapy sessions",
   "Focused on accountability, psychoeducation, and real-life application of clinical skills",
   "Reinforcement of CBT, DBT, trauma, coping skills, and recovery strategies",
 ];
@@ -54,7 +54,7 @@ export default function BridgeWork() {
             <p className="text-white/70 text-sm leading-relaxed mb-8">
               Developed in-house by our clinical team, BridgeWork™ fills one of the most
               overlooked gaps in residential care: the space between insight and action.
-              This program offers 1–2 additional focused sessions per week with a therapist
+              This program offers in-the-moment skill coaching with a therapist,
               under the direction of our clinical psychologists, designed to help clients
               apply therapeutic tools in real time.
             </p>

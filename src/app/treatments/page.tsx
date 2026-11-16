@@ -68,7 +68,7 @@ const therapies = [
   {
     name: "BridgeWork™",
     href: "/treatments/bridgework",
-    description: "Our proprietary clinical psychologist-led skill integration program. Brief structured sessions that bridge the gap between therapeutic insight and real-world application.",
+    description: "Our proprietary clinical psychologist-led skill integration program. Brief clinician coaching that bridges the gap between therapeutic insight and real-world application.",
   },
 ];
 

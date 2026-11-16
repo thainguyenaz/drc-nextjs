@@ -424,7 +424,7 @@ export default function DetoxPage() {
                 },
                 {
                   title: "BridgeWork™ Skill Integration Program",
-                  desc: "BridgeWork is a proprietary clinician-led program developed in-house at Desert Recovery Centers. It provides 1 to 2 additional focused sessions per week to help clients practice and internalize CBT, DBT, trauma processing, and coping skills under real-world pressure.",
+                  desc: "BridgeWork is a proprietary clinician-led program developed in-house at Desert Recovery Centers. It provides in-the-moment coaching by a clinician to help clients practice and internalize CBT, DBT, trauma processing, and coping skills under real-world pressure.",
                 },
                 {
                   title: "Coordinated Detox-to-Residential Handoff",
