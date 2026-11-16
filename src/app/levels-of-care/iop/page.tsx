@@ -279,7 +279,6 @@ export default function IOPPage() {
                 "Compatible with part-time or full-time employment, school enrollment, and family caregiving",
                 "Clients can attend from home, sober living, or any stable residential situation in the Phoenix metro area",
                 "Step-down frequency is available: sessions may be reduced from 5 days to 3 days per week as you progress",
-                "Telehealth options may be available for certain sessions — ask our admissions team for details",
               ].map((item, i) => (
                 <div
                   key={i}
