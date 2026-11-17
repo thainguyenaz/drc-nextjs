@@ -51,7 +51,7 @@ export default function OurTeamPage() {
       <PersonSchema
         slug="avery-booth"
         name="Avery Booth"
-        jobTitle="Psychiatric Nurse Practitioner"
+        jobTitle="Psychiatric Nurse Practitioner, PMHNP"
         image="/images/team/Avery-Booth.jpg"
         description="Psychiatric Nurse Practitioner at Desert Recovery Centers."
       />

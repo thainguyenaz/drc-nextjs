@@ -134,7 +134,7 @@ export const teamMembers: TeamMember[] = [
   {
     slug: "avery-booth",
     name: "Avery Booth",
-    jobTitle: "Psychiatric Nurse Practitioner",
+    jobTitle: "Psychiatric Nurse Practitioner, PMHNP",
     // Title and credential per Thai Nguyen, 2026-11-16. Arizona Board of
     // Nursing license verification still pending. PLACEHOLDER BIO pending
     // Avery's own bio: no experience, education, or certification claims
