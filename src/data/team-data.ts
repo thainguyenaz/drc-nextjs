@@ -135,13 +135,14 @@ export const teamMembers: TeamMember[] = [
     slug: "avery-booth",
     name: "Avery Booth",
     jobTitle: "Psychiatric Nurse Practitioner, PMHNP",
-    // Title and credential per Thai Nguyen, 2026-11-16. Arizona Board of
-    // Nursing license verification still pending. PLACEHOLDER BIO pending
-    // Avery's own bio: no experience, education, or certification claims
-    // until he supplies them.
+    // Title and credential per Thai Nguyen, 2026-11-16. Bio supplied by
+    // Avery Booth via Thai, 2026-11-16, converted to third person. His
+    // "board-certified" wording is omitted pending ANCC verification (the
+    // check-confirm gate fails builds on that phrase). Arizona Board of
+    // Nursing license verification still pending.
     credentials: ["PMHNP"],
     description:
-      "Avery Booth, PMHNP, is a Psychiatric Nurse Practitioner at Desert Recovery Centers.",
+      "Avery Booth, PMHNP, is a Psychiatric-Mental Health Nurse Practitioner at Desert Recovery Centers with a background in psychiatric nursing, behavioral health, and substance use treatment. His clinical experience includes acute psychiatric hospitals, crisis stabilization, detoxification and residential recovery programs, and outpatient psychiatry. He has worked with people facing depression, anxiety, mood disorders, trauma, and substance use disorders. Avery holds a Master of Science in Nursing with a psychiatric-mental health specialization and a Bachelor of Science in Nursing, along with a dual undergraduate background in Psychology and Philosophy. That combination shaped his interest in human behavior, mental health, and the many factors that affect a person's well-being. He believes meaningful recovery takes more than treating symptoms. He builds real therapeutic relationships, learns each person's circumstances, and writes individualized treatment plans that pair clinical expertise with compassion and collaboration. He practices evidence-based psychiatric care while addressing the psychological, emotional, and lifestyle factors that contribute to lasting wellness. Avery is particularly interested in the intersection of mental health and addiction, the treatment of co-occurring conditions, and how psychiatric care can support long-term recovery. He works to make sure patients feel respected and understood throughout treatment. Outside of work, he enjoys traveling, exploring the outdoors, and continuing to learn about psychology, philosophy, and human well-being. He values curiosity, real connection, and a down-to-earth approach in life and in his relationships with others.",
     image: "/images/team/Avery-Booth.jpg",
     url: "https://desertrecoverycenters.com/team/avery-booth",
   },
