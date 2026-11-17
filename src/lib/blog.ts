@@ -27,6 +27,91 @@ const DISCLAIMER = `<p><em>This article is for informational purposes only and d
 export const blogPosts: BlogPost[] = [
   {
     reviewer: "nguyen",
+    lastReviewed: "2026-11-17",
+    slug: "naloxone-narcan-how-to-use-it-and-why-every-family-should-have-it",
+    title: "Naloxone (Narcan): How to Use It and Why Every Family Should Have It",
+    excerpt: "Naloxone (Narcan) can reverse an opioid overdose in minutes, and every family with opioids in the home should know how to use it. Here is what to look for, how to give it, and when to call for professional help.",
+    category: "addiction",
+    author: "Desert Recovery Centers Clinical Team",
+    datePublished: "2026-11-17",
+    dateModified: "2026-11-17",
+    readTime: 7,
+    featuredImage: "/images/glendale/Glendale-Front.jpg",
+    featuredImageAlt: "Naloxone (Narcan): How to Use It and Why Every Family Should Have It - Desert Recovery Centers",
+    tags: ["how to use narcan","naloxone for families","opioid overdose reversal","narcan instructions","where to get narcan"],
+    metaTitle: "Narcan: How to Use It and Why Every Family Needs It",
+    metaDescription: "Learn how to recognize an opioid overdose, use Narcan nasal spray step by step, where to get it without a prescription, and when to seek treatment.",
+    content: `<p>You found this page because someone you love uses opioids, and somewhere in the back of your mind you have been asking: <em>what do I do if they stop breathing and I am standing right there?</em> That fear is not paranoia. It is a reasonable response to a real risk. The good news is that there is a medication you can hold in your hand, use in under a minute, and that can keep someone alive until an ambulance arrives. It is called naloxone, sold as Narcan, and this page will tell you exactly how to use it.</p>
+
+<h2>What Naloxone Actually Does</h2>
+<p>Opioids cause overdose by slowing breathing to the point it stops. Naloxone works by binding to the same receptors in the brain and knocking the opioid off them, usually within two to five minutes of being given. It does not get anyone high. It does not hurt someone who does not have opioids in their system. It simply clears the blockade long enough for the person to breathe again and for emergency help to arrive.</p>
+<p>Narcan is the most widely available form. It comes as a nasal spray and, since 2023, it has been available over the counter at most major pharmacies without a prescription.</p>
+
+<h2>How to Recognize an Opioid Overdose</h2>
+<p>Acting fast matters, so knowing what to look for matters. An opioid overdose usually looks like this:</p>
+<ul>
+  <li>The person will not wake up or respond to their name, a loud noise, or a firm sternal rub</li>
+  <li>Breathing is very slow, shallow, gurgling, or has stopped entirely</li>
+  <li>Lips, fingernails, or skin around the mouth look blue or grayish</li>
+  <li>Pupils are pinpoint, tiny even in a dim room</li>
+  <li>Body is limp</li>
+  <li>Choking or snoring sounds that are not normal sleep sounds</li>
+</ul>
+<p>If you see two or more of these signs, do not wait to find out if you are right. Give the naloxone and call 911.</p>
+
+<h2>Step-by-Step: How to Use Narcan Nasal Spray</h2>
+<p>The instructions are simple enough to follow in a panic, which is by design.</p>
+<ul>
+  <li><strong>Call 911 first</strong>, or have someone else call while you act.</li>
+  <li>Lay the person on their back and tilt their head back slightly to open the airway.</li>
+  <li>Remove the Narcan device from its packaging. No assembly is needed.</li>
+  <li>Insert the nozzle into one nostril and press the plunger firmly all the way down with your thumb.</li>
+  <li>Place the person in the recovery position (on their side) so they cannot choke if they vomit.</li>
+  <li>If there is no response within two to three minutes, give a second dose in the other nostril.</li>
+  <li>Stay with them. Keep giving doses every two to three minutes if needed until emergency services arrive.</li>
+</ul>
+<p>Because fentanyl and other high-potency synthetic opioids now appear in a wide range of street drugs, one dose is often not enough. Having at least two doses on hand is not excessive. It is practical.</p>
+
+<h2>Why Every Family Needs This, Not Just Families Touched by Addiction</h2>
+<p>Many people assume Narcan is only for households where someone has a diagnosed opioid problem. That assumption is wrong, and it costs lives. Prescription painkillers after surgery, dental procedures, or injury are opioids. A child or a teenager finding those pills in a medicine cabinet is an opioid risk. A visitor with an unknown tolerance is an opioid risk. The fentanyl that now contaminates counterfeit pills sold as anything from Xanax to Adderall is an opioid risk.</p>
+
+<blockquote class="clinical-callout"><p><strong>Clinical perspective from Dr. Nguyen:</strong> In practice, I think one of the biggest barriers is stigma and the assumption that naloxone is only necessary for individuals with a diagnosed substance use disorder, rather than recognizing that accidental overdose can occur in any household where opioids are present. When discussing naloxone with families or patients prescribed opioids for legitimate pain management, I frame it as a safety precaution, much like having a fire extinguisher or an emergency medication at home, rather than an indication that we anticipate misuse. I encourage families to keep at least two doses readily accessible, understand the signs of overdose, and know to call 911 immediately, as fentanyl exposure may require repeat administration before emergency services arrive</p></blockquote>
+
+<p>Keeping Narcan at home does not mean you expect the worst. It means you are prepared for a situation that is now common enough that pharmacists, emergency physicians, and public health officials all say the same thing: every household should have it.</p>
+
+<h2>The Stakes of Not Having It</h2>
+<p>Opioid overdose is one of the most preventable causes of death there is. The difference between someone surviving and not surviving is often the minutes before an ambulance arrives. Naloxone works in that window. Without it, the only option is watching and waiting. With it, a bystander with no medical training can reverse a life-threatening overdose in the time it takes emergency services to reach the front door.</p>
+<p>Naloxone also wears off. It clears the body in 30 to 90 minutes, and the opioid causing the overdose may still be active after the naloxone is gone. That is why calling 911 is not optional, even if the person wakes up and seems fine. They need a hospital evaluation regardless of how quickly they appear to recover.</p>
+<p>If the person you are worried about is using opioids regularly and has not yet found a path to treatment, the overdose risk does not go away on its own. Naloxone keeps them alive in a crisis. Treatment addresses what is driving the crisis in the first place.</p>
+
+<p><strong>You do not have to figure this out alone.</strong> Desert Recovery Centers is here 24 hours a day, 7 days a week. Call <a href="tel:+16026357207">(602) 635-7207</a> to talk with our admissions team, or <a href="/insurance">verify your insurance</a> online in a few minutes.</p>
+
+<h2>Where to Get Narcan</h2>
+<p>Access has never been easier. You can get naloxone in several ways:</p>
+<ul>
+  <li><strong>Over the counter at most major pharmacies</strong> without a prescription. Ask the pharmacist directly if you do not see it on the shelf.</li>
+  <li><strong>Community health programs</strong> funded through state and local health departments often distribute it free or at very low cost.</li>
+  <li><strong>Your doctor or prescriber</strong> can provide a prescription if you prefer that route, and many will prescribe it alongside any opioid prescription.</li>
+</ul>
+<p>Once you have it, store it somewhere everyone in the household knows, at room temperature, away from direct sunlight. Check the expiration date once a year.</p>
+
+<h2>When to Seek Professional Help for Opioid Use</h2>
+<p>Narcan is a rescue tool, not a treatment. If any of the following are true, the person you care about would benefit from talking to a treatment professional:</p>
+<ul>
+  <li>They have overdosed before, even once</li>
+  <li>They are using opioids daily or cannot stop without feeling physically sick</li>
+  <li>They have tried to cut back or quit and could not</li>
+  <li>Their opioid use is affecting their work, relationships, or health</li>
+  <li>They are using street drugs or buying prescription pills from unverified sources</li>
+  <li>You have had to give naloxone, or you are afraid you will need to</li>
+</ul>
+<p>These are not signs of moral failure. They are signs of a medical condition that responds well to treatment when someone gets the right care. Medication, structured therapy, and a stable environment after detox is complete can change the trajectory. That is what programs like Desert Recovery Centers are built for.</p>
+<p>If you are in a psychiatric emergency or there is a risk of self-harm, call 911 or 988, or go to the nearest emergency room.</p>
+
+<p><strong>You do not have to figure this out alone.</strong> Desert Recovery Centers is here 24 hours a day, 7 days a week. Call <a href="tel:+16026357207">(602) 635-7207</a> to talk with our admissions team, or <a href="/insurance">verify your insurance</a> online in a few minutes.</p>`,
+  },
+  {
+    reviewer: "nguyen",
     lastReviewed: "2026-11-15",
     slug: "when-to-call-an-interventionist-and-when-you-dont-need-one",
     title: "When to Call an Interventionist (and When You Don't Need One)",
