@@ -23,10 +23,10 @@ export const teamMembers: TeamMember[] = [
   {
     slug: "jason-inserra",
     name: "Jason Inserra",
-    jobTitle: "Co-Founder and CEO",
+    jobTitle: "Co-Founder and Director of Operations",
     credentials: ["Certified Addiction Professional"],
     description:
-      "Jason Inserra is a Co-Founder and CEO of Desert Recovery Centers with personal experience in recovery. He brings deep operational expertise and a mission-driven approach to building one of Arizona's leading luxury behavioral health organizations.",
+      "Jason Inserra is a Co-Founder and Director of Operations of Desert Recovery Centers with personal experience in recovery. He brings deep operational expertise and a mission-driven approach to building one of Arizona's leading luxury behavioral health organizations.",
     image: "/images/team/Jason-Inserra-3.jpg",
     url: "https://desertrecoverycenters.com/team/jason-inserra",
   },
@@ -71,32 +71,22 @@ export const teamMembers: TeamMember[] = [
     url: "https://desertrecoverycenters.com/team/dr-madison-day-robinson",
   },
   {
-    slug: "erica-tolley",
-    name: "Erica Tolley",
-    jobTitle: "Registered Nurse",
-    credentials: ["RN"],
-    description:
-      "Erica Tolley is a Registered Nurse at Desert Recovery Centers providing medical care and clinical support throughout the residential treatment process and post-detox medical management.",
-    image: "/images/team/Erica-Tolley-Photo.jpg",
-    url: "https://desertrecoverycenters.com/team/erica-tolley",
-  },
-  {
     slug: "adam-leonard",
     name: "Adam Leonard",
-    jobTitle: "Director of Admissions",
+    jobTitle: "Admissions Director",
     credentials: [],
     description:
-      "Adam Leonard is the Director of Admissions at Desert Recovery Centers, guiding prospective clients and their families through the admissions process with compassion and efficiency.",
+      "Adam Leonard is the Admissions Director at Desert Recovery Centers, guiding prospective clients and their families through the admissions process with compassion and efficiency.",
     image: "/images/team/Adam-Leonard.jpg",
     url: "https://desertrecoverycenters.com/team/adam-leonard",
   },
   {
     slug: "blayne-archer",
     name: "Blayne Archer",
-    jobTitle: "Clinical Staff",
+    jobTitle: "Admissions & Business Development",
     credentials: [],
     description:
-      "Blayne Archer is a member of the clinical team at Desert Recovery Centers, providing personalized support and therapeutic services to clients in residential treatment.",
+      "Blayne Archer works on the admissions and business development team at Desert Recovery Centers, helping individuals and families begin treatment.",
     image: "/images/team/Blayne-Archer.jpg",
     url: "https://desertrecoverycenters.com/team/blayne-archer",
   },
@@ -142,14 +132,18 @@ export const teamMembers: TeamMember[] = [
     url: "https://desertrecoverycenters.com/team/christopher-kenyon",
   },
   {
-    slug: "ian-dy",
-    name: "Ian Dy",
+    slug: "avery-booth",
+    name: "Avery Booth",
     jobTitle: "Psychiatric Nurse Practitioner",
-    credentials: ["MSN", "APRN", "FNP-C", "PMHNP-BC"],
+    // Title and credential per Thai Nguyen, 2026-11-16. Arizona Board of
+    // Nursing license verification still pending. PLACEHOLDER BIO pending
+    // Avery's own bio: no experience, education, or certification claims
+    // until he supplies them.
+    credentials: ["PMHNP"],
     description:
-      "Ian P. Dy, MSN, APRN, FNP-C, PMHNP-BC, serves as the Psychiatric Nurse Practitioner at Desert Recovery Centers, where he has provided comprehensive mental health care since March 2024. With over 20 years of nursing experience across medical, psychiatric, and behavioral health settings, Ian plays a vital role in the clinical team by conducting all initial psychiatric evaluations and weekly follow-up sessions for clients at each Desert Recovery Centers location. His dual certification as both a Family Nurse Practitioner and a Psychiatric Mental Health Nurse Practitioner allows him to deliver holistic, evidence-based care that integrates medical and psychological wellness. Ian’s compassionate approach, extensive clinical background, and commitment to patient-centered treatment make him a trusted leader in supporting the recovery and well-being of every client he serves.",
-    image: "/images/team/Ian-Dy.jpg",
-    url: "https://desertrecoverycenters.com/team/ian-dy",
+      "Avery Booth, PMHNP, is a Psychiatric Nurse Practitioner at Desert Recovery Centers.",
+    image: "/images/team/Avery-Booth.jpg",
+    url: "https://desertrecoverycenters.com/team/avery-booth",
   },
   {
     slug: "dr-reyes-topete-md",
@@ -180,15 +174,5 @@ export const teamMembers: TeamMember[] = [
       "Celestine Snell, PsyD, is a Postdoctoral Resident in Clinical Psychology at Desert Recovery Centers, providing clinical services under the supervision of Dr. An Nguyen, PsyD, Licensed Clinical Psychologist and Clinical Director. She earned her Doctor of Psychology in Clinical Psychology from the California School of Professional Psychology at Alliant International University. Her clinical experience spans children, adolescents, adults, and families across a range of healthcare settings, supporting people through trauma, adversity, and a broad range of mental health concerns. She works collaboratively with each client to build an individualized treatment approach.",
     image: "/images/team/Celestine-Snell.jpg",
     url: "https://desertrecoverycenters.com/team/celestine-snell",
-  },
-  {
-    slug: "hailey-watson",
-    name: "Hailey Watson",
-    jobTitle: "Registered Nurse",
-    credentials: ["RN", "BSN"],
-    description:
-      "Hailey Watson is a registered nurse with over 10 years of experience in healthcare, including extensive experience in behavioral health, addiction treatment, crisis care, and psychiatric nursing. Throughout her career, she has developed a strong passion for supporting individuals on their journey toward recovery and overall well-being. Hailey is currently pursuing her Doctor of Nursing Practice degree with a specialization in psychiatric mental health. She believes that healing is a deeply personal journey and is passionate about providing compassionate care that supports the whole person, including the mind, body, and spirit. With a special interest in holistic and integrative approaches to mental health and addiction recovery, Hailey is dedicated to helping individuals find healing, build resilience, and create healthier, more meaningful lives.",
-    image: "/images/team/Hailey-Watson.jpg",
-    url: "https://desertrecoverycenters.com/team/hailey-watson",
   },
 ];

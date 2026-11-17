@@ -6,10 +6,31 @@ import Link from "next/link";
 import { siteData } from "@/lib/site-data";
 import { useScrollReveal } from "@/lib/useScrollReveal";
 
-type TeamMember = { name: string; title: string; image: string; bio: string; slug?: string; imagePosition?: string };
+type TeamMember = { name: string; title: string; image?: string; bio?: string; slug?: string; imagePosition?: string };
+
+function initials(name: string) {
+  return name.split(" ").map((w) => w[0]).join("").slice(0, 2).toUpperCase();
+}
 
 function TeamCard({ member, i, onSelect }: { member: TeamMember; i: number; onSelect: () => void }) {
   const { ref, visible } = useScrollReveal<HTMLDivElement>({ rootMargin: "-50px" });
+  // Placeholder card: name and title only, no photo, bio, or bio link yet.
+  if (!member.image || !member.bio) {
+    return (
+      <div
+        ref={ref}
+        id={member.slug}
+        className={`reveal-fade-up${visible ? " reveal-in" : ""}`}
+        style={{ "--reveal-delay": `${i * 0.1}s`, "--reveal-duration": "0.4s" } as React.CSSProperties}
+      >
+        <div className="relative w-full aspect-[4/5] rounded-2xl overflow-hidden mb-4 bg-gray-100 flex items-center justify-center" aria-hidden="true">
+          <span className="font-display text-4xl text-forest/30 font-semibold">{initials(member.name)}</span>
+        </div>
+        <h3 className="font-display text-base text-forest font-semibold text-center">{member.name}</h3>
+        <p className="text-gray-500 text-sm mt-1 text-center">{member.title}</p>
+      </div>
+    );
+  }
   return (
     <div
       ref={ref}
@@ -105,14 +126,16 @@ function BioModal({
           {/* Photo */}
           <div className="flex-shrink-0 mx-auto sm:mx-0">
             <div className="relative w-40 h-48 sm:w-44 sm:h-56 rounded-xl overflow-hidden bg-gray-100">
-              <Image
-                src={member.image}
-                alt={`${member.name}, ${member.title} at Desert Recovery Centers Arizona`}
-                fill
-                className="object-cover object-top"
-                style={member.imagePosition ? { objectPosition: member.imagePosition } : undefined}
-                sizes="176px"
-              />
+              {member.image && (
+                <Image
+                  src={member.image}
+                  alt={`${member.name}, ${member.title} at Desert Recovery Centers Arizona`}
+                  fill
+                  className="object-cover object-top"
+                  style={member.imagePosition ? { objectPosition: member.imagePosition } : undefined}
+                  sizes="176px"
+                />
+              )}
             </div>
           </div>
           {/* Content */}
@@ -138,6 +161,7 @@ function BioModal({
 
 const groups: { label: string; members: readonly TeamMember[] }[] = [
   { label: "Leadership", members: siteData.team.leadership },
+  { label: "Admissions Team", members: siteData.team.admissions },
   { label: "Medical", members: siteData.team.medical },
   { label: "Psychology", members: siteData.team.psychology },
   { label: "Nursing", members: siteData.team.nursing },

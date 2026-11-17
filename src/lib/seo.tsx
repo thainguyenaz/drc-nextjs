@@ -9,9 +9,9 @@ const SITE_URL = "https://desertrecoverycenters.com";
 const SITE_NAME = "Desert Recovery Centers";
 const DEFAULT_OG_IMAGE = `${SITE_URL}/logo.png`;
 
-// ─── A12: Clinical reviewer roster (4-person YMYL reviewer set) ────
+// ─── A12: Clinical reviewer roster (3-person YMYL reviewer set) ────
 
-export type Reviewer = "carr" | "nguyen" | "dy" | "topete" | "none";
+export type Reviewer = "carr" | "nguyen" | "topete" | "none";
 
 export const DRC_REVIEWERS: Record<Exclude<Reviewer, "none">, Record<string, unknown>> = {
   carr: {
@@ -36,20 +36,6 @@ export const DRC_REVIEWERS: Record<Exclude<Reviewer, "none">, Record<string, unk
     hasCredential: {
       "@type": "EducationalOccupationalCredential",
       credentialCategory: "PsyD",
-    },
-    worksFor: { "@id": `${SITE_URL}/#organization` },
-  },
-  dy: {
-    "@type": "Person",
-    "@id": `${SITE_URL}/our-team#ian-dy`,
-    name: "Ian Dy",
-    jobTitle: "Psychiatric Nurse Practitioner",
-    hasCredential: {
-      "@type": "EducationalOccupationalCredential",
-      credentialCategory: "Master's Degree",
-      // KEPT by directive 2026-08-23: "-BC" is part of the ANCC credential
-      // name itself, not a separate claim. FLAG: pending ANCC verification.
-      educationalLevel: "Psychiatric Mental Health Nurse Practitioner, Board Certified (PMHNP-BC)",
     },
     worksFor: { "@id": `${SITE_URL}/#organization` },
   },

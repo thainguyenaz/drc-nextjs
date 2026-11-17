@@ -23,7 +23,8 @@
 // Scanned only over rendered page payloads (.html/.rsc/.body), not JS
 // bundles, so framework-internal strings cannot false-positive.
 //
-// KNOWN EXCEPTION under review: "PMHNP-BC" (Ian Dy, src/lib/seo.tsx) is the
+// KNOWN EXCEPTION under review: "PMHNP-BC" (originally the Ian Dy reviewer
+// entry in src/lib/seo.tsx, removed 2026-11-16 with his departure) is the
 // ANCC credential NAME, kept by directive 2026-08-23 pending ANCC
 // verification. It contains "Board Certified", so the regex below uses a
 // lookahead to exempt exactly the "Board Certified (PMHNP-BC)" form and
