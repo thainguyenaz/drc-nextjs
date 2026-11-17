@@ -94,6 +94,9 @@ const nextConfig = {
       { source: "/team/selena-nguyen", destination: "/our-team", permanent: true },
       { source: "/team/theresa-glasgow", destination: "/our-team", permanent: true },
       { source: "/team/jeremy-stewart", destination: "/our-team", permanent: true },
+      { source: "/team/ian-dy", destination: "/our-team", permanent: true },
+      { source: "/team/erica-tolley", destination: "/our-team", permanent: true },
+      { source: "/team/hailey-watson", destination: "/our-team", permanent: true },
       // Deleted fake location pages → nearest real facility (East Valley → Phoenix PHP/IOP, NW Valley → Glendale, Scottsdale-area → Scottsdale)
       { source: "/locations/chandler", destination: "/locations/phoenix-php-iop", permanent: true },
       { source: "/locations/gilbert", destination: "/locations/phoenix-php-iop", permanent: true },

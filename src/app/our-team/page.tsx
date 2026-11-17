@@ -49,11 +49,11 @@ export default function OurTeamPage() {
         description="Medical Director at Desert Recovery Centers, overseeing medical care and medication management across all DRC programs."
       />
       <PersonSchema
-        slug="ian-dy"
-        name="Ian Dy"
+        slug="avery-booth"
+        name="Avery Booth"
         jobTitle="Psychiatric Nurse Practitioner"
-        image="/images/team/Ian-Dy.jpg"
-        description="Psychiatric Nurse Practitioner at Desert Recovery Centers, conducting psychiatric evaluations and providing medication management for clients across all locations."
+        image="/images/team/Avery-Booth.jpg"
+        description="Psychiatric Nurse Practitioner at Desert Recovery Centers."
       />
       <PersonSchema
         slug="dr-reyes-topete-md"
