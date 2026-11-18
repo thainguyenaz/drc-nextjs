@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
+import { SMS_CONSENT_TEXT, EMAIL_CONSENT_TEXT } from "@/lib/consent";
 import { useTurnstile } from "./useTurnstile";
 import { prepareCard } from "./cardImage";
 import {
@@ -44,6 +45,7 @@ interface FormData {
   backCard: File | null;
   howDidYouHear: string;
   smsConsent: boolean;
+  emailConsent: boolean;
 }
 
 const initialFormData: FormData = {
@@ -58,6 +60,7 @@ const initialFormData: FormData = {
   backCard: null,
   howDidYouHear: "",
   smsConsent: false,
+  emailConsent: false,
 };
 
 const ACCEPTED_FILE_TYPES = ".jpg,.jpeg,.png,.gif,.pdf";
@@ -167,6 +170,7 @@ export default function InsuranceVerificationForm() {
             dateOfBirth: formData.dateOfBirth,
             howDidYouHear: formData.howDidYouHear,
             smsConsent: formData.smsConsent,
+            emailConsent: formData.emailConsent,
             hp_check: honeypot,
             turnstileToken,
             ...turnstileInfo,
@@ -217,6 +221,7 @@ export default function InsuranceVerificationForm() {
       body.append("date_of_birth", formData.dateOfBirth);
       body.append("how_did_you_hear", formData.howDidYouHear);
       body.append("smsConsent", String(formData.smsConsent));
+      body.append("emailConsent", String(formData.emailConsent));
       body.append("hp_check", honeypot);
       body.append("turnstileToken", turnstileToken);
       body.append("turnstileState", turnstileInfo.turnstileState);
@@ -523,25 +528,39 @@ export default function InsuranceVerificationForm() {
       </div>
 
       <div>
-        <label className="flex items-start gap-3 cursor-pointer">
-          <input
-            type="checkbox"
-            name="smsConsent"
-            required
-            checked={formData.smsConsent}
-            onChange={handleChange}
-            className="mt-1 w-4 h-4 text-sage focus:ring-sage border-gray-300 rounded"
-          />
-          <span className="text-xs text-gray-500 leading-relaxed">
-            By providing your phone number and email, you agree to receive marketing text messages
-            and/or emails from Desert Recovery Centers. Message frequency varies. Reply STOP to
-            unsubscribe. Message and data rates may apply.{" "}
+        <div className="space-y-3">
+          <label className="flex items-start gap-3 cursor-pointer">
+            <input
+              type="checkbox"
+              name="smsConsent"
+              checked={formData.smsConsent}
+              onChange={handleChange}
+              className="mt-1 w-4 h-4 text-sage focus:ring-sage border-gray-300 rounded"
+            />
+            <span className="text-xs text-gray-500 leading-relaxed">{SMS_CONSENT_TEXT}</span>
+          </label>
+          <label className="flex items-start gap-3 cursor-pointer">
+            <input
+              type="checkbox"
+              name="emailConsent"
+              checked={formData.emailConsent}
+              onChange={handleChange}
+              className="mt-1 w-4 h-4 text-sage focus:ring-sage border-gray-300 rounded"
+            />
+            <span className="text-xs text-gray-500 leading-relaxed">{EMAIL_CONSENT_TEXT}</span>
+          </label>
+          <p className="text-xs text-gray-500">
+            By submitting, you accept our{" "}
+            <Link href="/terms-of-service" className="text-sage underline">
+              Terms of Service
+            </Link>
+            {" "}and{" "}
             <Link href="/privacy-policy" className="text-sage underline">
               Privacy Policy
             </Link>
             .
-          </span>
-        </label>
+          </p>
+        </div>
       </div>
 
       {/* Honeypot — must stay empty. Hidden from humans + screen readers.

@@ -110,10 +110,12 @@ export default function Navigation() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-md">
       {/* Wider than max-w-container: logo + 10 links + CTAs need ~1390px, more
-          than the 1200px page column, so the row gets up to 1440px. */}
+          than the 1200px page column, so the row gets up to 1440px. From xl to
+          2xl the row is tightened (13px links, smaller gaps) so the header phone
+          number fits at every desktop width; below xl it sits by the hamburger. */}
       <div className="max-w-[1440px] mx-auto px-6 flex items-center justify-between h-14">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3 flex-shrink-0 mr-6">
+        <Link href="/" className="flex items-center gap-3 flex-shrink-0 mr-4 2xl:mr-6">
           <Image
             src="/images/branding/drc-logo-black.png"
             alt="Desert Recovery Centers logo, luxury addiction and mental health treatment in Arizona"
@@ -125,7 +127,7 @@ export default function Navigation() {
         </Link>
 
         {/* Desktop Nav */}
-        <div className="hidden xl:flex items-center gap-3.5 2xl:gap-5">
+        <div className="hidden xl:flex items-center gap-2.5 2xl:gap-5">
           {navLinks.map((link) => (
             <div
               key={link.label}
@@ -135,7 +137,7 @@ export default function Navigation() {
             >
               <Link
                 href={link.href}
-                className="text-sm font-medium whitespace-nowrap transition-colors py-6 block text-gray-900 hover:text-gold"
+                className="text-[13px] 2xl:text-sm font-medium whitespace-nowrap transition-colors py-6 block text-gray-900 hover:text-gold"
               >
                 {link.label}
               </Link>
@@ -179,20 +181,29 @@ export default function Navigation() {
         </div>
 
         {/* Desktop CTA */}
-        <div className="hidden xl:flex items-center gap-4 flex-shrink-0 ml-6">
+        <div className="hidden xl:flex items-center gap-3 2xl:gap-4 flex-shrink-0 ml-4 2xl:ml-6">
           <a
             href="tel:+16233050496"
-            className="hidden 2xl:inline font-semibold text-sm whitespace-nowrap transition-colors text-gray-900"
+            className="font-semibold text-sm whitespace-nowrap transition-colors text-gray-900"
           >
             (623) 305-0496
           </a>
           <Link
             href="/insurance"
-            className="bg-gold hover:bg-gold-dark text-white font-semibold text-sm whitespace-nowrap px-5 py-2.5 rounded-xl transition-colors"
+            className="bg-gold hover:bg-gold-dark text-white font-semibold text-sm whitespace-nowrap px-4 2xl:px-5 py-2.5 rounded-xl transition-colors"
           >
             Verify Insurance
           </Link>
         </div>
+
+        {/* Header phone between lg and xl, where the nav collapses to the
+            hamburger. Same tel: number as the desktop CTA, so CTM swaps it. */}
+        <a
+          href="tel:+16233050496"
+          className="hidden lg:inline xl:hidden ml-auto mr-4 font-semibold text-sm whitespace-nowrap text-gray-900"
+        >
+          (623) 305-0496
+        </a>
 
         {/* Mobile Hamburger */}
         <button
