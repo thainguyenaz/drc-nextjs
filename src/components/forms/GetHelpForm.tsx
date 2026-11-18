@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
+import { SMS_CONSENT_TEXT, EMAIL_CONSENT_TEXT } from "@/lib/consent";
 import { useTurnstile } from "./useTurnstile";
 import {
   FORMS_API_BASE,
@@ -21,6 +22,7 @@ interface FormData {
   insuranceProvider: string;
   situation: string;
   smsConsent: boolean;
+  emailConsent: boolean;
 }
 
 const initialFormData: FormData = {
@@ -32,6 +34,7 @@ const initialFormData: FormData = {
   insuranceProvider: "",
   situation: "",
   smsConsent: false,
+  emailConsent: false,
 };
 
 interface GetHelpFormProps {
@@ -97,6 +100,7 @@ export default function GetHelpForm({ variant = "lp" }: GetHelpFormProps) {
           insuranceProvider: formData.insuranceProvider,
           situation: formData.situation,
           smsConsent: formData.smsConsent,
+          emailConsent: formData.emailConsent,
           variant,
           pageUri: typeof window !== "undefined" ? window.location.href : "",
           pageName: typeof window !== "undefined" ? document.title : "Get Help Today",
@@ -142,6 +146,7 @@ export default function GetHelpForm({ variant = "lp" }: GetHelpFormProps) {
           insuranceProvider: formData.insuranceProvider,
           situation: formData.situation,
           smsConsent: formData.smsConsent,
+          emailConsent: formData.emailConsent,
           variant,
           pageUri: typeof window !== "undefined" ? window.location.href : "",
           pageName: typeof window !== "undefined" ? document.title : "Get Help Today",
@@ -354,25 +359,39 @@ export default function GetHelpForm({ variant = "lp" }: GetHelpFormProps) {
         </div>
 
         <div>
-          <label className="flex items-start gap-3 cursor-pointer">
-            <input
-              type="checkbox"
-              name="smsConsent"
-              required
-              checked={formData.smsConsent}
-              onChange={handleChange}
-              className="mt-1 w-4 h-4 text-sage focus:ring-sage border-gray-300 rounded"
-            />
-            <span className="text-xs text-gray-500 leading-relaxed">
-              By providing your phone number and email, you agree to receive marketing text messages
-              and/or emails from Desert Recovery Centers. Message frequency varies. Reply STOP to
-              unsubscribe. Message and data rates may apply.{" "}
+          <div className="space-y-3">
+            <label className="flex items-start gap-3 cursor-pointer">
+              <input
+                type="checkbox"
+                name="smsConsent"
+                checked={formData.smsConsent}
+                onChange={handleChange}
+                className="mt-1 w-4 h-4 text-sage focus:ring-sage border-gray-300 rounded"
+              />
+              <span className="text-xs text-gray-500 leading-relaxed">{SMS_CONSENT_TEXT}</span>
+            </label>
+            <label className="flex items-start gap-3 cursor-pointer">
+              <input
+                type="checkbox"
+                name="emailConsent"
+                checked={formData.emailConsent}
+                onChange={handleChange}
+                className="mt-1 w-4 h-4 text-sage focus:ring-sage border-gray-300 rounded"
+              />
+              <span className="text-xs text-gray-500 leading-relaxed">{EMAIL_CONSENT_TEXT}</span>
+            </label>
+            <p className="text-xs text-gray-500">
+              By submitting, you accept our{" "}
+              <Link href="/terms-of-service" className="text-sage underline">
+                Terms of Service
+              </Link>
+              {" "}and{" "}
               <Link href="/privacy-policy" className="text-sage underline">
                 Privacy Policy
               </Link>
               .
-            </span>
-          </label>
+            </p>
+          </div>
         </div>
 
         {TURNSTILE_SITE_KEY && (

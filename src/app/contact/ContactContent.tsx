@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import GetHelpForm from "@/components/forms/GetHelpForm";
 import YouTubeEmbed from "@/components/YouTubeEmbed";
 import VideoTranscript from "@/components/VideoTranscript";
@@ -120,6 +121,16 @@ export default function ContactContent() {
 
               <p className="text-gray-500 text-xs">
                 All inquiries are protected by HIPAA &amp; 42 CFR Part 2.
+              </p>
+
+              <p className="text-gray-500 text-xs mt-4 leading-relaxed">
+                Text us at <a href="tel:+16233050496" className="text-sage font-medium">(623) 305-0496</a>.
+                By texting Desert Recovery Centers, you agree to receive replies about your inquiry.
+                Message frequency varies. Message and data rates may apply. Reply STOP to opt out or
+                HELP for help. Consent is not a condition of purchase. See our{" "}
+                <Link href="/terms-of-service" className="text-sage underline">Terms of Service</Link>
+                {" "}and{" "}
+                <Link href="/privacy-policy" className="text-sage underline">Privacy Policy</Link>.
               </p>
 
               <div className="mt-10 md:max-w-[380px]">
