@@ -118,6 +118,27 @@ export default function ResidentialTreatmentPage() {
         </div>
       </div>
 
+      {/* Therapy hours callout */}
+      <section className="bg-forest">
+        <div className="max-w-container mx-auto px-6 py-8 md:py-10 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+          <div>
+            <h2 className="font-display text-xl md:text-2xl text-white font-semibold mb-2">
+              How many hours of therapy you actually get
+            </h2>
+            <p className="text-white/80 leading-relaxed">
+              About 27 hours of therapist-led group a week, two individual
+              sessions, seven days a week, all in person.
+            </p>
+          </div>
+          <Link
+            href="/levels-of-care/residential-treatment/therapy-hours"
+            className="bg-gold hover:bg-gold-dark text-white font-semibold text-base px-8 py-4 rounded-xl transition-all shadow-lg shadow-gold/25 w-full sm:w-auto text-center flex-shrink-0"
+          >
+            See our weekly hours
+          </Link>
+        </div>
+      </section>
+
       {/* Overview */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-container mx-auto px-6">

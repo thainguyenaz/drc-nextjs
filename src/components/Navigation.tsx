@@ -41,6 +41,7 @@ const navLinks = [
     image: "/images/general/DRC-TREATMENTS.jpg",
     children: [
       { label: "Residential Treatment", href: "/levels-of-care/residential-treatment" },
+      { label: "Weekly Therapy Hours", href: "/levels-of-care/residential-treatment/therapy-hours" },
       { label: "TMS Therapy", href: "/treatments/tms-therapy" },
       { label: "PHP / IOP", href: "/locations/phoenix-php-iop" },
       { label: "CBT", href: "/treatments/cbt-cognitive-behavioral-therapy" },

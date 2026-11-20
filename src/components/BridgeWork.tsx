@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useScrollReveal } from "@/lib/useScrollReveal";
 import Image from "next/image";
 
@@ -116,6 +117,15 @@ export default function BridgeWork() {
                 BridgeWork™ is one of the only clinical psychologist-led skill integration
                 programs in the region.
               </p>
+              <p className="text-white/80 text-sm leading-relaxed mt-4 mb-4">
+                We publish our weekly therapy hours. Most programs don&apos;t.
+              </p>
+              <Link
+                href="/levels-of-care/residential-treatment/therapy-hours"
+                className="inline-block bg-gold hover:bg-gold-dark text-white font-semibold text-sm px-6 py-3 rounded-xl transition-all shadow-lg shadow-gold/25"
+              >
+                See the numbers
+              </Link>
             </div>
           </div>
 
